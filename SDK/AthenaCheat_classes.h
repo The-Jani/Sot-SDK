@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -26,12 +26,12 @@ class UAthenaCheatManager : public UCheatManager
 public:
 	class ACinematicCameraController*                  CinematicCameraController;                                 // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                      CinematicCameraControllerClass;                            // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_596J[0x28];                                    // 0x0088(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MJRY[0x28];                                    // 0x0088(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FWorldMarkerDesc>                    CreatedWorldMarkers;                                       // 0x00B0(0x0010) (ZeroConstructor, Transient)
 	class UGameEventSchedulerSettingsAsset*            DebugSchedulerSettings;                                    // 0x00C0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AServerPerformanceReplicator*                ServerPerformanceReplicator;                               // 0x00C8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TeleportToDigsiteHeightOffset;                             // 0x00D0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YTNK[0x3C];                                    // 0x00D4(0x003C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_EHN4[0x3C];                                    // 0x00D4(0x003C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

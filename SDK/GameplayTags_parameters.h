@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 #include "../SDK.h"
 
@@ -19,6 +19,14 @@ namespace CG
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function GameplayTags.GameplayTagsManager.RequestGameplayTag
+struct UGameplayTagsManager_RequestGameplayTag_Params
+{
+	struct FName                                       TagName;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               ErrorIfNotFound;                                           // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FGameplayTag                                ReturnValue;                                               // (Parm, OutParm, ReturnParm)
+};
 
 // Function GameplayTags.GameplayTagAssetInterface.HasMatchingGameplayTag
 struct UGameplayTagAssetInterface_HasMatchingGameplayTag_Params
@@ -141,14 +149,6 @@ struct UBlueprintGameplayTagLibrary_AppendGameplayTagContainers_Params
 	struct FGameplayTagContainer                       InTagContainer;                                            // (ConstParm, Parm, OutParm, ReferenceParm)
 	struct FGameplayTagContainer                       InOutTagContainer;                                         // (Parm, OutParm, ReferenceParm)
 	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-};
-
-// Function GameplayTags.GameplayTagsManager.RequestGameplayTag
-struct UGameplayTagsManager_RequestGameplayTag_Params
-{
-	struct FName                                       TagName;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               ErrorIfNotFound;                                           // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FGameplayTag                                ReturnValue;                                               // (Parm, OutParm, ReturnParm)
 };
 
 }

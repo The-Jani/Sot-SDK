@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -24,7 +24,7 @@ namespace CG
 class UEndPlayHandler : public UObject
 {
 public:
-	unsigned char                                      UnknownData_IAO2[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LO9G[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -84,7 +84,7 @@ public:
 class ULinkerComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_MK0Q[0xC8];                                    // 0x00C8(0x00C8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_EIAU[0xC8];                                    // 0x00C8(0x00C8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UEndPlayHandler*>                     EndPlayHandlers;                                           // 0x0190(0x0010) (ZeroConstructor)
 
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -24,29 +24,29 @@ namespace CG
 class UActorComponent : public UObject
 {
 public:
-	unsigned char                                      UnknownData_FAUC[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_VXI3[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FActorComponentTickFunction                 PrimaryComponentTick;                                      // 0x0030(0x0050) (Edit, DisableEditOnInstance)
 	TArray<struct FName>                               ComponentTags;                                             // 0x0080(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TArray<struct FSimpleMemberReference>              UCSModifiedProperties;                                     // 0x0090(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_R6PZ[0x10];                                    // 0x00A0(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XMIO[0x10];                                    // 0x00A0(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UAssetUserData*>                      AssetUserData;                                             // 0x00B0(0x0010) (ExportObject, ZeroConstructor, ContainsInstancedReference, Protected)
-	unsigned char                                      UnknownData_C3OC : 3;                                      // 0x00C0(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_3JXO : 3;                                      // 0x00C0(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bReplicates : 1;                                           // 0x00C0(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, Net, DisableEditOnInstance, NoDestructor)
 	unsigned char                                      bNetAddressable : 1;                                       // 0x00C0(0x0001) BIT_FIELD (NoDestructor, Protected)
-	unsigned char                                      UnknownData_IHY0 : 3;                                      // 0x00C0(0x0001) BIT_FIELD (PADDING)
-	unsigned char                                      UnknownData_BLXO : 6;                                      // 0x00C1(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_J37D : 3;                                      // 0x00C0(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_34O3 : 6;                                      // 0x00C1(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bCreatedByConstructionScript : 1;                          // 0x00C1(0x0001) BIT_FIELD (Deprecated, NoDestructor)
 	unsigned char                                      bInstanceComponent : 1;                                    // 0x00C1(0x0001) BIT_FIELD (Deprecated, NoDestructor)
 	unsigned char                                      bAutoActivate : 1;                                         // 0x00C2(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
 	unsigned char                                      bIsActive : 1;                                             // 0x00C2(0x0001) BIT_FIELD (Net, Transient, RepNotify, NoDestructor)
 	unsigned char                                      bEditableWhenInherited : 1;                                // 0x00C2(0x0001) BIT_FIELD (Edit, DisableEditOnInstance, NoDestructor)
-	unsigned char                                      UnknownData_GFPJ : 5;                                      // 0x00C2(0x0001) BIT_FIELD (PADDING)
-	unsigned char                                      UnknownData_YGNV : 3;                                      // 0x00C3(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_FB31 : 5;                                      // 0x00C2(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_OZ8K : 3;                                      // 0x00C3(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bNeedsLoadForClient : 1;                                   // 0x00C3(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bNeedsLoadForServer : 1;                                   // 0x00C3(0x0001) BIT_FIELD (Edit, NoDestructor)
 	TEnumAsByte<Engine_EComponentNetDormancy>          TargetNetDormancy;                                         // 0x00C4(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EComponentCreationMethod>       CreationMethod;                                            // 0x00C5(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_UTF9[0x2];                                     // 0x00C6(0x0002) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PPFF[0x2];                                     // 0x00C6(0x0002) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -104,30 +104,30 @@ public:
 	unsigned char                                      bNetLoadOnClient : 1;                                      // 0x007D(0x0001) BIT_FIELD (Edit, DisableEditOnInstance, NoDestructor)
 	unsigned char                                      bNetUseOwnerRelevancy : 1;                                 // 0x007D(0x0001) BIT_FIELD (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 	unsigned char                                      bBlockInput : 1;                                           // 0x007D(0x0001) BIT_FIELD (Edit, DisableEditOnInstance, NoDestructor)
-	unsigned char                                      UnknownData_3GQI : 1;                                      // 0x007D(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_7949 : 1;                                      // 0x007D(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bCanBeInCluster : 1;                                       // 0x007D(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay, Protected)
-	unsigned char                                      UnknownData_YP6Z : 2;                                      // 0x007E(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_C3L2 : 2;                                      // 0x007E(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bActorEnableCollision : 1;                                 // 0x007E(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_11UM : 3;                                      // 0x007E(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_JC01 : 3;                                      // 0x007E(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bReplicates : 1;                                           // 0x007E(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected)
-	unsigned char                                      UnknownData_KD6E[0x1];                                     // 0x007F(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5C48[0x1];                                     // 0x007F(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FMulticastSparseDelegate                    OnPreNetOwnershipChange;                                   // 0x0080(0x0001) (InstancedReference, BlueprintAssignable, NoDestructor)
 	TEnumAsByte<Engine_ENetRole>                       RemoteRole;                                                // 0x0081(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_OWRC[0x6];                                     // 0x0082(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8DG5[0x6];                                     // 0x0082(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class AActor*                                      Owner;                                                     // 0x0088(0x0008) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EActorSpawnRestrictions>        SpawnRestrictions;                                         // 0x0090(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_3BER[0x3];                                     // 0x0091(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BVST[0x3];                                     // 0x0091(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRepMovement                                ReplicatedMovement;                                        // 0x0094(0x0038) (Edit, Net, DisableEditOnInstance, RepNotify, AdvancedDisplay)
-	unsigned char                                      UnknownData_K3F8[0x4];                                     // 0x00CC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_RL47[0x4];                                     // 0x00CC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRepAttachment                              AttachmentReplication;                                     // 0x00D0(0x0040) (Net, Transient, RepNotify, ContainsInstancedReference)
 	TEnumAsByte<Engine_ENetRole>                       Role;                                                      // 0x0110(0x0001) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_LX8S[0x1];                                     // 0x0111(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SFFI[0x1];                                     // 0x0111(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EAutoReceiveInput>              AutoReceiveInput;                                          // 0x0112(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2R4W[0x1];                                     // 0x0113(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GKI6[0x1];                                     // 0x0113(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                InputPriority;                                             // 0x0114(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UInputComponent*                             InputComponent;                                            // 0x0118(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              NetCullDistanceSquared;                                    // 0x0120(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_THST[0x4];                                     // 0x0124(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3YP8[0x4];                                     // 0x0124(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                NetTag;                                                    // 0x0128(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              NetUpdateTime;                                             // 0x012C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              NetUpdateFrequency;                                        // 0x0130(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
@@ -140,25 +140,25 @@ public:
 	unsigned char                                      bCollideWhenPlacing : 1;                                   // 0x0144(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bFindCameraComponentWhenViewTarget : 1;                    // 0x0144(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bRelevantForNetworkReplays : 1;                            // 0x0144(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_4CQV[0x3];                                     // 0x0145(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_OL4C[0x3];                                     // 0x0145(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_ESpawnActorCollisionHandlingMethod> SpawnCollisionHandlingMethod;                              // 0x0148(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_B874[0x7];                                     // 0x0149(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_V3ZL[0x7];                                     // 0x0149(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class APawn*                                       Instigator;                                                // 0x0150(0x0008) (BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	TArray<class AActor*>                              Children;                                                  // 0x0158(0x0010) (ZeroConstructor, Transient)
 	class USceneComponent*                             RootComponent;                                             // 0x0168(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	TArray<class AMatineeActor*>                       ControllingMatineeActors;                                  // 0x0170(0x0010) (ZeroConstructor, Transient, Protected)
 	float                                              InitialLifeSpan;                                           // 0x0180(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_K8NE[0x4];                                     // 0x0184(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1J1G[0x4];                                     // 0x0184(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bAllowReceiveTickEventOnDedicatedServer : 1;               // 0x0188(0x0001) BIT_FIELD (NoDestructor, Protected)
-	unsigned char                                      UnknownData_3BU2[0x7];                                     // 0x0189(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WUZM[0x7];                                     // 0x0189(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FName>                               Layers;                                                    // 0x0190(0x0010) (ZeroConstructor)
 	struct FActorPtr                                   ParentComponentActor;                                      // 0x01A0(0x0008)
 	TArray<TWeakObjectPtr<class AActor>>               ChildComponentActors;                                      // 0x01A8(0x0010) (ZeroConstructor, UObjectWrapper)
-	unsigned char                                      UnknownData_E8OZ[0x8];                                     // 0x01B8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_RKS0[0x8];                                     // 0x01B8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bActorSeamlessTraveled : 1;                                // 0x01C0(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bIgnoresOriginShifting : 1;                                // 0x01C0(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bEnableAutoLODGeneration : 1;                              // 0x01C0(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_M8R1[0x7];                                     // 0x01C1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8NKD[0x7];                                     // 0x01C1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FName>                               Tags;                                                      // 0x01C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay)
 	struct FName                                       Feature;                                                   // 0x01D8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AssetRegistrySearchable, Protected, HasGetValueTypeHash)
 	uint64_t                                           HiddenEditorViews;                                         // 0x01E0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -166,15 +166,15 @@ public:
 	struct FMulticastSparseDelegate                    OnActorEndOverlap;                                         // 0x01E9(0x0001) (InstancedReference, BlueprintAssignable, NoDestructor)
 	struct FMulticastSparseDelegate                    OnActorHit;                                                // 0x01EA(0x0001) (InstancedReference, BlueprintAssignable, NoDestructor)
 	struct FMulticastSparseDelegate                    OnDestroyed;                                               // 0x01EB(0x0001) (InstancedReference, BlueprintAssignable, NoDestructor)
-	unsigned char                                      UnknownData_LHEI[0x6C];                                    // 0x01EC(0x006C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7SUV[0x6C];                                    // 0x01EC(0x006C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FMulticastSparseDelegate                    OnEndPlay;                                                 // 0x0258(0x0001) (InstancedReference, BlueprintAssignable, NoDestructor)
 	bool                                               bDoOverlapNotifiesOnLoad;                                  // 0x0259(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_HNFY[0x126];                                   // 0x025A(0x0126) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_37FK[0x126];                                   // 0x025A(0x0126) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UActorComponent*>                     BlueprintCreatedComponents;                                // 0x0380(0x0010) (ExportObject, ZeroConstructor, NonTransactional, ContainsInstancedReference, TextExportTransient)
 	TArray<class UActorComponent*>                     InstanceComponents;                                        // 0x0390(0x0010) (ExportObject, ZeroConstructor, ContainsInstancedReference)
-	unsigned char                                      UnknownData_NDVU[0x8];                                     // 0x03A0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YIQZ[0x8];                                     // 0x03A0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class AActor*>                              ChildActorInterfaceProviders;                              // 0x03A8(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData_JXJZ[0x68];                                    // 0x03B8(0x0068) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1Q8Y[0x68];                                    // 0x03B8(0x0068) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	double                                             DormancyLingeringInSeconds;                                // 0x0420(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -361,26 +361,26 @@ public:
 	unsigned char                                      bBoundsChangeTriggersStreamingDataRebuild : 1;             // 0x00E9(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bUseAttachParentBound : 1;                                 // 0x00E9(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bComponentIsUnionOfChildren : 1;                           // 0x00E9(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_NNQA : 1;                                      // 0x00E9(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_C3KZ : 1;                                      // 0x00E9(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bJitterReduction : 1;                                      // 0x00E9(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_DL44 : 1;                                      // 0x00E9(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_Y178 : 1;                                      // 0x00E9(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      CacheRootVelocity : 1;                                     // 0x00E9(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bWorldToComponentUpdated : 1;                              // 0x00E9(0x0001) BIT_FIELD (Transient, NoDestructor, Protected)
-	unsigned char                                      UnknownData_HNEK[0xE];                                     // 0x00EA(0x000E) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_H6DK[0xE];                                     // 0x00EA(0x000E) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TWeakObjectPtr<class APhysicsVolume>               PhysicsVolume;                                             // 0x00F8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper)
-	unsigned char                                      UnknownData_BO0O[0x1C];                                    // 0x0100(0x001C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XR20[0x1C];                                    // 0x0100(0x001C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     RelativeScale3D;                                           // 0x011C(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, RepNotify, Interp, NoDestructor)
 	struct FVector                                     RelativeLocation;                                          // 0x0128(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor)
 	struct FRotator                                    RelativeRotation;                                          // 0x0134(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor)
-	unsigned char                                      UnknownData_HQW2[0xE0];                                    // 0x0140(0x00E0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8JBT[0xE0];                                    // 0x0140(0x00E0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EComponentMobility>             Mobility;                                                  // 0x0220(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EDetailMode>                    DetailMode;                                                // 0x0221(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_WU0L[0xA];                                     // 0x0222(0x000A) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YV1H[0xA];                                     // 0x0222(0x000A) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     ComponentVelocity;                                         // 0x022C(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FScriptMulticastDelegate                    PhysicsVolumeChangedDelegate;                              // 0x0238(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_ZZRS[0x10];                                    // 0x0248(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_J59H[0x10];                                    // 0x0248(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FName>                               SocketVelocitiesToCache;                                   // 0x0258(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData_VRHE[0x48];                                    // 0x0268(0x0048) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HVWX[0x48];                                    // 0x0268(0x0048) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -454,26 +454,26 @@ public:
 class APawn : public AActor
 {
 public:
-	unsigned char                                      UnknownData_E9VH[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5NWY[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bUseControllerRotationPitch : 1;                           // 0x0430(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bUseControllerRotationYaw : 1;                             // 0x0430(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bUseControllerRotationRoll : 1;                            // 0x0430(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bCanAffectNavigationGeneration : 1;                        // 0x0430(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
-	unsigned char                                      UnknownData_OI6Z[0x3];                                     // 0x0431(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9NCB[0x3];                                     // 0x0431(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              BaseEyeHeight;                                             // 0x0434(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EAutoReceiveInput>              AutoPossessPlayer;                                         // 0x0438(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EAutoPossessAI>                 AutoPossessAI;                                             // 0x0439(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_JJYV[0x6];                                     // 0x043A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_DU3W[0x6];                                     // 0x043A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UClass*                                      AIControllerClass;                                         // 0x0440(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	class APlayerState*                                PlayerState;                                               // 0x0448(0x0008) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      RemoteViewPitch;                                           // 0x0450(0x0001) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CTJR[0x7];                                     // 0x0451(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MKUG[0x7];                                     // 0x0451(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class AController*                                 LastHitBy;                                                 // 0x0458(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AController*                                 Controller;                                                // 0x0460(0x0008) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EINH[0x8];                                     // 0x0468(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_4A7P[0x8];                                     // 0x0468(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     ControlInputVector;                                        // 0x0470(0x000C) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected)
 	struct FVector                                     LastControlInputVector;                                    // 0x047C(0x000C) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_JJL9[0x8];                                     // 0x0488(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3LYG[0x8];                                     // 0x0488(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -523,11 +523,11 @@ public:
 	struct FBasedMovementInfo                          BasedMovement;                                             // 0x04A8(0x0038) (ContainsInstancedReference, Protected)
 	struct FBasedMovementInfo                          ReplicatedBasedMovement;                                   // 0x04E0(0x0038) (Net, RepNotify, ContainsInstancedReference, Protected)
 	struct FVector                                     BaseTranslationOffset;                                     // 0x0518(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_H95N[0xC];                                     // 0x0524(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GJU8[0xC];                                     // 0x0524(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FQuat                                       BaseRotationOffset;                                        // 0x0530(0x0010) (IsPlainOldData, NoDestructor, Protected)
 	unsigned char                                      ReplicatedMovementMode;                                    // 0x0540(0x0001) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	bool                                               bInBaseReplication;                                        // 0x0541(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_S50X[0x2];                                     // 0x0542(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_F03H[0x2];                                     // 0x0542(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              CrouchedEyeHeight;                                         // 0x0544(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bIsCrouched : 1;                                           // 0x0548(0x0001) BIT_FIELD (BlueprintVisible, BlueprintReadOnly, NoDestructor)
 	unsigned char                                      bPressedJump : 1;                                          // 0x0548(0x0001) BIT_FIELD (BlueprintVisible, BlueprintReadOnly, NoDestructor)
@@ -536,18 +536,18 @@ public:
 	unsigned char                                      bClientResimulateRootMotion : 1;                           // 0x0548(0x0001) BIT_FIELD (Transient, NoDestructor)
 	unsigned char                                      bSimGravityDisabled : 1;                                   // 0x0548(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bServerMoveIgnoreRootMotion : 1;                           // 0x0548(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_RP9D[0x3];                                     // 0x0549(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ULFL[0x3];                                     // 0x0549(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              JumpKeyHoldTime;                                           // 0x054C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              JumpMaxHoldTime;                                           // 0x0550(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_KPQ9[0x4];                                     // 0x0554(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ODEC[0x4];                                     // 0x0554(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScriptMulticastDelegate                    OnReachedJumpApex;                                         // 0x0558(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_ABRP[0x10];                                    // 0x0568(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_EQQX[0x10];                                    // 0x0568(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScriptMulticastDelegate                    OnCharacterMovementUpdated;                                // 0x0578(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_OHIF[0x8];                                     // 0x0588(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MPHP[0x8];                                     // 0x0588(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRootMotionMovementParams                   ClientRootMotionParams;                                    // 0x0590(0x0040) (Transient)
 	TArray<struct FSimulatedRootMotionReplicatedMove>  RootMotionRepMoves;                                        // 0x05D0(0x0010) (ZeroConstructor, Transient, ContainsInstancedReference)
 	struct FRepRootMotionMontage                       RepRootMotion;                                             // 0x05E0(0x0040) (Net, RepNotify, ContainsInstancedReference)
-	unsigned char                                      UnknownData_92OR[0x8];                                     // 0x0620(0x0008) Fix Super Size
+	unsigned char                                      UnknownData_07E1[0x8];                                     // 0x0620(0x0008) Fix Super Size
 
 
 	static UClass* StaticClass()
@@ -599,7 +599,7 @@ public:
 	TArray<struct FActiveVertexAnim>                   VertexAnims;                                               // 0x0050(0x0010) (ZeroConstructor, Transient)
 	TEnumAsByte<Engine_ERootMotionMode>                RootMotionMode;                                            // 0x0060(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bWarnAboutBlueprintUsage;                                  // 0x0061(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_TMXE[0x6];                                     // 0x0062(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SRF2[0x6];                                     // 0x0062(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScriptMulticastDelegate                    OnMontageBlendingOut;                                      // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnMontageStarted;                                          // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnMontageEnded;                                            // 0x0088(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
@@ -607,19 +607,19 @@ public:
 	struct FScriptMulticastDelegate                    OnStateExited;                                             // 0x00A8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnStateInitialised;                                        // 0x00B8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnAnimUpdated;                                             // 0x00C8(0x0010) (ZeroConstructor, InstancedReference)
-	unsigned char                                      UnknownData_CMFW[0x70];                                    // 0x00D8(0x0070) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_F1XG[0x70];                                    // 0x00D8(0x0070) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	bool                                               bQueueMontageEvents;                                       // 0x0148(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_8CEF[0xF7];                                    // 0x0149(0x00F7) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7J7I[0xF7];                                    // 0x0149(0x00F7) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FAnimNotifyEvent>                    ActiveAnimNotifyState;                                     // 0x0240(0x0010) (ZeroConstructor, Transient, ContainsInstancedReference)
-	unsigned char                                      UnknownData_W7RO[0x100];                                   // 0x0250(0x0100) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Q0U6[0x100];                                   // 0x0250(0x0100) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int16_t                                            SlotNodeInitializationCounter;                             // 0x0350(0x0002) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int16_t                                            GraphTraversalCounter;                                     // 0x0352(0x0002) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_XIGK[0x54];                                    // 0x0354(0x0054) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_4XBK[0x54];                                    // 0x0354(0x0054) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	bool                                               bBoneCachesInvalidated;                                    // 0x03A8(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_7JLC[0x8F];                                    // 0x03A9(0x008F) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	unsigned char                                      UnknownData_HEUN : 1;                                      // 0x0438(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_DLUH[0x8F];                                    // 0x03A9(0x008F) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TZEN : 1;                                      // 0x0438(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bBlueprintAnimUpdateEnabled : 1;                           // 0x0438(0x0001) BIT_FIELD (Edit, DisableEditOnInstance, NoDestructor, Protected)
-	unsigned char                                      UnknownData_H3C2[0x7];                                     // 0x0439(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_01KH[0x7];                                     // 0x0439(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -691,7 +691,7 @@ public:
 class UAnimNotify : public UObject
 {
 public:
-	unsigned char                                      UnknownData_201R[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_9SAE[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -740,7 +740,7 @@ public:
 	bool                                               bOwnerNoSee;                                               // 0x0051(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               bDestroyAtEnd;                                             // 0x0052(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               bWorldOwnedEffect;                                         // 0x0053(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_NP9H[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_WNHH[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -766,13 +766,13 @@ public:
 	unsigned char                                      bConstrainAspectRatio : 1;                                 // 0x02C4(0x0001) BIT_FIELD (Edit, BlueprintVisible, Interp, NoDestructor)
 	unsigned char                                      bUseFieldOfViewForLOD : 1;                                 // 0x02C4(0x0001) BIT_FIELD (Edit, BlueprintVisible, Interp, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bUsePawnControlRotation : 1;                               // 0x02C4(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_1MPI[0x3];                                     // 0x02C5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BBH3[0x3];                                     // 0x02C5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_ECameraProjectionMode>          ProjectionMode;                                            // 0x02C8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FAI6[0x3];                                     // 0x02C9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1PG2[0x3];                                     // 0x02C9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              PostProcessBlendWeight;                                    // 0x02CC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	struct FPostProcessSettings                        PostProcessSettings;                                       // 0x02D0(0x0540) (Edit, BlueprintVisible, Interp)
 	unsigned char                                      bUseControllerViewRotation : 1;                            // 0x0810(0x0001) BIT_FIELD (Deprecated, NoDestructor)
-	unsigned char                                      UnknownData_CYGC[0xB];                                     // 0x0811(0x000B) Fix Super Size
+	unsigned char                                      UnknownData_6IKH[0xB];                                     // 0x0811(0x000B) Fix Super Size
 
 
 	static UClass* StaticClass()
@@ -795,19 +795,19 @@ class UMovementComponent : public UActorComponent
 public:
 	class USceneComponent*                             UpdatedComponent;                                          // 0x00C8(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, DuplicateTransient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                         UpdatedPrimitive;                                          // 0x00D0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, DuplicateTransient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_XGKD[0x4];                                     // 0x00D8(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8SEK[0x4];                                     // 0x00D8(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     Velocity;                                                  // 0x00DC(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	unsigned char                                      bConstrainToPlane : 1;                                     // 0x00E8(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor)
 	unsigned char                                      bSnapToPlaneAtStart : 1;                                   // 0x00E8(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor)
-	unsigned char                                      UnknownData_90YE[0x3];                                     // 0x00E9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_OP00[0x3];                                     // 0x00E9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EPlaneConstraintAxisSetting>    PlaneConstraintAxisSetting;                                // 0x00EC(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FVK2[0x3];                                     // 0x00ED(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1RSZ[0x3];                                     // 0x00ED(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     PlaneConstraintNormal;                                     // 0x00F0(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected)
 	struct FVector                                     PlaneConstraintOrigin;                                     // 0x00FC(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected)
 	unsigned char                                      bUpdateOnlyIfRendered : 1;                                 // 0x0108(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bAutoUpdateTickRegistration : 1;                           // 0x0108(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
 	unsigned char                                      bAutoRegisterUpdatedComponent : 1;                         // 0x0108(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
-	unsigned char                                      UnknownData_2HQC[0x7];                                     // 0x0109(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ECIB[0x7];                                     // 0x0109(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -849,12 +849,12 @@ class UNavMovementComponent : public UMovementComponent
 public:
 	struct FNavAgentProperties                         NavAgentProps;                                             // 0x0110(0x0030) (Edit, BlueprintVisible)
 	unsigned char                                      bUpdateNavAgentWithOwnersCollision : 1;                    // 0x0140(0x0001) BIT_FIELD (Edit, NoDestructor, Protected)
-	unsigned char                                      UnknownData_RMRX[0x3];                                     // 0x0141(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_EA2I[0x3];                                     // 0x0141(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FMovementProperties                         MovementState;                                             // 0x0144(0x0004)
-	unsigned char                                      UnknownData_PHLZ[0x8];                                     // 0x0148(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_2XNG[0x8];                                     // 0x0148(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	bool                                               UseDefaultNavWalkingSearchRadiusScale;                     // 0x0150(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                               UseDefaultNavWalkingSearchHeightScale;                     // 0x0151(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_0Z1U[0x6];                                     // 0x0152(0x0006) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3M7H[0x6];                                     // 0x0152(0x0006) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -905,7 +905,7 @@ public:
 class UCharacterMovementComponent : public UPawnMovementComponent
 {
 public:
-	unsigned char                                      UnknownData_86YH[0x18];                                    // 0x0160(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XJP3[0x18];                                    // 0x0160(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class ACharacter*                                  CharacterOwner;                                            // 0x0178(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	float                                              GravityScale;                                              // 0x0180(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxStepHeight;                                             // 0x0184(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -915,7 +915,7 @@ public:
 	float                                              WalkableFloorZ;                                            // 0x0194(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EMovementMode>                  MovementMode;                                              // 0x0198(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      CustomMovementMode;                                        // 0x0199(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_05KA[0x26];                                    // 0x019A(0x0026) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_N3RV[0x26];                                    // 0x019A(0x0026) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              GroundFriction;                                            // 0x01C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxWalkSpeed;                                              // 0x01C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxWalkSpeedBackwards;                                     // 0x01C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -930,7 +930,7 @@ public:
 	float                                              BrakingFrictionFactor;                                     // 0x01EC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              BrakingFriction;                                           // 0x01F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bUseSeparateBrakingFriction : 1;                           // 0x01F4(0x0001) BIT_FIELD (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	unsigned char                                      UnknownData_9FLK[0x3];                                     // 0x01F5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TP1K[0x3];                                     // 0x01F5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              BrakingDecelerationWalking;                                // 0x01F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              BrakingDecelerationFalling;                                // 0x01FC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              BrakingDecelerationSwimming;                               // 0x0200(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -955,7 +955,7 @@ public:
 	unsigned char                                      bCanWalkOffLedges : 1;                                     // 0x0235(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bCanWalkOffLedgesWhenCrouching : 1;                        // 0x0235(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bDeferUpdateMoveComponent : 1;                             // 0x0235(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_M8T0[0x2];                                     // 0x0236(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_UUUE[0x2];                                     // 0x0236(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class USceneComponent*                             DeferredUpdatedMoveComponent;                              // 0x0238(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxOutOfWaterStepHeight;                                   // 0x0240(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              OutofWaterZ;                                               // 0x0244(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
@@ -974,7 +974,7 @@ public:
 	float                                              RepulsionForce;                                            // 0x026C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              NetMoveDelta;                                              // 0x0270(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bForceBraking : 1;                                         // 0x0274(0x0001) BIT_FIELD (Deprecated, NoDestructor)
-	unsigned char                                      UnknownData_LFUZ[0x3];                                     // 0x0275(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_RAGV[0x3];                                     // 0x0275(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              CrouchedSpeedMultiplier;                                   // 0x0278(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              UpperImpactNormalScale;                                    // 0x027C(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     Acceleration;                                              // 0x0280(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
@@ -982,7 +982,7 @@ public:
 	struct FVector                                     PendingImpulseToApply;                                     // 0x0298(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	struct FVector                                     PendingForceToApply;                                       // 0x02A4(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	float                                              AnalogInputModifier;                                       // 0x02B0(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_IXTU[0x10];                                    // 0x02B4(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_D1Y7[0x10];                                    // 0x02B4(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MaxSimulationTimeStep;                                     // 0x02C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	int                                                MaxSimulationIterations;                                   // 0x02C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              MaxSmoothNetUpdateDist;                                    // 0x02CC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -995,7 +995,7 @@ public:
 	TEnumAsByte<Engine_EMovementMode>                  DefaultLandMovementMode;                                   // 0x0370(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EMovementMode>                  DefaultWaterMovementMode;                                  // 0x0371(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EMovementMode>                  GroundMovementMode;                                        // 0x0372(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_IYL0[0x1];                                     // 0x0373(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8F81[0x1];                                     // 0x0373(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bMaintainHorizontalGroundVelocity : 1;                     // 0x0374(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bImpartBaseVelocityX : 1;                                  // 0x0374(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bImpartBaseVelocityY : 1;                                  // 0x0374(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
@@ -1023,9 +1023,9 @@ public:
 	unsigned char                                      bHasRequestedVelocity : 1;                                 // 0x0377(0x0001) BIT_FIELD (Transient, NoDestructor, Protected)
 	unsigned char                                      bRequestedMoveWithMaxSpeed : 1;                            // 0x0377(0x0001) BIT_FIELD (Transient, NoDestructor, Protected)
 	unsigned char                                      bWasAvoidanceUpdated : 1;                                  // 0x0377(0x0001) BIT_FIELD (Transient, NoDestructor, Protected)
-	unsigned char                                      UnknownData_QQWW : 2;                                      // 0x0377(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_13PE : 2;                                      // 0x0377(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bProjectNavMeshWalking : 1;                                // 0x0377(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, Protected)
-	unsigned char                                      UnknownData_UDM2[0x14];                                    // 0x0378(0x0014) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZBGS[0x14];                                    // 0x0378(0x0014) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              SmoothingClientPositionTolerance;                          // 0x038C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              AvoidanceConsiderationRadius;                              // 0x0390(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     RequestedVelocity;                                         // 0x0394(0x000C) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
@@ -1035,29 +1035,29 @@ public:
 	struct FNavAvoidanceMask                           GroupsToIgnore;                                            // 0x03AC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	float                                              AvoidanceWeight;                                           // 0x03B0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     PendingLaunchVelocity;                                     // 0x03B4(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_UUC2[0x98];                                    // 0x03C0(0x0098) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Z9RI[0x98];                                    // 0x03C0(0x0098) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              NavMeshProjectionInterval;                                 // 0x0458(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              NavMeshProjectionTimer;                                    // 0x045C(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bUseNavMeshProjectionTimeModifier;                         // 0x0460(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_KBCP[0x3];                                     // 0x0461(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9QYE[0x3];                                     // 0x0461(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MaxNavMeshProjectionInterval;                              // 0x0464(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZOUV[0x4];                                     // 0x0468(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_P96V[0x4];                                     // 0x0468(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              NavMeshProjectionInterpSpeed;                              // 0x046C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bUsePlaneBasedNavMeshProjectionInterpSystem;               // 0x0470(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_KU2L[0x3];                                     // 0x0471(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8WCX[0x3];                                     // 0x0471(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MaxAllowedZOffsetFromCurrentPlane;                         // 0x0474(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxZDiffFromPrevPlane;                                     // 0x0478(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_W1CF[0x1C];                                    // 0x047C(0x001C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YN95[0x1C];                                    // 0x047C(0x001C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              NavMeshProjectionHeightScaleUp;                            // 0x0498(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              NavMeshProjectionHeightScaleDown;                          // 0x049C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               UseControllerRotationInNavWalkingMoveComponent;            // 0x04A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_4NB0[0x7];                                     // 0x04A1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_UR5H[0x7];                                     // 0x04A1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FCharacterMovementComponentPreClothTickFunction PreClothComponentTick;                                     // 0x04A8(0x0050)
-	unsigned char                                      UnknownData_0D5J[0x14];                                    // 0x04F8(0x0014) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_4Z40[0x14];                                    // 0x04F8(0x0014) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MinTimeBetweenTimeStampResets;                             // 0x050C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRootMotionMovementParams                   RootMotionParams;                                          // 0x0510(0x0040) (Transient)
 	bool                                               bWasSimulatingRootMotion;                                  // 0x0550(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_MFMI[0x7];                                     // 0x0551(0x0007) Fix Super Size
+	unsigned char                                      UnknownData_Z6RJ[0x7];                                     // 0x0551(0x0007) Fix Super Size
 
 
 	static UClass* StaticClass()
@@ -1112,7 +1112,7 @@ public:
 class UInputComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_ET1M[0x88];                                    // 0x00C8(0x0088) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_L6N7[0x88];                                    // 0x00C8(0x0088) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -1139,7 +1139,7 @@ public:
 class UEngine : public UObject
 {
 public:
-	unsigned char                                      UnknownData_G3FQ[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QCF3[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UFont*                                       TinyFont;                                                  // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FStringAssetReference                       TinyFontName;                                              // 0x0038(0x0010) (Edit, ZeroConstructor, Config, GlobalConfig)
 	class UFont*                                       SmallFont;                                                 // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1155,7 +1155,7 @@ public:
 	class UFont*                                       HugeFont;                                                  // 0x00C0(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FStringAssetReference                       HugeFontName;                                              // 0x00C8(0x0010) (Edit, ZeroConstructor, Config, GlobalConfig, AdvancedDisplay)
 	TArray<class UFont*>                               AdditionalFonts;                                           // 0x00D8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_Z7VP[0x8];                                     // 0x00E8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ACLN[0x8];                                     // 0x00E8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FString>                             AdditionalFontNames;                                       // 0x00F0(0x0010) (Edit, ZeroConstructor, Config, GlobalConfig, AdvancedDisplay)
 	class UClass*                                      ConsoleClass;                                              // 0x0100(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	struct FStringClassReference                       ConsoleClassName;                                          // 0x0108(0x0010) (Edit, ZeroConstructor, Config, GlobalConfig, NoClear)
@@ -1249,7 +1249,7 @@ public:
 	float                                              IdealLightMapDensity;                                      // 0x0524(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxLightMapDensity;                                        // 0x0528(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bRenderLightMapDensityGrayscale : 1;                       // 0x052C(0x0001) BIT_FIELD (Config, GlobalConfig, NoDestructor)
-	unsigned char                                      UnknownData_JZZI[0x3];                                     // 0x052D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SSW3[0x3];                                     // 0x052D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              RenderLightMapDensityGrayscaleScale;                       // 0x0530(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              RenderLightMapDensityColorScale;                           // 0x0534(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                                LightMapDensityVertexMappedColor;                          // 0x0538(0x0010) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor)
@@ -1269,7 +1269,7 @@ public:
 	struct FStringAssetReference                       WeightMapPlaceholderTextureName;                           // 0x05F8(0x0010) (ZeroConstructor, Config, GlobalConfig)
 	class UTexture2D*                                  LightMapDensityTexture;                                    // 0x0608(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FStringAssetReference                       LightMapDensityTextureName;                                // 0x0610(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	unsigned char                                      UnknownData_TQSR[0x8];                                     // 0x0620(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_IL4V[0x8];                                     // 0x0620(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UGameViewportClient*                         GameViewport;                                              // 0x0628(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FString>                             DeferredCommands;                                          // 0x0630(0x0010) (ZeroConstructor)
 	int                                                TickCycles;                                                // 0x0640(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1279,22 +1279,22 @@ public:
 	unsigned char                                      bHardwareSurveyEnabled : 1;                                // 0x0650(0x0001) BIT_FIELD (Deprecated, NoDestructor)
 	unsigned char                                      bSubtitlesEnabled : 1;                                     // 0x0650(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
 	unsigned char                                      bSubtitlesForcedOff : 1;                                   // 0x0650(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
-	unsigned char                                      UnknownData_DXGI[0x3];                                     // 0x0651(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_X347[0x3];                                     // 0x0651(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                MaximumLoopIterationCount;                                 // 0x0654(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bCanBlueprintsTickByDefault : 1;                           // 0x0658(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
 	unsigned char                                      bOptimizeAnimBlueprintMemberVariableAccess : 1;            // 0x0658(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
 	unsigned char                                      bEnableEditorPSysRealtimeLOD : 1;                          // 0x0658(0x0001) BIT_FIELD (Config, NoDestructor)
-	unsigned char                                      UnknownData_ZTP5 : 1;                                      // 0x0658(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_3XML : 1;                                      // 0x0658(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bSmoothFrameRate : 1;                                      // 0x0658(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
 	unsigned char                                      bUseFixedFrameRate : 1;                                    // 0x0658(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
-	unsigned char                                      UnknownData_MYJN[0x3];                                     // 0x0659(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LMUL[0x3];                                     // 0x0659(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              FixedFrameRate;                                            // 0x065C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FFloatRange                                 SmoothedFrameRateRange;                                    // 0x0660(0x0010) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
 	unsigned char                                      bCheckForMultiplePawnsSpawnedInAFrame : 1;                 // 0x0670(0x0001) BIT_FIELD (Config, NoDestructor)
-	unsigned char                                      UnknownData_E7BY[0x3];                                     // 0x0671(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6HY6[0x3];                                     // 0x0671(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                NumPawnsAllowedToBeSpawnedInAFrame;                        // 0x0674(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bShouldGenerateLowQualityLightmaps : 1;                    // 0x0678(0x0001) BIT_FIELD (Config, GlobalConfig, NoDestructor)
-	unsigned char                                      UnknownData_FA5T[0x3];                                     // 0x0679(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_NOE4[0x3];                                     // 0x0679(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FColor                                      C_WorldBox;                                                // 0x067C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FColor                                      C_BrushWire;                                               // 0x0680(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FColor                                      C_AddWire;                                                 // 0x0684(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -1310,26 +1310,26 @@ public:
 	struct FColor                                      C_BrushShape;                                              // 0x06AC(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              StreamingDistanceFactor;                                   // 0x06B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ETransitionType>                TransitionType;                                            // 0x06B4(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_RB5X[0x3];                                     // 0x06B5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_S9N1[0x3];                                     // 0x06B5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FString                                     TransitionDescription;                                     // 0x06B8(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	struct FString                                     TransitionGameMode;                                        // 0x06C8(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	float                                              MeshLODRange;                                              // 0x06D8(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bAllowMatureLanguage : 1;                                  // 0x06DC(0x0001) BIT_FIELD (Config, NoDestructor)
-	unsigned char                                      UnknownData_J3XG[0x3];                                     // 0x06DD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_4I3K[0x3];                                     // 0x06DD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              CameraRotationThreshold;                                   // 0x06E0(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              CameraTranslationThreshold;                                // 0x06E4(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              PrimitiveProbablyVisibleTime;                              // 0x06E8(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxOcclusionPixelsFraction;                                // 0x06EC(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bPauseOnLossOfFocus : 1;                                   // 0x06F0(0x0001) BIT_FIELD (Config, NoDestructor)
-	unsigned char                                      UnknownData_DQHP[0x3];                                     // 0x06F1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QOD7[0x3];                                     // 0x06F1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                MaxParticleResize;                                         // 0x06F4(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                MaxParticleResizeWarn;                                     // 0x06F8(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_WK46[0x4];                                     // 0x06FC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XKVL[0x4];                                     // 0x06FC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FDropNoteInfo>                       PendingDroppedNotes;                                       // 0x0700(0x0010) (ZeroConstructor, Transient)
 	struct FRigidBodyErrorCorrection                   PhysicErrorCorrection;                                     // 0x0710(0x001C) (Config)
 	float                                              NetClientTicksPerSecond;                                   // 0x072C(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bHasPendingGlobalReregister : 1;                           // 0x0730(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_FDN5[0x3];                                     // 0x0731(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_0FQ2[0x3];                                     // 0x0731(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              DisplayGamma;                                              // 0x0734(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MinDesiredFrameRate;                                       // 0x0738(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                                DefaultSelectedMaterialColor;                              // 0x073C(0x0010) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor)
@@ -1338,32 +1338,32 @@ public:
 	struct FLinearColor                                SubduedSelectionOutlineColor;                              // 0x076C(0x0010) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
 	struct FLinearColor                                SelectedMaterialColorOverride;                             // 0x077C(0x0010) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
 	bool                                               bIsOverridingSelectedColor;                                // 0x078C(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_7L62[0x3];                                     // 0x078D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_04SX[0x3];                                     // 0x078D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bEnableOnScreenDebugMessages : 1;                          // 0x0790(0x0001) BIT_FIELD (Config, GlobalConfig, NoDestructor)
 	unsigned char                                      bEnableOnScreenDebugMessagesDisplay : 1;                   // 0x0790(0x0001) BIT_FIELD (Transient, NoDestructor)
 	unsigned char                                      bSuppressMapWarnings : 1;                                  // 0x0790(0x0001) BIT_FIELD (Config, GlobalConfig, NoDestructor)
 	unsigned char                                      bCookSeparateSharedMPGameContent : 1;                      // 0x0790(0x0001) BIT_FIELD (Config, GlobalConfig, NoDestructor)
 	unsigned char                                      bDisableAILogging : 1;                                     // 0x0790(0x0001) BIT_FIELD (Config, GlobalConfig, NoDestructor)
-	unsigned char                                      UnknownData_KS13[0x3];                                     // 0x0791(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SAQK[0x3];                                     // 0x0791(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	uint32_t                                           bEnableVisualLogRecordingOnStart;                          // 0x0794(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_3BCE[0x4];                                     // 0x0798(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_4ZP4[0x4];                                     // 0x0798(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                ScreenSaverInhibitorSemaphore;                             // 0x079C(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bLockReadOnlyLevels : 1;                                   // 0x07A0(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_75VM[0x7];                                     // 0x07A1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_G9DX[0x7];                                     // 0x07A1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FString                                     ParticleEventManagerClassPath;                             // 0x07A8(0x0010) (ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_BPKI[0x10];                                    // 0x07B8(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QDDU[0x10];                                    // 0x07B8(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              SelectionHighlightIntensity;                               // 0x07C8(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              BSPSelectionHighlightIntensity;                            // 0x07CC(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              HoverHighlightIntensity;                                   // 0x07D0(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              SelectionHighlightIntensityBillboards;                     // 0x07D4(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FCDZ[0x1F0];                                   // 0x07D8(0x01F0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3B46[0x1F0];                                   // 0x07D8(0x01F0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FNetDriverDefinition>                NetDriverDefinitions;                                      // 0x09C8(0x0010) (ZeroConstructor, Transient, Config)
 	TArray<struct FString>                             ServerActors;                                              // 0x09D8(0x0010) (ZeroConstructor, Config)
 	TArray<struct FString>                             RuntimeServerActors;                                       // 0x09E8(0x0010) (ZeroConstructor)
 	unsigned char                                      bStartedLoadMapMovie : 1;                                  // 0x09F8(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_27F9[0x17];                                    // 0x09F9(0x0017) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_JXYW[0x17];                                    // 0x09F9(0x0017) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                NextWorldContextHandle;                                    // 0x0A10(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_6SXH[0x24];                                    // 0x0A14(0x0024) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_VNGI[0x24];                                    // 0x0A14(0x0024) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -1383,7 +1383,7 @@ class UGameEngine : public UEngine
 public:
 	float                                              MaxDeltaTime;                                              // 0x0A38(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ServerFlushLogInterval;                                    // 0x0A3C(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CTGM[0x68];                                    // 0x0A40(0x0068) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8LDY[0x68];                                    // 0x0A40(0x0068) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -1401,11 +1401,11 @@ public:
 class UGameInstance : public UObject
 {
 public:
-	unsigned char                                      UnknownData_QSXQ[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_RZJ3[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class ULocalPlayer*>                        LocalPlayers;                                              // 0x0038(0x0010) (ZeroConstructor, Protected)
-	unsigned char                                      UnknownData_Q51K[0x8];                                     // 0x0048(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1TQ0[0x8];                                     // 0x0048(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UOnlineSession*                              OnlineSession;                                             // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_SJ5D[0x30];                                    // 0x0058(0x0030) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8J0X[0x30];                                    // 0x0058(0x0030) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -1444,13 +1444,13 @@ public:
 class AGameMode : public AInfo
 {
 public:
-	unsigned char                                      UnknownData_9BIG[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_N522[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bDisableAsyncOcclusionChecking : 1;                        // 0x0430(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bUseSeamlessTravel : 1;                                    // 0x0430(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bPauseable : 1;                                            // 0x0430(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bStartPlayersAsSpectators : 1;                             // 0x0430(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
 	unsigned char                                      bDelayedStart : 1;                                         // 0x0430(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
-	unsigned char                                      UnknownData_0HFU[0x7];                                     // 0x0431(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3E22[0x7];                                     // 0x0431(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FString                                     OptionsString;                                             // 0x0438(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash)
 	class UClass*                                      DefaultPawnClass;                                          // 0x0448(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	class UClass*                                      HUDClass;                                                  // 0x0450(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
@@ -1460,9 +1460,9 @@ public:
 	float                                              MinRespawnDelay;                                           // 0x0464(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AGameSession*                                GameSession;                                               // 0x0468(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                NumTravellingPlayers;                                      // 0x0470(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_LC01[0x4];                                     // 0x0474(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_CYE5[0x4];                                     // 0x0474(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FText                                       DefaultPlayerName;                                         // 0x0478(0x0018) ELEMENT_SIZE_MISMATCH (Edit)
-	unsigned char                                      UnknownData_8A7J[0x20];                                    // 0x0474(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_YP8M[0x20];                                    // 0x0474(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	class UClass*                                      EngineMessageClass;                                        // 0x04B0(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	class UClass*                                      PlayerControllerClass;                                     // 0x04B8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoClear, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	class UClass*                                      SpectatorClass;                                            // 0x04C0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoClear, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
@@ -1471,11 +1471,11 @@ public:
 	class UClass*                                      GameStateClass;                                            // 0x04D8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoClear, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	class AGameState*                                  GameState;                                                 // 0x04E0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class APlayerState*>                        InactivePlayerArray;                                       // 0x04E8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_AA6B[0x10];                                    // 0x04F8(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_OB99[0x10];                                    // 0x04F8(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FGameClassShortName>                 GameModeClassAliases;                                      // 0x0508(0x0010) (ZeroConstructor, Config, Protected)
 	float                                              InactivePlayerStateLifeSpan;                               // 0x0518(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	bool                                               bHandleDedicatedServerReplays;                             // 0x051C(0x0001) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_PRAT[0x3];                                     // 0x051D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_B3SR[0x3];                                     // 0x051D(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -1525,14 +1525,14 @@ public:
 class UPrimitiveComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData_H0AI[0x8];                                     // 0x02B0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WHB5[0x8];                                     // 0x02B0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MinDrawDistance;                                           // 0x02B8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_BQBL[0x4];                                     // 0x02BC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Y64C[0x4];                                     // 0x02BC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              LDMaxDrawDistance;                                         // 0x02C0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              CachedMaxDrawDistance;                                     // 0x02C4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ESceneDepthPriorityGroup>       DepthPriorityGroup;                                        // 0x02C8(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ESceneDepthPriorityGroup>       ViewOwnerDepthPriorityGroup;                               // 0x02C9(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_PYB7[0x2];                                     // 0x02CA(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WW5B[0x2];                                     // 0x02CA(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bAlwaysCreatePhysicsState : 1;                             // 0x02CC(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bGenerateOverlapEvents : 1;                                // 0x02CC(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor)
 	unsigned char                                      bMultiBodyOverlap : 1;                                     // 0x02CC(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
@@ -1545,21 +1545,21 @@ public:
 	unsigned char                                      bRenderInMainPass : 1;                                     // 0x02CD(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bRenderInCustomPrePass : 1;                                // 0x02CD(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bReflected : 1;                                            // 0x02CD(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_I0Q7 : 1;                                      // 0x02CD(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_UCON : 1;                                      // 0x02CD(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bReflectedOnLowQuality : 1;                                // 0x02CD(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bFFTWaterMask : 1;                                         // 0x02CD(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bVolumeFogMask : 1;                                        // 0x02CD(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_IVXV : 1;                                      // 0x02CE(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_0TGW : 1;                                      // 0x02CE(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bAffectsFlatWater : 1;                                     // 0x02CE(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bGPUParticlesKillPlane : 1;                                // 0x02CE(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bDontCull : 1;                                             // 0x02CE(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bDontSizeOnScreenCull : 1;                                 // 0x02CE(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_RN9C[0x1];                                     // 0x02CF(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_M9MP[0x1];                                     // 0x02CF(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              OverriddenShadowMinTexelSize;                              // 0x02D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	bool                                               bOverrideShadowMinSizeCulling;                             // 0x02D4(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               bOverrideShadowCascadesExclusion;                          // 0x02D5(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Engine_EExcludeFromCascades>           ExcludedShadowCascades;                                    // 0x02D6(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FJBS[0x1];                                     // 0x02D7(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_DM62[0x1];                                     // 0x02D7(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bReceivesDecals : 1;                                       // 0x02D8(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bOwnerNoSee : 1;                                           // 0x02D8(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bOnlyOwnerSee : 1;                                         // 0x02D8(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
@@ -1588,7 +1588,7 @@ public:
 	TEnumAsByte<Engine_EIndirectLightingCacheQuality>  IndirectLightingCacheQuality;                              // 0x02DC(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	bool                                               bHasCachedStaticLighting;                                  // 0x02DD(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               bStaticLightingBuildEnqueued;                              // 0x02DE(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_DGC7[0x1];                                     // 0x02DF(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_EL20[0x1];                                     // 0x02DF(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bIgnoreRadialImpulse : 1;                                  // 0x02E0(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bIgnoreRadialForce : 1;                                    // 0x02E0(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      AlwaysLoadOnClient : 1;                                    // 0x02E0(0x0001) BIT_FIELD (NoDestructor)
@@ -1596,18 +1596,18 @@ public:
 	unsigned char                                      bUseEditorCompositing : 1;                                 // 0x02E0(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bRenderCustomDepth : 1;                                    // 0x02E0(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bAllowVelocityInMaterial : 1;                              // 0x02E0(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_G9ES[0x3];                                     // 0x02E1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_4L0H[0x3];                                     // 0x02E1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                CustomDepthStencilValue;                                   // 0x02E4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	int                                                TranslucencySortPriority;                                  // 0x02E8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	int                                                VisibilityId;                                              // 0x02EC(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_P44I[0x4];                                     // 0x02F0(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_UJPI[0x4];                                     // 0x02F0(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              LpvBiasMultiplier;                                         // 0x02F4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              FarCascadeLPVBiasMultiplier;                               // 0x02F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              LpvIntensityMultiplier;                                    // 0x02FC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	struct FBodyInstance                               BodyInstance;                                              // 0x0300(0x0180) (Edit, BlueprintVisible, BlueprintReadOnly)
 	unsigned char                                      bAffectRain : 1;                                           // 0x0480(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bCanEverAffectNavigation : 1;                              // 0x0480(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_ZWCQ : 1;                                      // 0x0480(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_WQ6I : 1;                                      // 0x0480(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bSkipRenderingInOuterLPVCascades : 1;                      // 0x0480(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bEnableMergeCollisionComponents : 1;                       // 0x0480(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bVisibleWhenAboveWaterAndPlayerUnderwater : 1;             // 0x0480(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
@@ -1615,20 +1615,20 @@ public:
 	unsigned char                                      bVisibleWhenUnderwaterAndPlayerAbove : 1;                  // 0x0480(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bVisibleWhenUnderwaterAndPlayerUnderwater : 1;             // 0x0481(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bCanRenderAboveAndBelowWaterAtSameTime : 1;                // 0x0481(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_KC9Q[0x6];                                     // 0x0482(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_EO09[0x6];                                     // 0x0482(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              BoundsScale;                                               // 0x0488(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              OcclusionBoundsScale;                                      // 0x048C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              LastRenderTime;                                            // 0x0490(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bGPUVisibility;                                            // 0x0494(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Engine_EHasCustomNavigableGeometry>    bHasCustomNavigableGeometry;                               // 0x0495(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ECanBeCharacterBase>            CanCharacterStepUpOn;                                      // 0x0496(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_24YJ[0x21];                                    // 0x0497(0x0021) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Z9BG[0x21];                                    // 0x0497(0x0021) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FMulticastSparseDelegate                    OnComponentHit;                                            // 0x04B8(0x0001) (InstancedReference, BlueprintAssignable, NoDestructor)
 	struct FMulticastSparseDelegate                    OnComponentBeginOverlap;                                   // 0x04B9(0x0001) (InstancedReference, BlueprintAssignable, NoDestructor)
 	struct FMulticastSparseDelegate                    OnComponentEndOverlap;                                     // 0x04BA(0x0001) (InstancedReference, BlueprintAssignable, NoDestructor)
 	struct FMulticastSparseDelegate                    OnComponentWake;                                           // 0x04BB(0x0001) (InstancedReference, BlueprintAssignable, NoDestructor)
 	struct FMulticastSparseDelegate                    OnComponentSleep;                                          // 0x04BC(0x0001) (InstancedReference, BlueprintAssignable, NoDestructor)
-	unsigned char                                      UnknownData_WEL2[0x33];                                    // 0x04BD(0x0033) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3PDR[0x33];                                    // 0x04BD(0x0033) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UPrimitiveComponent*                         LODParentPrimitive;                                        // 0x04F0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, DuplicateTransient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FPrimitiveComponentPostPhysicsTickFunction  PostPhysicsComponentTick;                                  // 0x04F8(0x0050)
 	class UPrimitiveComponent*                         MergedCollisionComponentParent;                            // 0x0548(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1729,12 +1729,12 @@ public:
 	struct FName                                       MatchState;                                                // 0x0440(0x0008) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash)
 	struct FName                                       PreviousMatchState;                                        // 0x0448(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	int                                                ElapsedTime;                                               // 0x0450(0x0004) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_E1I6[0x4];                                     // 0x0454(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_W3D6[0x4];                                     // 0x0454(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class APlayerState*>                        PlayerArray;                                               // 0x0458(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	float                                              ReplicatedWorldTimeSeconds;                                // 0x0468(0x0004) (Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash)
 	float                                              ServerWorldTimeSecondsDelta;                               // 0x046C(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	float                                              ServerWorldTimeSecondsUpdateFrequency;                     // 0x0470(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_630P[0xC];                                     // 0x0474(0x000C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_W2CG[0xC];                                     // 0x0474(0x000C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -1759,7 +1759,7 @@ class UGameUserSettings : public UObject
 {
 public:
 	bool                                               bUseVSync;                                                 // 0x0028(0x0001) (ZeroConstructor, Config, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_XO6O[0x1F];                                    // 0x0029(0x001F) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7P2Q[0x1F];                                    // 0x0029(0x001F) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	uint32_t                                           ResolutionSizeX;                                           // 0x0048(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	uint32_t                                           ResolutionSizeY;                                           // 0x004C(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	uint32_t                                           LastUserConfirmedResolutionSizeX;                          // 0x0050(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
@@ -1767,12 +1767,12 @@ public:
 	int                                                WindowPosX;                                                // 0x0058(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	int                                                WindowPosY;                                                // 0x005C(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	bool                                               bUseDesktopResolutionForFullscreen;                        // 0x0060(0x0001) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_M2KQ[0x3];                                     // 0x0061(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WERM[0x3];                                     // 0x0061(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                FullscreenMode;                                            // 0x0064(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	int                                                LastConfirmedFullscreenMode;                               // 0x0068(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	uint32_t                                           Version;                                                   // 0x006C(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	int                                                AudioQualityLevel;                                         // 0x0070(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_BR8T[0x4];                                     // 0x0074(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_762J[0x4];                                     // 0x0074(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -1790,7 +1790,7 @@ public:
 class UScriptViewportClient : public UObject
 {
 public:
-	unsigned char                                      UnknownData_TWUE[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_T34D[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -1808,13 +1808,13 @@ public:
 class UGameViewportClient : public UScriptViewportClient
 {
 public:
-	unsigned char                                      UnknownData_E06U[0x8];                                     // 0x0030(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_CLC0[0x8];                                     // 0x0030(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UConsole*                                    ViewportConsole;                                           // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FDebugDisplayProperty>               DebugProperties;                                           // 0x0040(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_RRKX[0x30];                                    // 0x0050(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_4VB6[0x30];                                    // 0x0050(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UWorld*                                      World;                                                     // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	class UGameInstance*                               GameInstance;                                              // 0x0088(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2UPA[0x2E0];                                   // 0x0090(0x02E0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4NJ6[0x2E0];                                   // 0x0090(0x02E0) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -1837,46 +1837,46 @@ class APlayerCameraManager : public AActor
 public:
 	class APlayerController*                           PCOwner;                                                   // 0x0428(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                             TransformComponent;                                        // 0x0430(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EGPR[0x8];                                     // 0x0438(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_U7BW[0x8];                                     // 0x0438(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              DefaultFOV;                                                // 0x0440(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_RE3Z[0x4];                                     // 0x0444(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_PEPF[0x4];                                     // 0x0444(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              DefaultOrthoWidth;                                         // 0x0448(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_XCIX[0x4];                                     // 0x044C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Z40E[0x4];                                     // 0x044C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              DefaultAspectRatio;                                        // 0x0450(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_UCGS[0x4C];                                    // 0x0454(0x004C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_V2PP[0x4C];                                    // 0x0454(0x004C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FCameraCacheEntry                           CameraCache;                                               // 0x04A0(0x05B0) (Transient)
 	struct FCameraCacheEntry                           LastFrameCameraCache;                                      // 0x0A50(0x05B0) (Transient)
 	struct FTViewTarget                                ViewTarget;                                                // 0x1000(0x05C0) (Transient)
 	struct FTViewTarget                                PendingViewTarget;                                         // 0x15C0(0x05C0) (Transient)
-	unsigned char                                      UnknownData_IOCZ[0x18];                                    // 0x1B80(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XWE2[0x18];                                    // 0x1B80(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UCameraModifier*>                     ModifierList;                                              // 0x1B98(0x0010) (ZeroConstructor, Transient, Protected)
 	TArray<class UClass*>                              DefaultModifiers;                                          // 0x1BA8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, UObjectWrapper)
 	float                                              FreeCamDistance;                                           // 0x1BB8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     FreeCamOffset;                                             // 0x1BBC(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                     ViewTargetOffset;                                          // 0x1BC8(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_WO51[0x14];                                    // 0x1BD4(0x0014) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_NUKW[0x14];                                    // 0x1BD4(0x0014) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class AEmitterCameraLensEffectBase*>        CameraLensEffects;                                         // 0x1BE8(0x0010) (ZeroConstructor, Transient, Protected)
 	class UCameraModifier_CameraShake*                 CachedCameraShakeMod;                                      // 0x1BF8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	class UCameraAnimInst*                             AnimInstPool[0x8];                                         // 0x1C00(0x0040) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	TArray<struct FPostProcessSettings>                PostProcessBlendCache;                                     // 0x1C40(0x0010) (ZeroConstructor, Transient, Protected)
-	unsigned char                                      UnknownData_M8WS[0x10];                                    // 0x1C50(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_99UN[0x10];                                    // 0x1C50(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UCameraAnimInst*>                     ActiveAnims;                                               // 0x1C60(0x0010) (ZeroConstructor, Transient)
 	TArray<class UCameraAnimInst*>                     FreeAnims;                                                 // 0x1C70(0x0010) (ZeroConstructor, Transient, Protected)
 	class ACameraActor*                                AnimCameraActor;                                           // 0x1C80(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	unsigned char                                      bIsOrthographic : 1;                                       // 0x1C88(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_O8RU : 5;                                      // 0x1C88(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_9298 : 5;                                      // 0x1C88(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bUseClientSideCameraUpdates : 1;                           // 0x1C88(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
-	unsigned char                                      UnknownData_EFAA : 1;                                      // 0x1C88(0x0001) BIT_FIELD (PADDING)
-	unsigned char                                      UnknownData_1R7Y : 5;                                      // 0x1C89(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_DJWL : 1;                                      // 0x1C88(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_UG96 : 5;                                      // 0x1C89(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bFollowHmdOrientation : 1;                                 // 0x1C89(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_91YF[0x2];                                     // 0x1C8A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_R0LG[0x2];                                     // 0x1C8A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              ViewPitchMin;                                              // 0x1C8C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ViewPitchMax;                                              // 0x1C90(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ViewYawMin;                                                // 0x1C94(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ViewYawMax;                                                // 0x1C98(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ViewRollMin;                                               // 0x1C9C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ViewRollMax;                                               // 0x1CA0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_V9XN[0xC];                                     // 0x1CA4(0x000C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_9N2M[0xC];                                     // 0x1CA4(0x000C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -1921,23 +1921,23 @@ class APlayerState : public AInfo
 public:
 	float                                              Score;                                                     // 0x0428(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      Ping;                                                      // 0x042C(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_52IV[0x3];                                     // 0x042D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GD5R[0x3];                                     // 0x042D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FString                                     PlayerName;                                                // 0x0430(0x0010) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, RepNotify, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_VWOD[0x10];                                    // 0x0440(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XHKX[0x10];                                    // 0x0440(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                PlayerId;                                                  // 0x0450(0x0004) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bIsSpectator : 1;                                          // 0x0454(0x0001) BIT_FIELD (BlueprintVisible, BlueprintReadOnly, NoDestructor)
 	unsigned char                                      bOnlySpectator : 1;                                        // 0x0454(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bIsABot : 1;                                               // 0x0454(0x0001) BIT_FIELD (BlueprintVisible, BlueprintReadOnly, NoDestructor)
-	unsigned char                                      UnknownData_OC8F : 1;                                      // 0x0454(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_JDXV : 1;                                      // 0x0454(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bIsInactive : 1;                                           // 0x0454(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bFromPreviousLevel : 1;                                    // 0x0454(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_RH2U[0x3];                                     // 0x0455(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HI5N[0x3];                                     // 0x0455(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                StartTime;                                                 // 0x0458(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_JR68[0x4];                                     // 0x045C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_12YJ[0x4];                                     // 0x045C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UClass*                                      EngineMessageClass;                                        // 0x0460(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_L3UF[0x18];                                    // 0x0468(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GWYF[0x18];                                    // 0x0468(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FUniqueNetIdRepl                            UniqueId;                                                  // 0x0480(0x0018) (Net, RepNotify)
-	unsigned char                                      UnknownData_F0JR[0x18];                                    // 0x0498(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TTMQ[0x18];                                    // 0x0498(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -1957,15 +1957,15 @@ public:
 class AController : public AActor
 {
 public:
-	unsigned char                                      UnknownData_TCU9[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TPLI[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class APawn*                                       Pawn;                                                      // 0x0430(0x0008) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_VU83[0x8];                                     // 0x0438(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MPFO[0x8];                                     // 0x0438(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class ACharacter*                                  Character;                                                 // 0x0440(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APlayerState*                                PlayerState;                                               // 0x0448(0x0008) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                             TransformComponent;                                        // 0x0450(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                                    ControlRotation;                                           // 0x0458(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	unsigned char                                      bAttachToPawn : 1;                                         // 0x0464(0x0001) BIT_FIELD (Edit, DisableEditOnInstance, NoDestructor, AdvancedDisplay, Protected)
-	unsigned char                                      UnknownData_LYID[0xB];                                     // 0x0465(0x000B) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_0UTC[0xB];                                     // 0x0465(0x000B) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       StateName;                                                 // 0x0470(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FScriptMulticastDelegate                    OnInstigatedAnyDamage;                                     // 0x0478(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 
@@ -2004,17 +2004,17 @@ class APlayerController : public AController
 {
 public:
 	class UPlayer*                                     Player;                                                    // 0x0488(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_MKSH[0x8];                                     // 0x0490(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5JPY[0x8];                                     // 0x0490(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class APawn*                                       AcknowledgedPawn;                                          // 0x0498(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UInterpTrackInstDirector*                    ControllingDirTrackInst;                                   // 0x04A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_0X7N[0x8];                                     // 0x04A8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YQQX[0x8];                                     // 0x04A8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class AHUD*                                        MyHUD;                                                     // 0x04B0(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APlayerCameraManager*                        PlayerCameraManager;                                       // 0x04B8(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                      PlayerCameraManagerClass;                                  // 0x04C0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	bool                                               bAutoManageActiveCameraTarget;                             // 0x04C8(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_XX1Q[0x3];                                     // 0x04C9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SP9V[0x3];                                     // 0x04C9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRotator                                    TargetViewRotation;                                        // 0x04CC(0x000C) (Net, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_YTN2[0x10];                                    // 0x04D8(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_N4AX[0x10];                                    // 0x04D8(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class AActor*>                              HiddenActors;                                              // 0x04E8(0x0010) (ZeroConstructor)
 	float                                              LastSpectatorStateSynchTime;                               // 0x04F8(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     LastSpectatorSyncLocation;                                 // 0x04FC(0x000C) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
@@ -2024,16 +2024,16 @@ public:
 	class UClass*                                      CheatClass;                                                // 0x0520(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	class UPlayerInput*                                PlayerInput;                                               // 0x0528(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FActiveForceFeedbackEffect>          ActiveForceFeedbackEffects;                                // 0x0530(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData_B1D9[0x90];                                    // 0x0540(0x0090) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	unsigned char                                      UnknownData_F8U8 : 2;                                      // 0x05D0(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_WJZ0[0x90];                                    // 0x0540(0x0090) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_JAN7 : 2;                                      // 0x05D0(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bPlayerIsWaiting : 1;                                      // 0x05D0(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, EditConst, NoDestructor)
-	unsigned char                                      UnknownData_9NE6[0x3];                                     // 0x05D1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9FKK[0x3];                                     // 0x05D1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      NetPlayerIndex;                                            // 0x05D4(0x0001) (ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bHasVoiceHandshakeCompleted;                               // 0x05D5(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_S3I7[0x2];                                     // 0x05D6(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WT8K[0x2];                                     // 0x05D6(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UNetConnection*                              PendingSwapConnection;                                     // 0x05D8(0x0008) (ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UNetConnection*                              NetConnection;                                             // 0x05E0(0x0008) (ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_BVTC[0xC];                                     // 0x05E8(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QX5J[0xC];                                     // 0x05E8(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              InputYawScale;                                             // 0x05F4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              InputPitchScale;                                           // 0x05F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              InputRollScale;                                            // 0x05FC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2043,29 +2043,29 @@ public:
 	unsigned char                                      bEnableMouseOverEvents : 1;                                // 0x0600(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bEnableTouchOverEvents : 1;                                // 0x0600(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bForceFeedbackEnabled : 1;                                 // 0x0600(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_XWU3[0x3];                                     // 0x0601(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GUN9[0x3];                                     // 0x0601(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<CoreUObject_EMouseCursor>              DefaultMouseCursor;                                        // 0x0604(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<CoreUObject_EMouseCursor>              CurrentMouseCursor;                                        // 0x0605(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ECollisionChannel>              DefaultClickTraceChannel;                                  // 0x0606(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ECollisionChannel>              CurrentClickTraceChannel;                                  // 0x0607(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              HitResultTraceDistance;                                    // 0x0608(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ForceFeedbackIntensity;                                    // 0x060C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_MDQN[0x88];                                    // 0x0610(0x0088) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_RBVN[0x88];                                    // 0x0610(0x0088) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UInputComponent*                             InactiveStateInputComponent;                               // 0x0698(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_NXST[0x20];                                    // 0x06A0(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_A9A8[0x20];                                    // 0x06A0(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UTouchInterface*                             CurrentTouchInterface;                                     // 0x06C0(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_MRL6[0x30];                                    // 0x06C8(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_NAR8[0x30];                                    // 0x06C8(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class ASpectatorPawn*                              SpectatorPawn;                                             // 0x06F8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     SpawnLocation;                                             // 0x0700(0x000C) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_U2LZ[0x4];                                     // 0x070C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_PBA4[0x4];                                     // 0x070C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TMap<class ULevel*, class UInputComponent*>        LevelInputComponents;                                      // 0x0710(0x0050) (ExportObject, ZeroConstructor, ContainsInstancedReference)
-	unsigned char                                      UnknownData_8P2P[0x14];                                    // 0x0760(0x0014) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5RYS[0x14];                                    // 0x0760(0x0014) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	bool                                               bIsLocalPlayerController;                                  // 0x0774(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_ZJC8[0x1];                                     // 0x0775(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_FGB8[0x1];                                     // 0x0775(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	uint16_t                                           SeamlessTravelCount;                                       // 0x0776(0x0002) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint16_t                                           LastCompletedSeamlessTravelCount;                          // 0x0778(0x0002) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bInCinematicMode;                                          // 0x077A(0x0001) (Net, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_0A3D[0x5];                                     // 0x077B(0x0005) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_QYF0[0x5];                                     // 0x077B(0x0005) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -2217,7 +2217,7 @@ public:
 	struct FVector                                     TargetOffset;                                              // 0x02C0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              ProbeSize;                                                 // 0x02CC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ECollisionChannel>              ProbeChannel;                                              // 0x02D0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_4QUE[0x3];                                     // 0x02D1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XANY[0x3];                                     // 0x02D1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bDoCollisionTest : 1;                                      // 0x02D4(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bUsePawnControlRotation : 1;                               // 0x02D4(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bInheritPitch : 1;                                         // 0x02D4(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
@@ -2227,12 +2227,12 @@ public:
 	unsigned char                                      bEnableCameraRotationLag : 1;                              // 0x02D4(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bUseCameraLagSubstepping : 1;                              // 0x02D4(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bDrawDebugLagMarkers : 1;                                  // 0x02D5(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_ZBRO[0x2];                                     // 0x02D6(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_543L[0x2];                                     // 0x02D6(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              CameraLagSpeed;                                            // 0x02D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              CameraRotationLagSpeed;                                    // 0x02DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              CameraLagMaxTimeStep;                                      // 0x02E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              CameraLagMaxDistance;                                      // 0x02E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_XV24[0x58];                                    // 0x02E8(0x0058) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AX6M[0x58];                                    // 0x02E8(0x0058) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -2253,7 +2253,7 @@ public:
 	class UStaticMeshComponent*                        StaticMeshComponent;                                       // 0x0428(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bStaticMeshReplicateMovement;                              // 0x0430(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	TEnumAsByte<Engine_ENavDataGatheringMode>          NavigationGeometryGatheringMode;                           // 0x0431(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FUVC[0x6];                                     // 0x0432(0x0006) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TPBZ[0x6];                                     // 0x0432(0x0006) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -2272,18 +2272,18 @@ class ABrush : public AActor
 {
 public:
 	TEnumAsByte<Engine_EBrushType>                     BrushType;                                                 // 0x0428(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FZPP[0x3];                                     // 0x0429(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_AWXV[0x3];                                     // 0x0429(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FColor                                      BrushColor;                                                // 0x042C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	int                                                PolyFlags;                                                 // 0x0430(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bColored : 1;                                              // 0x0434(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bSolidWhenSelected : 1;                                    // 0x0434(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bPlaceableFromClassBrowser : 1;                            // 0x0434(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bNotForClientOrServer : 1;                                 // 0x0434(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_TDKE[0x3];                                     // 0x0435(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_KGUN[0x3];                                     // 0x0435(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UModel*                                      Brush;                                                     // 0x0438(0x0008) (ExportObject, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UBrushComponent*                             BrushComponent;                                            // 0x0440(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bInManipulation : 1;                                       // 0x0448(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_SC05[0x7];                                     // 0x0449(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1QJU[0x7];                                     // 0x0449(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FGeomSelection>                      SavedSelections;                                           // 0x0450(0x0010) (ZeroConstructor)
 
 
@@ -2336,17 +2336,17 @@ public:
 class AWorldSettings : public AInfo
 {
 public:
-	unsigned char                                      UnknownData_2MET[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_56BH[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bEnableWorldBoundsChecks : 1;                              // 0x0430(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bEnableNavigationSystem : 1;                               // 0x0430(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, Config, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_DBS5[0x3];                                     // 0x0431(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WG2B[0x3];                                     // 0x0431(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EWorldCompositionSetting>       WorldCompositionSetting;                                   // 0x0434(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_0JK9[0x3];                                     // 0x0435(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QH8Q[0x3];                                     // 0x0435(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FStringAssetReference                       InstancedNavMeshesDataAssetOveride;                        // 0x0438(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	unsigned char                                      bEnableWorldOriginRebasing : 1;                            // 0x0448(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bWorldGravitySet : 1;                                      // 0x0448(0x0001) BIT_FIELD (Transient, NoDestructor)
 	unsigned char                                      bGlobalGravitySet : 1;                                     // 0x0448(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
-	unsigned char                                      UnknownData_1D9L[0x3];                                     // 0x0449(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SOKT[0x3];                                     // 0x0449(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              KillZ;                                                     // 0x044C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                      KillZDamageType;                                           // 0x0450(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash)
 	float                                              WorldGravityZ;                                             // 0x0458(0x0004) (Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
@@ -2358,34 +2358,34 @@ public:
 	class UClass*                                      GameNetworkManagerClass;                                   // 0x0488(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	int                                                PackedLightAndShadowMapTextureSize;                        // 0x0490(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	unsigned char                                      bMinimizeBSPSections : 1;                                  // 0x0494(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_ZEKB[0x3];                                     // 0x0495(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_F76U[0x3];                                     // 0x0495(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     DefaultColorScale;                                         // 0x0498(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bPrecomputeVisibility : 1;                                 // 0x04A4(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bPlaceCellsOnlyAlongCameraTracks : 1;                      // 0x04A4(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_MBVG[0x3];                                     // 0x04A5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8GPC[0x3];                                     // 0x04A5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                VisibilityCellSize;                                        // 0x04A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EVisibilityAggressiveness>      VisibilityAggressiveness;                                  // 0x04AC(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_007O[0x3];                                     // 0x04AD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZEOP[0x3];                                     // 0x04AD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bForceNoPrecomputedLighting : 1;                           // 0x04B0(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_PN44[0x3];                                     // 0x04B1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TIVI[0x3];                                     // 0x04B1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FLightmassWorldInfoSettings                 LightmassSettings;                                         // 0x04B4(0x0044) (Edit)
 	TEnumAsByte<Engine_ELightingBuildQuality>          LevelLightingQuality;                                      // 0x04F8(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_OTFB[0x7];                                     // 0x04F9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SXJ0[0x7];                                     // 0x04F9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FReverbSettings                             DefaultReverbSettings;                                     // 0x0500(0x0018) (Edit, Config)
 	struct FInteriorSettings                           DefaultAmbientZoneSettings;                                // 0x0518(0x0024) (Edit, Config)
-	unsigned char                                      UnknownData_6UFC[0x4];                                     // 0x053C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_OJPO[0x4];                                     // 0x053C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class USoundMix*                                   DefaultBaseSoundMix;                                       // 0x0540(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              WorldToMeters;                                             // 0x0548(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_LKPC[0x4];                                     // 0x054C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_UGCG[0x4];                                     // 0x054C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UBookMark*                                   BookMarks[0xA];                                            // 0x0550(0x0050) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TimeDilation;                                              // 0x05A0(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MatineeTimeDilation;                                       // 0x05A4(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              DemoPlayTimeDilation;                                      // 0x05A8(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZVK1[0x4];                                     // 0x05AC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_07IE[0x4];                                     // 0x05AC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class APlayerState*                                Pauser;                                                    // 0x05B0(0x0008) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bHighPriorityLoading : 1;                                  // 0x05B8(0x0001) BIT_FIELD (Net, NoDestructor)
 	unsigned char                                      bHighPriorityLoadingLocal : 1;                             // 0x05B8(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_8239[0x7];                                     // 0x05B9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_KOTL[0x7];                                     // 0x05B9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FNetViewer>                          ReplicationViewers;                                        // 0x05C0(0x0010) (ZeroConstructor)
 	TArray<class UAssetUserData*>                      AssetUserData;                                             // 0x05D0(0x0010) (ExportObject, ZeroConstructor, ContainsInstancedReference, Protected)
 
@@ -2406,14 +2406,14 @@ public:
 class UPostProcessComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData_0RTY[0x10];                                    // 0x02B0(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WXSY[0x10];                                    // 0x02B0(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FPostProcessSettings                        Settings;                                                  // 0x02C0(0x0540) (Edit, BlueprintVisible, Interp)
 	float                                              Priority;                                                  // 0x0800(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              BlendRadius;                                               // 0x0804(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	float                                              BlendWeight;                                               // 0x0808(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bEnabled : 1;                                              // 0x080C(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bUnbound : 1;                                              // 0x080C(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_YEI1[0x3];                                     // 0x080D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_R9SR[0x3];                                     // 0x080D(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -2440,19 +2440,19 @@ public:
 	unsigned char                                      bUseCinematicMipLevels : 1;                                // 0x0030(0x0001) BIT_FIELD (Transient, NoDestructor)
 	unsigned char                                      CompressionNone : 1;                                       // 0x0030(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bUAV : 1;                                                  // 0x0030(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_JF6Z[0x3];                                     // 0x0031(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_W05U[0x3];                                     // 0x0031(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	uint32_t                                           MaxQualityReduction;                                       // 0x0034(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	int                                                CachedCombinedLODBias;                                     // 0x0038(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bAsyncResourceReleaseHasBeenStarted : 1;                   // 0x003C(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_5NPE[0x3];                                     // 0x003D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8Y7H[0x3];                                     // 0x003D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_ETextureCompressionSettings>    CompressionSettings;                                       // 0x0040(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ETextureFilter>                 Filter;                                                    // 0x0041(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ETextureGroup>                  LODGroup;                                                  // 0x0042(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9I0C[0x1];                                     // 0x0043(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_32SM[0x1];                                     // 0x0043(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              StreamingPriorityBoost;                                    // 0x0044(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_VSQF[0x58];                                    // 0x0048(0x0058) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YEFV[0x58];                                    // 0x0048(0x0058) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FExternalMip>                        ExternalMips;                                              // 0x00A0(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_PFQW[0x88];                                    // 0x00B0(0x0088) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DF06[0x88];                                    // 0x00B0(0x0088) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -2471,7 +2471,7 @@ class UTextureRenderTarget : public UTexture
 {
 public:
 	float                                              TargetGamma;                                               // 0x0138(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_T4D7[0x4];                                     // 0x013C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8HI1[0x4];                                     // 0x013C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -2494,14 +2494,14 @@ public:
 	struct FLinearColor                                ClearColor;                                                // 0x0148(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Engine_ETextureAddress>                AddressX;                                                  // 0x0158(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ETextureAddress>                AddressY;                                                  // 0x0159(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_AQM1[0x2];                                     // 0x015A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_KVFD[0x2];                                     // 0x015A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bForceLinearGamma : 1;                                     // 0x015C(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bHDR : 1;                                                  // 0x015C(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AssetRegistrySearchable)
 	unsigned char                                      bAutoGenerateMips : 1;                                     // 0x015C(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AssetRegistrySearchable)
-	unsigned char                                      UnknownData_MNA7[0x3];                                     // 0x015D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_JLDR[0x3];                                     // 0x015D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<CoreUObject_EPixelFormat>              OverrideFormat;                                            // 0x0160(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bDontClearOnCreation;                                      // 0x0161(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_CC2U[0x6];                                     // 0x0162(0x0006) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8OR9[0x6];                                     // 0x0162(0x0006) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -2522,9 +2522,9 @@ public:
 	unsigned char                                      bUseOriginalPlayerHUD : 1;                                 // 0x0780(0x0001) BIT_FIELD (Config, GlobalConfig, NoDestructor)
 	unsigned char                                      bShowSelectedInfo : 1;                                     // 0x0780(0x0001) BIT_FIELD (Config, GlobalConfig, NoDestructor)
 	unsigned char                                      bIsFrozenRendering : 1;                                    // 0x0780(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_ZU6U[0x7];                                     // 0x0781(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XLLN[0x7];                                     // 0x0781(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UDrawFrustumComponent*                       DrawFrustum;                                               // 0x0788(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_NY9S[0x10];                                    // 0x0790(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_063N[0x10];                                    // 0x0790(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class APlayerController*                           OriginalControllerRef;                                     // 0x07A0(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UPlayer*                                     OriginalPlayer;                                            // 0x07A8(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              SpeedScale;                                                // 0x07B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2533,7 +2533,7 @@ public:
 	float                                              InitialDecel;                                              // 0x07BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              SpeedScaleAdjustment;                                      // 0x07C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              FovScaleAdjustment;                                        // 0x07C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_0RDF[0x8];                                     // 0x07C8(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3HKP[0x8];                                     // 0x07C8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -2560,7 +2560,7 @@ public:
 	struct FColor                                      WhiteColor;                                                // 0x0428(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FColor                                      GreenColor;                                                // 0x042C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FColor                                      RedColor;                                                  // 0x0430(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_Z6P4[0x4];                                     // 0x0434(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SF3O[0x4];                                     // 0x0434(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class APlayerController*                           PlayerOwner;                                               // 0x0438(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bLostFocusPaused : 1;                                      // 0x0440(0x0001) BIT_FIELD (Transient, NoDestructor)
 	unsigned char                                      bShowHUD : 1;                                              // 0x0440(0x0001) BIT_FIELD (Config, NoDestructor)
@@ -2568,7 +2568,7 @@ public:
 	unsigned char                                      bShowHitBoxDebugInfo : 1;                                  // 0x0440(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bShowOverlays : 1;                                         // 0x0440(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bEnableDebugTextShadow : 1;                                // 0x0440(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_4VHT[0x7];                                     // 0x0441(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_FCOG[0x7];                                     // 0x0441(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class AActor*>                              PostRenderedActors;                                        // 0x0448(0x0010) (ZeroConstructor)
 	float                                              LastHUDRenderTime;                                         // 0x0458(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              RenderDelta;                                               // 0x045C(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2579,7 +2579,7 @@ public:
 	TArray<struct FDebugTextInfo>                      DebugTextList;                                             // 0x0490(0x0010) (ZeroConstructor, Protected)
 	class UClass*                                      ShowDebugTargetDesiredClass;                               // 0x04A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	class AActor*                                      ShowDebugTargetActor;                                      // 0x04A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HOS0[0x70];                                    // 0x04B0(0x0070) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DDPY[0x70];                                    // 0x04B0(0x0070) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -2644,7 +2644,7 @@ class ALevelScriptActor : public AActor
 {
 public:
 	unsigned char                                      bInputEnabled : 1;                                         // 0x0428(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_UUUD[0x7];                                     // 0x0429(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_GLYB[0x7];                                     // 0x0429(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -2691,19 +2691,19 @@ public:
 	int                                                ForcedLodModel;                                            // 0x0560(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	bool                                               bOverrideMinLOD;                                           // 0x0564(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	bool                                               bOverrideNavigationToDefaultObstacle;                      // 0x0565(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_1RLL[0x2];                                     // 0x0566(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5F8Y[0x2];                                     // 0x0566(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                MinLOD;                                                    // 0x0568(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_NZ81[0x4];                                     // 0x056C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_4UR1[0x4];                                     // 0x056C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UStaticMesh*                                 StaticMesh;                                                // 0x0570(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	bool                                               bOverrideWireframeColor;                                   // 0x0578(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_MT8Q[0x3];                                     // 0x0579(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_KBBN[0x3];                                     // 0x0579(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FColor                                      WireframeColorOverride;                                    // 0x057C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bIgnoreInstanceForTextureStreaming : 1;                    // 0x0580(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bOverrideLightMapRes : 1;                                  // 0x0580(0x0001) BIT_FIELD (BlueprintVisible, BlueprintReadOnly, NoDestructor)
-	unsigned char                                      UnknownData_KJB2[0x3];                                     // 0x0581(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_63XS[0x3];                                     // 0x0581(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                OverriddenLightMapRes;                                     // 0x0584(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              StreamingDistanceMultiplier;                               // 0x0588(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_0LVU[0x4];                                     // 0x058C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SGNL[0x4];                                     // 0x058C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FGuid>                               IrrelevantLights;                                          // 0x0590(0x0010) (ZeroConstructor)
 	TArray<struct FStaticMeshComponentLODInfo>         LODData;                                                   // 0x05A0(0x0010) (ZeroConstructor, Transient)
 	class UMaterialInterface*                          CustomDepthMaterial;                                       // 0x05B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
@@ -2766,11 +2766,11 @@ public:
 class UMaterialInterface : public UObject
 {
 public:
-	unsigned char                                      UnknownData_8AY0[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_637O[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class USubsurfaceProfile*                          SubsurfaceProfile;                                         // 0x0030(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_KDRM[0x4];                                     // 0x0038(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SJKN[0x4];                                     // 0x0038(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FLightmassMaterialInterfaceSettings         LightmassSettings;                                         // 0x003C(0x0014) (Edit, BlueprintVisible, Protected)
-	unsigned char                                      UnknownData_ZJLX[0x8];                                     // 0x0050(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_9ZRA[0x8];                                     // 0x0050(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -2806,22 +2806,22 @@ public:
 	TEnumAsByte<Engine_EDecalBlendMode>                DecalBlendMode;                                            // 0x02EA(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EMaterialDecalResponse>         MaterialDecalResponse;                                     // 0x02EB(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EMaterialShadingModel>          ShadingModel;                                              // 0x02EC(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_096J[0x3];                                     // 0x02ED(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HEW0[0x3];                                     // 0x02ED(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              OpacityMaskClipValue;                                      // 0x02F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              DepthWeightScale;                                          // 0x02F4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              DepthWeightExponent;                                       // 0x02F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              DepthWeightBase;                                           // 0x02FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bBlendedOITAfterTranslucency : 1;                          // 0x0300(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bForceResolution : 1;                                      // 0x0300(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_9JVP[0x3];                                     // 0x0301(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LDS0[0x3];                                     // 0x0301(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_ELowResTranslucencyCascade>     ForcedResolution;                                          // 0x0304(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DBIM[0x3];                                     // 0x0305(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_F858[0x3];                                     // 0x0305(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              FirstSplitDistance;                                        // 0x0308(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              SecondSplitDistance;                                       // 0x030C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              FullResInFrontMaxDistance;                                 // 0x0310(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      FullResInFront : 1;                                        // 0x0314(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      PopPerParticle : 1;                                        // 0x0314(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_IRLB[0x3];                                     // 0x0315(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LE4Y[0x3];                                     // 0x0315(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVectorMaterialInput                        WorldPositionOffset;                                       // 0x0318(0x0048)
 	struct FVectorMaterialInput                        WorldDisplacement;                                         // 0x0360(0x0048)
 	struct FScalarMaterialInput                        TessellationMultiplier;                                    // 0x03A8(0x0040)
@@ -2834,7 +2834,7 @@ public:
 	struct FVectorMaterialInput                        BillboardParams;                                           // 0x0568(0x0048)
 	struct FVector2MaterialInput                       CustomizedUVs[0x8];                                        // 0x05B0(0x0240)
 	struct FMaterialAttributesInput                    MaterialAttributes;                                        // 0x07F0(0x0038) (ZeroConstructor)
-	unsigned char                                      UnknownData_01NL[0x10];                                    // 0x0828(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_M2I1[0x10];                                    // 0x0828(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScalarMaterialInput                        PixelDepthOffset;                                          // 0x0838(0x0040)
 	unsigned char                                      bTranslucentBeforeTranslucency : 1;                        // 0x0878(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bTranslucentBeforeVolumeFog : 1;                           // 0x0878(0x0001) BIT_FIELD (Edit, NoDestructor)
@@ -2843,14 +2843,14 @@ public:
 	unsigned char                                      bScreenSpaceReflections : 1;                               // 0x0878(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      TwoSided : 1;                                              // 0x0878(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      DitheredLODTransition : 1;                                 // 0x0878(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_UDUD[0x3];                                     // 0x0879(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_IJUO[0x3];                                     // 0x0879(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EConstantMaterial>              ConstantMaterial;                                          // 0x087C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CZE6[0x3];                                     // 0x087D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_AU96[0x3];                                     // 0x087D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              SkyLightWhenOccluded;                                      // 0x0880(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              CloudShadowsInfluence;                                     // 0x0884(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                NumCustomizedUVs;                                          // 0x0888(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ETranslucencyLightingMode>      TranslucencyLightingMode;                                  // 0x088C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_6IT9[0x3];                                     // 0x088D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_FVSS[0x3];                                     // 0x088D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              TranslucencyDirectionalLightingIntensity;                  // 0x0890(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              LightColorInfluence;                                       // 0x0894(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              AmbientLightColorInfluence;                                // 0x0898(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2859,10 +2859,10 @@ public:
 	float                                              AlternativeAmbientLightColorInfluence;                     // 0x08A4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              AlternativeAmbientLightIntensityInfluence;                 // 0x08A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bEvaluateLightningAtParticleCenter : 1;                    // 0x08AC(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_7MZ9[0x3];                                     // 0x08AD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_L583[0x3];                                     // 0x08AD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              TranslucencyScaleForReflection;                            // 0x08B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bObjectFadeEnabled : 1;                                    // 0x08B4(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_B3UG[0x3];                                     // 0x08B5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TJCZ[0x3];                                     // 0x08B5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              ObjectFadeRate;                                            // 0x08B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ObjectFadeDistanceThreshold;                               // 0x08BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TranslucentShadowDensityScale;                             // 0x08C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2915,17 +2915,17 @@ public:
 	unsigned char                                      bUseReZ : 1;                                               // 0x08F0(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bFullyRough : 1;                                           // 0x08F1(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
 	unsigned char                                      bUseLightmapDirectionality : 1;                            // 0x08F1(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
-	unsigned char                                      UnknownData_25LW[0x2];                                     // 0x08F2(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QIW3[0x2];                                     // 0x08F2(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EMaterialGeometryMode>          GeometryMode;                                              // 0x08F4(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EMaterialTessellationMode>      D3D11TessellationMode;                                     // 0x08F5(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_I2XX[0x2];                                     // 0x08F6(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_209D[0x2];                                     // 0x08F6(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bEnableCrackFreeDisplacement : 1;                          // 0x08F8(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
 	unsigned char                                      bEnableAdaptiveTessellation : 1;                           // 0x08F8(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
-	unsigned char                                      UnknownData_P2GK[0x3];                                     // 0x08F9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_4287[0x3];                                     // 0x08F9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MaxDisplacement;                                           // 0x08FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      Wireframe : 1;                                             // 0x0900(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bOutputVelocityOnBasePass : 1;                             // 0x0900(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_EZT4[0x3];                                     // 0x0901(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_JTJ8[0x3];                                     // 0x0901(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              NormalOffsetShadowBiasScale;                               // 0x0904(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	int                                                EditorX;                                                   // 0x0908(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                EditorY;                                                   // 0x090C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2942,19 +2942,19 @@ public:
 	unsigned char                                      bUseDensityMapOnTranslucencyVertexFog : 1;                 // 0x0948(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bAllowDevelopmentShaderCompile : 1;                        // 0x0948(0x0001) BIT_FIELD (Transient, DuplicateTransient, NoDestructor)
 	unsigned char                                      bIsMaterialEditorStatsMaterial : 1;                        // 0x0948(0x0001) BIT_FIELD (Transient, DuplicateTransient, NoDestructor)
-	unsigned char                                      UnknownData_SJO5[0x3];                                     // 0x0949(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_UI01[0x3];                                     // 0x0949(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	uint32_t                                           UsageFlagWarnings;                                         // 0x094C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EBlendableLocation>             BlendableLocation;                                         // 0x0950(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2MA6[0x3];                                     // 0x0951(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_DWUU[0x3];                                     // 0x0951(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                BlendablePriority;                                         // 0x0954(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bIsAlphaBlended : 1;                                       // 0x0958(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_GHEE[0x3];                                     // 0x0959(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QMXQ[0x3];                                     // 0x0959(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              RefractionDepthBias;                                       // 0x095C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	struct FGuid                                       StateId;                                                   // 0x0960(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	int                                                UnwrappedUVSet;                                            // 0x0970(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_3D4R[0x8C];                                    // 0x0974(0x008C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GAFC[0x8C];                                    // 0x0974(0x008C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UTexture*>                            ExpressionTextureReferences;                               // 0x0A00(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData_1NEB[0x8];                                     // 0x0A10(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ZSL9[0x8];                                     // 0x0A10(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -2974,14 +2974,14 @@ class UCameraModifier : public UObject
 public:
 	unsigned char                                      bDebug : 1;                                                // 0x0028(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bExclusive : 1;                                            // 0x0028(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor)
-	unsigned char                                      UnknownData_7ZS1[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_W0WJ[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      Priority;                                                  // 0x002C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_VS6V[0x3];                                     // 0x002D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_U5BN[0x3];                                     // 0x002D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class APlayerCameraManager*                        CameraOwner;                                               // 0x0030(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	float                                              AlphaInTime;                                               // 0x0038(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	float                                              AlphaOutTime;                                              // 0x003C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	float                                              Alpha;                                                     // 0x0040(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TJH0[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_XUI2[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -3010,7 +3010,7 @@ public:
 	float                                              FluidFriction;                                             // 0x0468(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bWaterVolume : 1;                                          // 0x046C(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bPhysicsOnContact : 1;                                     // 0x046C(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_F6J0[0x3];                                     // 0x046D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_WAJK[0x3];                                     // 0x046D(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -3031,10 +3031,10 @@ public:
 	class UParticleSystem*                             Template;                                                  // 0x0550(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UMaterialInterface*>                  EmitterMaterials;                                          // 0x0558(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
 	TArray<class USkeletalMeshComponent*>              SkelMeshComponents;                                        // 0x0568(0x0010) (ExportObject, ZeroConstructor, Transient, DuplicateTransient, ContainsInstancedReference)
-	unsigned char                                      UnknownData_2462 : 6;                                      // 0x0578(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_OAQM : 6;                                      // 0x0578(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bResetOnDetach : 1;                                        // 0x0578(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bUpdateOnDedicatedServer : 1;                              // 0x0578(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_QL5I[0x7];                                     // 0x0579(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_O683[0x7];                                     // 0x0579(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FParticleSysParam>                   InstanceParameters;                                        // 0x0580(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	struct FParticleSysParam                           EmitterPointParameter;                                     // 0x0590(0x0050) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FScriptMulticastDelegate                    OnParticleSpawn;                                           // 0x05E0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
@@ -3043,34 +3043,34 @@ public:
 	struct FScriptMulticastDelegate                    OnParticleCollide;                                         // 0x0610(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FVector                                     OldPosition;                                               // 0x0620(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                     PartSysVelocity;                                           // 0x062C(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_9BP7[0x18];                                    // 0x0638(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_O1CP[0x18];                                    // 0x0638(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     CustomInheritedVelocity;                                   // 0x0650(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
-	unsigned char                                      UnknownData_2R53[0xC];                                     // 0x065C(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_IMS7[0xC];                                     // 0x065C(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              CustomParameterDrivingCurves;                              // 0x0668(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                                ColourTint;                                                // 0x066C(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
 	float                                              WarmUpTime;                                                // 0x067C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              WarmupTickRate;                                            // 0x0680(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bWarmingUp : 1;                                            // 0x0684(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_CJR8[0x1B];                                    // 0x0685(0x001B) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_OKHY[0x1B];                                    // 0x0685(0x001B) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              SecondsBeforeInactive;                                     // 0x06A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_98CE[0x8];                                     // 0x06A4(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_AZAT[0x8];                                     // 0x06A4(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MaxTimeBeforeForceUpdateTransform;                         // 0x06AC(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_IUG2[0x4];                                     // 0x06B0(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_RPYD[0x4];                                     // 0x06B0(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bOverrideLODMethod : 1;                                    // 0x06B4(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_ZEY1[0x3];                                     // 0x06B5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8KG4[0x3];                                     // 0x06B5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EParticleSystemLODMethod>       LODMethod;                                                 // 0x06B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_OBGQ[0x3];                                     // 0x06B9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_EN4N[0x3];                                     // 0x06B9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bSkipUpdateDynamicDataDuringTick : 1;                      // 0x06BC(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_SNVE[0x3];                                     // 0x06BD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_DWFM[0x3];                                     // 0x06BD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FMaterialRelevance>                  CachedViewRelevanceFlags;                                  // 0x06C0(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData_7C7K[0x8];                                     // 0x06D0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3OOZ[0x8];                                     // 0x06D0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UParticleSystemReplay*>               ReplayClips;                                               // 0x06D8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_8GCJ[0x60];                                    // 0x06E8(0x0060) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_DCHE[0x60];                                    // 0x06E8(0x0060) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              CustomTimeDilation;                                        // 0x0748(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_GXQG[0x4];                                     // 0x074C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MEER[0x4];                                     // 0x074C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScriptMulticastDelegate                    OnSystemFinished;                                          // 0x0750(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	unsigned char                                      bUnbound : 1;                                              // 0x0760(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
-	unsigned char                                      UnknownData_31ER[0xD7];                                    // 0x0761(0x00D7) Fix Super Size
+	unsigned char                                      UnknownData_X7GF[0xD7];                                    // 0x0761(0x00D7) Fix Super Size
 
 
 	static UClass* StaticClass()
@@ -3119,15 +3119,15 @@ public:
 	struct FInterpCurveVector                          SplineScaleInfo;                                           // 0x0580(0x0018) (ZeroConstructor)
 	struct FInterpCurveFloat                           SplineReparamTable;                                        // 0x0598(0x0018) (ZeroConstructor)
 	bool                                               bAllowSplineEditingPerInstance;                            // 0x05B0(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_TC8L[0x3];                                     // 0x05B1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_87O7[0x3];                                     // 0x05B1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                ReparamStepsPerSegment;                                    // 0x05B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              Duration;                                                  // 0x05B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bStationaryEndpoints;                                      // 0x05BC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	bool                                               bSplineHasBeenEdited;                                      // 0x05BD(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor)
 	bool                                               bClosedLoop;                                               // 0x05BE(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_XL82[0x1];                                     // 0x05BF(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YITD[0x1];                                     // 0x05BF(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     DefaultUpVector;                                           // 0x05C0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_M1RT[0x4];                                     // 0x05CC(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_VIRZ[0x4];                                     // 0x05CC(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -3208,12 +3208,12 @@ class UShapeComponent : public UPrimitiveComponent
 {
 public:
 	struct FColor                                      ShapeColor;                                                // 0x0550(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_WSNH[0x4];                                     // 0x0554(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WFC7[0x4];                                     // 0x0554(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UBodySetup*                                  ShapeBodySetup;                                            // 0x0558(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bDrawOnlyIfSelected : 1;                                   // 0x0560(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bShouldCollideWhenPlacing : 1;                             // 0x0560(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bDynamicObstacle : 1;                                      // 0x0560(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_SRG4[0x7];                                     // 0x0561(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZEZS[0x7];                                     // 0x0561(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UClass*                                      AreaClass;                                                 // 0x0568(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
 
@@ -3279,7 +3279,7 @@ public:
 class UDeveloperSettings : public UObject
 {
 public:
-	unsigned char                                      UnknownData_0V58[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_L68J[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -3307,7 +3307,7 @@ public:
 	unsigned char                                      IsEditor : 1;                                              // 0x0078(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      LogToConsole : 1;                                          // 0x0078(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      ShowErrorCount : 1;                                        // 0x0078(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_LHM7[0x7];                                     // 0x0079(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_Q9GC[0x7];                                     // 0x0079(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -3329,13 +3329,13 @@ public:
 	int                                                InstancingRandomSeed;                                      // 0x05C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                InstanceStartCullDistance;                                 // 0x05CC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                InstanceEndCullDistance;                                   // 0x05D0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_83Z7[0x4];                                     // 0x05D4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BSXB[0x4];                                     // 0x05D4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<int>                                        InstanceReorderTable;                                      // 0x05D8(0x0010) (ZeroConstructor)
 	TArray<int>                                        RemovedInstances;                                          // 0x05E8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_ANCI[0x48];                                    // 0x05F8(0x0048) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3DLI[0x48];                                    // 0x05F8(0x0048) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UPhysicsSerializer*                          PhysicsSerializer;                                         // 0x0640(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                NumPendingLightmaps;                                       // 0x0648(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, TextExportTransient, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_SWDL[0x4];                                     // 0x064C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QM7O[0x4];                                     // 0x064C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FInstancedStaticMeshMappingInfo>     CachedMappings;                                            // 0x0650(0x0010) (ZeroConstructor, Transient, DuplicateTransient, Protected, TextExportTransient)
 
 
@@ -3365,17 +3365,17 @@ public:
 class UHierarchicalInstancedStaticMeshComponent : public UInstancedStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData_5DUM[0x48];                                    // 0x0660(0x0048) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_0A4K[0x48];                                    // 0x0660(0x0048) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<int>                                        SortedInstances;                                           // 0x06A8(0x0010) (ZeroConstructor)
 	int                                                NumBuiltInstances;                                         // 0x06B8(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FBox                                        BuiltInstanceBounds;                                       // 0x06BC(0x001C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FBox                                        UnbuiltInstanceBounds;                                     // 0x06D8(0x001C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_1AB0[0x4];                                     // 0x06F4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_KUNE[0x4];                                     // 0x06F4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FBox>                                UnbuiltInstanceBoundsList;                                 // 0x06F8(0x0010) (ZeroConstructor)
 	int                                                OcclusionLayerNumNodes;                                    // 0x0708(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_5TH7[0x2];                                     // 0x070C(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9WU3[0x2];                                     // 0x070C(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	bool                                               bDisableCollision;                                         // 0x070E(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_V6I1[0x21];                                    // 0x070F(0x0021) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_IBKW[0x21];                                    // 0x070F(0x0021) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -3397,16 +3397,16 @@ public:
 	class UPhysicalMaterial*                           PhysMaterial;                                              // 0x0058(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInterface*                          Parent;                                                    // 0x0060(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
 	unsigned char                                      bHasStaticPermutationResource : 1;                         // 0x0068(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_E3LH : 1;                                      // 0x0068(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_5E98 : 1;                                      // 0x0068(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bOverrideSubsurfaceProfile : 1;                            // 0x0068(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
-	unsigned char                                      UnknownData_H1VR[0x7];                                     // 0x0069(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SMVD[0x7];                                     // 0x0069(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FGuid                                       ParentLightingGuid;                                        // 0x0070(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<struct FFontParameterValue>                 FontParameterValues;                                       // 0x0080(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	TArray<struct FScalarParameterValue>               ScalarParameterValues;                                     // 0x0090(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	TArray<struct FTextureParameterValue>              TextureParameterValues;                                    // 0x00A0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	TArray<struct FVectorParameterValue>               VectorParameterValues;                                     // 0x00B0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	struct FMaterialInstanceBasePropertyOverrides      BasePropertyOverrides;                                     // 0x00C0(0x007C) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData_AUF5[0x74];                                    // 0x013C(0x0074) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_6JGG[0x74];                                    // 0x013C(0x0074) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -3455,7 +3455,7 @@ public:
 	unsigned char                                      bShaderInputData : 1;                                      // 0x004C(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bShowInputs : 1;                                           // 0x004D(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bShowOutputs : 1;                                          // 0x004D(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_ARJW[0x2];                                     // 0x004E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_2IHD[0x2];                                     // 0x004E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FText>                               MenuCategories;                                            // 0x0050(0x0010) (ZeroConstructor)
 	TArray<struct FExpressionOutput>                   Outputs;                                                   // 0x0060(0x0010) (ZeroConstructor)
 
@@ -3511,7 +3511,7 @@ class UBlueprintGeneratedClass : public UClass
 {
 public:
 	int                                                NumReplicatedProperties;                                   // 0x01C0(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_5MK1[0x4];                                     // 0x01C4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BVAJ[0x4];                                     // 0x01C4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UDynamicBlueprintBinding*>            DynamicBindingObjects;                                     // 0x01C8(0x0010) (ZeroConstructor)
 	TArray<class UActorComponent*>                     ComponentTemplates;                                        // 0x01D8(0x0010) (ExportObject, ZeroConstructor, ContainsInstancedReference)
 	TArray<class UTimelineTemplate*>                   Timelines;                                                 // 0x01E8(0x0010) (ZeroConstructor)
@@ -3574,12 +3574,12 @@ public:
 class UPlayer : public UObject
 {
 public:
-	unsigned char                                      UnknownData_5AHC[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TWA9[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class APlayerController*                           PlayerController;                                          // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                CurrentNetSpeed;                                           // 0x0038(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                ConfiguredInternetSpeed;                                   // 0x003C(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                ConfiguredLanSpeed;                                        // 0x0040(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_MUFS[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ANFZ[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -3597,7 +3597,7 @@ public:
 class UNetConnection : public UPlayer
 {
 public:
-	unsigned char                                      UnknownData_70O7[0x8];                                     // 0x0048(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WX78[0x8];                                     // 0x0048(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UChildConnection*>                    Children;                                                  // 0x0050(0x0010) (ZeroConstructor, Transient)
 	class UNetDriver*                                  Driver;                                                    // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UPackageMap*                                 PackageMap;                                                // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -3607,13 +3607,13 @@ public:
 	class AActor*                                      OwningActor;                                               // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                MaxPacket;                                                 // 0x00A0(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      InternalAck : 1;                                           // 0x00A4(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_SQQE[0x2FB];                                   // 0x00A5(0x02FB) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Z3MU[0x2FB];                                   // 0x00A5(0x02FB) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	double                                             LastReceiveTime;                                           // 0x03A0(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_4NBH[0x340B8];                                 // 0x03A8(0x340B8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_U2LG[0x340B8];                                 // 0x03A8(0x340B8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                MaxDormantActorsCheckedFromRelevancy;                      // 0x34460(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_RZEF[0x54];                                    // 0x34464(0x0054) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_P33H[0x54];                                    // 0x34464(0x0054) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UChannel*>                            DeferredCloseChannels;                                     // 0x344B8(0x0010) (ZeroConstructor, Protected)
-	unsigned char                                      UnknownData_PRSH[0xE8];                                    // 0x344C8(0x00E8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2D25[0xE8];                                    // 0x344C8(0x00E8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -3631,11 +3631,11 @@ public:
 class UNetDriver : public UObject
 {
 public:
-	unsigned char                                      UnknownData_28Y6[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3TNN[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FString                                     NetConnectionClassName;                                    // 0x0038(0x0010) (ZeroConstructor, Config, HasGetValueTypeHash)
 	int                                                MaxDownloadSize;                                           // 0x0048(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bClampListenServerTickRate : 1;                            // 0x004C(0x0001) BIT_FIELD (Config, NoDestructor)
-	unsigned char                                      UnknownData_4J9O[0x3];                                     // 0x004D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Y4EG[0x3];                                     // 0x004D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                NetServerMaxTickRate;                                      // 0x0050(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                MaxInternetClientRate;                                     // 0x0054(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                MaxClientRate;                                             // 0x0058(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -3645,16 +3645,16 @@ public:
 	float                                              KeepAliveTime;                                             // 0x0068(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              InitialConnectTimeout;                                     // 0x006C(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ConnectionTimeout;                                         // 0x0070(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_5AVU[0x4];                                     // 0x0074(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_70DN[0x4];                                     // 0x0074(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UNetConnection*                              ServerConnection;                                          // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UNetConnection*>                      ClientConnections;                                         // 0x0080(0x0010) (ZeroConstructor)
 	class UWorld*                                      World;                                                     // 0x0090(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_MEKR[0x30];                                    // 0x0098(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YBTN[0x30];                                    // 0x0098(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UClass*                                      NetConnectionClass;                                        // 0x00C8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UProperty*                                   RoleProperty;                                              // 0x00D0(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UProperty*                                   RemoteRoleProperty;                                        // 0x00D8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       NetDriverName;                                             // 0x00E0(0x0008) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_KCKG[0x390];                                   // 0x00E8(0x0390) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_O1G0[0x390];                                   // 0x00E8(0x0390) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -3689,7 +3689,7 @@ public:
 class UModel : public UObject
 {
 public:
-	unsigned char                                      UnknownData_6BW4[0x550];                                   // 0x0028(0x0550) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_K4UH[0x550];                                   // 0x0028(0x0550) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -3713,17 +3713,17 @@ public:
 	int                                                NodeWidth;                                                 // 0x0040(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                NodeHeight;                                                // 0x0044(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bHasCompilerMessage : 1;                                   // 0x0048(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_B7HW[0x7];                                     // 0x0049(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_U860[0x7];                                     // 0x0049(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FString                                     NodeComment;                                               // 0x0050(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	bool                                               bCommentBubblePinned;                                      // 0x0060(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               bCommentBubbleVisible;                                     // 0x0061(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_20ND[0x2];                                     // 0x0062(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5WSL[0x2];                                     // 0x0062(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                ErrorType;                                                 // 0x0064(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FString                                     ErrorMsg;                                                  // 0x0068(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	struct FGuid                                       NodeGuid;                                                  // 0x0078(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Engine_ENodeAdvancedPins>              AdvancedPinDisplay;                                        // 0x0088(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bIsNodeEnabled;                                            // 0x0089(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_W8L5[0x6];                                     // 0x008A(0x0006) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_D7EF[0x6];                                     // 0x008A(0x0006) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -3744,13 +3744,13 @@ public:
 	struct FString                                     PinName;                                                   // 0x0028(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	struct FString                                     PinToolTip;                                                // 0x0038(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EEdGraphPinDirection>           Direction;                                                 // 0x0048(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FYU0[0x7];                                     // 0x0049(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MB9D[0x7];                                     // 0x0049(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FEdGraphPinType                             PinType;                                                   // 0x0050(0x0050)
 	struct FString                                     DefaultValue;                                              // 0x00A0(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	struct FString                                     AutogeneratedDefaultValue;                                 // 0x00B0(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                     DefaultObject;                                             // 0x00C0(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FText                                       DefaultTextValue;                                          // 0x00C8(0x0018) ELEMENT_SIZE_MISMATCH
-	unsigned char                                      UnknownData_M347[0x20];                                    // 0x00C8(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_MRU0[0x20];                                    // 0x00C8(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	TArray<class UEdGraphPin*>                         LinkedTo;                                                  // 0x0100(0x0010) (ZeroConstructor)
 	TArray<class UEdGraphPin*>                         SubPins;                                                   // 0x0110(0x0010) (ZeroConstructor)
 	class UEdGraphPin*                                 ParentPin;                                                 // 0x0120(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -3790,10 +3790,10 @@ class UDamageType : public UObject
 public:
 	unsigned char                                      bCausedByWorld : 1;                                        // 0x0028(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
 	unsigned char                                      bScaleMomentumByMass : 1;                                  // 0x0028(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
-	unsigned char                                      UnknownData_BMVF[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_0CWR[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              DamageImpulse;                                             // 0x002C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bRadialDamageVelChange : 1;                                // 0x0030(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
-	unsigned char                                      UnknownData_XS8O[0x3];                                     // 0x0031(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5CDA[0x3];                                     // 0x0031(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              DestructibleImpulse;                                       // 0x0034(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              DestructibleDamageSpreadScale;                             // 0x0038(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              DamageFalloff;                                             // 0x003C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -3835,9 +3835,9 @@ public:
 	class UClass*                                      GeneratedClass;                                            // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	bool                                               bLegacyNeedToPurgeSkelRefs;                                // 0x0038(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               bLegacyGeneratedClassIsAuthoritative;                      // 0x0039(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_2O2F[0x2];                                     // 0x003A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_10MG[0x2];                                     // 0x003A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FGuid                                       BlueprintGuid;                                             // 0x003C(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_0CQG[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_MB84[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -3856,20 +3856,20 @@ class UBlueprint : public UBlueprintCore
 {
 public:
 	unsigned char                                      bRecompileOnLoad : 1;                                      // 0x0050(0x0001) BIT_FIELD (Config, NoDestructor)
-	unsigned char                                      UnknownData_1H9D[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_2OD9[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UClass*                                      ParentClass;                                               // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, UObjectWrapper, HasGetValueTypeHash)
 	class UObject*                                     PRIVATE_InnermostPreviousCDO;                              // 0x0060(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bHasBeenRegenerated : 1;                                   // 0x0068(0x0001) BIT_FIELD (Transient, NoDestructor)
 	unsigned char                                      bIsRegeneratingOnLoad : 1;                                 // 0x0068(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_CBXM[0x7];                                     // 0x0069(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_I1YC[0x7];                                     // 0x0069(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class USimpleConstructionScript*                   SimpleConstructionScript;                                  // 0x0070(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UActorComponent*>                     ComponentTemplates;                                        // 0x0078(0x0010) (ExportObject, ZeroConstructor, ContainsInstancedReference)
 	TArray<class UTimelineTemplate*>                   Timelines;                                                 // 0x0088(0x0010) (ZeroConstructor)
 	class UInheritableComponentHandler*                InheritableComponentHandler;                               // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EBlueprintType>                 BlueprintType;                                             // 0x00A0(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_N677[0x3];                                     // 0x00A1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZXOF[0x3];                                     // 0x00A1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                BlueprintSystemVersion;                                    // 0x00A4(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_NVT4[0x90];                                    // 0x00A8(0x0090) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5CND[0x90];                                    // 0x00A8(0x0090) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -3938,7 +3938,7 @@ public:
 class UComponentWithDerivedTestInterface : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_KPGN[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_O0AE[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -3974,7 +3974,7 @@ public:
 class AActorWithTestInterface : public AActor
 {
 public:
-	unsigned char                                      UnknownData_EE2M[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_B14T[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -4034,12 +4034,12 @@ public:
 class UPendingNetGame : public UObject
 {
 public:
-	unsigned char                                      UnknownData_XG0D[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_NUS9[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UNetDriver*                                  NetDriver;                                                 // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HO9E[0xB0];                                    // 0x0038(0x00B0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_NT2H[0xB0];                                    // 0x0038(0x00B0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UPackage*                                    PreLoadedMapPackage;                                       // 0x00E8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWorld*                                      PreLoadedWorld;                                            // 0x00F0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZI10[0x8];                                     // 0x00F8(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_X8EY[0x8];                                     // 0x00F8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -4057,7 +4057,7 @@ public:
 class UWorld : public UObject
 {
 public:
-	unsigned char                                      UnknownData_VAAH[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MDC0[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class ULevel*                                      PersistentLevel;                                           // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UNetDriver*                                  NetDriver;                                                 // 0x0038(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ULineBatchComponent*                         LineBatcher;                                               // 0x0040(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -4074,13 +4074,13 @@ public:
 	class AParticleEventManager*                       MyParticleEventManager;                                    // 0x00B8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APhysicsVolume*                              DefaultPhysicsVolume;                                      // 0x00C0(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class ULevelStreaming*>                     DirtyStreamingLevels;                                      // 0x00C8(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData_585L[0x1C];                                    // 0x00D8(0x001C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1PZ3[0x1C];                                    // 0x00D8(0x001C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       Feature;                                                   // 0x00F4(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_5DBW[0x4];                                     // 0x00FC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_IA0R[0x4];                                     // 0x00FC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FName>                               FeatureReferences;                                         // 0x0100(0x0010) (ZeroConstructor, AssetRegistrySearchable)
 	bool                                               ParticleLOD_bUseGameThread;                                // 0x0110(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
 	bool                                               ParticleLOD_bUseMultipleViewportCase;                      // 0x0111(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_OWEV[0x2];                                     // 0x0112(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8W6Z[0x2];                                     // 0x0112(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     ParticleLOD_PlayerViewpointLocation;                       // 0x0114(0x000C) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
 	struct FString                                     TestMetadata;                                              // 0x0120(0x0010) (ZeroConstructor, AssetRegistrySearchable, HasGetValueTypeHash)
 	class UNavigationSystem*                           NavigationSystem;                                          // 0x0130(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -4088,17 +4088,17 @@ public:
 	class UAISystemBase*                               AISystem;                                                  // 0x0140(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAvoidanceManager*                           AvoidanceManager;                                          // 0x0148(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class ULevel*>                              Levels;                                                    // 0x0150(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData_YCZG[0x50];                                    // 0x0160(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GHK9[0x50];                                    // 0x0160(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class ULevel*                                      CurrentLevel;                                              // 0x01B0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_F409[0x8];                                     // 0x01B8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BZJJ[0x8];                                     // 0x01B8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UGameInstance*                               OwningGameInstance;                                        // 0x01C0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UMaterialParameterCollectionInstance*> ParameterCollectionInstances;                              // 0x01C8(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData_VOAT[0x710];                                   // 0x01D8(0x0710) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LJN3[0x710];                                   // 0x01D8(0x0710) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UWorldComposition*                           WorldComposition;                                          // 0x08E8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_THX6[0x3D];                                    // 0x08F0(0x003D) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	unsigned char                                      UnknownData_NB18 : 7;                                      // 0x092D(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_JUEN[0x3D];                                    // 0x08F0(0x003D) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Z65T : 7;                                      // 0x092D(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bAreConstraintsDirty : 1;                                  // 0x092D(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_QFZY[0x14A];                                   // 0x092E(0x014A) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_6O68[0x14A];                                   // 0x092E(0x014A) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -4116,7 +4116,7 @@ public:
 class ULevel : public UObject
 {
 public:
-	unsigned char                                      UnknownData_LPHE[0xA0];                                    // 0x0028(0x00A0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_CLC7[0xA0];                                    // 0x0028(0x00A0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class ULevelActorContainer*                        ActorCluster;                                              // 0x00C8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, DuplicateTransient, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UWorld*                                      OwningWorld;                                               // 0x00D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UModel*                                      Model;                                                     // 0x00D8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -4128,14 +4128,14 @@ public:
 	float                                              LightmapTotalSize;                                         // 0x0118(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ShadowmapTotalSize;                                        // 0x011C(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FVector>                             StaticNavigableGeometry;                                   // 0x0120(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_MM0I[0x130];                                   // 0x0130(0x0130) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YW1Y[0x130];                                   // 0x0130(0x0130) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	bool                                               LevelVisibility;                                           // 0x0260(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_WJKX[0xF];                                     // 0x0261(0x000F) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	unsigned char                                      UnknownData_TUU0 : 3;                                      // 0x0270(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_Z54X[0xF];                                     // 0x0261(0x000F) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_42OS : 3;                                      // 0x0270(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      Blocked : 1;                                               // 0x0270(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_KBVQ[0xF7];                                    // 0x0271(0x00F7) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_B5UY[0xF7];                                    // 0x0271(0x00F7) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UAssetUserData*>                      AssetUserData;                                             // 0x0368(0x0010) (ExportObject, ZeroConstructor, ContainsInstancedReference, Protected)
-	unsigned char                                      UnknownData_7L1Y[0x18];                                    // 0x0378(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_6N2B[0x18];                                    // 0x0378(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -4172,10 +4172,10 @@ class AAudioVolume : public AVolume
 public:
 	float                                              Priority;                                                  // 0x0460(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bEnabled : 1;                                              // 0x0464(0x0001) BIT_FIELD (Edit, BlueprintVisible, Net, NoDestructor)
-	unsigned char                                      UnknownData_PFJN[0x3];                                     // 0x0465(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1M31[0x3];                                     // 0x0465(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FReverbSettings                             Settings;                                                  // 0x0468(0x0018) (Edit, BlueprintVisible)
 	struct FInteriorSettings                           AmbientZoneSettings;                                       // 0x0480(0x0024) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData_4FFT[0x4];                                     // 0x04A4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_KMOE[0x4];                                     // 0x04A4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class AAudioVolume*                                NextLowerPriorityVolume;                                   // 0x04A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -4213,7 +4213,7 @@ class ACullDistanceVolume : public AVolume
 public:
 	TArray<struct FCullDistanceSizePair>               CullDistances;                                             // 0x0460(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	unsigned char                                      bEnabled : 1;                                              // 0x0470(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
-	unsigned char                                      UnknownData_E1KS[0x7];                                     // 0x0471(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_39ON[0x7];                                     // 0x0471(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -4271,9 +4271,9 @@ public:
 	TArray<struct FName>                               StreamingLevelNames;                                       // 0x0460(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
 	unsigned char                                      bEditorPreVisOnly : 1;                                     // 0x0470(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bDisabled : 1;                                             // 0x0470(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_NQ2P[0x3];                                     // 0x0471(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QZLV[0x3];                                     // 0x0471(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EStreamingVolumeUsage>          StreamingUsage;                                            // 0x0474(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2Q63[0x3];                                     // 0x0475(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_VOLU[0x3];                                     // 0x0475(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -4344,7 +4344,7 @@ class ANavMeshBoundsVolume : public AVolume
 public:
 	struct FNavAgentSelector                           SupportedAgents;                                           // 0x0460(0x0004) (Edit)
 	struct FName                                       OriginatingLevelName;                                      // 0x0464(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_RQHH[0x4];                                     // 0x046C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_CKNM[0x4];                                     // 0x046C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -4399,7 +4399,7 @@ public:
 	unsigned char                                      bSupportsAgent13 : 1;                                      // 0x0039(0x0001) BIT_FIELD (Config, NoDestructor)
 	unsigned char                                      bSupportsAgent14 : 1;                                      // 0x0039(0x0001) BIT_FIELD (Config, NoDestructor)
 	unsigned char                                      bSupportsAgent15 : 1;                                      // 0x0039(0x0001) BIT_FIELD (Config, NoDestructor)
-	unsigned char                                      UnknownData_XPZ7[0x6];                                     // 0x003A(0x0006) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5DSV[0x6];                                     // 0x003A(0x0006) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -4434,7 +4434,7 @@ public:
 class ANavModifierVolume : public AVolume
 {
 public:
-	unsigned char                                      UnknownData_IINF[0x8];                                     // 0x0460(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_CM9N[0x8];                                     // 0x0460(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UClass*                                      AreaClass;                                                 // 0x0468(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash)
 
 
@@ -4489,15 +4489,15 @@ class APainCausingVolume : public APhysicsVolume
 {
 public:
 	unsigned char                                      bPainCausing : 1;                                          // 0x0470(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_Q6LY[0x3];                                     // 0x0471(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3Y9T[0x3];                                     // 0x0471(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              DamagePerSec;                                              // 0x0474(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                      DamageType;                                                // 0x0478(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	float                                              PainInterval;                                              // 0x0480(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bEntryPain : 1;                                            // 0x0484(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      BACKUP_bPainCausing : 1;                                   // 0x0484(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_1Y3S[0x3];                                     // 0x0485(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7ZRD[0x3];                                     // 0x0485(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class AController*                                 DamageInstigator;                                          // 0x0488(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_7JHT[0x8];                                     // 0x0490(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_6GJ5[0x8];                                     // 0x0490(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -4566,14 +4566,14 @@ public:
 class APostProcessVolume : public AVolume
 {
 public:
-	unsigned char                                      UnknownData_NWID[0x10];                                    // 0x0460(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_FCNP[0x10];                                    // 0x0460(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FPostProcessSettings                        Settings;                                                  // 0x0470(0x0540) (Edit, BlueprintVisible, Interp)
 	float                                              Priority;                                                  // 0x09B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              BlendRadius;                                               // 0x09B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	float                                              BlendWeight;                                               // 0x09B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bEnabled : 1;                                              // 0x09BC(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bUnbound : 1;                                              // 0x09BC(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_V3OE[0x3];                                     // 0x09BD(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_VWYT[0x3];                                     // 0x09BD(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -4665,11 +4665,11 @@ class ACameraActor : public AActor
 {
 public:
 	TEnumAsByte<Engine_EAutoReceiveInput>              AutoActivateForPlayer;                                     // 0x0428(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DB00[0x7];                                     // 0x0429(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_04F5[0x7];                                     // 0x0429(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UCameraComponent*                            CameraComponent;                                           // 0x0430(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EBF5[0x8];                                     // 0x0438(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_E00O[0x8];                                     // 0x0438(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bConstrainAspectRatio : 1;                                 // 0x0440(0x0001) BIT_FIELD (Deprecated, NoDestructor)
-	unsigned char                                      UnknownData_1EBK[0x3];                                     // 0x0441(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_D6EJ[0x3];                                     // 0x0441(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              AspectRatio;                                               // 0x0444(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              FOVAngle;                                                  // 0x0448(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              PostProcessBlendWeight;                                    // 0x044C(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -4727,7 +4727,7 @@ class UCameraShake : public UObject
 {
 public:
 	unsigned char                                      bSingleInstance : 1;                                       // 0x0028(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_4SP6[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1192[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              OscillationDuration;                                       // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              OscillationBlendInTime;                                    // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              OscillationBlendOutTime;                                   // 0x0034(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -4741,9 +4741,9 @@ public:
 	float                                              RandomAnimSegmentDuration;                                 // 0x009C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCameraAnim*                                 Anim;                                                      // 0x00A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bRandomAnimSegment : 1;                                    // 0x00A8(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_TX7L[0x17];                                    // 0x00A9(0x0017) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Z2NY[0x17];                                    // 0x00A9(0x0017) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class APlayerCameraManager*                        CameraOwner;                                               // 0x00C0(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_BM3K[0x68];                                    // 0x00C8(0x0068) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_AJU8[0x68];                                    // 0x00C8(0x0068) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              ShakeScale;                                                // 0x0130(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              OscillatorTimeRemaining;                                   // 0x0134(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCameraAnimInst*                             AnimInst;                                                  // 0x0138(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -4768,7 +4768,7 @@ public:
 class UCurveBase : public UObject
 {
 public:
-	unsigned char                                      UnknownData_A6X2[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_FKQH[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -4790,7 +4790,7 @@ class UCurveFloat : public UCurveBase
 public:
 	struct FRichCurve                                  FloatCurve;                                                // 0x0030(0x0078)
 	bool                                               bIsEventCurve;                                             // 0x00A8(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_VQIW[0x7];                                     // 0x00A9(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4SOB[0x7];                                     // 0x00A9(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -4811,7 +4811,7 @@ class UForceFeedbackEffect : public UObject
 public:
 	TArray<struct FForceFeedbackChannelDetails>        ChannelDetails;                                            // 0x0028(0x0010) (Edit, ZeroConstructor)
 	float                                              Duration;                                                  // 0x0038(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_WY7W[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_75GJ[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -4830,7 +4830,7 @@ class ALogVisualizerCameraController : public ADebugCameraController
 {
 public:
 	class AActor*                                      PickedActor;                                               // 0x07D0(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_SMLZ[0x10];                                    // 0x07D8(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_FGJB[0x10];                                    // 0x07D8(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -4871,7 +4871,7 @@ class ADestructibleActor : public AActor
 public:
 	class UDestructibleComponent*                      DestructibleComponent;                                     // 0x0428(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bAffectNavigation : 1;                                     // 0x0430(0x0001) BIT_FIELD (Edit, BlueprintVisible, Config, NoDestructor)
-	unsigned char                                      UnknownData_HPTS[0x7];                                     // 0x0431(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MFOJ[0x7];                                     // 0x0431(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScriptMulticastDelegate                    OnActorFracture;                                           // 0x0438(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 
 
@@ -4890,7 +4890,7 @@ public:
 class ADocumentationActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData_N1KR[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_M7YS[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -4912,7 +4912,7 @@ public:
 	unsigned char                                      bDestroyOnSystemFinish : 1;                                // 0x0430(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bPostUpdateTickGroup : 1;                                  // 0x0430(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bCurrentlyActive : 1;                                      // 0x0430(0x0001) BIT_FIELD (Net, RepNotify, NoDestructor)
-	unsigned char                                      UnknownData_Z5K9[0x7];                                     // 0x0431(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_FK40[0x7];                                     // 0x0431(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScriptMulticastDelegate                    OnParticleSpawn;                                           // 0x0438(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnParticleBurst;                                           // 0x0448(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnParticleDeath;                                           // 0x0458(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
@@ -4952,7 +4952,7 @@ public:
 	float                                              BaseFOV;                                                   // 0x0488(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              DistFromCamera;                                            // 0x048C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bAllowMultipleInstances : 1;                               // 0x0490(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_36YV[0x7];                                     // 0x0491(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_KIY3[0x7];                                     // 0x0491(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UClass*>                              EmittersToTreatAsSame;                                     // 0x0498(0x0010) (ZeroConstructor, UObjectWrapper)
 	class APlayerCameraManager*                        BaseCamera;                                                // 0x04A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 
@@ -4989,7 +4989,7 @@ public:
 class ALogVisualizerHUD : public ADebugCameraHUD
 {
 public:
-	unsigned char                                      UnknownData_PR78[0x28];                                    // 0x0520(0x0028) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_EMJR[0x28];                                    // 0x0520(0x0028) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -5027,7 +5027,7 @@ class AExponentialHeightFog : public AInfo
 public:
 	class UExponentialHeightFogComponent*              Component;                                                 // 0x0428(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bEnabled : 1;                                              // 0x0430(0x0001) BIT_FIELD (Net, RepNotify, NoDestructor)
-	unsigned char                                      UnknownData_V0FT[0x7];                                     // 0x0431(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_98RP[0x7];                                     // 0x0431(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -5046,12 +5046,12 @@ public:
 class ANavigationObjectBase : public AActor
 {
 public:
-	unsigned char                                      UnknownData_R0DU[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_2HRG[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UCapsuleComponent*                           CapsuleComponent;                                          // 0x0430(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UBillboardComponent*                         GoodSprite;                                                // 0x0438(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UBillboardComponent*                         BadSprite;                                                 // 0x0440(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bIsPIEPlayerStart : 1;                                     // 0x0448(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_SRKX[0x7];                                     // 0x0449(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_EE3Q[0x7];                                     // 0x0449(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -5094,7 +5094,7 @@ public:
 	int                                                MaxDynamicBandwidth;                                       // 0x0438(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bIsStandbyCheckingEnabled : 1;                             // 0x043C(0x0001) BIT_FIELD (Config, NoDestructor)
 	unsigned char                                      bHasStandbyCheatTriggered : 1;                             // 0x043C(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_IMOE[0x3];                                     // 0x043D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WUH9[0x3];                                     // 0x043D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              StandbyRxCheatTime;                                        // 0x0440(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              StandbyTxCheatTime;                                        // 0x0444(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                BadPingThreshold;                                          // 0x0448(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -5109,18 +5109,18 @@ public:
 	float                                              MAXCLIENTUPDATEINTERVAL;                                   // 0x046C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxMoveDeltaTime;                                          // 0x0470(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               ClientAuthorativePosition;                                 // 0x0474(0x0001) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_5Q9G[0x3];                                     // 0x0475(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HHVF[0x3];                                     // 0x0475(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              ClientErrorUpdateRateLimit;                                // 0x0478(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bMovementTimeDiscrepancyDetection;                         // 0x047C(0x0001) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor)
 	bool                                               bMovementTimeDiscrepancyResolution;                        // 0x047D(0x0001) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_WBTV[0x2];                                     // 0x047E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7VQP[0x2];                                     // 0x047E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MovementTimeDiscrepancyMaxTimeMargin;                      // 0x0480(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MovementTimeDiscrepancyMinTimeMargin;                      // 0x0484(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MovementTimeDiscrepancyResolutionRate;                     // 0x0488(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MovementTimeDiscrepancyDriftAllowance;                     // 0x048C(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bMovementTimeDiscrepancyForceCorrectionsDuringResolution;  // 0x0490(0x0001) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor)
 	bool                                               bUseDistanceBasedRelevancy;                                // 0x0491(0x0001) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_EBTE[0x6];                                     // 0x0492(0x0006) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2F0X[0x6];                                     // 0x0492(0x0006) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -5142,9 +5142,9 @@ public:
 	int                                                MaxPlayers;                                                // 0x042C(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      MaxSplitscreensPerConnection;                              // 0x0430(0x0001) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bRequiresPushToTalk;                                       // 0x0431(0x0001) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_H4NH[0x2];                                     // 0x0432(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TL93[0x2];                                     // 0x0432(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       SessionName;                                               // 0x0434(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HZ0P[0x1C];                                    // 0x043C(0x001C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ELNB[0x1C];                                    // 0x043C(0x001C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -5164,7 +5164,7 @@ class ASkyLight : public AInfo
 public:
 	class USkyLightComponent*                          LightComponent;                                            // 0x0428(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bEnabled : 1;                                              // 0x0430(0x0001) BIT_FIELD (Net, RepNotify, NoDestructor)
-	unsigned char                                      UnknownData_7GKD[0x7];                                     // 0x0431(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_UFV9[0x7];                                     // 0x0431(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -5203,7 +5203,7 @@ class ALevelBounds : public AActor
 {
 public:
 	bool                                               bAutoUpdateBounds;                                         // 0x0428(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_VN8Z[0x7];                                     // 0x0429(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_RUE6[0x7];                                     // 0x0429(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -5232,11 +5232,11 @@ public:
 	unsigned char                                      bAffectTranslucentLighting : 1;                            // 0x02CC(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bPrecomputedLightingIsValid : 1;                           // 0x02CC(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      RainOcclusion : 1;                                         // 0x02CC(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_S1MU[0x3];                                     // 0x02CD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_0ETN[0x3];                                     // 0x02CD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              IndirectLightingIntensity;                                 // 0x02D0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	float                                              ScaleForTranslucency;                                      // 0x02D4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              CapForTranslucency;                                        // 0x02D8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HTPP[0x4];                                     // 0x02DC(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_SBWW[0x4];                                     // 0x02DC(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -5258,9 +5258,9 @@ class ULightComponent : public ULightComponentBase
 public:
 	float                                              Temperature;                                               // 0x02E0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bUseTemperature : 1;                                       // 0x02E4(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
-	unsigned char                                      UnknownData_GNZQ[0x3];                                     // 0x02E5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MWCL[0x3];                                     // 0x02E5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                ShadowMapChannel;                                          // 0x02E8(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_MFHN[0x4];                                     // 0x02EC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GCKE[0x4];                                     // 0x02EC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              SourceRadius;                                              // 0x02F0(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MinRoughness;                                              // 0x02F4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              ShadowBias;                                                // 0x02F8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
@@ -5270,25 +5270,25 @@ public:
 	unsigned char                                      CastTranslucentShadows : 1;                                // 0x0304(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bCastShadowsFromCinematicObjectsOnly : 1;                  // 0x0304(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bAffectDynamicIndirectLighting : 1;                        // 0x0304(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_156W[0x3];                                     // 0x0305(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9HCW[0x3];                                     // 0x0305(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UMaterialInterface*                          LightFunctionMaterial;                                     // 0x0308(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     LightFunctionScale;                                        // 0x0310(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_ALVB[0x4];                                     // 0x031C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZQOA[0x4];                                     // 0x031C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UTextureLightProfile*                        IESTexture;                                                // 0x0320(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bUseIESBrightness : 1;                                     // 0x0328(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
-	unsigned char                                      UnknownData_QFCX[0x3];                                     // 0x0329(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XYWC[0x3];                                     // 0x0329(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              IESBrightnessScale;                                        // 0x032C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	float                                              LightFunctionFadeDistance;                                 // 0x0330(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              DisabledBrightness;                                        // 0x0334(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bEnableLightShaftBloom : 1;                                // 0x0338(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
-	unsigned char                                      UnknownData_V84V[0x3];                                     // 0x0339(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7LTH[0x3];                                     // 0x0339(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              BloomScale;                                                // 0x033C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              BloomThreshold;                                            // 0x0340(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FColor                                      BloomTint;                                                 // 0x0344(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               bUseRayTracedDistanceFieldShadows;                         // 0x0348(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_GCSN[0x3];                                     // 0x0349(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_W5TW[0x3];                                     // 0x0349(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              RayStartOffsetDepthScale;                                  // 0x034C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ARWI[0xEC];                                    // 0x0350(0x00EC) Fix Super Size
+	unsigned char                                      UnknownData_HS94[0xEC];                                    // 0x0350(0x00EC) Fix Super Size
 
 
 	static UClass* StaticClass()
@@ -5324,7 +5324,7 @@ class ALight : public AActor
 public:
 	class ULightComponent*                             LightComponent;                                            // 0x0428(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bEnabled : 1;                                              // 0x0430(0x0001) BIT_FIELD (Net, RepNotify, NoDestructor)
-	unsigned char                                      UnknownData_137J[0x7];                                     // 0x0431(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_VRUK[0x7];                                     // 0x0431(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -5452,7 +5452,7 @@ public:
 	float                                              LODDrawDistance;                                           // 0x0440(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                LodLevel;                                                  // 0x0444(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UObject*>                             SubObjects;                                                // 0x0448(0x0010) (Edit, ZeroConstructor, EditConst)
-	unsigned char                                      UnknownData_98I0[0x8];                                     // 0x0458(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3NFA[0x8];                                     // 0x0458(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -5493,7 +5493,7 @@ public:
 	float                                              PlayRate;                                                  // 0x0438(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bPlayOnLevelLoad : 1;                                      // 0x043C(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bForceStartPos : 1;                                        // 0x043C(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_0OXA[0x3];                                     // 0x043D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_FQVD[0x3];                                     // 0x043D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              ForceStartPosition;                                        // 0x0440(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	unsigned char                                      bLooping : 1;                                              // 0x0444(0x0001) BIT_FIELD (Edit, BlueprintVisible, Net, NoDestructor)
 	unsigned char                                      bRewindOnPlay : 1;                                         // 0x0444(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
@@ -5503,29 +5503,29 @@ public:
 	unsigned char                                      bClientSideOnly : 1;                                       // 0x0444(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bSkipUpdateIfNotVisible : 1;                               // 0x0444(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bIsSkippable : 1;                                          // 0x0444(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_CI3Z[0x3];                                     // 0x0445(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_790Y[0x3];                                     // 0x0445(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                PreferredSplitScreenNum;                                   // 0x0448(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	unsigned char                                      bDisableMovementInput : 1;                                 // 0x044C(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bDisableLookAtInput : 1;                                   // 0x044C(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bHidePlayer : 1;                                           // 0x044C(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bHideHud : 1;                                              // 0x044C(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_7UU3[0x3];                                     // 0x044D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZMO2[0x3];                                     // 0x044D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FInterpGroupActorInfo>               GroupActorInfos;                                           // 0x0450(0x0010) (Net, ZeroConstructor)
 	unsigned char                                      bShouldShowGore : 1;                                       // 0x0460(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_KZPI[0x7];                                     // 0x0461(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_51OK[0x7];                                     // 0x0461(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UInterpGroupInst*>                    GroupInst;                                                 // 0x0468(0x0010) (ZeroConstructor, Transient)
 	TArray<struct FCameraCutInfo>                      CameraCuts;                                                // 0x0478(0x0010) (ZeroConstructor, Transient)
 	unsigned char                                      bIsPlaying : 1;                                            // 0x0488(0x0001) BIT_FIELD (Net, Transient, NoDestructor)
 	unsigned char                                      bReversePlayback : 1;                                      // 0x0488(0x0001) BIT_FIELD (Net, NoDestructor)
 	unsigned char                                      bPaused : 1;                                               // 0x0488(0x0001) BIT_FIELD (Net, Transient, NoDestructor)
 	unsigned char                                      bPendingStop : 1;                                          // 0x0488(0x0001) BIT_FIELD (Net, Transient, NoDestructor)
-	unsigned char                                      UnknownData_DL0Q[0x3];                                     // 0x0489(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_DGZD[0x3];                                     // 0x0489(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              InterpPosition;                                            // 0x048C(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_SVBL[0x4];                                     // 0x0490(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_U9JB[0x4];                                     // 0x0490(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      ReplicationForceIsPlaying;                                 // 0x0494(0x0001) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2T6K[0x7];                                     // 0x0495(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XOYZ[0x7];                                     // 0x0495(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bServerInitialLevelStreamingComplete : 1;                  // 0x049C(0x0001) BIT_FIELD (Net, Transient, NoDestructor, Protected)
-	unsigned char                                      UnknownData_V0C8[0x3];                                     // 0x049D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HEN5[0x3];                                     // 0x049D(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -5611,15 +5611,15 @@ public:
 	struct FNavDataConfig                              NavDataConfig;                                             // 0x0430(0x0058) (Protected)
 	unsigned char                                      bEnableDrawing : 1;                                        // 0x0488(0x0001) BIT_FIELD (Edit, Transient, NoDestructor, Protected)
 	unsigned char                                      bRebuildAtRuntime : 1;                                     // 0x0488(0x0001) BIT_FIELD (Config, Deprecated, NoDestructor, Protected)
-	unsigned char                                      UnknownData_A0C8[0x3];                                     // 0x0489(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_EM6M[0x3];                                     // 0x0489(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_ERuntimeGenerationType>         RuntimeGeneration;                                         // 0x048C(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YSFY[0x3];                                     // 0x048D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LK4G[0x3];                                     // 0x048D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bForceRebuildOnLoad : 1;                                   // 0x0490(0x0001) BIT_FIELD (Edit, Config, NoDestructor, Protected)
-	unsigned char                                      UnknownData_V1L1[0x3];                                     // 0x0491(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_J8A0[0x3];                                     // 0x0491(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              ObservedPathsTickInterval;                                 // 0x0494(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_F7UO[0xE8];                                    // 0x0498(0x00E8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_G37X[0xE8];                                    // 0x0498(0x00E8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FSupportedAreaData>                  SupportedAreas;                                            // 0x0580(0x0010) (ZeroConstructor, Protected)
-	unsigned char                                      UnknownData_R03H[0x58];                                    // 0x0590(0x0058) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_OZDV[0x58];                                    // 0x0590(0x0058) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -5687,12 +5687,12 @@ public:
 	unsigned char                                      bDrawOctree : 1;                                           // 0x05E9(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bDistinctlyDrawTilesBeingBuilt : 1;                        // 0x05E9(0x0001) BIT_FIELD (Config, NoDestructor)
 	unsigned char                                      bDrawNavMesh : 1;                                          // 0x05E9(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_YN8H[0x2];                                     // 0x05EA(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TTV7[0x2];                                     // 0x05EA(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              DrawOffset;                                                // 0x05EC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              BuiltTileSizeUU;                                           // 0x05F0(0x0004) (Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              BuiltCellSize;                                             // 0x05F4(0x0004) (Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bFixedTilePoolSize : 1;                                    // 0x05F8(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
-	unsigned char                                      UnknownData_PC2A[0x3];                                     // 0x05F9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_859A[0x3];                                     // 0x05F9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                TilePoolSize;                                              // 0x05FC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TileSizeUU;                                                // 0x0600(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              CellSize;                                                  // 0x0604(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -5715,7 +5715,7 @@ public:
 	float                                              DefaultMaxHierarchicalSearchNodes;                         // 0x0648(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ERecastPartitioning>            RegionPartitioning;                                        // 0x064C(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ERecastPartitioning>            LayerPartitioning;                                         // 0x064D(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_4BMC[0x2];                                     // 0x064E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MGL9[0x2];                                     // 0x064E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                RegionChunkSplits;                                         // 0x0650(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	int                                                LayerChunkSplits;                                          // 0x0654(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	unsigned char                                      bSortNavigationAreasByCost : 1;                            // 0x0658(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
@@ -5725,11 +5725,11 @@ public:
 	unsigned char                                      bUseBetterOffsetsFromCorners : 1;                          // 0x0658(0x0001) BIT_FIELD (Config, NoDestructor)
 	unsigned char                                      bUseVirtualFilters : 1;                                    // 0x0658(0x0001) BIT_FIELD (Config, NoDestructor)
 	unsigned char                                      bUseVoxelCache : 1;                                        // 0x0658(0x0001) BIT_FIELD (Config, NoDestructor)
-	unsigned char                                      UnknownData_G8UT[0x3];                                     // 0x0659(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_VASB[0x3];                                     // 0x0659(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              TileSetUpdateInterval;                                     // 0x065C(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              HeuristicScale;                                            // 0x0660(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              VerticalDeviationFromGroundCompensation;                   // 0x0664(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_W4MN[0x60];                                    // 0x0668(0x0060) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_23I0[0x60];                                    // 0x0668(0x0060) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -5798,11 +5798,11 @@ public:
 class ANavigationTestingActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData_DE6Q[0x10];                                    // 0x0428(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7UTX[0x10];                                    // 0x0428(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UCapsuleComponent*                           CapsuleComponent;                                          // 0x0438(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UNavigationInvokerComponent*                 InvokerComponent;                                          // 0x0440(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bActAsNavigationInvoker : 1;                               // 0x0448(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_GQFQ[0x3];                                     // 0x0449(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_DYVG[0x3];                                     // 0x0449(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FNavAgentProperties                         NavAgentProps;                                             // 0x044C(0x0030) (Edit)
 	struct FVector                                     QueryingExtent;                                            // 0x047C(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	class ANavigationData*                             MyNavData;                                                 // 0x0488(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -5815,23 +5815,23 @@ public:
 	unsigned char                                      bShowBestPath : 1;                                         // 0x049C(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bShowDiffWithPreviousStep : 1;                             // 0x049C(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bShouldBeVisibleInGame : 1;                                // 0x049C(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_SDAH[0x3];                                     // 0x049D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_R28D[0x3];                                     // 0x049D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_ENavCostDisplay>                CostDisplayMode;                                           // 0x04A0(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_LQD2[0x3];                                     // 0x04A1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GI21[0x3];                                     // 0x04A1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector2D                                   TextCanvasOffset;                                          // 0x04A4(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	unsigned char                                      bPathExist : 1;                                            // 0x04AC(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, Transient, EditConst, NoDestructor)
 	unsigned char                                      bPathIsPartial : 1;                                        // 0x04AC(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, Transient, EditConst, NoDestructor)
 	unsigned char                                      bPathSearchOutOfNodes : 1;                                 // 0x04AC(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, Transient, EditConst, NoDestructor)
-	unsigned char                                      UnknownData_8N9P[0x3];                                     // 0x04AD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Z7IO[0x3];                                     // 0x04AD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              PathfindingTime;                                           // 0x04B0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              PathCost;                                                  // 0x04B4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                PathfindingSteps;                                          // 0x04B8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_73M2[0x4];                                     // 0x04BC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9AN9[0x4];                                     // 0x04BC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class ANavigationTestingActor*                     OtherActor;                                                // 0x04C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                      FilterClass;                                               // 0x04C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	int                                                ShowStepIndex;                                             // 0x04D0(0x0004) (Edit, ZeroConstructor, DisableEditOnTemplate, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              OffsetFromCornersDistance;                                 // 0x04D4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_IQP5[0x20];                                    // 0x04D8(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_R8CO[0x20];                                    // 0x04D8(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -5851,7 +5851,7 @@ class UNavLinkDefinition : public UObject
 public:
 	TArray<struct FNavigationLink>                     Links;                                                     // 0x0028(0x0010) (Edit, ZeroConstructor)
 	TArray<struct FNavigationSegmentLink>              SegmentLinks;                                              // 0x0038(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData_BK3B[0x8];                                     // 0x0048(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2BT2[0x8];                                     // 0x0048(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -5886,12 +5886,12 @@ public:
 class ANavLinkProxy : public AActor
 {
 public:
-	unsigned char                                      UnknownData_XGFJ[0x10];                                    // 0x0428(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7C4N[0x10];                                    // 0x0428(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FNavigationLink>                     PointLinks;                                                // 0x0438(0x0010) (Edit, ZeroConstructor)
 	TArray<struct FNavigationSegmentLink>              SegmentLinks;                                              // 0x0448(0x0010) (ZeroConstructor)
 	class UNavLinkCustomComponent*                     SmartLinkComp;                                             // 0x0458(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bSmartLinkIsRelevant;                                      // 0x0460(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_0TKQ[0x7];                                     // 0x0461(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_AU1X[0x7];                                     // 0x0461(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScriptMulticastDelegate                    OnSmartLinkReached;                                        // 0x0468(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable, Protected)
 
 
@@ -5933,31 +5933,31 @@ class UParticleSystem : public UObject
 {
 public:
 	TEnumAsByte<Engine_EParticleSystemUpdateMode>      SystemUpdateMode;                                          // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_R6CI[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_OOX4[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              UpdateTime_FPS;                                            // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              UpdateTime_Delta;                                          // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              WarmUpTime;                                                // 0x0034(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              WarmupTickRate;                                            // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_0ZN2[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_X2CI[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UParticleEmitter*>                    Emitters;                                                  // 0x0040(0x0010) (ExportObject, ZeroConstructor, ContainsInstancedReference)
 	class UParticleSystemComponent*                    PreviewComponent;                                          // 0x0050(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UInterpCurveEdSetup*                         CurveEdSetup;                                              // 0x0058(0x0008) (ExportObject, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bOrientZAxisTowardCamera : 1;                              // 0x0060(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_KD12[0x3];                                     // 0x0061(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_JQLW[0x3];                                     // 0x0061(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              LODDistanceCheckTime;                                      // 0x0064(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EParticleSystemLODMethod>       LODMethod;                                                 // 0x0068(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_QVCF[0x7];                                     // 0x0069(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_CEMY[0x7];                                     // 0x0069(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<float>                                      LODDistances;                                              // 0x0070(0x0010) (Edit, EditFixedSize, ZeroConstructor)
 	unsigned char                                      bRegenerateLODDuplicate : 1;                               // 0x0080(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_KWMU[0x7];                                     // 0x0081(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_UKOW[0x7];                                     // 0x0081(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FParticleSystemLOD>                  LODSettings;                                               // 0x0088(0x0010) (Edit, ZeroConstructor, AdvancedDisplay)
 	unsigned char                                      bIgnoreBoundsRotation : 1;                                 // 0x0098(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bBoostParticleAggregationPriority : 1;                     // 0x0098(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bUseFixedRelativeBoundingBox : 1;                          // 0x0098(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_KXWA[0x3];                                     // 0x0099(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_D8E3[0x3];                                     // 0x0099(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FBox                                        FixedRelativeBoundingBox;                                  // 0x009C(0x001C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	unsigned char                                      bUseLowResTranslucencyBoundingBox : 1;                     // 0x00B8(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_4ZTV[0x3];                                     // 0x00B9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_U8BF[0x3];                                     // 0x00B9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FBox                                        LowResTranslucencyBoundingBox;                             // 0x00BC(0x001C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              SecondsBeforeInactive;                                     // 0x00D8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bShouldResetPeakCounts : 1;                                // 0x00DC(0x0001) BIT_FIELD (NoDestructor)
@@ -5965,17 +5965,17 @@ public:
 	unsigned char                                      bPostPhysicsTick : 1;                                      // 0x00DC(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bUseRealtimeThumbnail : 1;                                 // 0x00DC(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      ThumbnailImageOutOfDate : 1;                               // 0x00DC(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_742R[0x3];                                     // 0x00DD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_EY6F[0x3];                                     // 0x00DD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              Delay;                                                     // 0x00E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
 	float                                              DelayLow;                                                  // 0x00E4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	unsigned char                                      bUseDelayRange : 1;                                        // 0x00E8(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_0EYP[0x3];                                     // 0x00E9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_A3LW[0x3];                                     // 0x00E9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     MacroUVPosition;                                           // 0x00EC(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              MacroUVRadius;                                             // 0x00F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EParticleSystemOcclusionBoundsMethod> OcclusionBoundsMethod;                                     // 0x00FC(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_C1VU[0x3];                                     // 0x00FD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XF3Q[0x3];                                     // 0x00FD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FBox                                        CustomOcclusionBounds;                                     // 0x0100(0x001C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_UNGE[0x4];                                     // 0x011C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9GG2[0x4];                                     // 0x011C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FLODSoloTrack>                       SoloTracking;                                              // 0x0120(0x0010) (ZeroConstructor, Transient)
 	TArray<struct FNamedEmitterMaterial>               NamedMaterialSlots;                                        // 0x0130(0x0010) (Edit, ZeroConstructor, AdvancedDisplay)
 
@@ -6000,7 +6000,7 @@ public:
 	int                                                FramesTickScaledOver;                                      // 0x0028(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                MaxTicksPerFrame;                                          // 0x002C(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              PriorityInflationPower;                                    // 0x0030(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_H43G[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_XZ90[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -6052,7 +6052,7 @@ public:
 class UMeshPatchAsset : public UObject
 {
 public:
-	unsigned char                                      UnknownData_3B1Q[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_R1T5[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -6070,25 +6070,25 @@ public:
 class USkeletalMesh : public UObject
 {
 public:
-	unsigned char                                      UnknownData_4BO1[0x28];                                    // 0x0028(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_N4G1[0x28];                                    // 0x0028(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class USkeleton*                                   Skeleton;                                                  // 0x0050(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
 	struct FBoxSphereBounds                            Bounds;                                                    // 0x0058(0x001C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_11QV[0x4];                                     // 0x0074(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_R485[0x4];                                     // 0x0074(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FSkeletalMaterial>                   Materials;                                                 // 0x0078(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DuplicateTransient)
 	TArray<struct FBoneMirrorInfo>                     SkelMirrorTable;                                           // 0x0088(0x0010) (Edit, EditFixedSize, ZeroConstructor)
 	TEnumAsByte<CoreUObject_EAxis>                     SkelMirrorAxis;                                            // 0x0098(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<CoreUObject_EAxis>                     SkelMirrorFlipAxis;                                        // 0x0099(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_Z6F6[0x6];                                     // 0x009A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1R4C[0x6];                                     // 0x009A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FSkeletalMeshLODInfo>                LODInfo;                                                   // 0x00A0(0x0010) (Edit, EditFixedSize, ZeroConstructor)
 	unsigned char                                      bUseFullPrecisionUVs : 1;                                  // 0x00B0(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bHasBeenSimplified : 1;                                    // 0x00B0(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bHasVertexColors : 1;                                      // 0x00B0(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_GMRE[0x7];                                     // 0x00B1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_85C3[0x7];                                     // 0x00B1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FDeformablesSettings>                DeformablesSettings;                                       // 0x00B8(0x0010) (Edit, EditFixedSize, ZeroConstructor)
 	unsigned char                                      bKeepTessellationAdjacency : 1;                            // 0x00C8(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bKeepSkeletalMeshBuffersInMemory : 1;                      // 0x00C8(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bEnablePerPolyCollision : 1;                               // 0x00C8(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_K1P2[0x7];                                     // 0x00C9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8GJT[0x7];                                     // 0x00C9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UBodySetup*                                  BodySetup;                                                 // 0x00D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UPhysicsAsset*                               PhysicsAsset;                                              // 0x00D8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
 	class UHIKCharacterization*                        Characterization;                                          // 0x00E0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -6097,11 +6097,11 @@ public:
 	float                                              StreamingDiscardedTexelRatios;                             // 0x00F4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UMorphTarget*>                        MorphTargets;                                              // 0x00F8(0x0010) (BlueprintVisible, ZeroConstructor)
 	TArray<class UMeshPatchAsset*>                     MeshPatchAssets;                                           // 0x0108(0x0010) (BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData_X6K0[0xD8];                                    // 0x0118(0x00D8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_30B9[0xD8];                                    // 0x0118(0x00D8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FClothingAssetData>                  ClothingAssets;                                            // 0x01F0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, EditFixedSize, ZeroConstructor)
-	unsigned char                                      UnknownData_GQHI[0x10];                                    // 0x0200(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_RGVW[0x10];                                    // 0x0200(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UAssetUserData*>                      AssetUserData;                                             // 0x0210(0x0010) (Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, AdvancedDisplay, Protected)
-	unsigned char                                      UnknownData_WTSW[0x8];                                     // 0x0220(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_L00C[0x8];                                     // 0x0220(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class USkeletalMeshSocket*>                 Sockets;                                                   // 0x0228(0x0010) (ZeroConstructor)
 
 
@@ -6124,7 +6124,7 @@ class UAnimationAsset : public UObject
 {
 public:
 	class USkeleton*                                   Skeleton;                                                  // 0x0028(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_MX82[0x10];                                    // 0x0030(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_PH8U[0x10];                                    // 0x0030(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UAnimMetaData*>                       MetaData;                                                  // 0x0040(0x0010) (Edit, ExportObject, ZeroConstructor, ContainsInstancedReference)
 
 
@@ -6149,7 +6149,7 @@ public:
 	class USphereComponent*                            CollisionComponent;                                        // 0x04A0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                        MeshComponent;                                             // 0x04A8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bAddDefaultMovementBindings : 1;                           // 0x04B0(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
-	unsigned char                                      UnknownData_WOZZ[0x7];                                     // 0x04B1(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HTK4[0x7];                                     // 0x04B1(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -6282,7 +6282,7 @@ public:
 	class AActor*                                      ConstraintActor1;                                          // 0x0430(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                      ConstraintActor2;                                          // 0x0438(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bDisableCollision : 1;                                     // 0x0440(0x0001) BIT_FIELD (Deprecated, NoDestructor)
-	unsigned char                                      UnknownData_0UL9[0x7];                                     // 0x0441(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LUQG[0x7];                                     // 0x0441(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -6417,11 +6417,11 @@ class USkinnedMeshComponent : public UMeshComponent
 public:
 	class USkeletalMesh*                               SkeletalMesh;                                              // 0x0560(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	TWeakObjectPtr<class USkinnedMeshComponent>        MasterPoseComponent;                                       // 0x0568(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper)
-	unsigned char                                      UnknownData_O330[0x40];                                    // 0x0570(0x0040) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3GJK[0x40];                                    // 0x0570(0x0040) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UMaterialInterface*                          CustomDepthMaterial;                                       // 0x05B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_BZYM[0x10];                                    // 0x05B8(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_IMUA[0x10];                                    // 0x05B8(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bUseBoundsFromMasterPoseComponent : 1;                     // 0x05C8(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_CSK2[0x7];                                     // 0x05C9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_68N1[0x7];                                     // 0x05C9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FActiveVertexAnim>                   ActiveVertexAnims;                                         // 0x05D0(0x0010) (ZeroConstructor, Transient)
 	class UPhysicsAsset*                               PhysicsAssetOverride;                                      // 0x05E0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	int                                                ForcedLodModel;                                            // 0x05E8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
@@ -6429,7 +6429,7 @@ public:
 	int                                                PredictedLODLevel;                                         // 0x05F0(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                OldPredictedLODLevel;                                      // 0x05F4(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxDistanceFactor;                                         // 0x05F8(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_PW3X[0x4];                                     // 0x05FC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_IYTK[0x4];                                     // 0x05FC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FSkelMeshComponentLODInfo>           LODInfo;                                                   // 0x0600(0x0010) (ZeroConstructor, Transient)
 	float                                              StreamingDistanceMultiplier;                               // 0x0610(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	struct FColor                                      WireframeColor;                                            // 0x0614(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
@@ -6438,26 +6438,26 @@ public:
 	unsigned char                                      bDisplayBoneCollisions : 1;                                // 0x0618(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bDisableMorphTarget : 1;                                   // 0x0618(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bHideSkin : 1;                                             // 0x0618(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_5G2K[0x17];                                    // 0x0619(0x0017) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_P528[0x17];                                    // 0x0619(0x0017) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bPerBoneMotionBlur : 1;                                    // 0x0630(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bComponentUseFixedSkelBounds : 1;                          // 0x0630(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bConsiderAllBodiesForBounds : 1;                           // 0x0630(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_OSZ7[0x3];                                     // 0x0631(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_51K0[0x3];                                     // 0x0631(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EMeshComponentUpdateFlag>       MeshComponentUpdateFlag;                                   // 0x0634(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EWVR[0x3];                                     // 0x0635(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_KTMA[0x3];                                     // 0x0635(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bForceMeshObjectUpdate : 1;                                // 0x0638(0x0001) BIT_FIELD (Transient, NoDestructor)
 	unsigned char                                      bChartDistanceFactor : 1;                                  // 0x0638(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bCanHighlightSelectedSections : 1;                         // 0x0638(0x0001) BIT_FIELD (Transient, NoDestructor)
 	unsigned char                                      bRecentlyRendered : 1;                                     // 0x0638(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_G1EP[0x3];                                     // 0x0639(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HMKJ[0x3];                                     // 0x0639(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              ProgressiveDrawingFraction;                                // 0x063C(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      CustomSortAlternateIndexMode;                              // 0x0640(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZBO2[0x13];                                    // 0x0641(0x0013) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7XMX[0x13];                                    // 0x0641(0x0013) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FBoxSphereBounds                            CachedLocalBounds;                                         // 0x0654(0x001C) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected)
 	bool                                               bCachedLocalBoundsUpToDate;                                // 0x0670(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected)
 	bool                                               bEnableUpdateRateOptimizations;                            // 0x0671(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	bool                                               bDisplayDebugUpdateRateOptimizations;                      // 0x0672(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_U9XA[0x1D];                                    // 0x0673(0x001D) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8KOP[0x1D];                                    // 0x0673(0x001D) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -6495,10 +6495,10 @@ public:
 	struct FConstrainComponentPropName                 ComponentName1;                                            // 0x02B8(0x0008) (Edit)
 	class AActor*                                      ConstraintActor2;                                          // 0x02C0(0x0008) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FConstrainComponentPropName                 ComponentName2;                                            // 0x02C8(0x0008) (Edit)
-	unsigned char                                      UnknownData_DGGK[0x10];                                    // 0x02D0(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_427M[0x10];                                    // 0x02D0(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UPhysicsConstraintTemplate*                  ConstraintSetup;                                           // 0x02E0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, Deprecated, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	struct FScriptMulticastDelegate                    OnConstraintBroken;                                        // 0x02E8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_N5CO[0x8];                                     // 0x02F8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HZ8B[0x8];                                     // 0x02F8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FConstraintInstance                         ConstraintInstance;                                        // 0x0300(0x0160) (Edit, ContainsInstancedReference)
 
 
@@ -6544,13 +6544,13 @@ class USkeleton : public UObject
 {
 public:
 	TArray<struct FBoneNode>                           BoneTree;                                                  // 0x0028(0x0010) (Edit, ZeroConstructor, EditConst)
-	unsigned char                                      UnknownData_VPJV[0x80];                                    // 0x0038(0x0080) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_37H7[0x80];                                    // 0x0038(0x0080) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FSkeletonToMeshLinkup>               LinkupCache;                                               // 0x00B8(0x0010) (ZeroConstructor, Transient)
 	TArray<class USkeletalMeshSocket*>                 Sockets;                                                   // 0x00C8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_JLI0[0x50];                                    // 0x00D8(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_OLOQ[0x50];                                    // 0x00D8(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FSmartNameContainer                         SmartNames;                                                // 0x0128(0x0050)
 	TArray<struct FAnimSlotGroup>                      SlotGroups;                                                // 0x0178(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_SSYY[0x110];                                   // 0x0188(0x0110) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_B40H[0x110];                                   // 0x0188(0x0110) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -6586,21 +6586,21 @@ public:
 class USkeletalMeshComponent : public USkinnedMeshComponent
 {
 public:
-	unsigned char                                      UnknownData_IDJY[0x8];                                     // 0x0690(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_M5ME[0x8];                                     // 0x0690(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EAnimationMode>                 AnimationMode;                                             // 0x0698(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_WAF2[0x7];                                     // 0x0699(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_RMED[0x7];                                     // 0x0699(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UClass*                                      AnimBlueprintGeneratedClass;                               // 0x06A0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAnimInstance*                               AnimScriptInstance;                                        // 0x06A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSingleAnimationPlayData                    AnimationData;                                             // 0x06B0(0x0020) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData_UA5Z[0x10];                                    // 0x06D0(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_38SU[0x10];                                    // 0x06D0(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FTransform>                          CachedLocalAtoms;                                          // 0x06E0(0x0010) (ZeroConstructor, Transient)
 	TArray<struct FTransform>                          CachedSpaceBases;                                          // 0x06F0(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData_MNSJ[0x28];                                    // 0x0700(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_VKGK[0x28];                                    // 0x0700(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              GlobalAnimRateScale;                                       // 0x0728(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	unsigned char                                      bHasValidBodies : 1;                                       // 0x072C(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_40W9[0x3];                                     // 0x072D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_EM4W[0x3];                                     // 0x072D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EKinematicBonesUpdateToPhysics> KinematicBonesUpdateType;                                  // 0x0730(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TQEK[0x3];                                     // 0x0731(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_I6WE[0x3];                                     // 0x0731(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bBlendPhysics : 1;                                         // 0x0734(0x0001) BIT_FIELD (Transient, NoDestructor)
 	unsigned char                                      bEnablePhysicsOnDedicatedServer : 1;                       // 0x0734(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bUpdateJointsFromAnimation : 1;                            // 0x0734(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
@@ -6610,16 +6610,16 @@ public:
 	unsigned char                                      bLocalSpaceSimulation : 1;                                 // 0x0734(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bClothMorphTarget : 1;                                     // 0x0734(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bResetAfterTeleport : 1;                                   // 0x0735(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_JAMB[0x2];                                     // 0x0736(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TGAF[0x2];                                     // 0x0736(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              TeleportDistanceThreshold;                                 // 0x0738(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TeleportRotationThreshold;                                 // 0x073C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ClothBlendWeight;                                          // 0x0740(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_K73P[0x4];                                     // 0x0744(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_RNYD[0x4];                                     // 0x0744(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     RootBoneTranslation;                                       // 0x0748(0x000C) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
 	unsigned char                                      bNoSkeletonUpdate : 1;                                     // 0x0754(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bPauseAnims : 1;                                           // 0x0754(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bEnablePerPolyCollision : 1;                               // 0x0754(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_I9CN[0x3];                                     // 0x0755(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6NZ7[0x3];                                     // 0x0755(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UBodySetup*                                  BodySetup;                                                 // 0x0758(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bAutonomousTickPose : 1;                                   // 0x0760(0x0001) BIT_FIELD (Transient, NoDestructor)
 	unsigned char                                      bForceRefpose : 1;                                         // 0x0760(0x0001) BIT_FIELD (NoDestructor)
@@ -6628,15 +6628,15 @@ public:
 	unsigned char                                      bRequiredBonesUpToDate : 1;                                // 0x0760(0x0001) BIT_FIELD (Transient, NoDestructor)
 	unsigned char                                      bAnimTreeInitialised : 1;                                  // 0x0760(0x0001) BIT_FIELD (Transient, NoDestructor)
 	unsigned char                                      bEnableLineCheckWithBounds : 1;                            // 0x0760(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_EE0M[0x3];                                     // 0x0761(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_VDQB[0x3];                                     // 0x0761(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     LineCheckBoundsScale;                                      // 0x0764(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	int                                                RagdollAggregateThreshold;                                 // 0x0770(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_J8IP[0x4];                                     // 0x0774(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HLWD[0x4];                                     // 0x0774(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScriptMulticastDelegate                    OnConstraintBroken;                                        // 0x0778(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	bool                                               UseRefPoseToInitialise;                                    // 0x0788(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_DL6A[0x1BF];                                   // 0x0789(0x01BF) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LFWF[0x1BF];                                   // 0x0789(0x01BF) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              LastPoseTickTime;                                          // 0x0948(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_O6SS[0x4];                                     // 0x094C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_RAPM[0x4];                                     // 0x094C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -6705,16 +6705,16 @@ public:
 class ASkeletalMeshActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData_QJFG[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_JGMQ[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bShouldDoAnimNotifies : 1;                                 // 0x0430(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bWakeOnLevelStart : 1;                                     // 0x0430(0x0001) BIT_FIELD (Deprecated, NoDestructor)
-	unsigned char                                      UnknownData_65T7[0x7];                                     // 0x0431(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_IIUL[0x7];                                     // 0x0431(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class USkeletalMeshComponent*                      SkeletalMeshComponent;                                     // 0x0438(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMesh*                               ReplicatedMesh;                                            // 0x0440(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	class UPhysicsAsset*                               ReplicatedPhysAsset;                                       // 0x0448(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInterface*                          ReplicatedMaterial0;                                       // 0x0450(0x0008) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInterface*                          ReplicatedMaterial1;                                       // 0x0458(0x0008) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DKXX[0x8];                                     // 0x0460(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_M8WQ[0x8];                                     // 0x0460(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -6930,7 +6930,7 @@ public:
 class UComponentWithTestInterface : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_LEF0[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_KPYH[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -6948,7 +6948,7 @@ public:
 class UAnotherComponentWithTestInterface : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_9K0U[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_UIZB[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7008,7 +7008,7 @@ public:
 class UComponentAggregatorComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_HYG7[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_62P7[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UObject*>                             Aggregatables;                                             // 0x00D0(0x0010) (Edit, ZeroConstructor, EditConst, Protected)
 
 
@@ -7031,11 +7031,11 @@ class UInterpToMovementComponent : public UMovementComponent
 public:
 	float                                              Duration;                                                  // 0x0110(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bPauseOnImpact : 1;                                        // 0x0114(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_TV8H[0x3];                                     // 0x0115(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_T5YQ[0x3];                                     // 0x0115(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EInterpToBehaviourType>         BehaviourType;                                             // 0x0118(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YV31[0x3];                                     // 0x0119(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8L3Z[0x3];                                     // 0x0119(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bForceSubStepping : 1;                                     // 0x011C(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_YJJ6[0x3];                                     // 0x011D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BJZN[0x3];                                     // 0x011D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScriptMulticastDelegate                    OnInterpToReverse;                                         // 0x0120(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnInterpToStop;                                            // 0x0130(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnWaitBeginDelegate;                                       // 0x0140(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
@@ -7044,7 +7044,7 @@ public:
 	float                                              MaxSimulationTimeStep;                                     // 0x0170(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                MaxSimulationIterations;                                   // 0x0174(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FInterpControlPoint>                 ControlPoints;                                             // 0x0178(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData_RSSP[0x20];                                    // 0x0188(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ZG25[0x20];                                    // 0x0188(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7074,25 +7074,25 @@ public:
 	unsigned char                                      bAllowClientSideNavigation : 1;                            // 0x0038(0x0001) BIT_FIELD (Edit, Config, NoDestructor, Protected)
 	unsigned char                                      bSupportRebuilding : 1;                                    // 0x0038(0x0001) BIT_FIELD (NoDestructor, Protected)
 	unsigned char                                      bInitialBuildingLocked : 1;                                // 0x0038(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
-	unsigned char                                      UnknownData_Y5FF : 1;                                      // 0x0038(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_LOQQ : 1;                                      // 0x0038(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bSkipAgentHeightCheckWhenPickingNavData : 1;               // 0x0038(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
-	unsigned char                                      UnknownData_B1JW[0x3];                                     // 0x0039(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_0PGZ[0x3];                                     // 0x0039(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_ENavDataGatheringModeConfig>    DataGatheringMode;                                         // 0x003C(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_QTCU[0x3];                                     // 0x003D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_PG2R[0x3];                                     // 0x003D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bGenerateNavigationOnlyAroundNavigationInvokers : 1;       // 0x0040(0x0001) BIT_FIELD (Edit, Config, DisableEditOnInstance, NoDestructor, Protected)
-	unsigned char                                      UnknownData_XMWV[0x3];                                     // 0x0041(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_KFR8[0x3];                                     // 0x0041(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              ActiveTilesUpdateInterval;                                 // 0x0044(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	TArray<struct FNavDataConfig>                      SupportedAgents;                                           // 0x0048(0x0010) (Edit, ZeroConstructor, Config, Protected)
 	float                                              DirtyAreasUpdateFreq;                                      // 0x0058(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_12PI[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_W8GL[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class ANavigationData*>                     NavDataSet;                                                // 0x0060(0x0010) (ZeroConstructor)
 	TArray<class ANavigationData*>                     NavDataRegistrationQueue;                                  // 0x0070(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData_7JU9[0x60];                                    // 0x0080(0x0060) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TLS1[0x60];                                    // 0x0080(0x0060) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScriptMulticastDelegate                    OnNavDataRegisteredEvent;                                  // 0x00E0(0x0010) (ZeroConstructor, Transient, InstancedReference)
 	struct FScriptMulticastDelegate                    OnNavigationGenerationFinishedDelegate;                    // 0x00F0(0x0010) (ZeroConstructor, Transient, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_9RKC[0xFC];                                    // 0x0100(0x00FC) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_DGHD[0xFC];                                    // 0x0100(0x00FC) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EFNavigationSystemRunMode>      OperationMode;                                             // 0x01FC(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_MLFM[0x1F3];                                   // 0x01FD(0x01F3) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_066E[0x1F3];                                   // 0x01FD(0x01F3) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FStringAssetReference                       InstancedNavMeshesDataAsset;                               // 0x03F0(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance, Protected)
 	class UInstancedNavMeshesDataAsset*                InstancedNavMeshesData;                                    // 0x0400(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 
@@ -7193,17 +7193,17 @@ public:
 	float                                              BlendInTime;                                               // 0x0078(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              BlendOutTime;                                              // 0x007C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              BlendOutTriggerTime;                                       // 0x0080(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_SJDL[0x4];                                     // 0x0084(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MI8U[0x4];                                     // 0x0084(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FCompositeSection>                   CompositeSections;                                         // 0x0088(0x0010) (ZeroConstructor, ContainsInstancedReference)
 	TArray<struct FSlotAnimationTrack>                 SlotAnimTracks;                                            // 0x0098(0x0010) (ZeroConstructor)
 	TArray<struct FBranchingPoint>                     BranchingPoints;                                           // 0x00A8(0x0010) (ZeroConstructor, Deprecated)
 	bool                                               bEnableRootMotionTranslation;                              // 0x00B8(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               bEnableRootMotionRotation;                                 // 0x00B9(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Engine_ERootMotionRootLock>            RootMotionRootLock;                                        // 0x00BA(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_WXEZ[0x5];                                     // 0x00BB(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Y4JS[0x5];                                     // 0x00BB(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FBranchingPointMarker>               BranchingPointMarkers;                                     // 0x00C0(0x0010) (ZeroConstructor)
 	bool                                               bAnimBranchingPointNeedsSort;                              // 0x00D0(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_DKRO[0x7];                                     // 0x00D1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HIY9[0x7];                                     // 0x00D1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<int>                                        BranchingPointStateNotifyIndices;                          // 0x00D8(0x0010) (ZeroConstructor)
 
 
@@ -7261,7 +7261,7 @@ public:
 	float                                              Deceleration;                                              // 0x0168(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TurningBoost;                                              // 0x016C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bPositionCorrected : 1;                                    // 0x0170(0x0001) BIT_FIELD (Transient, NoDestructor, Protected)
-	unsigned char                                      UnknownData_LFGU[0x7];                                     // 0x0171(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_6YNT[0x7];                                     // 0x0171(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7280,7 +7280,7 @@ class USpectatorPawnMovement : public UFloatingPawnMovement
 {
 public:
 	unsigned char                                      bIgnoreTimeDilation : 1;                                   // 0x0178(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_QHKF[0x7];                                     // 0x0179(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HD8T[0x7];                                     // 0x0179(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7307,7 +7307,7 @@ public:
 	unsigned char                                      bIsHomingProjectile : 1;                                   // 0x0118(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bBounceAngleAffectsFriction : 1;                           // 0x0118(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bIsSliding : 1;                                            // 0x0118(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, EditConst, NoDestructor)
-	unsigned char                                      UnknownData_O0TP[0x3];                                     // 0x0119(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9UIU[0x3];                                     // 0x0119(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              PreviousHitTime;                                           // 0x011C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     PreviousHitNormal;                                         // 0x0120(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor)
 	float                                              ProjectileGravityScale;                                    // 0x012C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -7321,7 +7321,7 @@ public:
 	TWeakObjectPtr<class USceneComponent>              HomingTargetComponent;                                     // 0x0164(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, DisableEditOnTemplate, EditConst, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper)
 	float                                              MaxSimulationTimeStep;                                     // 0x016C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                MaxSimulationIterations;                                   // 0x0170(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_018O[0x4];                                     // 0x0174(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_OGP5[0x4];                                     // 0x0174(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7347,7 +7347,7 @@ public:
 	struct FRotator                                    RotationRate;                                              // 0x0110(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                     PivotTranslation;                                          // 0x011C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	unsigned char                                      bRotationInLocalSpace : 1;                                 // 0x0128(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_WW6V[0x7];                                     // 0x0129(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_IXO6[0x7];                                     // 0x0129(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7384,10 +7384,10 @@ public:
 class UNavRelevantComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_TPQ0[0x24];                                    // 0x00C8(0x0024) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WO7B[0x24];                                    // 0x00C8(0x0024) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bNavigationRelevant : 1;                                   // 0x00EC(0x0001) BIT_FIELD (NoDestructor, Protected)
 	unsigned char                                      bAttachToOwnersRoot : 1;                                   // 0x00EC(0x0001) BIT_FIELD (NoDestructor, Protected)
-	unsigned char                                      UnknownData_N8PY[0x3];                                     // 0x00ED(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1GXH[0x3];                                     // 0x00ED(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UObject*                                     CachedNavParent;                                           // 0x00F0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 
 
@@ -7424,27 +7424,27 @@ public:
 class UNavLinkCustomComponent : public UNavRelevantComponent
 {
 public:
-	unsigned char                                      UnknownData_HUME[0x8];                                     // 0x00F8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9PO9[0x8];                                     // 0x00F8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	uint32_t                                           NavLinkUserId;                                             // 0x0100(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_BV02[0x4];                                     // 0x0104(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_AODY[0x4];                                     // 0x0104(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UClass*                                      EnabledAreaClass;                                          // 0x0108(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash)
 	class UClass*                                      DisabledAreaClass;                                         // 0x0110(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash)
 	struct FVector                                     LinkRelativeStart;                                         // 0x0118(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	struct FVector                                     LinkRelativeEnd;                                           // 0x0124(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	TEnumAsByte<Engine_ENavLinkDirection>              LinkDirection;                                             // 0x0130(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_0YV4[0x3];                                     // 0x0131(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BEU0[0x3];                                     // 0x0131(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bLinkEnabled : 1;                                          // 0x0134(0x0001) BIT_FIELD (Edit, NoDestructor, Protected)
 	unsigned char                                      bNotifyWhenEnabled : 1;                                    // 0x0134(0x0001) BIT_FIELD (Edit, NoDestructor, Protected)
 	unsigned char                                      bNotifyWhenDisabled : 1;                                   // 0x0134(0x0001) BIT_FIELD (Edit, NoDestructor, Protected)
 	unsigned char                                      bCreateBoxObstacle : 1;                                    // 0x0134(0x0001) BIT_FIELD (Edit, NoDestructor, Protected)
-	unsigned char                                      UnknownData_ZZCQ[0x3];                                     // 0x0135(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1ATW[0x3];                                     // 0x0135(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     ObstacleOffset;                                            // 0x0138(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	struct FVector                                     ObstacleExtent;                                            // 0x0144(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	class UClass*                                      ObstacleAreaClass;                                         // 0x0150(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash)
 	float                                              BroadcastRadius;                                           // 0x0158(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	float                                              BroadcastInterval;                                         // 0x015C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ECollisionChannel>              BroadcastChannel;                                          // 0x0160(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_N655[0x2F];                                    // 0x0161(0x002F) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AEUZ[0x2F];                                    // 0x0161(0x002F) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7464,7 +7464,7 @@ class UNavModifierComponent : public UNavRelevantComponent
 public:
 	class UClass*                                      AreaClass;                                                 // 0x00F8(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	struct FVector                                     FailsafeExtent;                                            // 0x0100(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_ZPGR[0xC];                                     // 0x010C(0x000C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_IRLT[0xC];                                     // 0x010C(0x000C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7483,14 +7483,14 @@ class UPawnNoiseEmitterComponent : public UActorComponent
 {
 public:
 	unsigned char                                      bAIPerceptionSystemCompatibilityMode : 1;                  // 0x00C8(0x0001) BIT_FIELD (Edit, DisableEditOnInstance, NoDestructor, AdvancedDisplay, Protected)
-	unsigned char                                      UnknownData_1W88[0x3];                                     // 0x00C9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YC65[0x3];                                     // 0x00C9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     LastRemoteNoisePosition;                                   // 0x00CC(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              NoiseLifetime;                                             // 0x00D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              LastRemoteNoiseVolume;                                     // 0x00DC(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              LastRemoteNoiseTime;                                       // 0x00E0(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              LastLocalNoiseVolume;                                      // 0x00E4(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              LastLocalNoiseTime;                                        // 0x00E8(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_Q2YS[0x4];                                     // 0x00EC(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_0ED3[0x4];                                     // 0x00EC(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7510,14 +7510,14 @@ class UPhysicsHandleComponent : public UActorComponent
 {
 public:
 	class UPrimitiveComponent*                         GrabbedComponent;                                          // 0x00C8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_J2U7[0x10];                                    // 0x00D0(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_K5JT[0x10];                                    // 0x00D0(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              LinearDamping;                                             // 0x00E0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              LinearStiffness;                                           // 0x00E4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              AngularDamping;                                            // 0x00E8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              AngularStiffness;                                          // 0x00EC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YXAZ[0x60];                                    // 0x00F0(0x0060) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_FITA[0x60];                                    // 0x00F0(0x0060) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              InterpolationSpeed;                                        // 0x0150(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_NV9R[0x1C];                                    // 0x0154(0x001C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_C04E[0x1C];                                    // 0x0154(0x001C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7583,11 +7583,11 @@ public:
 	struct FColor                                      DefaultLightColor;                                         // 0x02DC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
 	unsigned char                                      bDisableSunDisk : 1;                                       // 0x02E0(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, Interp, NoDestructor)
 	unsigned char                                      bDisableGroundScattering : 1;                              // 0x02E0(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, Interp, NoDestructor)
-	unsigned char                                      UnknownData_9CWI[0x3];                                     // 0x02E1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_E5K8[0x3];                                     // 0x02E1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FAtmospherePrecomputeParameters             PrecomputeParams;                                          // 0x02E4(0x002C) (Edit, BlueprintVisible, BlueprintReadOnly, Protected)
 	class UTexture2D*                                  TransmittanceTexture;                                      // 0x0310(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                                  IrradianceTexture;                                         // 0x0318(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_RAHV[0x170];                                   // 0x0320(0x0170) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_SH86[0x170];                                   // 0x0320(0x0170) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7646,7 +7646,7 @@ public:
 	unsigned char                                      bAllowSpatialization : 1;                                  // 0x02D0(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bOverrideAttenuation : 1;                                  // 0x02D0(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bIsUISound : 1;                                            // 0x02D0(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_L7GB[0x3];                                     // 0x02D1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_A1P6[0x3];                                     // 0x02D1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              PitchModulationMin;                                        // 0x02D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              PitchModulationMax;                                        // 0x02D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              VolumeModulationMin;                                       // 0x02DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -7656,11 +7656,11 @@ public:
 	float                                              HighFrequencyGainMultiplier;                               // 0x02EC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USoundAttenuation*                           AttenuationSettings;                                       // 0x02F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FAttenuationSettings                        AttenuationOverrides;                                      // 0x02F8(0x00C0) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData_OREG[0x8];                                     // 0x03B8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_0AR1[0x8];                                     // 0x03B8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScriptMulticastDelegate                    OnAudioFinished;                                           // 0x03C0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_WQWY[0x48];                                    // 0x03D0(0x0048) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_UUXR[0x48];                                    // 0x03D0(0x0048) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScriptDelegate                             OnQueueSubtitles;                                          // 0x0418(0x0010) (ZeroConstructor, InstancedReference, NoDestructor)
-	unsigned char                                      UnknownData_P3GS[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_XGQA[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7694,7 +7694,7 @@ public:
 class UBasisComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData_OFK6[0x10];                                    // 0x02B0(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8JAQ[0x10];                                    // 0x02B0(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7715,7 +7715,7 @@ public:
 	float                                              Radius;                                                    // 0x02B0(0x0004) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              RadiusPercentageToStartLerp;                               // 0x02B4(0x0004) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              DampeningFactor;                                           // 0x02B8(0x0004) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_S0M5[0x4];                                     // 0x02BC(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DQHM[0x4];                                     // 0x02BC(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7735,7 +7735,7 @@ class UChildActorComponent : public USceneComponent
 public:
 	class UClass*                                      ChildActorClass;                                           // 0x02B0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	class AActor*                                      ChildActor;                                                // 0x02B8(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, TextExportTransient, NonPIEDuplicateTransient, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_M2GF[0x10];                                    // 0x02C0(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_61OK[0x10];                                    // 0x02C0(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7755,7 +7755,7 @@ class UEditorOnlyChildActorComponent : public UChildActorComponent
 {
 public:
 	class UClass*                                      CachedChildActorClass;                                     // 0x02D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_WJ0L[0x8];                                     // 0x02D8(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8VR5[0x8];                                     // 0x02D8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7777,7 +7777,7 @@ public:
 	int                                                SortOrder;                                                 // 0x02B8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              FadeScreenSize;                                            // 0x02BC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*                    MaterialInstanceDynamic;                                   // 0x02C0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_23I6[0x18];                                    // 0x02C8(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_27DL[0x18];                                    // 0x02C8(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7816,7 +7816,7 @@ public:
 	float                                              StartScale;                                                // 0x0304(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	float                                              FarScale;                                                  // 0x0308(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	bool                                               bIsUnderwater;                                             // 0x030C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
-	unsigned char                                      UnknownData_QKDW[0x3];                                     // 0x030D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_OJ9I[0x3];                                     // 0x030D(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7865,11 +7865,11 @@ public:
 	float                                              ShadowDistance;                                            // 0x0310(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ActiveBelowDepth;                                          // 0x0314(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bUseSceneInscattering : 1;                                 // 0x0318(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_K0A8[0x3];                                     // 0x0319(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1Z0C[0x3];                                     // 0x0319(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	bool                                               bUnderwater;                                               // 0x031C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               bAdvancedVolumeFog;                                        // 0x031D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               UseDensityMapOnTranslucency;                               // 0x031E(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_D2YH[0x1];                                     // 0x031F(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_F20N[0x1];                                     // 0x031F(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UTexture*                                    DensityMap;                                                // 0x0320(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     DensityMapScale;                                           // 0x0328(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                     DensityMapOffset;                                          // 0x0334(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -7880,7 +7880,7 @@ public:
 	float                                              SelfShadowBrightness;                                      // 0x0360(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              SelfShadowFogScale;                                        // 0x0364(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bMeshFog;                                                  // 0x0368(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_NE0X[0x3];                                     // 0x0369(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GX4O[0x3];                                     // 0x0369(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MeshFogDensity;                                            // 0x036C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MeshFogShadowDensity;                                      // 0x0370(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MeshFogScatteringDensity;                                  // 0x0374(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -7889,7 +7889,7 @@ public:
 	float                                              MeshFogNoiseBlend;                                         // 0x0390(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     MeshFogVelocity;                                           // 0x0394(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	class UTexture*                                    MeshFogVolumeTexture;                                      // 0x03A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_USO4[0x8];                                     // 0x03A8(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HBP7[0x8];                                     // 0x03A8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7925,10 +7925,10 @@ public:
 class UInstancedNavMeshComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData_F893[0x8];                                     // 0x02B0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_R6YV[0x8];                                     // 0x02B0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       NavMeshName;                                               // 0x02B8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	bool                                               UseAttachedParentAsPrimitiveBase;                          // 0x02C0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_WN3J[0xF];                                     // 0x02C1(0x000F) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_JYKD[0xF];                                     // 0x02C1(0x000F) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7949,10 +7949,10 @@ public:
 	float                                              AmbientIntensity;                                          // 0x043C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                                Tint;                                                      // 0x0440(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
 	unsigned char                                      QuadraticFalloff : 1;                                      // 0x0450(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, Interp, NoDestructor)
-	unsigned char                                      UnknownData_D82R[0x3];                                     // 0x0451(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_T1EH[0x3];                                     // 0x0451(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EAmbientLightConeShape>         Shape;                                                     // 0x0454(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EAmbientLightClusteringPolicy>  GroupingPolicy;                                            // 0x0455(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_SC1J[0xA];                                     // 0x0456(0x000A) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ZJWP[0xA];                                     // 0x0456(0x000A) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -7988,7 +7988,7 @@ public:
 	float                                              CloseCascadeUpdateRateInMs;                                // 0x0470(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              FarCascadesUpdateRateInMs;                                 // 0x0474(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	unsigned char                                      bUseInsetShadowsForMovableObjects : 1;                     // 0x0478(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_UL07[0x3];                                     // 0x0479(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9FMB[0x3];                                     // 0x0479(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                FarShadowCascadeCount;                                     // 0x047C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              FarShadowDistance;                                         // 0x0480(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              NormalOffsetScale;                                         // 0x0484(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
@@ -7998,10 +7998,10 @@ public:
 	float                                              TraceDistance;                                             // 0x0494(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	struct FLightmassDirectionalLightSettings          LightmassSettings;                                         // 0x0498(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
 	unsigned char                                      bCastModulatedShadows : 1;                                 // 0x04A8(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_J3RU[0x3];                                     // 0x04A9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_UIDJ[0x3];                                     // 0x04A9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FColor                                      ModulatedShadowColor;                                      // 0x04AC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bUsedAsAtmosphereSunLight : 1;                             // 0x04B0(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_EGUK[0xF];                                     // 0x04B1(0x000F) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_FN3D[0xF];                                     // 0x04B1(0x000F) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8035,14 +8035,14 @@ class UPointLightComponent : public ULightComponent
 public:
 	float                                              AttenuationRadius;                                         // 0x043C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bUseInverseSquaredFalloff : 1;                             // 0x0440(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_ZKCX[0x3];                                     // 0x0441(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XPEO[0x3];                                     // 0x0441(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              LightFalloffExponent;                                      // 0x0444(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              IntensityScaleForWater;                                    // 0x0448(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              MinDistanceToLightAssumed;                                 // 0x044C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              SourceRadius;                                              // 0x0450(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              SourceLength;                                              // 0x0454(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ESimpleLightFunctionType>       SimpleFunctionType;                                        // 0x0458(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9CWG[0x3];                                     // 0x0459(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_PDWQ[0x3];                                     // 0x0459(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              ScaleOffset;                                               // 0x045C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              PulsePhase;                                                // 0x0460(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              FlickerFrequency;                                          // 0x0464(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -8069,11 +8069,11 @@ public:
 class USpotLightComponent : public UPointLightComponent
 {
 public:
-	unsigned char                                      UnknownData_IHQP[0x4];                                     // 0x0478(0x0004) Fix Super Size
+	unsigned char                                      UnknownData_HA6A[0x4];                                     // 0x0478(0x0004) Fix Super Size
 	float                                              OuterConeAngle;                                            // 0x047C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              LightShaftConeAngle;                                       // 0x0480(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              KickBackRatio;                                             // 0x0484(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_KYMI[0x8];                                     // 0x0488(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DPMQ[0x8];                                     // 0x0488(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8095,19 +8095,19 @@ class USkyLightComponent : public ULightComponentBase
 {
 public:
 	TEnumAsByte<Engine_ESkyLightSourceType>            SourceType;                                                // 0x02E0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YZ0S[0x7];                                     // 0x02E1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_L330[0x7];                                     // 0x02E1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UTextureCube*                                Cubemap;                                                   // 0x02E8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              SkyDistanceThreshold;                                      // 0x02F0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bLowerHemisphereIsBlack;                                   // 0x02F4(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_VWMW[0x3];                                     // 0x02F5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_FD4U[0x3];                                     // 0x02F5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              OcclusionMaxDistance;                                      // 0x02F8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              Contrast;                                                  // 0x02FC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MinOcclusion;                                              // 0x0300(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FColor                                      OcclusionTint;                                             // 0x0304(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              ScaleForInteriors;                                         // 0x0308(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_B8BA[0xAC];                                    // 0x030C(0x00AC) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_4BS6[0xAC];                                    // 0x030C(0x00AC) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UTextureCube*                                BlendDestinationCubemap;                                   // 0x03B8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_84MG[0xC0];                                    // 0x03C0(0x00C0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ORV8[0xC0];                                    // 0x03C0(0x00C0) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8136,7 +8136,7 @@ public:
 	struct FNavGraphNode                               Node;                                                      // 0x02B0(0x0018)
 	class UNavigationGraphNodeComponent*               NextNodeComponent;                                         // 0x02C8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UNavigationGraphNodeComponent*               PrevNodeComponent;                                         // 0x02D0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DVZ9[0x8];                                     // 0x02D8(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_VTTN[0x8];                                     // 0x02D8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8160,9 +8160,9 @@ public:
 	float                                              SpringRadius;                                              // 0x02BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ECollisionChannel>              SpringChannel;                                             // 0x02C0(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bIgnoreSelf;                                               // 0x02C1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_1PTU[0x2];                                     // 0x02C2(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_U0BX[0x2];                                     // 0x02C2(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              SpringCompression;                                         // 0x02C4(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CLDO[0x18];                                    // 0x02C8(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2LYZ[0x18];                                    // 0x02C8(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8185,7 +8185,7 @@ class UPhysicsThrusterComponent : public USceneComponent
 {
 public:
 	float                                              ThrustStrength;                                            // 0x02B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_M8LO[0xC];                                     // 0x02B4(0x000C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8N8G[0xC];                                     // 0x02B4(0x000C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8206,10 +8206,10 @@ public:
 	struct FColor                                      ArrowColor;                                                // 0x0550(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              ArrowSize;                                                 // 0x0554(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bIsScreenSizeScaled;                                       // 0x0558(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_019J[0x3];                                     // 0x0559(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_4I47[0x3];                                     // 0x0559(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              ScreenSize;                                                // 0x055C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bTreatAsASprite : 1;                                       // 0x0560(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_FWWM[0xF];                                     // 0x0561(0x000F) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LGPJ[0xF];                                     // 0x0561(0x000F) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8248,7 +8248,7 @@ class UBaseWaterComponent : public UPrimitiveComponent
 public:
 	class UClass*                                      WaterId;                                                   // 0x0550(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	bool                                               ActiveInExclusionZone;                                     // 0x0558(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_QTES[0x7];                                     // 0x0559(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5PVB[0x7];                                     // 0x0559(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8270,10 +8270,10 @@ public:
 	class UModel*                                      Brush;                                                     // 0x0870(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UBodySetup*                                  BrushBodySetup;                                            // 0x0878(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     PrePivot;                                                  // 0x0880(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_ICIS[0x84];                                    // 0x088C(0x0084) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_G0UO[0x84];                                    // 0x088C(0x0084) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UMaterialInterface*                          LightFunctionMaterial;                                     // 0x0910(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	class UMaterial*                                   DefaultLightFunctionMaterial;                              // 0x0918(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_K2E6[0x20];                                    // 0x0920(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_F6N8[0x20];                                    // 0x0920(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8307,7 +8307,7 @@ class UFFTWaterExtendedPlaneComponent : public UBaseWaterComponent
 public:
 	struct FFFTWaterComponentParams                    WaterParams;                                               // 0x0560(0x0310)
 	class UMaterial*                                   Material;                                                  // 0x0870(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HW4P[0x8];                                     // 0x0878(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PEAE[0x8];                                     // 0x0878(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8328,7 +8328,7 @@ class UBillboardComponent : public UPrimitiveComponent
 public:
 	class UTexture2D*                                  Sprite;                                                    // 0x0550(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bIsScreenSizeScaled : 1;                                   // 0x0558(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_18FM[0x3];                                     // 0x0559(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_2LIO[0x3];                                     // 0x0559(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              ScreenSize;                                                // 0x055C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              U;                                                         // 0x0560(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              UL;                                                        // 0x0564(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -8357,7 +8357,7 @@ public:
 	class UModel*                                      Brush;                                                     // 0x0550(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UBodySetup*                                  BrushBodySetup;                                            // 0x0558(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     PrePivot;                                                  // 0x0560(0x000C) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_HVFV[0x4];                                     // 0x056C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DJRF[0x4];                                     // 0x056C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8380,7 +8380,7 @@ public:
 	float                                              FrustumAspectRatio;                                        // 0x0558(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              FrustumStartDist;                                          // 0x055C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              FrustumEndDist;                                            // 0x0560(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZZOK[0x4];                                     // 0x0564(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_EARB[0x4];                                     // 0x0564(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UTexture*                                    Texture;                                                   // 0x0568(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -8399,7 +8399,7 @@ public:
 class ULineBatchComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      UnknownData_Z2D8[0x40];                                    // 0x0550(0x0040) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_0KUC[0x40];                                    // 0x0550(0x0040) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8441,7 +8441,7 @@ public:
 	TArray<struct FCustomProfile>                      EditProfiles;                                              // 0x0058(0x0010) (ZeroConstructor, Config, GlobalConfig)
 	TArray<struct FRedirector>                         ProfileRedirects;                                          // 0x0068(0x0010) (ZeroConstructor, Config, GlobalConfig)
 	TArray<struct FRedirector>                         CollisionChannelRedirects;                                 // 0x0078(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	unsigned char                                      UnknownData_JH22[0xD0];                                    // 0x0088(0x00D0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_99VI[0xD0];                                    // 0x0088(0x00D0) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8459,9 +8459,9 @@ public:
 class UStaticMesh : public UObject
 {
 public:
-	unsigned char                                      UnknownData_VWMS[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_0QW3[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                MinLOD;                                                    // 0x0040(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_IUZ8[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_X94L[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UMaterialInterface*>                  Materials;                                                 // 0x0048(0x0010) (ZeroConstructor)
 	int                                                LightMapResolution;                                        // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                LightMapCoordinateIndex;                                   // 0x005C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
@@ -8470,16 +8470,16 @@ public:
 	unsigned char                                      bUseMaximumStreamingTexelRatio : 1;                        // 0x006C(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bStripComplexCollisionForConsole : 1;                      // 0x006C(0x0001) BIT_FIELD (Deprecated, NoDestructor)
 	unsigned char                                      bHasNavigationData : 1;                                    // 0x006C(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_5HZT[0x3];                                     // 0x006D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_E5BF[0x3];                                     // 0x006D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              StreamingDistanceMultiplier;                               // 0x0070(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              LpvBiasMultiplier;                                         // 0x0074(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_AO1I[0x30];                                    // 0x0078(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_X3CW[0x30];                                    // 0x0078(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UStaticMeshSocket*>                   Sockets;                                                   // 0x00A8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_CK3S[0x18];                                    // 0x00B8(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5D8P[0x18];                                    // 0x00B8(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     PositiveBoundsExtension;                                   // 0x00D0(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	struct FVector                                     NegativeBoundsExtension;                                   // 0x00DC(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	struct FBoxSphereBounds                            ExtendedBounds;                                            // 0x00E8(0x001C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_35MS[0x4];                                     // 0x0104(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_S16D[0x4];                                     // 0x0104(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FString>                             SourceMaterials;                                           // 0x0108(0x0010) (ZeroConstructor)
 	int                                                UVsForStreaming;                                           // 0x0118(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	int                                                ElementToIgnoreForTexFactor;                               // 0x011C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
@@ -8506,7 +8506,7 @@ class UMergedCollisionComponent : public UPrimitiveComponent
 {
 public:
 	TArray<struct FMergedCollisionComponentStaticMeshInstanceData> PerInstanceData;                                           // 0x0550(0x0010) (Edit, ZeroConstructor, EditConst)
-	unsigned char                                      UnknownData_6WBW[0x10];                                    // 0x0560(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TCCQ[0x10];                                    // 0x0560(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8528,11 +8528,11 @@ class UDestructibleComponent : public USkinnedMeshComponent
 public:
 	TArray<struct FFractureEffect>                     FractureEffects;                                           // 0x0690(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, EditFixedSize, ZeroConstructor)
 	bool                                               bEnableHardSleeping;                                       // 0x06A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_2HO0[0x3];                                     // 0x06A1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6C4R[0x3];                                     // 0x06A1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              LargeChunkThreshold;                                       // 0x06A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_K4VV[0x10];                                    // 0x06A8(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_OOLK[0x10];                                    // 0x06A8(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScriptMulticastDelegate                    OnComponentFracture;                                       // 0x06B8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_TC65[0x88];                                    // 0x06C8(0x0088) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_X0OA[0x88];                                    // 0x06C8(0x0088) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8554,7 +8554,7 @@ public:
 class UPoseableMeshComponent : public USkinnedMeshComponent
 {
 public:
-	unsigned char                                      UnknownData_ZYSB[0xC0];                                    // 0x0690(0x00C0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_EJEN[0xC0];                                    // 0x0690(0x00C0) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8581,7 +8581,7 @@ public:
 class UPoseableSkeletalMeshComponent : public USkeletalMeshComponent
 {
 public:
-	unsigned char                                      UnknownData_RUXD[0x10];                                    // 0x0950(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_WWTS[0x10];                                    // 0x0950(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8603,7 +8603,7 @@ public:
 class UFlatWaterMeshComponent : public UStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData_FI1S[0x4];                                     // 0x05B8(0x0004) Fix Super Size
+	unsigned char                                      UnknownData_MZ1K[0x4];                                     // 0x05B8(0x0004) Fix Super Size
 	float                                              RandomDropSize;                                            // 0x05BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              RandomDropHeight;                                          // 0x05C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              RestorationScale;                                          // 0x05C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -8612,19 +8612,19 @@ public:
 	float                                              NormalMapScale;                                            // 0x05D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                TextureWidth;                                              // 0x05D4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                TextureHeight;                                             // 0x05D8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_480L[0x4];                                     // 0x05DC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_U0TH[0x4];                                     // 0x05DC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UStaticMesh*                                 ClippingHull;                                              // 0x05E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxSimulationDistance;                                     // 0x05E8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              InitialRandomHeight;                                       // 0x05EC(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              InitialRandomVelocity;                                     // 0x05F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_1L78[0x4];                                     // 0x05F4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YGT9[0x4];                                     // 0x05F4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UTexture*                                    Texture;                                                   // 0x05F8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UTexture*                                    NormalTexture;                                             // 0x0600(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UTextureRenderTarget2D*                      WaterMaskTexture;                                          // 0x0608(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_Q8AR[0x18];                                    // 0x0610(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TSKV[0x18];                                    // 0x0610(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UMaterialInterface*>                  OriginalMaterials;                                         // 0x0628(0x0010) (ZeroConstructor)
 	TArray<struct FFlatWaterMeshTextureOverride>       TextureOverrides;                                          // 0x0638(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_TWPZ[0x18];                                    // 0x0648(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_6OPC[0x18];                                    // 0x0648(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8661,17 +8661,17 @@ public:
 	TArray<struct FInstancedCoverageMeshLOD>           LODs;                                                      // 0x0600(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	float                                              CompleteCullingDistance;                                   // 0x0610(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               InstanceLODPreserveSilhouette;                             // 0x0614(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_CHS6[0x3];                                     // 0x0615(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_AU0I[0x3];                                     // 0x0615(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              BackFaceCullingAngle;                                      // 0x0618(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ShadowBackFaceCullingAngle;                                // 0x061C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                MaxPlacementAttempts;                                      // 0x0620(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bEvenlySpaced;                                             // 0x0624(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               bVertexColourDensity;                                      // 0x0625(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               bUpdatePlacement;                                          // 0x0626(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_8ACN[0x1];                                     // 0x0627(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_R19E[0x1];                                     // 0x0627(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<float>                                      RandomNumbers;                                             // 0x0628(0x0010) (BlueprintVisible, ZeroConstructor)
 	float                                              BaseMeshSurfaceArea;                                       // 0x0638(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_KFSP[0x4];                                     // 0x063C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_Y7LJ[0x4];                                     // 0x063C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8691,11 +8691,11 @@ public:
 class UMergedStaticMeshComponent : public UStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData_7QFP[0x8];                                     // 0x05B8(0x0008) Fix Super Size
+	unsigned char                                      UnknownData_6PVR[0x8];                                     // 0x05B8(0x0008) Fix Super Size
 	TArray<float>                                      LODScreenSizes;                                            // 0x05C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	int                                                LODForCollision;                                           // 0x05D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bMergeVertexColours;                                       // 0x05D4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_JKFU[0xB];                                     // 0x05D5(0x000B) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_WTR6[0xB];                                     // 0x05D5(0x000B) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8713,15 +8713,15 @@ public:
 class UMobileInstancedStaticMeshComponent : public UStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData_L3KA[0x8];                                     // 0x05B8(0x0008) Fix Super Size
-	unsigned char                                      UnknownData_F79C[0x8];                                     // 0x05C0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_0ZB8[0x8];                                     // 0x05B8(0x0008) Fix Super Size
+	unsigned char                                      UnknownData_TU6F[0x8];                                     // 0x05C0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FTransform>                          InstanceTransforms;                                        // 0x05C8(0x0010) (ZeroConstructor)
 	TArray<struct FMatrix>                             InstanceMatrices;                                          // 0x05D8(0x0010) (ZeroConstructor)
 	struct FBoxSphereBounds                            LocalBounds;                                               // 0x05E8(0x001C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               bBoundsBuilt;                                              // 0x0604(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_IM8X[0x3];                                     // 0x0605(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SX2I[0x3];                                     // 0x0605(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UPhysicsSerializer*                          PhysicsSerializer;                                         // 0x0608(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_Q3M1[0x20];                                    // 0x0610(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5M1E[0x20];                                    // 0x0610(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8740,21 +8740,21 @@ public:
 class USplineMeshComponent : public UStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData_7A95[0x8];                                     // 0x05B8(0x0008) Fix Super Size
+	unsigned char                                      UnknownData_DUQT[0x8];                                     // 0x05B8(0x0008) Fix Super Size
 	struct FSplineMeshParams                           SplineParams;                                              // 0x05C0(0x0058) (Edit)
 	struct FVector                                     SplineUpDir;                                               // 0x0618(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	unsigned char                                      bAllowSplineEditingPerInstance : 1;                        // 0x0624(0x0001) BIT_FIELD (Edit, DisableEditOnInstance, NoDestructor)
 	unsigned char                                      bSmoothInterpRollScale : 1;                                // 0x0624(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_QVYE[0x3];                                     // 0x0625(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Q3E0[0x3];                                     // 0x0625(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_ESplineMeshAxis>                ForwardAxis;                                               // 0x0628(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DMQ3[0x3];                                     // 0x0629(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3CMC[0x3];                                     // 0x0629(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              SplineBoundaryMin;                                         // 0x062C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              SplineBoundaryMax;                                         // 0x0630(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_QTK4[0x4];                                     // 0x0634(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6KA3[0x4];                                     // 0x0634(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UBodySetup*                                  BodySetup;                                                 // 0x0638(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                       CachedMeshBodySetupGuid;                                   // 0x0640(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	unsigned char                                      bMeshDirty : 1;                                            // 0x0650(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_4M9I[0xF];                                     // 0x0651(0x000F) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5JMA[0xF];                                     // 0x0651(0x000F) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8802,9 +8802,9 @@ public:
 class UModelComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      UnknownData_IIHM[0x18];                                    // 0x0550(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BOBM[0x18];                                    // 0x0550(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UBodySetup*                                  ModelBodySetup;                                            // 0x0568(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FPGQ[0x20];                                    // 0x0570(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_RJTM[0x20];                                    // 0x0570(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8839,7 +8839,7 @@ public:
 class UNavMeshRenderingComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      UnknownData_Q6WQ[0x10];                                    // 0x0550(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_1RNF[0x10];                                    // 0x0550(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8875,7 +8875,7 @@ class UBoxComponent : public UShapeComponent
 {
 public:
 	struct FVector                                     BoxExtent;                                                 // 0x0570(0x000C) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_7NMC[0x4];                                     // 0x057C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_A4Y4[0x4];                                     // 0x057C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8897,7 +8897,7 @@ class USphereComponent : public UShapeComponent
 {
 public:
 	float                                              SphereRadius;                                              // 0x0570(0x0004) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_UAZM[0xC];                                     // 0x0574(0x000C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3UPU[0xC];                                     // 0x0574(0x000C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -8954,12 +8954,12 @@ class UTextRenderComponent : public UPrimitiveComponent
 {
 public:
 	struct FText                                       Text;                                                      // 0x0550(0x0018) ELEMENT_SIZE_MISMATCH (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData_RGVZ[0x20];                                    // 0x0550(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_GO9I[0x20];                                    // 0x0550(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	class UMaterialInterface*                          TextMaterial;                                              // 0x0588(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UFont*                                       Font;                                                      // 0x0590(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EHorizTextAligment>             HorizontalAlignment;                                       // 0x0598(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EVerticalTextAligment>          VerticalAlignment;                                         // 0x0599(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_BE2D[0x2];                                     // 0x059A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TCNE[0x2];                                     // 0x059A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FColor                                      TextRenderColor;                                           // 0x059C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              XScale;                                                    // 0x05A0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              YScale;                                                    // 0x05A4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -8967,7 +8967,7 @@ public:
 	float                                              InvDefaultSize;                                            // 0x05AC(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              HorizSpacingAdjust;                                        // 0x05B0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	unsigned char                                      bAlwaysRenderAsText : 1;                                   // 0x05B4(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_4ETA[0xB];                                     // 0x05B5(0x000B) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_FBNV[0xB];                                     // 0x05B5(0x000B) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9001,7 +9001,7 @@ public:
 	float                                              Intensity;                                                 // 0x0558(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	float                                              Tightness;                                                 // 0x055C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bPreviewVectorField : 1;                                   // 0x0560(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_LLFA[0x1F];                                    // 0x0561(0x001F) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_11IU[0x1F];                                    // 0x0561(0x001F) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9022,15 +9022,15 @@ class URadialForceComponent : public USceneComponent
 public:
 	float                                              Radius;                                                    // 0x02B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ERadialImpulseFalloff>          Falloff;                                                   // 0x02B4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_095D[0x3];                                     // 0x02B5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TALP[0x3];                                     // 0x02B5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              ImpulseStrength;                                           // 0x02B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bImpulseVelChange : 1;                                     // 0x02BC(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bIgnoreOwningActor : 1;                                    // 0x02BC(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_HIK3[0x3];                                     // 0x02BD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7527[0x3];                                     // 0x02BD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              ForceStrength;                                             // 0x02C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              DestructibleDamage;                                        // 0x02C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<TEnumAsByte<Engine_EObjectTypeQuery>>       ObjectTypesToAffect;                                       // 0x02C8(0x0010) (Edit, ZeroConstructor, Protected)
-	unsigned char                                      UnknownData_XWGV[0x8];                                     // 0x02D8(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_0X7K[0x8];                                     // 0x02D8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9052,14 +9052,14 @@ class UReflectionCaptureComponent : public USceneComponent
 {
 public:
 	bool                                               bLockSettings;                                             // 0x02B0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_QP48[0x3];                                     // 0x02B1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_313X[0x3];                                     // 0x02B1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              Brightness;                                                // 0x02B4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ShadowBrightness;                                          // 0x02B8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              LPVOcclusionBrightness;                                    // 0x02BC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                                ReflectionTint;                                            // 0x02C0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_3RPL[0xC];                                     // 0x02D0(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_O32O[0xC];                                     // 0x02D0(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FGuid                                       StateId;                                                   // 0x02DC(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_DSV3[0x54];                                    // 0x02EC(0x0054) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5PH0[0x54];                                    // 0x02EC(0x0054) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9084,10 +9084,10 @@ class UBoxReflectionCaptureComponent : public UReflectionCaptureComponent
 {
 public:
 	float                                              BoxTransitionDistance;                                     // 0x0340(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9UCR[0x4];                                     // 0x0344(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_D1FJ[0x4];                                     // 0x0344(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UBoxComponent*                               PreviewInfluenceBox;                                       // 0x0348(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UBoxComponent*                               PreviewCaptureBox;                                         // 0x0350(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_87U6[0x8];                                     // 0x0358(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_1WDB[0x8];                                     // 0x0358(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9106,10 +9106,10 @@ class UPlaneReflectionCaptureComponent : public UReflectionCaptureComponent
 {
 public:
 	float                                              InfluenceRadiusScale;                                      // 0x0340(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_RHG7[0x4];                                     // 0x0344(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_M5BG[0x4];                                     // 0x0344(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UDrawSphereComponent*                        PreviewInfluenceRadius;                                    // 0x0348(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UBoxComponent*                               PreviewCaptureBox;                                         // 0x0350(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2MDH[0x8];                                     // 0x0358(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DULX[0x8];                                     // 0x0358(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9149,10 +9149,10 @@ class USceneCaptureComponent : public USceneComponent
 public:
 	TArray<TWeakObjectPtr<class UPrimitiveComponent>>  HiddenComponents;                                          // 0x02B0(0x0010) (ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper)
 	bool                                               bCaptureEveryFrame;                                        // 0x02C0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_OCI5[0x3];                                     // 0x02C1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_KQNR[0x3];                                     // 0x02C1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MaxViewDistanceOverride;                                   // 0x02C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FEngineShowFlagsSetting>             ShowFlagSettings;                                          // 0x02C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, Interp)
-	unsigned char                                      UnknownData_2S9L[0x40];                                    // 0x02D8(0x0040) Fix Super Size
+	unsigned char                                      UnknownData_QXLM[0x40];                                    // 0x02D8(0x0040) Fix Super Size
 
 
 	static UClass* StaticClass()
@@ -9172,20 +9172,20 @@ public:
 class USceneCaptureComponent2D : public USceneCaptureComponent
 {
 public:
-	unsigned char                                      UnknownData_RVWD[0x8];                                     // 0x0318(0x0008) Fix Super Size
+	unsigned char                                      UnknownData_5K62[0x8];                                     // 0x0318(0x0008) Fix Super Size
 	class UTextureRenderTarget2D*                      TextureTarget;                                             // 0x0320(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ESceneCaptureSource>            CaptureSource;                                             // 0x0328(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9VRE[0x7];                                     // 0x0329(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7PY8[0x7];                                     // 0x0329(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FPostProcessSettings                        PostProcessSettings;                                       // 0x0330(0x0540) (Edit, BlueprintVisible, Interp)
 	float                                              PostProcessBlendWeight;                                    // 0x0870(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	float                                              OrthoWidth;                                                // 0x0874(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	float                                              OrthoNearClipPlane;                                        // 0x0878(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	float                                              OrthoFarClipPlane;                                         // 0x087C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ECameraProjectionMode>          ProjectionMode;                                            // 0x0880(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CO46[0x3];                                     // 0x0881(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_93YE[0x3];                                     // 0x0881(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              AspectRatio;                                               // 0x0884(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bConstrainAspectRatio : 1;                                 // 0x0888(0x0001) BIT_FIELD (Edit, BlueprintVisible, Interp, NoDestructor)
-	unsigned char                                      UnknownData_141X[0x3];                                     // 0x0889(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3ULF[0x3];                                     // 0x0889(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                LandscapeLODOverride;                                      // 0x088C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -9227,7 +9227,7 @@ class UWaterEmissionVolumeComponent : public USceneComponent
 public:
 	float                                              Radius;                                                    // 0x02B0(0x0004) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              GenerationDensity;                                         // 0x02B4(0x0004) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_RACW[0x28];                                    // 0x02B8(0x0028) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_0TFE[0x28];                                    // 0x02B8(0x0028) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9249,7 +9249,7 @@ public:
 	float                                              Speed;                                                     // 0x02B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	float                                              MinGustAmount;                                             // 0x02B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxGustAmount;                                             // 0x02BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_Q4DI[0x10];                                    // 0x02C0(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_U588[0x10];                                    // 0x02C0(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9339,24 +9339,24 @@ class UAnimSequence : public UAnimSequenceBase
 {
 public:
 	int                                                NumFrames;                                                 // 0x0078(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_48F9[0x4];                                     // 0x007C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SFEO[0x4];                                     // 0x007C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FTrackToSkeletonMap>                 TrackToSkeletonMapTable;                                   // 0x0080(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_HMEW[0x10];                                    // 0x0090(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BZWA[0x10];                                    // 0x0090(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FTranslationTrack>                   TranslationData;                                           // 0x00A0(0x0010) (ZeroConstructor, Transient)
 	TArray<struct FRotationTrack>                      RotationData;                                              // 0x00B0(0x0010) (ZeroConstructor, Transient)
 	TArray<struct FScaleTrack>                         ScaleData;                                                 // 0x00C0(0x0010) (ZeroConstructor, Transient)
 	TEnumAsByte<Engine_EAnimationCompressionFormat>    TranslationCompressionFormat;                              // 0x00D0(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EAnimationCompressionFormat>    RotationCompressionFormat;                                 // 0x00D1(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EAnimationCompressionFormat>    ScaleCompressionFormat;                                    // 0x00D2(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_KLQY[0x5];                                     // 0x00D3(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_A6MM[0x5];                                     // 0x00D3(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<int>                                        CompressedTrackOffsets;                                    // 0x00D8(0x0010) (ZeroConstructor)
 	struct FCompressedOffsetData                       CompressedScaleOffsets;                                    // 0x00E8(0x0018)
-	unsigned char                                      UnknownData_I9PS[0x10];                                    // 0x0100(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7FCS[0x10];                                    // 0x0100(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EAnimationKeyFormat>            KeyEncodingFormat;                                         // 0x0110(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_IPBO[0x1F];                                    // 0x0111(0x001F) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_G7NS[0x1F];                                    // 0x0111(0x001F) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EAdditiveAnimationType>         AdditiveAnimType;                                          // 0x0130(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EAdditiveBasePoseType>          RefPoseType;                                               // 0x0131(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_JYFU[0x6];                                     // 0x0132(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_JF70[0x6];                                     // 0x0132(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UAnimSequence*                               RefPoseSeq;                                                // 0x0138(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                RefFrameIndex;                                             // 0x0140(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                EncodingPkgVersion;                                        // 0x0144(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -9364,7 +9364,7 @@ public:
 	bool                                               bEnableRootMotion;                                         // 0x0150(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Engine_ERootMotionRootLock>            RootMotionRootLock;                                        // 0x0151(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bRootMotionSettingsCopiedFromMontage;                      // 0x0152(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_5HUD[0x5];                                     // 0x0153(0x0005) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LJ7I[0x5];                                     // 0x0153(0x0005) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9387,7 +9387,7 @@ public:
 	float                                              TargetWeightInterpolationSpeedPerSec;                      // 0x00C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ENotifyTriggerMode>             NotifyTriggerMode;                                         // 0x00CC(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	bool                                               bRotationBlendInMeshSpace;                                 // 0x00CD(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_LWDW[0x2];                                     // 0x00CE(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_F3SJ[0x2];                                     // 0x00CE(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                NumOfDimension;                                            // 0x00D0(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              AnimLength;                                                // 0x00D4(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FPerBoneInterpolation>               PerBoneBlend;                                              // 0x00D8(0x0010) (Edit, ZeroConstructor)
@@ -9411,7 +9411,7 @@ class UBlendSpace : public UBlendSpaceBase
 {
 public:
 	TEnumAsByte<Engine_EBlendSpaceAxis>                AxisToScaleAnimation;                                      // 0x0108(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_D51R[0x7];                                     // 0x0109(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_54P3[0x7];                                     // 0x0109(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9447,7 +9447,7 @@ class UBlendSpace1D : public UBlendSpaceBase
 {
 public:
 	bool                                               bScaleAnimation;                                           // 0x0108(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_ZEA7[0x7];                                     // 0x0109(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_YJDD[0x7];                                     // 0x0109(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9484,11 +9484,11 @@ class UAnimCompress : public UObject
 public:
 	struct FString                                     Description;                                               // 0x0028(0x0010) (Edit, ZeroConstructor, EditConst, HasGetValueTypeHash)
 	unsigned char                                      bNeedsSkeleton : 1;                                        // 0x0038(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_RZSY[0x3];                                     // 0x0039(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8KF4[0x3];                                     // 0x0039(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EAnimationCompressionFormat>    TranslationCompressionFormat;                              // 0x003C(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EAnimationCompressionFormat>    RotationCompressionFormat;                                 // 0x003D(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EAnimationCompressionFormat>    ScaleCompressionFormat;                                    // 0x003E(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_B4OM[0x1];                                     // 0x003F(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_G3GP[0x1];                                     // 0x003F(0x0001) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9514,7 +9514,7 @@ public:
 	unsigned char                                      bRunCurrentDefaultCompressor : 1;                          // 0x0044(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bAutoReplaceIfExistingErrorTooGreat : 1;                   // 0x0044(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bRaiseMaxErrorToExisting : 1;                              // 0x0044(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_JA6E[0x3];                                     // 0x0045(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3P12[0x3];                                     // 0x0045(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9568,7 +9568,7 @@ class UAnimCompress_RemoveEverySecondKey : public UAnimCompress
 public:
 	int                                                MinKeys;                                                   // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bStartAtSecondKey : 1;                                     // 0x0044(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_3T7G[0x3];                                     // 0x0045(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_JBTN[0x3];                                     // 0x0045(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9595,7 +9595,7 @@ public:
 	float                                              ParentKeyScale;                                            // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bRetarget : 1;                                             // 0x005C(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bActuallyFilterLinearKeys : 1;                             // 0x005C(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_3UDA[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HOD1[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9621,23 +9621,23 @@ public:
 	TArray<TEnumAsByte<Engine_EAnimationCompressionFormat>> AllowedTranslationFormats;                                 // 0x0080(0x0010) (Edit, ZeroConstructor)
 	TArray<TEnumAsByte<Engine_EAnimationCompressionFormat>> AllowedScaleFormats;                                       // 0x0090(0x0010) (Edit, ZeroConstructor)
 	unsigned char                                      bResampleAnimation : 1;                                    // 0x00A0(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_1BLX[0x3];                                     // 0x00A1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_DROZ[0x3];                                     // 0x00A1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              ResampledFramerate;                                        // 0x00A4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                MinKeysForResampling;                                      // 0x00A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bUseAdaptiveError : 1;                                     // 0x00AC(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bUseOverrideForEndEffectors : 1;                           // 0x00AC(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_H4VN[0x3];                                     // 0x00AD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_B0A4[0x3];                                     // 0x00AD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                TrackHeightBias;                                           // 0x00B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ParentingDivisor;                                          // 0x00B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ParentingDivisorExponent;                                  // 0x00B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bUseAdaptiveError2 : 1;                                    // 0x00BC(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_H73E[0x3];                                     // 0x00BD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LCWK[0x3];                                     // 0x00BD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              RotationErrorSourceRatio;                                  // 0x00C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TranslationErrorSourceRatio;                               // 0x00C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ScaleErrorSourceRatio;                                     // 0x00C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxErrorPerTrackRatio;                                     // 0x00CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              PerturbationProbeSize;                                     // 0x00D0(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_OE6T[0xC];                                     // 0x00D4(0x000C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_GLKT[0xC];                                     // 0x00D4(0x000C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9658,7 +9658,7 @@ public:
 	float                                              MaxPosDiff;                                                // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxAngleDiff;                                              // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxScaleDiff;                                              // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FRTB[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_P8QE[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9679,7 +9679,7 @@ public:
 	class UAnimationAsset*                             CurrentAsset;                                              // 0x0440(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UVertexAnimation*                            CurrentVertexAnim;                                         // 0x0448(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     BlendSpaceInput;                                           // 0x0450(0x000C) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_092T[0x4];                                     // 0x045C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_NDZU[0x4];                                     // 0x045C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FBlendSampleData>                    BlendSampleData;                                           // 0x0460(0x0010) (ZeroConstructor, Transient)
 	struct FBlendFilter                                BlendFilter;                                               // 0x0470(0x0090) (Transient)
 	float                                              CurrentTime;                                               // 0x0500(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -9688,7 +9688,7 @@ public:
 	unsigned char                                      bLooping : 1;                                              // 0x0518(0x0001) BIT_FIELD (Transient, NoDestructor)
 	unsigned char                                      bPlaying : 1;                                              // 0x0518(0x0001) BIT_FIELD (Transient, NoDestructor)
 	unsigned char                                      bReverse : 1;                                              // 0x0518(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_IAFL[0x7];                                     // 0x0519(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_W589[0x7];                                     // 0x0519(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9755,9 +9755,9 @@ public:
 	struct FName                                       FirstSocketName;                                           // 0x0030(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       SecondSocketName;                                          // 0x0038(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ETrailWidthMode>                WidthScaleMode;                                            // 0x0040(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_WNAM[0x3];                                     // 0x0041(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9ASB[0x3];                                     // 0x0041(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       WidthScaleCurve;                                           // 0x0044(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ABGU[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_WPEA[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9777,7 +9777,7 @@ class UAnimSet : public UObject
 {
 public:
 	unsigned char                                      bAnimRotationOnly : 1;                                     // 0x0028(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_BBOV[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_14CG[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FName>                               TrackBoneNames;                                            // 0x0030(0x0010) (ZeroConstructor)
 	TArray<struct FAnimSetMeshLinkup>                  LinkupCache;                                               // 0x0040(0x0010) (ZeroConstructor, Transient)
 	TArray<unsigned char>                              BoneUseAnimTranslation;                                    // 0x0050(0x0010) (ZeroConstructor, Transient)
@@ -9786,7 +9786,7 @@ public:
 	TArray<struct FName>                               ForceMeshTranslationBoneNames;                             // 0x0080(0x0010) (Edit, ZeroConstructor)
 	struct FName                                       PreviewSkelMeshName;                                       // 0x0090(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       BestRatioSkelMeshName;                                     // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9QEK[0x50];                                    // 0x00A0(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_1AN0[0x50];                                    // 0x00A0(0x0050) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9868,11 +9868,11 @@ class UAutomationTestUserSettings : public UObject
 {
 public:
 	bool                                               FilterTests;                                               // 0x0028(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_AM32[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Y9UJ[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FString>                             IncludedTestsPrefix;                                       // 0x0030(0x0010) (Edit, ZeroConstructor, Config)
 	TArray<struct FString>                             ExcludedTestsPrefix;                                       // 0x0040(0x0010) (Edit, ZeroConstructor, Config)
 	bool                                               IncludeEpicTests;                                          // 0x0050(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_BSD8[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_33C1[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9890,14 +9890,14 @@ public:
 class UAvoidanceManager : public UObject
 {
 public:
-	unsigned char                                      UnknownData_IE6U[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LC8D[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              DefaultTimeToLive;                                         // 0x0030(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              LockTimeAfterAvoid;                                        // 0x0034(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              LockTimeAfterClean;                                        // 0x0038(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              DeltaTimeToPredict;                                        // 0x003C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ArtificialRadiusExpansion;                                 // 0x0040(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TestHeightDifference;                                      // 0x0044(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ULE8[0x80];                                    // 0x0048(0x0080) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_EQAQ[0x80];                                    // 0x0048(0x0080) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -9959,7 +9959,7 @@ class UDataTable : public UObject
 {
 public:
 	class UScriptStruct*                               RowStruct;                                                 // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_4VJO[0x50];                                    // 0x0030(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_D95B[0x50];                                    // 0x0030(0x0050) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -10163,7 +10163,7 @@ public:
 class UGPUSortDestData : public UObject
 {
 public:
-	unsigned char                                      UnknownData_13QP[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_NMYZ[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11060,12 +11060,12 @@ public:
 class UWorldComposition : public UObject
 {
 public:
-	unsigned char                                      UnknownData_7D99[0x70];                                    // 0x0028(0x0070) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_RH6B[0x70];                                    // 0x0028(0x0070) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class ULevelStreaming*>                     TilesStreaming;                                            // 0x0098(0x0010) (ZeroConstructor, Transient)
 	double                                             TilesStreamingTimeThreshold;                               // 0x00A8(0x0008) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bLoadAllTilesDuringCinematic;                              // 0x00B0(0x0001) (ZeroConstructor, Config, IsPlainOldData, NoDestructor)
 	bool                                               bRebaseOriginIn3DSpace;                                    // 0x00B1(0x0001) (ZeroConstructor, Config, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_LKBJ[0x2];                                     // 0x00B2(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SHC2[0x2];                                     // 0x00B2(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              RebaseOriginDistance;                                      // 0x00B4(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -11084,7 +11084,7 @@ public:
 class UNestedWorldComposition : public UWorldComposition
 {
 public:
-	unsigned char                                      UnknownData_7ZV5[0x20];                                    // 0x00B8(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_JGVF[0x20];                                    // 0x00B8(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11213,7 +11213,7 @@ public:
 	class USkeleton*                                   TargetSkeleton;                                            // 0x0238(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FAnimNotifyEvent>                    AnimNotifies;                                              // 0x0240(0x0010) (ZeroConstructor, ContainsInstancedReference)
 	int                                                RootAnimNodeIndex;                                         // 0x0250(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EGH4[0x1C];                                    // 0x0254(0x001C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WYGT[0x1C];                                    // 0x0254(0x001C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FAnimGroupInfo>                      Groups;                                                    // 0x0270(0x0010) (ZeroConstructor)
 	TArray<struct FName>                               SkeletonSlotNames;                                         // 0x0280(0x0010) (ZeroConstructor)
 
@@ -11236,7 +11236,7 @@ public:
 	struct FKAggregateGeom                             AggGeom;                                                   // 0x0028(0x0048)
 	struct FName                                       BoneName;                                                  // 0x0070(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EPhysicsType>                   PhysicsType;                                               // 0x0078(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_C67M[0x3];                                     // 0x0079(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LMO5[0x3];                                     // 0x0079(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bCookComplexGeometryOnServer : 1;                          // 0x007C(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bConsiderForBounds : 1;                                    // 0x007C(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bMeshCollideAll : 1;                                       // 0x007C(0x0001) BIT_FIELD (Transient, NoDestructor)
@@ -11244,15 +11244,15 @@ public:
 	unsigned char                                      bGenerateNonMirroredCollision : 1;                         // 0x007C(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bSharedCookedData : 1;                                     // 0x007C(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bGenerateMirroredCollision : 1;                            // 0x007C(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_YG63[0x3];                                     // 0x007D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9HBH[0x3];                                     // 0x007D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UPhysicalMaterial*                           PhysMaterial;                                              // 0x0080(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EBodyCollisionResponse>         CollisionReponse;                                          // 0x0088(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ECollisionTraceFlag>            CollisionTraceFlag;                                        // 0x0089(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EJ3B[0x6];                                     // 0x008A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8L5D[0x6];                                     // 0x008A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FBodyInstance                               DefaultInstance;                                           // 0x0090(0x0180) (Edit)
 	struct FWalkableSlopeOverride                      WalkableSlopeOverride;                                     // 0x0210(0x0008) (Edit, AdvancedDisplay)
 	struct FVector                                     BuildScale3D;                                              // 0x0218(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_90OU[0xA4];                                    // 0x0224(0x00A4) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_FPV5[0xA4];                                    // 0x0224(0x00A4) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11328,7 +11328,7 @@ class UBookMark2D : public UObject
 public:
 	float                                              Zoom2D;                                                    // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FIntPoint                                   Location;                                                  // 0x002C(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_BBVJ[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_85TO[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11347,12 +11347,12 @@ class UBreakpoint : public UObject
 {
 public:
 	unsigned char                                      bEnabled : 1;                                              // 0x0028(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_V036[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_74FJ[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UEdGraphNode*                                Node;                                                      // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bStepOnce : 1;                                             // 0x0038(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bStepOnce_WasPreviouslyDisabled : 1;                       // 0x0038(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bStepOnce_RemoveAfterHit : 1;                              // 0x0038(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_O0GP[0x7];                                     // 0x0039(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_9YMX[0x7];                                     // 0x0039(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11373,12 +11373,12 @@ public:
 	struct FString                                     BitmapFilename;                                            // 0x0028(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	struct FString                                     ToolTip;                                                   // 0x0038(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	unsigned char                                      NotifyBadParams : 1;                                       // 0x0048(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_PH29[0x7];                                     // 0x0049(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_D8OU[0x7];                                     // 0x0049(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FVector>                             Vertices;                                                  // 0x0050(0x0010) (ZeroConstructor, Protected)
 	TArray<struct FBuilderPoly>                        Polys;                                                     // 0x0060(0x0010) (ZeroConstructor, Protected)
 	struct FName                                       Layer;                                                     // 0x0070(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	unsigned char                                      MergeCoplanars : 1;                                        // 0x0078(0x0001) BIT_FIELD (NoDestructor, Protected)
-	unsigned char                                      UnknownData_MO0T[0x7];                                     // 0x0079(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_0FKH[0x7];                                     // 0x0079(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11418,12 +11418,12 @@ public:
 	float                                              AnimLength;                                                // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FBox                                        BoundingBox;                                               // 0x0034(0x001C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	unsigned char                                      bRelativeToInitialTransform : 1;                           // 0x0050(0x0001) BIT_FIELD (Edit, DisableEditOnInstance, NoDestructor)
-	unsigned char                                      UnknownData_4F1H[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_AE36[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              BaseFOV;                                                   // 0x0054(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_C50J[0x8];                                     // 0x0058(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_KZ8L[0x8];                                     // 0x0058(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FPostProcessSettings                        BasePostProcessSettings;                                   // 0x0060(0x0540)
 	float                                              BasePostProcessBlendWeight;                                // 0x05A0(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9X47[0xC];                                     // 0x05A4(0x000C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2CN7[0xC];                                     // 0x05A4(0x000C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11443,14 +11443,14 @@ class UCameraAnimInst : public UObject
 public:
 	class UCameraAnim*                                 CamAnim;                                                   // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UInterpGroupInst*                            InterpGroupInst;                                           // 0x0030(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_B6ZG[0x1C];                                    // 0x0038(0x001C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1LLP[0x1C];                                    // 0x0038(0x001C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              PlayRate;                                                  // 0x0054(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_7G5P[0x10];                                    // 0x0058(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_2A8B[0x10];                                    // 0x0058(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UInterpTrackMove*                            MoveTrack;                                                 // 0x0068(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UInterpTrackInstMove*                        MoveInst;                                                  // 0x0070(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCurveFloat*                                 BlendInCurve;                                              // 0x0078(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ECameraAnimPlaySpace>           PlaySpace;                                                 // 0x0080(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_NMWP[0x9F];                                    // 0x0081(0x009F) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HOLL[0x9F];                                    // 0x0081(0x009F) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11473,7 +11473,7 @@ class UCameraModifier_CameraShake : public UCameraModifier
 public:
 	TArray<class UCameraShake*>                        ActiveShakes;                                              // 0x0048(0x0010) (ZeroConstructor)
 	float                                              SplitScreenShakeScale;                                     // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HQAI[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4OE9[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11499,15 +11499,15 @@ public:
 	unsigned char                                      bCenterX : 1;                                              // 0x003C(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bCenterY : 1;                                              // 0x003C(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bNoSmooth : 1;                                             // 0x003C(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_XVFR[0x3];                                     // 0x003D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6LNA[0x3];                                     // 0x003D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                SizeX;                                                     // 0x0040(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                SizeY;                                                     // 0x0044(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_N59B[0x8];                                     // 0x0048(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_EO54[0x8];                                     // 0x0048(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FPlane                                      ColorModulate;                                             // 0x0050(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	class UTexture2D*                                  DefaultTexture;                                            // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                                  GradientTexture0;                                          // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UReporterGraph*                              ReporterGraph;                                             // 0x0070(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_3FZO[0x78];                                    // 0x0078(0x0078) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_BWDH[0x78];                                    // 0x0078(0x0078) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11540,7 +11540,7 @@ class UChannel : public UObject
 {
 public:
 	class UNetConnection*                              Connection;                                                // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_G9IL[0x38];                                    // 0x0030(0x0038) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HJ9W[0x38];                                    // 0x0030(0x0038) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11559,9 +11559,9 @@ class UActorChannel : public UChannel
 {
 public:
 	class AActor*                                      Actor;                                                     // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_IQLL[0xE8];                                    // 0x0070(0x00E8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3SC6[0xE8];                                    // 0x0070(0x00E8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UObject*>                             ObjectsRequiredForQueuedBunches;                           // 0x0158(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_8OXC[0xF8];                                    // 0x0168(0x00F8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_V9OQ[0xF8];                                    // 0x0168(0x00F8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11579,7 +11579,7 @@ public:
 class UControlChannel : public UChannel
 {
 public:
-	unsigned char                                      UnknownData_UEFT[0x18];                                    // 0x0068(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ZN2N[0x18];                                    // 0x0068(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11597,11 +11597,11 @@ public:
 class UVoiceChannel : public UChannel
 {
 public:
-	unsigned char                                      UnknownData_GMLF[0x18];                                    // 0x0068(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QROG[0x18];                                    // 0x0068(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                BandwidthPerSecondReservationInBytes;                      // 0x0080(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_RRIV[0x4];                                     // 0x0084(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_60FN[0x4];                                     // 0x0084(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              SaturationCooloffPeriodInSeconds;                          // 0x0088(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_6W2H[0x4];                                     // 0x008C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8O9O[0x4];                                     // 0x008C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11621,7 +11621,7 @@ class UCheatManager : public UObject
 public:
 	class ADebugCameraController*                      DebugCameraControllerRef;                                  // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                      DebugCameraControllerClass;                                // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DSR2[0x40];                                    // 0x0038(0x0040) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_SNM7[0x40];                                    // 0x0038(0x0040) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11706,7 +11706,7 @@ public:
 class UPluginCommandlet : public UCommandlet
 {
 public:
-	unsigned char                                      UnknownData_0P4R[0x20];                                    // 0x0080(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_UHW6[0x20];                                    // 0x0080(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11741,13 +11741,13 @@ public:
 class UConsole : public UObject
 {
 public:
-	unsigned char                                      UnknownData_4T7Y[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_P9H7[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class ULocalPlayer*                                ConsoleTargetPlayer;                                       // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                                  DefaultTexture_Black;                                      // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                                  DefaultTexture_White;                                      // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_0WOV[0x18];                                    // 0x0050(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XSKF[0x18];                                    // 0x0050(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FString>                             HistoryBuffer;                                             // 0x0068(0x0010) (ZeroConstructor, Config)
-	unsigned char                                      UnknownData_XEOS[0x78];                                    // 0x0078(0x0078) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_UV4Q[0x78];                                    // 0x0078(0x0078) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11820,7 +11820,7 @@ public:
 class UCurveTable : public UObject
 {
 public:
-	unsigned char                                      UnknownData_WHDV[0x50];                                    // 0x0028(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DWXP[0x50];                                    // 0x0028(0x0050) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11873,7 +11873,7 @@ public:
 class UParticleComputeShaderData : public UDataAsset
 {
 public:
-	unsigned char                                      UnknownData_4SG0[0x20];                                    // 0x0028(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TXNH[0x20];                                    // 0x0028(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11912,10 +11912,10 @@ public:
 	int                                                CellSiteCount;                                             // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FFractureMaterial                           FractureMaterialDesc;                                      // 0x002C(0x0024) (Edit, Transient)
 	int                                                RandomSeed;                                                // 0x0050(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_C2UQ[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WQ6D[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FVector>                             VoronoiSites;                                              // 0x0058(0x0010) (ZeroConstructor)
 	int                                                OriginalSubmeshCount;                                      // 0x0068(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_D6E5[0x4];                                     // 0x006C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_U78H[0x4];                                     // 0x006C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UMaterialInterface*>                  Materials;                                                 // 0x0070(0x0010) (ZeroConstructor)
 	TArray<struct FDestructibleChunkParameters>        ChunkParameters;                                           // 0x0080(0x0010) (ZeroConstructor)
 	TArray<struct FString>                             MaterialNames;                                             // 0x0090(0x0010) (ZeroConstructor)
@@ -11938,12 +11938,12 @@ class UAnimationSettings : public UDeveloperSettings
 public:
 	TArray<float>                                      DefaultVisibleDistanceFactorThresholds;                    // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
 	int                                                CompressCommandletVersion;                                 // 0x0048(0x0004) (Edit, ZeroConstructor, Config, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_LBW0[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Q5VY[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FString>                             KeyEndEffectorsMatchNameArray;                             // 0x0050(0x0010) (Edit, ZeroConstructor, Config)
 	class UClass*                                      DefaultCompressionAlgorithm;                               // 0x0060(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EAnimationCompressionFormat>    RotationCompressionFormat;                                 // 0x0068(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EAnimationCompressionFormat>    TranslationCompressionFormat;                              // 0x0069(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9LW6[0x2];                                     // 0x006A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_EJ88[0x2];                                     // 0x006A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              AlternativeCompressionThreshold;                           // 0x006C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               ForceRecompression;                                        // 0x0070(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
 	bool                                               bOnlyCheckForMissingSkeletalMeshes;                        // 0x0071(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
@@ -11955,7 +11955,7 @@ public:
 	bool                                               bTryLinearKeyRemovalCompression;                           // 0x0077(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
 	bool                                               bTryIntervalKeyRemoval;                                    // 0x0078(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
 	bool                                               bStripAnimationDataOnDedicatedServer;                      // 0x0079(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_8HWL[0x6];                                     // 0x007A(0x0006) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_GC1A[0x6];                                     // 0x007A(0x0006) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -11997,7 +11997,7 @@ class UAutomaticInstancingSettings : public UDeveloperSettings
 {
 public:
 	bool                                               IsEnabled;                                                 // 0x0038(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_NG00[0x7];                                     // 0x0039(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4OJ8[0x7];                                     // 0x0039(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12016,7 +12016,7 @@ class UUserInterfaceSettings : public UDeveloperSettings
 {
 public:
 	TEnumAsByte<Engine_ERenderFocusRule>               RenderFocusRule;                                           // 0x0038(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_W76K[0x7];                                     // 0x0039(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_DEMZ[0x7];                                     // 0x0039(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FStringClassReference                       DefaultCursor;                                             // 0x0040(0x0010) (Edit, ZeroConstructor, Config)
 	struct FStringClassReference                       TextEditBeamCursor;                                        // 0x0050(0x0010) (Edit, ZeroConstructor, Config)
 	struct FStringClassReference                       CrosshairsCursor;                                          // 0x0060(0x0010) (Edit, ZeroConstructor, Config)
@@ -12025,7 +12025,7 @@ public:
 	struct FStringClassReference                       SlashedCircleCursor;                                       // 0x0090(0x0010) (Edit, ZeroConstructor, Config)
 	float                                              ApplicationScale;                                          // 0x00A0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EUIScalingRule>                 UIScaleRule;                                               // 0x00A4(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_VWT3[0x3];                                     // 0x00A5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_UDYZ[0x3];                                     // 0x00A5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FStringClassReference                       CustomScalingRuleClass;                                    // 0x00A8(0x0010) (Edit, ZeroConstructor, Config)
 	struct FRuntimeFloatCurve                          UIScaleCurve;                                              // 0x00B8(0x0080) (Edit, Config)
 	TArray<class UObject*>                             CursorClasses;                                             // 0x0138(0x0010) (ZeroConstructor, Transient)
@@ -12050,14 +12050,14 @@ class UStreamingSettings : public UDeveloperSettings
 public:
 	unsigned char                                      AsyncLoadingThreadEnabled : 1;                             // 0x0038(0x0001) BIT_FIELD (Edit, Config, NoDestructor, Protected)
 	unsigned char                                      WarnIfTimeLimitExceeded : 1;                               // 0x0038(0x0001) BIT_FIELD (Edit, Config, NoDestructor, AdvancedDisplay, Protected)
-	unsigned char                                      UnknownData_KAT8[0x3];                                     // 0x0039(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9FM4[0x3];                                     // 0x0039(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              TimeLimitExceededMultiplier;                               // 0x003C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash)
 	float                                              TimeLimitExceededMinTime;                                  // 0x0040(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash)
 	int                                                MinBulkDataSizeForAsyncLoading;                            // 0x0044(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash)
 	float                                              AsyncIOBandwidthLimit;                                     // 0x0048(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	unsigned char                                      UseBackgroundLevelStreaming : 1;                           // 0x004C(0x0001) BIT_FIELD (Edit, Config, NoDestructor, Protected)
 	unsigned char                                      AsyncLoadingUseFullTimeLimit : 1;                          // 0x004C(0x0001) BIT_FIELD (Edit, Config, NoDestructor, AdvancedDisplay, Protected)
-	unsigned char                                      UnknownData_NKO6[0x3];                                     // 0x004D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XZIQ[0x3];                                     // 0x004D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              AsyncLoadingTimeLimit;                                     // 0x0050(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash)
 	float                                              PriorityAsyncLoadingExtraTime;                             // 0x0054(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash)
 	float                                              LevelStreamingActorsUpdateTimeLimit;                       // 0x0058(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash)
@@ -12084,13 +12084,13 @@ public:
 	unsigned char                                      AllowParallelGC : 1;                                       // 0x003C(0x0001) BIT_FIELD (Edit, Config, NoDestructor, Protected)
 	unsigned char                                      CreateGCClusters : 1;                                      // 0x003C(0x0001) BIT_FIELD (Edit, Config, NoDestructor, Protected)
 	unsigned char                                      MergeGCClusters : 1;                                       // 0x003C(0x0001) BIT_FIELD (Edit, Config, NoDestructor, Protected)
-	unsigned char                                      UnknownData_N74N[0x3];                                     // 0x003D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6MFP[0x3];                                     // 0x003D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                NumRetriesBeforeForcingGC;                                 // 0x0040(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	int                                                MaxObjectsNotConsideredByGC;                               // 0x0044(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	int                                                SizeOfPermanentObjectPool;                                 // 0x0048(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	int                                                MaxObjectsInGame;                                          // 0x004C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	int                                                MaxObjectsInEditor;                                        // 0x0050(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_6USO[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_D7KJ[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12109,7 +12109,7 @@ class UNetworkSettings : public UDeveloperSettings
 {
 public:
 	unsigned char                                      bVerifyPeer : 1;                                           // 0x0038(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
-	unsigned char                                      UnknownData_22V8[0x7];                                     // 0x0039(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_GFW4[0x7];                                     // 0x0039(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12140,20 +12140,20 @@ public:
 	bool                                               bEnable2DPhysics;                                          // 0x0054(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Engine_ESettingsLockedAxis>            LockedAxis;                                                // 0x0055(0x0001) (ZeroConstructor, Config, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ESettingsDOF>                   DefaultDegreesOfFreedom;                                   // 0x0056(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_XY8C[0x1];                                     // 0x0057(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZCQ9[0x1];                                     // 0x0057(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              BounceThresholdVelocity;                                   // 0x0058(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EFrictionCombineMode>           FrictionCombineMode;                                       // 0x005C(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EFrictionCombineMode>           RestitutionCombineMode;                                    // 0x005D(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_13MB[0x2];                                     // 0x005E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TX9W[0x2];                                     // 0x005E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MaxAngularVelocity;                                        // 0x0060(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxDepenetrationVelocity;                                  // 0x0064(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bSimulateSkeletalMeshOnDedicatedServer;                    // 0x0068(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
 	bool                                               bDefaultHasComplexCollision;                               // 0x0069(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_0TIC[0x2];                                     // 0x006A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_86E5[0x2];                                     // 0x006A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MaxPhysicsDeltaTime;                                       // 0x006C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bSubstepping;                                              // 0x0070(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
 	bool                                               bSubsteppingAsync;                                         // 0x0071(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_UX1Q[0x2];                                     // 0x0072(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_NSAR[0x2];                                     // 0x0072(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MaxSubstepDeltaTime;                                       // 0x0074(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                MaxSubsteps;                                               // 0x0078(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              SyncSceneSmoothingFactor;                                  // 0x007C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
@@ -12165,10 +12165,10 @@ public:
 	TEnumAsByte<Engine_EDominanceGroup>                DefaultStaticDominanceGroup;                               // 0x00B8(0x0001) (Edit, ZeroConstructor, Config, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EDominanceGroup>                DefaultMovableDominanceGroup;                              // 0x00B9(0x0001) (Edit, ZeroConstructor, Config, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bEnableMBP;                                                // 0x00BA(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_YVA2[0x1];                                     // 0x00BB(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_J34F[0x1];                                     // 0x00BB(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                MBPSubdivisions;                                           // 0x00BC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MBPWorldHalfExtentInCM;                                    // 0x00C0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_BJJI[0x4];                                     // 0x00C4(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3DSO[0x4];                                     // 0x00C4(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12187,11 +12187,11 @@ class URendererSettings : public UDeveloperSettings
 {
 public:
 	unsigned char                                      bMobileHDR : 1;                                            // 0x0038(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
-	unsigned char                                      UnknownData_0V9U[0x3];                                     // 0x0039(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Q34K[0x3];                                     // 0x0039(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	uint32_t                                           MobileNumDynamicPointLights;                               // 0x003C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bMobileDynamicPointLightsUseStaticBranch : 1;              // 0x0040(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
 	unsigned char                                      bOcclusionCulling : 1;                                     // 0x0040(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
-	unsigned char                                      UnknownData_TT9D[0x3];                                     // 0x0041(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_KX4X[0x3];                                     // 0x0041(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MinScreenRadiusForLights;                                  // 0x0044(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MinScreenRadiusForEarlyZPass;                              // 0x0048(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MinScreenRadiusForCSMdepth;                                // 0x004C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -12202,36 +12202,36 @@ public:
 	unsigned char                                      bUseNormalMapsForStaticLighting : 1;                       // 0x0050(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
 	unsigned char                                      bGenerateMeshDistanceFields : 1;                           // 0x0050(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
 	unsigned char                                      bGenerateLandscapeGIData : 1;                              // 0x0050(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
-	unsigned char                                      UnknownData_HTV5[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_4F13[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              TessellationAdaptivePixelsPerTriangle;                     // 0x0054(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bSeparateTranslucency : 1;                                 // 0x0058(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
-	unsigned char                                      UnknownData_9FM9[0x3];                                     // 0x0059(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6F6Q[0x3];                                     // 0x0059(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_ETranslucentSortPolicy>         TranslucentSortPolicy;                                     // 0x005C(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZOB3[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8XKK[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     TranslucentSortAxis;                                       // 0x0060(0x000C) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Engine_ECustomDepthStencil>            CustomDepthStencil;                                        // 0x006C(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EEL0[0x3];                                     // 0x006D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_A1RM[0x3];                                     // 0x006D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bDefaultFeatureBloom : 1;                                  // 0x0070(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
 	unsigned char                                      bDefaultFeatureAmbientOcclusion : 1;                       // 0x0070(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
 	unsigned char                                      bDefaultFeatureAmbientOcclusionStaticFraction : 1;         // 0x0070(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
 	unsigned char                                      bDefaultFeatureAutoExposure : 1;                           // 0x0070(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
 	unsigned char                                      bDefaultFeatureMotionBlur : 1;                             // 0x0070(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
 	unsigned char                                      bDefaultFeatureLensFlare : 1;                              // 0x0070(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
-	unsigned char                                      UnknownData_9LGH[0x3];                                     // 0x0071(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YNPG[0x3];                                     // 0x0071(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EAntiAliasingMethodUI>          DefaultFeatureAntiAliasing;                                // 0x0074(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EEarlyZPass>                    EarlyZPass;                                                // 0x0075(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EEarlyZPass>                    bDepthSort;                                                // 0x0076(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_GUQW[0x1];                                     // 0x0077(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_F0IV[0x1];                                     // 0x0077(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bEarlyZPassMovable : 1;                                    // 0x0078(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
 	unsigned char                                      bDBuffer : 1;                                              // 0x0078(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
-	unsigned char                                      UnknownData_DG6E[0x3];                                     // 0x0079(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TCSZ[0x3];                                     // 0x0079(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EClearSceneOptions>             ClearSceneMethod;                                          // 0x007C(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_3IVS[0x3];                                     // 0x007D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3YML[0x3];                                     // 0x007D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bBasePassOutputsVelocity : 1;                              // 0x0080(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
-	unsigned char                                      UnknownData_GMOF[0x3];                                     // 0x0081(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_CQBH[0x3];                                     // 0x0081(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              WireframeCullThreshold;                                    // 0x0084(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EUIScalingRule>                 UIScaleRule;                                               // 0x0088(0x0001) (ZeroConstructor, Config, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9F26[0x7];                                     // 0x0089(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1GUD[0x7];                                     // 0x0089(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRuntimeFloatCurve                          UIScaleCurve;                                              // 0x0090(0x0080) (Config, Deprecated)
 
 
@@ -12271,9 +12271,9 @@ public:
 	struct FString                                     DeviceType;                                                // 0x0038(0x0010) (Edit, ZeroConstructor, Config, EditConst, HasGetValueTypeHash)
 	struct FString                                     BaseProfileName;                                           // 0x0048(0x0010) (Edit, ZeroConstructor, Config, HasGetValueTypeHash)
 	class UObject*                                     Parent;                                                    // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_7KSU[0x8];                                     // 0x0060(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7NGF[0x8];                                     // 0x0060(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FString>                             CVars;                                                     // 0x0068(0x0010) (Edit, ZeroConstructor, Config)
-	unsigned char                                      UnknownData_DJYV[0x8];                                     // 0x0078(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2INZ[0x8];                                     // 0x0078(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12292,7 +12292,7 @@ class UDeviceProfileManager : public UObject
 {
 public:
 	TArray<class UObject*>                             Profiles;                                                  // 0x0028(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData_JJUI[0x50];                                    // 0x0038(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LSW7[0x50];                                    // 0x0038(0x0050) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12312,9 +12312,9 @@ class UDialogueVoice : public UObject
 public:
 	TEnumAsByte<Engine_EGrammaticalGender>             Gender;                                                    // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EGrammaticalNumber>             Plurality;                                                 // 0x0029(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_M17W[0x2];                                     // 0x002A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HXSE[0x2];                                     // 0x002A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FGuid                                       LocalizationGUID;                                          // 0x002C(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_D912[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_7FK4[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12333,7 +12333,7 @@ class UDialogueWave : public UObject
 {
 public:
 	unsigned char                                      bMature : 1;                                               // 0x0028(0x0001) BIT_FIELD (Edit, NoDestructor, AssetRegistrySearchable)
-	unsigned char                                      UnknownData_IHFR[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WGXK[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FString                                     SpokenText;                                                // 0x0030(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash)
 	TArray<struct FDialogueContextMapping>             ContextMappings;                                           // 0x0040(0x0010) (Edit, ZeroConstructor)
 	struct FGuid                                       LocalizationGUID;                                          // 0x0050(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -12354,7 +12354,7 @@ public:
 class UDistribution : public UObject
 {
 public:
-	unsigned char                                      UnknownData_0G04[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_L9HU[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12373,7 +12373,7 @@ class UDistributionFloat : public UDistribution
 {
 public:
 	unsigned char                                      bCanBeBaked : 1;                                           // 0x0030(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_SJK5[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ZJVR[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12392,7 +12392,7 @@ class UDistributionFloatConstant : public UDistributionFloat
 {
 public:
 	float                                              Constant;                                                  // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_C5S4[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2MI1[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12416,7 +12416,7 @@ public:
 	float                                              MinOutput;                                                 // 0x0050(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxOutput;                                                 // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EDistributionParamMode>         ParamMode;                                                 // 0x0058(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_P1BA[0x7];                                     // 0x0059(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TC3L[0x7];                                     // 0x0059(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12508,7 +12508,7 @@ class UDistributionVector : public UDistribution
 public:
 	unsigned char                                      bCanBeBaked : 1;                                           // 0x0030(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bIsDirty : 1;                                              // 0x0030(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_NAXZ[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_7EE5[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12528,9 +12528,9 @@ class UDistributionVectorConstant : public UDistributionVector
 public:
 	struct FVector                                     Constant;                                                  // 0x0038(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	unsigned char                                      bLockAxes : 1;                                             // 0x0044(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_EA1T[0x3];                                     // 0x0045(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_P0U4[0x3];                                     // 0x0045(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EDistributionVectorLockFlags>   LockedAxes;                                                // 0x0048(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_V65C[0x7];                                     // 0x0049(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_M8F3[0x7];                                     // 0x0049(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12554,7 +12554,7 @@ public:
 	struct FVector                                     MinOutput;                                                 // 0x0070(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                     MaxOutput;                                                 // 0x007C(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Engine_EDistributionParamMode>         ParamModes[0x3];                                           // 0x0088(0x0003) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_T0ZC[0x5];                                     // 0x008B(0x0005) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_52V2[0x5];                                     // 0x008B(0x0005) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12591,9 +12591,9 @@ class UDistributionVectorConstantCurve : public UDistributionVector
 public:
 	struct FInterpCurveVector                          ConstantCurve;                                             // 0x0038(0x0018) (Edit, ZeroConstructor)
 	unsigned char                                      bLockAxes : 1;                                             // 0x0050(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_RBUI[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_99VC[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EDistributionVectorLockFlags>   LockedAxes;                                                // 0x0054(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_Q7L7[0x3];                                     // 0x0055(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5RBX[0x3];                                     // 0x0055(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12614,11 +12614,11 @@ public:
 	struct FVector                                     Max;                                                       // 0x0038(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                     Min;                                                       // 0x0044(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	unsigned char                                      bLockAxes : 1;                                             // 0x0050(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_NW4P[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_IAK5[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EDistributionVectorLockFlags>   LockedAxes;                                                // 0x0054(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EDistributionVectorMirrorFlags> MirrorFlags[0x3];                                          // 0x0055(0x0003) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bUseExtremes : 1;                                          // 0x0058(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_OIN8[0x7];                                     // 0x0059(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3LN8[0x7];                                     // 0x0059(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12639,12 +12639,12 @@ public:
 	struct FInterpCurveTwoVectors                      ConstantCurve;                                             // 0x0038(0x0018) (Edit, ZeroConstructor)
 	unsigned char                                      bLockAxes1 : 1;                                            // 0x0050(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bLockAxes2 : 1;                                            // 0x0050(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_FZRS[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Y87I[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EDistributionVectorLockFlags>   LockedAxes[0x2];                                           // 0x0054(0x0002) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EDistributionVectorMirrorFlags> MirrorFlags[0x3];                                          // 0x0056(0x0003) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_WU1B[0x3];                                     // 0x0059(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HHC7[0x3];                                     // 0x0059(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bUseExtremes : 1;                                          // 0x005C(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_E8IV[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_SCA7[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12861,7 +12861,7 @@ public:
 	unsigned char                                      bEditable : 1;                                             // 0x0040(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bAllowDeletion : 1;                                        // 0x0040(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bAllowRenaming : 1;                                        // 0x0040(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_GLFM[0x4F];                                    // 0x0041(0x004F) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_1XRH[0x4F];                                    // 0x0041(0x004F) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12932,9 +12932,9 @@ public:
 class UEndUserSettings : public UObject
 {
 public:
-	unsigned char                                      UnknownData_T673[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TX8K[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	bool                                               bSendAnonymousUsageDataToEpic;                             // 0x0030(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_JGQ6[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_CCXW[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12978,7 +12978,7 @@ public:
 	unsigned char                                      bText : 1;                                                 // 0x0060(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bSelectedOnly : 1;                                         // 0x0060(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bForceFileOperations : 1;                                  // 0x0060(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_JSER[0x7];                                     // 0x0061(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_IQPI[0x7];                                     // 0x0061(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -12999,7 +12999,7 @@ public:
 	struct FStringAssetReference                       FFTWaterMaterialName;                                      // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 	struct FStringAssetReference                       FFTWaterFoamTextureName;                                   // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
 	int                                                BaseMeshDetail;                                            // 0x0048(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YZRV[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_IBTP[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -13035,9 +13035,9 @@ public:
 class UFont : public UObject
 {
 public:
-	unsigned char                                      UnknownData_VAEY[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_KL1Q[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EFontCacheType>                 FontCacheType;                                             // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YB19[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_OS73[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FFontCharacter>                      Characters;                                                // 0x0038(0x0010) (Edit, ZeroConstructor)
 	TArray<class UTexture2D*>                          Textures;                                                  // 0x0048(0x0010) (ZeroConstructor)
 	int                                                IsRemapped;                                                // 0x0058(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -13048,13 +13048,13 @@ public:
 	int                                                Kerning;                                                   // 0x006C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FFontImportOptionsData                      ImportOptions;                                             // 0x0070(0x00B0) (Edit)
 	int                                                NumCharacters;                                             // 0x0120(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FUYI[0x4];                                     // 0x0124(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TUII[0x4];                                     // 0x0124(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<int>                                        MaxCharHeight;                                             // 0x0128(0x0010) (ZeroConstructor, Transient)
 	float                                              ScalingFactor;                                             // 0x0138(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                LegacyFontSize;                                            // 0x013C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       LegacyFontName;                                            // 0x0140(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FCompositeFont                              CompositeFont;                                             // 0x0148(0x0028)
-	unsigned char                                      UnknownData_NVYA[0x68];                                    // 0x0170(0x0068) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_Z9DK[0x68];                                    // 0x0170(0x0068) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -13091,11 +13091,11 @@ class UHighLatencySettings : public UObject
 {
 public:
 	bool                                               UseHighLatency;                                            // 0x0028(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_Y80P[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QH5M[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                PktLag;                                                    // 0x002C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                PktLagVariance;                                            // 0x0030(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               PktOrder;                                                  // 0x0034(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_KK1L[0x3];                                     // 0x0035(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6669[0x3];                                     // 0x0035(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                PktDup;                                                    // 0x0038(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                PktLoss;                                                   // 0x003C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -13133,7 +13133,7 @@ public:
 	struct FName                                       Head;                                                      // 0x00A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FHIKBoneTransform>                   BoneTransforms;                                            // 0x00A8(0x0010) (Edit, ZeroConstructor)
 	bool                                               Locked;                                                    // 0x00B8(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_4CXD[0x7];                                     // 0x00B9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_41TS[0x7];                                     // 0x00B9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<int>                                        UnrealToHumanIKBoneMapping;                                // 0x00C0(0x0010) (ZeroConstructor)
 	TArray<struct FHIKBoneMapping>                     AdditionalBones;                                           // 0x00D0(0x0010) (ZeroConstructor)
 	bool                                               LeftElbowInverted;                                         // 0x00E0(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -13141,25 +13141,25 @@ public:
 	bool                                               LeftKneeInverted;                                          // 0x00E2(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               RightKneeInverted;                                         // 0x00E3(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               AdjustLeftShoulder;                                        // 0x00E4(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_J4XQ[0x3];                                     // 0x00E5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9H9V[0x3];                                     // 0x00E5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     AdjustLeftShoulder_Axis;                                   // 0x00E8(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              AdjustLeftShoulder_Angle;                                  // 0x00F4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               AdjustRightShoulder;                                       // 0x00F8(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_MXIA[0x3];                                     // 0x00F9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QHYT[0x3];                                     // 0x00F9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     AdjustRightShoulder_Axis;                                  // 0x00FC(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              AdjustRightShoulder_Angle;                                 // 0x0108(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               SpineSquashNStretch;                                       // 0x010C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               NeckSquashNStretch;                                        // 0x010D(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_5RNJ[0x2];                                     // 0x010E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_VAP9[0x2];                                     // 0x010E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              SpineJointsMinSquashNStretchFactor;                        // 0x0110(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              SpineJointsMaxSquashNStretchFactor;                        // 0x0114(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              NeckJointsMinSquashNStretchFactor;                         // 0x0118(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              NeckJointsMaxSquashNStretchFactor;                         // 0x011C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bInitFromSkeleton;                                         // 0x0120(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_RPEA[0x3];                                     // 0x0121(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_2C9M[0x3];                                     // 0x0121(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                InitFromSkeletonCount;                                     // 0x0124(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                                    ImportRotator;                                             // 0x0128(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_LDBN[0x4];                                     // 0x0134(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_IC6L[0x4];                                     // 0x0134(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -13195,14 +13195,14 @@ public:
 class UPlayerInput : public UObject
 {
 public:
-	unsigned char                                      UnknownData_AQ7J[0xF8];                                    // 0x0028(0x00F8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GNMG[0xF8];                                    // 0x0028(0x00F8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FKeyBind>                            DebugExecBindings;                                         // 0x0120(0x0010) (ZeroConstructor, Config)
-	unsigned char                                      UnknownData_7U8S[0x40];                                    // 0x0130(0x0040) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WXT3[0x40];                                    // 0x0130(0x0040) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FName>                               GamepadInvertedAxes;                                       // 0x0170(0x0010) (ZeroConstructor, Config)
 	TArray<struct FName>                               MouseInvertedAxes;                                         // 0x0180(0x0010) (ZeroConstructor, Config)
 	TArray<struct FName>                               InvertedCombinedAxisY;                                     // 0x0190(0x0010) (ZeroConstructor, Config)
 	TArray<struct FName>                               InvertedCombinedAxisX;                                     // 0x01A0(0x0010) (ZeroConstructor, Config)
-	unsigned char                                      UnknownData_8IY9[0x2A8];                                   // 0x01B0(0x02A8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_7DSD[0x2A8];                                   // 0x01B0(0x02A8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -13237,16 +13237,16 @@ public:
 	unsigned char                                      bUseMouseForTouch : 1;                                     // 0x0038(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
 	unsigned char                                      bEnableMouseSmoothing : 1;                                 // 0x0038(0x0001) BIT_FIELD (Edit, Config, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bEnableFOVScaling : 1;                                     // 0x0038(0x0001) BIT_FIELD (Edit, Config, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_CY6G[0x3];                                     // 0x0039(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_V1XM[0x3];                                     // 0x0039(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              FOVScale;                                                  // 0x003C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              DoubleClickTime;                                           // 0x0040(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_UR85[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_J25H[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FInputActionKeyMapping>              ActionMappings;                                            // 0x0048(0x0010) (Edit, ZeroConstructor, Config)
 	TArray<struct FInputAxisKeyMapping>                AxisMappings;                                              // 0x0058(0x0010) (Edit, ZeroConstructor, Config)
 	TArray<struct FInputCombinedAxisKeyMapping>        CombinedAxisMappings;                                      // 0x0068(0x0010) (Edit, ZeroConstructor, Config)
 	bool                                               bAlwaysShowTouchInterface;                                 // 0x0078(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
 	bool                                               bShowConsoleOnFourFingerTap;                               // 0x0079(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_G0A1[0x6];                                     // 0x007A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_FDDU[0x6];                                     // 0x007A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FStringAssetReference                       DefaultTouchInterface;                                     // 0x0080(0x0010) (Edit, ZeroConstructor, Config)
 	struct FKey                                        ConsoleKey;                                                // 0x0090(0x0020) (Config, Deprecated)
 	TArray<struct FKey>                                ConsoleKeys;                                               // 0x00B0(0x0010) (Edit, ZeroConstructor, Config)
@@ -13269,7 +13269,7 @@ class UInterpCurveEdSetup : public UObject
 public:
 	TArray<struct FCurveEdTab>                         Tabs;                                                      // 0x0028(0x0010) (ZeroConstructor)
 	int                                                ActiveTab;                                                 // 0x0038(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_BK0K[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_EHH0[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -13294,7 +13294,7 @@ public:
 	float                                              EdSectionStart;                                            // 0x0048(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              EdSectionEnd;                                              // 0x004C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bShouldBakeAndPrune : 1;                                   // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_TMP6[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZG2M[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UInterpGroupDirector*                        CachedDirectorGroup;                                       // 0x0058(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FName>                               AllEventNames;                                             // 0x0060(0x0010) (ZeroConstructor)
 
@@ -13366,7 +13366,7 @@ public:
 class UInterpGroup : public UObject
 {
 public:
-	unsigned char                                      UnknownData_088G[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LP7H[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UInterpTrack*>                        InterpTracks;                                              // 0x0030(0x0010) (ExportObject, ZeroConstructor)
 	struct FName                                       GroupName;                                                 // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FColor                                      GroupColor;                                                // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -13375,7 +13375,7 @@ public:
 	unsigned char                                      bIsFolder : 1;                                             // 0x004C(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bIsParented : 1;                                           // 0x004C(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bIsSelected : 1;                                           // 0x004C(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_OBKZ[0x3];                                     // 0x004D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_IGI8[0x3];                                     // 0x004D(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -13395,7 +13395,7 @@ class UInterpGroupCamera : public UInterpGroup
 public:
 	class UCameraAnim*                                 CameraAnimInst;                                            // 0x0050(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              CompressTolerance;                                         // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CEZT[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_WD1P[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -13484,11 +13484,11 @@ public:
 class UInterpTrack : public UObject
 {
 public:
-	unsigned char                                      UnknownData_SBDL[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_O4CI[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UInterpTrack*>                        SubTracks;                                                 // 0x0038(0x0010) (ZeroConstructor)
 	class UClass*                                      TrackInstClass;                                            // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ETrackActiveCondition>          ActiveCondition;                                           // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_Y8BW[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9URB[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FString                                     TrackTitle;                                                // 0x0058(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	unsigned char                                      bOnePerGroup : 1;                                          // 0x0068(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bDirGroupOnly : 1;                                         // 0x0068(0x0001) BIT_FIELD (NoDestructor)
@@ -13498,7 +13498,7 @@ public:
 	unsigned char                                      bSubTrackOnly : 1;                                         // 0x0068(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bVisible : 1;                                              // 0x0068(0x0001) BIT_FIELD (Transient, NoDestructor)
 	unsigned char                                      bIsRecording : 1;                                          // 0x0068(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_4X9V[0x7];                                     // 0x0069(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_NWIC[0x7];                                     // 0x0069(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -13537,7 +13537,7 @@ class UInterpTrackDirector : public UInterpTrack
 public:
 	TArray<struct FDirectorTrackCut>                   CutTrack;                                                  // 0x0070(0x0010) (ZeroConstructor)
 	unsigned char                                      bSimulateCameraCutsOnClients : 1;                          // 0x0080(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_22JD[0x7];                                     // 0x0081(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_633N[0x7];                                     // 0x0081(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -13560,7 +13560,7 @@ public:
 	unsigned char                                      bFireEventsWhenBackwards : 1;                              // 0x0080(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bFireEventsWhenJumpingForwards : 1;                        // 0x0080(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bUseCustomEventName : 1;                                   // 0x0080(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_Z0OJ[0x7];                                     // 0x0081(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_EUN0[0x7];                                     // 0x0081(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -13580,7 +13580,7 @@ class UInterpTrackFloatBase : public UInterpTrack
 public:
 	struct FInterpCurveFloat                           FloatTrack;                                                // 0x0070(0x0018) (ZeroConstructor)
 	float                                              CurveTension;                                              // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EAOU[0x4];                                     // 0x008C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_763W[0x4];                                     // 0x008C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -13601,7 +13601,7 @@ public:
 	struct FName                                       SlotName;                                                  // 0x0090(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FAnimControlTrackKey>                AnimSeqs;                                                  // 0x0098(0x0010) (ZeroConstructor)
 	unsigned char                                      bSkipAnimNotifiers : 1;                                    // 0x00A8(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_Y7MA[0x7];                                     // 0x00A9(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2Y41[0x7];                                     // 0x00A9(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -13621,9 +13621,9 @@ class UInterpTrackFade : public UInterpTrackFloatBase
 public:
 	unsigned char                                      bPersistFade : 1;                                          // 0x0090(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bFadeAudio : 1;                                            // 0x0090(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_JZD3[0x3];                                     // 0x0091(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_NRA9[0x3];                                     // 0x0091(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FLinearColor                                FadeColor;                                                 // 0x0094(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_WQJW[0x4];                                     // 0x00A4(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AGU0[0x4];                                     // 0x00A4(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -13643,7 +13643,7 @@ class UInterpTrackFloatAnimBPParam : public UInterpTrackFloatBase
 public:
 	class UClass*                                      AnimBlueprintClass;                                        // 0x0090(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       ParamName;                                                 // 0x0098(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_0POR[0x8];                                     // 0x00A0(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_QM1A[0x8];                                     // 0x00A0(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -13728,9 +13728,9 @@ public:
 	unsigned char                                      bShowTranslationOnCurveEd : 1;                             // 0x00C0(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bShowRotationOnCurveEd : 1;                                // 0x00C0(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bHide3DTrack : 1;                                          // 0x00C0(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_OUJC[0x3];                                     // 0x00C1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MIVJ[0x3];                                     // 0x00C1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EInterpTrackMoveRotMode>        RotMode;                                                   // 0x00C4(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_IUAP[0x3];                                     // 0x00C5(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_NO9B[0x3];                                     // 0x00C5(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -13749,7 +13749,7 @@ class UInterpTrackMoveAxis : public UInterpTrackFloatBase
 {
 public:
 	TEnumAsByte<Engine_EInterpMoveAxis>                MoveAxis;                                                  // 0x0090(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_7V8I[0x7];                                     // 0x0091(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_979B[0x7];                                     // 0x0091(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FInterpLookupTrack                          LookupTrack;                                               // 0x0098(0x0010)
 
 
@@ -13770,7 +13770,7 @@ class UInterpTrackLinearColorBase : public UInterpTrack
 public:
 	struct FInterpCurveLinearColor                     LinearColorTrack;                                          // 0x0070(0x0018) (ZeroConstructor)
 	float                                              CurveTension;                                              // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YZH2[0x4];                                     // 0x008C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_XXW9[0x4];                                     // 0x008C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -13830,7 +13830,7 @@ public:
 	unsigned char                                      bFireEventsWhenForwards : 1;                               // 0x0080(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bFireEventsWhenBackwards : 1;                              // 0x0080(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bFireEventsWhenJumpingForwards : 1;                        // 0x0080(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_B5YH[0x7];                                     // 0x0081(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_IDFE[0x7];                                     // 0x0081(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -13850,7 +13850,7 @@ class UInterpTrackVectorBase : public UInterpTrack
 public:
 	struct FInterpCurveVector                          VectorTrack;                                               // 0x0070(0x0018) (ZeroConstructor)
 	float                                              CurveTension;                                              // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_R6CL[0x4];                                     // 0x008C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_7548[0x4];                                     // 0x008C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -13926,7 +13926,7 @@ public:
 	unsigned char                                      bSuppressSubtitles : 1;                                    // 0x00A0(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bTreatAsDialogue : 1;                                      // 0x00A0(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bAttach : 1;                                               // 0x00A0(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_A1HI[0x7];                                     // 0x00A1(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_0OBT[0x7];                                     // 0x00A1(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -13985,7 +13985,7 @@ public:
 	unsigned char                                      bFireEventsWhenForwards : 1;                               // 0x0080(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bFireEventsWhenBackwards : 1;                              // 0x0080(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bFireEventsWhenJumpingForwards : 1;                        // 0x0080(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_CKOB[0x7];                                     // 0x0081(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_FQR7[0x7];                                     // 0x0081(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -14021,7 +14021,7 @@ class UInterpTrackInstAnimControl : public UInterpTrackInst
 {
 public:
 	float                                              LastUpdatePosition;                                        // 0x0028(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_SMIH[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5IQL[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -14092,7 +14092,7 @@ class UInterpTrackInstEvent : public UInterpTrackInst
 {
 public:
 	float                                              LastUpdatePosition;                                        // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_77DG[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ZLVM[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -14129,7 +14129,7 @@ class UInterpTrackInstFloatAnimBPParam : public UInterpTrackInst
 public:
 	class UAnimInstance*                               AnimScriptInstance;                                        // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ResetFloat;                                                // 0x0030(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_P9UB[0xC];                                     // 0x0034(0x000C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_U273[0xC];                                     // 0x0034(0x000C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -14169,7 +14169,7 @@ class UInterpTrackInstFloatParticleParam : public UInterpTrackInst
 {
 public:
 	float                                              ResetFloat;                                                // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_UOC6[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_WKGX[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -14207,7 +14207,7 @@ class UInterpTrackInstParticleReplay : public UInterpTrackInst
 {
 public:
 	float                                              LastUpdatePosition;                                        // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_341T[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TB81[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -14244,10 +14244,10 @@ public:
 class UInterpTrackInstBoolProp : public UInterpTrackInstProperty
 {
 public:
-	unsigned char                                      UnknownData_61PS[0x8];                                     // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_52M4[0x8];                                     // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UBoolProperty*                               BoolProperty;                                              // 0x0040(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               ResetBool;                                                 // 0x0048(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_S7BR[0x7];                                     // 0x0049(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_B4E8[0x7];                                     // 0x0049(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -14265,9 +14265,9 @@ public:
 class UInterpTrackInstColorProp : public UInterpTrackInstProperty
 {
 public:
-	unsigned char                                      UnknownData_G7ZL[0x8];                                     // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_USB4[0x8];                                     // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FColor                                      ResetColor;                                                // 0x0040(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_RA5D[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_B99Q[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -14285,9 +14285,9 @@ public:
 class UInterpTrackInstFloatProp : public UInterpTrackInstProperty
 {
 public:
-	unsigned char                                      UnknownData_YLPH[0x8];                                     // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_AW0X[0x8];                                     // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              ResetFloat;                                                // 0x0040(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_S5E1[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_FOHY[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -14305,7 +14305,7 @@ public:
 class UInterpTrackInstLinearColorProp : public UInterpTrackInstProperty
 {
 public:
-	unsigned char                                      UnknownData_7ZZA[0x8];                                     // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_K3D3[0x8];                                     // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FLinearColor                                ResetColor;                                                // 0x0040(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 
 
@@ -14324,9 +14324,9 @@ public:
 class UInterpTrackInstVectorProp : public UInterpTrackInstProperty
 {
 public:
-	unsigned char                                      UnknownData_V74X[0x8];                                     // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YOJ7[0x8];                                     // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     ResetVector;                                               // 0x0040(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_Y1P3[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_NBID[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -14345,7 +14345,7 @@ class UInterpTrackInstSound : public UInterpTrackInst
 {
 public:
 	float                                              LastUpdatePosition;                                        // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_97GR[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6VJ5[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UAudioComponent*                             PlayAudioComp;                                             // 0x0030(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -14365,10 +14365,10 @@ class UInterpTrackInstToggle : public UInterpTrackInst
 {
 public:
 	TEnumAsByte<Engine_ETrackToggleAction>             Action;                                                    // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YC6N[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_CCD6[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              LastUpdatePosition;                                        // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bSavedActiveState : 1;                                     // 0x0030(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_GD76[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_MW3X[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -14408,7 +14408,7 @@ class UInterpTrackInstVisibility : public UInterpTrackInst
 {
 public:
 	TEnumAsByte<Engine_EVisibilityTrackAction>         Action;                                                    // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DZ19[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1MO5[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              LastUpdatePosition;                                        // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -14428,16 +14428,16 @@ class UIntSerialization : public UObject
 {
 public:
 	uint16_t                                           UnsignedInt16Variable;                                     // 0x0028(0x0002) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TI3R[0x2];                                     // 0x002A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SPV9[0x2];                                     // 0x002A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	uint32_t                                           UnsignedInt32Variable;                                     // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint64_t                                           UnsignedInt64Variable;                                     // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int8_t                                             SignedInt8Variable;                                        // 0x0038(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_42MP[0x1];                                     // 0x0039(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_OKMK[0x1];                                     // 0x0039(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int16_t                                            SignedInt16Variable;                                       // 0x003A(0x0002) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_3S40[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1TF9[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int64_t                                            SignedInt64Variable;                                       // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      UnsignedInt8Variable;                                      // 0x0048(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_NXSE[0x3];                                     // 0x0049(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LKWJ[0x3];                                     // 0x0049(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                SignedInt32Variable;                                       // 0x004C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -14458,7 +14458,7 @@ class ULayer : public UObject
 public:
 	struct FName                                       LayerName;                                                 // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bIsVisible : 1;                                            // 0x0030(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_PW07[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TE0T[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FLayerActorStats>                    ActorStats;                                                // 0x0038(0x0010) (ZeroConstructor, Transient)
 
 
@@ -14496,35 +14496,35 @@ class ULevelStreaming : public UObject
 {
 public:
 	TAssetPtr<class UWorld>                            WorldAsset;                                                // 0x0028(0x001C) ELEMENT_SIZE_MISMATCH (Edit, BlueprintVisible, BlueprintReadOnly, EditConst, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_A3LC[0x4];                                     // 0x0028(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	unsigned char                                      UnknownData_Q5EZ[0x8];                                     // 0x0048(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_2FHL[0x4];                                     // 0x0028(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_5CT0[0x8];                                     // 0x0048(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       PackageNameToLoad;                                         // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FName>                               LODPackageNames;                                           // 0x0058(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_7JID[0x18];                                    // 0x0068(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_52EA[0x18];                                    // 0x0068(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FTransform                                  LevelTransform;                                            // 0x0080(0x0030) (Edit, BlueprintVisible, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_GOIB[0xC];                                     // 0x00B0(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	unsigned char                                      UnknownData_B1K6 : 3;                                      // 0x00BC(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_I7EG[0xC];                                     // 0x00B0(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_G786 : 3;                                      // 0x00BC(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bShouldBeVisibleInEditor : 1;                              // 0x00BC(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      Blocked : 1;                                               // 0x00BC(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bShouldBeLoaded : 1;                                       // 0x00BC(0x0001) BIT_FIELD (BlueprintVisible, NoDestructor)
 	unsigned char                                      bShouldBeVisible : 1;                                      // 0x00BC(0x0001) BIT_FIELD (BlueprintVisible, NoDestructor)
 	unsigned char                                      bShouldBlockOnLoad : 1;                                    // 0x00BC(0x0001) BIT_FIELD (BlueprintVisible, NoDestructor)
-	unsigned char                                      UnknownData_0QTX[0x3];                                     // 0x00BD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5JZL[0x3];                                     // 0x00BD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                LevelLODIndex;                                             // 0x00C0(0x0004) (BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bDisableDistanceStreaming : 1;                             // 0x00C4(0x0001) BIT_FIELD (BlueprintVisible, Transient, NoDestructor)
-	unsigned char                                      UnknownData_IHTI : 2;                                      // 0x00C4(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_75EP : 2;                                      // 0x00C4(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bDrawOnLevelStatusMap : 1;                                 // 0x00C4(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_DEPR[0x3];                                     // 0x00C5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Z72X[0x3];                                     // 0x00C5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FLinearColor                                LevelColor;                                                // 0x00C8(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<class ALevelStreamingVolume*>               EditorStreamingVolumes;                                    // 0x00D8(0x0010) (Edit, ZeroConstructor)
 	float                                              MinTimeBetweenVolumeUnloadRequests;                        // 0x00E8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_948Z[0x4];                                     // 0x00EC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_V4CM[0x4];                                     // 0x00EC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FString>                             Keywords;                                                  // 0x00F0(0x0010) (ZeroConstructor)
 	struct FScriptMulticastDelegate                    OnLevelLoaded;                                             // 0x0100(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnLevelUnloaded;                                           // 0x0110(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnLevelShown;                                              // 0x0120(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnLevelHidden;                                             // 0x0130(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_70A8[0x240];                                   // 0x0140(0x0240) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HKDM[0x240];                                   // 0x0140(0x0240) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class ULevel*                                      LoadedLevel;                                               // 0x0380(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ULevel*                                      PendingUnloadLevel;                                        // 0x0388(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -14568,7 +14568,7 @@ class ULevelStreamingKismet : public ULevelStreaming
 public:
 	unsigned char                                      bInitiallyLoaded : 1;                                      // 0x0390(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bInitiallyVisible : 1;                                     // 0x0390(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_XWSU[0xF];                                     // 0x0391(0x000F) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_1WP9[0xF];                                     // 0x0391(0x000F) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -14796,7 +14796,7 @@ public:
 	int                                                ReferenceIndex;                                            // 0x0070(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       BoneName;                                                  // 0x0074(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bPosition;                                                 // 0x007C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_WT3W[0x3];                                     // 0x007D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3WEJ[0x3];                                     // 0x007D(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -14816,7 +14816,7 @@ class UMaterialExpressionBreakMaterialAttributes : public UMaterialExpression
 public:
 	struct FExpressionInput                            Struct;                                                    // 0x0070(0x0038) (ZeroConstructor)
 	struct FMaterialAttributesInput                    MaterialAttributes;                                        // 0x00A8(0x0038) (ZeroConstructor)
-	unsigned char                                      UnknownData_A0FF[0x10];                                    // 0x00E0(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4072[0x10];                                    // 0x00E0(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -14840,7 +14840,7 @@ public:
 	float                                              HeightRatio;                                               // 0x0118(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ReferencePlane;                                            // 0x011C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint32_t                                           ConstCoordinate;                                           // 0x0120(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_60W0[0x4];                                     // 0x0124(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_E0JJ[0x4];                                     // 0x0124(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -14949,10 +14949,10 @@ public:
 	struct FExpressionInput                            Min;                                                       // 0x00A8(0x0038) (ZeroConstructor)
 	struct FExpressionInput                            Max;                                                       // 0x00E0(0x0038) (ZeroConstructor)
 	TEnumAsByte<Engine_EClampMode>                     ClampMode;                                                 // 0x0118(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_M379[0x3];                                     // 0x0119(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5GR1[0x3];                                     // 0x0119(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MinDefault;                                                // 0x011C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxDefault;                                                // 0x0120(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_UCVK[0x4];                                     // 0x0124(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HU6L[0x4];                                     // 0x0124(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -15016,7 +15016,7 @@ public:
 	unsigned char                                      G : 1;                                                     // 0x00A8(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      B : 1;                                                     // 0x00A8(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      A : 1;                                                     // 0x00A8(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_LMW2[0x7];                                     // 0x00A9(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8V5H[0x7];                                     // 0x00A9(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -15035,7 +15035,7 @@ class UMaterialExpressionConstant : public UMaterialExpression
 {
 public:
 	float                                              R;                                                         // 0x0070(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_D92D[0x4];                                     // 0x0074(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_42C3[0x4];                                     // 0x0074(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -15130,7 +15130,7 @@ class UMaterialExpressionCosine : public UMaterialExpression
 public:
 	struct FExpressionInput                            Input;                                                     // 0x0070(0x0038) (ZeroConstructor)
 	float                                              Period;                                                    // 0x00A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_D5N9[0x4];                                     // 0x00AC(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AXGK[0x4];                                     // 0x00AC(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -15169,7 +15169,7 @@ class UMaterialExpressionCustom : public UMaterialExpression
 public:
 	struct FString                                     Code;                                                      // 0x0070(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ECustomMaterialOutputType>      OutputType;                                                // 0x0080(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_0SDJ[0x7];                                     // 0x0081(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5W9Z[0x7];                                     // 0x0081(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FString                                     Description;                                               // 0x0088(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash)
 	TArray<struct FCustomInput>                        Inputs;                                                    // 0x0098(0x0010) (Edit, ZeroConstructor)
 	struct FString                                     DeclarationCode;                                           // 0x00A8(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash)
@@ -15286,7 +15286,7 @@ class UMaterialExpressionDepthOfFieldFunction : public UMaterialExpression
 {
 public:
 	TEnumAsByte<Engine_EDepthOfFieldFunctionValue>     FunctionValue;                                             // 0x0070(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZUKO[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HQYN[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FExpressionInput                            Depth;                                                     // 0x0078(0x0038) (ZeroConstructor)
 
 
@@ -15549,7 +15549,7 @@ class UMaterialExpressionFontSample : public UMaterialExpression
 public:
 	class UFont*                                       Font;                                                      // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                FontTexturePage;                                           // 0x0078(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_OCH7[0x4];                                     // 0x007C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_1AA0[0x4];                                     // 0x007C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -15607,10 +15607,10 @@ class UMaterialExpressionFresnel : public UMaterialExpression
 public:
 	struct FExpressionInput                            ExponentIn;                                                // 0x0070(0x0038) (ZeroConstructor)
 	float                                              Exponent;                                                  // 0x00A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DOB5[0x4];                                     // 0x00AC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_H51Z[0x4];                                     // 0x00AC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FExpressionInput                            BaseReflectFractionIn;                                     // 0x00B0(0x0038) (ZeroConstructor)
 	float                                              BaseReflectFraction;                                       // 0x00E8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9RLL[0x4];                                     // 0x00EC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_N7B3[0x4];                                     // 0x00EC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FExpressionInput                            Normal;                                                    // 0x00F0(0x0038) (ZeroConstructor)
 
 
@@ -15634,13 +15634,13 @@ public:
 	struct FString                                     Description;                                               // 0x00B8(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash)
 	struct FGuid                                       Id;                                                        // 0x00C8(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Engine_EFunctionInputType>             InputType;                                                 // 0x00D8(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_BLH5[0x7];                                     // 0x00D9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6GNL[0x7];                                     // 0x00D9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector4                                    PreviewValue;                                              // 0x00E0(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	unsigned char                                      bUsePreviewValueAsDefault : 1;                             // 0x00F0(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_8PZO[0x3];                                     // 0x00F1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_IG32[0x3];                                     // 0x00F1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                SortPriority;                                              // 0x00F4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bCompilingFunctionPreview : 1;                             // 0x00F8(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_OOD5[0x7];                                     // 0x00F9(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_OF5D[0x7];                                     // 0x00F9(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -15661,12 +15661,12 @@ public:
 	struct FString                                     OutputName;                                                // 0x0070(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash)
 	struct FString                                     Description;                                               // 0x0080(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash)
 	int                                                SortPriority;                                              // 0x0090(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_3PQ6[0x4];                                     // 0x0094(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HIS4[0x4];                                     // 0x0094(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FExpressionInput                            A;                                                         // 0x0098(0x0038) (ZeroConstructor)
 	unsigned char                                      bLastPreviewed : 1;                                        // 0x00D0(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_O04S[0x3];                                     // 0x00D1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GDMJ[0x3];                                     // 0x00D1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FGuid                                       Id;                                                        // 0x00D4(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_2A8N[0x4];                                     // 0x00E4(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ZK98[0x4];                                     // 0x00E4(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -15730,7 +15730,7 @@ public:
 	float                                              EqualsThreshold;                                           // 0x0188(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ConstB;                                                    // 0x018C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ConstAEqualsB;                                             // 0x0190(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_1BJJ[0x4];                                     // 0x0194(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_UEA8[0x4];                                     // 0x0194(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -15826,7 +15826,7 @@ public:
 	float                                              ConstA;                                                    // 0x0118(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ConstB;                                                    // 0x011C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ConstAlpha;                                                // 0x0120(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_3LDH[0x4];                                     // 0x0124(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AMPD[0x4];                                     // 0x0124(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -16038,9 +16038,9 @@ public:
 	float                                              Scale;                                                     // 0x00E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                Quality;                                                   // 0x00E4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ENoiseFunction>                 NoiseFunction;                                             // 0x00E8(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_GPUC[0x3];                                     // 0x00E9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_D65M[0x3];                                     // 0x00E9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bTurbulence : 1;                                           // 0x00EC(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_L5VY[0x3];                                     // 0x00ED(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_OYFU[0x3];                                     // 0x00ED(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                Levels;                                                    // 0x00F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              OutputMin;                                                 // 0x00F4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              OutputMax;                                                 // 0x00F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -16172,7 +16172,7 @@ public:
 	float                                              SpeedY;                                                    // 0x00E4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint32_t                                           ConstCoordinate;                                           // 0x00E8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bFractionalPart;                                           // 0x00EC(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_HH3F[0x3];                                     // 0x00ED(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_GKK3[0x3];                                     // 0x00ED(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -16213,7 +16213,7 @@ public:
 	float                                              DefaultValue;                                              // 0x0090(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              SliderMin;                                                 // 0x0094(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              SliderMax;                                                 // 0x0098(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HQGJ[0x4];                                     // 0x009C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_VETF[0x4];                                     // 0x009C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -16232,7 +16232,7 @@ class UMaterialExpressionStaticBoolParameter : public UMaterialExpressionParamet
 {
 public:
 	unsigned char                                      DefaultValue : 1;                                          // 0x0090(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_K0IP[0x7];                                     // 0x0091(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_JZJU[0x7];                                     // 0x0091(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -16274,7 +16274,7 @@ public:
 	unsigned char                                      DefaultG : 1;                                              // 0x00C8(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      DefaultB : 1;                                              // 0x00C8(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      DefaultA : 1;                                              // 0x00C8(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_XVRJ[0x7];                                     // 0x00C9(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_KYVB[0x7];                                     // 0x00C9(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -16534,7 +16534,7 @@ public:
 	struct FExpressionInput                            Base;                                                      // 0x0070(0x0038) (ZeroConstructor)
 	struct FExpressionInput                            Exponent;                                                  // 0x00A8(0x0038) (ZeroConstructor)
 	float                                              ConstExponent;                                             // 0x00E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_KF44[0x4];                                     // 0x00E4(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_K0VL[0x4];                                     // 0x00E4(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -16590,7 +16590,7 @@ class UMaterialExpressionReflectionVectorWS : public UMaterialExpression
 public:
 	struct FExpressionInput                            CustomWorldNormal;                                         // 0x0070(0x0038) (ZeroConstructor)
 	unsigned char                                      bNormalizeCustomWorldNormal : 1;                           // 0x00A8(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_VG9V[0x7];                                     // 0x00A9(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PL2N[0x7];                                     // 0x00A9(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -16613,7 +16613,7 @@ public:
 	struct FExpressionInput                            PivotPoint;                                                // 0x00E0(0x0038) (ZeroConstructor)
 	struct FExpressionInput                            Position;                                                  // 0x0118(0x0038) (ZeroConstructor)
 	float                                              Period;                                                    // 0x0150(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_0TED[0x4];                                     // 0x0154(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_U4KE[0x4];                                     // 0x0154(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -16655,7 +16655,7 @@ class UMaterialExpressionSceneColor : public UMaterialExpression
 {
 public:
 	TEnumAsByte<Engine_EMaterialSceneAttributeInputMode> InputMode;                                                 // 0x0070(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DQQZ[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5WJJ[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FExpressionInput                            Input;                                                     // 0x0078(0x0038) (ZeroConstructor)
 	struct FExpressionInput                            OffsetFraction;                                            // 0x00B0(0x0038) (ZeroConstructor, Deprecated)
 	struct FVector2D                                   ConstInput;                                                // 0x00E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -16677,7 +16677,7 @@ class UMaterialExpressionSceneDepth : public UMaterialExpression
 {
 public:
 	TEnumAsByte<Engine_EMaterialSceneAttributeInputMode> InputMode;                                                 // 0x0070(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HIU5[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BWSV[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FExpressionInput                            Input;                                                     // 0x0078(0x0038) (ZeroConstructor)
 	struct FExpressionInput                            Coordinates;                                               // 0x00B0(0x0038) (ZeroConstructor, Deprecated)
 	struct FVector2D                                   ConstInput;                                                // 0x00E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -16719,7 +16719,7 @@ public:
 	TEnumAsByte<Engine_ESceneTextureId>                SceneTextureId;                                            // 0x00A8(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bClampUVs;                                                 // 0x00A9(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               bFiltered;                                                 // 0x00AA(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_HY95[0x5];                                     // 0x00AB(0x0005) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_R3T2[0x5];                                     // 0x00AB(0x0005) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -16756,7 +16756,7 @@ class UMaterialExpressionSine : public UMaterialExpression
 public:
 	struct FExpressionInput                            Input;                                                     // 0x0070(0x0038) (ZeroConstructor)
 	float                                              Period;                                                    // 0x00A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_UP3T[0x4];                                     // 0x00AC(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PS21[0x4];                                     // 0x00AC(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -16777,10 +16777,10 @@ public:
 	TEnumAsByte<Engine_ESpeedTreeGeometryType>         GeometryType;                                              // 0x0070(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ESpeedTreeWindType>             WindType;                                                  // 0x0071(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ESpeedTreeLODType>              LODType;                                                   // 0x0072(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_QNXV[0x1];                                     // 0x0073(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_0DLG[0x1];                                     // 0x0073(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              BillboardThreshold;                                        // 0x0074(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bAccurateWindVelocities;                                   // 0x0078(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_R3EY[0x7];                                     // 0x0079(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_QJOY[0x7];                                     // 0x0079(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -16823,7 +16823,7 @@ class UMaterialExpressionSphericalParticleOpacity : public UMaterialExpression
 public:
 	struct FExpressionInput                            Density;                                                   // 0x0070(0x0038) (ZeroConstructor)
 	float                                              ConstantDensity;                                           // 0x00A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_UQ6O[0x4];                                     // 0x00AC(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HAYQ[0x4];                                     // 0x00AC(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -16860,7 +16860,7 @@ class UMaterialExpressionStaticBool : public UMaterialExpression
 {
 public:
 	unsigned char                                      Value : 1;                                                 // 0x0070(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_LYYN[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_VYEW[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -16879,7 +16879,7 @@ class UMaterialExpressionStaticSwitch : public UMaterialExpression
 {
 public:
 	unsigned char                                      DefaultValue : 1;                                          // 0x0070(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_RD2N[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_29CI[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FExpressionInput                            A;                                                         // 0x0078(0x0038) (ZeroConstructor)
 	struct FExpressionInput                            B;                                                         // 0x00B0(0x0038) (ZeroConstructor)
 	struct FExpressionInput                            Value;                                                     // 0x00E8(0x0038) (ZeroConstructor)
@@ -16923,9 +16923,9 @@ class UMaterialExpressionTextureBase : public UMaterialExpression
 public:
 	class UTexture*                                    Texture;                                                   // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EMaterialSamplerType>           SamplerType;                                               // 0x0078(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_I2YM[0x3];                                     // 0x0079(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BDZN[0x3];                                     // 0x0079(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      IsDefaultMeshpaintTexture : 1;                             // 0x007C(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_VENB[0x3];                                     // 0x007D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3SS5[0x3];                                     // 0x007D(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -16967,10 +16967,10 @@ public:
 	struct FExpressionInput                            CoordinatesDY;                                             // 0x0160(0x0038) (ZeroConstructor)
 	TEnumAsByte<Engine_ETextureMipValueMode>           MipValueMode;                                              // 0x0198(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ESamplerSourceMode>             SamplerSource;                                             // 0x0199(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ICJJ[0x2];                                     // 0x019A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_G6U2[0x2];                                     // 0x019A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	uint32_t                                           ConstCoordinate;                                           // 0x019C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                ConstMipValue;                                             // 0x01A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_IOB1[0x4];                                     // 0x01A4(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_I4HN[0x4];                                     // 0x01A4(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -16990,7 +16990,7 @@ class UMaterialExpressionParticleSubUV : public UMaterialExpressionTextureSample
 public:
 	unsigned char                                      bBlend : 1;                                                // 0x01A8(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bMipBiasOnLowResolution : 1;                               // 0x01A8(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_MGTT[0x7];                                     // 0x01A9(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_7NNB[0x7];                                     // 0x01A9(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17010,7 +17010,7 @@ class UMaterialExpressionPredicatedTextureSample : public UMaterialExpressionTex
 public:
 	struct FExpressionInput                            Predicate;                                                 // 0x01A8(0x0038) (ZeroConstructor)
 	struct FColor                                      DefaultColour;                                             // 0x01E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_9VOQ[0x4];                                     // 0x01E4(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_7X9O[0x4];                                     // 0x01E4(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17084,7 +17084,7 @@ class UMaterialExpressionAntialiasedTextureMask : public UMaterialExpressionText
 public:
 	float                                              Threshold;                                                 // 0x01C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ETextureColorChannel>           Channel;                                                   // 0x01CC(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_PCEL[0x3];                                     // 0x01CD(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4MFC[0x3];                                     // 0x01CD(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17104,7 +17104,7 @@ class UMaterialExpressionPredicatedTextureSampleParameter2D : public UMaterialEx
 public:
 	struct FExpressionInput                            Predicate;                                                 // 0x01C8(0x0038) (ZeroConstructor)
 	struct FColor                                      DefaultColour;                                             // 0x0200(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_7H0O[0x4];                                     // 0x0204(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_9ZOQ[0x4];                                     // 0x0204(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17124,7 +17124,7 @@ class UMaterialExpressionTextureSampleParameterSubUV : public UMaterialExpressio
 public:
 	unsigned char                                      bBlend : 1;                                                // 0x01C8(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bMipBiasOnLowResolution : 1;                               // 0x01C8(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_O7EO[0x7];                                     // 0x01C9(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HFWL[0x7];                                     // 0x01C9(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17164,7 +17164,7 @@ public:
 	float                                              VTiling;                                                   // 0x0078(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      UnMirrorU : 1;                                             // 0x007C(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      UnMirrorV : 1;                                             // 0x007C(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_4TE4[0x3];                                     // 0x007D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_I69O[0x3];                                     // 0x007D(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17184,7 +17184,7 @@ class UMaterialExpressionTime : public UMaterialExpression
 public:
 	unsigned char                                      bIgnorePause : 1;                                          // 0x0070(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bOverride_Period : 1;                                      // 0x0070(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_07AP[0x3];                                     // 0x0071(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_DNVI[0x3];                                     // 0x0071(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              Period;                                                    // 0x0074(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -17206,7 +17206,7 @@ public:
 	struct FExpressionInput                            Input;                                                     // 0x0070(0x0038) (ZeroConstructor)
 	TEnumAsByte<Engine_EMaterialVectorCoordTransformSource> TransformSourceType;                                       // 0x00A8(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EMaterialVectorCoordTransform>  TransformType;                                             // 0x00A9(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_U3C7[0x6];                                     // 0x00AA(0x0006) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_A84H[0x6];                                     // 0x00AA(0x0006) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17227,7 +17227,7 @@ public:
 	struct FExpressionInput                            Input;                                                     // 0x0070(0x0038) (ZeroConstructor)
 	TEnumAsByte<Engine_EMaterialPositionTransformSource> TransformSourceType;                                       // 0x00A8(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EMaterialPositionTransformSource> TransformType;                                             // 0x00A9(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_4BBH[0x6];                                     // 0x00AA(0x0006) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4HHD[0x6];                                     // 0x00AA(0x0006) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17332,7 +17332,7 @@ class UMaterialExpressionViewProperty : public UMaterialExpression
 {
 public:
 	TEnumAsByte<Engine_EMaterialExposedViewProperty>   Property;                                                  // 0x0070(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_JZ3F[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_XR3M[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17368,7 +17368,7 @@ class UMaterialExpressionWorldPosition : public UMaterialExpression
 {
 public:
 	TEnumAsByte<Engine_EWorldPositionIncludedOffsets>  WorldPositionShaderOffset;                                 // 0x0070(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_QEEB[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LFSU[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17389,11 +17389,11 @@ public:
 	struct FGuid                                       StateId;                                                   // 0x0028(0x0010) (ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor)
 	struct FString                                     Description;                                               // 0x0038(0x0010) (Edit, ZeroConstructor, AssetRegistrySearchable, HasGetValueTypeHash)
 	unsigned char                                      bExposeToLibrary : 1;                                      // 0x0048(0x0001) BIT_FIELD (Edit, NoDestructor, AssetRegistrySearchable)
-	unsigned char                                      UnknownData_R9WE[0x7];                                     // 0x0049(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1KNG[0x7];                                     // 0x0049(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FText>                               LibraryCategoriesText;                                     // 0x0050(0x0010) (Edit, ZeroConstructor, AssetRegistrySearchable)
 	TArray<class UMaterialExpression*>                 FunctionExpressions;                                       // 0x0060(0x0010) (ZeroConstructor)
 	unsigned char                                      bReentrantFlag : 1;                                        // 0x0070(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_LQ70[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_MUO9[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17441,7 +17441,7 @@ public:
 	struct FGuid                                       StateId;                                                   // 0x0028(0x0010) (ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor)
 	TArray<struct FCollectionScalarParameter>          ScalarParameters;                                          // 0x0038(0x0010) (Edit, ZeroConstructor)
 	TArray<struct FCollectionVectorParameter>          VectorParameters;                                          // 0x0048(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData_KU2V[0x8];                                     // 0x0058(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_6FKX[0x8];                                     // 0x0058(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17459,10 +17459,10 @@ public:
 class UMaterialParameterCollectionInstance : public UObject
 {
 public:
-	unsigned char                                      UnknownData_9GR5[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7QE2[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UMaterialParameterCollection*                Collection;                                                // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	class UWorld*                                      World;                                                     // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FS23[0xB0];                                    // 0x0040(0x00B0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_G07V[0xB0];                                    // 0x0040(0x00B0) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17501,7 +17501,7 @@ public:
 	int                                                ResidentMips;                                              // 0x013C(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	int                                                StreamingIndex;                                            // 0x0140(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	int                                                FirstResourceMemMip;                                       // 0x0144(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_4GL8[0x4];                                     // 0x0148(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3LR5[0x4];                                     // 0x0148(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FIntPoint                                   ImportedSize;                                              // 0x014C(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              ForceMipLevelsToBeResidentTimestamp;                       // 0x0154(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bTemporarilyDisableStreaming : 1;                          // 0x0158(0x0001) BIT_FIELD (Transient, NoDestructor)
@@ -17509,12 +17509,12 @@ public:
 	unsigned char                                      bHasCancelationPending : 1;                                // 0x0158(0x0001) BIT_FIELD (Transient, NonTransactional, NoDestructor)
 	unsigned char                                      bForceMiplevelsToBeResident : 1;                           // 0x0158(0x0001) BIT_FIELD (Transient, NoDestructor)
 	unsigned char                                      bGlobalForceMipLevelsToBeResident : 1;                     // 0x0158(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_Z8UB[0x3];                                     // 0x0159(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_E72L[0x3];                                     // 0x0159(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_ETextureAddress>                AddressX;                                                  // 0x015C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ETextureAddress>                AddressY;                                                  // 0x015D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_D48P[0x2];                                     // 0x015E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_UZFT[0x2];                                     // 0x015E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                MinimumLoadedMips;                                         // 0x0160(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZAQ4[0x2C];                                    // 0x0164(0x002C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_SXAM[0x2C];                                    // 0x0164(0x002C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17560,7 +17560,7 @@ class UCompressedCanvasRenderTarget2D : public UTexture2D
 public:
 	TWeakObjectPtr<class UWorld>                       World;                                                     // 0x0190(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper)
 	class UCanvasRenderTarget2D*                       RenderTarget;                                              // 0x0198(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_P76F[0x8];                                     // 0x01A0(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_EU3Q[0x8];                                     // 0x01A0(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17720,13 +17720,13 @@ public:
 class UNavCollision : public UObject
 {
 public:
-	unsigned char                                      UnknownData_MLGK[0x50];                                    // 0x0028(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SNME[0x50];                                    // 0x0028(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FNavCollisionCylinder>               CylinderCollision;                                         // 0x0078(0x0010) (Edit, ZeroConstructor)
 	TArray<struct FNavCollisionBox>                    BoxCollision;                                              // 0x0088(0x0010) (Edit, ZeroConstructor)
 	class UClass*                                      AreaClass;                                                 // 0x0098(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	unsigned char                                      bIsDynamicObstacle : 1;                                    // 0x00A0(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
 	unsigned char                                      bGatherConvexGeometry : 1;                                 // 0x00A0(0x0001) BIT_FIELD (Edit, Config, NoDestructor)
-	unsigned char                                      UnknownData_XYOM[0x6F];                                    // 0x00A1(0x006F) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_34DP[0x6F];                                    // 0x00A1(0x006F) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17762,7 +17762,7 @@ public:
 class URecastNavMeshDataChunk : public UNavigationDataChunk
 {
 public:
-	unsigned char                                      UnknownData_66WP[0x10];                                    // 0x0030(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2HZF[0x10];                                    // 0x0030(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17783,7 +17783,7 @@ public:
 	struct FScriptMulticastDelegate                    PathUpdatedNotifier;                                       // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	TArray<struct FVector>                             PathPoints;                                                // 0x0038(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	TEnumAsByte<Engine_ENavigationOptionFlag>          RecalculateOnInvalidation;                                 // 0x0048(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_VN69[0x3F];                                    // 0x0049(0x003F) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_IGBT[0x3F];                                    // 0x0049(0x003F) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17877,7 +17877,7 @@ public:
 class UDemoNetDriver : public UNetDriver
 {
 public:
-	unsigned char                                      UnknownData_0WQI[0xC8];                                    // 0x0478(0x00C8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_MXTT[0xC8];                                    // 0x0478(0x00C8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17914,12 +17914,12 @@ class UObjectLibrary : public UObject
 public:
 	class UClass*                                      ObjectBaseClass;                                           // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bHasBlueprintClasses;                                      // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_WXGT[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_CGVR[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UObject*>                             Objects;                                                   // 0x0038(0x0010) (Edit, ZeroConstructor, Protected)
 	TArray<TWeakObjectPtr<class UObject>>              WeakObjects;                                               // 0x0048(0x0010) (ZeroConstructor, Protected, UObjectWrapper)
 	bool                                               bUseWeakReferences;                                        // 0x0058(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected)
 	bool                                               bIsFullyLoaded;                                            // 0x0059(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_T25Q[0x16];                                    // 0x005A(0x0016) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4G0D[0x16];                                    // 0x005A(0x0016) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17955,7 +17955,7 @@ public:
 class UPackageMapClient : public UPackageMap
 {
 public:
-	unsigned char                                      UnknownData_2R3G[0x1A8];                                   // 0x0050(0x01A8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PT2C[0x1A8];                                   // 0x0050(0x01A8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -17976,10 +17976,10 @@ public:
 	struct FName                                       EmitterName;                                               // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                SubUVDataOffset;                                           // 0x0030(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EEmitterRenderMode>             EmitterRenderMode;                                         // 0x0034(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DQUU[0x3];                                     // 0x0035(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_O3GN[0x3];                                     // 0x0035(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UParticleLODLevel*>                   LODLevels;                                                 // 0x0038(0x0010) (ExportObject, ZeroConstructor, ContainsInstancedReference)
 	unsigned char                                      ConvertedModules : 1;                                      // 0x0048(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_NP4M[0x3];                                     // 0x0049(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1SMG[0x3];                                     // 0x0049(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                PeakActiveParticles;                                       // 0x004C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	int                                                InitialAllocationCount;                                    // 0x0050(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              MediumDetailSpawnRateScale;                                // 0x0054(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -17987,13 +17987,13 @@ public:
 	TEnumAsByte<Engine_EDetailMode>                    DetailMode;                                                // 0x005C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EEmitterQuality>                MaxEmitterQuality;                                         // 0x005D(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EEmitterQuality>                MinEmitterQuality;                                         // 0x005E(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FIZE[0x1];                                     // 0x005F(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LG6X[0x1];                                     // 0x005F(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bIsSoloing : 1;                                            // 0x0060(0x0001) BIT_FIELD (Transient, NoDestructor)
 	unsigned char                                      bCookedOut : 1;                                            // 0x0060(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bDisabledLODsKeepEmitterAlive : 1;                         // 0x0060(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bHasAnyEnabledLODs : 1;                                    // 0x0060(0x0001) BIT_FIELD (Transient, NoDestructor)
 	unsigned char                                      bHasAnyEnabledLODsValid : 1;                               // 0x0060(0x0001) BIT_FIELD (Transient, NoDestructor)
-	unsigned char                                      UnknownData_94XI[0x3F];                                    // 0x0061(0x003F) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_PL3M[0x3F];                                    // 0x0061(0x003F) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UParticleModule*>                     ModulesNeedingInstanceData;                                // 0x00A0(0x0010) (ZeroConstructor, Transient)
 
 
@@ -18031,7 +18031,7 @@ class UParticleLODLevel : public UObject
 public:
 	int                                                Level;                                                     // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bEnabled : 1;                                              // 0x002C(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_1P44[0x3];                                     // 0x002D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_M22F[0x3];                                     // 0x002D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UParticleModuleRequired*                     RequiredModule;                                            // 0x0030(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	TArray<class UParticleModule*>                     Modules;                                                   // 0x0038(0x0010) (ExportObject, ZeroConstructor, ContainsInstancedReference)
 	class UParticleModule*                             TypeDataModule;                                            // 0x0048(0x0008) (ExportObject, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -18043,7 +18043,7 @@ public:
 	TArray<class UParticleModuleOrbit*>                OrbitModules;                                              // 0x0090(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
 	TArray<class UParticleModuleEventReceiverBase*>    EventReceiverModules;                                      // 0x00A0(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
 	unsigned char                                      ConvertedModules : 1;                                      // 0x00B0(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_I9FF[0x3];                                     // 0x00B1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LTMW[0x3];                                     // 0x00B1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                PeakActiveParticles;                                       // 0x00B4(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -18074,9 +18074,9 @@ public:
 	unsigned char                                      LODDuplicate : 1;                                          // 0x0029(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bSupportsRandomSeed : 1;                                   // 0x0029(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bRequiresLoopingNotification : 1;                          // 0x0029(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_2FDT[0x2];                                     // 0x002A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WIKV[0x2];                                     // 0x002A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      LODValidity;                                               // 0x002C(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_1VZQ[0x3];                                     // 0x002D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SPJQ[0x3];                                     // 0x002D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<int>                                        ModuleInstanceOffsets;                                     // 0x0030(0x0010) (ZeroConstructor, Transient)
 	TArray<int>                                        ModuleOffsets;                                             // 0x0040(0x0010) (ZeroConstructor, Transient)
 
@@ -18097,7 +18097,7 @@ class UParticleModuleAccelerationBase : public UParticleModule
 {
 public:
 	unsigned char                                      bAlwaysInWorldSpace : 1;                                   // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_YJTM[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_QMRP[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -18117,7 +18117,7 @@ class UParticleModuleAcceleration : public UParticleModuleAccelerationBase
 public:
 	struct FRawDistributionVector                      Acceleration;                                              // 0x0058(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bApplyOwnerScale : 1;                                      // 0x0090(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_D8DS[0x7];                                     // 0x0091(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AX23[0x7];                                     // 0x0091(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -18136,7 +18136,7 @@ class UParticleModuleAccelerationConstant : public UParticleModuleAccelerationBa
 {
 public:
 	struct FVector                                     Acceleration;                                              // 0x0058(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_JJ09[0x4];                                     // 0x0064(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_J8BT[0x4];                                     // 0x0064(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -18194,7 +18194,7 @@ class UParticleModuleAccelerationEmitterPoint : public UParticleModuleAccelerati
 public:
 	struct FRawDistributionFloat                       AccelerationScale;                                         // 0x0058(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bApplyOwnerScale : 1;                                      // 0x0090(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_X986[0x7];                                     // 0x0091(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_NO0X[0x7];                                     // 0x0091(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -18271,15 +18271,15 @@ public:
 	struct FName                                       EmitterName;                                               // 0x0050(0x0008) (Edit, ExportObject, ZeroConstructor, NoClear, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRawDistributionFloat                       Range;                                                     // 0x0058(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bStrengthByDistance : 1;                                   // 0x0090(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_Q613[0x7];                                     // 0x0091(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1W04[0x7];                                     // 0x0091(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       Strength;                                                  // 0x0098(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bAffectBaseVelocity : 1;                                   // 0x00D0(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_ML0Z[0x3];                                     // 0x00D1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_RU1T[0x3];                                     // 0x00D1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EAttractorParticleSelectionMethod> SelectionMethod;                                           // 0x00D4(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_XD5T[0x3];                                     // 0x00D5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_H0Y5[0x3];                                     // 0x00D5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bRenewSource : 1;                                          // 0x00D8(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bInheritSourceVel : 1;                                     // 0x00D8(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_PE88[0x3];                                     // 0x00D9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7PGD[0x3];                                     // 0x00D9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                LastSelIndex;                                              // 0x00DC(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -18311,7 +18311,7 @@ public:
 	unsigned char                                      Negative_X : 1;                                            // 0x00F8(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      Negative_Y : 1;                                            // 0x00F9(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      Negative_Z : 1;                                            // 0x00F9(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_YRZE[0x6];                                     // 0x00FA(0x0006) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3NMZ[0x6];                                     // 0x00FA(0x0006) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -18367,14 +18367,14 @@ class UParticleModuleBeamModifier : public UParticleModuleBeamBase
 {
 public:
 	TEnumAsByte<Engine_EBeamModifierType>              ModifierType;                                              // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9HOM[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_P531[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FBeamModifierOptions                        PositionOptions;                                           // 0x0054(0x0004) (Edit)
 	struct FRawDistributionVector                      Position;                                                  // 0x0058(0x0038) (Edit, ContainsInstancedReference)
 	struct FBeamModifierOptions                        TangentOptions;                                            // 0x0090(0x0004) (Edit)
-	unsigned char                                      UnknownData_VEMX[0x4];                                     // 0x0094(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MJL9[0x4];                                     // 0x0094(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionVector                      Tangent;                                                   // 0x0098(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bAbsoluteTangent : 1;                                      // 0x00D0(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_KFTY[0x3];                                     // 0x00D1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QR6J[0x3];                                     // 0x00D1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FBeamModifierOptions                        StrengthOptions;                                           // 0x00D4(0x0004) (Edit)
 	struct FRawDistributionFloat                       Strength;                                                  // 0x00D8(0x0038) (Edit, ContainsInstancedReference)
 
@@ -18395,32 +18395,32 @@ class UParticleModuleBeamNoise : public UParticleModuleBeamBase
 {
 public:
 	unsigned char                                      bLowFreq_Enabled : 1;                                      // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_CX5H[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BJBX[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                Frequency;                                                 // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                Frequency_LowRange;                                        // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_45NT[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_86C3[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionVector                      NoiseRange;                                                // 0x0060(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionFloat                       NoiseRangeScale;                                           // 0x0098(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bNRScaleEmitterTime : 1;                                   // 0x00D0(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_DPR9[0x7];                                     // 0x00D1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_D7I1[0x7];                                     // 0x00D1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionVector                      NoiseSpeed;                                                // 0x00D8(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bSmooth : 1;                                               // 0x0110(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_39CG[0x3];                                     // 0x0111(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6FDC[0x3];                                     // 0x0111(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              NoiseLockRadius;                                           // 0x0114(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bNoiseLock : 1;                                            // 0x0118(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bOscillate : 1;                                            // 0x0118(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_Y659[0x3];                                     // 0x0119(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_FYEO[0x3];                                     // 0x0119(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              NoiseLockTime;                                             // 0x011C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              NoiseTension;                                              // 0x0120(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bUseNoiseTangents : 1;                                     // 0x0124(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_7OET[0x3];                                     // 0x0125(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_PSTG[0x3];                                     // 0x0125(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       NoiseTangentStrength;                                      // 0x0128(0x0038) (Edit, ContainsInstancedReference)
 	int                                                NoiseTessellation;                                         // 0x0160(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bTargetNoise : 1;                                          // 0x0164(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_1IJJ[0x3];                                     // 0x0165(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_I5QS[0x3];                                     // 0x0165(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              FrequencyDistance;                                         // 0x0168(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bApplyNoiseScale : 1;                                      // 0x016C(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_VJ6R[0x3];                                     // 0x016D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QTU0[0x3];                                     // 0x016D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       NoiseScale;                                                // 0x0170(0x0038) (Edit, ContainsInstancedReference)
 
 
@@ -18440,21 +18440,21 @@ class UParticleModuleBeamSource : public UParticleModuleBeamBase
 {
 public:
 	TEnumAsByte<Engine_EBeam2SourceTargetMethod>       SourceMethod;                                              // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DGAU[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HDOI[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       SourceName;                                                // 0x0054(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bSourceAbsolute : 1;                                       // 0x005C(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_0OSV[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TTM3[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionVector                      Source;                                                    // 0x0060(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bLockSource : 1;                                           // 0x0098(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_BG9O[0x3];                                     // 0x0099(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_KYDS[0x3];                                     // 0x0099(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EBeam2SourceTargetTangentMethod> SourceTangentMethod;                                       // 0x009C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_JURP[0x3];                                     // 0x009D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XB4G[0x3];                                     // 0x009D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionVector                      SourceTangent;                                             // 0x00A0(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bLockSourceTangent : 1;                                    // 0x00D8(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_30JP[0x7];                                     // 0x00D9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_FI32[0x7];                                     // 0x00D9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       SourceStrength;                                            // 0x00E0(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bLockSourceStength : 1;                                    // 0x0118(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_1315[0x7];                                     // 0x0119(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_NR3T[0x7];                                     // 0x0119(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -18473,21 +18473,21 @@ class UParticleModuleBeamTarget : public UParticleModuleBeamBase
 {
 public:
 	TEnumAsByte<Engine_EBeam2SourceTargetMethod>       TargetMethod;                                              // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DUT8[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Z4PC[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       TargetName;                                                // 0x0054(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_XD5B[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_PTNU[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionVector                      Target;                                                    // 0x0060(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bTargetAbsolute : 1;                                       // 0x0098(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bLockTarget : 1;                                           // 0x0098(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_WIOS[0x3];                                     // 0x0099(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MSU3[0x3];                                     // 0x0099(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EBeam2SourceTargetTangentMethod> TargetTangentMethod;                                       // 0x009C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_6SSV[0x3];                                     // 0x009D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_15TV[0x3];                                     // 0x009D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionVector                      TargetTangent;                                             // 0x00A0(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bLockTargetTangent : 1;                                    // 0x00D8(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_I59B[0x7];                                     // 0x00D9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LKE1[0x7];                                     // 0x00D9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       TargetStrength;                                            // 0x00E0(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bLockTargetStength : 1;                                    // 0x0118(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_2RY6[0x3];                                     // 0x0119(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_PBTG[0x3];                                     // 0x0119(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              LockRadius;                                                // 0x011C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -18525,9 +18525,9 @@ class UParticleModuleCameraOffset : public UParticleModuleCameraBase
 public:
 	struct FRawDistributionFloat                       CameraOffset;                                              // 0x0050(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bSpawnTimeOnly : 1;                                        // 0x0088(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_P2AJ[0x3];                                     // 0x0089(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BKMH[0x3];                                     // 0x0089(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EParticleCameraOffsetUpdateMethod> UpdateMethod;                                              // 0x008C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_OEOS[0x3];                                     // 0x008D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_02MZ[0x3];                                     // 0x008D(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -18566,23 +18566,23 @@ public:
 	struct FRawDistributionVector                      DampingFactorRotation;                                     // 0x0088(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionFloat                       MaxCollisions;                                             // 0x00C0(0x0038) (Edit, ContainsInstancedReference)
 	TEnumAsByte<Engine_EParticleCollisionComplete>     CollisionCompletionOption;                                 // 0x00F8(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_A9RQ[0x7];                                     // 0x00F9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_M4QC[0x7];                                     // 0x00F9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<TEnumAsByte<Engine_EObjectTypeQuery>>       CollisionTypes;                                            // 0x0100(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData_WA0G[0x4];                                     // 0x0110(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6OR5[0x4];                                     // 0x0110(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bApplyPhysics : 1;                                         // 0x0114(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_YQ2U[0x3];                                     // 0x0115(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5NZ9[0x3];                                     // 0x0115(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       ParticleMass;                                              // 0x0118(0x0038) (Edit, ContainsInstancedReference)
 	float                                              DirScalar;                                                 // 0x0150(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bPawnsDoNotDecrementCount : 1;                             // 0x0154(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bOnlyVerticalNormalsDecrementCount : 1;                    // 0x0154(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_LGXL[0x3];                                     // 0x0155(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_4CRS[0x3];                                     // 0x0155(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              VerticalFudgeFactor;                                       // 0x0158(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HM0W[0x4];                                     // 0x015C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LJMH[0x4];                                     // 0x015C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       DelayAmount;                                               // 0x0160(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bDropDetail : 1;                                           // 0x0198(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bCollideOnlyIfVisible : 1;                                 // 0x0198(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bIgnoreSourceActor : 1;                                    // 0x0198(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_6XT5[0x3];                                     // 0x0199(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_13M6[0x3];                                     // 0x0199(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MaxCollisionDistance;                                      // 0x019C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -18609,7 +18609,7 @@ public:
 	float                                              RadiusBias;                                                // 0x00CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EParticleCollisionResponse>     Response;                                                  // 0x00D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EParticleCollisionMode>         CollisionMode;                                             // 0x00D1(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CVWS[0x6];                                     // 0x00D2(0x0006) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HITE[0x6];                                     // 0x00D2(0x0006) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -18645,16 +18645,16 @@ class UParticleModuleColor : public UParticleModuleColorBase
 {
 public:
 	unsigned char                                      bUseGroupAColorForAllGroups : 1;                           // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_46R7[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZV9V[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionVector                      StartColor;                                                // 0x0058(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionVector                      AdditionalStartColor[0x5];                                 // 0x0090(0x0118) (Edit, ContainsInstancedReference, AdvancedDisplay)
 	unsigned char                                      bUseGroupAAlphaForAllGroups : 1;                           // 0x01A8(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_BB8H[0x7];                                     // 0x01A9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_RT75[0x7];                                     // 0x01A9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       StartAlpha;                                                // 0x01B0(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionFloat                       AdditionalStartAlpha[0x5];                                 // 0x01E8(0x0118) (Edit, ContainsInstancedReference, AdvancedDisplay)
 	unsigned char                                      bClampAlpha : 1;                                           // 0x0300(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bIgnoreComponentColorTint : 1;                             // 0x0300(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_E3MM[0x7];                                     // 0x0301(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_1NG8[0x7];                                     // 0x0301(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -18693,7 +18693,7 @@ public:
 	struct FRawDistributionVector                      ColorOverLife;                                             // 0x0050(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionFloat                       AlphaOverLife;                                             // 0x0088(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bClampAlpha : 1;                                           // 0x00C0(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_YDUY[0x7];                                     // 0x00C1(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_VI28[0x7];                                     // 0x00C1(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -18714,7 +18714,7 @@ public:
 	struct FRawDistributionVector                      ColorScaleOverLife;                                        // 0x0050(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionFloat                       AlphaScaleOverLife;                                        // 0x0088(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bEmitterTime : 1;                                          // 0x00C0(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_I18H[0x7];                                     // 0x00C1(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_SBKE[0x7];                                     // 0x00C1(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -18804,9 +18804,9 @@ class UParticleModuleEventReceiverBase : public UParticleModuleEventBase
 {
 public:
 	TEnumAsByte<Engine_EParticleEventType>             EventGeneratorType;                                        // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_3K0P[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_NESK[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       EventName;                                                 // 0x0054(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_JWHJ[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_EW07[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -18825,7 +18825,7 @@ class UParticleModuleEventReceiverKillParticles : public UParticleModuleEventRec
 {
 public:
 	unsigned char                                      bStopSpawning : 1;                                         // 0x0060(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_HPGO[0x7];                                     // 0x0061(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DOWT[0x7];                                     // 0x0061(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -18849,7 +18849,7 @@ public:
 	unsigned char                                      bUseParticleTime : 1;                                      // 0x01B0(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bUsePSysLocation : 1;                                      // 0x01B0(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bInheritVelocity : 1;                                      // 0x01B0(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_V3YF[0x7];                                     // 0x01B1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BONF[0x7];                                     // 0x01B1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionVector                      InheritVelocityScale;                                      // 0x01B8(0x0038) (Edit, ContainsInstancedReference)
 
 
@@ -18890,7 +18890,7 @@ public:
 	unsigned char                                      bAbsolute : 1;                                             // 0x00C0(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bKillInside : 1;                                           // 0x00C0(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bAxisAlignedAndFixedSize : 1;                              // 0x00C0(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_S90K[0x7];                                     // 0x00C1(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_7OPN[0x7];                                     // 0x00C1(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -18912,7 +18912,7 @@ public:
 	unsigned char                                      bAbsolute : 1;                                             // 0x0088(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bFloor : 1;                                                // 0x0088(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bApplyPSysScale : 1;                                       // 0x0088(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_ZKTO[0x7];                                     // 0x0089(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_BSUO[0x7];                                     // 0x0089(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -18965,10 +18965,10 @@ class UParticleModuleLifetime : public UParticleModuleLifetimeBase
 {
 public:
 	unsigned char                                      bUseGroupAValuesForAllGroups : 1;                          // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_MEPW[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_H01Q[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       LifeTime;                                                  // 0x0058(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionFloat                       AdditionalLifetimes[0x5];                                  // 0x0090(0x0118) (Edit, ContainsInstancedReference, AdvancedDisplay)
-	unsigned char                                      UnknownData_TY9B[0x18];                                    // 0x01A8(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_738K[0x18];                                    // 0x01A8(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -19085,10 +19085,10 @@ public:
 	struct FRawDistributionVector                      StartLocation;                                             // 0x0050(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionVector                      AdditionalStartLocations[0x4];                             // 0x0088(0x00E0) (Edit, ContainsInstancedReference, AdvancedDisplay)
 	unsigned char                                      StartLocationUseGroupAForAll : 1;                          // 0x0168(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_76Y4[0x3];                                     // 0x0169(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_0XLH[0x3];                                     // 0x0169(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              DistributeOverNPoints;                                     // 0x016C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              DistributeThreshold;                                       // 0x0170(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_706W[0x4];                                     // 0x0174(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_UKMF[0x4];                                     // 0x0174(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -19160,15 +19160,15 @@ class UParticleModuleLocationBoneSocket : public UParticleModuleLocationBase
 {
 public:
 	TEnumAsByte<Engine_ELocationBoneSocketSource>      SourceType;                                                // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_H3OO[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_AA26[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     UniversalOffset;                                           // 0x0054(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<struct FLocationBoneSocketInfo>             SourceLocations;                                           // 0x0060(0x0010) (Edit, ZeroConstructor)
 	TEnumAsByte<Engine_ELocationBoneSocketSelectionMethod> SelectionMethod;                                           // 0x0070(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_J94P[0x3];                                     // 0x0071(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_UX5X[0x3];                                     // 0x0071(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bUpdatePositionEachFrame : 1;                              // 0x0074(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bOrientMeshEmitters : 1;                                   // 0x0074(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bInheritBoneVelocity : 1;                                  // 0x0074(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_7C1I[0x3];                                     // 0x0075(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_CK8T[0x3];                                     // 0x0075(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     InheritVelocityScale;                                      // 0x0078(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              InheritedSpeedCap;                                         // 0x0084(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       SkelMeshActorParamName;                                    // 0x0088(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -19212,14 +19212,14 @@ class UParticleModuleLocationEmitter : public UParticleModuleLocationBase
 public:
 	struct FName                                       EmitterName;                                               // 0x0050(0x0008) (Edit, ExportObject, ZeroConstructor, NoClear, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ELocationEmitterSelectionMethod> SelectionMethod;                                           // 0x0058(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_Z5YZ[0x3];                                     // 0x0059(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WQ2D[0x3];                                     // 0x0059(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      InheritSourceVelocity : 1;                                 // 0x005C(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_4SQ8[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_T1ED[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              InheritSourceVelocityScale;                                // 0x0060(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bInheritSourceRotation : 1;                                // 0x0064(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_PA09[0x3];                                     // 0x0065(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_FA27[0x3];                                     // 0x0065(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              InheritSourceRotationScale;                                // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_O93Y[0x4];                                     // 0x006C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_C1X6[0x4];                                     // 0x006C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -19263,7 +19263,7 @@ public:
 	unsigned char                                      Negative_Z : 1;                                            // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      SurfaceOnly : 1;                                           // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      Velocity : 1;                                              // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_E4H1[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_U1FX[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       VelocityScale;                                             // 0x0058(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionVector                      StartLocation;                                             // 0x0090(0x0038) (Edit, ContainsInstancedReference)
 
@@ -19302,23 +19302,23 @@ class UParticleModuleLocationPrimitiveCylinder : public UParticleModuleLocationP
 {
 public:
 	unsigned char                                      RadialVelocity : 1;                                        // 0x00C8(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_5EFN[0x7];                                     // 0x00C9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LJFE[0x7];                                     // 0x00C9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       StartRadius;                                               // 0x00D0(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionFloat                       AdditionalStartRadiuses[0x4];                              // 0x0108(0x00E0) (Edit, ContainsInstancedReference)
 	unsigned char                                      StartRadiusUseGroupAForAll : 1;                            // 0x01E8(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_J9YR[0x3];                                     // 0x01E9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_R7PI[0x3];                                     // 0x01E9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector2D                                   RadiusScale;                                               // 0x01EC(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_71MC[0x4];                                     // 0x01F4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LFK1[0x4];                                     // 0x01F4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       StartHeight;                                               // 0x01F8(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      StartHeightUseGroupAForAll : 1;                            // 0x0230(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_I99P[0x7];                                     // 0x0231(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BZUX[0x7];                                     // 0x0231(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       AdditionalStartHeights[0x4];                               // 0x0238(0x00E0) (Edit, ContainsInstancedReference)
 	struct FVector2D                                   AngleRange;                                                // 0x0318(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector2D                                   AdditionalAngleRanges[0x4];                                // 0x0320(0x0020) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	unsigned char                                      AngleRangeUseGroupAForAll : 1;                             // 0x0340(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_K7HG[0x3];                                     // 0x0341(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_B8AK[0x3];                                     // 0x0341(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_ECylinderHeightAxis>            HeightAxis;                                                // 0x0344(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CP9K[0x3];                                     // 0x0345(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_I543[0x3];                                     // 0x0345(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -19357,14 +19357,14 @@ public:
 	struct FRawDistributionFloat                       StartRadius;                                               // 0x00C8(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionFloat                       AdditionalStartRadiuses[0x4];                              // 0x0100(0x00E0) (Edit, ContainsInstancedReference, AdvancedDisplay)
 	unsigned char                                      StartRadiusUseGroupAForAll : 1;                            // 0x01E0(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_GGKC[0x3];                                     // 0x01E1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_FKIN[0x3];                                     // 0x01E1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector2D                                   PositiveXAngleRange;                                       // 0x01E4(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	struct FVector2D                                   NegativeXAngleRange;                                       // 0x01EC(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	struct FVector2D                                   PositiveYAngleRange;                                       // 0x01F4(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	struct FVector2D                                   NegativeYAngleRange;                                       // 0x01FC(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	struct FVector2D                                   PositiveZAngleRange;                                       // 0x0204(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	struct FVector2D                                   NegativeZAngleRange;                                       // 0x020C(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_49FV[0x4];                                     // 0x0214(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LXVV[0x4];                                     // 0x0214(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -19403,7 +19403,7 @@ public:
 	class UParticleComputeShaderData*                  PositionData;                                              // 0x00C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRawDistributionVector                      ComputedVelocityScale;                                     // 0x00D0(0x0038) (Edit, ContainsInstancedReference)
 	float                                              SpeedCap;                                                  // 0x0108(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_MDZP[0x4];                                     // 0x010C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_L62A[0x4];                                     // 0x010C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionVector                      BaseVelocity;                                              // 0x0110(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionVector                      LocationOffset;                                            // 0x0148(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionVector                      LocationOffsetScaledDirection;                             // 0x0180(0x0038) (Edit, ContainsInstancedReference)
@@ -19427,12 +19427,12 @@ public:
 	struct FRawDistributionFloat                       StartRadius;                                               // 0x0050(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionFloat                       AdditionalStartRadiuses[0x4];                              // 0x0088(0x00E0) (Edit, ContainsInstancedReference)
 	unsigned char                                      StartRadiusUseGroupAForAll : 1;                            // 0x0168(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_LIBX[0x3];                                     // 0x0169(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_CWIM[0x3];                                     // 0x0169(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FPrimitiveSphereEmitterAngleRanges          AngleRanges[0x2];                                          // 0x016C(0x0020) (Edit)
 	float                                              FirstSliceDistributionWeight;                              // 0x018C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      SurfaceOnly : 1;                                           // 0x0190(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      Velocity : 1;                                              // 0x0190(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_W1PF[0x7];                                     // 0x0191(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_C9W0[0x7];                                     // 0x0191(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       VelocityScale;                                             // 0x0198(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionVector                      StartLocation;                                             // 0x01D0(0x0038) (Edit, ContainsInstancedReference)
 
@@ -19474,23 +19474,23 @@ class UParticleModuleLocationSkelVertSurface : public UParticleModuleLocationBas
 {
 public:
 	TEnumAsByte<Engine_ELocationSkelVertSurfaceSource> SourceType;                                                // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_563P[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_RHMO[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     UniversalOffset;                                           // 0x0054(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	unsigned char                                      bUpdatePositionEachFrame : 1;                              // 0x0060(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bOrientMeshEmitters : 1;                                   // 0x0060(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bInheritBoneVelocity : 1;                                  // 0x0060(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_F5GD[0x3];                                     // 0x0061(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MO95[0x3];                                     // 0x0061(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       SkelMeshActorParamName;                                    // 0x0064(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YWX7[0x4];                                     // 0x006C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_D7IH[0x4];                                     // 0x006C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FName>                               ValidAssociatedBones;                                      // 0x0070(0x0010) (Edit, ZeroConstructor)
 	unsigned char                                      bEnforceNormalCheck : 1;                                   // 0x0080(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_W1JR[0x3];                                     // 0x0081(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9RW9[0x3];                                     // 0x0081(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     NormalToCompare;                                           // 0x0084(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              NormalCheckToleranceDegrees;                               // 0x0090(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              NormalCheckTolerance;                                      // 0x0094(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<int>                                        ValidMaterialIndices;                                      // 0x0098(0x0010) (Edit, ZeroConstructor)
 	unsigned char                                      bInheritVertexColor : 1;                                   // 0x00A8(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_EJCG[0x7];                                     // 0x00A9(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ERTL[0x7];                                     // 0x00A9(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -19580,7 +19580,7 @@ class UParticleModuleOrbitBase : public UParticleModule
 {
 public:
 	unsigned char                                      bUseEmitterTime : 1;                                       // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_I253[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_Q2BF[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -19599,16 +19599,16 @@ class UParticleModuleOrbit : public UParticleModuleOrbitBase
 {
 public:
 	TEnumAsByte<Engine_EOrbitChainMode>                ChainMode;                                                 // 0x0058(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_OMXP[0x7];                                     // 0x0059(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_0YQP[0x7];                                     // 0x0059(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionVector                      OffsetAmount;                                              // 0x0060(0x0038) (Edit, ContainsInstancedReference)
 	struct FOrbitOptions                               OffsetOptions;                                             // 0x0098(0x0004) (Edit)
-	unsigned char                                      UnknownData_0FHB[0x4];                                     // 0x009C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_538O[0x4];                                     // 0x009C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionVector                      RotationAmount;                                            // 0x00A0(0x0038) (Edit, ContainsInstancedReference)
 	struct FOrbitOptions                               RotationOptions;                                           // 0x00D8(0x0004) (Edit)
-	unsigned char                                      UnknownData_S8Z6[0x4];                                     // 0x00DC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6UNH[0x4];                                     // 0x00DC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionVector                      RotationRateAmount;                                        // 0x00E0(0x0038) (Edit, ContainsInstancedReference)
 	struct FOrbitOptions                               RotationRateOptions;                                       // 0x0118(0x0004) (Edit)
-	unsigned char                                      UnknownData_7OUR[0x4];                                     // 0x011C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_43IT[0x4];                                     // 0x011C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -19644,7 +19644,7 @@ class UParticleModuleOrientationAxisLock : public UParticleModuleOrientationBase
 {
 public:
 	TEnumAsByte<Engine_EParticleAxisLock>              LockAxisFlags;                                             // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_6V0Z[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8UB8[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -19682,7 +19682,7 @@ public:
 	TArray<struct FEmitterDynamicParameter>            DynamicParams;                                             // 0x0050(0x0010) (Edit, EditFixedSize, ZeroConstructor, ContainsInstancedReference)
 	int                                                UpdateFlags;                                               // 0x0060(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bUsesVelocity : 1;                                         // 0x0064(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_VEA4[0x3];                                     // 0x0065(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_CRMF[0x3];                                     // 0x0065(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -19763,7 +19763,7 @@ public:
 	float                                              MinSpeed;                                                  // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxSpeed;                                                  // 0x006C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     VelocityComponentsWeights;                                 // 0x0070(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_R8AW[0x4];                                     // 0x007C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_NU9M[0x4];                                     // 0x007C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       SpawnRateOverSpeedScale;                                   // 0x0080(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionFloat                       LifetimeOverSpeedScale;                                    // 0x00B8(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionFloat                       SizeOverSpeedScale;                                        // 0x00F0(0x0038) (Edit, ContainsInstancedReference)
@@ -19791,10 +19791,10 @@ public:
 	int                                                SubImages_Vertical;                                        // 0x0034(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ESubUVBoundingVertexCount>      BoundingMode;                                              // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EOpacitySourceMode>             OpacitySourceMode;                                         // 0x0039(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZK7D[0x2];                                     // 0x003A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_M3VA[0x2];                                     // 0x003A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              AlphaThreshold;                                            // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              SafeMarginSize;                                            // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_BAB2[0x44];                                    // 0x0044(0x0044) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_R5QR[0x44];                                    // 0x0044(0x0044) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -19817,44 +19817,44 @@ public:
 	unsigned char                                      bDeactivateGroupC : 1;                                     // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bDeactivateGroupD : 1;                                     // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bDeactivateGroupE : 1;                                     // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_H1NT[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_83TL[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EPriorityGroups>                EmitterPriority;                                           // 0x0054(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_OVPX[0x3];                                     // 0x0055(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SCWP[0x3];                                     // 0x0055(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bUseComplexitySystemWhenLooping : 1;                       // 0x0058(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_BNTZ[0x3];                                     // 0x0059(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YQ69[0x3];                                     // 0x0059(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EPriorityGroups>                SwitchPriority;                                            // 0x005C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YVKW[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YK9R[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bReplacementGroupIsAdditive : 1;                           // 0x0060(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_BFIJ[0x7];                                     // 0x0061(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8L6J[0x7];                                     // 0x0061(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UMaterialInterface*                          Material;                                                  // 0x0068(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     EmitterOrigin;                                             // 0x0070(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	unsigned char                                      EmitterOriginUseGroupAForAll : 1;                          // 0x007C(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_L371[0x3];                                     // 0x007D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SVUP[0x3];                                     // 0x007D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     AdditionalEmitterOrigins[0x5];                             // 0x0080(0x003C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	struct FRotator                                    EmitterRotation;                                           // 0x00BC(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Engine_EParticleScreenAlignment>       ScreenAlignment;                                           // 0x00C8(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EVLH[0x3];                                     // 0x00C9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_JJYA[0x3];                                     // 0x00C9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bUseGroupAScreenAlignmentForAllGroups : 1;                 // 0x00CC(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_BV47[0x3];                                     // 0x00CD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_DEVF[0x3];                                     // 0x00CD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EParticleScreenAlignment>       AdditionalScreenAlignments[0x5];                           // 0x00D0(0x0005) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_N1JE[0x3];                                     // 0x00D5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_RGAJ[0x3];                                     // 0x00D5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              AlignmentInheritedVelocityScale;                           // 0x00D8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	unsigned char                                      bUseLocalSpace : 1;                                        // 0x00DC(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bFollowEmitter : 1;                                        // 0x00DC(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bTrailInGrandParentSpace : 1;                              // 0x00DC(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bKillOnDeactivate : 1;                                     // 0x00DC(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bKillOnCompleted : 1;                                      // 0x00DC(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_IGL9[0x3];                                     // 0x00DD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8BXK[0x3];                                     // 0x00DD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EParticleSortMode>              SortMode;                                                  // 0x00E0(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZN3D[0x3];                                     // 0x00E1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8UY5[0x3];                                     // 0x00E1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bUseLegacyEmitterTime : 1;                                 // 0x00E4(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_PK7E[0x3];                                     // 0x00E5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6VMG[0x3];                                     // 0x00E5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              EmitterDuration;                                           // 0x00E8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              EmitterDurationLow;                                        // 0x00EC(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	unsigned char                                      bEmitterDurationUseRange : 1;                              // 0x00F0(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bDurationRecalcEachLoop : 1;                               // 0x00F0(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bSeparateLoopTimeForSubUV : 1;                             // 0x00F0(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_ALC5[0x3];                                     // 0x00F1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_68TE[0x3];                                     // 0x00F1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                EmitterLoops;                                              // 0x00F4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRawDistributionFloat                       LoopTime;                                                  // 0x00F8(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionFloat                       LoopOffset;                                                // 0x0130(0x0038) (Edit, ContainsInstancedReference)
@@ -19863,60 +19863,60 @@ public:
 	float                                              LoopEndTime;                                               // 0x01A4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRawDistributionFloat                       SpawnRate;                                                 // 0x01A8(0x0038) (ContainsInstancedReference)
 	TEnumAsByte<Engine_EParticleBurstMethod>           ParticleBurstMethod;                                       // 0x01E0(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_11RO[0x7];                                     // 0x01E1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YJ1M[0x7];                                     // 0x01E1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FParticleBurst>                      BurstList;                                                 // 0x01E8(0x0010) (ExportObject, ZeroConstructor, NoClear)
 	float                                              EmitterDelay;                                              // 0x01F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              EmitterDelayLow;                                           // 0x01FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	unsigned char                                      bEmitterDelayUseRange : 1;                                 // 0x0200(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bDelayFirstLoopOnly : 1;                                   // 0x0200(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_3VP3[0x3];                                     // 0x0201(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_IDBJ[0x3];                                     // 0x0201(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EParticleSubUVInterpMethod>     InterpolationMethod;                                       // 0x0204(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_JHWP[0x3];                                     // 0x0205(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_OVLU[0x3];                                     // 0x0205(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                SubImages_Horizontal;                                      // 0x0208(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                SubImages_Vertical;                                        // 0x020C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bScaleUV : 1;                                              // 0x0210(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_SVM6[0x3];                                     // 0x0211(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_50SS[0x3];                                     // 0x0211(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              RandomImageTime;                                           // 0x0214(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                RandomImageChanges;                                        // 0x0218(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	unsigned char                                      bOverrideSystemMacroUV : 1;                                // 0x021C(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_LFO4[0x3];                                     // 0x021D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_JZT6[0x3];                                     // 0x021D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     MacroUVPosition;                                           // 0x0220(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	float                                              MacroUVRadius;                                             // 0x022C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	unsigned char                                      bUseMaxDrawCount : 1;                                      // 0x0230(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_4IU8[0x3];                                     // 0x0231(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YVL8[0x3];                                     // 0x0231(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                MaxDrawCount;                                              // 0x0234(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EEmitterNormalsMode>            EmitterNormalsMode;                                        // 0x0238(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_93M3[0x3];                                     // 0x0239(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7YSY[0x3];                                     // 0x0239(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     NormalsSphereCenter;                                       // 0x023C(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	struct FVector                                     NormalsCylinderDirection;                                  // 0x0248(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bOrbitModuleAffectsVelocityAlignment : 1;                  // 0x0254(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_XHH0[0x3];                                     // 0x0255(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7RDE[0x3];                                     // 0x0255(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EParticleUVFlipMode>            UVFlippingMode;                                            // 0x0258(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_T9GW[0x7];                                     // 0x0259(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_URRH[0x7];                                     // 0x0259(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UTexture2D*                                  CutoutTexture;                                             // 0x0260(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ESubUVBoundingVertexCount>      BoundingMode;                                              // 0x0268(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EOpacitySourceMode>             OpacitySourceMode;                                         // 0x0269(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_K5KW[0x2];                                     // 0x026A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_PXA4[0x2];                                     // 0x026A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              AlphaThreshold;                                            // 0x026C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              SafeMarginSize;                                            // 0x0270(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_1R0S[0x4];                                     // 0x0274(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9N6M[0x4];                                     // 0x0274(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FName>                               NamedMaterialOverrides;                                    // 0x0278(0x0010) (Edit, ZeroConstructor, AdvancedDisplay)
 	unsigned char                                      bUseDistanceFading : 1;                                    // 0x0288(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_0NV3[0x3];                                     // 0x0289(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_IEAG[0x3];                                     // 0x0289(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              FarStopFade;                                               // 0x028C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              FarStartFade;                                              // 0x0290(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              NearStartFade;                                             // 0x0294(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              NearStopFade;                                              // 0x0298(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      ApplyFOVDistanceScaling : 1;                               // 0x029C(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bUseDistanceSizeScale : 1;                                 // 0x029C(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_8A24[0x3];                                     // 0x029D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_D46G[0x3];                                     // 0x029D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              FarScaleFactor;                                            // 0x02A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              FarScaleEndDistance;                                       // 0x02A4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              FarScaleBeginDistance;                                     // 0x02A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              NearScaleBeginDistance;                                    // 0x02AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              NearScaleEndDistance;                                      // 0x02B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              NearScaleFactor;                                           // 0x02B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_6HBS[0x40];                                    // 0x02B8(0x0040) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PWPD[0x40];                                    // 0x02B8(0x0040) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -19971,7 +19971,7 @@ class UParticleModuleMeshRotation : public UParticleModuleRotationBase
 public:
 	struct FRawDistributionVector                      StartRotation;                                             // 0x0050(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bInheritParent : 1;                                        // 0x0088(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_HTOA[0x7];                                     // 0x0089(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_82PT[0x7];                                     // 0x0089(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -20008,7 +20008,7 @@ class UParticleModuleRotation : public UParticleModuleRotationBase
 {
 public:
 	unsigned char                                      bUseGroupARotationForAllGroups : 1;                        // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_JWFC[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Y9Z2[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       StartRotation;                                             // 0x0058(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionFloat                       AdditionalStartRotation[0x5];                              // 0x0090(0x0118) (Edit, ContainsInstancedReference, AdvancedDisplay)
 
@@ -20048,7 +20048,7 @@ class UParticleModuleRotationOverLifetime : public UParticleModuleRotationBase
 public:
 	struct FRawDistributionFloat                       RotationOverLife;                                          // 0x0050(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      Scale : 1;                                                 // 0x0088(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_7XP1[0x7];                                     // 0x0089(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_BOJW[0x7];                                     // 0x0089(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -20139,7 +20139,7 @@ class UParticleModuleMeshRotationRateOverLife : public UParticleModuleRotationRa
 public:
 	struct FRawDistributionVector                      RotRate;                                                   // 0x0050(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bScaleRotRate : 1;                                         // 0x0088(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_DZAE[0x7];                                     // 0x0089(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_B94B[0x7];                                     // 0x0089(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -20158,7 +20158,7 @@ class UParticleModuleRotationRate : public UParticleModuleRotationRateBase
 {
 public:
 	unsigned char                                      bUseGroupARotationRateForAllGroups : 1;                    // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_1SXX[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_FV62[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       StartRotationRate;                                         // 0x0058(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionFloat                       AdditionalStartRotationRate[0x5];                          // 0x0090(0x0118) (Edit, ContainsInstancedReference, AdvancedDisplay)
 
@@ -20232,12 +20232,12 @@ class UParticleModuleSize : public UParticleModuleSizeBase
 {
 public:
 	unsigned char                                      bUseGroupAForAll : 1;                                      // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_CTW2[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1KR0[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionVector                      StartSize;                                                 // 0x0058(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionVector                      AdditionalStartSizes[0x5];                                 // 0x0090(0x0118) (Edit, ContainsInstancedReference, AdvancedDisplay)
 	unsigned char                                      bKeepAspectRatio : 1;                                      // 0x01A8(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bIgnoreComponentScale : 1;                                 // 0x01A8(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_K5AU[0x7];                                     // 0x01A9(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ZFO9[0x7];                                     // 0x01A9(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -20277,7 +20277,7 @@ public:
 	unsigned char                                      MultiplyX : 1;                                             // 0x0088(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      MultiplyY : 1;                                             // 0x0088(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      MultiplyZ : 1;                                             // 0x0088(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_UNDH[0x7];                                     // 0x0089(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_CW5J[0x7];                                     // 0x0089(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -20317,7 +20317,7 @@ public:
 	unsigned char                                      EnableX : 1;                                               // 0x0088(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      EnableY : 1;                                               // 0x0088(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      EnableZ : 1;                                               // 0x0088(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_MZJI[0x7];                                     // 0x0089(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2IMU[0x7];                                     // 0x0089(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -20356,7 +20356,7 @@ class UParticleModuleSpawnBase : public UParticleModule
 public:
 	unsigned char                                      bProcessSpawnRate : 1;                                     // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bProcessBurstList : 1;                                     // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_WKPX[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_Q8I5[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -20381,12 +20381,12 @@ public:
 	struct FRawDistributionFloat                       RateScaleOverDistance;                                     // 0x01B0(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionFloat                       RateScale;                                                 // 0x01E8(0x0038) (Edit, ContainsInstancedReference, AdvancedDisplay)
 	TEnumAsByte<Engine_EParticleBurstMethod>           ParticleBurstMethod;                                       // 0x0220(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TUN3[0x7];                                     // 0x0221(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9JUU[0x7];                                     // 0x0221(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FParticleBurst>                      BurstList;                                                 // 0x0228(0x0010) (Edit, ExportObject, ZeroConstructor, NoClear)
 	struct FRawDistributionFloat                       BurstScale;                                                // 0x0238(0x0038) (Edit, ContainsInstancedReference, AdvancedDisplay)
 	unsigned char                                      bApplyGlobalSpawnRateScale : 1;                            // 0x0270(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bBurstTreatedAsLoopingForLODs : 1;                         // 0x0270(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_A418[0x7];                                     // 0x0271(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_V833[0x7];                                     // 0x0271(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -20410,17 +20410,17 @@ public:
 	unsigned char                                      bAffectsGroupD : 1;                                        // 0x0058(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bAffectsGroupE : 1;                                        // 0x0058(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bAffectsReplacementGroup : 1;                              // 0x0058(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_PW8T[0x3];                                     // 0x0059(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XJTE[0x3];                                     // 0x0059(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              UnitScalar;                                                // 0x005C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRawDistributionFloat                       SpawnPerUnit;                                              // 0x0060(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bIgnoreSpawnRateWhenMoving : 1;                            // 0x0098(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_LPXE[0x3];                                     // 0x0099(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HB1L[0x3];                                     // 0x0099(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MovementTolerance;                                         // 0x009C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxFrameDistance;                                          // 0x00A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bIgnoreMovementAlongX : 1;                                 // 0x00A4(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bIgnoreMovementAlongY : 1;                                 // 0x00A4(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bIgnoreMovementAlongZ : 1;                                 // 0x00A4(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_ZGU8[0x3];                                     // 0x00A5(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_6IJO[0x3];                                     // 0x00A5(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -20474,7 +20474,7 @@ class UParticleModuleSubUV : public UParticleModuleSubUVBase
 public:
 	struct FRawDistributionFloat                       SubImageIndex;                                             // 0x0050(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bUseRealTime : 1;                                          // 0x0088(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_JNFA[0x7];                                     // 0x0089(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_6Z4O[0x7];                                     // 0x0089(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -20493,10 +20493,10 @@ class UParticleModuleSubUVMovie : public UParticleModuleSubUV
 {
 public:
 	unsigned char                                      bUseEmitterTime : 1;                                       // 0x0090(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_PNA5[0x7];                                     // 0x0091(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_913A[0x7];                                     // 0x0091(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       FrameRate;                                                 // 0x0098(0x0038) (Edit, ContainsInstancedReference)
 	int                                                StartingFrame;                                             // 0x00D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_VG3Z[0x4];                                     // 0x00D4(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_6BDT[0x4];                                     // 0x00D4(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -20532,18 +20532,18 @@ class UParticleModuleTrailSource : public UParticleModuleTrailBase
 {
 public:
 	TEnumAsByte<Engine_ETrail2SourceMethod>            SourceMethod;                                              // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_BETQ[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_2R51[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       SourceName;                                                // 0x0054(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZQ79[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_53WR[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       SourceStrength;                                            // 0x0060(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      bLockSourceStength : 1;                                    // 0x0098(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_7ITO[0x3];                                     // 0x0099(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_RPA4[0x3];                                     // 0x0099(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                SourceOffsetCount;                                         // 0x009C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FVector>                             SourceOffsetDefaults;                                      // 0x00A0(0x0010) (Edit, EditFixedSize, ZeroConstructor)
 	TEnumAsByte<Engine_EParticleSourceSelectionMethod> SelectionMethod;                                           // 0x00B0(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TOZB[0x3];                                     // 0x00B1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ET5O[0x3];                                     // 0x00B1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bInheritRotation : 1;                                      // 0x00B4(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_Q7D8[0x3];                                     // 0x00B5(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AANH[0x3];                                     // 0x00B5(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -20581,12 +20581,12 @@ public:
 	unsigned char                                      bDeadTrailsOnDeactivate : 1;                               // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bEnablePreviousTangentRecalculation : 1;                   // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bTangentRecalculationEveryFrame : 1;                       // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_M4NU[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Y48J[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              TilingDistance;                                            // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              DistanceTessellationStepSize;                              // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TangentTessellationStepSize;                               // 0x005C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              WidthTessellationStepSize;                                 // 0x0060(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2FRV[0x4];                                     // 0x0064(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_OFV4[0x4];                                     // 0x0064(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -20605,7 +20605,7 @@ class UParticleModuleTypeDataBeam2 : public UParticleModuleTypeDataBase
 {
 public:
 	TEnumAsByte<Engine_EBeam2Method>                   BeamMethod;                                                // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_PZBZ[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GAM0[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                TextureTile;                                               // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TextureTileDistance;                                       // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                Sheets;                                                    // 0x005C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -20613,20 +20613,20 @@ public:
 	float                                              Speed;                                                     // 0x0064(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                InterpolationPoints;                                       // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bAlwaysOn : 1;                                             // 0x006C(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_U1RJ[0x3];                                     // 0x006D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_F9QC[0x3];                                     // 0x006D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                UpVectorStepSize;                                          // 0x0070(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       BranchParentName;                                          // 0x0074(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_VAD5[0x4];                                     // 0x007C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_W26R[0x4];                                     // 0x007C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       Distance;                                                  // 0x0080(0x0038) (Edit, ContainsInstancedReference)
 	TEnumAsByte<Engine_EBeamTaperMethod>               TaperMethod;                                               // 0x00B8(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CNG1[0x7];                                     // 0x00B9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Z9KP[0x7];                                     // 0x00B9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionFloat                       TaperFactor;                                               // 0x00C0(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionFloat                       TaperScale;                                                // 0x00F8(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      RenderGeometry : 1;                                        // 0x0130(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      RenderDirectLine : 1;                                      // 0x0130(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      RenderLines : 1;                                           // 0x0130(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      RenderTessellation : 1;                                    // 0x0130(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_17TF[0x7];                                     // 0x0131(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6PA6[0x7];                                     // 0x0131(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UParticleModuleBeamSource*>           LOD_BeamModule_Source;                                     // 0x0138(0x0010) (ZeroConstructor)
 	TArray<class UParticleModuleBeamTarget*>           LOD_BeamModule_Target;                                     // 0x0148(0x0010) (ZeroConstructor)
 	TArray<class UParticleModuleBeamNoise*>            LOD_BeamModule_Noise;                                      // 0x0158(0x0010) (ZeroConstructor)
@@ -20653,14 +20653,14 @@ public:
 	struct FGPUSpriteResourceData                      ResourceData;                                              // 0x0340(0x0650) (Transient)
 	float                                              CameraMotionBlurAmount;                                    // 0x0990(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bClearExistingParticlesOnInit : 1;                         // 0x0994(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_DUH0[0x3];                                     // 0x0995(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8GT2[0x3];                                     // 0x0995(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EParticleAlphaThresholdLevel>   AlphaCullingAggressiveness;                                // 0x0998(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_XETN[0x3];                                     // 0x0999(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XU9I[0x3];                                     // 0x0999(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bOverrideAlphaThreshold : 1;                               // 0x099C(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_5G67[0x3];                                     // 0x099D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_OERY[0x3];                                     // 0x099D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              OverriddenAlphaThreshold;                                  // 0x09A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EInteractionWithKillPlane>      InteractionWithKillPlane;                                  // 0x09A4(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YGEC[0xB];                                     // 0x09A5(0x000B) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_6383[0xB];                                     // 0x09A5(0x000B) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -20681,27 +20681,27 @@ public:
 	class UStaticMesh*                                 Mesh;                                                      // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      CastShadows : 1;                                           // 0x0058(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      DoCollisions : 1;                                          // 0x0058(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_SLCQ[0x3];                                     // 0x0059(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_KQ36[0x3];                                     // 0x0059(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EMeshScreenAlignment>           MeshAlignment;                                             // 0x005C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HENO[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_JO2Q[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bOverrideMaterial : 1;                                     // 0x0060(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_JDX9[0x3];                                     // 0x0061(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_VS7T[0x3];                                     // 0x0061(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              Pitch;                                                     // 0x0064(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              Roll;                                                      // 0x0068(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              Yaw;                                                       // 0x006C(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRawDistributionVector                      RollPitchYawRange;                                         // 0x0070(0x0038) (Edit, ContainsInstancedReference)
-	unsigned char                                      UnknownData_ANEI[0x8];                                     // 0x00A8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QJU1[0x8];                                     // 0x00A8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EParticleAxisLock>              AxisLockOption;                                            // 0x00B0(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_VHBY[0x3];                                     // 0x00B1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_A8I5[0x3];                                     // 0x00B1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bCameraFacing : 1;                                         // 0x00B4(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_ZV61[0x3];                                     // 0x00B5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_UM02[0x3];                                     // 0x00B5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EMeshCameraFacingUpAxis>        CameraFacingUpAxisOption;                                  // 0x00B8(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EMeshCameraFacingOptions>       CameraFacingOption;                                        // 0x00B9(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YE0P[0x2];                                     // 0x00BA(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3SLW[0x2];                                     // 0x00BA(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bApplyParticleRotationAsSpin : 1;                          // 0x00BC(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bFaceCameraDirectionRatherThanPosition : 1;                // 0x00BC(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bCollisionsConsiderPartilceSize : 1;                       // 0x00BC(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_IB20[0x3];                                     // 0x00BD(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_YTJ9[0x3];                                     // 0x00BD(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -20729,19 +20729,19 @@ public:
 	unsigned char                                      bEnablePreviousTangentRecalculation : 1;                   // 0x0060(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bTangentRecalculationEveryFrame : 1;                       // 0x0060(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bSpawnInitialParticle : 1;                                 // 0x0060(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_G3IZ[0x3];                                     // 0x0061(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7KQS[0x3];                                     // 0x0061(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_ETrailsRenderAxisOption>        RenderAxis;                                                // 0x0064(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_VY35[0x3];                                     // 0x0065(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5LUK[0x3];                                     // 0x0065(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              TangentSpawningScalar;                                     // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bRenderGeometry : 1;                                       // 0x006C(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bRenderSpawnPoints : 1;                                    // 0x006C(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bRenderTangents : 1;                                       // 0x006C(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bRenderTessellation : 1;                                   // 0x006C(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_ES1A[0x3];                                     // 0x006D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_PIDH[0x3];                                     // 0x006D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              TilingDistance;                                            // 0x0070(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              DistanceTessellationStepSize;                              // 0x0074(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bEnableTangentDiffInterpScale : 1;                         // 0x0078(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_T4KK[0x3];                                     // 0x0079(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_B0I6[0x3];                                     // 0x0079(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              TangentTessellationScalar;                                 // 0x007C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -20778,10 +20778,10 @@ class UParticleModuleVectorFieldGlobal : public UParticleModuleVectorFieldBase
 {
 public:
 	unsigned char                                      bOverrideGlobalVectorFieldTightness : 1;                   // 0x0050(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_Z1G9[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YRY2[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              GlobalVectorFieldScale;                                    // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              GlobalVectorFieldTightness;                                // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_NPW5[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_Z0AO[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -20809,7 +20809,7 @@ public:
 	unsigned char                                      bTileX : 1;                                                // 0x0084(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bTileY : 1;                                                // 0x0084(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bTileZ : 1;                                                // 0x0084(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_KR6I[0x3];                                     // 0x0085(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_E9J6[0x3];                                     // 0x0085(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -20847,7 +20847,7 @@ class UParticleModuleVectorFieldRotationRate : public UParticleModuleVectorField
 {
 public:
 	struct FVector                                     RotationRate;                                              // 0x0050(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_X8SR[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5HCW[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -20903,7 +20903,7 @@ class UParticleModuleVelocityBase : public UParticleModule
 public:
 	unsigned char                                      bInWorldSpace : 1;                                         // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bApplyOwnerScale : 1;                                      // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_3C93[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_CXQH[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -20940,7 +20940,7 @@ class UParticleModuleVelocity : public UParticleModuleVelocityBase
 {
 public:
 	unsigned char                                      bUseGroupAForAll : 1;                                      // 0x0058(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_R3QS[0x7];                                     // 0x0059(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BU4J[0x7];                                     // 0x0059(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRawDistributionVector                      StartVelocity;                                             // 0x0060(0x0038) (Edit, ContainsInstancedReference)
 	struct FRawDistributionVector                      AdditionalStartVelocities[0x5];                            // 0x0098(0x0118) (Edit, ContainsInstancedReference, AdvancedDisplay)
 	struct FRawDistributionFloat                       StartVelocityRadial;                                       // 0x01B0(0x0038) (Edit, ContainsInstancedReference)
@@ -20983,17 +20983,17 @@ public:
 	struct FRawDistributionFloat                       Velocity;                                                  // 0x0090(0x0038) (Edit, ContainsInstancedReference)
 	struct FVector                                     Direction;                                                 // 0x00C8(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	unsigned char                                      bUseGroupAForAll : 1;                                      // 0x00D4(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_VYWE[0x3];                                     // 0x00D5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_2FCQ[0x3];                                     // 0x00D5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVelocityConeGroupParams                    AdditionalParams[0x5];                                     // 0x00D8(0x0280) (Edit, ContainsInstancedReference)
 	uint32_t                                           VelocityDistributeOverNPoints;                             // 0x0358(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	float                                              VelocityNPointsRandomness;                                 // 0x035C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	struct FVector                                     AdditiveVelocity;                                          // 0x0360(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              ConeDepthScale;                                            // 0x036C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      WorldSpaceOffset : 1;                                      // 0x0370(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_IP8M[0x3];                                     // 0x0371(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3GP6[0x3];                                     // 0x0371(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     EmitterOriginOffset;                                       // 0x0374(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              PushAwayFromCenterFactor;                                  // 0x0380(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_MOU1[0x4];                                     // 0x0384(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_MQZ1[0x4];                                     // 0x0384(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21016,7 +21016,7 @@ public:
 	uint32_t                                           VelocityDistributeOverNPoints;                             // 0x00C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              VelocityNPointsRandomness;                                 // 0x00CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     AdditiveVelocity;                                          // 0x00D0(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_ML68[0x4];                                     // 0x00DC(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_Z5CV[0x4];                                     // 0x00DC(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21038,7 +21038,7 @@ public:
 	struct FRawDistributionVector                      CustomParentScale;                                         // 0x0090(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      ScalesRespectEmitterRotation : 1;                          // 0x00C8(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      UseCustomLocalSpace : 1;                                   // 0x00C8(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_UTY7[0x3];                                     // 0x00C9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_94KJ[0x3];                                     // 0x00C9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              SpeedCap;                                                  // 0x00CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -21059,7 +21059,7 @@ class UParticleModuleVelocityOverLifetime : public UParticleModuleVelocityBase
 public:
 	struct FRawDistributionVector                      VelOverLife;                                               // 0x0058(0x0038) (Edit, ContainsInstancedReference)
 	unsigned char                                      Absolute : 1;                                              // 0x0090(0x0001) BIT_FIELD (Edit, ExportObject, NoDestructor)
-	unsigned char                                      UnknownData_ZZPO[0x7];                                     // 0x0091(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_CCZ2[0x7];                                     // 0x0091(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21133,7 +21133,7 @@ class UParticleSystemReplay : public UObject
 {
 public:
 	int                                                ClipIDNumber;                                              // 0x0028(0x0004) (Edit, ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_6ECJ[0x14];                                    // 0x002C(0x0014) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TEQ8[0x14];                                    // 0x002C(0x0014) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21171,18 +21171,18 @@ public:
 	float                                              Friction;                                                  // 0x0028(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EFrictionCombineMode>           FrictionCombineMode;                                       // 0x002C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bOverrideFrictionCombineMode;                              // 0x002D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_GMRS[0x2];                                     // 0x002E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_0SCV[0x2];                                     // 0x002E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              Restitution;                                               // 0x0030(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EFrictionCombineMode>           RestitutionCombineMode;                                    // 0x0034(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bOverrideRestitutionCombineMode;                           // 0x0035(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_N3DV[0x2];                                     // 0x0036(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_G9C9[0x2];                                     // 0x0036(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              Density;                                                   // 0x0038(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              RaiseMassToPower;                                          // 0x003C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              DestructibleDamageThresholdScale;                          // 0x0040(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ECP5[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XWR9[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UPhysicalMaterialPropertyBase*               PhysicalMaterialProperty;                                  // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EPhysicalSurface>               SurfaceType;                                               // 0x0050(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TT5I[0x1F];                                    // 0x0051(0x001F) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5F1I[0x1F];                                    // 0x0051(0x001F) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21220,7 +21220,7 @@ public:
 	TArray<class UBodySetup*>                          BodySetup;                                                 // 0x0028(0x0010) (ExportObject, ZeroConstructor, ContainsInstancedReference)
 	TArray<int>                                        BoundsBodies;                                              // 0x0038(0x0010) (ZeroConstructor)
 	TArray<class UPhysicsConstraintTemplate*>          ConstraintSetup;                                           // 0x0048(0x0010) (ExportObject, ZeroConstructor, ContainsInstancedReference)
-	unsigned char                                      UnknownData_O0FR[0xA0];                                    // 0x0058(0x00A0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_UFPJ[0xA0];                                    // 0x0058(0x00A0) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21242,7 +21242,7 @@ public:
 	float                                              ImpactReFireDelay;                                         // 0x002C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USoundBase*                                  DefaultImpactSound;                                        // 0x0030(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              LastImpactSoundTime;                                       // 0x0038(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_GBI8[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_06HU[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21270,28 +21270,28 @@ public:
 	struct FVector                                     PriAxis2;                                                  // 0x0070(0x000C) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor)
 	struct FVector                                     SecAxis2;                                                  // 0x007C(0x000C) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor)
 	unsigned char                                      bEnableProjection : 1;                                     // 0x0088(0x0001) BIT_FIELD (Deprecated, NoDestructor)
-	unsigned char                                      UnknownData_ET35[0x3];                                     // 0x0089(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5QA3[0x3];                                     // 0x0089(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              ProjectionLinearTolerance;                                 // 0x008C(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ProjectionAngularTolerance;                                // 0x0090(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ELinearConstraintMotion>        LinearXMotion;                                             // 0x0094(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ELinearConstraintMotion>        LinearYMotion;                                             // 0x0095(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ELinearConstraintMotion>        LinearZMotion;                                             // 0x0096(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_IHHD[0x1];                                     // 0x0097(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_KSGC[0x1];                                     // 0x0097(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              LinearLimitSize;                                           // 0x0098(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bLinearLimitSoft : 1;                                      // 0x009C(0x0001) BIT_FIELD (Deprecated, NoDestructor)
-	unsigned char                                      UnknownData_NYF9[0x3];                                     // 0x009D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8GMO[0x3];                                     // 0x009D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              LinearLimitStiffness;                                      // 0x00A0(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              LinearLimitDamping;                                        // 0x00A4(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bLinearBreakable : 1;                                      // 0x00A8(0x0001) BIT_FIELD (Deprecated, NoDestructor)
-	unsigned char                                      UnknownData_6BOT[0x3];                                     // 0x00A9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_L35M[0x3];                                     // 0x00A9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              LinearBreakThreshold;                                      // 0x00AC(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EAngularConstraintMotion>       AngularSwing1Motion;                                       // 0x00B0(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EAngularConstraintMotion>       AngularSwing2Motion;                                       // 0x00B1(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EAngularConstraintMotion>       AngularTwistMotion;                                        // 0x00B2(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HK3R[0x1];                                     // 0x00B3(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WE01[0x1];                                     // 0x00B3(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bSwingLimitSoft : 1;                                       // 0x00B4(0x0001) BIT_FIELD (Deprecated, NoDestructor)
 	unsigned char                                      bTwistLimitSoft : 1;                                       // 0x00B4(0x0001) BIT_FIELD (Deprecated, NoDestructor)
-	unsigned char                                      UnknownData_D3NF[0x3];                                     // 0x00B5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_2MJA[0x3];                                     // 0x00B5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              Swing1LimitAngle;                                          // 0x00B8(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              Swing2LimitAngle;                                          // 0x00BC(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TwistLimitAngle;                                           // 0x00C0(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -21300,9 +21300,9 @@ public:
 	float                                              TwistLimitStiffness;                                       // 0x00CC(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TwistLimitDamping;                                         // 0x00D0(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bAngularBreakable : 1;                                     // 0x00D4(0x0001) BIT_FIELD (Deprecated, NoDestructor)
-	unsigned char                                      UnknownData_3HAG[0x3];                                     // 0x00D5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_2L77[0x3];                                     // 0x00D5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              AngularBreakThreshold;                                     // 0x00D8(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9UDF[0x4];                                     // 0x00DC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BVI0[0x4];                                     // 0x00DC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FConstraintInstance                         DefaultInstance;                                           // 0x00E0(0x0160) (Edit, ContainsInstancedReference)
 
 
@@ -21321,7 +21321,7 @@ public:
 class UPhysicsSerializer : public UObject
 {
 public:
-	unsigned char                                      UnknownData_DSO4[0xA8];                                    // 0x0028(0x00A8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TN3X[0xA8];                                    // 0x0028(0x00A8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21359,7 +21359,7 @@ class UCloudStorageBase : public UPlatformInterfaceBase
 public:
 	TArray<struct FString>                             LocalCloudFiles;                                           // 0x0038(0x0010) (ZeroConstructor)
 	unsigned char                                      bSuppressDelegateCalls : 1;                                // 0x0048(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_AIN7[0x7];                                     // 0x0049(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AIYZ[0x7];                                     // 0x0049(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21378,7 +21378,7 @@ class UInGameAdManager : public UPlatformInterfaceBase
 {
 public:
 	unsigned char                                      bShouldPauseWhileAdOpen : 1;                               // 0x0038(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_5LS4[0x7];                                     // 0x0039(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_2JHR[0x7];                                     // 0x0039(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FScriptDelegate>                     ClickedBannerDelegates;                                    // 0x0040(0x0010) (ZeroConstructor, ContainsInstancedReference)
 	TArray<struct FScriptDelegate>                     ClosedAdDelegates;                                         // 0x0050(0x0010) (ZeroConstructor, ContainsInstancedReference)
 
@@ -21447,7 +21447,7 @@ public:
 	int                                                Tag;                                                       // 0x003C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FString                                     StringResponse;                                            // 0x0040(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	TArray<unsigned char>                              BinaryResponse;                                            // 0x0050(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_I05K[0x50];                                    // 0x0060(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_M2LS[0x50];                                    // 0x0060(0x0050) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21468,16 +21468,16 @@ public:
 class ULocalPlayer : public UPlayer
 {
 public:
-	unsigned char                                      UnknownData_FXCB[0x18];                                    // 0x0048(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_T5IB[0x18];                                    // 0x0048(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UGameViewportClient*                         ViewportClient;                                            // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HBE2[0x40];                                    // 0x0068(0x0040) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_I8O6[0x40];                                    // 0x0068(0x0040) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EAspectRatioAxisConstraint>     AspectRatioAxisConstraint;                                 // 0x00A8(0x0001) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_VA6O[0x7];                                     // 0x00A9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9G5X[0x7];                                     // 0x00A9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UClass*                                      PendingLevelPlayerControllerClass;                         // 0x00B0(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	unsigned char                                      bSentSplitJoin : 1;                                        // 0x00B8(0x0001) BIT_FIELD (Edit, Transient, EditConst, NoDestructor)
-	unsigned char                                      UnknownData_WTT9[0x3];                                     // 0x00B9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BXH0[0x3];                                     // 0x00B9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MinimumAspectRatio;                                        // 0x00BC(0x0004) (ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_76W2[0x150];                                   // 0x00C0(0x0150) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_C7RR[0x150];                                   // 0x00C0(0x0150) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21513,7 +21513,7 @@ public:
 class UDemoNetConnection : public UNetConnection
 {
 public:
-	unsigned char                                      UnknownData_KS17[0x10];                                    // 0x345B0(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_FX1W[0x10];                                    // 0x345B0(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21531,7 +21531,7 @@ public:
 class UPolys : public UObject
 {
 public:
-	unsigned char                                      UnknownData_4W3N[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_9EVX[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21549,7 +21549,7 @@ public:
 class UReporterBase : public UObject
 {
 public:
-	unsigned char                                      UnknownData_KH7M[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ZIC9[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21567,7 +21567,7 @@ public:
 class UReporterGraph : public UReporterBase
 {
 public:
-	unsigned char                                      UnknownData_XDYM[0x78];                                    // 0x0030(0x0078) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_K0IQ[0x78];                                    // 0x0030(0x0078) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21676,7 +21676,7 @@ public:
 	struct FName                                       ParentComponentOwnerClassName;                             // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bIsParentComponentNative;                                  // 0x0050(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               ServerMigrationFlagSet;                                    // 0x0051(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_GLZ3[0x6];                                     // 0x0052(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZHI7[0x6];                                     // 0x0052(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class USCS_Node*>                           ChildNodes;                                                // 0x0058(0x0010) (ZeroConstructor)
 	TArray<struct FBPVariableMetaDataEntry>            MetaDataArray;                                             // 0x0068(0x0010) (Edit, ZeroConstructor)
 	struct FGuid                                       VariableGuid;                                              // 0x0078(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -21697,7 +21697,7 @@ public:
 class USelection : public UObject
 {
 public:
-	unsigned char                                      UnknownData_HZJN[0x30];                                    // 0x0028(0x0030) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_MYJ4[0x30];                                    // 0x0028(0x0030) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21740,7 +21740,7 @@ public:
 	struct FRotator                                    RelativeRotation;                                          // 0x0044(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                     RelativeScale;                                             // 0x0050(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               bForceAlwaysAnimated;                                      // 0x005C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_CK8L[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_EWCE[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21780,13 +21780,13 @@ class USoundBase : public UObject
 public:
 	class USoundClass*                                 SoundClassObject;                                          // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	unsigned char                                      bDebug : 1;                                                // 0x0030(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_ECAX[0x3];                                     // 0x0031(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_N0G0[0x3];                                     // 0x0031(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_EMaxConcurrentResolutionRule>   MaxConcurrentResolutionRule;                               // 0x0034(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_6EGV[0x3];                                     // 0x0035(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_D6MK[0x3];                                     // 0x0035(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                MaxConcurrentPlayCount;                                    // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              Duration;                                                  // 0x003C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
 	class USoundAttenuation*                           AttenuationSettings;                                       // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_H0SN[0x8];                                     // 0x0048(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_O0B4[0x8];                                     // 0x0048(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21804,7 +21804,7 @@ public:
 class UDialogueSoundWaveProxy : public USoundBase
 {
 public:
-	unsigned char                                      UnknownData_DT0T[0x18];                                    // 0x0050(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_O6J8[0x18];                                    // 0x0050(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21823,12 +21823,12 @@ class USoundCue : public USoundBase
 {
 public:
 	unsigned char                                      bOverrideAttenuation : 1;                                  // 0x0050(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_5H3V[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_PRVJ[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class USoundNode*                                  FirstNode;                                                 // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              VolumeMultiplier;                                          // 0x0060(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
 	float                                              PitchMultiplier;                                           // 0x0064(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
 	struct FAttenuationSettings                        AttenuationOverrides;                                      // 0x0068(0x00C0) (Edit)
-	unsigned char                                      UnknownData_G3VU[0x8];                                     // 0x0128(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3XYR[0x8];                                     // 0x0128(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21847,7 +21847,7 @@ class USoundGroups : public UObject
 {
 public:
 	TArray<struct FSoundGroup>                         SoundGroupProfiles;                                        // 0x0028(0x0010) (ZeroConstructor, Config)
-	unsigned char                                      UnknownData_IN76[0x50];                                    // 0x0038(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_NMMD[0x50];                                    // 0x0038(0x0050) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21868,25 +21868,25 @@ public:
 	int                                                CompressionQuality;                                        // 0x0050(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
 	unsigned char                                      bLooping : 1;                                              // 0x0054(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bStreaming : 1;                                            // 0x0054(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_5AL9[0x3];                                     // 0x0055(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_FEUV[0x3];                                     // 0x0055(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                StreamingPriority;                                         // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_JVIU : 3;                                      // 0x005C(0x0001) BIT_FIELD (PADDING)
+	unsigned char                                      UnknownData_RS0Q : 3;                                      // 0x005C(0x0001) BIT_FIELD (PADDING)
 	unsigned char                                      bMature : 1;                                               // 0x005C(0x0001) BIT_FIELD (Edit, NoDestructor, AssetRegistrySearchable)
 	unsigned char                                      bManualWordWrap : 1;                                       // 0x005C(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bSingleLine : 1;                                           // 0x005C(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_DBPB[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YNZL[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<Engine_ESoundGroup>                    SoundGroup;                                                // 0x0060(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FEWQ[0x7];                                     // 0x0061(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_PU01[0x7];                                     // 0x0061(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FString                                     SpokenText;                                                // 0x0068(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash)
 	float                                              Volume;                                                    // 0x0078(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              Pitch;                                                     // 0x007C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                NumChannels;                                               // 0x0080(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
 	int                                                SampleRate;                                                // 0x0084(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
 	int                                                RawPCMDataSize;                                            // 0x0088(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_H6KP[0x4];                                     // 0x008C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_96RH[0x4];                                     // 0x008C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FSubtitleCue>                        Subtitles;                                                 // 0x0090(0x0010) (Edit, ZeroConstructor)
 	TArray<struct FLocalizedSubtitle>                  LocalizedSubtitles;                                        // 0x00A0(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_HH74[0x168];                                   // 0x00B0(0x0168) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_NDY6[0x168];                                   // 0x00B0(0x0168) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21904,7 +21904,7 @@ public:
 class USoundWaveProcedural : public USoundWave
 {
 public:
-	unsigned char                                      UnknownData_RMFK[0x18];                                    // 0x0218(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_E77Q[0x18];                                    // 0x0218(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -21923,7 +21923,7 @@ class USoundClass : public UObject
 {
 public:
 	struct FSoundClassProperties                       Properties;                                                // 0x0028(0x0024) (Edit)
-	unsigned char                                      UnknownData_GJZG[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_I57C[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class USoundClass*>                         ChildClasses;                                              // 0x0050(0x0010) (Edit, ZeroConstructor)
 	TArray<struct FPassiveSoundMixModifier>            PassiveSoundMixModifiers;                                  // 0x0060(0x0010) (Edit, ZeroConstructor)
 	class USoundClass*                                 ParentClass;                                               // 0x0070(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -21945,7 +21945,7 @@ class USoundMix : public UObject
 {
 public:
 	unsigned char                                      bApplyEQ : 1;                                              // 0x0028(0x0001) BIT_FIELD (Edit, NoDestructor, AssetRegistrySearchable)
-	unsigned char                                      UnknownData_OSDR[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_N7YT[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              EQPriority;                                                // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FAudioEQEffect                              EQSettings;                                                // 0x0030(0x0028) (Edit)
 	TArray<struct FSoundClassAdjuster>                 SoundClassEffects;                                         // 0x0058(0x0010) (Edit, ZeroConstructor)
@@ -22006,10 +22006,10 @@ class USoundNodeWavePlayer : public USoundNodeAssetReferencer
 {
 public:
 	TAssetPtr<class USoundWave>                        SoundWaveAssetPtr;                                         // 0x0038(0x001C) ELEMENT_SIZE_MISMATCH (Edit, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_LFP3[0x4];                                     // 0x0038(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_G2KC[0x4];                                     // 0x0038(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	class USoundWave*                                  SoundWave;                                                 // 0x0058(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bLooping : 1;                                              // 0x0060(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_21QC[0x7];                                     // 0x0061(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_1K3J[0x7];                                     // 0x0061(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -22030,7 +22030,7 @@ public:
 	class USoundAttenuation*                           AttenuationSettings;                                       // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FAttenuationSettings                        AttenuationOverrides;                                      // 0x0040(0x00C0) (Edit)
 	unsigned char                                      bOverrideAttenuation : 1;                                  // 0x0100(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_HEMM[0x7];                                     // 0x0101(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_66RQ[0x7];                                     // 0x0101(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -22105,7 +22105,7 @@ class USoundNodeDialoguePlayer : public USoundNode
 public:
 	struct FDialogueWaveParameter                      DialogueWaveParameter;                                     // 0x0038(0x0020) (Edit)
 	unsigned char                                      bLooping : 1;                                              // 0x0058(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_CRZY[0x7];                                     // 0x0059(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4F0C[0x7];                                     // 0x0059(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -22160,7 +22160,7 @@ class USoundNodeDoppler : public USoundNode
 {
 public:
 	float                                              DopplerIntensity;                                          // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_Q7CX[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_VKI2[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -22184,7 +22184,7 @@ public:
 	int                                                LoopCount;                                                 // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bLoopIndefinitely : 1;                                     // 0x0048(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bLoop : 1;                                                 // 0x0048(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_X545[0x7];                                     // 0x0049(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QX7R[0x7];                                     // 0x0049(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UDistributionFloatConstantCurve*             VolumeInterpCurve;                                         // 0x0050(0x0008) (ExportObject, ZeroConstructor, InstancedReference, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UDistributionFloatConstantCurve*             PitchInterpCurve;                                          // 0x0058(0x0008) (ExportObject, ZeroConstructor, InstancedReference, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRuntimeFloatCurve                          VolumeCurve;                                               // 0x0060(0x0080) (Edit)
@@ -22230,7 +22230,7 @@ class USoundNodeLooping : public USoundNode
 public:
 	int                                                LoopCount;                                                 // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bLoopIndefinitely : 1;                                     // 0x003C(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_PPBZ[0x3];                                     // 0x003D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5H22[0x3];                                     // 0x003D(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -22325,7 +22325,7 @@ class USoundNodeOscillator : public USoundNode
 public:
 	unsigned char                                      bModulateVolume : 1;                                       // 0x0038(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bModulatePitch : 1;                                        // 0x0038(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_22EC[0x3];                                     // 0x0039(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6WAU[0x3];                                     // 0x0039(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              AmplitudeMin;                                              // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              AmplitudeMax;                                              // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              FrequencyMin;                                              // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -22334,7 +22334,7 @@ public:
 	float                                              OffsetMax;                                                 // 0x0050(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              CenterMin;                                                 // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              CenterMax;                                                 // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_1EC0[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2WE4[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -22372,10 +22372,10 @@ public:
 	TArray<float>                                      Weights;                                                   // 0x0038(0x0010) (Edit, EditFixedSize, ZeroConstructor)
 	int                                                PreselectAtLevelLoad;                                      // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bRandomizeWithoutReplacement : 1;                          // 0x004C(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_5CDN[0x3];                                     // 0x004D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_DYTL[0x3];                                     // 0x004D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<bool>                                       HasBeenUsed;                                               // 0x0050(0x0010) (ZeroConstructor, Transient)
 	int                                                NumRandomUsed;                                             // 0x0060(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CBQZ[0x4];                                     // 0x0064(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_OQHI[0x4];                                     // 0x0064(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -22451,7 +22451,7 @@ public:
 	struct FVector                                     RelativeLocation;                                          // 0x0030(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FRotator                                    RelativeRotation;                                          // 0x003C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                     RelativeScale;                                             // 0x0048(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_UAD7[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HWEK[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FString                                     Tag;                                                       // 0x0058(0x0010) (Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 
 
@@ -22471,7 +22471,7 @@ class USubsurfaceProfile : public UObject
 {
 public:
 	struct FSubsurfaceProfileStruct                    Settings;                                                  // 0x0028(0x0024) (Edit)
-	unsigned char                                      UnknownData_C1G6[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_0PK5[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -22507,11 +22507,11 @@ class UTextPropertyTestObject : public UObject
 {
 public:
 	struct FText                                       DefaultedText;                                             // 0x0028(0x0018) ELEMENT_SIZE_MISMATCH
-	unsigned char                                      UnknownData_7UX1[0x20];                                    // 0x0028(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_TSVD[0x20];                                    // 0x0028(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	struct FText                                       UndefaultedText;                                           // 0x0060(0x0018) ELEMENT_SIZE_MISMATCH
-	unsigned char                                      UnknownData_DXUJ[0x20];                                    // 0x0060(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_NMNZ[0x20];                                    // 0x0060(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	struct FText                                       TransientText;                                             // 0x0098(0x0018) ELEMENT_SIZE_MISMATCH
-	unsigned char                                      UnknownData_NX68[0x20];                                    // 0x0098(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_DYUI[0x20];                                    // 0x0098(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 
 
 	static UClass* StaticClass()
@@ -22529,7 +22529,7 @@ public:
 class ULightMapTexture2D : public UTexture2D
 {
 public:
-	unsigned char                                      UnknownData_O1BO[0x8];                                     // 0x0190(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_EFJ3[0x8];                                     // 0x0190(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -22548,7 +22548,7 @@ class UShadowMapTexture2D : public UTexture2D
 {
 public:
 	TEnumAsByte<Engine_EShadowMapFlags>                ShadowmapFlags;                                            // 0x0190(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_3ZVW[0x7];                                     // 0x0191(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TWQ6[0x7];                                     // 0x0191(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -22585,9 +22585,9 @@ public:
 class UTexture2DDynamic : public UTexture
 {
 public:
-	unsigned char                                      UnknownData_OFLO[0x8];                                     // 0x0138(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MK0E[0x8];                                     // 0x0138(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<CoreUObject_EPixelFormat>              Format;                                                    // 0x0140(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_LDYV[0xF];                                     // 0x0141(0x000F) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_EVXY[0xF];                                     // 0x0141(0x000F) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -22605,7 +22605,7 @@ public:
 class UTextureCube : public UTexture
 {
 public:
-	unsigned char                                      UnknownData_109A[0x58];                                    // 0x0138(0x0058) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_BEWV[0x58];                                    // 0x0138(0x0058) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -22626,10 +22626,10 @@ public:
 	int                                                SizeX;                                                     // 0x0140(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
 	struct FLinearColor                                ClearColor;                                                // 0x0144(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<CoreUObject_EPixelFormat>              OverrideFormat;                                            // 0x0154(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_8G3L[0x3];                                     // 0x0155(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XC79[0x3];                                     // 0x0155(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bHDR : 1;                                                  // 0x0158(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AssetRegistrySearchable)
 	unsigned char                                      bForceLinearGamma : 1;                                     // 0x0158(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_OLKP[0x7];                                     // 0x0159(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_E82S[0x7];                                     // 0x0159(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -22666,12 +22666,12 @@ class UTimelineTemplate : public UObject
 public:
 	float                                              TimelineLength;                                            // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ETimelineLengthMode>            LengthMode;                                                // 0x002C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_QGL7[0x3];                                     // 0x002D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_FYV6[0x3];                                     // 0x002D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bAutoPlay : 1;                                             // 0x0030(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bLoop : 1;                                                 // 0x0030(0x0001) BIT_FIELD (Edit, NoDestructor)
 	unsigned char                                      bReplicated : 1;                                           // 0x0030(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor)
 	unsigned char                                      bValidatedAsWired : 1;                                     // 0x0030(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_EETJ[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YYDS[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FTTEventTrack>                       EventTracks;                                               // 0x0038(0x0010) (ZeroConstructor)
 	TArray<struct FTTFloatTrack>                       FloatTracks;                                               // 0x0048(0x0010) (ZeroConstructor)
 	TArray<struct FTTVectorTrack>                      VectorTracks;                                              // 0x0058(0x0010) (ZeroConstructor)
@@ -22702,9 +22702,9 @@ public:
 	float                                              TimeUntilReset;                                            // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ActivationDelay;                                           // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bPreventRecenter;                                          // 0x004C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_X6AI[0x3];                                     // 0x004D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_VI62[0x3];                                     // 0x004D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              StartupDelay;                                              // 0x0050(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_809R[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_16S7[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -22778,7 +22778,7 @@ class UVectorFieldAnimated : public UVectorField
 public:
 	class UTexture2D*                                  Texture;                                                   // 0x0048(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Engine_EVectorFieldConstructionOp>     ConstructionOp;                                            // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_X3WE[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_AOGP[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                VolumeSizeX;                                               // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                VolumeSizeY;                                               // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                VolumeSizeZ;                                               // 0x005C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -22787,7 +22787,7 @@ public:
 	int                                                FrameCount;                                                // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              FramesPerSecond;                                           // 0x006C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bLoop : 1;                                                 // 0x0070(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_ZWTF[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_N30G[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UVectorFieldStatic*                          NoiseField;                                                // 0x0078(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              NoiseScale;                                                // 0x0080(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              NoiseMax;                                                  // 0x0084(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -22811,7 +22811,7 @@ public:
 	int                                                SizeX;                                                     // 0x0048(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                SizeY;                                                     // 0x004C(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                SizeZ;                                                     // 0x0050(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ECDJ[0x7C];                                    // 0x0054(0x007C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HWB3[0x7C];                                    // 0x0054(0x007C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -22847,7 +22847,7 @@ public:
 class UMorphTarget : public UVertexAnimBase
 {
 public:
-	unsigned char                                      UnknownData_FCPD[0x10];                                    // 0x0030(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AE7N[0x10];                                    // 0x0030(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -22866,7 +22866,7 @@ class UVertexAnimation : public UVertexAnimBase
 {
 public:
 	int                                                NumAnimatedVerts;                                          // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_Y29O[0x14];                                    // 0x0034(0x0014) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_SH8K[0x14];                                    // 0x0034(0x0014) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

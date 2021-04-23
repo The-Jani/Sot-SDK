@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -19,14 +19,6 @@ namespace CG
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct AthenaServerMigration.ServerMigrationSetupCompleteEvent
-// 0x0001
-struct FServerMigrationSetupCompleteEvent
-{
-	unsigned char                                      UnknownData_JJQ7[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
 // ScriptStruct AthenaServerMigration.IncomingMigrationPreventionZone
 // 0x000C
 struct FIncomingMigrationPreventionZone
@@ -40,7 +32,15 @@ struct FIncomingMigrationPreventionZone
 // 0x0001
 struct FServerMigrationSetupRequestEvent
 {
-	unsigned char                                      UnknownData_OA4X[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_9EF7[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaServerMigration.ServerMigrationSetupCompleteEvent
+// 0x0001
+struct FServerMigrationSetupCompleteEvent
+{
+	unsigned char                                      UnknownData_W9CZ[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 

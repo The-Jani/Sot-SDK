@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -19,6 +19,57 @@ namespace CG
 // Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct WaterSlide.WaterSlideActionStateParams
+// 0x0024
+struct FWaterSlideActionStateParams
+{
+	float                                              ForcedFieldOfView;                                         // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               ForceStash;                                                // 0x0004(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_V0T6[0x3];                                     // 0x0005(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FLookAtOffsetParams                         LookAtOffsetParams;                                        // 0x0008(0x001C) (Edit)
+
+};
+
+// ScriptStruct WaterSlide.OnPlayerSpeedOnWaterSlideChangedActionStateEvent
+// 0x0004
+struct FOnPlayerSpeedOnWaterSlideChangedActionStateEvent
+{
+	unsigned char                                      UnknownData_YAMT[0x4];                                     // 0x0000(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct WaterSlide.OnPlayerChangedWaterSlideRouteActionStateEvent
+// 0x0001
+struct FOnPlayerChangedWaterSlideRouteActionStateEvent
+{
+	unsigned char                                      UnknownData_P0J7[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct WaterSlide.OnEndWaterSlideActionStateEvent
+// 0x0001
+struct FOnEndWaterSlideActionStateEvent
+{
+	unsigned char                                      UnknownData_K2J3[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct WaterSlide.OnStartWaterSlideActionStateEvent
+// 0x0001
+struct FOnStartWaterSlideActionStateEvent
+{
+	unsigned char                                      UnknownData_HI6D[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct WaterSlide.OnExitedWaterSlideEvent
+// 0x0001
+struct FOnExitedWaterSlideEvent
+{
+	unsigned char                                      UnknownData_LAK0[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+};
+
 // ScriptStruct WaterSlide.WaterSlideParams
 // 0x001C
 struct FWaterSlideParams
@@ -30,57 +81,6 @@ struct FWaterSlideParams
 	float                                              LeftVeeringDistance;                                       // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              RightVeeringDistance;                                      // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              DistanceAboveSlideOffset;                                  // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct WaterSlide.WaterSlideActionStateParams
-// 0x0024
-struct FWaterSlideActionStateParams
-{
-	float                                              ForcedFieldOfView;                                         // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               ForceStash;                                                // 0x0004(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_AFEY[0x3];                                     // 0x0005(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FLookAtOffsetParams                         LookAtOffsetParams;                                        // 0x0008(0x001C) (Edit)
-
-};
-
-// ScriptStruct WaterSlide.OnPlayerSpeedOnWaterSlideChangedActionStateEvent
-// 0x0004
-struct FOnPlayerSpeedOnWaterSlideChangedActionStateEvent
-{
-	unsigned char                                      UnknownData_GLPM[0x4];                                     // 0x0000(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct WaterSlide.OnPlayerChangedWaterSlideRouteActionStateEvent
-// 0x0001
-struct FOnPlayerChangedWaterSlideRouteActionStateEvent
-{
-	unsigned char                                      UnknownData_LZRI[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct WaterSlide.OnEndWaterSlideActionStateEvent
-// 0x0001
-struct FOnEndWaterSlideActionStateEvent
-{
-	unsigned char                                      UnknownData_HBUR[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct WaterSlide.OnStartWaterSlideActionStateEvent
-// 0x0001
-struct FOnStartWaterSlideActionStateEvent
-{
-	unsigned char                                      UnknownData_UOL1[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct WaterSlide.OnExitedWaterSlideEvent
-// 0x0001
-struct FOnExitedWaterSlideEvent
-{
-	unsigned char                                      UnknownData_9VT7[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 

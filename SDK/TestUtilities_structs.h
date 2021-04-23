@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -19,19 +19,11 @@ namespace CG
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct TestUtilities.EventTestEventWithId
-// 0x0004
-struct FEventTestEventWithId
-{
-	int                                                Id;                                                        // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
 // ScriptStruct TestUtilities.EventOtherTestEvent
 // 0x0001
 struct FEventOtherTestEvent
 {
-	unsigned char                                      UnknownData_FS7D[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_X88G[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -39,7 +31,15 @@ struct FEventOtherTestEvent
 // 0x0001
 struct FEventTestEvent
 {
-	unsigned char                                      UnknownData_WZI2[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_0L4J[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct TestUtilities.EventTestEventWithId
+// 0x0004
+struct FEventTestEventWithId
+{
+	int                                                Id;                                                        // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 

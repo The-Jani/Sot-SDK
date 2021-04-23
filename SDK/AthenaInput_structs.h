@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -37,7 +37,7 @@ enum class AthenaInput_EInputHandlerResult : uint8_t
 struct FIdleTimeTracker
 {
 	struct FTimespan                                   InactivityThreshold;                                       // 0x0000(0x0008) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData_WEFC[0x30];                                    // 0x0008(0x0030) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_6VRG[0x30];                                    // 0x0008(0x0030) MISSED OFFSET (PADDING)
 
 };
 
@@ -46,7 +46,7 @@ struct FIdleTimeTracker
 struct FPrioritizedCompositeInputHandler
 {
 	class UCompositeInputHandler*                      InputHandler;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_K3KQ[0x8];                                     // 0x0008(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_WGPM[0x8];                                     // 0x0008(0x0008) MISSED OFFSET (PADDING)
 
 };
 
@@ -55,7 +55,7 @@ struct FPrioritizedCompositeInputHandler
 struct FCompositeInputDelegator
 {
 	TArray<struct FPrioritizedCompositeInputHandler>   PrioritizedCompositeInputHandlers;                         // 0x0000(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_1PWY[0x50];                                    // 0x0010(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_U8HK[0x50];                                    // 0x0010(0x0050) MISSED OFFSET (PADDING)
 
 };
 
@@ -65,7 +65,7 @@ struct FNotificationInputDisplayName
 {
 	class UClass*                                      InputID;                                                   // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	struct FText                                       Name;                                                      // 0x0008(0x0018) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData_L883[0x20];                                    // 0x0008(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_PAE5[0x20];                                    // 0x0008(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 
 };
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -59,7 +59,7 @@ class UCreateActorInstanceOnExplodeComponent : public UActorComponent
 {
 public:
 	class UClass*                                      ActorToInstance;                                           // 0x00C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_F7MQ[0x58];                                    // 0x00D0(0x0058) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_N47W[0x58];                                    // 0x00D0(0x0058) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -79,7 +79,7 @@ class UStatusResponseExplodeAfterTime : public UStatusResponse
 public:
 	float                                              MinTimeUntilExplosion;                                     // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxTimeUntilExplosion;                                     // 0x0034(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_6Z6V[0x8];                                     // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GIWQ[0x8];                                     // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UWorld*                                      CachedWorld;                                               // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 

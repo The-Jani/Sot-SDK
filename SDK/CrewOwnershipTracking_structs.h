@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -18,14 +18,6 @@ namespace CG
 //---------------------------------------------------------------------------
 // Script Structs
 //---------------------------------------------------------------------------
-
-// ScriptStruct CrewOwnershipTracking.OwnerListEntry
-// 0x0010
-struct FOwnerListEntry
-{
-	TArray<struct FGuid>                               OwnerList;                                                 // 0x0000(0x0010) (ZeroConstructor)
-
-};
 
 // ScriptStruct CrewOwnershipTracking.CrewTrackedItemOwnershipSet
 // 0x0018
@@ -45,6 +37,14 @@ struct FTrackItemOwnershipEvent
 
 };
 
+// ScriptStruct CrewOwnershipTracking.OwnerListEntry
+// 0x0010
+struct FOwnerListEntry
+{
+	TArray<struct FGuid>                               OwnerList;                                                 // 0x0000(0x0010) (ZeroConstructor)
+
+};
+
 // ScriptStruct CrewOwnershipTracking.CrewTrackedItemOwnershipChanged
 // 0x0030
 struct FCrewTrackedItemOwnershipChanged
@@ -53,7 +53,7 @@ struct FCrewTrackedItemOwnershipChanged
 	struct FGuid                                       CrewId;                                                    // 0x0008(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FGuid                                       PreviousCrewId;                                            // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               IsFirstTimeOwnedByThisCrew;                                // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_PJVP[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_SKGK[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (PADDING)
 
 };
 

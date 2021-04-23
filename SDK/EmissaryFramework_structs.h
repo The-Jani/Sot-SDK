@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -52,14 +52,6 @@ struct FEmissaryNonQuestCompanyActionRewardBoostEvent
 
 };
 
-// ScriptStruct EmissaryFramework.EmissaryCompanyChangedEvent
-// 0x0010
-struct FEmissaryCompanyChangedEvent
-{
-	unsigned char                                      UnknownData_I1T7[0x10];                                    // 0x0000(0x0010) MISSED OFFSET (PADDING)
-
-};
-
 // ScriptStruct EmissaryFramework.EmissaryGlobalActionRewardBoostEvent
 // 0x0008
 struct FEmissaryGlobalActionRewardBoostEvent
@@ -68,24 +60,11 @@ struct FEmissaryGlobalActionRewardBoostEvent
 
 };
 
-// ScriptStruct EmissaryFramework.EmissaryCompanyActionRewardBoostServiceEvent
-// 0x001C
-struct FEmissaryCompanyActionRewardBoostServiceEvent
+// ScriptStruct EmissaryFramework.EmissaryCompanyChangedEvent
+// 0x0010
+struct FEmissaryCompanyChangedEvent
 {
-	struct FName                                       AssociatedCompany;                                         // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<EmissaryFramework_EEmisaryCompanyActionType> CompanyActionType;                                         // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_LBJ1[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FGuid                                       AssociatedCrew;                                            // 0x000C(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-
-};
-
-// ScriptStruct EmissaryFramework.EmissaryQuestCompanyActionRewardBoostEvent
-// 0x0014
-struct FEmissaryQuestCompanyActionRewardBoostEvent
-{
-	TEnumAsByte<EmissaryFramework_EEmisaryCompanyActionType> CompanyActionType;                                         // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_Q9T7[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FGuid                                       QuestId;                                                   // 0x0004(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_LSEJ[0x10];                                    // 0x0000(0x0010) MISSED OFFSET (PADDING)
 
 };
 
@@ -95,6 +74,27 @@ struct FEmissaryGlobalActionRewardBoostServiceEvent
 {
 	class UClass*                                      FinishedEventType;                                         // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	struct FGuid                                       AssociatedCrew;                                            // 0x0008(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
+
+};
+
+// ScriptStruct EmissaryFramework.EmissaryQuestCompanyActionRewardBoostEvent
+// 0x0014
+struct FEmissaryQuestCompanyActionRewardBoostEvent
+{
+	TEnumAsByte<EmissaryFramework_EEmisaryCompanyActionType> CompanyActionType;                                         // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_DGAN[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FGuid                                       QuestId;                                                   // 0x0004(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
+
+};
+
+// ScriptStruct EmissaryFramework.EmissaryCompanyActionRewardBoostServiceEvent
+// 0x001C
+struct FEmissaryCompanyActionRewardBoostServiceEvent
+{
+	struct FName                                       AssociatedCompany;                                         // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<EmissaryFramework_EEmisaryCompanyActionType> CompanyActionType;                                         // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_B7WE[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FGuid                                       AssociatedCrew;                                            // 0x000C(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 
 };
 

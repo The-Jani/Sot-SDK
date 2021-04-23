@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -19,16 +19,16 @@ namespace CG
 // Classes
 //---------------------------------------------------------------------------
 
-// Class AthenaServerMigration.MigrationServiceInterface
+// Class AthenaServerMigration.AthenaServerMigrationGameAuthorityProviderInterface
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UMigrationServiceInterface : public UInterface
+class UAthenaServerMigrationGameAuthorityProviderInterface : public UInterface
 {
 public:
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaServerMigration.MigrationServiceInterface");
+		static auto ptr = UObject::FindClass("Class AthenaServerMigration.AthenaServerMigrationGameAuthorityProviderInterface");
 		return ptr;
 	}
 
@@ -53,16 +53,16 @@ public:
 
 };
 
-// Class AthenaServerMigration.AthenaServerMigrationGameAuthorityProviderInterface
+// Class AthenaServerMigration.MigrationServiceInterface
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UAthenaServerMigrationGameAuthorityProviderInterface : public UInterface
+class UMigrationServiceInterface : public UInterface
 {
 public:
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaServerMigration.AthenaServerMigrationGameAuthorityProviderInterface");
+		static auto ptr = UObject::FindClass("Class AthenaServerMigration.MigrationServiceInterface");
 		return ptr;
 	}
 

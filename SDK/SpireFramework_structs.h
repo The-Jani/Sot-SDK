@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -43,6 +43,16 @@ struct FSpireStreamedLevelData
 
 };
 
+// ScriptStruct SpireFramework.SpireInfo
+// 0x0008
+struct FSpireInfo
+{
+	int                                                LevelId;                                                   // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               IsLoaded;                                                  // 0x0004(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_R8ST[0x3];                                     // 0x0005(0x0003) MISSED OFFSET (PADDING)
+
+};
+
 // ScriptStruct SpireFramework.ServerSpireInfo
 // 0x0068
 struct FServerSpireInfo
@@ -51,16 +61,6 @@ struct FServerSpireInfo
 	struct FVector                                     Location;                                                  // 0x0004(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	class AActor*                                      SpireActor;                                                // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMap<struct FString, struct FName>                 InstancedLevelPaths;                                       // 0x0018(0x0050) (ZeroConstructor)
-
-};
-
-// ScriptStruct SpireFramework.SpireInfo
-// 0x0008
-struct FSpireInfo
-{
-	int                                                LevelId;                                                   // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               IsLoaded;                                                  // 0x0004(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_86X9[0x3];                                     // 0x0005(0x0003) MISSED OFFSET (PADDING)
 
 };
 

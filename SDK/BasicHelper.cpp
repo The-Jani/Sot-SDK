@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.0
+﻿// Name: SoT, Version: 2.1.0.1
 
 #include "../SDK.h"
 #include <iostream>
@@ -39,7 +39,7 @@ bool InitSdk(const std::string& moduleName, const uintptr_t gObjectsOffset, cons
 }
 bool InitSdk()
 {
-	return InitSdk("SoTGame.exe", 0x708BA90, 0x7087448);
+	return InitSdk("SoTGame.exe", 0x708AAB0, 0x7086468);
 }
 #endif
 //---------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -23,7 +23,7 @@ namespace CG
 // 0x0050
 struct FSocketLookupCache
 {
-	unsigned char                                      UnknownData_USGP[0x50];                                    // 0x0000(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_F3ZL[0x50];                                    // 0x0000(0x0050) MISSED OFFSET (PADDING)
 
 };
 
@@ -40,7 +40,7 @@ struct FSocketPathNode
 struct FSocketPath
 {
 	TArray<struct FSocketPathNode>                     Nodes;                                                     // 0x0000(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData_VWEN[0x8];                                     // 0x0010(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_0NI8[0x8];                                     // 0x0010(0x0008) MISSED OFFSET (PADDING)
 
 };
 

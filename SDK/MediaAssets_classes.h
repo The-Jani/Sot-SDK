@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -27,9 +27,9 @@ public:
 	struct FScriptMulticastDelegate                    OnMediaClosed;                                             // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnMediaOpened;                                             // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	unsigned char                                      Looping : 1;                                               // 0x0048(0x0001) BIT_FIELD (Edit, NoDestructor, Protected)
-	unsigned char                                      UnknownData_B0BS[0x7];                                     // 0x0049(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WF78[0x7];                                     // 0x0049(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FString                                     URL;                                                       // 0x0050(0x0010) (Edit, ZeroConstructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_P967[0xB8];                                    // 0x0060(0x00B8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3CWU[0xB8];                                    // 0x0060(0x00B8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -69,11 +69,11 @@ class UMediaSoundWave : public USoundWave
 {
 public:
 	int                                                AudioTrackIndex;                                           // 0x0218(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_8WTZ[0x4];                                     // 0x021C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QEOY[0x4];                                     // 0x021C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UMediaPlayer*                                MediaPlayer;                                               // 0x0220(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_BPD9[0x30];                                    // 0x0228(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_M4ID[0x30];                                    // 0x0228(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TWeakObjectPtr<class UMediaPlayer>                 CurrentMediaPlayer;                                        // 0x0258(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
-	unsigned char                                      UnknownData_H9JM[0x18];                                    // 0x0260(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_WRO0[0x18];                                    // 0x0260(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -94,13 +94,13 @@ class UMediaTexture : public UTexture
 public:
 	TEnumAsByte<Engine_ETextureAddress>                AddressX;                                                  // 0x0138(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
 	TEnumAsByte<Engine_ETextureAddress>                AddressY;                                                  // 0x0139(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_128U[0x2];                                     // 0x013A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_50LB[0x2];                                     // 0x013A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FLinearColor                                ClearColor;                                                // 0x013C(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	int                                                VideoTrackIndex;                                           // 0x014C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMediaPlayer*                                MediaPlayer;                                               // 0x0150(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_Z47V[0x8];                                     // 0x0158(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SKXY[0x8];                                     // 0x0158(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TWeakObjectPtr<class UMediaPlayer>                 CurrentMediaPlayer;                                        // 0x0160(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
-	unsigned char                                      UnknownData_766F[0x40];                                    // 0x0168(0x0040) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_A78D[0x40];                                    // 0x0168(0x0040) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

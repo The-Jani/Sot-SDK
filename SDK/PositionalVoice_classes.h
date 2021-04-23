@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -19,64 +19,12 @@ namespace CG
 // Classes
 //---------------------------------------------------------------------------
 
-// Class PositionalVoice.VoiceChatRendererInterface
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UVoiceChatRendererInterface : public UInterface
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class PositionalVoice.VoiceChatRendererInterface");
-		return ptr;
-	}
-
-
-
-};
-
-// Class PositionalVoice.MockVoiceChatRenderer
-// 0x0018 (FullSize[0x0040] - InheritedSize[0x0028])
-class UMockVoiceChatRenderer : public UObject
-{
-public:
-	unsigned char                                      UnknownData_PEHD[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class PositionalVoice.MockVoiceChatRenderer");
-		return ptr;
-	}
-
-
-
-};
-
-// Class PositionalVoice.VoiceChatRendererRetreivalInterface
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UVoiceChatRendererRetreivalInterface : public UInterface
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class PositionalVoice.VoiceChatRendererRetreivalInterface");
-		return ptr;
-	}
-
-
-
-};
-
 // Class PositionalVoice.MockVoiceChatRendererRetriever
 // 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
 class UMockVoiceChatRendererRetriever : public UObject
 {
 public:
-	unsigned char                                      UnknownData_IT7I[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_UK0N[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -94,14 +42,14 @@ public:
 class UVoiceChatRenderer : public UObject
 {
 public:
-	unsigned char                                      UnknownData_7GBE[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5YCS[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UWwiseEvent*                                 AttenuatedVoiceEvent;                                      // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWwiseEvent*                                 AttenuatedAndSpatialisedVoiceEvent;                        // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWwiseEvent*                                 UnattenuatedVoiceEvent;                                    // 0x0048(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                PreBufferInMilliseconds;                                   // 0x0050(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                ChatRoutingListenerIndex;                                  // 0x0054(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              EmitterHoldInSeconds;                                      // 0x0058(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_QZB0[0x124];                                   // 0x005C(0x0124) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DGQC[0x124];                                   // 0x005C(0x0124) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -154,14 +102,66 @@ public:
 	float GetVoiceAttenuationScaler(const TScriptInterface<class UVoiceChatEmitterInterface>& RelativeToThisEmitter);
 };
 
+// Class PositionalVoice.VoiceChatRendererInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UVoiceChatRendererInterface : public UInterface
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class PositionalVoice.VoiceChatRendererInterface");
+		return ptr;
+	}
+
+
+
+};
+
+// Class PositionalVoice.MockVoiceChatRenderer
+// 0x0018 (FullSize[0x0040] - InheritedSize[0x0028])
+class UMockVoiceChatRenderer : public UObject
+{
+public:
+	unsigned char                                      UnknownData_N4Q2[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class PositionalVoice.MockVoiceChatRenderer");
+		return ptr;
+	}
+
+
+
+};
+
+// Class PositionalVoice.VoiceChatRendererRetreivalInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UVoiceChatRendererRetreivalInterface : public UInterface
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class PositionalVoice.VoiceChatRendererRetreivalInterface");
+		return ptr;
+	}
+
+
+
+};
+
 // Class PositionalVoice.TestVoiceChatEmitter
 // 0x0068 (FullSize[0x0490] - InheritedSize[0x0428])
 class ATestVoiceChatEmitter : public AActor
 {
 public:
-	unsigned char                                      UnknownData_VYBR[0x58];                                    // 0x0428(0x0058) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_B0VO[0x58];                                    // 0x0428(0x0058) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UWwiseObjectPoolWrapper*                     PoolWrapper;                                               // 0x0480(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_AT5I[0x8];                                     // 0x0488(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8C1T[0x8];                                     // 0x0488(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

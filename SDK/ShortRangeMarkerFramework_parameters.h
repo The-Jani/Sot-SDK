@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 #include "../SDK.h"
 
@@ -20,17 +20,17 @@ namespace CG
 // Parameters
 //---------------------------------------------------------------------------
 
+// Function ShortRangeMarkerFramework.ShortRangeMarker.Multicast_OnCleanUp
+struct AShortRangeMarker_Multicast_OnCleanUp_Params
+{
+};
+
 // Function ShortRangeMarkerFramework.ShortRangeMarkerBlueprintFunctionLibrary.RegisterActorsWithShortRangeMarker
 struct UShortRangeMarkerBlueprintFunctionLibrary_RegisterActorsWithShortRangeMarker_Params
 {
 	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                      InMarker;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                              InActors;                                                  // (Parm, OutParm, ZeroConstructor, ReferenceParm)
-};
-
-// Function ShortRangeMarkerFramework.ShortRangeMarker.Multicast_OnCleanUp
-struct AShortRangeMarker_Multicast_OnCleanUp_Params
-{
 };
 
 }

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.0
+﻿// Name: SoT, Version: 2.1.0.1
 
 #include "../SDK.h"
 
@@ -15729,61 +15729,6 @@ void ACargoRunMap::OnRep_Contents(const struct FCargoRunMapContents& PreviousCon
 
 	ACargoRunMap_OnRep_Contents_Params params;
 	params.PreviousContents = PreviousContents;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function Athena.CargoRunParticipantInterface.SetPickUpPointForCargo
-// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FGuid                   InCrewId                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
-// struct FGuid                   InCargoBatchId                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
-// class UClass*                  InCrateItemDesc                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-// struct FGuid                   InDeliveryLocationId           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
-// int                            InDeliveryDeadlineInMinutes    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FGuid                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-struct FGuid UCargoRunParticipantInterface::SetPickUpPointForCargo(const struct FGuid& InCrewId, const struct FGuid& InCargoBatchId, class UClass* InCrateItemDesc, const struct FGuid& InDeliveryLocationId, int InDeliveryDeadlineInMinutes)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.CargoRunParticipantInterface.SetPickUpPointForCargo");
-
-	UCargoRunParticipantInterface_SetPickUpPointForCargo_Params params;
-	params.InCrewId = InCrewId;
-	params.InCargoBatchId = InCargoBatchId;
-	params.InCrateItemDesc = InCrateItemDesc;
-	params.InDeliveryLocationId = InDeliveryLocationId;
-	params.InDeliveryDeadlineInMinutes = InDeliveryDeadlineInMinutes;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
-
-// Function Athena.CargoRunParticipantInterface.ClearPickUp
-// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FGuid                   InCrewId                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
-// struct FGuid                   InCargoBatchId                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
-// struct FGuid                   InPickUpId                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
-void UCargoRunParticipantInterface::ClearPickUp(const struct FGuid& InCrewId, const struct FGuid& InCargoBatchId, const struct FGuid& InPickUpId)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Athena.CargoRunParticipantInterface.ClearPickUp");
-
-	UCargoRunParticipantInterface_ClearPickUp_Params params;
-	params.InCrewId = InCrewId;
-	params.InCargoBatchId = InCargoBatchId;
-	params.InPickUpId = InPickUpId;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
@@ -52229,6 +52174,61 @@ void UWieldableItemCanvasRenderingComponent::OnPrimaryCanvasUpdate(class UCanvas
 	params.Canvas = Canvas;
 	params.Width = Width;
 	params.Height = Height;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function Athena.CargoRunParticipantInterface.SetPickUpPointForCargo
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FGuid                   InCrewId                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+// struct FGuid                   InCargoBatchId                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+// class UClass*                  InCrateItemDesc                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// struct FGuid                   InDeliveryLocationId           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+// int                            InDeliveryDeadlineInMinutes    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FGuid                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+struct FGuid UCargoRunParticipantInterface::SetPickUpPointForCargo(const struct FGuid& InCrewId, const struct FGuid& InCargoBatchId, class UClass* InCrateItemDesc, const struct FGuid& InDeliveryLocationId, int InDeliveryDeadlineInMinutes)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.CargoRunParticipantInterface.SetPickUpPointForCargo");
+
+	UCargoRunParticipantInterface_SetPickUpPointForCargo_Params params;
+	params.InCrewId = InCrewId;
+	params.InCargoBatchId = InCargoBatchId;
+	params.InCrateItemDesc = InCrateItemDesc;
+	params.InDeliveryLocationId = InDeliveryLocationId;
+	params.InDeliveryDeadlineInMinutes = InDeliveryDeadlineInMinutes;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
+}
+
+
+// Function Athena.CargoRunParticipantInterface.ClearPickUp
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FGuid                   InCrewId                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+// struct FGuid                   InCargoBatchId                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+// struct FGuid                   InPickUpId                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+void UCargoRunParticipantInterface::ClearPickUp(const struct FGuid& InCrewId, const struct FGuid& InCargoBatchId, const struct FGuid& InPickUpId)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Athena.CargoRunParticipantInterface.ClearPickUp");
+
+	UCargoRunParticipantInterface_ClearPickUp_Params params;
+	params.InCrewId = InCrewId;
+	params.InCargoBatchId = InCargoBatchId;
+	params.InPickUpId = InPickUpId;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;

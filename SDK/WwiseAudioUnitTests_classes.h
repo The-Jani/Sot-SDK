@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -19,41 +19,6 @@ namespace CG
 // Classes
 //---------------------------------------------------------------------------
 
-// Class WwiseAudioUnitTests.MockWwiseInputManager
-// 0x0018 (FullSize[0x0040] - InheritedSize[0x0028])
-class UMockWwiseInputManager : public UObject
-{
-public:
-	unsigned char                                      UnknownData_AVTM[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class WwiseAudioUnitTests.MockWwiseInputManager");
-		return ptr;
-	}
-
-
-
-};
-
-// Class WwiseAudioUnitTests.WwiseEventTest1
-// 0x0000 (FullSize[0x0050] - InheritedSize[0x0050])
-class UWwiseEventTest1 : public UWwiseEvent
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class WwiseAudioUnitTests.WwiseEventTest1");
-		return ptr;
-	}
-
-
-
-};
-
 // Class WwiseAudioUnitTests.WwiseEmitterComponentBlueprintLibraryTestActor
 // 0x0000 (FullSize[0x0428] - InheritedSize[0x0428])
 class AWwiseEmitterComponentBlueprintLibraryTestActor : public AActor
@@ -71,6 +36,24 @@ public:
 
 };
 
+// Class WwiseAudioUnitTests.MockWwiseInputManager
+// 0x0018 (FullSize[0x0040] - InheritedSize[0x0028])
+class UMockWwiseInputManager : public UObject
+{
+public:
+	unsigned char                                      UnknownData_HCX5[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class WwiseAudioUnitTests.MockWwiseInputManager");
+		return ptr;
+	}
+
+
+
+};
+
 // Class WwiseAudioUnitTests.WwiseEventTest2
 // 0x0000 (FullSize[0x0050] - InheritedSize[0x0050])
 class UWwiseEventTest2 : public UWwiseEvent
@@ -81,6 +64,23 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class WwiseAudioUnitTests.WwiseEventTest2");
+		return ptr;
+	}
+
+
+
+};
+
+// Class WwiseAudioUnitTests.WwiseEventTest1
+// 0x0000 (FullSize[0x0050] - InheritedSize[0x0050])
+class UWwiseEventTest1 : public UWwiseEvent
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class WwiseAudioUnitTests.WwiseEventTest1");
 		return ptr;
 	}
 

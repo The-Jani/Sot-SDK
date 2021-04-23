@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -83,7 +83,7 @@ struct FScrapeableDamageSpeedEntry
 	class UClass*                                      SpeedBand;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	class UForceFeedbackEffect*                        ForceFeedbackEffect;                                       // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                DamageAmount;                                              // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2607[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4CWF[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -93,7 +93,7 @@ struct FWatercraftRolloverCorrector
 {
 	float                                              RollThresholdToConsiderRolledOver;                         // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TorqueScalar;                                              // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_6F1Z[0x4];                                     // 0x0008(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PPF3[0x4];                                     // 0x0008(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -118,7 +118,7 @@ struct FOarParams
 struct FOar
 {
 	struct FOarParams                                  OarParams;                                                 // 0x0000(0x0038) (Protected)
-	unsigned char                                      UnknownData_7AMS[0x28];                                    // 0x0038(0x0028) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_SWT3[0x28];                                    // 0x0038(0x0028) MISSED OFFSET (PADDING)
 
 };
 
@@ -126,7 +126,7 @@ struct FOar
 // 0x0001
 struct FEventOarStrokeEnded
 {
-	unsigned char                                      UnknownData_NFMU[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_K0X6[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -134,7 +134,7 @@ struct FEventOarStrokeEnded
 // 0x0001
 struct FEventRowboatExitedWater
 {
-	unsigned char                                      UnknownData_UFS1[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_VXTH[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -142,7 +142,7 @@ struct FEventRowboatExitedWater
 // 0x0001
 struct FEventRowboatEnteredWater
 {
-	unsigned char                                      UnknownData_26L2[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_FQCV[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -152,7 +152,7 @@ struct FRowboatMountStateTelemetryEvent
 {
 	struct FGuid                                       WatercraftId;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Watercrafts_ERowboatActionTelemetry>   ActionName;                                                // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_8LL7[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_JPJL[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (PADDING)
 
 };
 
@@ -163,7 +163,7 @@ struct FWatercraftDespawnTelemetryEvent
 	struct FGuid                                       WatercraftId;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                     Location;                                                  // 0x0010(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Watercrafts_EWatercraftDespawnReason>  DespawnReason;                                             // 0x001C(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_SL2D[0x3];                                     // 0x001D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_O1RI[0x3];                                     // 0x001D(0x0003) MISSED OFFSET (PADDING)
 
 };
 
@@ -202,7 +202,7 @@ struct FRowboatDamageEffectData
 {
 	class UMaterialInstanceDynamic*                    DynamicMaterialInstance;                                   // 0x0000(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              FadeInDuration;                                            // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_W1GP[0xC];                                     // 0x000C(0x000C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HW2B[0xC];                                     // 0x000C(0x000C) MISSED OFFSET (PADDING)
 
 };
 

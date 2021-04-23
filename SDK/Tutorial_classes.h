@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -51,7 +51,7 @@ public:
 	bool                                               HasStartedTutorial;                                        // 0x00F1(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               HasReceivedEntitlements;                                   // 0x00F2(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               HasPosessedPawn;                                           // 0x00F3(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_UM3K[0x1C];                                    // 0x00F4(0x001C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_B1X5[0x1C];                                    // 0x00F4(0x001C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -73,7 +73,7 @@ public:
 	class AAthenaPlayerController*                     AthenaPlayerController;                                    // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	bool                                               ShouldPlayIntroAnimatic;                                   // 0x0030(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                               ShouldDisableAllIntroBehaviour;                            // 0x0031(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_Z4EU[0x2];                                     // 0x0032(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_PWI7[0x2];                                     // 0x0032(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FFirstPersonAnimaticSettings                IntroAnimationSettings;                                    // 0x0034(0x002C) (Edit, DisableEditOnInstance)
 
 
@@ -146,7 +146,7 @@ class UCompanyTutorialVoyageProgress : public UObject
 public:
 	class UClass*                                      AssignedVoyageProposalDescClass;                           // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	class UClass*                                      AssignedTaleRankDescClass;                                 // 0x0030(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9ICZ[0xA8];                                    // 0x0038(0x00A8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ZNA2[0xA8];                                    // 0x0038(0x00A8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -168,7 +168,7 @@ class UContextualTutorialComponent : public UActorComponent
 public:
 	TArray<struct FContextualTutorialPromptDesc>       ContextualTutorialClasses;                                 // 0x00C8(0x0010) (Edit, ZeroConstructor)
 	TArray<class AActor*>                              SpawnedPromptActors;                                       // 0x00D8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_OB0F[0x38];                                    // 0x00E8(0x0038) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_EO9R[0x38];                                    // 0x00E8(0x0038) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -205,7 +205,7 @@ class UTutorial2019Component : public UActorComponent
 public:
 	bool                                               IsEnabledByServer;                                         // 0x00C8(0x0001) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor)
 	bool                                               IsInTutorialTale;                                          // 0x00C9(0x0001) (Net, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_5XPL[0x6];                                     // 0x00CA(0x0006) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_M6N6[0x6];                                     // 0x00CA(0x0006) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

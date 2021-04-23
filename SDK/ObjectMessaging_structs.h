@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -23,7 +23,7 @@ namespace CG
 // 0x00A0
 struct FObjectMessagingDispatcher
 {
-	unsigned char                                      UnknownData_5L77[0xA0];                                    // 0x0000(0x00A0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_1E5J[0xA0];                                    // 0x0000(0x00A0) MISSED OFFSET (PADDING)
 
 };
 
@@ -31,7 +31,7 @@ struct FObjectMessagingDispatcher
 // 0x0008
 struct FObjectMessagingDispatcherHandle
 {
-	unsigned char                                      UnknownData_C0T5[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_MORR[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (PADDING)
 
 };
 
@@ -39,7 +39,7 @@ struct FObjectMessagingDispatcherHandle
 // 0x0050
 struct FObjectMessagingObjectScoper
 {
-	unsigned char                                      UnknownData_QM9U[0x50];                                    // 0x0000(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_V9W3[0x50];                                    // 0x0000(0x0050) MISSED OFFSET (PADDING)
 
 };
 
@@ -47,9 +47,9 @@ struct FObjectMessagingObjectScoper
 // 0x0048
 struct FObjectMessagingHandle
 {
-	unsigned char                                      UnknownData_0A46[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Q1YE[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UStruct*                                     EventType;                                                 // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_SUD6[0x38];                                    // 0x0010(0x0038) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8VP5[0x38];                                    // 0x0010(0x0038) MISSED OFFSET (PADDING)
 
 };
 

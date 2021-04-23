@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -24,7 +24,7 @@ namespace CG
 class USimpleOverlapComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_DMWN[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DI1Q[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -42,7 +42,7 @@ public:
 class ATestObjectMessagingDispatcherInterface : public AActor
 {
 public:
-	unsigned char                                      UnknownData_36QJ[0xA8];                                    // 0x0428(0x00A8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_F086[0xA8];                                    // 0x0428(0x00A8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -60,9 +60,9 @@ public:
 class ATestOverlapBroadcasterActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData_LVIX[0x30];                                    // 0x0428(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_IZAR[0x30];                                    // 0x0428(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UPrimitiveComponent*                         PrimitiveComponent;                                        // 0x0458(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_12TG[0xE8];                                    // 0x0460(0x00E8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_I9VS[0xE8];                                    // 0x0460(0x00E8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -80,7 +80,7 @@ public:
 class AOverlapTestActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData_OK88[0x10];                                    // 0x0428(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_76DI[0x10];                                    // 0x0428(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UPrimitiveComponent*                         PrimitiveComponent;                                        // 0x0438(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -116,7 +116,7 @@ public:
 class ATestOverlapShapeActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData_U3I9[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_O8VY[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UPrimitiveComponent*                         PrimitiveComponent;                                        // 0x0430(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -135,7 +135,7 @@ public:
 class ATestSimpleOverlapsGameState : public AGameState
 {
 public:
-	unsigned char                                      UnknownData_4TYJ[0x60];                                    // 0x0480(0x0060) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_IYUP[0x60];                                    // 0x0480(0x0060) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

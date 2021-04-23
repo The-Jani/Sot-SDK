@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -145,9 +145,9 @@ public:
 class UElectricShieldBuffComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_IWF7[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_JG00[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	bool                                               IsShieldActive;                                            // 0x00D0(0x0001) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor)
-	unsigned char                                      UnknownData_H4VQ[0x57];                                    // 0x00D1(0x0057) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4YL7[0x57];                                    // 0x00D1(0x0057) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -160,215 +160,6 @@ public:
 
 	void OnRep_IsShieldActive();
 	void DeactivateShield();
-};
-
-// Class AthenaAIAbilities.MeleeAttackId
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UMeleeAttackId : public UObject
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.MeleeAttackId");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.HeavyMeleeAttackId
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UHeavyMeleeAttackId : public UMeleeAttackId
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.HeavyMeleeAttackId");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.LightMeleeAttackId
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class ULightMeleeAttackId : public UMeleeAttackId
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.LightMeleeAttackId");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.BullRushAIAbilityParams
-// 0x0008 (FullSize[0x00E8] - InheritedSize[0x00E0])
-class UBullRushAIAbilityParams : public UMeleeChargeAIAbilityParams
-{
-public:
-	float                                              StaticCollisionWarmup;                                     // 0x00E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_E7ZU[0x4];                                     // 0x00E4(0x0004) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.BullRushAIAbilityParams");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.BullRushAIAbility
-// 0x0000 (FullSize[0x0098] - InheritedSize[0x0098])
-class UBullRushAIAbility : public UMeleeChargeAIAbility
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.BullRushAIAbility");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.MeleeStaticCollisionInterface
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UMeleeStaticCollisionInterface : public UInterface
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.MeleeStaticCollisionInterface");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.SporeCloudStatus
-// 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
-class USporeCloudStatus : public UStatusBase
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.SporeCloudStatus");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.SporeExposureInterface
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class USporeExposureInterface : public UInterface
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.SporeExposureInterface");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.SporeExposureComponent
-// 0x0038 (FullSize[0x0100] - InheritedSize[0x00C8])
-class USporeExposureComponent : public UActorComponent
-{
-public:
-	unsigned char                                      UnknownData_2LLP[0x38];                                    // 0x00C8(0x0038) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.SporeExposureComponent");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.SporeExposureStatus
-// 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
-class USporeExposureStatus : public UStatusBase
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.SporeExposureStatus");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.StatusResponseActivateElectricShield
-// 0x0008 (FullSize[0x0038] - InheritedSize[0x0030])
-class UStatusResponseActivateElectricShield : public UStatusResponse
-{
-public:
-	float                                              Duration;                                                  // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_PTTU[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.StatusResponseActivateElectricShield");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.StatusResponseSporeCloud
-// 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
-class UStatusResponseSporeCloud : public UStatusResponse
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.StatusResponseSporeCloud");
-		return ptr;
-	}
-
-
-
 };
 
 // Class AthenaAIAbilities.AreaOfEffectHealAIAbilityType
@@ -410,9 +201,9 @@ public:
 class UAreaOfEffectHealAIAbility : public UAthenaAIAbility
 {
 public:
-	unsigned char                                      UnknownData_Y2E0[0x10];                                    // 0x0078(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3N9X[0x10];                                    // 0x0078(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class AActor*                                      HealAreaOfEffectActor;                                     // 0x0088(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_3LIJ[0x10];                                    // 0x0090(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_EP9N[0x10];                                    // 0x0090(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -498,6 +289,162 @@ public:
 
 };
 
+// Class AthenaAIAbilities.MeleeAttackId
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UMeleeAttackId : public UObject
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.MeleeAttackId");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.HeavyMeleeAttackId
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UHeavyMeleeAttackId : public UMeleeAttackId
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.HeavyMeleeAttackId");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.LightMeleeAttackId
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class ULightMeleeAttackId : public UMeleeAttackId
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.LightMeleeAttackId");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.BullRushAIAbilityParams
+// 0x0008 (FullSize[0x00E8] - InheritedSize[0x00E0])
+class UBullRushAIAbilityParams : public UMeleeChargeAIAbilityParams
+{
+public:
+	float                                              StaticCollisionWarmup;                                     // 0x00E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_0NRE[0x4];                                     // 0x00E4(0x0004) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.BullRushAIAbilityParams");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.BullRushAIAbility
+// 0x0000 (FullSize[0x0098] - InheritedSize[0x0098])
+class UBullRushAIAbility : public UMeleeChargeAIAbility
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.BullRushAIAbility");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.MeleeStaticCollisionInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UMeleeStaticCollisionInterface : public UInterface
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.MeleeStaticCollisionInterface");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.SporeCloudStatus
+// 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
+class USporeCloudStatus : public UStatusBase
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.SporeCloudStatus");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.SporeExposureInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class USporeExposureInterface : public UInterface
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.SporeExposureInterface");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.SporeExposureComponent
+// 0x0038 (FullSize[0x0100] - InheritedSize[0x00C8])
+class USporeExposureComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData_CWPB[0x38];                                    // 0x00C8(0x0038) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.SporeExposureComponent");
+		return ptr;
+	}
+
+
+
+};
+
 // Class AthenaAIAbilities.ElectricShieldStatus
 // 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
 class UElectricShieldStatus : public UStatusBase
@@ -537,7 +484,7 @@ public:
 class UMeleeAIAbility : public UAthenaAIAbility
 {
 public:
-	unsigned char                                      UnknownData_WIMV[0x8];                                     // 0x0078(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_QG6C[0x8];                                     // 0x0078(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -612,6 +559,59 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.ComboMeleeAttackId");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.SporeExposureStatus
+// 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
+class USporeExposureStatus : public UStatusBase
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.SporeExposureStatus");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.StatusResponseActivateElectricShield
+// 0x0008 (FullSize[0x0038] - InheritedSize[0x0030])
+class UStatusResponseActivateElectricShield : public UStatusResponse
+{
+public:
+	float                                              Duration;                                                  // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_17GS[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.StatusResponseActivateElectricShield");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.StatusResponseSporeCloud
+// 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
+class UStatusResponseSporeCloud : public UStatusResponse
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.StatusResponseSporeCloud");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -32,6 +32,22 @@ enum class Time_ETimeOfDay : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct Time.GameTime
+// 0x0008
+struct FGameTime
+{
+	struct FDateTime                                   DateTimeRepresentation;                                    // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor)
+
+};
+
+// ScriptStruct Time.ReplicatedDateTime
+// 0x0008
+struct FReplicatedDateTime
+{
+	int64_t                                            Ticks;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
 // ScriptStruct Time.EventSetDateTime
 // 0x0014
 struct FEventSetDateTime
@@ -44,28 +60,12 @@ struct FEventSetDateTime
 
 };
 
-// ScriptStruct Time.GameTime
-// 0x0008
-struct FGameTime
-{
-	struct FDateTime                                   DateTimeRepresentation;                                    // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor)
-
-};
-
 // ScriptStruct Time.GameTimeRange
 // 0x0010
 struct FGameTimeRange
 {
 	struct FGameTime                                   Start;                                                     // 0x0000(0x0008) (Edit)
 	struct FGameTime                                   End;                                                       // 0x0008(0x0008) (Edit)
-
-};
-
-// ScriptStruct Time.ReplicatedDateTime
-// 0x0008
-struct FReplicatedDateTime
-{
-	int64_t                                            Ticks;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 

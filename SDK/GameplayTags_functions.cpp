@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.0
+﻿// Name: SoT, Version: 2.1.0.1
 
 #include "../SDK.h"
 
@@ -17,6 +17,31 @@ namespace CG
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function GameplayTags.GameplayTagsManager.RequestGameplayTag
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName                   TagName                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                           ErrorIfNotFound                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FGameplayTag            ReturnValue                    (Parm, OutParm, ReturnParm)
+struct FGameplayTag UGameplayTagsManager::RequestGameplayTag(const struct FName& TagName, bool ErrorIfNotFound)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function GameplayTags.GameplayTagsManager.RequestGameplayTag");
+
+	UGameplayTagsManager_RequestGameplayTag_Params params;
+	params.TagName = TagName;
+	params.ErrorIfNotFound = ErrorIfNotFound;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
+}
+
 
 // Function GameplayTags.GameplayTagAssetInterface.HasMatchingGameplayTag
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
@@ -396,31 +421,6 @@ bool UBlueprintGameplayTagLibrary::STATIC_AppendGameplayTagContainers(const stru
 
 	if (InOutTagContainer != nullptr)
 		*InOutTagContainer = params.InOutTagContainer;
-
-
-	return params.ReturnValue;
-}
-
-
-// Function GameplayTags.GameplayTagsManager.RequestGameplayTag
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   TagName                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                           ErrorIfNotFound                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FGameplayTag            ReturnValue                    (Parm, OutParm, ReturnParm)
-struct FGameplayTag UGameplayTagsManager::RequestGameplayTag(const struct FName& TagName, bool ErrorIfNotFound)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayTags.GameplayTagsManager.RequestGameplayTag");
-
-	UGameplayTagsManager_RequestGameplayTag_Params params;
-	params.TagName = TagName;
-	params.ErrorIfNotFound = ErrorIfNotFound;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
 
 
 	return params.ReturnValue;

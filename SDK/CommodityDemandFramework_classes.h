@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -18,6 +18,96 @@ namespace CG
 //---------------------------------------------------------------------------
 // Classes
 //---------------------------------------------------------------------------
+
+// Class CommodityDemandFramework.CrateFillerInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UCrateFillerInterface : public UInterface
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CrateFillerInterface");
+		return ptr;
+	}
+
+
+
+};
+
+// Class CommodityDemandFramework.CrateFillerComponent
+// 0x0010 (FullSize[0x00D8] - InheritedSize[0x00C8])
+class UCrateFillerComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData_DO9I[0x10];                                    // 0x00C8(0x0010) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CrateFillerComponent");
+		return ptr;
+	}
+
+
+
+};
+
+// Class CommodityDemandFramework.DeliverableCommodityRequirement
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UDeliverableCommodityRequirement : public UDeliverableRequirementBase
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.DeliverableCommodityRequirement");
+		return ptr;
+	}
+
+
+
+};
+
+// Class CommodityDemandFramework.IsWieldedCommodityItemInDemandStatCondition
+// 0x0020 (FullSize[0x0050] - InheritedSize[0x0030])
+class UIsWieldedCommodityItemInDemandStatCondition : public UTargetedStatCondition
+{
+public:
+	TEnumAsByte<CommodityDemandFramework_ECommodityDemand> CommodityDemand;                                           // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_GO2M[0x1F];                                    // 0x0031(0x001F) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.IsWieldedCommodityItemInDemandStatCondition");
+		return ptr;
+	}
+
+
+
+};
+
+// Class CommodityDemandFramework.WasWieldedCommodityItemBoughtAtDemandStatCondition
+// 0x0008 (FullSize[0x0038] - InheritedSize[0x0030])
+class UWasWieldedCommodityItemBoughtAtDemandStatCondition : public UTargetedStatCondition
+{
+public:
+	TEnumAsByte<CommodityDemandFramework_ECommodityDemand> CommodityDemand;                                           // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_3YTM[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.WasWieldedCommodityItemBoughtAtDemandStatCondition");
+		return ptr;
+	}
+
+
+
+};
 
 // Class CommodityDemandFramework.CommodityDemandFrameworkEditorSettings
 // 0x0010 (FullSize[0x0048] - InheritedSize[0x0038])
@@ -44,11 +134,11 @@ class UCommodityDemandFrameworkSettings : public UDeveloperSettings
 public:
 	float                                              DemandRefreshFrequencyInSeconds;                           // 0x0038(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       DemandCollectionId;                                        // 0x003C(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2VXI[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ACUO[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FText                                       EmissaryLockedCommodityOfferDescription;                   // 0x0048(0x0018) ELEMENT_SIZE_MISMATCH (Edit, Config)
-	unsigned char                                      UnknownData_96GF[0x20];                                    // 0x0044(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_HS1O[0x20];                                    // 0x0044(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	struct FText                                       OutOfStockLockedCommodityOfferDescription;                 // 0x0080(0x0018) ELEMENT_SIZE_MISMATCH (Edit, Config)
-	unsigned char                                      UnknownData_MO0R[0x20];                                    // 0x0080(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_Z7DU[0x20];                                    // 0x0080(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	int                                                CommodityPurchaseLockoutInGameDays;                        // 0x00B8(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                InGameHourWhenCommoditiesRestock;                          // 0x00BC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGameTime                                   CommodityRedemptionTimeOutPeriodInDays;                    // 0x00C0(0x0008) (Edit, Config)
@@ -86,7 +176,7 @@ public:
 class ACommodityDemandService : public AActor
 {
 public:
-	unsigned char                                      UnknownData_SH3R[0x50];                                    // 0x0428(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_O42D[0x50];                                    // 0x0428(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FActiveNPCDemands                           ActiveCommodityDemands;                                    // 0x0478(0x0020) (Net, RepNotify)
 
 
@@ -160,7 +250,7 @@ class UCommodityItemDesc : public UBootyItemDesc
 public:
 	struct FCommoditySelectionType                     CommodityType;                                             // 0x0130(0x0008) (Edit, DisableEditOnInstance)
 	TEnumAsByte<CommodityDemandFramework_ECommodityDemand> CommodityDemand;                                           // 0x0138(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YNIV[0x7];                                     // 0x0139(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AVKU[0x7];                                     // 0x0139(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -178,7 +268,7 @@ public:
 class UCommodityPurchaseTrackingComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_TH35[0x80];                                    // 0x00C8(0x0080) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DX7J[0x80];                                    // 0x00C8(0x0080) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -213,9 +303,8 @@ public:
 class UCommodityRedemptionComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_IGMY[0x30];                                    // 0x00C8(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<struct FPlayerToOwnedRedeemableEntitlements> RedeemQueue;                                               // 0x00F8(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData_UMU0[0x50];                                    // 0x0108(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_T9SH[0x80];                                    // 0x00C8(0x0080) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<class AActor*>                              PendingRedemptions;                                        // 0x0148(0x0010) (ZeroConstructor)
 
 
 	static UClass* StaticClass()
@@ -250,7 +339,7 @@ public:
 class UCommoditySourceComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_1J0J[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8QPD[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       NPCIdentifier;                                             // 0x00D0(0x0008) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -294,96 +383,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityTypeDataAsset");
-		return ptr;
-	}
-
-
-
-};
-
-// Class CommodityDemandFramework.CrateFillerInterface
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UCrateFillerInterface : public UInterface
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CrateFillerInterface");
-		return ptr;
-	}
-
-
-
-};
-
-// Class CommodityDemandFramework.CrateFillerComponent
-// 0x0010 (FullSize[0x00D8] - InheritedSize[0x00C8])
-class UCrateFillerComponent : public UActorComponent
-{
-public:
-	unsigned char                                      UnknownData_SRA5[0x10];                                    // 0x00C8(0x0010) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CrateFillerComponent");
-		return ptr;
-	}
-
-
-
-};
-
-// Class CommodityDemandFramework.DeliverableCommodityRequirement
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UDeliverableCommodityRequirement : public UDeliverableRequirementBase
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.DeliverableCommodityRequirement");
-		return ptr;
-	}
-
-
-
-};
-
-// Class CommodityDemandFramework.IsWieldedCommodityItemInDemandStatCondition
-// 0x0020 (FullSize[0x0050] - InheritedSize[0x0030])
-class UIsWieldedCommodityItemInDemandStatCondition : public UTargetedStatCondition
-{
-public:
-	TEnumAsByte<CommodityDemandFramework_ECommodityDemand> CommodityDemand;                                           // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_IHQD[0x1F];                                    // 0x0031(0x001F) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.IsWieldedCommodityItemInDemandStatCondition");
-		return ptr;
-	}
-
-
-
-};
-
-// Class CommodityDemandFramework.WasWieldedCommodityItemBoughtAtDemandStatCondition
-// 0x0008 (FullSize[0x0038] - InheritedSize[0x0030])
-class UWasWieldedCommodityItemBoughtAtDemandStatCondition : public UTargetedStatCondition
-{
-public:
-	TEnumAsByte<CommodityDemandFramework_ECommodityDemand> CommodityDemand;                                           // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_PEO2[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.WasWieldedCommodityItemBoughtAtDemandStatCondition");
 		return ptr;
 	}
 

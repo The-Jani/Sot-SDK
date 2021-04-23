@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 #include "../SDK.h"
 
@@ -4779,25 +4779,6 @@ struct ACargoRunMap_OnTextCanvasUpdate_Params
 struct ACargoRunMap_OnRep_Contents_Params
 {
 	struct FCargoRunMapContents                        PreviousContents;                                          // (ConstParm, Parm, OutParm, ReferenceParm)
-};
-
-// Function Athena.CargoRunParticipantInterface.SetPickUpPointForCargo
-struct UCargoRunParticipantInterface_SetPickUpPointForCargo_Params
-{
-	struct FGuid                                       InCrewId;                                                  // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
-	struct FGuid                                       InCargoBatchId;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
-	class UClass*                                      InCrateItemDesc;                                           // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	struct FGuid                                       InDeliveryLocationId;                                      // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
-	int                                                InDeliveryDeadlineInMinutes;                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                       ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-};
-
-// Function Athena.CargoRunParticipantInterface.ClearPickUp
-struct UCargoRunParticipantInterface_ClearPickUp_Params
-{
-	struct FGuid                                       InCrewId;                                                  // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
-	struct FGuid                                       InCargoBatchId;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
-	struct FGuid                                       InPickUpId;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
 };
 
 // Function Athena.CarouselPirateDescConversion.ToPirateDescriptor
@@ -15953,6 +15934,25 @@ struct UWieldableItemCanvasRenderingComponent_OnPrimaryCanvasUpdate_Params
 	class UCanvas*                                     Canvas;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                Width;                                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                Height;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function Athena.CargoRunParticipantInterface.SetPickUpPointForCargo
+struct UCargoRunParticipantInterface_SetPickUpPointForCargo_Params
+{
+	struct FGuid                                       InCrewId;                                                  // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+	struct FGuid                                       InCargoBatchId;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+	class UClass*                                      InCrateItemDesc;                                           // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	struct FGuid                                       InDeliveryLocationId;                                      // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+	int                                                InDeliveryDeadlineInMinutes;                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                       ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+
+// Function Athena.CargoRunParticipantInterface.ClearPickUp
+struct UCargoRunParticipantInterface_ClearPickUp_Params
+{
+	struct FGuid                                       InCrewId;                                                  // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+	struct FGuid                                       InCargoBatchId;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+	struct FGuid                                       InPickUpId;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
 };
 
 // Function Athena.MountableComponent.OnRep_ReplicatedMountpoint

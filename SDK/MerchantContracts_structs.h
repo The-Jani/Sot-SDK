@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -44,12 +44,22 @@ struct FMerchantContractItemDesc
 struct FMerchantContractDeliveryRequest
 {
 	int                                                Id;                                                        // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TI1A[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_D8FF[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FMerchantContractItemDesc                   ItemDesc;                                                  // 0x0008(0x0028)
 	int                                                NumToAllocate;                                             // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                NumToCollect;                                              // 0x0034(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                NumToDeliver;                                              // 0x0038(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YSYH[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ULCW[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct MerchantContracts.MerchantContract
+// 0x00C0
+struct FMerchantContract
+{
+	unsigned char                                      UnknownData_8U8S[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<struct FMerchantContractDeliveryRequest>    DeliveryRequests;                                          // 0x0018(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData_MTUC[0x98];                                    // 0x0028(0x0098) MISSED OFFSET (PADDING)
 
 };
 
@@ -60,16 +70,6 @@ struct FPlayerMerchantContract
 	struct FGuid                                       Id;                                                        // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FName                                       IslandName;                                                // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FMerchantContractDeliveryRequest>    Requests;                                                  // 0x0018(0x0010) (ZeroConstructor)
-
-};
-
-// ScriptStruct MerchantContracts.MerchantContract
-// 0x00C0
-struct FMerchantContract
-{
-	unsigned char                                      UnknownData_J4BE[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<struct FMerchantContractDeliveryRequest>    DeliveryRequests;                                          // 0x0018(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_7OGL[0x98];                                    // 0x0028(0x0098) MISSED OFFSET (PADDING)
 
 };
 

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.0
+﻿// Name: SoT, Version: 2.1.0.1
 
 #include "../SDK.h"
 
@@ -17,96 +17,6 @@ namespace CG
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
-
-// Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentTitleText
-// (Final, Native, Private)
-void UAbandonedNoteClueDestinationContainerComponent::OnRep_CurrentTitleText()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentTitleText");
-
-	UAbandonedNoteClueDestinationContainerComponent_OnRep_CurrentTitleText_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentClueDestination
-// (Final, Native, Private)
-void UAbandonedNoteClueDestinationContainerComponent::OnRep_CurrentClueDestination()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentClueDestination");
-
-	UAbandonedNoteClueDestinationContainerComponent_OnRep_CurrentClueDestination_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function LostShipmentsClueVariants.ClueSiteCircleMapWieldable.OnRep_MapRadialIconData
-// (Final, Native, Private)
-void AClueSiteCircleMapWieldable::OnRep_MapRadialIconData()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LostShipmentsClueVariants.ClueSiteCircleMapWieldable.OnRep_MapRadialIconData");
-
-	AClueSiteCircleMapWieldable_OnRep_MapRadialIconData_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function LostShipmentsClueVariants.ClueVariantsBlueprintFunctionLibrary.GiveClueDescriptorToItem
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class AItemInfo*               ItemInfo                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UClueDescriptor*         Clue                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-void UClueVariantsBlueprintFunctionLibrary::STATIC_GiveClueDescriptorToItem(class AItemInfo* ItemInfo, class UClueDescriptor* Clue)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LostShipmentsClueVariants.ClueVariantsBlueprintFunctionLibrary.GiveClueDescriptorToItem");
-
-	UClueVariantsBlueprintFunctionLibrary_GiveClueDescriptorToItem_Params params;
-	params.ItemInfo = ItemInfo;
-	params.Clue = Clue;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function LostShipmentsClueVariants.CompositeClueDestinationDescriptor.OnRep_DestinationInfo
-// (Native, Public)
-void UCompositeClueDestinationDescriptor::OnRep_DestinationInfo()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LostShipmentsClueVariants.CompositeClueDestinationDescriptor.OnRep_DestinationInfo");
-
-	UCompositeClueDestinationDescriptor_OnRep_DestinationInfo_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
 
 // Function LostShipmentsClueVariants.GooseChaseClueBlueprintFunctionLibrary.CreateEndOfGooseChaseClue
 // (Final, Native, Static, Public, BlueprintCallable)
@@ -200,6 +110,96 @@ int UTaleQuestClueInventoryService::GetCollectedClueCount()
 
 
 	return params.ReturnValue;
+}
+
+
+// Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentTitleText
+// (Final, Native, Private)
+void UAbandonedNoteClueDestinationContainerComponent::OnRep_CurrentTitleText()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentTitleText");
+
+	UAbandonedNoteClueDestinationContainerComponent_OnRep_CurrentTitleText_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentClueDestination
+// (Final, Native, Private)
+void UAbandonedNoteClueDestinationContainerComponent::OnRep_CurrentClueDestination()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentClueDestination");
+
+	UAbandonedNoteClueDestinationContainerComponent_OnRep_CurrentClueDestination_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function LostShipmentsClueVariants.ClueSiteCircleMapWieldable.OnRep_MapRadialIconData
+// (Final, Native, Private)
+void AClueSiteCircleMapWieldable::OnRep_MapRadialIconData()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LostShipmentsClueVariants.ClueSiteCircleMapWieldable.OnRep_MapRadialIconData");
+
+	AClueSiteCircleMapWieldable_OnRep_MapRadialIconData_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function LostShipmentsClueVariants.ClueVariantsBlueprintFunctionLibrary.GiveClueDescriptorToItem
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AItemInfo*               ItemInfo                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UClueDescriptor*         Clue                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+void UClueVariantsBlueprintFunctionLibrary::STATIC_GiveClueDescriptorToItem(class AItemInfo* ItemInfo, class UClueDescriptor* Clue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LostShipmentsClueVariants.ClueVariantsBlueprintFunctionLibrary.GiveClueDescriptorToItem");
+
+	UClueVariantsBlueprintFunctionLibrary_GiveClueDescriptorToItem_Params params;
+	params.ItemInfo = ItemInfo;
+	params.Clue = Clue;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function LostShipmentsClueVariants.CompositeClueDestinationDescriptor.OnRep_DestinationInfo
+// (Native, Public)
+void UCompositeClueDestinationDescriptor::OnRep_DestinationInfo()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LostShipmentsClueVariants.CompositeClueDestinationDescriptor.OnRep_DestinationInfo");
+
+	UCompositeClueDestinationDescriptor_OnRep_DestinationInfo_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
 }
 
 

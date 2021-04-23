@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -55,117 +55,6 @@ enum class ActionStateMachine_EActionStatePriority : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct ActionStateMachine.InnerWithObjTestStruct
-// 0x0008
-struct FInnerWithObjTestStruct
-{
-	class UObject*                                     ObjPointer;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct ActionStateMachine.InnerTestStruct
-// 0x0018
-struct FInnerTestStruct
-{
-	bool                                               BoolProp;                                                  // 0x0000(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_5JMZ[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FString                                     StringProp;                                                // 0x0008(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct ActionStateMachine.ActionStateConstructionInfo
-// 0x0028
-struct FActionStateConstructionInfo
-{
-	class UClass*                                      Id;                                                        // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class UScriptStruct*                               Type;                                                      // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DC3P[0x18];                                    // 0x0010(0x0018) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct ActionStateMachine.TestActionStateConstructionInfoWithInner
-// 0x0020 (0x0048 - 0x0028)
-struct FTestActionStateConstructionInfoWithInner : public FActionStateConstructionInfo
-{
-	float                                              FloatProp;                                                 // 0x0028(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_L909[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FInnerTestStruct                            InnerStruct;                                               // 0x0030(0x0018) (BlueprintVisible, BlueprintReadOnly)
-
-};
-
-// ScriptStruct ActionStateMachine.TestActionStateConstructionInfo
-// 0x0008 (0x0030 - 0x0028)
-struct FTestActionStateConstructionInfo : public FActionStateConstructionInfo
-{
-	int                                                IntProp;                                                   // 0x0028(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2U70[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct ActionStateMachine.EventWaitingToSpawnActionStateEndedClient
-// 0x0001
-struct FEventWaitingToSpawnActionStateEndedClient
-{
-	unsigned char                                      UnknownData_JATO[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct ActionStateMachine.EventWaitingToSpawnActionStateStartedClient
-// 0x0001
-struct FEventWaitingToSpawnActionStateStartedClient
-{
-	unsigned char                                      UnknownData_J8F4[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct ActionStateMachine.EventFirstPersonAnimaticActionStateEndedClient
-// 0x0001
-struct FEventFirstPersonAnimaticActionStateEndedClient
-{
-	unsigned char                                      UnknownData_EC9Q[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct ActionStateMachine.ActorActionStateConstructionInfo
-// 0x0008 (0x0030 - 0x0028)
-struct FActorActionStateConstructionInfo : public FActionStateConstructionInfo
-{
-	TWeakObjectPtr<class AActor>                       ActorOwner;                                                // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
-
-};
-
-// ScriptStruct ActionStateMachine.NullActionStateConstructionInfo
-// 0x0000 (0x0030 - 0x0030)
-struct FNullActionStateConstructionInfo : public FActorActionStateConstructionInfo
-{
-
-};
-
-// ScriptStruct ActionStateMachine.ActionStateMessage
-// 0x0010
-struct FActionStateMessage
-{
-	unsigned char                                      UnknownData_ZFW9[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UScriptStruct*                               Type;                                                      // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct ActionStateMachine.TestActionStateMessage2
-// 0x0000 (0x0010 - 0x0010)
-struct FTestActionStateMessage2 : public FActionStateMessage
-{
-
-};
-
-// ScriptStruct ActionStateMachine.TestActionStateMessage
-// 0x0008 (0x0018 - 0x0010)
-struct FTestActionStateMessage : public FActionStateMessage
-{
-	int                                                TestProperty;                                              // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2SHW[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (PADDING)
-
-};
-
 // ScriptStruct ActionStateMachine.ActionStateChangeRequestId
 // 0x0001
 struct FActionStateChangeRequestId
@@ -178,7 +67,7 @@ struct FActionStateChangeRequestId
 // 0x0040
 struct FSerialisedActionStateInfo
 {
-	unsigned char                                      UnknownData_ZFTF[0x40];                                    // 0x0000(0x0040) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5O56[0x40];                                    // 0x0000(0x0040) MISSED OFFSET (PADDING)
 
 };
 
@@ -196,17 +85,8 @@ struct FResetStateMachineRpc
 {
 	struct FActionStateChangeRequestId                 LatestEpochIds[0x5];                                       // 0x0000(0x0005)
 	struct FActionStateChangeRequestId                 LatestRequestIds[0x5];                                     // 0x0005(0x0005)
-	unsigned char                                      UnknownData_UHRL[0x6];                                     // 0x000A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_I5YC[0x6];                                     // 0x000A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FSerialisedConstructionInfoStore            PerTrackConstructionInfoStore;                             // 0x0010(0x0140)
-
-};
-
-// ScriptStruct ActionStateMachine.TestActorActionStateConstructionInfo
-// 0x0008 (0x0038 - 0x0030)
-struct FTestActorActionStateConstructionInfo : public FActorActionStateConstructionInfo
-{
-	int                                                IntProp;                                                   // 0x0030(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_COUR[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -214,7 +94,7 @@ struct FTestActorActionStateConstructionInfo : public FActorActionStateConstruct
 // 0x0018
 struct FSerialisedActionStateMessage
 {
-	unsigned char                                      UnknownData_KN7B[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4QHD[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
 
 };
 
@@ -222,10 +102,10 @@ struct FSerialisedActionStateMessage
 // 0x0030
 struct FActionStateSerialisableData
 {
-	unsigned char                                      UnknownData_V8TY[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MS95[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UClass*                                      Id;                                                        // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	class UScriptStruct*                               Type;                                                      // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_3X9P[0x18];                                    // 0x0018(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_H03L[0x18];                                    // 0x0018(0x0018) MISSED OFFSET (PADDING)
 
 };
 
@@ -234,7 +114,7 @@ struct FActionStateSerialisableData
 struct FTestActionStateSerialisableData : public FActionStateSerialisableData
 {
 	int                                                IntProp;                                                   // 0x0030(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2QDN[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_BZRO[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -244,7 +124,7 @@ struct FActionStatePriorityRelationship
 {
 	class UClass*                                      State;                                                     // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	TEnumAsByte<ActionStateMachine_EActionStatePriority> Priority;                                                  // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_N7XG[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_XOXP[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (PADDING)
 
 };
 
@@ -261,7 +141,25 @@ struct FActionStatePriorityList
 // 0x00A0
 struct FActionStatePriorityTable
 {
-	unsigned char                                      UnknownData_6QHZ[0xA0];                                    // 0x0000(0x00A0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_MHDD[0xA0];                                    // 0x0000(0x00A0) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct ActionStateMachine.ActionStateConstructionInfo
+// 0x0028
+struct FActionStateConstructionInfo
+{
+	class UClass*                                      Id;                                                        // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	class UScriptStruct*                               Type;                                                      // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_266U[0x18];                                    // 0x0010(0x0018) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct ActionStateMachine.InnerWithObjTestStruct
+// 0x0008
+struct FInnerWithObjTestStruct
+{
+	class UObject*                                     ObjPointer;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
@@ -272,6 +170,108 @@ struct FTestActionStateConstructionInfoWithObjPointers : public FActionStateCons
 	class UObject*                                     ObjPointer;                                                // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FInnerWithObjTestStruct                     Inner;                                                     // 0x0030(0x0008)
 	TArray<class UObject*>                             Array;                                                     // 0x0038(0x0010) (ZeroConstructor)
+
+};
+
+// ScriptStruct ActionStateMachine.ActorActionStateConstructionInfo
+// 0x0008 (0x0030 - 0x0028)
+struct FActorActionStateConstructionInfo : public FActionStateConstructionInfo
+{
+	TWeakObjectPtr<class AActor>                       ActorOwner;                                                // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
+
+};
+
+// ScriptStruct ActionStateMachine.TestActorActionStateConstructionInfo
+// 0x0008 (0x0038 - 0x0030)
+struct FTestActorActionStateConstructionInfo : public FActorActionStateConstructionInfo
+{
+	int                                                IntProp;                                                   // 0x0030(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_SL2J[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct ActionStateMachine.InnerTestStruct
+// 0x0018
+struct FInnerTestStruct
+{
+	bool                                               BoolProp;                                                  // 0x0000(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_Z8WS[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FString                                     StringProp;                                                // 0x0008(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct ActionStateMachine.TestActionStateConstructionInfoWithInner
+// 0x0020 (0x0048 - 0x0028)
+struct FTestActionStateConstructionInfoWithInner : public FActionStateConstructionInfo
+{
+	float                                              FloatProp;                                                 // 0x0028(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_ERFW[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FInnerTestStruct                            InnerStruct;                                               // 0x0030(0x0018) (BlueprintVisible, BlueprintReadOnly)
+
+};
+
+// ScriptStruct ActionStateMachine.TestActionStateConstructionInfo
+// 0x0008 (0x0030 - 0x0028)
+struct FTestActionStateConstructionInfo : public FActionStateConstructionInfo
+{
+	int                                                IntProp;                                                   // 0x0028(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_E8BZ[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct ActionStateMachine.EventWaitingToSpawnActionStateEndedClient
+// 0x0001
+struct FEventWaitingToSpawnActionStateEndedClient
+{
+	unsigned char                                      UnknownData_JW01[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct ActionStateMachine.EventWaitingToSpawnActionStateStartedClient
+// 0x0001
+struct FEventWaitingToSpawnActionStateStartedClient
+{
+	unsigned char                                      UnknownData_TMTT[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct ActionStateMachine.EventFirstPersonAnimaticActionStateEndedClient
+// 0x0001
+struct FEventFirstPersonAnimaticActionStateEndedClient
+{
+	unsigned char                                      UnknownData_DWS3[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct ActionStateMachine.NullActionStateConstructionInfo
+// 0x0000 (0x0030 - 0x0030)
+struct FNullActionStateConstructionInfo : public FActorActionStateConstructionInfo
+{
+
+};
+
+// ScriptStruct ActionStateMachine.ActionStateMessage
+// 0x0010
+struct FActionStateMessage
+{
+	unsigned char                                      UnknownData_4OWQ[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UScriptStruct*                               Type;                                                      // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct ActionStateMachine.TestActionStateMessage2
+// 0x0000 (0x0010 - 0x0010)
+struct FTestActionStateMessage2 : public FActionStateMessage
+{
+
+};
+
+// ScriptStruct ActionStateMachine.TestActionStateMessage
+// 0x0008 (0x0018 - 0x0010)
+struct FTestActionStateMessage : public FActionStateMessage
+{
+	int                                                TestProperty;                                              // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_RUGX[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (PADDING)
 
 };
 

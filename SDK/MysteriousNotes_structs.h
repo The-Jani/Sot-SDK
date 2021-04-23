@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -19,15 +19,6 @@ namespace CG
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct MysteriousNotes.PlayerNoteStateChangeTelemetryEvent
-// 0x0020
-struct FPlayerNoteStateChangeTelemetryEvent
-{
-	struct FGuid                                       NoteId;                                                    // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FString                                     NoteState;                                                 // 0x0010(0x0010) (ZeroConstructor, HasGetValueTypeHash)
-
-};
-
 // ScriptStruct MysteriousNotes.MysteriousNotesCompletionEventsModelEntry
 // 0x0008
 struct FMysteriousNotesCompletionEventsModelEntry
@@ -40,7 +31,7 @@ struct FMysteriousNotesCompletionEventsModelEntry
 // 0x0001
 struct FEventListenForCinematicEndEvent
 {
-	unsigned char                                      UnknownData_6BSJ[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2AXL[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -50,7 +41,7 @@ struct FEventTriggerMysteriousNotesPopup
 {
 	class APlayerController*                           PlayerController;                                          // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               CinematicSkipped;                                          // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_P9AO[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_IKFZ[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (PADDING)
 
 };
 
@@ -72,6 +63,15 @@ struct FEventNoteClientCompletionStep
 
 };
 
+// ScriptStruct MysteriousNotes.PlayerNoteStateChangeTelemetryEvent
+// 0x0020
+struct FPlayerNoteStateChangeTelemetryEvent
+{
+	struct FGuid                                       NoteId;                                                    // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FString                                     NoteState;                                                 // 0x0010(0x0010) (ZeroConstructor, HasGetValueTypeHash)
+
+};
+
 // ScriptStruct MysteriousNotes.EventNoteCompletionStep
 // 0x0010
 struct FEventNoteCompletionStep
@@ -85,7 +85,7 @@ struct FEventNoteCompletionStep
 // 0x0001
 struct FEventNotesUpdated
 {
-	unsigned char                                      UnknownData_8J3U[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LBRM[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -118,7 +118,7 @@ struct FEventPlayerControllerPossessed
 // 0x0010
 struct FEventMysteriousNoteContentUpdated
 {
-	unsigned char                                      UnknownData_96SQ[0x10];                                    // 0x0000(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_0AZP[0x10];                                    // 0x0000(0x0010) MISSED OFFSET (PADDING)
 
 };
 
@@ -126,7 +126,7 @@ struct FEventMysteriousNoteContentUpdated
 // 0x0001
 struct FEventMysteriousNoteSettingsLoaded
 {
-	unsigned char                                      UnknownData_HABD[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_U44O[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -149,7 +149,15 @@ struct FWieldableMysteriousNoteLayoutItem
 	struct FTreasureMapWidgetText                      NoteTitleWidgetText;                                       // 0x0058(0x0020) (Edit, DisableEditOnInstance)
 	struct FTreasureMapWidgetText                      NoteBodyWidgetText;                                        // 0x0078(0x0020) (Edit, DisableEditOnInstance)
 	float                                              NoteWidth;                                                 // 0x0098(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_AMFD[0x4];                                     // 0x009C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_KMS8[0x4];                                     // 0x009C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct MysteriousNotes.EventMysteriousNoteRemoved
+// 0x0010
+struct FEventMysteriousNoteRemoved
+{
+	unsigned char                                      UnknownData_KW9K[0x10];                                    // 0x0000(0x0010) MISSED OFFSET (PADDING)
 
 };
 
@@ -160,25 +168,7 @@ struct FMysteriousNoteInfo
 	struct FGuid                                       NoteId;                                                    // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               NoteRead;                                                  // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               ShowNoteAnimation;                                         // 0x0011(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_1XVX[0x2];                                     // 0x0012(0x0002) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct MysteriousNotes.ClientNoteData
-// 0x0018
-struct FClientNoteData
-{
-	bool                                               NotifyArrival;                                             // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_73P5[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<struct FMysteriousNoteInfo>                 PendingNotes;                                              // 0x0008(0x0010) (ZeroConstructor)
-
-};
-
-// ScriptStruct MysteriousNotes.EventMysteriousNoteRemoved
-// 0x0010
-struct FEventMysteriousNoteRemoved
-{
-	unsigned char                                      UnknownData_I9UV[0x10];                                    // 0x0000(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8GUL[0x2];                                     // 0x0012(0x0002) MISSED OFFSET (PADDING)
 
 };
 
@@ -187,25 +177,6 @@ struct FEventMysteriousNoteRemoved
 struct FMysteriousNoteTheme
 {
 	struct FString                                     NoteType;                                                  // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct MysteriousNotes.NoteCompletionEntry
-// 0x0020
-struct FNoteCompletionEntry
-{
-	struct FGuid                                       NoteId;                                                    // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	TArray<struct FString>                             CompletionEventIds;                                        // 0x0010(0x0010) (ZeroConstructor)
-
-};
-
-// ScriptStruct MysteriousNotes.ActiveNoteData
-// 0x0030
-struct FActiveNoteData
-{
-	TArray<struct FNotesRemoteServiceNoteModel>        NotesRemoteServiceNoteModels;                              // 0x0000(0x0010) (ZeroConstructor)
-	TArray<struct FNoteCompletionEntry>                PendingCompletionEntries;                                  // 0x0010(0x0010) (ZeroConstructor)
-	TArray<struct FGuid>                               PendingDetailRequestIDs;                                   // 0x0020(0x0010) (ZeroConstructor)
 
 };
 
@@ -226,7 +197,17 @@ struct FPlayerMysteriousNoteItem
 	struct FString                                     LocalisedTitle;                                            // 0x0010(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	struct FString                                     LocalisedBody;                                             // 0x0020(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	struct FString                                     NoteType;                                                  // 0x0030(0x0010) (ZeroConstructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_0I3X[0x8];                                     // 0x0040(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_A781[0x8];                                     // 0x0040(0x0008) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct MysteriousNotes.ClientNoteData
+// 0x0018
+struct FClientNoteData
+{
+	bool                                               NotifyArrival;                                             // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_1V04[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<struct FMysteriousNoteInfo>                 PendingNotes;                                              // 0x0008(0x0010) (ZeroConstructor)
 
 };
 
@@ -235,6 +216,25 @@ struct FPlayerMysteriousNoteItem
 struct FPlayerSentNotesTelemetryEvent
 {
 	int                                                NoteCount;                                                 // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct MysteriousNotes.NoteCompletionEntry
+// 0x0020
+struct FNoteCompletionEntry
+{
+	struct FGuid                                       NoteId;                                                    // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	TArray<struct FString>                             CompletionEventIds;                                        // 0x0010(0x0010) (ZeroConstructor)
+
+};
+
+// ScriptStruct MysteriousNotes.ActiveNoteData
+// 0x0030
+struct FActiveNoteData
+{
+	TArray<struct FNotesRemoteServiceNoteModel>        NotesRemoteServiceNoteModels;                              // 0x0000(0x0010) (ZeroConstructor)
+	TArray<struct FNoteCompletionEntry>                PendingCompletionEntries;                                  // 0x0010(0x0010) (ZeroConstructor)
+	TArray<struct FGuid>                               PendingDetailRequestIDs;                                   // 0x0020(0x0010) (ZeroConstructor)
 
 };
 

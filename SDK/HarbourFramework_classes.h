@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -18,6 +18,23 @@ namespace CG
 //---------------------------------------------------------------------------
 // Classes
 //---------------------------------------------------------------------------
+
+// Class HarbourFramework.HarbourServiceInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UHarbourServiceInterface : public UInterface
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class HarbourFramework.HarbourServiceInterface");
+		return ptr;
+	}
+
+
+
+};
 
 // Class HarbourFramework.HarbourInterface
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -41,7 +58,7 @@ public:
 class UHarbourService : public UObject
 {
 public:
-	unsigned char                                      UnknownData_O4OJ[0x28];                                    // 0x0028(0x0028) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DAQ6[0x28];                                    // 0x0028(0x0028) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -54,31 +71,14 @@ public:
 
 };
 
-// Class HarbourFramework.HarbourServiceInterface
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UHarbourServiceInterface : public UInterface
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class HarbourFramework.HarbourServiceInterface");
-		return ptr;
-	}
-
-
-
-};
-
 // Class HarbourFramework.HarbourComponent
 // 0x0030 (FullSize[0x02E0] - InheritedSize[0x02B0])
 class UHarbourComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData_ZPP5[0x8];                                     // 0x02B0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_N7KJ[0x8];                                     // 0x02B0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              HarbourRadiusInCentimetres;                                // 0x02B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ECWE[0x24];                                    // 0x02BC(0x0024) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AUWY[0x24];                                    // 0x02BC(0x0024) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

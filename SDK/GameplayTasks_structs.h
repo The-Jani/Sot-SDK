@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -18,6 +18,15 @@ namespace CG
 //---------------------------------------------------------------------------
 // Enums
 //---------------------------------------------------------------------------
+
+// Enum GameplayTasks.ETaskResourceOverlapPolicy
+enum class GameplayTasks_ETaskResourceOverlapPolicy : uint8_t
+{
+	ETaskResourceOverlapPolicy__StartOnTop = 0,
+	ETaskResourceOverlapPolicy__StartAtEnd = 1,
+	ETaskResourceOverlapPolicy__ETaskResourceOverlapPolicy_MAX = 2,
+
+};
 
 // Enum GameplayTasks.EGameplayTaskState
 enum class GameplayTasks_EGameplayTaskState : uint8_t
@@ -43,15 +52,6 @@ enum class GameplayTasks_EGameplayTaskRunResult : uint8_t
 
 };
 
-// Enum GameplayTasks.ETaskResourceOverlapPolicy
-enum class GameplayTasks_ETaskResourceOverlapPolicy : uint8_t
-{
-	ETaskResourceOverlapPolicy__StartOnTop = 0,
-	ETaskResourceOverlapPolicy__StartAtEnd = 1,
-	ETaskResourceOverlapPolicy__ETaskResourceOverlapPolicy_MAX = 2,
-
-};
-
 //---------------------------------------------------------------------------
 // Script Structs
 //---------------------------------------------------------------------------
@@ -60,7 +60,7 @@ enum class GameplayTasks_ETaskResourceOverlapPolicy : uint8_t
 // 0x0002
 struct FGameplayResourceSet
 {
-	unsigned char                                      UnknownData_OPN4[0x2];                                     // 0x0000(0x0002) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_FUQJ[0x2];                                     // 0x0000(0x0002) MISSED OFFSET (PADDING)
 
 };
 

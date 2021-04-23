@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -41,7 +41,7 @@ public:
 class UPlayerSeasonProgressionComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_F50G[0xB0];                                    // 0x00C8(0x00B0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_IIA6[0xB0];                                    // 0x00C8(0x00B0) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

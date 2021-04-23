@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -58,7 +58,7 @@ public:
 class ATestActionStateCreatorDefinition : public AActionStateCreatorDefinition
 {
 public:
-	unsigned char                                      UnknownData_1TY8[0x18];                                    // 0x0428(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_RG33[0x18];                                    // 0x0428(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -161,9 +161,9 @@ public:
 class UActionStateMachineComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_KRQ1[0x48];                                    // 0x00C8(0x0048) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZEWD[0x48];                                    // 0x00C8(0x0048) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScriptMulticastDelegate                    OnActionChangedOnTrack;                                    // 0x0110(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_K6OF[0x768];                                   // 0x0120(0x0768) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_F5UL[0x768];                                   // 0x0120(0x0768) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -191,7 +191,7 @@ public:
 class UTestActionStateMachineComponent : public UActionStateMachineComponent
 {
 public:
-	unsigned char                                      UnknownData_2IEU[0x18];                                    // 0x0888(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_C341[0x18];                                    // 0x0888(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -210,7 +210,7 @@ class UCustomClientValidityCheckCallback : public UObject
 {
 public:
 	bool                                               ShouldPassClientValidation;                                // 0x0028(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_6V9R[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_GHYD[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -358,7 +358,7 @@ class ATestObjectWithActionStateMachine : public AActor
 {
 public:
 	class UTestActionStateMachineComponent*            ActionStateMachineComponent;                               // 0x0428(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_X66W[0x10];                                    // 0x0430(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_91IT[0x10];                                    // 0x0430(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.0
+﻿// Name: SoT, Version: 2.1.0.1
 
 #include "../SDK.h"
 
@@ -17,43 +17,6 @@ namespace CG
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
-
-// Function TestUtilities.DelegateTester.Callback
-// (Final, RequiredAPI, Native, Public)
-void UDelegateTester::Callback()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TestUtilities.DelegateTester.Callback");
-
-	UDelegateTester_Callback_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function TestUtilities.DelegateTesterWithFNameParam.Callback
-// (Final, RequiredAPI, Native, Public, HasOutParms)
-// Parameters:
-// struct FName                   InParam                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-void UDelegateTesterWithFNameParam::Callback(const struct FName& InParam)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TestUtilities.DelegateTesterWithFNameParam.Callback");
-
-	UDelegateTesterWithFNameParam_Callback_Params params;
-	params.InParam = InParam;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
 
 // Function TestUtilities.TestPrimitiveComponent.GetCollisionObjectType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
@@ -90,6 +53,43 @@ void UTestStaticMeshComponent::AddForce(const struct FVector& Force, const struc
 	params.Force = Force;
 	params.BoneName = BoneName;
 	params.bAccelChange = bAccelChange;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function TestUtilities.DelegateTester.Callback
+// (Final, RequiredAPI, Native, Public)
+void UDelegateTester::Callback()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TestUtilities.DelegateTester.Callback");
+
+	UDelegateTester_Callback_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function TestUtilities.DelegateTesterWithFNameParam.Callback
+// (Final, RequiredAPI, Native, Public, HasOutParms)
+// Parameters:
+// struct FName                   InParam                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+void UDelegateTesterWithFNameParam::Callback(const struct FName& InParam)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TestUtilities.DelegateTesterWithFNameParam.Callback");
+
+	UDelegateTesterWithFNameParam_Callback_Params params;
+	params.InParam = InParam;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -58,13 +58,13 @@ public:
 class URetractableComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_7HOI[0x58];                                    // 0x00C8(0x0058) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_NWRC[0x58];                                    // 0x00C8(0x0058) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       FeatureToggle;                                             // 0x0120(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRetractorOrientationAdjustmentFlags        OrientationAdjustmentOnRetractFlags;                       // 0x0128(0x0003) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                               ShouldAutoReleaseOnSuccessfulRetract;                      // 0x012B(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                               MigrateAttachedWithRetractor;                              // 0x012C(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                               WasSimulatingPhysicsBeforeRetract;                         // 0x012D(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_Y2JL[0x2];                                     // 0x012E(0x0002) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5DNC[0x2];                                     // 0x012E(0x0002) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -100,12 +100,12 @@ public:
 class URetractorComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_3DZN[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_047L[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TScriptInterface<class URetractableInterface>      AttachedRetractable;                                       // 0x00D0(0x0010) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper)
-	unsigned char                                      UnknownData_DZ2C[0x30];                                    // 0x00E0(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_2A8P[0x30];                                    // 0x00E0(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class USceneComponent*                             RetractDestinationComponent;                               // 0x0110(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                             RetractingComponent;                                       // 0x0118(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_SQ7I[0x8];                                     // 0x0120(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_KX2I[0x8];                                     // 0x0120(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 #include "../SDK.h"
 
@@ -19,33 +19,6 @@ namespace CG
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
-
-// Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentTitleText
-struct UAbandonedNoteClueDestinationContainerComponent_OnRep_CurrentTitleText_Params
-{
-};
-
-// Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentClueDestination
-struct UAbandonedNoteClueDestinationContainerComponent_OnRep_CurrentClueDestination_Params
-{
-};
-
-// Function LostShipmentsClueVariants.ClueSiteCircleMapWieldable.OnRep_MapRadialIconData
-struct AClueSiteCircleMapWieldable_OnRep_MapRadialIconData_Params
-{
-};
-
-// Function LostShipmentsClueVariants.ClueVariantsBlueprintFunctionLibrary.GiveClueDescriptorToItem
-struct UClueVariantsBlueprintFunctionLibrary_GiveClueDescriptorToItem_Params
-{
-	class AItemInfo*                                   ItemInfo;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClueDescriptor*                             Clue;                                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function LostShipmentsClueVariants.CompositeClueDestinationDescriptor.OnRep_DestinationInfo
-struct UCompositeClueDestinationDescriptor_OnRep_DestinationInfo_Params
-{
-};
 
 // Function LostShipmentsClueVariants.GooseChaseClueBlueprintFunctionLibrary.CreateEndOfGooseChaseClue
 struct UGooseChaseClueBlueprintFunctionLibrary_CreateEndOfGooseChaseClue_Params
@@ -75,6 +48,33 @@ struct UTaleQuestClueInventoryService_SetClueTitleText_Params
 struct UTaleQuestClueInventoryService_GetCollectedClueCount_Params
 {
 	int                                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentTitleText
+struct UAbandonedNoteClueDestinationContainerComponent_OnRep_CurrentTitleText_Params
+{
+};
+
+// Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentClueDestination
+struct UAbandonedNoteClueDestinationContainerComponent_OnRep_CurrentClueDestination_Params
+{
+};
+
+// Function LostShipmentsClueVariants.ClueSiteCircleMapWieldable.OnRep_MapRadialIconData
+struct AClueSiteCircleMapWieldable_OnRep_MapRadialIconData_Params
+{
+};
+
+// Function LostShipmentsClueVariants.ClueVariantsBlueprintFunctionLibrary.GiveClueDescriptorToItem
+struct UClueVariantsBlueprintFunctionLibrary_GiveClueDescriptorToItem_Params
+{
+	class AItemInfo*                                   ItemInfo;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClueDescriptor*                             Clue;                                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function LostShipmentsClueVariants.CompositeClueDestinationDescriptor.OnRep_DestinationInfo
+struct UCompositeClueDestinationDescriptor_OnRep_DestinationInfo_Params
+{
 };
 
 }

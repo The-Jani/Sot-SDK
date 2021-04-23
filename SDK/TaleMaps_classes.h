@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -43,7 +43,7 @@ class URegionIslandFilteredSelectionStrategy : public URegionIslandSelectionStra
 public:
 	TArray<TEnumAsByte<Athena_EIslandType>>            IslandTypes;                                               // 0x0028(0x0010) (Edit, ZeroConstructor)
 	bool                                               UseMaxDistance;                                            // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_FD0G[0x3];                                     // 0x0039(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LLGD[0x3];                                     // 0x0039(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MaxDistanceFromStartingIsland;                             // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -81,7 +81,7 @@ class USelectIslandsFromRegionStep : public UTaleQuestStep
 public:
 	class URegionMapDataAsset*                         RegionData;                                                // 0x0068(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class URegionIslandSelectionStrategyBase*          SelectionStrategy;                                         // 0x0070(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2CYE[0x30];                                    // 0x0078(0x0030) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DM6F[0x30];                                    // 0x0078(0x0030) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -123,7 +123,7 @@ public:
 class UTaleQuestAddLocationMapStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData_S2RB[0x48];                                    // 0x0068(0x0048) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_45P6[0x48];                                    // 0x0068(0x0048) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -141,7 +141,7 @@ public:
 class UTaleQuestAddTornMapStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData_B4E4[0x40];                                    // 0x0068(0x0040) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_GOO4[0x40];                                    // 0x0068(0x0040) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -154,12 +154,123 @@ public:
 
 };
 
+// Class TaleMaps.AddMarkToTornMapStep
+// 0x0028 (FullSize[0x0090] - InheritedSize[0x0068])
+class UAddMarkToTornMapStep : public UTaleQuestStep
+{
+public:
+	unsigned char                                      UnknownData_Q99Z[0x20];                                    // 0x0068(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UClass*                                      MapMark;                                                   // 0x0088(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class TaleMaps.AddMarkToTornMapStep");
+		return ptr;
+	}
+
+
+
+};
+
+// Class TaleMaps.AddMarkToTornMapStepDescBase
+// 0x0020 (FullSize[0x0050] - InheritedSize[0x0030])
+class UAddMarkToTornMapStepDescBase : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableGuid                          MapId;                                                     // 0x0030(0x0010) (Edit)
+	struct FTaleQuestVariableMapMarkType               MapMark;                                                   // 0x0040(0x0010) (Edit)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class TaleMaps.AddMarkToTornMapStepDescBase");
+		return ptr;
+	}
+
+
+
+};
+
+// Class TaleMaps.AddMarkToTornMapAtLocationStepDesc
+// 0x0010 (FullSize[0x0060] - InheritedSize[0x0050])
+class UAddMarkToTornMapAtLocationStepDesc : public UAddMarkToTornMapStepDescBase
+{
+public:
+	struct FQuestVariableVector                        MarkLocation;                                              // 0x0050(0x0010) (Edit)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class TaleMaps.AddMarkToTornMapAtLocationStepDesc");
+		return ptr;
+	}
+
+
+
+};
+
+// Class TaleMaps.AddMarkToTornMapAtActorLocationStepDesc
+// 0x0010 (FullSize[0x0060] - InheritedSize[0x0050])
+class UAddMarkToTornMapAtActorLocationStepDesc : public UAddMarkToTornMapStepDescBase
+{
+public:
+	struct FQuestVariableActor                         MarkLocation;                                              // 0x0050(0x0010) (Edit)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class TaleMaps.AddMarkToTornMapAtActorLocationStepDesc");
+		return ptr;
+	}
+
+
+
+};
+
+// Class TaleMaps.GetNumberOfCollectedTornMapPiecesStep
+// 0x0020 (FullSize[0x0088] - InheritedSize[0x0068])
+class UGetNumberOfCollectedTornMapPiecesStep : public UTaleQuestStep
+{
+public:
+	unsigned char                                      UnknownData_O8LZ[0x20];                                    // 0x0068(0x0020) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class TaleMaps.GetNumberOfCollectedTornMapPiecesStep");
+		return ptr;
+	}
+
+
+
+};
+
+// Class TaleMaps.GetNumberOfCollectedTornMapPiecesStepDesc
+// 0x0020 (FullSize[0x0050] - InheritedSize[0x0030])
+class UGetNumberOfCollectedTornMapPiecesStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableGuid                          MapId;                                                     // 0x0030(0x0010) (Edit)
+	struct FQuestVariableInt                           NumPieces;                                                 // 0x0040(0x0010) (Edit)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class TaleMaps.GetNumberOfCollectedTornMapPiecesStepDesc");
+		return ptr;
+	}
+
+
+
+};
+
 // Class TaleMaps.TaleQuestAddTradeRouteMapStep
 // 0x0038 (FullSize[0x00A0] - InheritedSize[0x0068])
 class UTaleQuestAddTradeRouteMapStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData_G2JZ[0x30];                                    // 0x0068(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WIII[0x30];                                    // 0x0068(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UClueSiteTypeToMapMarkIdDataAsset*           ClueSiteToMarkMap;                                         // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -178,7 +289,7 @@ public:
 class UTaleQuestLocationMapChestFoundStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData_J95P[0x8];                                     // 0x0068(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_MYM1[0x8];                                     // 0x0068(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -283,117 +394,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class TaleMaps.TaleQuestLocationMapChestFoundStepDesc");
-		return ptr;
-	}
-
-
-
-};
-
-// Class TaleMaps.AddMarkToTornMapStep
-// 0x0028 (FullSize[0x0090] - InheritedSize[0x0068])
-class UAddMarkToTornMapStep : public UTaleQuestStep
-{
-public:
-	unsigned char                                      UnknownData_KAQX[0x20];                                    // 0x0068(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UClass*                                      MapMark;                                                   // 0x0088(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class TaleMaps.AddMarkToTornMapStep");
-		return ptr;
-	}
-
-
-
-};
-
-// Class TaleMaps.AddMarkToTornMapStepDescBase
-// 0x0020 (FullSize[0x0050] - InheritedSize[0x0030])
-class UAddMarkToTornMapStepDescBase : public UTaleQuestStepDesc
-{
-public:
-	struct FQuestVariableGuid                          MapId;                                                     // 0x0030(0x0010) (Edit)
-	struct FTaleQuestVariableMapMarkType               MapMark;                                                   // 0x0040(0x0010) (Edit)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class TaleMaps.AddMarkToTornMapStepDescBase");
-		return ptr;
-	}
-
-
-
-};
-
-// Class TaleMaps.AddMarkToTornMapAtLocationStepDesc
-// 0x0010 (FullSize[0x0060] - InheritedSize[0x0050])
-class UAddMarkToTornMapAtLocationStepDesc : public UAddMarkToTornMapStepDescBase
-{
-public:
-	struct FQuestVariableVector                        MarkLocation;                                              // 0x0050(0x0010) (Edit)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class TaleMaps.AddMarkToTornMapAtLocationStepDesc");
-		return ptr;
-	}
-
-
-
-};
-
-// Class TaleMaps.AddMarkToTornMapAtActorLocationStepDesc
-// 0x0010 (FullSize[0x0060] - InheritedSize[0x0050])
-class UAddMarkToTornMapAtActorLocationStepDesc : public UAddMarkToTornMapStepDescBase
-{
-public:
-	struct FQuestVariableActor                         MarkLocation;                                              // 0x0050(0x0010) (Edit)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class TaleMaps.AddMarkToTornMapAtActorLocationStepDesc");
-		return ptr;
-	}
-
-
-
-};
-
-// Class TaleMaps.GetNumberOfCollectedTornMapPiecesStep
-// 0x0020 (FullSize[0x0088] - InheritedSize[0x0068])
-class UGetNumberOfCollectedTornMapPiecesStep : public UTaleQuestStep
-{
-public:
-	unsigned char                                      UnknownData_K9M6[0x20];                                    // 0x0068(0x0020) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class TaleMaps.GetNumberOfCollectedTornMapPiecesStep");
-		return ptr;
-	}
-
-
-
-};
-
-// Class TaleMaps.GetNumberOfCollectedTornMapPiecesStepDesc
-// 0x0020 (FullSize[0x0050] - InheritedSize[0x0030])
-class UGetNumberOfCollectedTornMapPiecesStepDesc : public UTaleQuestStepDesc
-{
-public:
-	struct FQuestVariableGuid                          MapId;                                                     // 0x0030(0x0010) (Edit)
-	struct FQuestVariableInt                           NumPieces;                                                 // 0x0040(0x0010) (Edit)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class TaleMaps.GetNumberOfCollectedTornMapPiecesStepDesc");
 		return ptr;
 	}
 

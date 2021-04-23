@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -41,7 +41,7 @@ public:
 class UPlayerMerchantContractsComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_Z4DY[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9SP3[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FPlayerMerchantContract>             Contracts;                                                 // 0x00D0(0x0010) (Net, ZeroConstructor)
 
 
@@ -95,9 +95,9 @@ public:
 class UMerchantContractsService : public UObject
 {
 public:
-	unsigned char                                      UnknownData_Y27K[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_C4HG[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FMerchantContract>                   Contracts;                                                 // 0x0030(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_69M2[0x18];                                    // 0x0040(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_N2MC[0x18];                                    // 0x0040(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

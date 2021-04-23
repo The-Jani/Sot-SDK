@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -41,9 +41,9 @@ public:
 class AContestRowboatsService : public AActor
 {
 public:
-	unsigned char                                      UnknownData_HAHQ[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_J17H[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UClass*                                      RowboatClass;                                              // 0x0430(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_NHHV[0x50];                                    // 0x0438(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TMH4[0x50];                                    // 0x0438(0x0050) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

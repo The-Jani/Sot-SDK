@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -32,28 +32,12 @@ enum class JsonUtilities_EJsonTestEnum : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct JsonUtilities.TestMessageUInt64
-// 0x0008
-struct FTestMessageUInt64
-{
-	uint64_t                                           TestInt;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct JsonUtilities.TestInvalidStringMapSerializationObject
-// 0x0050
-struct FTestInvalidStringMapSerializationObject
-{
-	TMap<int, struct FString>                          StringMap;                                                 // 0x0000(0x0050) (ZeroConstructor)
-
-};
-
 // ScriptStruct JsonUtilities.TestSerializationObject
 // 0x0028
 struct FTestSerializationObject
 {
 	bool                                               TestBool;                                                  // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_ZL0R[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZPT0[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                TestInt;                                                   // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FString                                     TestString;                                                // 0x0008(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	struct FGuid                                       TestGuid;                                                  // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -68,47 +52,12 @@ struct FTestSerializationNestedObject
 
 };
 
-// ScriptStruct JsonUtilities.JsonObjectWrapper
-// 0x0018
-struct FJsonObjectWrapper
-{
-	unsigned char                                      UnknownData_GK9I[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct JsonUtilities.TestTextObject
-// 0x0070
-struct FTestTextObject
-{
-	struct FText                                       TestText;                                                  // 0x0000(0x0018) ELEMENT_SIZE_MISMATCH
-	unsigned char                                      UnknownData_JH8M[0x20];                                    // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       TestTextExport;                                            // 0x0038(0x0018) ELEMENT_SIZE_MISMATCH
-	unsigned char                                      UnknownData_7JLV[0x20];                                    // 0x0038(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-
-};
-
 // ScriptStruct JsonUtilities.TestFloatObject
 // 0x0008
 struct FTestFloatObject
 {
 	float                                              TestFloat1;                                                // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TestFloat2;                                                // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct JsonUtilities.TestInt32MapSerializationObject
-// 0x0050
-struct FTestInt32MapSerializationObject
-{
-	TMap<struct FString, int>                          Int32Map;                                                  // 0x0000(0x0050) (ZeroConstructor)
-
-};
-
-// ScriptStruct JsonUtilities.TestStringMapSerializationObject
-// 0x0050
-struct FTestStringMapSerializationObject
-{
-	TMap<struct FString, struct FString>               StringMap;                                                 // 0x0000(0x0050) (ZeroConstructor)
 
 };
 
@@ -125,6 +74,38 @@ struct FTestMessageInt64
 struct FTestUStructMapSerializationObject
 {
 	TMap<struct FString, struct FTestSerializationObject> StructMap;                                                 // 0x0000(0x0050) (ZeroConstructor)
+
+};
+
+// ScriptStruct JsonUtilities.TestStringMapSerializationObject
+// 0x0050
+struct FTestStringMapSerializationObject
+{
+	TMap<struct FString, struct FString>               StringMap;                                                 // 0x0000(0x0050) (ZeroConstructor)
+
+};
+
+// ScriptStruct JsonUtilities.TestInvalidStringMapSerializationObject
+// 0x0050
+struct FTestInvalidStringMapSerializationObject
+{
+	TMap<int, struct FString>                          StringMap;                                                 // 0x0000(0x0050) (ZeroConstructor)
+
+};
+
+// ScriptStruct JsonUtilities.TestInt32MapSerializationObject
+// 0x0050
+struct FTestInt32MapSerializationObject
+{
+	TMap<struct FString, int>                          Int32Map;                                                  // 0x0000(0x0050) (ZeroConstructor)
+
+};
+
+// ScriptStruct JsonUtilities.TestMessageUInt64
+// 0x0008
+struct FTestMessageUInt64
+{
+	uint64_t                                           TestInt;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
@@ -149,6 +130,25 @@ struct FTestMessageTimespan
 struct FTestMessageDateTime
 {
 	struct FDateTime                                   DateTime;                                                  // 0x0000(0x0008) (ZeroConstructor)
+
+};
+
+// ScriptStruct JsonUtilities.JsonObjectWrapper
+// 0x0018
+struct FJsonObjectWrapper
+{
+	unsigned char                                      UnknownData_XK5Y[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct JsonUtilities.TestTextObject
+// 0x0070
+struct FTestTextObject
+{
+	struct FText                                       TestText;                                                  // 0x0000(0x0018) ELEMENT_SIZE_MISMATCH
+	unsigned char                                      UnknownData_NJ1V[0x20];                                    // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       TestTextExport;                                            // 0x0038(0x0018) ELEMENT_SIZE_MISMATCH
+	unsigned char                                      UnknownData_B33B[0x20];                                    // 0x0038(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 
 };
 

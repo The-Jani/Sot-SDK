@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -19,12 +19,24 @@ namespace CG
 // Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct Tutorial.ContextualTutorialPromptDesc
+// 0x0020
+struct FContextualTutorialPromptDesc
+{
+	class UClass*                                      PromptActorClass;                                          // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	class UClass*                                      AccessKey;                                                 // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	struct FName                                       FeatureName;                                               // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                MustBeUnderCount;                                          // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_ASQI[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
 // ScriptStruct Tutorial.BeachNPCSpawnFlowNetworkEvent
 // 0x0008 (0x0018 - 0x0010)
 struct FBeachNPCSpawnFlowNetworkEvent : public FNetworkEventStruct
 {
 	bool                                               HasTaleCheckpointVoyage;                                   // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_TFJO[0x7];                                     // 0x0011(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AI7T[0x7];                                     // 0x0011(0x0007) MISSED OFFSET (PADDING)
 
 };
 
@@ -36,7 +48,7 @@ struct FTutorialStepEndedTelemetryEvent
 	struct FString                                     StepName;                                                  // 0x0010(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	bool                                               StepCompleted;                                             // 0x0020(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               IsFinalStep;                                               // 0x0021(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_36QP[0x6];                                     // 0x0022(0x0006) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_OP98[0x6];                                     // 0x0022(0x0006) MISSED OFFSET (PADDING)
 
 };
 
@@ -44,19 +56,7 @@ struct FTutorialStepEndedTelemetryEvent
 // 0x0001
 struct FTutorialShowTutorialLegendaryTavernStrangerEvent
 {
-	unsigned char                                      UnknownData_IQ3T[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct Tutorial.ContextualTutorialPromptDesc
-// 0x0020
-struct FContextualTutorialPromptDesc
-{
-	class UClass*                                      PromptActorClass;                                          // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class UClass*                                      AccessKey;                                                 // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	struct FName                                       FeatureName;                                               // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                MustBeUnderCount;                                          // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_4XHC[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_B3HK[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 

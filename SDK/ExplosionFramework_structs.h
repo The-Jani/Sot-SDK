@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -37,7 +37,7 @@ enum class ExplosionFramework_EExplosionReceiverCurveType : uint8_t
 // 0x000C
 struct FEventOnExploded
 {
-	unsigned char                                      UnknownData_DMWN[0xC];                                     // 0x0000(0x000C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_7P4Z[0xC];                                     // 0x0000(0x000C) MISSED OFFSET (PADDING)
 
 };
 

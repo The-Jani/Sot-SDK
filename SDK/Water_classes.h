@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -24,7 +24,7 @@ namespace CG
 class AAthenaFFTWater : public AFFTWater
 {
 public:
-	unsigned char                                      UnknownData_O93I[0x28];                                    // 0x0470(0x0028) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_7CSM[0x28];                                    // 0x0470(0x0028) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -59,7 +59,7 @@ public:
 class AAthenaWaterEmissionVolume : public AWaterEmissionVolume
 {
 public:
-	unsigned char                                      UnknownData_Q78B[0x8];                                     // 0x0430(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LVG2[0x8];                                     // 0x0430(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -143,11 +143,11 @@ public:
 class AFFTWaterService : public AActor
 {
 public:
-	unsigned char                                      UnknownData_JUB3[0x10];                                    // 0x0428(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GCYO[0x10];                                    // 0x0428(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TWeakObjectPtr<class AAthenaFFTWater>              FFTWaterActor;                                             // 0x0438(0x0008) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, UObjectWrapper)
 	TWeakObjectPtr<class UFFTWaterComponent>           FFTWaterComponent;                                         // 0x0440(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData, RepNotify, NoDestructor, UObjectWrapper)
 	TWeakObjectPtr<class UFFTWaterExtendedPlaneComponent> ExtendedPlaneComponent;                                    // 0x0448(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData, RepNotify, NoDestructor, UObjectWrapper)
-	unsigned char                                      UnknownData_GJ1A[0x50];                                    // 0x0450(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6BHP[0x50];                                    // 0x0450(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	double                                             ReplicatedServerCreationTime;                              // 0x04A0(0x0008) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -169,7 +169,7 @@ public:
 class UFlatWaterPlaneComponent : public UBaseWaterComponent
 {
 public:
-	unsigned char                                      UnknownData_ZWWO[0x10];                                    // 0x0560(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_N2RI[0x10];                                    // 0x0560(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -190,7 +190,7 @@ public:
 class UMockWaterInterface : public UObject
 {
 public:
-	unsigned char                                      UnknownData_KOA4[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8E6X[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -295,7 +295,7 @@ public:
 class USplashProbeVFXComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_5RC1[0x28];                                    // 0x00C8(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6UEO[0x28];                                    // 0x00C8(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class USplashProbeDataAsset*                       Probes;                                                    // 0x00F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FActorComponentSelector                     AttachProbesToOwner;                                       // 0x00F8(0x0010) (Edit, DisableEditOnInstance, ContainsInstancedReference)
 	class USceneComponent*                             AttachProbesToComponent;                                   // 0x0108(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -375,7 +375,7 @@ public:
 class UWaterEmissionVolumeService : public UObject
 {
 public:
-	unsigned char                                      UnknownData_0R49[0x20];                                    // 0x0028(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HFQK[0x20];                                    // 0x0028(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -427,7 +427,7 @@ public:
 class UWaterInteractionComponent : public UBoxComponent
 {
 public:
-	unsigned char                                      UnknownData_Q7UZ[0x20];                                    // 0x0580(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_RZH2[0x20];                                    // 0x0580(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -513,15 +513,15 @@ class UWaterSpoutVFXComponent : public UActorComponent
 public:
 	TArray<struct FWaterSpout>                         WaterSpouts;                                               // 0x00C8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference)
 	struct FVector                                     SplashEffectPointBottomZ;                                  // 0x00D8(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_D22N[0x4];                                     // 0x00E4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_16IX[0x4];                                     // 0x00E4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UObject*                                     SpoutParticleSystem;                                       // 0x00E8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                     SplashParticleSystem;                                      // 0x00F0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              WaterSplashDelayMin;                                       // 0x00F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              WaterSplashDelayMax;                                       // 0x00FC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              SplashEffectVFXOffset;                                     // 0x0100(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_R9VZ[0x4];                                     // 0x0104(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_80C5[0x4];                                     // 0x0104(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FWaterSpout>                         ActiveWaterSpouts;                                         // 0x0108(0x0010) (ZeroConstructor, ContainsInstancedReference)
-	unsigned char                                      UnknownData_Q8JG[0x18];                                    // 0x0118(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_MLFD[0x18];                                    // 0x0118(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.0
+﻿// Name: SoT, Version: 2.1.0.1
 
 #include "../SDK.h"
 
@@ -17,6 +17,27 @@ namespace CG
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function CalmWaterMapping.CalmWaterMappingService.GetMaxWindSpeed
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+float UCalmWaterMappingService::STATIC_GetMaxWindSpeed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CalmWaterMapping.CalmWaterMappingService.GetMaxWindSpeed");
+
+	UCalmWaterMappingService_GetMaxWindSpeed_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
+}
+
 
 // Function CalmWaterMapping.CalmWaterMappingInterface.GetDampeningFactor
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
@@ -52,27 +73,6 @@ float UCalmWaterMappingInterface::GetChoppinessFactor(const struct FVector2D& In
 
 	UCalmWaterMappingInterface_GetChoppinessFactor_Params params;
 	params.InPosition = InPosition;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
-
-// Function CalmWaterMapping.CalmWaterMappingService.GetMaxWindSpeed
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-float UCalmWaterMappingService::STATIC_GetMaxWindSpeed()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CalmWaterMapping.CalmWaterMappingService.GetMaxWindSpeed");
-
-	UCalmWaterMappingService_GetMaxWindSpeed_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -42,6 +42,16 @@ struct FCommoditySelectionType
 
 };
 
+// ScriptStruct CommodityDemandFramework.CommodityTrackingModel
+// 0x0020
+struct FCommodityTrackingModel
+{
+	struct FGuid                                       ItemOfferId;                                               // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FName                                       NPCName;                                                   // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64_t                                            TickWhenTracked;                                           // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
 // ScriptStruct CommodityDemandFramework.ActiveCommodityDemands
 // 0x0020
 struct FActiveCommodityDemands
@@ -60,16 +70,6 @@ struct FActiveNPCDemands
 
 };
 
-// ScriptStruct CommodityDemandFramework.CommodityTrackingModel
-// 0x0020
-struct FCommodityTrackingModel
-{
-	struct FGuid                                       ItemOfferId;                                               // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FName                                       NPCName;                                                   // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64_t                                            TickWhenTracked;                                           // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
 // ScriptStruct CommodityDemandFramework.CommodityTypeDataEntry
 // 0x0010
 struct FCommodityTypeDataEntry
@@ -83,7 +83,7 @@ struct FCommodityTypeDataEntry
 // 0x0018
 struct FEventCommodityCrateRedeemed
 {
-	unsigned char                                      UnknownData_6IDQ[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PI3V[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
 
 };
 
@@ -112,15 +112,6 @@ struct FEntitlementToRedeemItems
 {
 	class UClass*                                      RequiredEntitlement;                                       // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	TArray<struct FCommodityDescWithRedeemId>          RedeemItems;                                               // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-
-};
-
-// ScriptStruct CommodityDemandFramework.PlayerToOwnedRedeemableEntitlements
-// 0x0018
-struct FPlayerToOwnedRedeemableEntitlements
-{
-	class AController*                                 OwningController;                                          // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UClass*>                              RedeemableEntitlements;                                    // 0x0008(0x0010) (ZeroConstructor, UObjectWrapper)
 
 };
 

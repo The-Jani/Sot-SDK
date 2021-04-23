@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -25,7 +25,7 @@ class UBTTask_BroadcastOceanCrawlerAbilityAudioEvent : public UBTTaskNode
 {
 public:
 	struct FEventOceanCrawlerAIAbilityAudioRequest     OceanCrawlerAIAbilityToBroadcast;                          // 0x0060(0x0001) (Edit)
-	unsigned char                                      UnknownData_Q6EL[0x7];                                     // 0x0061(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_7ALG[0x7];                                     // 0x0061(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -85,7 +85,7 @@ class UOceanCrawlerAudioComponent : public UAICharacterAudioComponent
 public:
 	class UOceanCrawlerAudioParamsDataAsset*           AudioDataAsset;                                            // 0x02E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	class AActor*                                      CachedOwner;                                               // 0x02E8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_3I0S[0x50];                                    // 0x02F0(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_6MVP[0x50];                                    // 0x02F0(0x0050) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -25,7 +25,7 @@ class UEmoteSettings : public UDeveloperSettings
 {
 public:
 	int                                                Pages;                                                     // 0x0038(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_H1YG[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_FE56[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -43,12 +43,12 @@ public:
 class AEmoteCard : public AActor
 {
 public:
-	unsigned char                                      UnknownData_VSHA[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_AZ37[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UMaterialInstanceDynamic*                    DynamicCardSelectionMaterialInstance;                      // 0x0430(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                        MeshComponent;                                             // 0x0438(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       RandomCardParameterName;                                   // 0x0440(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FInt32Range                                 RandomCardParameterRange;                                  // 0x0448(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_ZFHL[0x110];                                   // 0x0458(0x0110) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_V5X7[0x110];                                   // 0x0458(0x0110) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -66,7 +66,7 @@ public:
 class AEmoteCoin : public AActor
 {
 public:
-	unsigned char                                      UnknownData_0WGQ[0x118];                                   // 0x0428(0x0118) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_063B[0x118];                                   // 0x0428(0x0118) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

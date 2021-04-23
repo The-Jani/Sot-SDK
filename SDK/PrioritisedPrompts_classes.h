@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -25,10 +25,10 @@ class UBasePromptCoordinator : public UObject
 {
 public:
 	class AAthenaPlayerController*                     PlayerController;                                          // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TJ3X[0x10];                                    // 0x0030(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1VPL[0x10];                                    // 0x0030(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UPrioritisedPromptsManager*                  PrioritisedPromptsManager;                                 // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ACharacter*                                  CharacterWithRegisteredEvents;                             // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_SGLB[0xA8];                                    // 0x0050(0x00A8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HZJW[0xA8];                                    // 0x0050(0x00A8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -86,7 +86,7 @@ class UPrioritisedPromptsManager : public UObject
 public:
 	TArray<struct FPrioritisedPromptWithHandle>        AllPrompts;                                                // 0x0028(0x0010) (ZeroConstructor)
 	class APlayerController*                           PlayerController;                                          // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_3E7C[0x28];                                    // 0x0040(0x0028) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_J6TM[0x28];                                    // 0x0040(0x0028) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -141,7 +141,7 @@ public:
 class UPromptsLocalService : public UObject
 {
 public:
-	unsigned char                                      UnknownData_D8MH[0x70];                                    // 0x0028(0x0070) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_KFHV[0x70];                                    // 0x0028(0x0070) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -19,12 +19,29 @@ namespace CG
 // Classes
 //---------------------------------------------------------------------------
 
+// Class ObjectCollection.ObjectCollectorInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UObjectCollectorInterface : public UInterface
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ObjectCollection.ObjectCollectorInterface");
+		return ptr;
+	}
+
+
+
+};
+
 // Class ObjectCollection.TestCollector
 // 0x0060 (FullSize[0x0088] - InheritedSize[0x0028])
 class UTestCollector : public UObject
 {
 public:
-	unsigned char                                      UnknownData_GJVB[0x60];                                    // 0x0028(0x0060) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DU9P[0x60];                                    // 0x0028(0x0060) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -42,29 +59,12 @@ public:
 class UTestObjectForCollection : public UObject
 {
 public:
-	unsigned char                                      UnknownData_NBMD[0x48];                                    // 0x0028(0x0048) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_BWM6[0x48];                                    // 0x0028(0x0048) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class ObjectCollection.TestObjectForCollection");
-		return ptr;
-	}
-
-
-
-};
-
-// Class ObjectCollection.ObjectCollectorInterface
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UObjectCollectorInterface : public UInterface
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ObjectCollection.ObjectCollectorInterface");
 		return ptr;
 	}
 

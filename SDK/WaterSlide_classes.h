@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -24,11 +24,11 @@ namespace CG
 class UWaterSlidePlayerComponent : public UDoubleIntentComponent
 {
 public:
-	unsigned char                                      UnknownData_BQA1[0x8];                                     // 0x00E0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_R49E[0x8];                                     // 0x00E0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UParticleSystemComponent*                    PlayerWaterSlideSplashingVFXComponent;                     // 0x00E8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	class UParticleSystem*                             PlayerWaterSlideSplashingVFX;                              // 0x00F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	float                                              SpawnLocationZOffset;                                      // 0x00F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_C9X5[0x14];                                    // 0x00FC(0x0014) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HF8H[0x14];                                    // 0x00FC(0x0014) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class AWaterSlide*                                 CurrentWaterSlide;                                         // 0x0110(0x0008) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -65,7 +65,7 @@ class UWaterSlideParamsDataAsset : public UDataAsset
 {
 public:
 	struct FWaterSlideParams                           WaterSlideParams;                                          // 0x0028(0x001C) (Edit)
-	unsigned char                                      UnknownData_I98Z[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PQBK[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -91,9 +91,9 @@ public:
 	class AWaterSlide*                                 LeftWaterSlideRoute;                                       // 0x0450(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	class AWaterSlide*                                 RightWaterSlideRoute;                                      // 0x0458(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	bool                                               IsEndOfSlide;                                              // 0x0460(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_BHOY[0x3];                                     // 0x0461(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_4N32[0x3];                                     // 0x0461(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     EndOfSlideLaunchForce;                                     // 0x0464(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_Z8H2[0x20];                                    // 0x0470(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_QSLV[0x20];                                    // 0x0470(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -130,7 +130,7 @@ public:
 class UWaterSlideCompositeInputHandler : public ULookAtOffsetCompositeInputHandler
 {
 public:
-	unsigned char                                      UnknownData_DHNX[0x30];                                    // 0x01D8(0x0030) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5607[0x30];                                    // 0x01D8(0x0030) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -24,9 +24,9 @@ namespace CG
 class UDebugMenuComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_IY6Z[0x28];                                    // 0x00C8(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_AOYL[0x28];                                    // 0x00C8(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class ADebugMenu*                                  DebugMenuInstance;                                         // 0x00F0(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TJ1L[0x20];                                    // 0x00F8(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_MP43[0x20];                                    // 0x00F8(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -44,7 +44,7 @@ public:
 class UDebugMenuComponentMock : public UDebugMenuComponent
 {
 public:
-	unsigned char                                      UnknownData_HXB4[0x8];                                     // 0x0118(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_F83Q[0x8];                                     // 0x0118(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -124,7 +124,7 @@ public:
 class ADebugMenu : public AActor
 {
 public:
-	unsigned char                                      UnknownData_JAOL[0x60];                                    // 0x0428(0x0060) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_G7W0[0x60];                                    // 0x0428(0x0060) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

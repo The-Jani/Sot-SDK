@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0
+// Name: SoT, Version: 2.1.0.1
 
 
 /*!!DEFINE!!*/
@@ -18,6 +18,23 @@ namespace CG
 //---------------------------------------------------------------------------
 // Classes
 //---------------------------------------------------------------------------
+
+// Class ShipDamage.StrainDamagerType
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UStrainDamagerType : public UDamagerType
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ShipDamage.StrainDamagerType");
+		return ptr;
+	}
+
+
+
+};
 
 // Class ShipDamage.DamageablePartsInterface
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -83,23 +100,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class ShipDamage.ShipDamagerType");
-		return ptr;
-	}
-
-
-
-};
-
-// Class ShipDamage.StrainDamagerType
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UStrainDamagerType : public UDamagerType
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ShipDamage.StrainDamagerType");
 		return ptr;
 	}
 

@@ -1,2 +1,2 @@
 # Sot-SDK
-Sea Of Thieves SDK 2.1.0.1
+Sea Of Thieves SDK 2.1.1

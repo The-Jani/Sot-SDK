@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -62,7 +62,37 @@ struct FRopeStyleParams
 	class UTexture2D*                                  DiffuseTexture;                                            // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                                  NormalTexture;                                             // 0x0010(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                ShadowLOD;                                                 // 0x0018(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_L9RF[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LGIC[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaRigging.RopeCatenaryLengthParams
+// 0x0010
+struct FRopeCatenaryLengthParams
+{
+	float                                              MinTautLength;                                             // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MaxTautLength;                                             // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              CatenaryScaleAtMinLength;                                  // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              CatenaryScaleAtMaxLength;                                  // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaRigging.RopeCatenarySwingParams
+// 0x0008
+struct FRopeCatenarySwingParams
+{
+	float                                              LengthForNeutralSwing;                                     // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              LengthBias;                                                // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaRigging.RopeCatenaryDynamicsParams
+// 0x0008
+struct FRopeCatenaryDynamicsParams
+{
+	float                                              CatenaryToTautLengthRatioToConsiderCatenary;               // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               ReactsToWind;                                              // 0x0004(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_B0F7[0x3];                                     // 0x0005(0x0003) MISSED OFFSET (PADDING)
 
 };
 
@@ -110,23 +140,25 @@ struct FRiggingSystemPulleyAttachmentParams
 
 };
 
+// ScriptStruct AthenaRigging.RiggingSystemPulleyParams
+// 0x0050
+struct FRiggingSystemPulleyParams
+{
+	struct FSocketId                                   Anchor;                                                    // 0x0000(0x0020) (Edit)
+	float                                              OffsetFromAnchor;                                          // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_H6JK[0x4];                                     // 0x0024(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FPulleyVisualParams                         Visuals;                                                   // 0x0028(0x0010) (Edit)
+	struct FRiggingSystemPulleyAttachmentParams        AttachmentRope;                                            // 0x0038(0x0014) (Edit)
+	unsigned char                                      UnknownData_I9VT[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
 // ScriptStruct AthenaRigging.RopeCatenarySlopeBlendParams
 // 0x0008
 struct FRopeCatenarySlopeBlendParams
 {
 	float                                              MinSlopeForTautBlend;                                      // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxSlopeForTautBlend;                                      // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaRigging.RopeCatenaryLengthParams
-// 0x0010
-struct FRopeCatenaryLengthParams
-{
-	float                                              MinTautLength;                                             // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MaxTautLength;                                             // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              CatenaryScaleAtMinLength;                                  // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              CatenaryScaleAtMaxLength;                                  // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
@@ -139,55 +171,6 @@ struct FRopeCatenaryShapeParams
 
 };
 
-// ScriptStruct AthenaRigging.RopeCatenarySwingParams
-// 0x0008
-struct FRopeCatenarySwingParams
-{
-	float                                              LengthForNeutralSwing;                                     // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              LengthBias;                                                // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaRigging.RopeCatenaryDynamicsParams
-// 0x0008
-struct FRopeCatenaryDynamicsParams
-{
-	float                                              CatenaryToTautLengthRatioToConsiderCatenary;               // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               ReactsToWind;                                              // 0x0004(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_7UOH[0x3];                                     // 0x0005(0x0003) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaRigging.InstancedRopeParams
-// 0x0054
-struct FInstancedRopeParams
-{
-	struct FVector                                     Start;                                                     // 0x0000(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                     End;                                                       // 0x000C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                              Thickness;                                                 // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              UVScale;                                                   // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              UVBase;                                                    // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              UVOffset;                                                  // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              Roughness;                                                 // 0x0028(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRopeCatenaryShapeParams                    Shape;                                                     // 0x002C(0x0018) (Edit, BlueprintVisible)
-	struct FRopeCatenarySwingParams                    Swing;                                                     // 0x0044(0x0008) (Edit, BlueprintVisible)
-	struct FRopeCatenaryDynamicsParams                 Dynamics;                                                  // 0x004C(0x0008) (Edit, BlueprintVisible)
-
-};
-
-// ScriptStruct AthenaRigging.RiggingSystemPulleyParams
-// 0x0050
-struct FRiggingSystemPulleyParams
-{
-	struct FSocketId                                   Anchor;                                                    // 0x0000(0x0020) (Edit)
-	float                                              OffsetFromAnchor;                                          // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_P007[0x4];                                     // 0x0024(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FPulleyVisualParams                         Visuals;                                                   // 0x0028(0x0010) (Edit)
-	struct FRiggingSystemPulleyAttachmentParams        AttachmentRope;                                            // 0x0038(0x0014) (Edit)
-	unsigned char                                      UnknownData_KC6E[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (PADDING)
-
-};
-
 // ScriptStruct AthenaRigging.RiggingSystemLineParams
 // 0x0078
 struct FRiggingSystemLineParams
@@ -197,7 +180,7 @@ struct FRiggingSystemLineParams
 	struct FSocketId                                   End;                                                       // 0x0030(0x0020) (Edit, SimpleDisplay)
 	struct FRopeVisualParams                           Visuals;                                                   // 0x0050(0x000C) (Edit)
 	struct FRopeCatenaryShapeParams                    Shape;                                                     // 0x005C(0x0018) (Edit)
-	unsigned char                                      UnknownData_7108[0x4];                                     // 0x0074(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_WOUK[0x4];                                     // 0x0074(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -216,6 +199,23 @@ struct FRopeCatenaryLengthPair
 {
 	float                                              Taut;                                                      // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              Catenary;                                                  // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaRigging.InstancedRopeParams
+// 0x0054
+struct FInstancedRopeParams
+{
+	struct FVector                                     Start;                                                     // 0x0000(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                     End;                                                       // 0x000C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              Thickness;                                                 // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              UVScale;                                                   // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              UVBase;                                                    // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              UVOffset;                                                  // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Roughness;                                                 // 0x0028(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRopeCatenaryShapeParams                    Shape;                                                     // 0x002C(0x0018) (Edit, BlueprintVisible)
+	struct FRopeCatenarySwingParams                    Swing;                                                     // 0x0044(0x0008) (Edit, BlueprintVisible)
+	struct FRopeCatenaryDynamicsParams                 Dynamics;                                                  // 0x004C(0x0008) (Edit, BlueprintVisible)
 
 };
 

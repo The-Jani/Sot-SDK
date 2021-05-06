@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,11 +20,11 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MermaidService.BP_MermaidService_C
-// 0x0008 (FullSize[0x05C0] - InheritedSize[0x05B8])
+// 0x0008 (FullSize[0x05C8] - InheritedSize[0x05C0])
 class ABP_MermaidService_C : public AMermaidService
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                          // 0x05B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class USceneComponent*                             DefaultSceneRoot;                                          // 0x05C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 
 
 	static UClass* StaticClass()

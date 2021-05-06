@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,12 +20,12 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CannonBallProxy.BP_CannonBallProxy_C
-// 0x0010 (FullSize[0x0688] - InheritedSize[0x0678])
+// 0x0010 (FullSize[0x0690] - InheritedSize[0x0680])
 class ABP_CannonBallProxy_C : public AStaticMeshItemProxy
 {
 public:
-	class UTrackedOwnerComponent*                      TrackedOwner;                                              // 0x0678(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UInteractableComponent*                      Interactable;                                              // 0x0680(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UTrackedOwnerComponent*                      TrackedOwner;                                              // 0x0680(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UInteractableComponent*                      Interactable;                                              // 0x0688(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 
 
 	static UClass* StaticClass()

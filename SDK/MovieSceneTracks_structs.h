@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -65,118 +65,10 @@ enum class MovieSceneTracks_EParticleKey : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct MovieSceneTracks.VectorParameterNameAndCurves
-// 0x0178
-struct FVectorParameterNameAndCurves
+// ScriptStruct MovieSceneTracks.MovieSceneAdditiveCameraAnimationTemplate
+// 0x0000 (0x0018 - 0x0018)
+struct FMovieSceneAdditiveCameraAnimationTemplate : public FMovieSceneEvalTemplate
 {
-	struct FName                                       ParameterName;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                Index;                                                     // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_JQE2[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FRichCurve                                  XCurve;                                                    // 0x0010(0x0078)
-	struct FRichCurve                                  YCurve;                                                    // 0x0088(0x0078)
-	struct FRichCurve                                  ZCurve;                                                    // 0x0100(0x0078)
-
-};
-
-// ScriptStruct MovieSceneTracks.ScalarParameterNameAndCurve
-// 0x0088
-struct FScalarParameterNameAndCurve
-{
-	struct FName                                       ParameterName;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                Index;                                                     // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_4ZD6[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FRichCurve                                  ParameterCurve;                                            // 0x0010(0x0078)
-
-};
-
-// ScriptStruct MovieSceneTracks.MovieSceneSkeletalAnimationParams
-// 0x0098
-struct FMovieSceneSkeletalAnimationParams
-{
-	class UAnimSequenceBase*                           Animation;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              StartOffset;                                               // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              EndOffset;                                                 // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              PlayRate;                                                  // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      bReverse : 1;                                              // 0x0014(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_49JH[0x3];                                     // 0x0015(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FName                                       SlotName;                                                  // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRichCurve                                  Weight;                                                    // 0x0020(0x0078) (Edit)
-
-};
-
-// ScriptStruct MovieSceneTracks.MovieSceneVectorKeyStructBase
-// 0x0040 (0x0048 - 0x0008)
-struct FMovieSceneVectorKeyStructBase : public FMovieSceneKeyStruct
-{
-	unsigned char                                      UnknownData_F7S0[0x40];                                    // 0x0008(0x0040) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct MovieSceneTracks.MovieSceneVector4KeyStruct
-// 0x0018 (0x0060 - 0x0048)
-struct FMovieSceneVector4KeyStruct : public FMovieSceneVectorKeyStructBase
-{
-	unsigned char                                      UnknownData_NCOS[0x8];                                     // 0x0048(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FVector4                                    Vector;                                                    // 0x0050(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-};
-
-// ScriptStruct MovieSceneTracks.MovieSceneVectorKeyStruct
-// 0x0010 (0x0058 - 0x0048)
-struct FMovieSceneVectorKeyStruct : public FMovieSceneVectorKeyStructBase
-{
-	struct FVector                                     Vector;                                                    // 0x0048(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_XXUZ[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct MovieSceneTracks.MovieSceneVector2DKeyStruct
-// 0x0008 (0x0050 - 0x0048)
-struct FMovieSceneVector2DKeyStruct : public FMovieSceneVectorKeyStructBase
-{
-	struct FVector2D                                   Vector;                                                    // 0x0048(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-};
-
-// ScriptStruct MovieSceneTracks.ColorParameterNameAndCurves
-// 0x01F0
-struct FColorParameterNameAndCurves
-{
-	struct FName                                       ParameterName;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                Index;                                                     // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_75UF[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FRichCurve                                  RedCurve;                                                  // 0x0010(0x0078)
-	struct FRichCurve                                  GreenCurve;                                                // 0x0088(0x0078)
-	struct FRichCurve                                  BlueCurve;                                                 // 0x0100(0x0078)
-	struct FRichCurve                                  AlphaCurve;                                                // 0x0178(0x0078)
-
-};
-
-// ScriptStruct MovieSceneTracks.MovieSceneParameterSectionTemplate
-// 0x0030 (0x0048 - 0x0018)
-struct FMovieSceneParameterSectionTemplate : public FMovieSceneEvalTemplate
-{
-	TArray<struct FScalarParameterNameAndCurve>        Scalars;                                                   // 0x0018(0x0010) (ZeroConstructor)
-	TArray<struct FVectorParameterNameAndCurves>       Vectors;                                                   // 0x0028(0x0010) (ZeroConstructor)
-	TArray<struct FColorParameterNameAndCurves>        Colors;                                                    // 0x0038(0x0010) (ZeroConstructor)
-
-};
-
-// ScriptStruct MovieSceneTracks.MovieSceneComponentMaterialSectionTemplate
-// 0x0008 (0x0050 - 0x0048)
-struct FMovieSceneComponentMaterialSectionTemplate : public FMovieSceneParameterSectionTemplate
-{
-	int                                                MaterialIndex;                                             // 0x0048(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_PEN4[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct MovieSceneTracks.MovieScene3DLocationKeyStruct
-// 0x0028 (0x0030 - 0x0008)
-struct FMovieScene3DLocationKeyStruct : public FMovieSceneKeyStruct
-{
-	struct FVector                                     Location;                                                  // 0x0008(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_BDIL[0x1C];                                    // 0x0014(0x001C) MISSED OFFSET (PADDING)
 
 };
 
@@ -190,67 +82,7 @@ struct FMovieSceneCameraAnimSectionData
 	float                                              BlendInTime;                                               // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              BlendOutTime;                                              // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bLooping;                                                  // 0x0018(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_WD0O[0x7];                                     // 0x0019(0x0007) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct MovieSceneTracks.MovieSceneCameraShakeSectionData
-// 0x0020
-struct FMovieSceneCameraShakeSectionData
-{
-	class UClass*                                      ShakeClass;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	float                                              PlayScale;                                                 // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<Engine_ECameraAnimPlaySpace>           PlaySpace;                                                 // 0x000C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_5TDB[0x3];                                     // 0x000D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FRotator                                    UserDefinedPlaySpace;                                      // 0x0010(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_JYRU[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct MovieSceneTracks.MovieSceneColorKeyStruct
-// 0x0050 (0x0058 - 0x0008)
-struct FMovieSceneColorKeyStruct : public FMovieSceneKeyStruct
-{
-	struct FLinearColor                                Color;                                                     // 0x0008(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_TGKQ[0x40];                                    // 0x0018(0x0040) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct MovieSceneTracks.MovieSceneEventParameters
-// 0x0018
-struct FMovieSceneEventParameters
-{
-	unsigned char                                      UnknownData_TLBF[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct MovieSceneTracks.EventPayload
-// 0x0030
-struct FEventPayload
-{
-	struct FName                                       EventName;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               IsSubtitleEvent;                                           // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_QZU6[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	int                                                ActorNumber;                                               // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                SubtitleIndex;                                             // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_G67G[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FMovieSceneEventParameters                  Parameters;                                                // 0x0018(0x0018) (Edit)
-
-};
-
-// ScriptStruct MovieSceneTracks.MovieSceneEventSectionData
-// 0x0020
-struct FMovieSceneEventSectionData
-{
-	TArray<float>                                      KeyTimes;                                                  // 0x0000(0x0010) (ZeroConstructor)
-	TArray<struct FEventPayload>                       KeyValues;                                                 // 0x0010(0x0010) (ZeroConstructor)
-
-};
-
-// ScriptStruct MovieSceneTracks.MovieSceneAdditiveCameraAnimationTemplate
-// 0x0000 (0x0018 - 0x0018)
-struct FMovieSceneAdditiveCameraAnimationTemplate : public FMovieSceneEvalTemplate
-{
+	unsigned char                                      UnknownData_JFHA[0x7];                                     // 0x0019(0x0007) MISSED OFFSET (PADDING)
 
 };
 
@@ -260,7 +92,7 @@ struct FMovieSceneCameraAnimSectionTemplate : public FMovieSceneAdditiveCameraAn
 {
 	struct FMovieSceneCameraAnimSectionData            SourceData;                                                // 0x0018(0x0020)
 	float                                              SectionStartTime;                                          // 0x0038(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FT5C[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_E0OQ[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -282,6 +114,37 @@ struct FMovieSceneColorSectionTemplate : public FMovieSceneEvalTemplate
 
 };
 
+// ScriptStruct MovieSceneTracks.MovieSceneEventParameters
+// 0x0018
+struct FMovieSceneEventParameters
+{
+	unsigned char                                      UnknownData_33O3[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct MovieSceneTracks.EventPayload
+// 0x0030
+struct FEventPayload
+{
+	struct FName                                       EventName;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               IsSubtitleEvent;                                           // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_K43Y[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	int                                                ActorNumber;                                               // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                SubtitleIndex;                                             // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_OP79[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FMovieSceneEventParameters                  Parameters;                                                // 0x0018(0x0018) (Edit)
+
+};
+
+// ScriptStruct MovieSceneTracks.MovieSceneEventSectionData
+// 0x0020
+struct FMovieSceneEventSectionData
+{
+	TArray<float>                                      KeyTimes;                                                  // 0x0000(0x0010) (ZeroConstructor)
+	TArray<struct FEventPayload>                       KeyValues;                                                 // 0x0010(0x0010) (ZeroConstructor)
+
+};
+
 // ScriptStruct MovieSceneTracks.MovieSceneEventSectionTemplate
 // 0x0028 (0x0040 - 0x0018)
 struct FMovieSceneEventSectionTemplate : public FMovieSceneEvalTemplate
@@ -289,7 +152,7 @@ struct FMovieSceneEventSectionTemplate : public FMovieSceneEvalTemplate
 	struct FMovieSceneEventSectionData                 EventData;                                                 // 0x0018(0x0020)
 	unsigned char                                      bFireEventsWhenForwards : 1;                               // 0x0038(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bFireEventsWhenBackwards : 1;                              // 0x0038(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_FPBC[0x7];                                     // 0x0039(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_0J32[0x7];                                     // 0x0039(0x0007) MISSED OFFSET (PADDING)
 
 };
 
@@ -300,7 +163,7 @@ struct FMovieSceneFadeSectionTemplate : public FMovieSceneEvalTemplate
 	struct FRichCurve                                  FadeCurve;                                                 // 0x0018(0x0078)
 	struct FLinearColor                                FadeColor;                                                 // 0x0090(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	unsigned char                                      bFadeAudio : 1;                                            // 0x00A0(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_STCA[0x7];                                     // 0x00A1(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_L8JE[0x7];                                     // 0x00A1(0x0007) MISSED OFFSET (PADDING)
 
 };
 
@@ -316,8 +179,56 @@ struct FMovieSceneLevelVisibilitySharedTrack : public FMovieSceneEvalTemplate
 struct FMovieSceneLevelVisibilitySectionTemplate : public FMovieSceneEvalTemplate
 {
 	TEnumAsByte<MovieSceneTracks_ELevelVisibility>     Visibility;                                                // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_096B[0x7];                                     // 0x0019(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_20OA[0x7];                                     // 0x0019(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FName>                               LevelNames;                                                // 0x0020(0x0010) (ZeroConstructor)
+
+};
+
+// ScriptStruct MovieSceneTracks.ScalarParameterNameAndCurve
+// 0x0088
+struct FScalarParameterNameAndCurve
+{
+	struct FName                                       ParameterName;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                Index;                                                     // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_48QC[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FRichCurve                                  ParameterCurve;                                            // 0x0010(0x0078)
+
+};
+
+// ScriptStruct MovieSceneTracks.VectorParameterNameAndCurves
+// 0x0178
+struct FVectorParameterNameAndCurves
+{
+	struct FName                                       ParameterName;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                Index;                                                     // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_PFWY[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FRichCurve                                  XCurve;                                                    // 0x0010(0x0078)
+	struct FRichCurve                                  YCurve;                                                    // 0x0088(0x0078)
+	struct FRichCurve                                  ZCurve;                                                    // 0x0100(0x0078)
+
+};
+
+// ScriptStruct MovieSceneTracks.ColorParameterNameAndCurves
+// 0x01F0
+struct FColorParameterNameAndCurves
+{
+	struct FName                                       ParameterName;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                Index;                                                     // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_GA0O[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FRichCurve                                  RedCurve;                                                  // 0x0010(0x0078)
+	struct FRichCurve                                  GreenCurve;                                                // 0x0088(0x0078)
+	struct FRichCurve                                  BlueCurve;                                                 // 0x0100(0x0078)
+	struct FRichCurve                                  AlphaCurve;                                                // 0x0178(0x0078)
+
+};
+
+// ScriptStruct MovieSceneTracks.MovieSceneParameterSectionTemplate
+// 0x0030 (0x0048 - 0x0018)
+struct FMovieSceneParameterSectionTemplate : public FMovieSceneEvalTemplate
+{
+	TArray<struct FScalarParameterNameAndCurve>        Scalars;                                                   // 0x0018(0x0010) (ZeroConstructor)
+	TArray<struct FVectorParameterNameAndCurves>       Vectors;                                                   // 0x0028(0x0010) (ZeroConstructor)
+	TArray<struct FColorParameterNameAndCurves>        Colors;                                                    // 0x0038(0x0010) (ZeroConstructor)
 
 };
 
@@ -343,7 +254,7 @@ struct FMovieSceneVectorPropertySectionTemplate : public FMovieSceneEvalTemplate
 	struct FMovieScenePropertySectionData              PropertyData;                                              // 0x0018(0x0020) (Protected)
 	struct FRichCurve                                  ComponentCurves[0x4];                                      // 0x0038(0x01E0) (Protected)
 	int                                                NumChannelsUsed;                                           // 0x0218(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FIWL[0x4];                                     // 0x021C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_UR29[0x4];                                     // 0x021C(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -362,6 +273,95 @@ struct FMovieSceneIntegerPropertySectionTemplate : public FMovieSceneEvalTemplat
 {
 	struct FMovieScenePropertySectionData              PropertyData;                                              // 0x0018(0x0020) (Protected)
 	struct FIntegralCurve                              IntegerCurve;                                              // 0x0038(0x0070) (Protected)
+
+};
+
+// ScriptStruct MovieSceneTracks.MovieSceneSkeletalAnimationParams
+// 0x0098
+struct FMovieSceneSkeletalAnimationParams
+{
+	class UAnimSequenceBase*                           Animation;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              StartOffset;                                               // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              EndOffset;                                                 // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              PlayRate;                                                  // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      bReverse : 1;                                              // 0x0014(0x0001) BIT_FIELD (Edit, NoDestructor)
+	unsigned char                                      UnknownData_YZQ2[0x3];                                     // 0x0015(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FName                                       SlotName;                                                  // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRichCurve                                  Weight;                                                    // 0x0020(0x0078) (Edit)
+
+};
+
+// ScriptStruct MovieSceneTracks.MovieSceneVectorKeyStructBase
+// 0x0040 (0x0048 - 0x0008)
+struct FMovieSceneVectorKeyStructBase : public FMovieSceneKeyStruct
+{
+	unsigned char                                      UnknownData_0CJ9[0x40];                                    // 0x0008(0x0040) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct MovieSceneTracks.MovieSceneVector4KeyStruct
+// 0x0018 (0x0060 - 0x0048)
+struct FMovieSceneVector4KeyStruct : public FMovieSceneVectorKeyStructBase
+{
+	unsigned char                                      UnknownData_2241[0x8];                                     // 0x0048(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FVector4                                    Vector;                                                    // 0x0050(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+};
+
+// ScriptStruct MovieSceneTracks.MovieSceneVectorKeyStruct
+// 0x0010 (0x0058 - 0x0048)
+struct FMovieSceneVectorKeyStruct : public FMovieSceneVectorKeyStructBase
+{
+	struct FVector                                     Vector;                                                    // 0x0048(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_GRYN[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct MovieSceneTracks.MovieSceneVector2DKeyStruct
+// 0x0008 (0x0050 - 0x0048)
+struct FMovieSceneVector2DKeyStruct : public FMovieSceneVectorKeyStructBase
+{
+	struct FVector2D                                   Vector;                                                    // 0x0048(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+};
+
+// ScriptStruct MovieSceneTracks.MovieSceneComponentMaterialSectionTemplate
+// 0x0008 (0x0050 - 0x0048)
+struct FMovieSceneComponentMaterialSectionTemplate : public FMovieSceneParameterSectionTemplate
+{
+	int                                                MaterialIndex;                                             // 0x0048(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_1LWS[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct MovieSceneTracks.MovieScene3DLocationKeyStruct
+// 0x0028 (0x0030 - 0x0008)
+struct FMovieScene3DLocationKeyStruct : public FMovieSceneKeyStruct
+{
+	struct FVector                                     Location;                                                  // 0x0008(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_Q4SO[0x1C];                                    // 0x0014(0x001C) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct MovieSceneTracks.MovieSceneCameraShakeSectionData
+// 0x0020
+struct FMovieSceneCameraShakeSectionData
+{
+	class UClass*                                      ShakeClass;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	float                                              PlayScale;                                                 // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<Engine_ECameraAnimPlaySpace>           PlaySpace;                                                 // 0x000C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_6QPO[0x3];                                     // 0x000D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FRotator                                    UserDefinedPlaySpace;                                      // 0x0010(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_TR1K[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct MovieSceneTracks.MovieSceneColorKeyStruct
+// 0x0050 (0x0058 - 0x0008)
+struct FMovieSceneColorKeyStruct : public FMovieSceneKeyStruct
+{
+	struct FLinearColor                                Color;                                                     // 0x0008(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_87VM[0x40];                                    // 0x0018(0x0040) MISSED OFFSET (PADDING)
 
 };
 
@@ -438,7 +438,7 @@ struct FMovieSceneSlomoSectionTemplate : public FMovieSceneEvalTemplate
 struct FMovieSceneVisibilitySectionTemplate : public FMovieSceneBoolPropertySectionTemplate
 {
 	bool                                               bTemporarilyHiddenInGame;                                  // 0x00A8(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_66Y1[0x7];                                     // 0x00A9(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_JMA4[0x7];                                     // 0x00A9(0x0007) MISSED OFFSET (PADDING)
 
 };
 
@@ -468,11 +468,11 @@ struct FMovieScene3DPathSectionTemplate : public FMovieSceneEvalTemplate
 	struct FRichCurve                                  TimingCurve;                                               // 0x0028(0x0078)
 	TEnumAsByte<MovieSceneTracks_EMovieScene3DPathSection_Axis> FrontAxisEnum;                                             // 0x00A0(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<MovieSceneTracks_EMovieScene3DPathSection_Axis> UpAxisEnum;                                                // 0x00A1(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_JN3E[0x2];                                     // 0x00A2(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_AUPC[0x2];                                     // 0x00A2(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	unsigned char                                      bFollow : 1;                                               // 0x00A4(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bReverse : 1;                                              // 0x00A4(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bForceUpright : 1;                                         // 0x00A4(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_01PL[0x3];                                     // 0x00A5(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TYXR[0x3];                                     // 0x00A5(0x0003) MISSED OFFSET (PADDING)
 
 };
 
@@ -503,11 +503,11 @@ struct FMovieSceneAudioSectionTemplateData
 	class USoundBase*                                  Sound;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              AudioStartOffset;                                          // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FFloatRange                                 AudioRange;                                                // 0x000C(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_8F8W[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HC07[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRichCurve                                  AudioPitchMultiplierCurve;                                 // 0x0020(0x0078)
 	struct FRichCurve                                  AudioVolumeCurve;                                          // 0x0098(0x0078)
 	int                                                RowIndex;                                                  // 0x0110(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_7EHU[0x4];                                     // 0x0114(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_9EQK[0x4];                                     // 0x0114(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -532,7 +532,7 @@ struct FMovieSceneCameraShakeSectionTemplate : public FMovieSceneAdditiveCameraA
 {
 	struct FMovieSceneCameraShakeSectionData           SourceData;                                                // 0x0018(0x0020)
 	float                                              SectionStartTime;                                          // 0x0038(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YB2H[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_M1JF[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -543,7 +543,7 @@ struct FMovieScene3DTransformKeyStruct : public FMovieSceneKeyStruct
 	struct FVector                                     Location;                                                  // 0x0008(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FRotator                                    Rotation;                                                  // 0x0014(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                     Scale;                                                     // 0x0020(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_M87K[0x4C];                                    // 0x002C(0x004C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_M061[0x4C];                                    // 0x002C(0x004C) MISSED OFFSET (PADDING)
 
 };
 
@@ -552,7 +552,7 @@ struct FMovieScene3DTransformKeyStruct : public FMovieSceneKeyStruct
 struct FMovieScene3DScaleKeyStruct : public FMovieSceneKeyStruct
 {
 	struct FVector                                     Scale;                                                     // 0x0008(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_O05A[0x1C];                                    // 0x0014(0x001C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_IHHZ[0x1C];                                    // 0x0014(0x001C) MISSED OFFSET (PADDING)
 
 };
 
@@ -561,7 +561,7 @@ struct FMovieScene3DScaleKeyStruct : public FMovieSceneKeyStruct
 struct FMovieScene3DRotationKeyStruct : public FMovieSceneKeyStruct
 {
 	struct FRotator                                    Rotation;                                                  // 0x0008(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_3BJM[0x1C];                                    // 0x0014(0x001C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2TAH[0x1C];                                    // 0x0014(0x001C) MISSED OFFSET (PADDING)
 
 };
 

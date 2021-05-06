@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -18,6 +18,16 @@ namespace CG
 //---------------------------------------------------------------------------
 // Enums
 //---------------------------------------------------------------------------
+
+// Enum Slate.ETextJustify
+enum class Slate_ETextJustify : uint8_t
+{
+	ETextJustify__Left             = 0,
+	ETextJustify__Center           = 1,
+	ETextJustify__Right            = 2,
+	ETextJustify__ETextJustify_MAX = 3,
+
+};
 
 // Enum Slate.EProgressBarFillType
 enum class Slate_EProgressBarFillType : uint8_t
@@ -76,16 +86,6 @@ enum class Slate_EStretchDirection : uint8_t
 
 };
 
-// Enum Slate.ETextJustify
-enum class Slate_ETextJustify : uint8_t
-{
-	ETextJustify__Left             = 0,
-	ETextJustify__Center           = 1,
-	ETextJustify__Right            = 2,
-	ETextJustify__ETextJustify_MAX = 3,
-
-};
-
 //---------------------------------------------------------------------------
 // Script Structs
 //---------------------------------------------------------------------------
@@ -108,7 +108,7 @@ struct FInputChord
 	unsigned char                                      bCtrl : 1;                                                 // 0x0020(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bAlt : 1;                                                  // 0x0020(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bCmd : 1;                                                  // 0x0020(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_HYKY[0x7];                                     // 0x0021(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DI3R[0x7];                                     // 0x0021(0x0007) MISSED OFFSET (PADDING)
 
 };
 

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.0.1
+﻿// Name: SoT, Version: 2.1.1
 
 #include "../SDK.h"
 
@@ -17,23 +17,6 @@ namespace CG
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
-
-// Function ShortRangeMarkerFramework.ShortRangeMarker.Multicast_OnCleanUp
-// (Net, NetReliable, Native, Event, NetMulticast, Protected)
-void AShortRangeMarker::Multicast_OnCleanUp()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ShortRangeMarkerFramework.ShortRangeMarker.Multicast_OnCleanUp");
-
-	AShortRangeMarker_Multicast_OnCleanUp_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
 
 // Function ShortRangeMarkerFramework.ShortRangeMarkerBlueprintFunctionLibrary.RegisterActorsWithShortRangeMarker
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
@@ -57,6 +40,23 @@ void UShortRangeMarkerBlueprintFunctionLibrary::STATIC_RegisterActorsWithShortRa
 
 	if (InActors != nullptr)
 		*InActors = params.InActors;
+
+}
+
+
+// Function ShortRangeMarkerFramework.ShortRangeMarker.Multicast_OnCleanUp
+// (Net, NetReliable, Native, Event, NetMulticast, Protected)
+void AShortRangeMarker::Multicast_OnCleanUp()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShortRangeMarkerFramework.ShortRangeMarker.Multicast_OnCleanUp");
+
+	AShortRangeMarker_Multicast_OnCleanUp_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
 
 }
 

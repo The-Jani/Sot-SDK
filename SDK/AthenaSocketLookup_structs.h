@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -19,14 +19,6 @@ namespace CG
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct AthenaSocketLookup.SocketLookupCache
-// 0x0050
-struct FSocketLookupCache
-{
-	unsigned char                                      UnknownData_F3ZL[0x50];                                    // 0x0000(0x0050) MISSED OFFSET (PADDING)
-
-};
-
 // ScriptStruct AthenaSocketLookup.SocketPathNode
 // 0x0008
 struct FSocketPathNode
@@ -40,7 +32,7 @@ struct FSocketPathNode
 struct FSocketPath
 {
 	TArray<struct FSocketPathNode>                     Nodes;                                                     // 0x0000(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData_0NI8[0x8];                                     // 0x0010(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AFVT[0x8];                                     // 0x0010(0x0008) MISSED OFFSET (PADDING)
 
 };
 
@@ -50,6 +42,14 @@ struct FSocketId
 {
 	struct FSocketPath                                 path;                                                      // 0x0000(0x0018) (Edit, BlueprintVisible)
 	struct FName                                       Name;                                                      // 0x0018(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaSocketLookup.SocketLookupCache
+// 0x0050
+struct FSocketLookupCache
+{
+	unsigned char                                      UnknownData_6VRB[0x50];                                    // 0x0000(0x0050) MISSED OFFSET (PADDING)
 
 };
 

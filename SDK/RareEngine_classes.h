@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -24,7 +24,7 @@ namespace CG
 class URareGameEngine : public UGameEngine
 {
 public:
-	unsigned char                                      UnknownData_GGEX[0x58];                                    // 0x0AA8(0x0058) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_U66U[0x58];                                    // 0x0AA8(0x0058) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -60,7 +60,7 @@ public:
 class UAudioHardwareDeviceService : public UObject
 {
 public:
-	unsigned char                                      UnknownData_SWEV[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_87M3[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -114,7 +114,7 @@ public:
 };
 
 // Class RareEngine.RareHUD
-// 0x0000 (FullSize[0x0520] - InheritedSize[0x0520])
+// 0x0000 (FullSize[0x0528] - InheritedSize[0x0528])
 class ARareHUD : public AHUD
 {
 public:
@@ -135,9 +135,9 @@ public:
 class UStallDetector : public UObject
 {
 public:
-	unsigned char                                      UnknownData_VH68[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZSC5[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScriptMulticastDelegate                    Callback;                                                  // 0x0030(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_PCFO[0x10];                                    // 0x0040(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_EST8[0x10];                                    // 0x0040(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

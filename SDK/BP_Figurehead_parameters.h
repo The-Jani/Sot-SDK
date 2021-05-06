@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 #include "../SDK.h"
 
@@ -20,27 +20,15 @@ namespace CG
 // Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_Figurehead.BP_Figurehead_C.GetMeshComponent
+struct ABP_Figurehead_C_GetMeshComponent_Params
+{
+	class UStaticMeshComponent*                        ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+
 // Function BP_Figurehead.BP_Figurehead_C.UserConstructionScript
 struct ABP_Figurehead_C_UserConstructionScript_Params
 {
-};
-
-// Function BP_Figurehead.BP_Figurehead_C.OnPartMeshLoaded
-struct ABP_Figurehead_C_OnPartMeshLoaded_Params
-{
-	class UStaticMesh*                                 Mesh;                                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-
-// Function BP_Figurehead.BP_Figurehead_C.OnPartDescLoaded
-struct ABP_Figurehead_C_OnPartDescLoaded_Params
-{
-	class UGenericPartDescAsset*                       Desc;                                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-
-// Function BP_Figurehead.BP_Figurehead_C.ExecuteUbergraph_BP_Figurehead
-struct ABP_Figurehead_C_ExecuteUbergraph_BP_Figurehead_Params
-{
-	int                                                EntryPoint;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 
 }

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -18,42 +18,6 @@ namespace CG
 //---------------------------------------------------------------------------
 // Classes
 //---------------------------------------------------------------------------
-
-// Class MerchantContracts.PlayerMerchantContractsInterface
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UPlayerMerchantContractsInterface : public UInterface
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MerchantContracts.PlayerMerchantContractsInterface");
-		return ptr;
-	}
-
-
-
-};
-
-// Class MerchantContracts.PlayerMerchantContractsComponent
-// 0x0018 (FullSize[0x00E0] - InheritedSize[0x00C8])
-class UPlayerMerchantContractsComponent : public UActorComponent
-{
-public:
-	unsigned char                                      UnknownData_9SP3[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<struct FPlayerMerchantContract>             Contracts;                                                 // 0x00D0(0x0010) (Net, ZeroConstructor)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MerchantContracts.PlayerMerchantContractsComponent");
-		return ptr;
-	}
-
-
-
-};
 
 // Class MerchantContracts.MerchantContractsBlueprintLibrary
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -95,14 +59,50 @@ public:
 class UMerchantContractsService : public UObject
 {
 public:
-	unsigned char                                      UnknownData_C4HG[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9IK3[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FMerchantContract>                   Contracts;                                                 // 0x0030(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_N2MC[0x18];                                    // 0x0040(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_7FWV[0x18];                                    // 0x0040(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class MerchantContracts.MerchantContractsService");
+		return ptr;
+	}
+
+
+
+};
+
+// Class MerchantContracts.PlayerMerchantContractsInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UPlayerMerchantContractsInterface : public UInterface
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MerchantContracts.PlayerMerchantContractsInterface");
+		return ptr;
+	}
+
+
+
+};
+
+// Class MerchantContracts.PlayerMerchantContractsComponent
+// 0x0018 (FullSize[0x00E0] - InheritedSize[0x00C8])
+class UPlayerMerchantContractsComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData_UX3H[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<struct FPlayerMerchantContract>             Contracts;                                                 // 0x00D0(0x0010) (Net, ZeroConstructor)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MerchantContracts.PlayerMerchantContractsComponent");
 		return ptr;
 	}
 

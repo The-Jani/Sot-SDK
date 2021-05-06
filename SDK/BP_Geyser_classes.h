@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Geyser.BP_Geyser_C
-// 0x0000 (FullSize[0x0490] - InheritedSize[0x0490])
+// 0x0000 (FullSize[0x0498] - InheritedSize[0x0498])
 class ABP_Geyser_C : public AGeyser
 {
 public:

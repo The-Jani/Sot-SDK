@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -18,6 +18,57 @@ namespace CG
 //---------------------------------------------------------------------------
 // Classes
 //---------------------------------------------------------------------------
+
+// Class Siren.SirenTeleportAIAbilityType
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class USirenTeleportAIAbilityType : public UAthenaAIAbilityType
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Siren.SirenTeleportAIAbilityType");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Siren.DistantIdleAIAbility
+// 0x0000 (FullSize[0x0078] - InheritedSize[0x0078])
+class UDistantIdleAIAbility : public UAthenaAIAbility
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Siren.DistantIdleAIAbility");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Siren.DistantIdleAIAbilityParams
+// 0x0000 (FullSize[0x00C8] - InheritedSize[0x00C8])
+class UDistantIdleAIAbilityParams : public UAthenaAIAbilityParams
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Siren.DistantIdleAIAbilityParams");
+		return ptr;
+	}
+
+
+
+};
 
 // Class Siren.DistantIdleAIAbilityType
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -87,16 +138,16 @@ public:
 
 };
 
-// Class Siren.SirenSapphireHealStatus
-// 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
-class USirenSapphireHealStatus : public UStatusBase
+// Class Siren.SirenCalmHealStrategyId
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class USirenCalmHealStrategyId : public UAIStrategyId
 {
 public:
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Siren.SirenSapphireHealStatus");
+		static auto ptr = UObject::FindClass("Class Siren.SirenCalmHealStrategyId");
 		return ptr;
 	}
 
@@ -104,16 +155,17 @@ public:
 
 };
 
-// Class Siren.SirenScratchRespiteStrategyId
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class USirenScratchRespiteStrategyId : public UAIStrategyId
+// Class Siren.SirenController
+// 0x0008 (FullSize[0x0A38] - InheritedSize[0x0A30])
+class ASirenController : public AAthenaSwimmingAIController
 {
 public:
+	unsigned char                                      UnknownData_24IC[0x8];                                     // 0x0A30(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Siren.SirenScratchRespiteStrategyId");
+		static auto ptr = UObject::FindClass("Class Siren.SirenController");
 		return ptr;
 	}
 
@@ -206,40 +258,6 @@ public:
 
 };
 
-// Class Siren.SirenTeleportAIAbilityParams
-// 0x0000 (FullSize[0x00F0] - InheritedSize[0x00F0])
-class USirenTeleportAIAbilityParams : public UTeleportAIAbilityParams
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Siren.SirenTeleportAIAbilityParams");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Siren.SirenCalmHealStrategyId
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class USirenCalmHealStrategyId : public UAIStrategyId
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Siren.SirenCalmHealStrategyId");
-		return ptr;
-	}
-
-
-
-};
-
 // Class Siren.SirenEmeraldHealStatus
 // 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
 class USirenEmeraldHealStatus : public UStatusBase
@@ -258,16 +276,18 @@ public:
 };
 
 // Class Siren.SirenPartsDesc
-// 0x0030 (FullSize[0x0060] - InheritedSize[0x0030])
+// 0x0058 (FullSize[0x0088] - InheritedSize[0x0030])
 class USirenPartsDesc : public UAIPartsDesc
 {
 public:
-	struct FStringAssetReference                       Mesh;                                                      // 0x0030(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	class UClass*                                      AnimationID;                                               // 0x0040(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	int64_t                                            CachedMeshResourceSize;                                    // 0x0048(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                      MeshFallbackCategory;                                      // 0x0050(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	bool                                               DoNotUseMeshMemoryConstraintFallbacks;                     // 0x0058(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_61VW[0x7];                                     // 0x0059(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_T2W8[0x8];                                     // 0x0030(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FStringAssetReference                       Mesh;                                                      // 0x0038(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	class UClass*                                      AnimationID;                                               // 0x0048(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	int64_t                                            CachedMeshResourceSize;                                    // 0x0050(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                      MeshFallbackCategory;                                      // 0x0058(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	class UClass*                                      BudgetToCountMemoryAgainstIfNoFallback;                    // 0x0060(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	TArray<class UMaterialInterface*>                  OverrideMaterials;                                         // 0x0068(0x0010) (ZeroConstructor)
+	TArray<struct FStringAssetReference>               FallbackOverrideMaterials;                                 // 0x0078(0x0010) (ZeroConstructor)
 
 
 	static UClass* StaticClass()
@@ -297,16 +317,33 @@ public:
 
 };
 
-// Class Siren.SirenTeleportAIAbilityType
+// Class Siren.SirenSapphireHealStatus
+// 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
+class USirenSapphireHealStatus : public UStatusBase
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Siren.SirenSapphireHealStatus");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Siren.SirenScratchRespiteStrategyId
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class USirenTeleportAIAbilityType : public UAthenaAIAbilityType
+class USirenScratchRespiteStrategyId : public UAIStrategyId
 {
 public:
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Siren.SirenTeleportAIAbilityType");
+		static auto ptr = UObject::FindClass("Class Siren.SirenScratchRespiteStrategyId");
 		return ptr;
 	}
 
@@ -314,33 +351,16 @@ public:
 
 };
 
-// Class Siren.DistantIdleAIAbility
-// 0x0000 (FullSize[0x0078] - InheritedSize[0x0078])
-class UDistantIdleAIAbility : public UAthenaAIAbility
+// Class Siren.SirenTeleportAIAbilityParams
+// 0x0000 (FullSize[0x00F0] - InheritedSize[0x00F0])
+class USirenTeleportAIAbilityParams : public UTeleportAIAbilityParams
 {
 public:
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Siren.DistantIdleAIAbility");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Siren.DistantIdleAIAbilityParams
-// 0x0000 (FullSize[0x00C8] - InheritedSize[0x00C8])
-class UDistantIdleAIAbilityParams : public UAthenaAIAbilityParams
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Siren.DistantIdleAIAbilityParams");
+		static auto ptr = UObject::FindClass("Class Siren.SirenTeleportAIAbilityParams");
 		return ptr;
 	}
 

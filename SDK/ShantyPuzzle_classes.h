@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -41,16 +41,16 @@ public:
 class UShantyPuzzleComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData_BRK7[0x8];                                     // 0x02B0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SNC2[0x8];                                     // 0x02B0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UClass*                                      RequiredShantyItemDesc;                                    // 0x02B8(0x0008) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash)
 	TArray<struct FShantyPuzzleInteractionZoneDefinition> ShantyPuzzleInteractionZoneDefinitions;                    // 0x02C0(0x0010) (Edit, ZeroConstructor, DisableEditOnTemplate, Protected)
 	bool                                               TimeLimited;                                               // 0x02D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	bool                                               ShouldMoveEnsembleToActorPosition;                         // 0x02D1(0x0001) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_QW6J[0x6];                                     // 0x02D2(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_B8CI[0x6];                                     // 0x02D2(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FGameTimeRange                              ActiveTimeRange;                                           // 0x02D8(0x0010) (Edit, Protected)
 	TArray<class UShantyPuzzleInteractionZoneComponent*> ShantyPuzzleInteractionZones;                              // 0x02E8(0x0010) (ExportObject, ZeroConstructor, ContainsInstancedReference, Protected)
 	class AEnsemble*                                   CurrentlyPlayingShantyPuzzleEnsemble;                      // 0x02F8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_4O8D[0xC0];                                    // 0x0300(0x00C0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DT7M[0xC0];                                    // 0x0300(0x00C0) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -70,7 +70,7 @@ public:
 class UShantyPuzzleInteractionZoneComponent : public USphereComponent
 {
 public:
-	unsigned char                                      UnknownData_8IWW[0x20];                                    // 0x0580(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_A8O3[0x20];                                    // 0x0580(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

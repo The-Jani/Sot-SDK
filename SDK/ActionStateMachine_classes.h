@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -37,7 +37,7 @@ public:
 };
 
 // Class ActionStateMachine.ActionStateCreatorDefinition
-// 0x0000 (FullSize[0x0428] - InheritedSize[0x0428])
+// 0x0000 (FullSize[0x0430] - InheritedSize[0x0430])
 class AActionStateCreatorDefinition : public AActor
 {
 public:
@@ -54,11 +54,11 @@ public:
 };
 
 // Class ActionStateMachine.TestActionStateCreatorDefinition
-// 0x0018 (FullSize[0x0440] - InheritedSize[0x0428])
+// 0x0018 (FullSize[0x0448] - InheritedSize[0x0430])
 class ATestActionStateCreatorDefinition : public AActionStateCreatorDefinition
 {
 public:
-	unsigned char                                      UnknownData_RG33[0x18];                                    // 0x0428(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_YI7E[0x18];                                    // 0x0430(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -161,9 +161,9 @@ public:
 class UActionStateMachineComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_ZEWD[0x48];                                    // 0x00C8(0x0048) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QUFM[0x48];                                    // 0x00C8(0x0048) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScriptMulticastDelegate                    OnActionChangedOnTrack;                                    // 0x0110(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_F5UL[0x768];                                   // 0x0120(0x0768) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_GGBL[0x768];                                   // 0x0120(0x0768) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -191,7 +191,7 @@ public:
 class UTestActionStateMachineComponent : public UActionStateMachineComponent
 {
 public:
-	unsigned char                                      UnknownData_C341[0x18];                                    // 0x0888(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_FQSQ[0x18];                                    // 0x0888(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -210,7 +210,7 @@ class UCustomClientValidityCheckCallback : public UObject
 {
 public:
 	bool                                               ShouldPassClientValidation;                                // 0x0028(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_GHYD[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_B80F[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -310,11 +310,11 @@ public:
 };
 
 // Class ActionStateMachine.RemoteValidationFailActionStateActor
-// 0x0008 (FullSize[0x0430] - InheritedSize[0x0428])
+// 0x0008 (FullSize[0x0438] - InheritedSize[0x0430])
 class ARemoteValidationFailActionStateActor : public AActor
 {
 public:
-	class UActionStateMachineComponent*                ActionStateMachineComponent;                               // 0x0428(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UActionStateMachineComponent*                ActionStateMachineComponent;                               // 0x0430(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
@@ -353,12 +353,12 @@ public:
 };
 
 // Class ActionStateMachine.TestObjectWithActionStateMachine
-// 0x0018 (FullSize[0x0440] - InheritedSize[0x0428])
+// 0x0018 (FullSize[0x0448] - InheritedSize[0x0430])
 class ATestObjectWithActionStateMachine : public AActor
 {
 public:
-	class UTestActionStateMachineComponent*            ActionStateMachineComponent;                               // 0x0428(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_91IT[0x10];                                    // 0x0430(0x0010) MISSED OFFSET (PADDING)
+	class UTestActionStateMachineComponent*            ActionStateMachineComponent;                               // 0x0430(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_FPHA[0x10];                                    // 0x0438(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

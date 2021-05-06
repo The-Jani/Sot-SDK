@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -38,13 +38,13 @@ public:
 };
 
 // Class BarrelsOfPlenty.BarrelsOfPlentySpawnProxy
-// 0x0028 (FullSize[0x0450] - InheritedSize[0x0428])
+// 0x0028 (FullSize[0x0458] - InheritedSize[0x0430])
 class ABarrelsOfPlentySpawnProxy : public AActor
 {
 public:
-	class AShip*                                       Ship;                                                      // 0x0428(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_IOLC[0x18];                                    // 0x0430(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class USceneComponent*                             SceneComponent;                                            // 0x0448(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AShip*                                       Ship;                                                      // 0x0430(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_ECXH[0x18];                                    // 0x0438(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class USceneComponent*                             SceneComponent;                                            // 0x0450(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
@@ -76,13 +76,13 @@ public:
 };
 
 // Class BarrelsOfPlenty.BarrelsOfPlentyDebugSpawnLocation
-// 0x0020 (FullSize[0x0448] - InheritedSize[0x0428])
+// 0x0020 (FullSize[0x0450] - InheritedSize[0x0430])
 class ABarrelsOfPlentyDebugSpawnLocation : public AActor
 {
 public:
-	TArray<struct FBarrelsOfPlentyDebugLocationEntry>  Objects;                                                   // 0x0428(0x0010) (Net, ZeroConstructor)
-	struct FVector                                     SpawnCentre;                                               // 0x0438(0x000C) (Net, ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                              Radius;                                                    // 0x0444(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBarrelsOfPlentyDebugLocationEntry>  Objects;                                                   // 0x0430(0x0010) (Net, ZeroConstructor)
+	struct FVector                                     SpawnCentre;                                               // 0x0440(0x000C) (Net, ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              Radius;                                                    // 0x044C(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()

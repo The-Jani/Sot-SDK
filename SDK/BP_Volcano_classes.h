@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Volcano.BP_Volcano_C
-// 0x0000 (FullSize[0x05F0] - InheritedSize[0x05F0])
+// 0x0000 (FullSize[0x05F8] - InheritedSize[0x05F8])
 class ABP_Volcano_C : public AVolcano
 {
 public:

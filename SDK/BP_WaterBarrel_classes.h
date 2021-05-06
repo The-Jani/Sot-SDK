@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WaterBarrel.BP_WaterBarrel_C
-// 0x0000 (FullSize[0x06D8] - InheritedSize[0x06D8])
+// 0x0000 (FullSize[0x06E0] - InheritedSize[0x06E0])
 class ABP_WaterBarrel_C : public AWaterBarrel
 {
 public:

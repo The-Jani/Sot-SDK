@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -58,7 +58,7 @@ public:
 class UBoxedRpcDispatcherComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_MIZ3[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_W30P[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -81,7 +81,7 @@ class UDynamicColourPointLightComponent : public UPointLightComponent
 public:
 	struct FRuntimeFloatCurve                          ActivationCurve;                                           // 0x0478(0x0080) (Edit)
 	struct FRuntimeFloatCurve                          DeactivationCurve;                                         // 0x04F8(0x0080) (Edit)
-	unsigned char                                      UnknownData_9FLD[0x38];                                    // 0x0578(0x0038) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_B836[0x38];                                    // 0x0578(0x0038) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -153,7 +153,7 @@ public:
 class UNestedWorldRootDataAsset : public UDataAsset
 {
 public:
-	unsigned char                                      UnknownData_VG18[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3QJE[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -229,9 +229,9 @@ class UPrimitiveCollisionExtentAdjustOverTimeComponent : public UActorComponent
 {
 public:
 	float                                              DelayBeforeExtentAdjustment;                               // 0x00C8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_OT1G[0x2C];                                    // 0x00CC(0x002C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TKB3[0x2C];                                    // 0x00CC(0x002C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UWorld*                                      CachedWorld;                                               // 0x00F8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_GK25[0x8];                                     // 0x0100(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_QPPV[0x8];                                     // 0x0100(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -250,16 +250,16 @@ class UBoxCollisionExtentAdjustOverTimeComponent : public UPrimitiveCollisionExt
 {
 public:
 	bool                                               ShouldAdjustBoxExtentX;                                    // 0x0108(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_VLIU[0x3];                                     // 0x0109(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WNV0[0x3];                                     // 0x0109(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              PostAdjustmentBoxExtentX;                                  // 0x010C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               ShouldAdjustBoxExtentY;                                    // 0x0110(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_639O[0x3];                                     // 0x0111(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_76CH[0x3];                                     // 0x0111(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              PostAdjustmentBoxExtentY;                                  // 0x0114(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               ShouldAdjustBoxExtentZ;                                    // 0x0118(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_A5ME[0x3];                                     // 0x0119(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_N23A[0x3];                                     // 0x0119(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              PostAdjustmentBoxExtentZ;                                  // 0x011C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     ServerSizeScale;                                           // 0x0120(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_KR1O[0x4];                                     // 0x012C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ARRU[0x4];                                     // 0x012C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UBoxComponent*                               BoxCollisionToAdjust;                                      // 0x0130(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -279,10 +279,10 @@ class USphereCollisionExtentAdjustOverTimeComponent : public UPrimitiveCollision
 {
 public:
 	bool                                               ShouldAdjustSphereRadius;                                  // 0x0108(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_4KH8[0x3];                                     // 0x0109(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MF3V[0x3];                                     // 0x0109(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              PostAdjustmentSphereRadius;                                // 0x010C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ServerSizeScale;                                           // 0x0110(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_E3U5[0x4];                                     // 0x0114(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_4GKE[0x4];                                     // 0x0114(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class USphereComponent*                            SphereCollisionToAdjust;                                   // 0x0118(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -378,7 +378,7 @@ class USkeletalMeshAggregateTickComponent : public UActorComponent
 {
 public:
 	class USkeletalMeshComponent*                      Mesh;                                                      // 0x00C8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_L9R1[0x28];                                    // 0x00D0(0x0028) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TY4E[0x28];                                    // 0x00D0(0x0028) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -397,7 +397,7 @@ class UStringToAssetClassMap : public UDataAsset
 {
 public:
 	TArray<struct FStringAssetClassPair>               StringAssetClassPairs;                                     // 0x0028(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData_8XE8[0x18];                                    // 0x0038(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_06WC[0x18];                                    // 0x0038(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

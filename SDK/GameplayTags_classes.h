@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -24,9 +24,9 @@ namespace CG
 class UGameplayTagsManager : public UObject
 {
 public:
-	unsigned char                                      UnknownData_8DB7[0x118];                                   // 0x0028(0x0118) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_JMUI[0x118];                                   // 0x0028(0x0118) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UDataTable*>                          GameplayTagTables;                                         // 0x0140(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_9RON[0x50];                                    // 0x0150(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8UKX[0x50];                                    // 0x0150(0x0050) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -64,7 +64,7 @@ class UEditableGameplayTagQuery : public UObject
 {
 public:
 	struct FString                                     UserDescription;                                           // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_4186[0x10];                                    // 0x0038(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_391Q[0x10];                                    // 0x0038(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UEditableGameplayTagQueryExpression*         RootExpression;                                            // 0x0048(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	struct FGameplayTagQuery                           TagQueryExportText_Helper;                                 // 0x0050(0x0048)
 

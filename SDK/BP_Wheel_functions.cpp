@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.0.1
+﻿// Name: SoT, Version: 2.1.1
 
 #include "../SDK.h"
 
@@ -351,25 +351,6 @@ void ABP_Wheel_C::RequestStateChange(class AActor* Controller)
 
 	ABP_Wheel_C_RequestStateChange_Params params;
 	params.Controller = Controller;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function BP_Wheel.BP_Wheel_C.OnWheelDescLoaded
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UWheelDescAsset*         WheelDesc                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-void ABP_Wheel_C::OnWheelDescLoaded(class UWheelDescAsset* WheelDesc)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.OnWheelDescLoaded");
-
-	ABP_Wheel_C_OnWheelDescLoaded_Params params;
-	params.WheelDesc = WheelDesc;
 
 	auto flags = fn->FunctionFlags;
 

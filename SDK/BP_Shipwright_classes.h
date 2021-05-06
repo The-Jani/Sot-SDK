@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,18 +20,18 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Shipwright.BP_Shipwright_C
-// 0x0058 (FullSize[0x0660] - InheritedSize[0x0608])
+// 0x0058 (FullSize[0x0668] - InheritedSize[0x0610])
 class ABP_Shipwright_C : public ANPC
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0608(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UCargoRunParticipantComponent*               CargoRunParticipant;                                       // 0x0610(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UNPCDialogComponent*                         NPCDialogComponent;                                        // 0x0618(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                    // 0x0620(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UCapsuleComponent*                           SolidHits;                                                 // 0x0628(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	struct FWwiseEmitter                               WwiseEmitter;                                              // 0x0630(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
-	class UWwiseEvent*                                 WwiseShipwrightHummingPlay;                                // 0x0650(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	class UWwiseEvent*                                 WwiseShipwrightHummingStop;                                // 0x0658(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0610(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UCargoRunParticipantComponent*               CargoRunParticipant;                                       // 0x0618(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UNPCDialogComponent*                         NPCDialogComponent;                                        // 0x0620(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                    // 0x0628(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UCapsuleComponent*                           SolidHits;                                                 // 0x0630(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	struct FWwiseEmitter                               WwiseEmitter;                                              // 0x0638(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	class UWwiseEvent*                                 WwiseShipwrightHummingPlay;                                // 0x0658(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UWwiseEvent*                                 WwiseShipwrightHummingStop;                                // 0x0660(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 
 	static UClass* StaticClass()

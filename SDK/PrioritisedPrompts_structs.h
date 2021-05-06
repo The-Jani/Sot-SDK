@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -73,11 +73,11 @@ struct FPrioritisedPromptHandle
 struct FPrioritisedPrompt
 {
 	struct FText                                       Message;                                                   // 0x0000(0x0018) ELEMENT_SIZE_MISMATCH (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData_9Y29[0x20];                                    // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_K9QE[0x20];                                    // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	struct FString                                     Key;                                                       // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class UPopUpMessageDesc*                           PopUpMessageDesc;                                          // 0x0048(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<PrioritisedPrompts_EPromptPriority>    BasePriority;                                              // 0x0050(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_1V3Q[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_IAUX[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (PADDING)
 
 };
 
@@ -95,7 +95,7 @@ struct FPrioritisedPromptWithHandle
 struct FPromptEvaluation
 {
 	TEnumAsByte<PrioritisedPrompts_EPromptEvaluatedType> PromptType;                                                // 0x0000(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_Z58W[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7KJ6[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FPrioritisedPromptWithHandle                Prompt;                                                    // 0x0008(0x0068) (BlueprintVisible)
 
 };
@@ -106,7 +106,7 @@ struct FPermanentPromptNetworkEvent : public FNetworkEventStruct
 {
 	struct FPrioritisedPromptWithHandle                Prompt;                                                    // 0x0010(0x0068)
 	TEnumAsByte<PrioritisedPrompts_EPromptStartStop>   StartOrStop;                                               // 0x0078(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_APQ2[0x7];                                     // 0x0079(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_9RIA[0x7];                                     // 0x0079(0x0007) MISSED OFFSET (PADDING)
 
 };
 

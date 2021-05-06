@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -18,6 +18,23 @@ namespace CG
 //---------------------------------------------------------------------------
 // Classes
 //---------------------------------------------------------------------------
+
+// Class ExplosionFramework.ExplosionInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UExplosionInterface : public UInterface
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ExplosionFramework.ExplosionInterface");
+		return ptr;
+	}
+
+
+
+};
 
 // Class ExplosionFramework.ExplosionReceiverInterface
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -53,25 +70,6 @@ public:
 
 };
 
-// Class ExplosionFramework.CreateActorInstanceOnExplodeComponent
-// 0x0060 (FullSize[0x0128] - InheritedSize[0x00C8])
-class UCreateActorInstanceOnExplodeComponent : public UActorComponent
-{
-public:
-	class UClass*                                      ActorToInstance;                                           // 0x00C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_N47W[0x58];                                    // 0x00D0(0x0058) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ExplosionFramework.CreateActorInstanceOnExplodeComponent");
-		return ptr;
-	}
-
-
-
-};
-
 // Class ExplosionFramework.StatusResponseExplodeAfterTime
 // 0x0018 (FullSize[0x0048] - InheritedSize[0x0030])
 class UStatusResponseExplodeAfterTime : public UStatusResponse
@@ -79,13 +77,32 @@ class UStatusResponseExplodeAfterTime : public UStatusResponse
 public:
 	float                                              MinTimeUntilExplosion;                                     // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxTimeUntilExplosion;                                     // 0x0034(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_GIWQ[0x8];                                     // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5F2N[0x8];                                     // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UWorld*                                      CachedWorld;                                               // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class ExplosionFramework.StatusResponseExplodeAfterTime");
+		return ptr;
+	}
+
+
+
+};
+
+// Class ExplosionFramework.CreateActorInstanceOnExplodeComponent
+// 0x0060 (FullSize[0x0128] - InheritedSize[0x00C8])
+class UCreateActorInstanceOnExplodeComponent : public UActorComponent
+{
+public:
+	class UClass*                                      ActorToInstance;                                           // 0x00C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_UK9Z[0x58];                                    // 0x00D0(0x0058) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ExplosionFramework.CreateActorInstanceOnExplodeComponent");
 		return ptr;
 	}
 

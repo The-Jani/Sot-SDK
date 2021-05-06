@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SmallShip_Sail.BP_SmallShip_Sail_C
-// 0x0000 (FullSize[0x05D8] - InheritedSize[0x05D8])
+// 0x0000 (FullSize[0x05E0] - InheritedSize[0x05E0])
 class ABP_SmallShip_Sail_C : public ABP_Sail_C
 {
 public:

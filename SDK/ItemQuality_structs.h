@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -18,16 +18,6 @@ namespace CG
 //---------------------------------------------------------------------------
 // Enums
 //---------------------------------------------------------------------------
-
-// Enum ItemQuality.EStatusType
-enum class ItemQuality_EStatusType : uint8_t
-{
-	EStatusType__DontCare          = 0,
-	EStatusType__Yes               = 1,
-	EStatusType__No                = 2,
-	EStatusType__EStatusType_MAX   = 3,
-
-};
 
 // Enum ItemQuality.EItemQualityQueryReason
 enum class ItemQuality_EItemQualityQueryReason : uint8_t
@@ -73,6 +63,16 @@ enum class ItemQuality_EHealthIndex : uint8_t
 
 };
 
+// Enum ItemQuality.EStatusType
+enum class ItemQuality_EStatusType : uint8_t
+{
+	EStatusType__DontCare          = 0,
+	EStatusType__Yes               = 1,
+	EStatusType__No                = 2,
+	EStatusType__EStatusType_MAX   = 3,
+
+};
+
 //---------------------------------------------------------------------------
 // Script Structs
 //---------------------------------------------------------------------------
@@ -83,7 +83,7 @@ struct FPerComanyItemQualityEntry
 {
 	class UClass*                                      Company;                                                   // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	TEnumAsByte<ItemQuality_EEmissaryQualityLevel>     Quality;                                                   // 0x0008(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TLCO[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_FTCD[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (PADDING)
 
 };
 
@@ -97,7 +97,7 @@ struct FComplexItemQualityEntry
 	TEnumAsByte<ItemQuality_EStatusType>               IsStolen;                                                  // 0x0003(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<ItemQuality_EItemQualityQueryReason>   QueryReason;                                               // 0x0004(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<ItemQuality_EEmissaryQualityLevel>     QualityLevel;                                              // 0x0005(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_56WY[0x2];                                     // 0x0006(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QGT7[0x2];                                     // 0x0006(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       Rarity;                                                    // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };

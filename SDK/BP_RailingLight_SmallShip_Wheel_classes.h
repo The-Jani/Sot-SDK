@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RailingLight_SmallShip_Wheel.BP_RailingLight_SmallShip_Wheel_C
-// 0x0000 (FullSize[0x07A1] - InheritedSize[0x07A1])
+// 0x0000 (FullSize[0x07A9] - InheritedSize[0x07A9])
 class ABP_RailingLight_SmallShip_Wheel_C : public ABP_InteractableShipRailingLight_C
 {
 public:

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.0.1
+﻿// Name: SoT, Version: 2.1.1
 
 #include "../SDK.h"
 
@@ -240,25 +240,6 @@ void ABP_Base_Capstan_C::IK_Limb_Stretch(float ArmStretch, float SpineStretch, f
 	params.ArmStretch = ArmStretch;
 	params.SpineStretch = SpineStretch;
 	params.LegStretch = LegStretch;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function BP_Base_Capstan.BP_Base_Capstan_C.OnCapstanDescLoaded
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UCapstanDescAsset*       CapstanDesc                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-void ABP_Base_Capstan_C::OnCapstanDescLoaded(class UCapstanDescAsset* CapstanDesc)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.OnCapstanDescLoaded");
-
-	ABP_Base_Capstan_C_OnCapstanDescLoaded_Params params;
-	params.CapstanDesc = CapstanDesc;
 
 	auto flags = fn->FunctionFlags;
 

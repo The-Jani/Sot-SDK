@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -24,10 +24,10 @@ namespace CG
 class ULightPropagationVolumeBlendable : public UObject
 {
 public:
-	unsigned char                                      UnknownData_4D5P[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_PJMA[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FLightPropagationVolumeSettings             Settings;                                                  // 0x0030(0x0070) (Edit, BlueprintVisible, Interp)
 	float                                              BlendWeight;                                               // 0x00A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZLGL[0xC];                                     // 0x00A4(0x000C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_C4JG[0xC];                                     // 0x00A4(0x000C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

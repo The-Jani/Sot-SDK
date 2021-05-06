@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Bell.BP_Bell_C
-// 0x0000 (FullSize[0x05C0] - InheritedSize[0x05C0])
+// 0x0000 (FullSize[0x05C8] - InheritedSize[0x05C8])
 class ABP_Bell_C : public ABell
 {
 public:

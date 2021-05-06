@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShipAIController.BP_ShipAIController_C
-// 0x0000 (FullSize[0x0750] - InheritedSize[0x0750])
+// 0x0000 (FullSize[0x0758] - InheritedSize[0x0758])
 class ABP_ShipAIController_C : public AAthenaAIShipController
 {
 public:

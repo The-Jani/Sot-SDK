@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.0.1
+﻿// Name: SoT, Version: 2.1.1
 
 #include "../SDK.h"
 
@@ -17,6 +17,28 @@ namespace CG
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function ServiceMessaging.ServiceMessagingListenerTestObject.TestFunctionWithMessage
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// struct FServiceMessagingTestMessage InMessage                      (Parm, OutParm)
+void UServiceMessagingListenerTestObject::TestFunctionWithMessage(struct FServiceMessagingTestMessage* InMessage)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ServiceMessaging.ServiceMessagingListenerTestObject.TestFunctionWithMessage");
+
+	UServiceMessagingListenerTestObject_TestFunctionWithMessage_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+	if (InMessage != nullptr)
+		*InMessage = params.InMessage;
+
+}
+
 
 // Function ServiceMessaging.ServiceMessagingFunctions.GetServiceMessagingDispatcherFromActor
 // (Final, Native, Static, Public, BlueprintCallable)
@@ -61,28 +83,6 @@ struct FObjectMessagingDispatcherHandle UServiceMessagingFunctions::STATIC_GetSe
 
 
 	return params.ReturnValue;
-}
-
-
-// Function ServiceMessaging.ServiceMessagingListenerTestObject.TestFunctionWithMessage
-// (Final, Native, Public, HasOutParms)
-// Parameters:
-// struct FServiceMessagingTestMessage InMessage                      (Parm, OutParm)
-void UServiceMessagingListenerTestObject::TestFunctionWithMessage(struct FServiceMessagingTestMessage* InMessage)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ServiceMessaging.ServiceMessagingListenerTestObject.TestFunctionWithMessage");
-
-	UServiceMessagingListenerTestObject_TestFunctionWithMessage_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-	if (InMessage != nullptr)
-		*InMessage = params.InMessage;
-
 }
 
 

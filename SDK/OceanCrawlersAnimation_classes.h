@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,11 +20,11 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // Class OceanCrawlersAnimation.OceanCrawlerAnimationData
-// 0x0050 (FullSize[0x0078] - InheritedSize[0x0028])
+// 0x0058 (FullSize[0x0080] - InheritedSize[0x0028])
 class UOceanCrawlerAnimationData : public UAnimationData
 {
 public:
-	struct FOceanCrawlerAnimationDataStructure         OceanCrawlerAnimationDataStructure;                        // 0x0028(0x0050) (Edit, DisableEditOnInstance)
+	struct FOceanCrawlerAnimationDataStructure         OceanCrawlerAnimationDataStructure;                        // 0x0028(0x0058) (Edit, DisableEditOnInstance)
 
 
 	static UClass* StaticClass()
@@ -38,23 +38,23 @@ public:
 };
 
 // Class OceanCrawlersAnimation.OceanCrawlerAnimationInstance
-// 0x0280 (FullSize[0x06C0] - InheritedSize[0x0440])
+// 0x0290 (FullSize[0x06D0] - InheritedSize[0x0440])
 class UOceanCrawlerAnimationInstance : public UAnimInstance
 {
 public:
-	unsigned char                                      UnknownData_R6H9[0x8];                                     // 0x0440(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FOceanCrawlerAnimationDataStructure         LoadedAnimations;                                          // 0x0448(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	struct FActorVelocityData                          MovementData;                                              // 0x0498(0x0018) (BlueprintVisible, BlueprintReadOnly)
-	float                                              CurrentDirection;                                          // 0x04B0(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_AS0G[0x4];                                     // 0x04B4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FAthenaAnimationWeapon                      AttackAnims;                                               // 0x04B8(0x00B8) (BlueprintVisible, BlueprintReadOnly)
-	bool                                               UseDefaultAnimations;                                      // 0x0570(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                               AnimationsLoaded;                                          // 0x0571(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                               SporeBreathActive;                                         // 0x0572(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_AM6I[0x5];                                     // 0x0573(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FCustomAnimationMontageStateMachine         MontagePlayer;                                             // 0x0578(0x00D8)
-	struct FHitReactionAnimationState                  HitReacts;                                                 // 0x0650(0x0028) (BlueprintVisible)
-	unsigned char                                      UnknownData_VTGH[0x48];                                    // 0x0678(0x0048) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3B6T[0x8];                                     // 0x0440(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FOceanCrawlerAnimationDataStructure         LoadedAnimations;                                          // 0x0448(0x0058) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	struct FActorVelocityData                          MovementData;                                              // 0x04A0(0x0018) (BlueprintVisible, BlueprintReadOnly)
+	float                                              CurrentDirection;                                          // 0x04B8(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_Q8MY[0x4];                                     // 0x04BC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FAthenaAnimationWeapon                      AttackAnims;                                               // 0x04C0(0x00B8) (BlueprintVisible, BlueprintReadOnly)
+	bool                                               UseDefaultAnimations;                                      // 0x0578(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                               AnimationsLoaded;                                          // 0x0579(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                               SporeBreathActive;                                         // 0x057A(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_QR0M[0x5];                                     // 0x057B(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FCustomAnimationMontageStateMachine         MontagePlayer;                                             // 0x0580(0x00D8)
+	struct FHitReactionAnimationState                  HitReacts;                                                 // 0x0658(0x0028) (BlueprintVisible)
+	unsigned char                                      UnknownData_U0VF[0x50];                                    // 0x0680(0x0050) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

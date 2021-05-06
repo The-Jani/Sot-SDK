@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PetPreview_Cat.BP_PetPreview_Cat_C
-// 0x0000 (FullSize[0x0510] - InheritedSize[0x0510])
+// 0x0000 (FullSize[0x0518] - InheritedSize[0x0518])
 class ABP_PetPreview_Cat_C : public ABP_PetPreview_Base_C
 {
 public:

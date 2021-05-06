@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -19,24 +19,6 @@ namespace CG
 // Classes
 //---------------------------------------------------------------------------
 
-// Class AthenaProjectiles.ProjectileLauncherSpecificSettings
-// 0x0010 (FullSize[0x0048] - InheritedSize[0x0038])
-class UProjectileLauncherSpecificSettings : public UDeveloperSettings
-{
-public:
-	TArray<struct FGlobalProjectileSettings>           GlobalSettings;                                            // 0x0038(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaProjectiles.ProjectileLauncherSpecificSettings");
-		return ptr;
-	}
-
-
-
-};
-
 // Class AthenaProjectiles.AthenaProjectilesThrottledTickCollectionAsset
 // 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
 class UAthenaProjectilesThrottledTickCollectionAsset : public UDataAsset
@@ -48,6 +30,24 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class AthenaProjectiles.AthenaProjectilesThrottledTickCollectionAsset");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaProjectiles.ProjectileLauncherSpecificSettings
+// 0x0010 (FullSize[0x0048] - InheritedSize[0x0038])
+class UProjectileLauncherSpecificSettings : public UDeveloperSettings
+{
+public:
+	TArray<struct FGlobalProjectileSettings>           GlobalSettings;                                            // 0x0038(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaProjectiles.ProjectileLauncherSpecificSettings");
 		return ptr;
 	}
 

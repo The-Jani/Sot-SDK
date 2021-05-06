@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -26,7 +26,7 @@ class UAshenLordAshCloudSetupDataAsset : public UDataAsset
 public:
 	struct FWeightedProbabilityRangeOfRanges           AshCloudRadiusInMetres;                                    // 0x0028(0x0030) (Edit)
 	float                                              AshCloudHeightCoefficient;                                 // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_W4JB[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MN0V[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FWeightedProbabilityRangeOfRanges           AshCloudLifetime;                                          // 0x0060(0x0030) (Edit)
 	class UCurveFloat*                                 ScaleUpSpeedCurve;                                         // 0x0090(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCurveFloat*                                 DissipationCurve;                                          // 0x0098(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -43,24 +43,24 @@ public:
 };
 
 // Class NaturalDisasters.AshenLordAshCloud
-// 0x0088 (FullSize[0x04B0] - InheritedSize[0x0428])
+// 0x0088 (FullSize[0x04B8] - InheritedSize[0x0430])
 class AAshenLordAshCloud : public AActor
 {
 public:
-	class UStaticMeshComponent*                        CloudMesh;                                                 // 0x0428(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAshenLordAshCloudSetupDataAsset*            SetupData;                                                 // 0x0430(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              InnerRangeStartOffset;                                     // 0x0438(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              OuterRangeStart;                                           // 0x043C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FName                                       NormalisedEngulfedRTPC;                                    // 0x0440(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              RTPCSecondsBetweenUpdates;                                 // 0x0448(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_NAIN[0x4];                                     // 0x044C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              LifeTime;                                                  // 0x0450(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	float                                              StartTime;                                                 // 0x0454(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	float                                              TimeOffset;                                                // 0x0458(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	TEnumAsByte<NaturalDisasters_EAshCloudState>       CloudState;                                                // 0x045C(0x0001) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_5S53[0x37];                                    // 0x045D(0x0037) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              MaxRadiusMultiplier;                                       // 0x0494(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_N6IC[0x18];                                    // 0x0498(0x0018) MISSED OFFSET (PADDING)
+	class UStaticMeshComponent*                        CloudMesh;                                                 // 0x0430(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAshenLordAshCloudSetupDataAsset*            SetupData;                                                 // 0x0438(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              InnerRangeStartOffset;                                     // 0x0440(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              OuterRangeStart;                                           // 0x0444(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FName                                       NormalisedEngulfedRTPC;                                    // 0x0448(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              RTPCSecondsBetweenUpdates;                                 // 0x0450(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_EH9U[0x4];                                     // 0x0454(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              LifeTime;                                                  // 0x0458(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	float                                              StartTime;                                                 // 0x045C(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	float                                              TimeOffset;                                                // 0x0460(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	TEnumAsByte<NaturalDisasters_EAshCloudState>       CloudState;                                                // 0x0464(0x0001) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_I0JR[0x37];                                    // 0x0465(0x0037) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              MaxRadiusMultiplier;                                       // 0x049C(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_A00S[0x18];                                    // 0x04A0(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -77,12 +77,12 @@ public:
 };
 
 // Class NaturalDisasters.AshenLordVolcano
-// 0x0070 (FullSize[0x0498] - InheritedSize[0x0428])
+// 0x0070 (FullSize[0x04A0] - InheritedSize[0x0430])
 class AAshenLordVolcano : public AActor
 {
 public:
-	class UAshenLordVolcanoSetupDataAsset*             VolcanoSetupData;                                          // 0x0428(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_GCQY[0x68];                                    // 0x0430(0x0068) MISSED OFFSET (PADDING)
+	class UAshenLordVolcanoSetupDataAsset*             VolcanoSetupData;                                          // 0x0430(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_JCZP[0x68];                                    // 0x0438(0x0068) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -105,14 +105,14 @@ public:
 	struct FWeightedProbabilityRangeOfRanges           EruptionDuration;                                          // 0x0058(0x0030) (Edit, DisableEditOnInstance)
 	struct FWeightedProbabilityRangeOfRanges           DormantDuration;                                           // 0x0088(0x0030) (Edit, DisableEditOnInstance)
 	float                                              MinimumDurationForTheEffects;                              // 0x00B8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_F49B[0x4];                                     // 0x00BC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_40SX[0x4];                                     // 0x00BC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FWeightedProbabilityRangeOfRanges           GroundAndWaterStayHotDurationAfterVolcanoFinishesDuration; // 0x00C0(0x0030) (Edit, DisableEditOnInstance)
 	struct FWeightedProbabilityRangeOfRanges           ProjectileTriggerFrequency;                                // 0x00F0(0x0030) (Edit, DisableEditOnInstance)
 	struct FWeightedProbabilityRangeOfRanges           PercentageOfMaxTargetingRange;                             // 0x0120(0x0030) (Edit, DisableEditOnInstance)
 	int                                                MinNumProjectilesToTrigger;                                // 0x0150(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                MaxNumProjectilesToTrigger;                                // 0x0154(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                ExtraProjectilePoolNumProjectiles;                         // 0x0158(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_617I[0x4];                                     // 0x015C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_IL72[0x4];                                     // 0x015C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVolcanoTargetChances                       ChanceToTargetPlayers;                                     // 0x0160(0x0058) (Edit, DisableEditOnInstance)
 	struct FVolcanoTargetChances                       ChanceToTargetShips;                                       // 0x01B8(0x0058) (Edit, DisableEditOnInstance)
 	struct FVolcanoTargetChances                       ChanceToTargetWatercraft;                                  // 0x0210(0x0058) (Edit, DisableEditOnInstance)
@@ -130,13 +130,13 @@ public:
 	struct FWeightedProbabilityRange                   NumLocalMiniProjectilesToTrigger;                          // 0x0360(0x0020) (Edit, DisableEditOnInstance)
 	struct FWeightedProbabilityRangeOfRanges           LocalMiniProjectilesSpeed;                                 // 0x0380(0x0030) (Edit, DisableEditOnInstance)
 	float                                              LocalMiniProjectilesGravityScale;                          // 0x03B0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TMQD[0x4];                                     // 0x03B4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_57C2[0x4];                                     // 0x03B4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FWeightedProbabilityRangeOfRanges           LocalMiniProjectilesSpawnAngleRange;                       // 0x03B8(0x0030) (Edit, DisableEditOnInstance)
 	struct FWeightedProbabilityRangeOfRanges           LocalMiniProjectilesSpawnStartPositionOffsetInMetres;      // 0x03E8(0x0030) (Edit, DisableEditOnInstance)
 	float                                              LocalMiniProjectilesSpawnDistanceSpeedScalar;              // 0x0418(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              LocalMiniProjectilesSpawnDistanceMaxPlayerSpeed;           // 0x041C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TimeBetweenLocalEmbers;                                    // 0x0420(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_MRXN[0x4];                                     // 0x0424(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_2U1I[0x4];                                     // 0x0424(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FVolcanoSetupDataEmbersEntry>        LocalEmbers;                                               // 0x0428(0x0010) (Edit, ZeroConstructor)
 	float                                              EmbersSpawnOffsetInMetres;                                 // 0x0438(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ServerMigrationDistanceAsMultipleOfOuterTargetRadius;      // 0x043C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -181,15 +181,15 @@ public:
 };
 
 // Class NaturalDisasters.AshenLordWorldEndCloud
-// 0x0018 (FullSize[0x0440] - InheritedSize[0x0428])
+// 0x0018 (FullSize[0x0448] - InheritedSize[0x0430])
 class AAshenLordWorldEndCloud : public AActor
 {
 public:
-	float                                              SelfDestructDelayOnComplete;                               // 0x0428(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<NaturalDisasters_EAshenLordWorldEndCloudState> CloudState;                                                // 0x042C(0x0001) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_UKE5[0x3];                                     // 0x042D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FAshenLordWorldEndCloudAnimation            CurrentCloudAnimation;                                     // 0x0430(0x0008) (Net)
-	unsigned char                                      UnknownData_1MWI[0x8];                                     // 0x0438(0x0008) MISSED OFFSET (PADDING)
+	float                                              SelfDestructDelayOnComplete;                               // 0x0430(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<NaturalDisasters_EAshenLordWorldEndCloudState> CloudState;                                                // 0x0434(0x0001) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_MB3Q[0x3];                                     // 0x0435(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FAshenLordWorldEndCloudAnimation            CurrentCloudAnimation;                                     // 0x0438(0x0008) (Net)
+	unsigned char                                      UnknownData_AT58[0x8];                                     // 0x0440(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -215,14 +215,14 @@ public:
 	struct FWeightedProbabilityRangeOfRanges           DormantDuration;                                           // 0x00B8(0x0030) (Edit, DisableEditOnInstance)
 	float                                              ChanceOfTriggeringAVolcano;                                // 0x00E8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FFloatRange                                 PercentageThroughEarthquakeToStartVolcano;                 // 0x00EC(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_ZXLS[0x4];                                     // 0x00FC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MMRC[0x4];                                     // 0x00FC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FPlayerFeedback                             WarmupPlayerFeedback;                                      // 0x0100(0x0080) (Edit, DisableEditOnInstance)
 	struct FPlayerFeedback                             ActivePlayerFeedback;                                      // 0x0180(0x0080) (Edit, DisableEditOnInstance)
 	struct FWeightedProbabilityRangeOfRanges           StaggerStrengthDuration;                                   // 0x0200(0x0030) (Edit, DisableEditOnInstance)
 	float                                              StaggerStrengthModifierWhenOnAShip;                        // 0x0230(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FFloatRange                                 PercentageThroughCameraShakeToStartNextOne;                // 0x0234(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	struct FFloatRange                                 TimeToShipPush;                                            // 0x0244(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_WV9U[0x4];                                     // 0x0254(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_L9F7[0x4];                                     // 0x0254(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FWeightedProbabilityRangeOfRanges           ForceToApplyToShip;                                        // 0x0258(0x0030) (Edit, DisableEditOnInstance)
 	float                                              MaximumShipSpeedToBePushed;                                // 0x0288(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ChanceEarthquakeTriggersGeysers;                           // 0x028C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -248,30 +248,30 @@ public:
 };
 
 // Class NaturalDisasters.Earthquake
-// 0x01C8 (FullSize[0x05F0] - InheritedSize[0x0428])
+// 0x01C8 (FullSize[0x05F8] - InheritedSize[0x0430])
 class AEarthquake : public AActor
 {
 public:
-	unsigned char                                      UnknownData_R0SM[0x10];                                    // 0x0428(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UEarthquakeSetupDataAsset*                   EarthquakeSetupData;                                       // 0x0438(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AVolcano*                                    AssociatedVolcano;                                         // 0x0440(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AGeyserManager*                              AssociatedGeyserManager;                                   // 0x0448(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              EarthquakeEffectInnerRadiusOffsetInMetres;                 // 0x0450(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_SQ8X[0x4];                                     // 0x0454(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UWwiseObjectPoolWrapper*                     AudioPool;                                                 // 0x0458(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWwiseEvent*                                 PlayEarthquakeLarge;                                       // 0x0460(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWwiseEvent*                                 StopEarthquakeLarge;                                       // 0x0468(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWwiseEvent*                                 PlayEarthquakeSmall;                                       // 0x0470(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWwiseEvent*                                 StopEarthquakeSmall;                                       // 0x0478(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FName                                       EarthquakeRtpcName;                                        // 0x0480(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              EarthquakeRtpcMin;                                         // 0x0488(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              EarthquakeRtpcMax;                                         // 0x048C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              EarthquakeSizeToUseLargeAttenuation;                       // 0x0490(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DFO4[0x4];                                     // 0x0494(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UCapsuleComponent*                           HitDetectionVolume;                                        // 0x0498(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWindZoneComponent*                          WindZone;                                                  // 0x04A0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<NaturalDisasters_EEarthquakeState>     EarthquakeState;                                           // 0x04A8(0x0001) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_M4QU[0x147];                                   // 0x04A9(0x0147) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ZU2X[0x10];                                    // 0x0430(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UEarthquakeSetupDataAsset*                   EarthquakeSetupData;                                       // 0x0440(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AVolcano*                                    AssociatedVolcano;                                         // 0x0448(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AGeyserManager*                              AssociatedGeyserManager;                                   // 0x0450(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              EarthquakeEffectInnerRadiusOffsetInMetres;                 // 0x0458(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_QDCK[0x4];                                     // 0x045C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UWwiseObjectPoolWrapper*                     AudioPool;                                                 // 0x0460(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWwiseEvent*                                 PlayEarthquakeLarge;                                       // 0x0468(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWwiseEvent*                                 StopEarthquakeLarge;                                       // 0x0470(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWwiseEvent*                                 PlayEarthquakeSmall;                                       // 0x0478(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWwiseEvent*                                 StopEarthquakeSmall;                                       // 0x0480(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FName                                       EarthquakeRtpcName;                                        // 0x0488(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              EarthquakeRtpcMin;                                         // 0x0490(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              EarthquakeRtpcMax;                                         // 0x0494(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              EarthquakeSizeToUseLargeAttenuation;                       // 0x0498(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_LFF9[0x4];                                     // 0x049C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UCapsuleComponent*                           HitDetectionVolume;                                        // 0x04A0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWindZoneComponent*                          WindZone;                                                  // 0x04A8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<NaturalDisasters_EEarthquakeState>     EarthquakeState;                                           // 0x04B0(0x0001) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_QPBV[0x147];                                   // 0x04B1(0x0147) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -286,25 +286,25 @@ public:
 };
 
 // Class NaturalDisasters.Geyser
-// 0x0068 (FullSize[0x0490] - InheritedSize[0x0428])
+// 0x0068 (FullSize[0x0498] - InheritedSize[0x0430])
 class AGeyser : public AActor
 {
 public:
-	unsigned char                                      UnknownData_2R6H[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UGeyserSetupDataAsset*                       SetupData;                                                 // 0x0430(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	TEnumAsByte<NaturalDisasters_EGeyserState>         GeyserState;                                               // 0x0438(0x0001) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CQG1[0x7];                                     // 0x0439(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UWwiseEvent*                                 StartActiveAudioLoopEvent;                                 // 0x0440(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWwiseEvent*                                 StopActiveAudioLoopEvent;                                  // 0x0448(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWwiseEvent*                                 PlayEruptingAudioEvent;                                    // 0x0450(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWwiseEmitterComponent*                      AudioEmitterComponent;                                     // 0x0458(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UExplosionComponent*                         ExplosionComponent;                                        // 0x0460(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*                    ActiveParticlesComponent;                                  // 0x0468(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*                    EruptingParticlesComponent;                                // 0x0470(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<Engine_ECollisionChannel>              HitTestTraceChannel;                                       // 0x0478(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_VPG5[0x7];                                     // 0x0479(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UClass*                                      GeyserHoleClass;                                           // 0x0480(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class AHole*                                       GeyserHole;                                                // 0x0488(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_6ZT4[0x8];                                     // 0x0430(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UGeyserSetupDataAsset*                       SetupData;                                                 // 0x0438(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	TEnumAsByte<NaturalDisasters_EGeyserState>         GeyserState;                                               // 0x0440(0x0001) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_K79Z[0x7];                                     // 0x0441(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UWwiseEvent*                                 StartActiveAudioLoopEvent;                                 // 0x0448(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWwiseEvent*                                 StopActiveAudioLoopEvent;                                  // 0x0450(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWwiseEvent*                                 PlayEruptingAudioEvent;                                    // 0x0458(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWwiseEmitterComponent*                      AudioEmitterComponent;                                     // 0x0460(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UExplosionComponent*                         ExplosionComponent;                                        // 0x0468(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*                    ActiveParticlesComponent;                                  // 0x0470(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*                    EruptingParticlesComponent;                                // 0x0478(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<Engine_ECollisionChannel>              HitTestTraceChannel;                                       // 0x0480(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_X3PM[0x7];                                     // 0x0481(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UClass*                                      GeyserHoleClass;                                           // 0x0488(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	class AHole*                                       GeyserHole;                                                // 0x0490(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
@@ -320,13 +320,13 @@ public:
 };
 
 // Class NaturalDisasters.MechanismGeyser
-// 0x0010 (FullSize[0x04A0] - InheritedSize[0x0490])
+// 0x0010 (FullSize[0x04A8] - InheritedSize[0x0498])
 class AMechanismGeyser : public AGeyser
 {
 public:
-	TEnumAsByte<NaturalDisasters_EGeyserState>         GeyserStateWhenMechanismIsInactive;                        // 0x0490(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_P2DY[0x7];                                     // 0x0491(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UMechanismActionComponent*                   MechanismActionComponent;                                  // 0x0498(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<NaturalDisasters_EGeyserState>         GeyserStateWhenMechanismIsInactive;                        // 0x0498(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_C8YZ[0x7];                                     // 0x0499(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UMechanismActionComponent*                   MechanismActionComponent;                                  // 0x04A0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
@@ -352,10 +352,10 @@ public:
 	bool                                               StartInactive;                                             // 0x00B8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                               NoRestartAfterGeyserSpurtComplete;                         // 0x00B9(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                               UseUniqueLocationsForEachGeyser;                           // 0x00BA(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_NNMW[0x1];                                     // 0x00BB(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_F8Y7[0x1];                                     // 0x00BB(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MinDistanceFromPlayerInMetres;                             // 0x00BC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MinGeyserSequenceSpacing;                                  // 0x00C0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_NLCG[0x4];                                     // 0x00C4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_AJD5[0x4];                                     // 0x00C4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UClass*                                      GeyserToSpawn;                                             // 0x00C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	struct FWeightedProbabilityRange                   NumGeyserGroupsToSpawn;                                    // 0x00D0(0x0020) (Edit, DisableEditOnInstance)
 	struct FWeightedProbabilityRange                   NumGeysersToSpawnPerGroup;                                 // 0x00F0(0x0020) (Edit, DisableEditOnInstance)
@@ -395,14 +395,14 @@ public:
 };
 
 // Class NaturalDisasters.GeyserManager
-// 0x0060 (FullSize[0x0488] - InheritedSize[0x0428])
+// 0x0060 (FullSize[0x0490] - InheritedSize[0x0430])
 class AGeyserManager : public AActor
 {
 public:
-	class UGeyserManagerSetupDataAsset*                GeyserManagerSetupData;                                    // 0x0428(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                             Root;                                                      // 0x0430(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<NaturalDisasters_EGeyserManagerState>  State;                                                     // 0x0438(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_JGM2[0x4F];                                    // 0x0439(0x004F) MISSED OFFSET (PADDING)
+	class UGeyserManagerSetupDataAsset*                GeyserManagerSetupData;                                    // 0x0430(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                             Root;                                                      // 0x0438(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<NaturalDisasters_EGeyserManagerState>  State;                                                     // 0x0440(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_ZN3L[0x4F];                                    // 0x0441(0x004F) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -420,7 +420,7 @@ public:
 class UGeyserItemSpawnComponent : public UItemSpawnComponent
 {
 public:
-	unsigned char                                      UnknownData_33ZZ[0x20];                                    // 0x0460(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5WOL[0x20];                                    // 0x0460(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -444,7 +444,7 @@ public:
 	struct FWeightedProbabilityRange                   NumSpurtsPerActivation;                                    // 0x0088(0x0020) (Edit, DisableEditOnInstance)
 	struct FWeightedProbabilityRangeOfRanges           TimeBetweenSpurts;                                         // 0x00A8(0x0030) (Edit, DisableEditOnInstance)
 	bool                                               ShouldDestroyOnDeactivation;                               // 0x00D8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_B2JE[0x3];                                     // 0x00D9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BBT0[0x3];                                     // 0x00D9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              DestroyAfterDeactivationDelay;                             // 0x00DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -476,20 +476,20 @@ public:
 };
 
 // Class NaturalDisasters.LavaZone
-// 0x00A0 (FullSize[0x04C8] - InheritedSize[0x0428])
+// 0x00A0 (FullSize[0x04D0] - InheritedSize[0x0430])
 class ALavaZone : public AActor
 {
 public:
-	struct FWeightedProbabilityRangeOfRanges           TimeBetweenActivations;                                    // 0x0428(0x0030) (Edit)
-	struct FWeightedProbabilityRangeOfRanges           ActiveDuration;                                            // 0x0458(0x0030) (Edit)
-	class UPhysicalMaterial*                           LavaMaterial;                                              // 0x0488(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                              ActorsInZone;                                              // 0x0490(0x0010) (Net, ZeroConstructor, Transient, RepNotify)
-	bool                                               Active;                                                    // 0x04A0(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor)
-	bool                                               InitializeFromGlobalState;                                 // 0x04A1(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                               SelfActivating;                                            // 0x04A2(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_1FTS[0x5];                                     // 0x04A3(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TScriptInterface<class UActivateableSurfaceMaterialStatusZoneInterface> MaterialZone;                                              // 0x04A8(0x0010) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper)
-	unsigned char                                      UnknownData_QSDZ[0x10];                                    // 0x04B8(0x0010) MISSED OFFSET (PADDING)
+	struct FWeightedProbabilityRangeOfRanges           TimeBetweenActivations;                                    // 0x0430(0x0030) (Edit)
+	struct FWeightedProbabilityRangeOfRanges           ActiveDuration;                                            // 0x0460(0x0030) (Edit)
+	class UPhysicalMaterial*                           LavaMaterial;                                              // 0x0490(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                              ActorsInZone;                                              // 0x0498(0x0010) (Net, ZeroConstructor, Transient, RepNotify)
+	bool                                               Active;                                                    // 0x04A8(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor)
+	bool                                               InitializeFromGlobalState;                                 // 0x04A9(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                               SelfActivating;                                            // 0x04AA(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_8MXT[0x5];                                     // 0x04AB(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TScriptInterface<class UActivateableSurfaceMaterialStatusZoneInterface> MaterialZone;                                              // 0x04B0(0x0010) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper)
+	unsigned char                                      UnknownData_CWI3[0x10];                                    // 0x04C0(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -513,7 +513,7 @@ public:
 	float                                              MinimumWaterDepthToCauseDamage;                            // 0x002C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FWeightedProbabilityRangeOfRanges           TimeBetweenLargeSurfaceEffects;                            // 0x0030(0x0030) (Edit, DisableEditOnInstance)
 	float                                              LargeSurfaceEffectMinimumDistanceInMetres;                 // 0x0060(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_KCGV[0x4];                                     // 0x0064(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7VSH[0x4];                                     // 0x0064(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FRandomParticleSystemPicker                 LargeSurfaceEffects;                                       // 0x0068(0x0010) (Edit, DisableEditOnInstance)
 	float                                              EffectSpawnHeight;                                         // 0x0078(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MurkStrengthToStartEffects;                                // 0x007C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -535,17 +535,17 @@ public:
 };
 
 // Class NaturalDisasters.SuperheatedWater
-// 0x0108 (FullSize[0x05D0] - InheritedSize[0x04C8])
+// 0x0108 (FullSize[0x05D8] - InheritedSize[0x04D0])
 class ASuperheatedWater : public AMurk
 {
 public:
-	unsigned char                                      UnknownData_E9D2[0x10];                                    // 0x04C8(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class USuperheatedWaterSetupDataAsset*             SetupData;                                                 // 0x04D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCapsuleComponent*                           HitDetectionVolume;                                        // 0x04E0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              FakeUnderwaterLocationsMinDistanceInMetres;                // 0x04E8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              FakeUnderwaterLocationsDistanceBetweenPointsInMetres;      // 0x04EC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<TWeakObjectPtr<class AAthenaPlayerCharacter>> PlayersInZone;                                             // 0x04F0(0x0010) (Net, ZeroConstructor, RepNotify, UObjectWrapper)
-	unsigned char                                      UnknownData_EHGO[0xD0];                                    // 0x0500(0x00D0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_F63E[0x10];                                    // 0x04D0(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class USuperheatedWaterSetupDataAsset*             SetupData;                                                 // 0x04E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCapsuleComponent*                           HitDetectionVolume;                                        // 0x04E8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              FakeUnderwaterLocationsMinDistanceInMetres;                // 0x04F0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              FakeUnderwaterLocationsDistanceBetweenPointsInMetres;      // 0x04F4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<TWeakObjectPtr<class AAthenaPlayerCharacter>> PlayersInZone;                                             // 0x04F8(0x0010) (Net, ZeroConstructor, RepNotify, UObjectWrapper)
+	unsigned char                                      UnknownData_3L01[0xD0];                                    // 0x0508(0x00D0) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -560,37 +560,37 @@ public:
 };
 
 // Class NaturalDisasters.Volcano
-// 0x01C8 (FullSize[0x05F0] - InheritedSize[0x0428])
+// 0x01C8 (FullSize[0x05F8] - InheritedSize[0x0430])
 class AVolcano : public AActor
 {
 public:
-	unsigned char                                      UnknownData_2YXT[0x10];                                    // 0x0428(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UCapsuleComponent*                           HitDetectionVolume;                                        // 0x0438(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               UseDormantDuration;                                        // 0x0440(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_EOGU[0x7];                                     // 0x0441(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UVolcanoSetupDataAsset*                      VolcanoSetupData;                                          // 0x0448(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AMurk*                                       AssociatedSuperheatedWater;                                // 0x0450(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ALavaZone*                                   AssociatedLavaZone;                                        // 0x0458(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              InnerTargetRadiusInMetres;                                 // 0x0460(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              OuterTargetRadiusInMetres;                                 // 0x0464(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              NearbyPlayerRangeToFireProjectilesInMetres;                // 0x0468(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              RandomShipPositionScale;                                   // 0x046C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*                    WarmingUpEmitter;                                          // 0x0470(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*                    EruptingEmitter;                                           // 0x0478(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBlendedLightingZoneComponent*               BlendedLightingZoneComponent;                              // 0x0480(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBlendedAtmosphericPressureZoneComponent*    BlendedAtmosphericPressureZoneComponent;                   // 0x0488(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBlendedPostProcessingRainZoneComponent*     BlendedPostProcessingRainZoneComponent;                    // 0x0490(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                     ProjectileLaunchOffset;                                    // 0x0498(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_3WY2[0x4];                                     // 0x04A4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UWwiseObjectPoolWrapper*                     AudioPool;                                                 // 0x04A8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWwiseEvent*                                 WarmupAudioPlayEvent;                                      // 0x04B0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWwiseEvent*                                 WarmupAudioStopEvent;                                      // 0x04B8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWwiseEvent*                                 EruptingAudioPlayEvent;                                    // 0x04C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWwiseEvent*                                 EruptingAudioStopEvent;                                    // 0x04C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCapsuleComponent*                           InstantKillZone;                                           // 0x04D0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              InstantKillZoneTestInterval;                               // 0x04D8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVolcanoStateData                           StateData;                                                 // 0x04DC(0x000C) (Net, RepNotify)
-	unsigned char                                      UnknownData_0QGH[0x108];                                   // 0x04E8(0x0108) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_O41J[0x10];                                    // 0x0430(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UCapsuleComponent*                           HitDetectionVolume;                                        // 0x0440(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               UseDormantDuration;                                        // 0x0448(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_J5NY[0x7];                                     // 0x0449(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UVolcanoSetupDataAsset*                      VolcanoSetupData;                                          // 0x0450(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AMurk*                                       AssociatedSuperheatedWater;                                // 0x0458(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ALavaZone*                                   AssociatedLavaZone;                                        // 0x0460(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              InnerTargetRadiusInMetres;                                 // 0x0468(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              OuterTargetRadiusInMetres;                                 // 0x046C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              NearbyPlayerRangeToFireProjectilesInMetres;                // 0x0470(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              RandomShipPositionScale;                                   // 0x0474(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*                    WarmingUpEmitter;                                          // 0x0478(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*                    EruptingEmitter;                                           // 0x0480(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBlendedLightingZoneComponent*               BlendedLightingZoneComponent;                              // 0x0488(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBlendedAtmosphericPressureZoneComponent*    BlendedAtmosphericPressureZoneComponent;                   // 0x0490(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBlendedPostProcessingRainZoneComponent*     BlendedPostProcessingRainZoneComponent;                    // 0x0498(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                     ProjectileLaunchOffset;                                    // 0x04A0(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_4OGM[0x4];                                     // 0x04AC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UWwiseObjectPoolWrapper*                     AudioPool;                                                 // 0x04B0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWwiseEvent*                                 WarmupAudioPlayEvent;                                      // 0x04B8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWwiseEvent*                                 WarmupAudioStopEvent;                                      // 0x04C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWwiseEvent*                                 EruptingAudioPlayEvent;                                    // 0x04C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWwiseEvent*                                 EruptingAudioStopEvent;                                    // 0x04D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCapsuleComponent*                           InstantKillZone;                                           // 0x04D8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              InstantKillZoneTestInterval;                               // 0x04E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVolcanoStateData                           StateData;                                                 // 0x04E4(0x000C) (Net, RepNotify)
+	unsigned char                                      UnknownData_AOBH[0x108];                                   // 0x04F0(0x0108) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 #include "../SDK.h"
 
@@ -204,6 +204,11 @@ struct UAthenaCheatManager_ToggleThirdPerson_Params
 {
 };
 
+// Function AthenaCheat.AthenaCheatManager.ToggleSeaClueLocationQueryDebugDisplay
+struct UAthenaCheatManager_ToggleSeaClueLocationQueryDebugDisplay_Params
+{
+};
+
 // Function AthenaCheat.AthenaCheatManager.ToggleRetailDrawDebug
 struct UAthenaCheatManager_ToggleRetailDrawDebug_Params
 {
@@ -223,6 +228,11 @@ struct UAthenaCheatManager_ToggleNearestLava_Params
 struct UAthenaCheatManager_ToggleMigrationPointOfInterestChecks_Params
 {
 	bool                                               Enabled;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function AthenaCheat.AthenaCheatManager.ToggleIslandSelectionDebugDisplay
+struct UAthenaCheatManager_ToggleIslandSelectionDebugDisplay_Params
+{
 };
 
 // Function AthenaCheat.AthenaCheatManager.ToggleFastShipControls
@@ -994,6 +1004,11 @@ struct UAthenaCheatManager_SingleStickLeft_Params
 {
 };
 
+// Function AthenaCheat.AthenaCheatManager.SimulateTunnelFailure
+struct UAthenaCheatManager_SimulateTunnelFailure_Params
+{
+};
+
 // Function AthenaCheat.AthenaCheatManager.SimulatePetReactRequest
 struct UAthenaCheatManager_SimulatePetReactRequest_Params
 {
@@ -1753,6 +1768,11 @@ struct UAthenaCheatManager_RemovePetFromPlayer_Params
 {
 };
 
+// Function AthenaCheat.AthenaCheatManager.RemoveLostShipmentsDebugging
+struct UAthenaCheatManager_RemoveLostShipmentsDebugging_Params
+{
+};
+
 // Function AthenaCheat.AthenaCheatManager.RemoveItemInSlot
 struct UAthenaCheatManager_RemoveItemInSlot_Params
 {
@@ -2464,8 +2484,8 @@ struct UAthenaCheatManager_EnableVoiceChatMeteringForIncomingSignals_Params
 	bool                                               Enabled;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 
-// Function AthenaCheat.AthenaCheatManager.EnableSafeWreckSpawnQueryDebugDisplay
-struct UAthenaCheatManager_EnableSafeWreckSpawnQueryDebugDisplay_Params
+// Function AthenaCheat.AthenaCheatManager.EnableSelectShipwreckLocationFromValidCandidatesDebugDisplay
+struct UAthenaCheatManager_EnableSelectShipwreckLocationFromValidCandidatesDebugDisplay_Params
 {
 	int                                                TrueFalse;                                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

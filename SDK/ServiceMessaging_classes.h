@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -34,6 +34,25 @@ public:
 
 
 
+};
+
+// Class ServiceMessaging.ServiceMessagingListenerTestObject
+// 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+class UServiceMessagingListenerTestObject : public UObject
+{
+public:
+	unsigned char                                      UnknownData_90A5[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ServiceMessaging.ServiceMessagingListenerTestObject");
+		return ptr;
+	}
+
+
+
+	void TestFunctionWithMessage(struct FServiceMessagingTestMessage* InMessage);
 };
 
 // Class ServiceMessaging.ServiceMessagingInterface
@@ -70,25 +89,6 @@ public:
 
 	struct FObjectMessagingDispatcherHandle STATIC_GetServiceMessagingDispatcherFromActor(class UObject* Object);
 	struct FObjectMessagingDispatcherHandle STATIC_GetServiceMessagingDispatcher(const TScriptInterface<class UServiceMessagingDispatcherInterface>& ServiceMessagingDispatcher);
-};
-
-// Class ServiceMessaging.ServiceMessagingListenerTestObject
-// 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
-class UServiceMessagingListenerTestObject : public UObject
-{
-public:
-	unsigned char                                      UnknownData_UYR9[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ServiceMessaging.ServiceMessagingListenerTestObject");
-		return ptr;
-	}
-
-
-
-	void TestFunctionWithMessage(struct FServiceMessagingTestMessage* InMessage);
 };
 
 }

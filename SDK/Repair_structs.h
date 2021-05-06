@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -34,24 +34,24 @@ enum class Repair_ERepairableState : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct Repair.EventRepairableObjectDestroyed
-// 0x0001
-struct FEventRepairableObjectDestroyed
-{
-	unsigned char                                      UnknownData_VIXI[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
 // ScriptStruct Repair.EventRepairableObjectRepairEndedEvent
 // 0x0028
 struct FEventRepairableObjectRepairEndedEvent
 {
 	class UObject*                                     Repairable;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     Position;                                                  // 0x0008(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_XYJ2[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_CQPQ[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class AActor*                                      RepairerActor;                                             // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              RepairPercentage;                                          // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_XS0B[0x4];                                     // 0x0024(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3L27[0x4];                                     // 0x0024(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Repair.EventRepairableObjectDestroyed
+// 0x0001
+struct FEventRepairableObjectDestroyed
+{
+	unsigned char                                      UnknownData_YE0Q[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 

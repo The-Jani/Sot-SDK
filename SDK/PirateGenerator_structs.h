@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -161,13 +161,106 @@ struct FRadialCoordinate
 
 };
 
+// ScriptStruct PirateGenerator.WardrobeOutfitCategoryBias
+// 0x000C
+struct FWardrobeOutfitCategoryBias
+{
+	struct FName                                       CategoryName;                                              // 0x0000(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              EmptyProbability;                                          // 0x0008(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct PirateGenerator.WardrobeOutfitResult
+// 0x0030
+struct FWardrobeOutfitResult
+{
+	TArray<class USkeletalMesh*>                       Meshes;                                                    // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FIPGScalarParameter>                 ScalarParameters;                                          // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FName>                               MaterialReferences;                                        // 0x0020(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+};
+
+// ScriptStruct PirateGenerator.AnimationSwitchEntry
+// 0x0010
+struct FAnimationSwitchEntry
+{
+	struct FName                                       BodyShape;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                      AnimSetDataId;                                             // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct PirateGenerator.IPGBlendShape
+// 0x0014
+struct FIPGBlendShape
+{
+	struct FName                                       Name;                                                      // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FName                                       NodeName;                                                  // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Value;                                                     // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct PirateGenerator.PirateDescription
+// 0x0080
+struct FPirateDescription
+{
+	TEnumAsByte<PirateGenerator_EIPGPirateType>        Type;                                                      // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_582T[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	int                                                Version;                                                   // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<PirateGenerator_EIPGGender>            Gender;                                                    // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<PirateGenerator_EIPGEthnicity>         Ethnicity;                                                 // 0x0009(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_J5M3[0x2];                                     // 0x000A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FRadialCoordinate                           BodyShapeCoordinate;                                       // 0x000C(0x0008) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData_6X82[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<struct FIPGBlendShape>                      BlendShapes;                                               // 0x0018(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FIPGDynamicSlider>                   DynamicSliders;                                            // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int                                                Seed;                                                      // 0x0038(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_LTIL[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<struct FName>                               Items;                                                     // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FName>                               TextureReferences;                                         // 0x0050(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FName>                               MaterialReferences;                                        // 0x0060(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FIPGScalarParameter>                 ScalarParameters;                                          // 0x0070(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+
+};
+
+// ScriptStruct PirateGenerator.BlendedSubMeshSpecification
+// 0x0030
+struct FBlendedSubMeshSpecification
+{
+	class USkeletalMesh*                               Mesh;                                                      // 0x0000(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              BaseMeshWeight;                                            // 0x0008(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_D4KM[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<class UMeshPatchAsset*>                     MeshPatchAssets;                                           // 0x0010(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<float>                                      MeshPatchAssetWeights;                                     // 0x0020(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+};
+
+// ScriptStruct PirateGenerator.TextureSwitchParameters
+// 0x0058
+struct FTextureSwitchParameters
+{
+	unsigned char                                      UnknownData_CB6G[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	bool                                               bAsync;                                                    // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                               bHighPriority;                                             // 0x0009(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_R0BS[0x2];                                     // 0x000A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	int                                                Seed;                                                      // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<PirateGenerator_EIPGGender>            SelectedGender;                                            // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<PirateGenerator_EIPGEthnicity>         SelectedEthnicity;                                         // 0x0011(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_SHWN[0x2];                                     // 0x0012(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FName                                       SelectedBodyShape;                                         // 0x0014(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_ABOD[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<struct FName>                               SelectedItems;                                             // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FName>                               SelectedReferences;                                        // 0x0030(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char                                      UnknownData_28TN[0x18];                                    // 0x0040(0x0018) MISSED OFFSET (PADDING)
+
+};
+
 // ScriptStruct PirateGenerator.MaterialReferenceEntry
 // 0x0018
 struct FMaterialReferenceEntry
 {
 	bool                                               bCopyParametersAcross;                                     // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               bReplaceAll;                                               // 0x0001(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_4J7H[0x6];                                     // 0x0002(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1G0G[0x6];                                     // 0x0002(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UMaterialInterface*                          FromMaterial;                                              // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceConstant*                   ToMaterial;                                                // 0x0010(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -223,7 +316,7 @@ struct FTextureSwitchBodyShapeEntry
 struct FTextureSwitchEthnicityEntry
 {
 	TEnumAsByte<PirateGenerator_EIPGEthnicity>         Ethnicity;                                                 // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_QZA6[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5TN0[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FStringAssetReference                       Texture;                                                   // 0x0008(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 };
@@ -233,7 +326,7 @@ struct FTextureSwitchEthnicityEntry
 struct FTextureSwitchGenderEntry
 {
 	TEnumAsByte<PirateGenerator_EIPGGender>            Gender;                                                    // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_PPIJ[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZRWG[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FStringAssetReference                       Texture;                                                   // 0x0008(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 };
@@ -256,99 +349,6 @@ struct FMeshPatchEntry
 
 };
 
-// ScriptStruct PirateGenerator.AnimationSwitchEntry
-// 0x0010
-struct FAnimationSwitchEntry
-{
-	struct FName                                       BodyShape;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                      AnimSetDataId;                                             // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct PirateGenerator.IPGBlendShape
-// 0x0014
-struct FIPGBlendShape
-{
-	struct FName                                       Name;                                                      // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FName                                       NodeName;                                                  // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              Value;                                                     // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct PirateGenerator.PirateDescription
-// 0x0080
-struct FPirateDescription
-{
-	TEnumAsByte<PirateGenerator_EIPGPirateType>        Type;                                                      // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_GPYX[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	int                                                Version;                                                   // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<PirateGenerator_EIPGGender>            Gender;                                                    // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<PirateGenerator_EIPGEthnicity>         Ethnicity;                                                 // 0x0009(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_8QQG[0x2];                                     // 0x000A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FRadialCoordinate                           BodyShapeCoordinate;                                       // 0x000C(0x0008) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData_4V35[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<struct FIPGBlendShape>                      BlendShapes;                                               // 0x0018(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FIPGDynamicSlider>                   DynamicSliders;                                            // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	int                                                Seed;                                                      // 0x0038(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9QPA[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<struct FName>                               Items;                                                     // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FName>                               TextureReferences;                                         // 0x0050(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FName>                               MaterialReferences;                                        // 0x0060(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FIPGScalarParameter>                 ScalarParameters;                                          // 0x0070(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-
-};
-
-// ScriptStruct PirateGenerator.BlendedSubMeshSpecification
-// 0x0030
-struct FBlendedSubMeshSpecification
-{
-	class USkeletalMesh*                               Mesh;                                                      // 0x0000(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              BaseMeshWeight;                                            // 0x0008(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_BVE4[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<class UMeshPatchAsset*>                     MeshPatchAssets;                                           // 0x0010(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<float>                                      MeshPatchAssetWeights;                                     // 0x0020(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-
-};
-
-// ScriptStruct PirateGenerator.TextureSwitchParameters
-// 0x0058
-struct FTextureSwitchParameters
-{
-	unsigned char                                      UnknownData_XXUT[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	bool                                               bAsync;                                                    // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                               bHighPriority;                                             // 0x0009(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_7PWA[0x2];                                     // 0x000A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	int                                                Seed;                                                      // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<PirateGenerator_EIPGGender>            SelectedGender;                                            // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<PirateGenerator_EIPGEthnicity>         SelectedEthnicity;                                         // 0x0011(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_RPBH[0x2];                                     // 0x0012(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FName                                       SelectedBodyShape;                                         // 0x0014(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_WNVZ[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<struct FName>                               SelectedItems;                                             // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FName>                               SelectedReferences;                                        // 0x0030(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData_W7YT[0x18];                                    // 0x0040(0x0018) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct PirateGenerator.WardrobeOutfitCategoryBias
-// 0x000C
-struct FWardrobeOutfitCategoryBias
-{
-	struct FName                                       CategoryName;                                              // 0x0000(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              EmptyProbability;                                          // 0x0008(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct PirateGenerator.WardrobeOutfitResult
-// 0x0030
-struct FWardrobeOutfitResult
-{
-	TArray<class USkeletalMesh*>                       Meshes;                                                    // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FIPGScalarParameter>                 ScalarParameters;                                          // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FName>                               MaterialReferences;                                        // 0x0020(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-
-};
-
 // ScriptStruct PirateGenerator.ClothingSlot
 // 0x0020
 struct FClothingSlot
@@ -356,7 +356,7 @@ struct FClothingSlot
 	struct FName                                       Name;                                                      // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FName>                               Tags;                                                      // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TEnumAsByte<PirateGenerator_EIPGSlotType>          Type;                                                      // 0x0018(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_LSGG[0x7];                                     // 0x0019(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4CE7[0x7];                                     // 0x0019(0x0007) MISSED OFFSET (PADDING)
 
 };
 
@@ -379,7 +379,7 @@ struct FClothingPart
 	TArray<struct FName>                               Slots;                                                     // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TEnumAsByte<PirateGenerator_EIPGGender>            Gender;                                                    // 0x0018(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<PirateGenerator_EIPGPartType>          PartType;                                                  // 0x0019(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_6MAG[0x6];                                     // 0x001A(0x0006) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4Y1S[0x6];                                     // 0x001A(0x0006) MISSED OFFSET (PADDING)
 
 };
 
@@ -416,10 +416,10 @@ struct FIPGTestClass
 	float                                              FloatTest;                                                 // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                IntTest;                                                   // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<PirateGenerator_EIPGTestEnum>          EnumTest;                                                  // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_4SYZ[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_V17N[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FIPGTestSimpleType                          ObjectTest;                                                // 0x0014(0x000C) (Edit, BlueprintVisible)
 	struct FIPGTestSimpleType                          ObjectNoneTest;                                            // 0x0020(0x000C) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData_HKJR[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_W20I[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FIPGTestSimpleType>                  VectorTest;                                                // 0x0030(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TArray<struct FName>                               StrVectorTest;                                             // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TArray<TEnumAsByte<PirateGenerator_EIPGTestEnum>>  EnumVectorTest;                                            // 0x0050(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
@@ -442,7 +442,7 @@ struct FIPGBlendingMethod
 	struct FName                                       Name;                                                      // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              Probability;                                               // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<PirateGenerator_EIPGBlendType>         BlendType;                                                 // 0x000C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZJQQ[0x3];                                     // 0x000D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_KQLS[0x3];                                     // 0x000D(0x0003) MISSED OFFSET (PADDING)
 
 };
 
@@ -452,7 +452,7 @@ struct FIPGSetGroup
 {
 	int                                                Priority;                                                  // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<PirateGenerator_EIPGSetMode>           Mode;                                                      // 0x0004(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_B59Z[0x3];                                     // 0x0005(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_7K8D[0x3];                                     // 0x0005(0x0003) MISSED OFFSET (PADDING)
 
 };
 
@@ -472,7 +472,7 @@ struct FIPGBlendRange
 	float                                              Min;                                                       // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              Max;                                                       // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              Env;                                                       // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_U0QK[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_0H8W[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FIPGCompatibleSet>                   Compatibility;                                             // 0x0018(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 };
@@ -493,7 +493,7 @@ struct FIPGSetData
 	struct FName                                       Name;                                                      // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<PirateGenerator_EIPGGender>            Gender;                                                    // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<PirateGenerator_EIPGEthnicity>         Ethnicity;                                                 // 0x0009(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_JYZM[0x2];                                     // 0x000A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ARPR[0x2];                                     // 0x000A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                Priority;                                                  // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FIPGBlendNode>                       Nodes;                                                     // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
@@ -504,7 +504,7 @@ struct FIPGSetData
 struct FIPGSetsData
 {
 	int                                                Version;                                                   // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_48I6[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WJCH[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FIPGSetData>                         Sets;                                                      // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 };
@@ -517,7 +517,7 @@ struct FIPGData
 	TArray<struct FIPGBlendingMethod>                  BlendingMethods;                                           // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TArray<struct FIPGSetGroup>                        Groups;                                                    // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	int                                                CurrentVersion;                                            // 0x0030(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TH64[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_T5MT[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FIPGSetsData>                        Versions;                                                  // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 };

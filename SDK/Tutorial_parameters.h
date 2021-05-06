@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 #include "../SDK.h"
 
@@ -19,24 +19,6 @@ namespace CG
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
-
-// Function Tutorial.TutorialHelpersBlueprintLibrary.FirePromptCompleted
-struct UTutorialHelpersBlueprintLibrary_FirePromptCompleted_Params
-{
-	class UClass*                                      AccessKey;                                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function Tutorial.TutorialManager.OnRep_SelectedTutorialClass
-struct UTutorialManager_OnRep_SelectedTutorialClass_Params
-{
-};
-
-// Function Tutorial.CompanyOnboardingStarter.HasPrerequisites
-struct UCompanyOnboardingStarter_HasPrerequisites_Params
-{
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-};
 
 // Function Tutorial.CompanyTutorialVoyageProgress.IsSameVoyage
 struct UCompanyTutorialVoyageProgress_IsSameVoyage_Params
@@ -83,6 +65,24 @@ struct UTutorial2019FunctionLibrary_GetNearestOnboardingSpawnPoint_Params
 {
 	class AActor*                                      CharacterToTeleport;                                       // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTeleportLocation                           ReturnValue;                                               // (Parm, OutParm, ReturnParm, ContainsInstancedReference)
+};
+
+// Function Tutorial.TutorialHelpersBlueprintLibrary.FirePromptCompleted
+struct UTutorialHelpersBlueprintLibrary_FirePromptCompleted_Params
+{
+	class UClass*                                      AccessKey;                                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function Tutorial.TutorialManager.OnRep_SelectedTutorialClass
+struct UTutorialManager_OnRep_SelectedTutorialClass_Params
+{
+};
+
+// Function Tutorial.CompanyOnboardingStarter.HasPrerequisites
+struct UCompanyOnboardingStarter_HasPrerequisites_Params
+{
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
 
 }

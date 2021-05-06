@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // Class StudiosAutomation.TestablePlayerController
-// 0x0000 (FullSize[0x0780] - InheritedSize[0x0780])
+// 0x0000 (FullSize[0x0788] - InheritedSize[0x0788])
 class ATestablePlayerController : public APlayerController
 {
 public:
@@ -40,32 +40,32 @@ public:
 };
 
 // Class StudiosAutomation.TestLevelScriptActor
-// 0x00C0 (FullSize[0x04F0] - InheritedSize[0x0430])
+// 0x00C0 (FullSize[0x04F8] - InheritedSize[0x0438])
 class ATestLevelScriptActor : public ALevelScriptActor
 {
 public:
-	unsigned char                                      UnknownData_OEWY[0x8];                                     // 0x0430(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TEnumAsByte<StudiosAutomation_ETestCategory>       Category;                                                  // 0x0438(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<StudiosAutomation_ETestArea>           Area;                                                      // 0x0439(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               VisualTest;                                                // 0x043A(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                               RunInEditor;                                               // 0x043B(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                               RunOnServer;                                               // 0x043C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                               RequiresServices;                                          // 0x043D(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_3J2X[0x2];                                     // 0x043E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<struct FTestLevelMetadataEntry>             AdditionalMetadata;                                        // 0x0440(0x0010) (Edit, ZeroConstructor, AdvancedDisplay)
-	TEnumAsByte<StudiosAutomation_EPerformanceCaptureType> CaptureType;                                               // 0x0450(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<StudiosAutomation_ETestAutomationPlayModeOverride> PlayModeOverride;                                          // 0x0451(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_KVMI[0x2];                                     // 0x0452(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              TestTimeout;                                               // 0x0454(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              TestPausedTimeout;                                         // 0x0458(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EU9T[0x4];                                     // 0x045C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<struct FString>                             VerboseLogCategories;                                      // 0x0460(0x0010) (Edit, ZeroConstructor)
-	TArray<int>                                        ClientsRunning;                                            // 0x0470(0x0010) (Net, ZeroConstructor)
-	TArray<int>                                        ClientIds;                                                 // 0x0480(0x0010) (Net, ZeroConstructor)
-	TArray<struct FClientPawnDetails>                  ClientPawns;                                               // 0x0490(0x0010) (Net, ZeroConstructor)
-	TArray<class AActor*>                              SpawnedActors;                                             // 0x04A0(0x0010) (Net, ZeroConstructor)
-	int                                                NextSpawnedActorIndex;                                     // 0x04B0(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_OYQR[0x3C];                                    // 0x04B4(0x003C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_UKPD[0x8];                                     // 0x0438(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TEnumAsByte<StudiosAutomation_ETestCategory>       Category;                                                  // 0x0440(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<StudiosAutomation_ETestArea>           Area;                                                      // 0x0441(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               VisualTest;                                                // 0x0442(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                               RunInEditor;                                               // 0x0443(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                               RunOnServer;                                               // 0x0444(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                               RequiresServices;                                          // 0x0445(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_OACK[0x2];                                     // 0x0446(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<struct FTestLevelMetadataEntry>             AdditionalMetadata;                                        // 0x0448(0x0010) (Edit, ZeroConstructor, AdvancedDisplay)
+	TEnumAsByte<StudiosAutomation_EPerformanceCaptureType> CaptureType;                                               // 0x0458(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<StudiosAutomation_ETestAutomationPlayModeOverride> PlayModeOverride;                                          // 0x0459(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_236R[0x2];                                     // 0x045A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              TestTimeout;                                               // 0x045C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              TestPausedTimeout;                                         // 0x0460(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_7Y8P[0x4];                                     // 0x0464(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<struct FString>                             VerboseLogCategories;                                      // 0x0468(0x0010) (Edit, ZeroConstructor)
+	TArray<int>                                        ClientsRunning;                                            // 0x0478(0x0010) (Net, ZeroConstructor)
+	TArray<int>                                        ClientIds;                                                 // 0x0488(0x0010) (Net, ZeroConstructor)
+	TArray<struct FClientPawnDetails>                  ClientPawns;                                               // 0x0498(0x0010) (Net, ZeroConstructor)
+	TArray<class AActor*>                              SpawnedActors;                                             // 0x04A8(0x0010) (Net, ZeroConstructor)
+	int                                                NextSpawnedActorIndex;                                     // 0x04B8(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_9TPR[0x3C];                                    // 0x04BC(0x003C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -117,7 +117,7 @@ public:
 };
 
 // Class StudiosAutomation.ActorThatLogsErrorWhenTicked
-// 0x0000 (FullSize[0x0428] - InheritedSize[0x0428])
+// 0x0000 (FullSize[0x0430] - InheritedSize[0x0430])
 class AActorThatLogsErrorWhenTicked : public AActor
 {
 public:
@@ -200,7 +200,7 @@ public:
 class UAutomationLatentActionCallback : public UObject
 {
 public:
-	unsigned char                                      UnknownData_3Q09[0x38];                                    // 0x0028(0x0038) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_NIV0[0x38];                                    // 0x0028(0x0038) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -232,7 +232,7 @@ public:
 };
 
 // Class StudiosAutomation.DummyReplicatedActor
-// 0x0000 (FullSize[0x0428] - InheritedSize[0x0428])
+// 0x0000 (FullSize[0x0430] - InheritedSize[0x0430])
 class ADummyReplicatedActor : public AActor
 {
 public:
@@ -249,7 +249,7 @@ public:
 };
 
 // Class StudiosAutomation.MapFixtureTestGameMode
-// 0x0000 (FullSize[0x0520] - InheritedSize[0x0520])
+// 0x0000 (FullSize[0x0528] - InheritedSize[0x0528])
 class AMapFixtureTestGameMode : public AGameMode
 {
 public:
@@ -335,7 +335,7 @@ public:
 };
 
 // Class StudiosAutomation.TestAbstractActor
-// 0x0000 (FullSize[0x0428] - InheritedSize[0x0428])
+// 0x0000 (FullSize[0x0430] - InheritedSize[0x0430])
 class ATestAbstractActor : public AActor
 {
 public:

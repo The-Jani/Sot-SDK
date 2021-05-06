@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShipsCompass.BP_ShipsCompass_C
-// 0x0000 (FullSize[0x0498] - InheritedSize[0x0498])
+// 0x0000 (FullSize[0x04A0] - InheritedSize[0x04A0])
 class ABP_ShipsCompass_C : public AShipCompass
 {
 public:

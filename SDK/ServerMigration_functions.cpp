@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.0.1
+﻿// Name: SoT, Version: 2.1.1
 
 #include "../SDK.h"
 
@@ -199,7 +199,7 @@ bool UNetworkTestingBlueprintFunctionLibrary::STATIC_IsActorInNetworkClusterGlob
 
 
 // Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsActorInNetworkCluster
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                  TargetActor                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                  NetworkClusterOwner            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

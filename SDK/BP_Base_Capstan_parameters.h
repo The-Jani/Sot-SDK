@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 #include "../SDK.h"
 
@@ -95,12 +95,6 @@ struct ABP_Base_Capstan_C_IK_Limb_Stretch_Params
 	float                                              ArmStretch;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              SpineStretch;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              LegStretch;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-
-// Function BP_Base_Capstan.BP_Base_Capstan_C.OnCapstanDescLoaded
-struct ABP_Base_Capstan_C_OnCapstanDescLoaded_Params
-{
-	class UCapstanDescAsset*                           CapstanDesc;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 
 // Function BP_Base_Capstan.BP_Base_Capstan_C.ExecuteUbergraph_BP_Base_Capstan

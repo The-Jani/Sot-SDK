@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -36,6 +36,24 @@ public:
 
 };
 
+// Class DeliverableFramework.DeliverableRequirementsDataAsset
+// 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+class UDeliverableRequirementsDataAsset : public UDataAsset
+{
+public:
+	TArray<class UDeliverableRequirementBase*>         Requirements;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor, ContainsInstancedReference)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class DeliverableFramework.DeliverableRequirementsDataAsset");
+		return ptr;
+	}
+
+
+
+};
+
 // Class DeliverableFramework.DeliverableInterface
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 class UDeliverableInterface : public UInterface
@@ -58,31 +76,13 @@ public:
 class UDeliverableComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_JWOI[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7E3S[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UDeliverableRequirementsDataAsset*           DeliveryRequirementsAsset;                                 // 0x00D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class DeliverableFramework.DeliverableComponent");
-		return ptr;
-	}
-
-
-
-};
-
-// Class DeliverableFramework.DeliverableRequirementsDataAsset
-// 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
-class UDeliverableRequirementsDataAsset : public UDataAsset
-{
-public:
-	TArray<class UDeliverableRequirementBase*>         Requirements;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor, ContainsInstancedReference)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class DeliverableFramework.DeliverableRequirementsDataAsset");
 		return ptr;
 	}
 

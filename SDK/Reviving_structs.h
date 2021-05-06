@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -39,7 +39,7 @@ enum class Reviving_EReviveState : uint8_t
 struct FReviveEffectsValues
 {
 	class UMaterialInstanceDynamic*                    AstralCordPostProcessMID;                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HJL2[0x18];                                    // 0x0008(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_WI9L[0x18];                                    // 0x0008(0x0018) MISSED OFFSET (PADDING)
 
 };
 
@@ -47,7 +47,7 @@ struct FReviveEffectsValues
 // 0x0001
 struct FPlayerInReviveableStateTelemetryEvent
 {
-	unsigned char                                      UnknownData_2FVB[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_6JQ0[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -78,7 +78,7 @@ struct FEventRevivableRepresentationSpawnCompleted
 // 0x0001
 struct FEventRevivableRepresentationSpawnStarted
 {
-	unsigned char                                      UnknownData_WXHT[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_1BL3[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -90,7 +90,7 @@ struct FReviveableActionStateConstructionInfo : public FActorActionStateConstruc
 	struct FDamageInstance                             DamageInstance;                                            // 0x0038(0x0028)
 	TEnumAsByte<Athena_ECharacterDeathType>            CharacterDeathType;                                        // 0x0060(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Athena_ECharacterType>                 CharacterType;                                             // 0x0061(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TUXZ[0x6];                                     // 0x0062(0x0006) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_S4X0[0x6];                                     // 0x0062(0x0006) MISSED OFFSET (PADDING)
 
 };
 
@@ -115,7 +115,7 @@ struct FRevivedActionStateParams
 // 0x0001
 struct FReviveableActionStateStarted
 {
-	unsigned char                                      UnknownData_AELF[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_S6NH[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -131,7 +131,7 @@ struct FEventCharacterDiedDuringReviving
 // 0x0001
 struct FEventRevivePlayerActionStateLeft
 {
-	unsigned char                                      UnknownData_7E8Y[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8BPT[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -139,7 +139,7 @@ struct FEventRevivePlayerActionStateLeft
 // 0x0001
 struct FEventRevivePlayerActionStateEntered
 {
-	unsigned char                                      UnknownData_VVYP[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_RSDN[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -147,7 +147,7 @@ struct FEventRevivePlayerActionStateEntered
 // 0x0001
 struct FEventCharacterFullyRevived
 {
-	unsigned char                                      UnknownData_CNY9[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_20VR[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -155,7 +155,26 @@ struct FEventCharacterFullyRevived
 // 0x0001
 struct FReviveEndedEarlyEvent
 {
-	unsigned char                                      UnknownData_QBXO[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_G5FT[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Reviving.ModeSpecificReviveSettings
+// 0x0030
+struct FModeSpecificReviveSettings
+{
+	TEnumAsByte<AthenaEngine_EPlayMode>                AssociatedPlaymode;                                        // 0x0000(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_E9QS[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              DeathCameraBlackFadeDelay;                                 // 0x0004(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              DeathCameraBlackFadeDuration;                              // 0x0008(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              DeathCameraBlackFadeEventClientTimeout;                    // 0x000C(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              DeathCameraBlackFadeEventServerTimeout;                    // 0x0010(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              DelayBeforeEvaporate;                                      // 0x0014(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              EvaporateDuration;                                         // 0x0018(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              DeathCameraStartDelay;                                     // 0x001C(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              ReviveWindowDuration;                                      // 0x0020(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              GhostFadeDuration;                                         // 0x0024(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UReviveSettings*                             CachedReviveSettings;                                      // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
@@ -163,7 +182,7 @@ struct FReviveEndedEarlyEvent
 // 0x0001
 struct FEventRevivableRepresentationReturnedToBody
 {
-	unsigned char                                      UnknownData_I8G1[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8JZQ[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -171,7 +190,7 @@ struct FEventRevivableRepresentationReturnedToBody
 // 0x0001
 struct FSuccessfulReviveEvent
 {
-	unsigned char                                      UnknownData_WT65[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4UO5[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -179,7 +198,7 @@ struct FSuccessfulReviveEvent
 // 0x0001
 struct FBeingRevivedStoppedEvent
 {
-	unsigned char                                      UnknownData_XDLA[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_YE6P[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -187,7 +206,7 @@ struct FBeingRevivedStoppedEvent
 // 0x0001
 struct FBeingRevivedStartedEvent
 {
-	unsigned char                                      UnknownData_9JG6[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LG49[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -195,7 +214,7 @@ struct FBeingRevivedStartedEvent
 // 0x0001
 struct FRevivableCharacterGhostlyBodyEvaporateStarted
 {
-	unsigned char                                      UnknownData_WPLG[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_1JG7[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -203,7 +222,7 @@ struct FRevivableCharacterGhostlyBodyEvaporateStarted
 // 0x0001
 struct FRevivingWindowEnd
 {
-	unsigned char                                      UnknownData_XB0Z[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_VSR2[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -213,7 +232,7 @@ struct FRevivingWindowStart
 {
 	struct FDamageInstance                             DamageInstance;                                            // 0x0000(0x0028)
 	TEnumAsByte<Athena_ECharacterDeathType>            CharacterDeathType;                                        // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YQBU[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_AT6P[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class ACharacter*                                  RevivableCharacter;                                        // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
@@ -225,25 +244,6 @@ struct FRevivePlayerActionStateConstructionInfo : public FActorActionStateConstr
 	struct FNetActorPtr                                CharacterReviving;                                         // 0x0030(0x0014)
 	struct FNetSubObjectPtr                            CharacterBeingRevived;                                     // 0x0044(0x0014)
 	class UClass*                                      InputID;                                                   // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct Reviving.ModeSpecificReviveSettings
-// 0x0030
-struct FModeSpecificReviveSettings
-{
-	TEnumAsByte<AthenaEngine_EPlayMode>                AssociatedPlaymode;                                        // 0x0000(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_F048[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              DeathCameraBlackFadeDelay;                                 // 0x0004(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              DeathCameraBlackFadeDuration;                              // 0x0008(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              DeathCameraBlackFadeEventClientTimeout;                    // 0x000C(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              DeathCameraBlackFadeEventServerTimeout;                    // 0x0010(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              DelayBeforeEvaporate;                                      // 0x0014(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              EvaporateDuration;                                         // 0x0018(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              DeathCameraStartDelay;                                     // 0x001C(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              ReviveWindowDuration;                                      // 0x0020(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              GhostFadeDuration;                                         // 0x0024(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UReviveSettings*                             CachedReviveSettings;                                      // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 

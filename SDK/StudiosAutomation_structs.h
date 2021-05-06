@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -115,7 +115,7 @@ struct FAssetAuditConstantEntry
 {
 	struct FString                                     Name;                                                      // 0x0000(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	int                                                Value;                                                     // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_763C[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DL0O[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -176,14 +176,14 @@ struct FCollectionLimits
 	struct FName                                       CollectionName;                                            // 0x0000(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<StudiosAutomation_ECollectionAuditType> AuditType;                                                 // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               IsOnlyParentCollection;                                    // 0x0009(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_8TS3[0x2];                                     // 0x000A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_NV2J[0x2];                                     // 0x000A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FCollectionTotalsLimits                     CollectionTotals;                                          // 0x000C(0x0010) (Edit)
 	struct FCollectionStaticMeshLimits                 StaticMeshLimits;                                          // 0x001C(0x0008) (Edit)
 	struct FCollectionSkeleMeshLimits                  SkeleMeshLimits;                                           // 0x0024(0x0008) (Edit)
 	struct FCollectionAnimSequenceLimits               AnimLimits;                                                // 0x002C(0x0004) (Edit)
 	bool                                               CanUseComplexCollisionAsSimple;                            // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               CanUseLOD0Collision;                                       // 0x0031(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_E9M7[0x2];                                     // 0x0032(0x0002) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_VHBL[0x2];                                     // 0x0032(0x0002) MISSED OFFSET (PADDING)
 
 };
 
@@ -217,7 +217,7 @@ struct FClientPawnDetails
 struct FFolderTotals
 {
 	bool                                               EnforceCollectionMembership;                               // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_H1M5[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5G0W[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FName>                               CollectionsAllowedForFolder;                               // 0x0008(0x0010) (ZeroConstructor)
 	TArray<struct FName>                               AssetTypesToTest;                                          // 0x0018(0x0010) (ZeroConstructor)
 

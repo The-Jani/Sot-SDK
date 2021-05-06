@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.0.1
+﻿// Name: SoT, Version: 2.1.1
 
 #include "../SDK.h"
 
@@ -18,6 +18,26 @@ namespace CG
 // Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Figurehead.BP_Figurehead_C.GetMeshComponent
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// class UStaticMeshComponent*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+class UStaticMeshComponent* ABP_Figurehead_C::GetMeshComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Figurehead.BP_Figurehead_C.GetMeshComponent");
+
+	ABP_Figurehead_C_GetMeshComponent_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_Figurehead.BP_Figurehead_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_Figurehead_C::UserConstructionScript()
@@ -25,63 +45,6 @@ void ABP_Figurehead_C::UserConstructionScript()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Figurehead.BP_Figurehead_C.UserConstructionScript");
 
 	ABP_Figurehead_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function BP_Figurehead.BP_Figurehead_C.OnPartMeshLoaded
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UStaticMesh*             Mesh                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-void ABP_Figurehead_C::OnPartMeshLoaded(class UStaticMesh* Mesh)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Figurehead.BP_Figurehead_C.OnPartMeshLoaded");
-
-	ABP_Figurehead_C_OnPartMeshLoaded_Params params;
-	params.Mesh = Mesh;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function BP_Figurehead.BP_Figurehead_C.OnPartDescLoaded
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UGenericPartDescAsset*   Desc                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-void ABP_Figurehead_C::OnPartDescLoaded(class UGenericPartDescAsset* Desc)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Figurehead.BP_Figurehead_C.OnPartDescLoaded");
-
-	ABP_Figurehead_C_OnPartDescLoaded_Params params;
-	params.Desc = Desc;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function BP_Figurehead.BP_Figurehead_C.ExecuteUbergraph_BP_Figurehead
-// ()
-// Parameters:
-// int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-void ABP_Figurehead_C::ExecuteUbergraph_BP_Figurehead(int EntryPoint)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Figurehead.BP_Figurehead_C.ExecuteUbergraph_BP_Figurehead");
-
-	ABP_Figurehead_C_ExecuteUbergraph_BP_Figurehead_Params params;
-	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 

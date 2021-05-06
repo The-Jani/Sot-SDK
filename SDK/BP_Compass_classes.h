@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -24,7 +24,7 @@ namespace CG
 class ABP_Compass_C : public ACompass
 {
 public:
-	unsigned char                                      UnknownData_GIUZ[0x8];                                     // 0x08A8(0x0008) Fix Super Size
+	unsigned char                                      UnknownData_MJ7L[0x8];                                     // 0x08A8(0x0008) Fix Super Size
 	class UInventoryItemComponent*                     InventoryItem;                                             // 0x08B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -18,6 +18,133 @@ namespace CG
 //---------------------------------------------------------------------------
 // Classes
 //---------------------------------------------------------------------------
+
+// Class Tethering.CordRenderInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UCordRenderInterface : public UInterface
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Tethering.CordRenderInterface");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Tethering.CordRenderComponent
+// 0x0038 (FullSize[0x05F0] - InheritedSize[0x05B8])
+class UCordRenderComponent : public UStaticMeshComponent
+{
+public:
+	unsigned char                                      UnknownData_0N6U[0x8];                                     // 0x05B8(0x0008) Fix Super Size
+	TArray<class UMaterialInstanceDynamic*>            CordMaterials;                                             // 0x05C0(0x0010) (ZeroConstructor, Transient, Protected)
+	float                                              ThicknessCm;                                               // 0x05D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_I7BV[0x1C];                                    // 0x05D4(0x001C) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Tethering.CordRenderComponent");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Tethering.DynamicCordRenderComponent
+// 0x0060 (FullSize[0x0650] - InheritedSize[0x05F0])
+class UDynamicCordRenderComponent : public UCordRenderComponent
+{
+public:
+	float                                              BoundsPadding;                                             // 0x05F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_SCWL[0x4];                                     // 0x05F4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class USceneComponent*                             EndPointA;                                                 // 0x05F8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                             EndPointB;                                                 // 0x0600(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_2Z06[0x48];                                    // 0x0608(0x0048) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Tethering.DynamicCordRenderComponent");
+		return ptr;
+	}
+
+
+
+	void SetCordEndPointB(class USceneComponent* EndPointB);
+	void SetCordEndPointA(class USceneComponent* EndPointA);
+};
+
+// Class Tethering.HarpoonRenderComponent
+// 0x0020 (FullSize[0x0610] - InheritedSize[0x05F0])
+class UHarpoonRenderComponent : public UCordRenderComponent
+{
+public:
+	TArray<class UMaterialInstanceDynamic*>            HarpoonMaterials;                                          // 0x05F0(0x0010) (ZeroConstructor, Transient)
+	float                                              LaunchAnimationDurationSecs;                               // 0x0600(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              HitAnimationDurationSecs;                                  // 0x0604(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              QuickRetractAnimationSpeed;                                // 0x0608(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_1861[0x4];                                     // 0x060C(0x0004) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Tethering.HarpoonRenderComponent");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Tethering.TetherConstraintInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UTetherConstraintInterface : public UInterface
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Tethering.TetherConstraintInterface");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Tethering.DistanceJointComponent
+// 0x0088 (FullSize[0x0150] - InheritedSize[0x00C8])
+class UDistanceJointComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData_4TV3[0x70];                                    // 0x00C8(0x0070) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              MinDistance;                                               // 0x0138(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MaxDistance;                                               // 0x013C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              SpringStiffness;                                           // 0x0140(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              SpringDamping;                                             // 0x0144(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               ApplyAsSpring;                                             // 0x0148(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                               EnforceMinDistance;                                        // 0x0149(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                               EnforceMaxDistance;                                        // 0x014A(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_MRKA[0x5];                                     // 0x014B(0x0005) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Tethering.DistanceJointComponent");
+		return ptr;
+	}
+
+
+
+};
 
 // Class Tethering.ShouldTetherInWorldSpaceInterface
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -88,26 +215,26 @@ public:
 };
 
 // Class Tethering.Tether
-// 0x0140 (FullSize[0x0568] - InheritedSize[0x0428])
+// 0x0140 (FullSize[0x0570] - InheritedSize[0x0430])
 class ATether : public AActor
 {
 public:
-	unsigned char                                      UnknownData_0TOD[0xF8];                                    // 0x0428(0x00F8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class USceneComponent*                             TetherPositionAnchorComponent;                             // 0x0520(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                            SourcePhysicsHandle;                                       // 0x0528(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                            TargetPhysicsHandle;                                       // 0x0530(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UDistanceJointComponent*                     JointComponent;                                            // 0x0538(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                      SourceActor;                                               // 0x0540(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                      TargetActor;                                               // 0x0548(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              SlackCm;                                                   // 0x0550(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MaxLengthWhenGrowing;                                      // 0x0554(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_XYK1[0x8];                                     // 0x0558(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	bool                                               HasAttached;                                               // 0x0560(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	bool                                               HasSourceActor;                                            // 0x0561(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	bool                                               HasTargetActor;                                            // 0x0562(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	bool                                               IsSlackEnabled;                                            // 0x0563(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	TEnumAsByte<Tethering_ETetherConstrainMode>        CurrentTetherMode;                                         // 0x0564(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_H4G0[0x3];                                     // 0x0565(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4FI1[0xF8];                                    // 0x0430(0x00F8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class USceneComponent*                             TetherPositionAnchorComponent;                             // 0x0528(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                            SourcePhysicsHandle;                                       // 0x0530(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                            TargetPhysicsHandle;                                       // 0x0538(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UDistanceJointComponent*                     JointComponent;                                            // 0x0540(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                      SourceActor;                                               // 0x0548(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                      TargetActor;                                               // 0x0550(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              SlackCm;                                                   // 0x0558(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MaxLengthWhenGrowing;                                      // 0x055C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_3EIM[0x8];                                     // 0x0560(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	bool                                               HasAttached;                                               // 0x0568(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
+	bool                                               HasSourceActor;                                            // 0x0569(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
+	bool                                               HasTargetActor;                                            // 0x056A(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
+	bool                                               IsSlackEnabled;                                            // 0x056B(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
+	TEnumAsByte<Tethering_ETetherConstrainMode>        CurrentTetherMode;                                         // 0x056C(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_8Y3W[0x3];                                     // 0x056D(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -125,13 +252,13 @@ public:
 class UTetherCustomisationComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_HXJ0[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_FWX2[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class USceneComponent*                             ComponentToTetherTo;                                       // 0x00D0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_V1KX[0xD8];                                    // 0x00D8(0x00D8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5M5Z[0xD8];                                    // 0x00D8(0x00D8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MassIntertiaScale;                                         // 0x01B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               CanBeTethered;                                             // 0x01B4(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               IsMassInertiaScalingEnabled;                               // 0x01B5(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_OU9W[0x2];                                     // 0x01B6(0x0002) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_T1H8[0x2];                                     // 0x01B6(0x0002) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -144,139 +271,12 @@ public:
 
 };
 
-// Class Tethering.CordRenderInterface
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UCordRenderInterface : public UInterface
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Tethering.CordRenderInterface");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Tethering.CordRenderComponent
-// 0x0038 (FullSize[0x05F0] - InheritedSize[0x05B8])
-class UCordRenderComponent : public UStaticMeshComponent
-{
-public:
-	unsigned char                                      UnknownData_H2ZP[0x8];                                     // 0x05B8(0x0008) Fix Super Size
-	TArray<class UMaterialInstanceDynamic*>            CordMaterials;                                             // 0x05C0(0x0010) (ZeroConstructor, Transient, Protected)
-	float                                              ThicknessCm;                                               // 0x05D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_E2Y9[0x1C];                                    // 0x05D4(0x001C) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Tethering.CordRenderComponent");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Tethering.DynamicCordRenderComponent
-// 0x0060 (FullSize[0x0650] - InheritedSize[0x05F0])
-class UDynamicCordRenderComponent : public UCordRenderComponent
-{
-public:
-	float                                              BoundsPadding;                                             // 0x05F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9F20[0x4];                                     // 0x05F4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class USceneComponent*                             EndPointA;                                                 // 0x05F8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                             EndPointB;                                                 // 0x0600(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_7NKL[0x48];                                    // 0x0608(0x0048) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Tethering.DynamicCordRenderComponent");
-		return ptr;
-	}
-
-
-
-	void SetCordEndPointB(class USceneComponent* EndPointB);
-	void SetCordEndPointA(class USceneComponent* EndPointA);
-};
-
-// Class Tethering.HarpoonRenderComponent
-// 0x0020 (FullSize[0x0610] - InheritedSize[0x05F0])
-class UHarpoonRenderComponent : public UCordRenderComponent
-{
-public:
-	TArray<class UMaterialInstanceDynamic*>            HarpoonMaterials;                                          // 0x05F0(0x0010) (ZeroConstructor, Transient)
-	float                                              LaunchAnimationDurationSecs;                               // 0x0600(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              HitAnimationDurationSecs;                                  // 0x0604(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              QuickRetractAnimationSpeed;                                // 0x0608(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_H2K0[0x4];                                     // 0x060C(0x0004) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Tethering.HarpoonRenderComponent");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Tethering.TetherConstraintInterface
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UTetherConstraintInterface : public UInterface
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Tethering.TetherConstraintInterface");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Tethering.DistanceJointComponent
-// 0x0088 (FullSize[0x0150] - InheritedSize[0x00C8])
-class UDistanceJointComponent : public UActorComponent
-{
-public:
-	unsigned char                                      UnknownData_7N7P[0x70];                                    // 0x00C8(0x0070) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              MinDistance;                                               // 0x0138(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MaxDistance;                                               // 0x013C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              SpringStiffness;                                           // 0x0140(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              SpringDamping;                                             // 0x0144(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               ApplyAsSpring;                                             // 0x0148(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                               EnforceMinDistance;                                        // 0x0149(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                               EnforceMaxDistance;                                        // 0x014A(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_5PCF[0x5];                                     // 0x014B(0x0005) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Tethering.DistanceJointComponent");
-		return ptr;
-	}
-
-
-
-};
-
 // Class Tethering.TetherInWorldSpaceComponent
 // 0x0008 (FullSize[0x00D0] - InheritedSize[0x00C8])
 class UTetherInWorldSpaceComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_TORA[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_SRX1[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

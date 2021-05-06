@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HarpoonTether.BP_HarpoonTether_C
-// 0x0000 (FullSize[0x0568] - InheritedSize[0x0568])
+// 0x0000 (FullSize[0x0570] - InheritedSize[0x0570])
 class ABP_HarpoonTether_C : public ATether
 {
 public:

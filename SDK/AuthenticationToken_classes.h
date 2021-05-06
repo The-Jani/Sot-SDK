@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -19,24 +19,6 @@ namespace CG
 // Classes
 //---------------------------------------------------------------------------
 
-// Class AuthenticationToken.JwtAuthenticationTokenEditorSettings
-// 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
-class UJwtAuthenticationTokenEditorSettings : public UObject
-{
-public:
-	struct FString                                     TokenSecretKey;                                            // 0x0028(0x0010) (Edit, ZeroConstructor, Config, HasGetValueTypeHash)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AuthenticationToken.JwtAuthenticationTokenEditorSettings");
-		return ptr;
-	}
-
-
-
-};
-
 // Class AuthenticationToken.JwtAuthenticationTokenSettings
 // 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
 class UJwtAuthenticationTokenSettings : public UObject
@@ -48,6 +30,24 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class AuthenticationToken.JwtAuthenticationTokenSettings");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AuthenticationToken.JwtAuthenticationTokenEditorSettings
+// 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+class UJwtAuthenticationTokenEditorSettings : public UObject
+{
+public:
+	struct FString                                     TokenSecretKey;                                            // 0x0028(0x0010) (Edit, ZeroConstructor, Config, HasGetValueTypeHash)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AuthenticationToken.JwtAuthenticationTokenEditorSettings");
 		return ptr;
 	}
 

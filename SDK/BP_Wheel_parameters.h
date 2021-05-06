@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 #include "../SDK.h"
 
@@ -131,12 +131,6 @@ struct ABP_Wheel_C_IK_Limb_Stretch_Params
 struct ABP_Wheel_C_RequestStateChange_Params
 {
 	class AActor*                                      Controller;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-
-// Function BP_Wheel.BP_Wheel_C.OnWheelDescLoaded
-struct ABP_Wheel_C_OnWheelDescLoaded_Params
-{
-	class UWheelDescAsset*                             WheelDesc;                                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 
 // Function BP_Wheel.BP_Wheel_C.ExecuteUbergraph_BP_Wheel

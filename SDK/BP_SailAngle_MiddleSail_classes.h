@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SailAngle_MiddleSail.BP_SailAngle_MiddleSail_C
-// 0x0000 (FullSize[0x0850] - InheritedSize[0x0850])
+// 0x0000 (FullSize[0x0858] - InheritedSize[0x0858])
 class ABP_SailAngle_MiddleSail_C : public ABP_SailAngle_C
 {
 public:

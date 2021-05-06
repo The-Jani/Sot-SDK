@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 #include "../SDK.h"
 
@@ -20,6 +20,12 @@ namespace CG
 // Parameters
 //---------------------------------------------------------------------------
 
+// Function ServiceMessaging.ServiceMessagingListenerTestObject.TestFunctionWithMessage
+struct UServiceMessagingListenerTestObject_TestFunctionWithMessage_Params
+{
+	struct FServiceMessagingTestMessage                InMessage;                                                 // (Parm, OutParm)
+};
+
 // Function ServiceMessaging.ServiceMessagingFunctions.GetServiceMessagingDispatcherFromActor
 struct UServiceMessagingFunctions_GetServiceMessagingDispatcherFromActor_Params
 {
@@ -32,12 +38,6 @@ struct UServiceMessagingFunctions_GetServiceMessagingDispatcher_Params
 {
 	TScriptInterface<class UServiceMessagingDispatcherInterface> ServiceMessagingDispatcher;                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper)
 	struct FObjectMessagingDispatcherHandle            ReturnValue;                                               // (Parm, OutParm, ReturnParm)
-};
-
-// Function ServiceMessaging.ServiceMessagingListenerTestObject.TestFunctionWithMessage
-struct UServiceMessagingListenerTestObject_TestFunctionWithMessage_Params
-{
-	struct FServiceMessagingTestMessage                InMessage;                                                 // (Parm, OutParm)
 };
 
 }

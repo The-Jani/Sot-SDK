@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -24,7 +24,7 @@ namespace CG
 class UTaleQuestStep : public UObject
 {
 public:
-	unsigned char                                      UnknownData_EJ2K[0x40];                                    // 0x0028(0x0040) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DTJK[0x40];                                    // 0x0028(0x0040) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -42,7 +42,7 @@ public:
 class UTaleQuestService : public UObject
 {
 public:
-	unsigned char                                      UnknownData_QJOG[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_KDVG[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -94,12 +94,12 @@ public:
 class UTaleQuestFramedStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData_C4CB[0x8];                                     // 0x0068(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UTaleQuestFramedStepDesc*                    FrameDesc;                                                 // 0x0070(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UTaleQuestService*>                   Services;                                                  // 0x0078(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_PRIY[0x8];                                     // 0x0088(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_M9UY[0x8];                                     // 0x0068(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<class UTaleQuestService*>                   Services;                                                  // 0x0070(0x0010) (ZeroConstructor, Protected)
+	class UTaleQuestFramedStepDesc*                    FrameDesc;                                                 // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_KANA[0x8];                                     // 0x0088(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UScriptStruct*                               StructForCollector;                                        // 0x0090(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_WRSJ[0x8];                                     // 0x0098(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PUN1[0x8];                                     // 0x0098(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -118,7 +118,7 @@ class UTaleQuestStepDesc : public UObject
 {
 public:
 	bool                                               Fork;                                                      // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_N8DA[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4NSY[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -189,7 +189,7 @@ public:
 class UContendedResourceComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_MZKX[0x38];                                    // 0x00C8(0x0038) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5TN3[0x38];                                    // 0x00C8(0x0038) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -243,13 +243,13 @@ class USplineFootprintPathComponent : public USplineComponent
 {
 public:
 	float                                              DistanceBetweenDecals;                                     // 0x05D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_WO83[0x4];                                     // 0x05D4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_L29U[0x4];                                     // 0x05D4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UMaterialInterface*                          DecalMaterial;                                             // 0x05D8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSplineFootprintPathTool                    PathTool;                                                  // 0x05E0(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_4XLR[0x3];                                     // 0x05E1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YOPB[0x3];                                     // 0x05E1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              DecalYaw;                                                  // 0x05E4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     DecalUniformScale;                                         // 0x05E8(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_V9CD[0xC];                                     // 0x05F4(0x000C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3BPX[0xC];                                     // 0x05F4(0x000C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -302,7 +302,7 @@ class UFixedArrayEntrySelectionStrategy : public UTaleQuestArrayEntrySelectionSt
 {
 public:
 	int                                                IndexToSelect;                                             // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_3XKA[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_1LWY[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -337,7 +337,7 @@ public:
 class USequentialArrayEntrySelectionStrategy : public UTaleQuestArrayEntrySelectionStrategy
 {
 public:
-	unsigned char                                      UnknownData_SN8H[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_RT6W[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -355,15 +355,15 @@ public:
 class UTaleQuestCargoRunContract : public UObject
 {
 public:
-	unsigned char                                      UnknownData_FVP6[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_S44G[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScriptMulticastDelegate                    OnCompleted;                                               // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnDelivered;                                               // 0x0048(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnCollected;                                               // 0x0058(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	TArray<struct FTaleQuestCargoRunContractItem>      ItemsToCollect;                                            // 0x0068(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData_F8IK[0x10];                                    // 0x0078(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_JO34[0x10];                                    // 0x0078(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class AActor*                                      DeliverToNPC;                                              // 0x0088(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                      CollectFromNPC;                                            // 0x0090(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_4GUU[0x18];                                    // 0x0098(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_0TII[0x18];                                    // 0x0098(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -382,7 +382,7 @@ class UTaleQuestCargoRunContractsService : public UTaleQuestService
 {
 public:
 	TArray<class UTaleQuestCargoRunContract*>          Contracts;                                                 // 0x0040(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_CBLM[0x38];                                    // 0x0050(0x0038) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5GTU[0x38];                                    // 0x0050(0x0038) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -402,7 +402,7 @@ public:
 class UTaleQuestMerchantContract : public UObject
 {
 public:
-	unsigned char                                      UnknownData_GAGF[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6XZE[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScriptMulticastDelegate                    OnCompleted;                                               // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnExpired;                                                 // 0x0048(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnDelivered;                                               // 0x0058(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
@@ -482,20 +482,38 @@ public:
 	void AddResponseSheetRelevantActor(class AActor* Actor);
 };
 
+// Class Tales.GameEventExclusionZoneTaleService
+// 0x0028 (FullSize[0x0068] - InheritedSize[0x0040])
+class UGameEventExclusionZoneTaleService : public UTaleQuestService
+{
+public:
+	unsigned char                                      UnknownData_HHYE[0x28];                                    // 0x0040(0x0028) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Tales.GameEventExclusionZoneTaleService");
+		return ptr;
+	}
+
+
+
+};
+
 // Class Tales.TaleQuestActorService
 // 0x00D0 (FullSize[0x0110] - InheritedSize[0x0040])
 class UTaleQuestActorService : public UTaleQuestService
 {
 public:
-	TArray<class AActor*>                              TrackedActors;                                             // 0x0040(0x0010) (ZeroConstructor)
+	TArray<struct FTrackedActorData>                   TrackedActors;                                             // 0x0040(0x0010) (ZeroConstructor)
 	TArray<struct FCriticalActorDelegateData>          CriticalActors;                                            // 0x0050(0x0010) (ZeroConstructor)
 	class UTaleQuestActorServiceDesc*                  Desc;                                                      // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APhasedClusterRoot*                          PhasedClusterRoot;                                         // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FPhasedActor>                        PhasedActors;                                              // 0x0070(0x0010) (ZeroConstructor)
 	TArray<struct FPhasedItem>                         PhasedItems;                                               // 0x0080(0x0010) (ZeroConstructor)
 	struct FText                                       CriticalActorHandedInByAnotherCrewFailureMessage;          // 0x0090(0x0018) ELEMENT_SIZE_MISMATCH
-	unsigned char                                      UnknownData_QV4T[0x20];                                    // 0x0090(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	unsigned char                                      UnknownData_P1HA[0x48];                                    // 0x00C8(0x0048) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ZDCU[0x20];                                    // 0x0090(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_1WKB[0x48];                                    // 0x00C8(0x0048) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -513,7 +531,7 @@ public:
 class UTaleQuestEQSService : public UTaleQuestService
 {
 public:
-	unsigned char                                      UnknownData_B9CY[0xF8];                                    // 0x0040(0x00F8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_7CKD[0xF8];                                    // 0x0040(0x00F8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -532,7 +550,7 @@ class UTaleQuestFlameOfFateService : public UTaleQuestService
 {
 public:
 	class UTaleQuestFlameOfFateServiceDesc*            ServiceDesc;                                               // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_R0WJ[0x58];                                    // 0x0048(0x0058) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_H65G[0x58];                                    // 0x0048(0x0058) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -551,7 +569,7 @@ class UTaleQuestSelectorService : public UTaleQuestService
 {
 public:
 	class UTaleQuestSelectorServiceDesc*               Desc;                                                      // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_L2AR[0x20];                                    // 0x0048(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_7VMR[0x20];                                    // 0x0048(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -573,7 +591,7 @@ public:
 	TScriptInterface<class UContendedResourceServiceInterface> ContendedResourceService;                                  // 0x0040(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 	TScriptInterface<class UWorldResourceRegistryInterface> ResourceRegistry;                                          // 0x0050(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 	TArray<struct FMigrationActionPair>                MigrationActions;                                          // 0x0060(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_9C7G[0x18];                                    // 0x0070(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_VD6D[0x18];                                    // 0x0070(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -596,6 +614,23 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Tales.CutsceneResponsesTaleServiceDesc");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Tales.GameEventExclusionZoneTaleServiceDesc
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UGameEventExclusionZoneTaleServiceDesc : public UTaleQuestServiceDesc
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Tales.GameEventExclusionZoneTaleServiceDesc");
 		return ptr;
 	}
 
@@ -663,7 +698,7 @@ public:
 	class UClass*                                      LanternItemCategory;                                       // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	TEnumAsByte<Athena_EFlameOfFateType>               FlameOfFateTypeToSet;                                      // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               SetFlameOnStart;                                           // 0x0031(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_7I7K[0x6];                                     // 0x0032(0x0006) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_KLR7[0x6];                                     // 0x0032(0x0006) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -710,15 +745,33 @@ public:
 
 };
 
+// Class Tales.AddGameEventExclusionZoneStep
+// 0x0008 (FullSize[0x0070] - InheritedSize[0x0068])
+class UAddGameEventExclusionZoneStep : public UTaleQuestStep
+{
+public:
+	class UAddGameEventExclusionZoneStepDesc*          Desc;                                                      // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Tales.AddGameEventExclusionZoneStep");
+		return ptr;
+	}
+
+
+
+};
+
 // Class Tales.DebugTaleAddInstancedLevelStep
 // 0x0038 (FullSize[0x00A0] - InheritedSize[0x0068])
 class UDebugTaleAddInstancedLevelStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData_R4Z9[0x8];                                     // 0x0068(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Q6QK[0x8];                                     // 0x0068(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UDebugTaleAddInstancedLevelStepDesc*         StepDesc;                                                  // 0x0070(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FString                                     InstancedLevelPath;                                        // 0x0078(0x0010) (ZeroConstructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ITKR[0x18];                                    // 0x0088(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_M160[0x18];                                    // 0x0088(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -737,9 +790,9 @@ class UDebugTaleAddInstancedLevelStepDesc : public UTaleQuestStepDesc
 {
 public:
 	struct FText                                       InstancedLevelKeyword;                                     // 0x0030(0x0018) ELEMENT_SIZE_MISMATCH (Edit)
-	unsigned char                                      UnknownData_LQGJ[0x20];                                    // 0x0030(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_PGN6[0x20];                                    // 0x0030(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	uint32_t                                           InstancedLevelIndex;                                       // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YF9Q[0x4];                                     // 0x006C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_MOQ0[0x4];                                     // 0x006C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -848,7 +901,7 @@ public:
 class UGenerateDigLocationInRadiusStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData_TSYY[0x50];                                    // 0x0068(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_SGGR[0x50];                                    // 0x0068(0x0050) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -866,7 +919,7 @@ public:
 class UGetVoyageDifficultyFromRankStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData_HEEV[0x18];                                    // 0x0068(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_VHKV[0x18];                                    // 0x0068(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -923,7 +976,7 @@ class UParticipantRadiusTrackerStep : public UTaleQuestStep
 {
 public:
 	class UParticipantRadiusTrackerStepDesc*           Desc;                                                      // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_T71Z[0x18];                                    // 0x0070(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5EW9[0x18];                                    // 0x0070(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -936,20 +989,38 @@ public:
 
 };
 
-// Class Tales.PlaySequencerAnimationOnCutsceneActorStep
-// 0x0020 (FullSize[0x0088] - InheritedSize[0x0068])
-class UPlaySequencerAnimationOnCutsceneActorStep : public UTaleQuestStep
+// Class Tales.TaleQuestSelectShipwreckLocationFromValidCandidatesStepDesc
+// 0x0038 (FullSize[0x0068] - InheritedSize[0x0030])
+class UTaleQuestSelectShipwreckLocationFromValidCandidatesStepDesc : public UTaleQuestStepDesc
 {
 public:
-	class UPlaySequencerAnimationOnCutsceneActorStepDesc* StepDesc;                                                  // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ASequencerCutSceneActor*                     SequencerCutSceneActor;                                    // 0x0070(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                      ActorToPossess;                                            // 0x0078(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_U33U[0x8];                                     // 0x0080(0x0008) MISSED OFFSET (PADDING)
+	class UTaleQuestArrayEntrySelectionStrategy*       SelectionStrategy;                                         // 0x0030(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FQuestVariableVectorArray                   InputArray;                                                // 0x0038(0x0010) (Edit)
+	struct FQuestVariableVector                        OutputEntry;                                               // 0x0048(0x0010) (Edit)
+	struct FQuestVariableBool                          ShuffleLists;                                              // 0x0058(0x0010) (Edit)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Tales.PlaySequencerAnimationOnCutsceneActorStep");
+		static auto ptr = UObject::FindClass("Class Tales.TaleQuestSelectShipwreckLocationFromValidCandidatesStepDesc");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Tales.TaleQuestAddBountyMapStep
+// 0x0008 (FullSize[0x0070] - InheritedSize[0x0068])
+class UTaleQuestAddBountyMapStep : public UTaleQuestStep
+{
+public:
+	class UTaleQuestAddBountyMapStepDesc*              Desc;                                                      // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Tales.TaleQuestAddBountyMapStep");
 		return ptr;
 	}
 
@@ -1095,7 +1166,7 @@ public:
 class UTaleQuestMapService : public UTaleQuestService
 {
 public:
-	unsigned char                                      UnknownData_OAWP[0x90];                                    // 0x0040(0x0090) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TTDC[0x90];                                    // 0x0040(0x0090) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -1159,7 +1230,7 @@ public:
 	struct FQuestVariableVector                        Location;                                                  // 0x0048(0x0010) (Edit)
 	float                                              CircleScale;                                               // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Athena_EQuestMapIcon>                  RadialMiniIcon;                                            // 0x005C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_R1Y2[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_RR61[0x3];                                     // 0x005D(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -1363,6 +1434,27 @@ public:
 
 };
 
+// Class Tales.PlaySequencerAnimationOnCutsceneActorStep
+// 0x0028 (FullSize[0x0090] - InheritedSize[0x0068])
+class UPlaySequencerAnimationOnCutsceneActorStep : public UTaleQuestStep
+{
+public:
+	class UPlaySequencerAnimationOnCutsceneActorStepDesc* StepDesc;                                                  // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASequencerCutSceneActor*                     SequencerCutSceneActor;                                    // 0x0070(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FPossessableSequence>                PossessableSequences;                                      // 0x0078(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData_FXUT[0x8];                                     // 0x0088(0x0008) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Tales.PlaySequencerAnimationOnCutsceneActorStep");
+		return ptr;
+	}
+
+
+
+};
+
 // Class Tales.PlaySequencerAnimationStep
 // 0x0030 (FullSize[0x0098] - InheritedSize[0x0068])
 class UPlaySequencerAnimationStep : public UTaleQuestStep
@@ -1370,12 +1462,30 @@ class UPlaySequencerAnimationStep : public UTaleQuestStep
 public:
 	class UPlaySequencerAnimationStepDesc*             StepDesc;                                                  // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ASequencerCutSceneActor*                     SequencerCutSceneActor;                                    // 0x0070(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FLRU[0x20];                                    // 0x0078(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TOZT[0x20];                                    // 0x0078(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Tales.PlaySequencerAnimationStep");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Tales.RemoveGameEventExclusionZoneStep
+// 0x0008 (FullSize[0x0070] - InheritedSize[0x0068])
+class URemoveGameEventExclusionZoneStep : public UTaleQuestStep
+{
+public:
+	class URemoveGameEventExclusionZoneStepDesc*       Desc;                                                      // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Tales.RemoveGameEventExclusionZoneStep");
 		return ptr;
 	}
 
@@ -1406,7 +1516,7 @@ public:
 class USpawnPhasedActorWithTransformStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData_MMFX[0xA8];                                    // 0x0068(0x00A8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_GRPL[0xA8];                                    // 0x0068(0x00A8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -1475,7 +1585,7 @@ public:
 class UTaleQuestChooseIslandFromWeightsStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData_G5XD[0x30];                                    // 0x0068(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9YHO[0x30];                                    // 0x0068(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UIslandTypeWeightsDataAsset*                 IslandTypeWeights;                                         // 0x0098(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -1531,7 +1641,7 @@ class UTaleQuestGrantRewardStep : public UTaleQuestStep
 {
 public:
 	class UTaleQuestGrantRewardStepDesc*               Desc;                                                      // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HSVA[0x30];                                    // 0x0070(0x0030) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_1CI8[0x30];                                    // 0x0070(0x0030) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -1568,7 +1678,7 @@ class UTaleQuestSelectEntryFromArrayStep : public UTaleQuestStep
 {
 public:
 	class UTaleQuestArrayEntrySelectionStrategy*       SelectionStrategy;                                         // 0x0068(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_GLO1[0x20];                                    // 0x0070(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_B8FB[0x20];                                    // 0x0070(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -1605,7 +1715,7 @@ class UTaleQuestWaitForHandInStep : public UTaleQuestStep
 {
 public:
 	class UTaleQuestWaitForHandInStepDesc*             Desc;                                                      // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_X94E[0x8];                                     // 0x0070(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_X7YQ[0x8];                                     // 0x0070(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -1641,12 +1751,32 @@ public:
 class UWaitForItemPickupStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData_KTSR[0x90];                                    // 0x0068(0x0090) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_489M[0x90];                                    // 0x0068(0x0090) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Tales.WaitForItemPickupStep");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Tales.AddGameEventExclusionZoneStepDesc
+// 0x0018 (FullSize[0x0048] - InheritedSize[0x0030])
+class UAddGameEventExclusionZoneStepDesc : public UTaleQuestStepDesc
+{
+public:
+	float                                              Radius;                                                    // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_LQY3[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FQuestVariableVector                        Location;                                                  // 0x0038(0x0010) (Edit)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Tales.AddGameEventExclusionZoneStepDesc");
 		return ptr;
 	}
 
@@ -1696,12 +1826,12 @@ public:
 class UFindNamedPointStepDescBase : public UTaleQuestStepDesc
 {
 public:
-	unsigned char                                      UnknownData_PRA2[0x20];                                    // 0x0030(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5N5P[0x20];                                    // 0x0030(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FQuestVariableActor                         ActorToSearch;                                             // 0x0050(0x0010) (Edit)
 	struct FName                                       PointGroupName;                                            // 0x0060(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Athena_EPointSelectionMethod>          SearchMethod;                                              // 0x0068(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Athena_ESpaceType>                     ReturnInSpace;                                             // 0x0069(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_L84S[0x6];                                     // 0x006A(0x0006) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_YIS0[0x6];                                     // 0x006A(0x0006) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -1776,7 +1906,7 @@ public:
 	struct FQuestVariableName                          IslandName;                                                // 0x0030(0x0010) (Edit)
 	struct FQuestVariableVector                        Center;                                                    // 0x0040(0x0010) (Edit)
 	float                                              RadiusInCm;                                                // 0x0050(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_0XDH[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_AVER[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FQuestVariableVector                        DigLocation;                                               // 0x0058(0x0010) (Edit)
 
 
@@ -1819,10 +1949,10 @@ public:
 	struct FQuestVariableActor                         LevelSequenceActorSpawnLocation;                           // 0x0050(0x0010) (Edit)
 	struct FQuestVariableActor                         SequencerCutSceneActor;                                    // 0x0060(0x0010) (Edit)
 	bool                                               AttachToTargetActor;                                       // 0x0070(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_NLS6[0x3];                                     // 0x0071(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_UPL9[0x3];                                     // 0x0071(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       AttachSocketName;                                          // 0x0074(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               PlayGlobally;                                              // 0x007C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_GGXU[0x3];                                     // 0x007D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_Z0T2[0x3];                                     // 0x007D(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -1841,7 +1971,7 @@ class UParticipantRadiusTrackerStepDesc : public UTaleQuestStepDesc
 {
 public:
 	float                                              DurationBetweenChecks;                                     // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_S8TA[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_49T1[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FQuestVariableVector                        Location;                                                  // 0x0038(0x0010) (Edit)
 	struct FQuestVariableFloat                         Radius;                                                    // 0x0048(0x0010) (Edit)
 
@@ -1908,18 +2038,19 @@ public:
 };
 
 // Class Tales.PlaySequencerAnimationOnCutsceneActorStepDesc
-// 0x0058 (FullSize[0x0088] - InheritedSize[0x0030])
+// 0x0068 (FullSize[0x0098] - InheritedSize[0x0030])
 class UPlaySequencerAnimationOnCutsceneActorStepDesc : public UTaleQuestStepDesc
 {
 public:
 	class ULevelSequence*                              LevelSequence;                                             // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              Delay;                                                     // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TKJP[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MGU4[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FQuestVariableActor                         SequencerCutSceneActor;                                    // 0x0040(0x0010) (Edit)
 	struct FQuestVariableActor                         ActorToPossess;                                            // 0x0050(0x0010) (Edit)
-	struct FString                                     PossessableName;                                           // 0x0060(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash)
-	class USceneDialogueData*                          DialogueData;                                              // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FText>                               LocalisableNames;                                          // 0x0078(0x0010) (Edit, ZeroConstructor)
+	struct FQuestVariableArray                         AdditionalPossessables;                                    // 0x0060(0x0010) (Edit)
+	struct FString                                     PossessableName;                                           // 0x0070(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash)
+	class USceneDialogueData*                          DialogueData;                                              // 0x0080(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FText>                               LocalisableNames;                                          // 0x0088(0x0010) (Edit, ZeroConstructor)
 
 
 	static UClass* StaticClass()
@@ -1941,7 +2072,8 @@ public:
 	struct FQuestVariableActor                         TargetActorToSpawn;                                        // 0x0038(0x0010) (Edit)
 	struct FQuestVariableActor                         LevelSequenceActorSpawnLocation;                           // 0x0048(0x0010) (Edit)
 	bool                                               PlayGlobally;                                              // 0x0058(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_Q3IN[0x7];                                     // 0x0059(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	bool                                               IsLevelSequenceActorAlawaysRelevant;                       // 0x0059(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_PL79[0x6];                                     // 0x005A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class USceneDialogueData*                          DialogueData;                                              // 0x0060(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FText>                               LocalisableNames;                                          // 0x0068(0x0010) (Edit, ZeroConstructor)
 
@@ -1949,6 +2081,26 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Tales.PlaySequencerAnimationStepDesc");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Tales.RemoveGameEventExclusionZoneStepDesc
+// 0x0018 (FullSize[0x0048] - InheritedSize[0x0030])
+class URemoveGameEventExclusionZoneStepDesc : public UTaleQuestStepDesc
+{
+public:
+	float                                              Radius;                                                    // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_IO6T[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FQuestVariableVector                        Location;                                                  // 0x0038(0x0010) (Edit)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Tales.RemoveGameEventExclusionZoneStepDesc");
 		return ptr;
 	}
 
@@ -1981,11 +2133,11 @@ class USpawnPhasedActorWithTransformStepBaseDesc : public UTaleQuestStepDesc
 {
 public:
 	TAssetPtr<class UClass>                            Actor;                                                     // 0x0030(0x001C) ELEMENT_SIZE_MISMATCH (Edit, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_D9QA[0x4];                                     // 0x0030(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_W6PF[0x4];                                     // 0x0030(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	bool                                               MarkAsCritical;                                            // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_5OD4[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_T2FM[0x7];                                     // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FText                                       CriticalActorLostMessage;                                  // 0x0058(0x0018) ELEMENT_SIZE_MISMATCH (Edit)
-	unsigned char                                      UnknownData_4OSQ[0x20];                                    // 0x0051(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_BZ7W[0x20];                                    // 0x0051(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	struct FQuestVariableActor                         ActorVar;                                                  // 0x0090(0x0010) (Edit)
 
 
@@ -2024,9 +2176,9 @@ class USpawnPhasedItemStepDesc : public UTaleQuestStepDesc
 public:
 	bool                                               TrackItem;                                                 // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               MarkItemAsCritical;                                        // 0x0031(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_FDUN[0x6];                                     // 0x0032(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_POEC[0x6];                                     // 0x0032(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FText                                       CriticalActorLostMessage;                                  // 0x0038(0x0018) ELEMENT_SIZE_MISMATCH (Edit)
-	unsigned char                                      UnknownData_OKHA[0x20];                                    // 0x0032(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_3MY4[0x20];                                    // 0x0032(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	struct FName                                       SocketName;                                                // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FQuestVariableItemDescType                  Item;                                                      // 0x0078(0x0010) (Edit)
 	struct FQuestVariableActor                         LocatorVar;                                                // 0x0088(0x0010) (Edit)
@@ -2122,7 +2274,7 @@ class UTaleQuestEmissaryCompanyActionRewardBoostStepDesc : public UTaleQuestStep
 {
 public:
 	TEnumAsByte<EmissaryFramework_EEmisaryCompanyActionType> CompanyActionType;                                         // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_LSQU[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HGAI[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -2144,9 +2296,9 @@ public:
 	class UClass*                                      Company;                                                   // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	struct FGuid                                       Id;                                                        // 0x0040(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               ShouldGrantToAlliedCrews;                                  // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_68MR[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_UF6M[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       Feature;                                                   // 0x0054(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HNEP[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DA46[0x4];                                     // 0x005C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -2166,7 +2318,7 @@ class UTaleQuestPermanentPromptStepDesc : public UTaleQuestStepDesc
 public:
 	struct FQuestVariablePrioritisedPrompt             Prompt;                                                    // 0x0030(0x0010) (Edit)
 	TEnumAsByte<PrioritisedPrompts_EPromptStartStop>   StartOrStop;                                               // 0x0040(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_D99O[0x7];                                     // 0x0041(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_01AT[0x7];                                     // 0x0041(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -2282,53 +2434,14 @@ class UTaleQuestSelectShipwreckLocationFromValidCandidatesStep : public UTaleQue
 {
 public:
 	class UTaleQuestArrayEntrySelectionStrategy*       SelectionStrategy;                                         // 0x0068(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_T9HZ[0x38];                                    // 0x0070(0x0038) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_2NJP[0x38];                                    // 0x0070(0x0038) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UTaleQuestSelectorService*                   CachedSelectorService;                                     // 0x00A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HMNG[0x118];                                   // 0x00B0(0x0118) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TG4Z[0x118];                                   // 0x00B0(0x0118) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Tales.TaleQuestSelectShipwreckLocationFromValidCandidatesStep");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Tales.TaleQuestSelectShipwreckLocationFromValidCandidatesStepDesc
-// 0x0038 (FullSize[0x0068] - InheritedSize[0x0030])
-class UTaleQuestSelectShipwreckLocationFromValidCandidatesStepDesc : public UTaleQuestStepDesc
-{
-public:
-	class UTaleQuestArrayEntrySelectionStrategy*       SelectionStrategy;                                         // 0x0030(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FQuestVariableVectorArray                   InputArray;                                                // 0x0038(0x0010) (Edit)
-	struct FQuestVariableVector                        OutputEntry;                                               // 0x0048(0x0010) (Edit)
-	struct FQuestVariableBool                          ShuffleLists;                                              // 0x0058(0x0010) (Edit)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Tales.TaleQuestSelectShipwreckLocationFromValidCandidatesStepDesc");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Tales.TaleQuestAddBountyMapStep
-// 0x0008 (FullSize[0x0070] - InheritedSize[0x0068])
-class UTaleQuestAddBountyMapStep : public UTaleQuestStep
-{
-public:
-	class UTaleQuestAddBountyMapStepDesc*              Desc;                                                      // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Tales.TaleQuestAddBountyMapStep");
 		return ptr;
 	}
 

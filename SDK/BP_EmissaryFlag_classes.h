@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_EmissaryFlag.BP_EmissaryFlag_C
-// 0x0000 (FullSize[0x04D0] - InheritedSize[0x04D0])
+// 0x0000 (FullSize[0x04D8] - InheritedSize[0x04D8])
 class ABP_EmissaryFlag_C : public AEmissaryFlag
 {
 public:

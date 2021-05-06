@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WLD_Campfire_Buildable.BP_WLD_Campfire_Buildable_C
-// 0x0000 (FullSize[0x07D8] - InheritedSize[0x07D8])
+// 0x0000 (FullSize[0x07E0] - InheritedSize[0x07E0])
 class ABP_WLD_Campfire_Buildable_C : public ABP_Base_Campfire_Buildable_C
 {
 public:

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -18,6 +18,67 @@ namespace CG
 //---------------------------------------------------------------------------
 // Classes
 //---------------------------------------------------------------------------
+
+// Class AthenaStatusResponse.StatusResponseCook
+// 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
+class UStatusResponseCook : public UStatusResponse
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaStatusResponse.StatusResponseCook");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaStatusResponse.StatusResponseHealthRegenerationPoolChange
+// 0x0008 (FullSize[0x0038] - InheritedSize[0x0030])
+class UStatusResponseHealthRegenerationPoolChange : public UStatusResponse
+{
+public:
+	float                                              HealthPoolChangeIntensityMultiplier;                       // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_GBOO[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaStatusResponse.StatusResponseHealthRegenerationPoolChange");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaStatusResponse.StatusResponseReportNoiseEvent
+// 0x0040 (FullSize[0x0070] - InheritedSize[0x0030])
+class UStatusResponseReportNoiseEvent : public UStatusResponse
+{
+public:
+	class UClass*                                      NoiseInstigator;                                           // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	struct FName                                       NoiseTag;                                                  // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              NoiseRange;                                                // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              NoiseLoudness;                                             // 0x0044(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               NoiseMultipleTicks;                                        // 0x0048(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_WQPT[0x3];                                     // 0x0049(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              NoiseTimerTick;                                            // 0x004C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_XG8Z[0x20];                                    // 0x0050(0x0020) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaStatusResponse.StatusResponseReportNoiseEvent");
+		return ptr;
+	}
+
+
+
+};
 
 // Class AthenaStatusResponse.StatusResponseApplyOneShotStatus
 // 0x0018 (FullSize[0x0048] - InheritedSize[0x0030])
@@ -44,7 +105,7 @@ class UStatusResponseApplyPersistentStatus : public UStatusResponse
 public:
 	struct FStatus                                     StatusToApply;                                             // 0x0030(0x0018) (Edit, DisableEditOnInstance)
 	float                                              DurationMultiplier;                                        // 0x0048(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_XPLF[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2WIC[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -68,67 +129,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class AthenaStatusResponse.StatusResponseCancelStatus");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaStatusResponse.StatusResponseCook
-// 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
-class UStatusResponseCook : public UStatusResponse
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaStatusResponse.StatusResponseCook");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaStatusResponse.StatusResponseHealthRegenerationPoolChange
-// 0x0008 (FullSize[0x0038] - InheritedSize[0x0030])
-class UStatusResponseHealthRegenerationPoolChange : public UStatusResponse
-{
-public:
-	float                                              HealthPoolChangeIntensityMultiplier;                       // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_BXV4[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaStatusResponse.StatusResponseHealthRegenerationPoolChange");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaStatusResponse.StatusResponseReportNoiseEvent
-// 0x0040 (FullSize[0x0070] - InheritedSize[0x0030])
-class UStatusResponseReportNoiseEvent : public UStatusResponse
-{
-public:
-	class UClass*                                      NoiseInstigator;                                           // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	struct FName                                       NoiseTag;                                                  // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              NoiseRange;                                                // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              NoiseLoudness;                                             // 0x0044(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               NoiseMultipleTicks;                                        // 0x0048(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_I416[0x3];                                     // 0x0049(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              NoiseTimerTick;                                            // 0x004C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_O02R[0x20];                                    // 0x0050(0x0020) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaStatusResponse.StatusResponseReportNoiseEvent");
 		return ptr;
 	}
 

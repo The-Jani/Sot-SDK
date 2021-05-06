@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,13 +20,13 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SmallShipLadder.BP_SmallShipLadder_C
-// 0x0028 (FullSize[0x0638] - InheritedSize[0x0610])
+// 0x0028 (FullSize[0x0648] - InheritedSize[0x0620])
 class ABP_SmallShipLadder_C : public ALadder
 {
 public:
-	class UInteractableComponent*                      Interactable;                                              // 0x0610(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	TArray<struct FVector>                             OffTopSplineComponentPositions;                            // 0x0618(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FVector>                             OnTopSplineComponentPositions;                             // 0x0628(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UInteractableComponent*                      Interactable;                                              // 0x0620(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	TArray<struct FVector>                             OffTopSplineComponentPositions;                            // 0x0628(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FVector>                             OnTopSplineComponentPositions;                             // 0x0638(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 
 	static UClass* StaticClass()

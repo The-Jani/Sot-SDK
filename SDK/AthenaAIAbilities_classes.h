@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -18,6 +18,133 @@ namespace CG
 //---------------------------------------------------------------------------
 // Classes
 //---------------------------------------------------------------------------
+
+// Class AthenaAIAbilities.AreaOfEffectHealAIAbilityType
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UAreaOfEffectHealAIAbilityType : public UAthenaAIAbilityType
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.AreaOfEffectHealAIAbilityType");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.MeleeAIAbilityType
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UMeleeAIAbilityType : public UAthenaAIAbilityType
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.MeleeAIAbilityType");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.AreaOfEffectHealAIAbility
+// 0x0028 (FullSize[0x00A0] - InheritedSize[0x0078])
+class UAreaOfEffectHealAIAbility : public UAthenaAIAbility
+{
+public:
+	unsigned char                                      UnknownData_VYQY[0x10];                                    // 0x0078(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class AActor*                                      HealAreaOfEffectActor;                                     // 0x0088(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_FOON[0x10];                                    // 0x0090(0x0010) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.AreaOfEffectHealAIAbility");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.AreaOfEffectHealAIAbilityParams
+// 0x0018 (FullSize[0x00E0] - InheritedSize[0x00C8])
+class UAreaOfEffectHealAIAbilityParams : public UAthenaAIAbilityParams
+{
+public:
+	float                                              ChanceToGoOnCooldownInsteadOfExecuting;                    // 0x00C8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              HealthPercentageThresholdToHeal;                           // 0x00CC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                      StatusEffectZone;                                          // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	float                                              MinimumTimeSpentHealing;                                   // 0x00D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MaximumTimeSpentHealing;                                   // 0x00DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.AreaOfEffectHealAIAbilityParams");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.AshenFireStatus
+// 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
+class UAshenFireStatus : public UStatusBase
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.AshenFireStatus");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.BullRushAIAbilityType
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UBullRushAIAbilityType : public UAthenaAIAbilityType
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.BullRushAIAbilityType");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.BurrowEruptDamagerType
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UBurrowEruptDamagerType : public UDamagerType
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.BurrowEruptDamagerType");
+		return ptr;
+	}
+
+
+
+};
 
 // Class AthenaAIAbilities.CoralShieldStatus
 // 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
@@ -141,13 +268,17 @@ public:
 };
 
 // Class AthenaAIAbilities.ElectricShieldBuffComponent
-// 0x0060 (FullSize[0x0128] - InheritedSize[0x00C8])
+// 0x0098 (FullSize[0x0160] - InheritedSize[0x00C8])
 class UElectricShieldBuffComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_JG00[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	bool                                               IsShieldActive;                                            // 0x00D0(0x0001) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor)
-	unsigned char                                      UnknownData_4YL7[0x57];                                    // 0x00D1(0x0057) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_NWL0[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UParticleSystem*                             ShieldVFXAsset;                                            // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FName                                       VfxSocketName;                                             // 0x00D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               IsShieldActive;                                            // 0x00E0(0x0001) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor)
+	unsigned char                                      UnknownData_XWQN[0x7];                                     // 0x00E1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UParticleSystemComponent*                    ShieldEffectComponent;                                     // 0x00E8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_GPSX[0x70];                                    // 0x00F0(0x0070) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -162,92 +293,16 @@ public:
 	void DeactivateShield();
 };
 
-// Class AthenaAIAbilities.AreaOfEffectHealAIAbilityType
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UAreaOfEffectHealAIAbilityType : public UAthenaAIAbilityType
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.AreaOfEffectHealAIAbilityType");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.MeleeAIAbilityType
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UMeleeAIAbilityType : public UAthenaAIAbilityType
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.MeleeAIAbilityType");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.AreaOfEffectHealAIAbility
-// 0x0028 (FullSize[0x00A0] - InheritedSize[0x0078])
-class UAreaOfEffectHealAIAbility : public UAthenaAIAbility
-{
-public:
-	unsigned char                                      UnknownData_3N9X[0x10];                                    // 0x0078(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class AActor*                                      HealAreaOfEffectActor;                                     // 0x0088(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EP9N[0x10];                                    // 0x0090(0x0010) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.AreaOfEffectHealAIAbility");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.AreaOfEffectHealAIAbilityParams
-// 0x0018 (FullSize[0x00E0] - InheritedSize[0x00C8])
-class UAreaOfEffectHealAIAbilityParams : public UAthenaAIAbilityParams
-{
-public:
-	float                                              ChanceToGoOnCooldownInsteadOfExecuting;                    // 0x00C8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              HealthPercentageThresholdToHeal;                           // 0x00CC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                      StatusEffectZone;                                          // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	float                                              MinimumTimeSpentHealing;                                   // 0x00D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MaximumTimeSpentHealing;                                   // 0x00DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.AreaOfEffectHealAIAbilityParams");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.AshenFireStatus
+// Class AthenaAIAbilities.ElectricShieldStatus
 // 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
-class UAshenFireStatus : public UStatusBase
+class UElectricShieldStatus : public UStatusBase
 {
 public:
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.AshenFireStatus");
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.ElectricShieldStatus");
 		return ptr;
 	}
 
@@ -255,16 +310,16 @@ public:
 
 };
 
-// Class AthenaAIAbilities.BullRushAIAbilityType
+// Class AthenaAIAbilities.ImpactMeleeAttackEelSlapId
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UBullRushAIAbilityType : public UAthenaAIAbilityType
+class UImpactMeleeAttackEelSlapId : public UImpactProjectileId
 {
 public:
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.BullRushAIAbilityType");
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.ImpactMeleeAttackEelSlapId");
 		return ptr;
 	}
 
@@ -272,16 +327,69 @@ public:
 
 };
 
-// Class AthenaAIAbilities.BurrowEruptDamagerType
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UBurrowEruptDamagerType : public UDamagerType
+// Class AthenaAIAbilities.MeleeAIAbility
+// 0x0008 (FullSize[0x0080] - InheritedSize[0x0078])
+class UMeleeAIAbility : public UAthenaAIAbility
+{
+public:
+	unsigned char                                      UnknownData_XTLQ[0x8];                                     // 0x0078(0x0008) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.MeleeAIAbility");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.MeleeAIAbilityParams
+// 0x0010 (FullSize[0x00D8] - InheritedSize[0x00C8])
+class UMeleeAIAbilityParams : public UAthenaAIAbilityParams
+{
+public:
+	TArray<struct FMeleeAttackIdWeights>               MeleeAttacks;                                              // 0x00C8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.MeleeAIAbilityParams");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.EelSlapAIAbilityParams
+// 0x0000 (FullSize[0x00D8] - InheritedSize[0x00D8])
+class UEelSlapAIAbilityParams : public UMeleeAIAbilityParams
 {
 public:
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.BurrowEruptDamagerType");
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.EelSlapAIAbilityParams");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.EelSlapAIAbility
+// 0x0000 (FullSize[0x0080] - InheritedSize[0x0080])
+class UEelSlapAIAbility : public UMeleeAIAbility
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.EelSlapAIAbility");
 		return ptr;
 	}
 
@@ -299,6 +407,23 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.MeleeAttackId");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaAIAbilities.ComboMeleeAttackId
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UComboMeleeAttackId : public UMeleeAttackId
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.ComboMeleeAttackId");
 		return ptr;
 	}
 
@@ -346,7 +471,7 @@ class UBullRushAIAbilityParams : public UMeleeChargeAIAbilityParams
 {
 public:
 	float                                              StaticCollisionWarmup;                                     // 0x00E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_0NRE[0x4];                                     // 0x00E4(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_D5AI[0x4];                                     // 0x00E4(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -432,133 +557,12 @@ public:
 class USporeExposureComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_CWPB[0x38];                                    // 0x00C8(0x0038) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PE42[0x38];                                    // 0x00C8(0x0038) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.SporeExposureComponent");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.ElectricShieldStatus
-// 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
-class UElectricShieldStatus : public UStatusBase
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.ElectricShieldStatus");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.ImpactMeleeAttackEelSlapId
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UImpactMeleeAttackEelSlapId : public UImpactProjectileId
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.ImpactMeleeAttackEelSlapId");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.MeleeAIAbility
-// 0x0008 (FullSize[0x0080] - InheritedSize[0x0078])
-class UMeleeAIAbility : public UAthenaAIAbility
-{
-public:
-	unsigned char                                      UnknownData_QG6C[0x8];                                     // 0x0078(0x0008) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.MeleeAIAbility");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.MeleeAIAbilityParams
-// 0x0010 (FullSize[0x00D8] - InheritedSize[0x00C8])
-class UMeleeAIAbilityParams : public UAthenaAIAbilityParams
-{
-public:
-	TArray<struct FMeleeAttackIdWeights>               MeleeAttacks;                                              // 0x00C8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.MeleeAIAbilityParams");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.EelSlapAIAbilityParams
-// 0x0000 (FullSize[0x00D8] - InheritedSize[0x00D8])
-class UEelSlapAIAbilityParams : public UMeleeAIAbilityParams
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.EelSlapAIAbilityParams");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.EelSlapAIAbility
-// 0x0000 (FullSize[0x0080] - InheritedSize[0x0080])
-class UEelSlapAIAbility : public UMeleeAIAbility
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.EelSlapAIAbility");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaAIAbilities.ComboMeleeAttackId
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UComboMeleeAttackId : public UMeleeAttackId
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaAIAbilities.ComboMeleeAttackId");
 		return ptr;
 	}
 
@@ -589,7 +593,7 @@ class UStatusResponseActivateElectricShield : public UStatusResponse
 {
 public:
 	float                                              Duration;                                                  // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_17GS[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8PA2[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

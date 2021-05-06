@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -24,7 +24,7 @@ namespace CG
 class USimpleOverlapComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_DI1Q[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_M2QY[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -38,11 +38,11 @@ public:
 };
 
 // Class SimpleOverlaps.TestObjectMessagingDispatcherInterface
-// 0x00A8 (FullSize[0x04D0] - InheritedSize[0x0428])
+// 0x00A8 (FullSize[0x04D8] - InheritedSize[0x0430])
 class ATestObjectMessagingDispatcherInterface : public AActor
 {
 public:
-	unsigned char                                      UnknownData_F086[0xA8];                                    // 0x0428(0x00A8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AUAV[0xA8];                                    // 0x0430(0x00A8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -56,13 +56,13 @@ public:
 };
 
 // Class SimpleOverlaps.TestOverlapBroadcasterActor
-// 0x0120 (FullSize[0x0548] - InheritedSize[0x0428])
+// 0x0120 (FullSize[0x0550] - InheritedSize[0x0430])
 class ATestOverlapBroadcasterActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData_IZAR[0x30];                                    // 0x0428(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UPrimitiveComponent*                         PrimitiveComponent;                                        // 0x0458(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_I9VS[0xE8];                                    // 0x0460(0x00E8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_KAL6[0x30];                                    // 0x0430(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UPrimitiveComponent*                         PrimitiveComponent;                                        // 0x0460(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_8KAP[0xE8];                                    // 0x0468(0x00E8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -76,12 +76,12 @@ public:
 };
 
 // Class SimpleOverlaps.OverlapTestActor
-// 0x0018 (FullSize[0x0440] - InheritedSize[0x0428])
+// 0x0018 (FullSize[0x0448] - InheritedSize[0x0430])
 class AOverlapTestActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData_76DI[0x10];                                    // 0x0428(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UPrimitiveComponent*                         PrimitiveComponent;                                        // 0x0438(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_KKHQ[0x10];                                    // 0x0430(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UPrimitiveComponent*                         PrimitiveComponent;                                        // 0x0440(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
@@ -112,12 +112,12 @@ public:
 };
 
 // Class SimpleOverlaps.TestOverlapShapeActor
-// 0x0010 (FullSize[0x0438] - InheritedSize[0x0428])
+// 0x0010 (FullSize[0x0440] - InheritedSize[0x0430])
 class ATestOverlapShapeActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData_O8VY[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UPrimitiveComponent*                         PrimitiveComponent;                                        // 0x0430(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_KRYZ[0x8];                                     // 0x0430(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UPrimitiveComponent*                         PrimitiveComponent;                                        // 0x0438(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
@@ -131,11 +131,11 @@ public:
 };
 
 // Class SimpleOverlaps.TestSimpleOverlapsGameState
-// 0x0060 (FullSize[0x04E0] - InheritedSize[0x0480])
+// 0x0060 (FullSize[0x04E8] - InheritedSize[0x0488])
 class ATestSimpleOverlapsGameState : public AGameState
 {
 public:
-	unsigned char                                      UnknownData_IYUP[0x60];                                    // 0x0480(0x0060) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_YU11[0x60];                                    // 0x0488(0x0060) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

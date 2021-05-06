@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -33,19 +33,19 @@ enum class ExplosionFramework_EExplosionReceiverCurveType : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct ExplosionFramework.EventOnExploded
-// 0x000C
-struct FEventOnExploded
-{
-	unsigned char                                      UnknownData_7P4Z[0xC];                                     // 0x0000(0x000C) MISSED OFFSET (PADDING)
-
-};
-
 // ScriptStruct ExplosionFramework.EventExplosionOverlap
 // 0x0008
 struct FEventExplosionOverlap
 {
 	class UClass*                                      DamagerType;                                               // 0x0000(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct ExplosionFramework.EventOnExploded
+// 0x000C
+struct FEventOnExploded
+{
+	unsigned char                                      UnknownData_58VJ[0xC];                                     // 0x0000(0x000C) MISSED OFFSET (PADDING)
 
 };
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RowboatMountpoint_SmallShip.BP_RowboatMountpoint_SmallShip_C
-// 0x0000 (FullSize[0x06B0] - InheritedSize[0x06B0])
+// 0x0000 (FullSize[0x06B8] - InheritedSize[0x06B8])
 class ABP_RowboatMountpoint_SmallShip_C : public ABP_RowboatMountpoint_Base_C
 {
 public:

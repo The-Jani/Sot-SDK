@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -38,9 +38,9 @@ enum class LostShipmentsClueVariants_EInteractableGrammaticalGender : uint8_t
 struct FExistingNPCToPhasedNPC
 {
 	TAssetPtr<class UClass>                            ExistingNPC;                                               // 0x0000(0x001C) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_QVYR[0x4];                                     // 0x0000(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_897H[0x4];                                     // 0x0000(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	TAssetPtr<class UClass>                            PhasedNPC;                                                 // 0x0020(0x001C) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_KVBA[0x4];                                     // 0x0020(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_K755[0x4];                                     // 0x0020(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 
 };
 
@@ -50,7 +50,7 @@ struct FClueDestinationToTextIndex
 {
 	class UClass*                                      DestinationType;                                           // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	TAssetPtr<class UAbandonedNoteClueTextIndexAssetBase> RequiredIndexAsset;                                        // 0x0008(0x001C) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_BS09[0x4];                                     // 0x0008(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_0H7M[0x4];                                     // 0x0008(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 
 };
 
@@ -60,18 +60,7 @@ struct FClueDestinationChoice
 {
 	class UClueDestinationDescriptor*                  Destination;                                               // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int16_t                                            ClueChoice;                                                // 0x0008(0x0002) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_UK18[0x6];                                     // 0x000A(0x0006) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct LostShipmentsClueVariants.GenderSpecificTextPairings
-// 0x0070
-struct FGenderSpecificTextPairings
-{
-	struct FText                                       MasculineClueDestinationDescription;                       // 0x0000(0x0018) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData_N78O[0x20];                                    // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       FeminineClueDestinationDescription;                        // 0x0038(0x0018) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData_DSZS[0x20];                                    // 0x0038(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_ETC0[0x6];                                     // 0x000A(0x0006) MISSED OFFSET (PADDING)
 
 };
 
@@ -80,7 +69,7 @@ struct FGenderSpecificTextPairings
 struct FTextEntryWithLayout
 {
 	struct FText                                       TextEntry;                                                 // 0x0000(0x0018) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData_E69B[0x20];                                    // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_IG35[0x20];                                    // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	struct FTreasureMapWidgetText                      TextLayout;                                                // 0x0038(0x0020) (Edit, DisableEditOnInstance)
 
 };
@@ -91,7 +80,18 @@ struct FMapRadialIconData
 {
 	struct FStringAssetReference                       AssetReference;                                            // 0x0000(0x0010) (ZeroConstructor)
 	float                                              Rotation;                                                  // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_Z6II[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_J01E[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct LostShipmentsClueVariants.GenderSpecificTextPairings
+// 0x0070
+struct FGenderSpecificTextPairings
+{
+	struct FText                                       MasculineClueDestinationDescription;                       // 0x0000(0x0018) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData_4WN4[0x20];                                    // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       FeminineClueDestinationDescription;                        // 0x0038(0x0018) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData_ZLAR[0x20];                                    // 0x0038(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 
 };
 

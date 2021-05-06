@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SOT_World_layout_3.SOT_World_layout_2_C
-// 0x0000 (FullSize[0x0430] - InheritedSize[0x0430])
+// 0x0000 (FullSize[0x0438] - InheritedSize[0x0438])
 class ASOT_World_layout_2_C : public ALevelScriptActor
 {
 public:

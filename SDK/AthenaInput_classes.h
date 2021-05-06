@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -24,7 +24,7 @@ namespace CG
 class UNotificationInputId : public UObject
 {
 public:
-	unsigned char                                      UnknownData_5D1A[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_XW7O[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -42,7 +42,7 @@ public:
 class UAnalogInputId : public UObject
 {
 public:
-	unsigned char                                      UnknownData_G4HP[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_67QJ[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -61,7 +61,7 @@ class UInputBinder : public UObject
 {
 public:
 	class UInputComponent*                             InputComponent;                                            // 0x0028(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_LBL9[0x58];                                    // 0x0030(0x0058) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LN5Z[0x58];                                    // 0x0030(0x0058) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -136,7 +136,7 @@ public:
 class UCompositeInputDelegatorTestsCallbackHelper : public UObject
 {
 public:
-	unsigned char                                      UnknownData_F6A3[0x50];                                    // 0x0028(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_FYQX[0x50];                                    // 0x0028(0x0050) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -153,46 +153,12 @@ public:
 	TEnumAsByte<AthenaInput_EInputHandlerResult> OnFirstHandler(float Value);
 };
 
-// Class AthenaInput.TestNotificationInputId
-// 0x0000 (FullSize[0x0038] - InheritedSize[0x0038])
-class UTestNotificationInputId : public UNotificationInputId
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.TestNotificationInputId");
-		return ptr;
-	}
-
-
-
-};
-
-// Class AthenaInput.ReceivesInputInterface
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UReceivesInputInterface : public UInterface
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.ReceivesInputInterface");
-		return ptr;
-	}
-
-
-
-};
-
 // Class AthenaInput.CompositeInputHandler
 // 0x00B0 (FullSize[0x00D8] - InheritedSize[0x0028])
 class UCompositeInputHandler : public UObject
 {
 public:
-	unsigned char                                      UnknownData_LXUJ[0xB0];                                    // 0x0028(0x00B0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_QR23[0xB0];                                    // 0x0028(0x00B0) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -212,7 +178,7 @@ public:
 class UMockDerivedCompositeInputHandler : public UCompositeInputHandler
 {
 public:
-	unsigned char                                      UnknownData_24UT[0x8];                                     // 0x00D8(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8VSD[0x8];                                     // 0x00D8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -248,7 +214,7 @@ public:
 class AMockInputHandlerCharacter : public ACharacter
 {
 public:
-	unsigned char                                      UnknownData_47ZT[0x8];                                     // 0x0628(0x0008) Fix Super Size
+	unsigned char                                      UnknownData_RAHL[0x8];                                     // 0x0628(0x0008) Fix Super Size
 
 
 	static UClass* StaticClass()
@@ -284,7 +250,7 @@ public:
 class UNamedNotificationInputComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_VOED[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_9ZFY[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FNotificationInputDisplayName>       NotificationInputDisplayNames;                             // 0x00D0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, Protected)
 
 
@@ -359,6 +325,40 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class AthenaInput.TestNotificationInput2Id");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaInput.TestNotificationInputId
+// 0x0000 (FullSize[0x0038] - InheritedSize[0x0038])
+class UTestNotificationInputId : public UNotificationInputId
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaInput.TestNotificationInputId");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaInput.ReceivesInputInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UReceivesInputInterface : public UInterface
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AthenaInput.ReceivesInputInterface");
 		return ptr;
 	}
 

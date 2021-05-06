@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,11 +20,10 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Cannon.BP_Cannon_C
-// 0x0020 (FullSize[0x0BC0] - InheritedSize[0x0BA0])
+// 0x0018 (FullSize[0x0BC0] - InheritedSize[0x0BA8])
 class ABP_Cannon_C : public ACannon
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0BA0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 	class UGroupedInteractableAreaComponent*           GroupedInteractableArea;                                   // 0x0BA8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 	class UInteractableComponent*                      Interactable;                                              // 0x0BB0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 	class UStaticMeshComponent*                        Collision;                                                 // 0x0BB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
@@ -40,8 +39,6 @@ public:
 
 	struct FDockableInfo GetDockableInfo();
 	void UserConstructionScript();
-	void OnCannonDescLoaded(class UCannonDescAsset* CannonDesc);
-	void ExecuteUbergraph_BP_Cannon(int EntryPoint);
 };
 
 }

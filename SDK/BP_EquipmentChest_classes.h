@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_EquipmentChest.BP_EquipmentChest_C
-// 0x0000 (FullSize[0x0570] - InheritedSize[0x0570])
+// 0x0000 (FullSize[0x0578] - InheritedSize[0x0578])
 class ABP_EquipmentChest_C : public APossessionsChest
 {
 public:

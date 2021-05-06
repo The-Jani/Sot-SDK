@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -23,7 +23,7 @@ namespace CG
 // 0x0028
 struct FEventRowboatAddedToContestCrewRequiresLiveryData
 {
-	unsigned char                                      UnknownData_BTDT[0x28];                                    // 0x0000(0x0028) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HFON[0x28];                                    // 0x0000(0x0028) MISSED OFFSET (PADDING)
 
 };
 

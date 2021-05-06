@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -24,11 +24,11 @@ namespace CG
 class UWaterSlidePlayerComponent : public UDoubleIntentComponent
 {
 public:
-	unsigned char                                      UnknownData_R49E[0x8];                                     // 0x00E0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_NPKD[0x8];                                     // 0x00E0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UParticleSystemComponent*                    PlayerWaterSlideSplashingVFXComponent;                     // 0x00E8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	class UParticleSystem*                             PlayerWaterSlideSplashingVFX;                              // 0x00F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	float                                              SpawnLocationZOffset;                                      // 0x00F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HF8H[0x14];                                    // 0x00FC(0x0014) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_W36M[0x14];                                    // 0x00FC(0x0014) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class AWaterSlide*                                 CurrentWaterSlide;                                         // 0x0110(0x0008) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
@@ -65,7 +65,7 @@ class UWaterSlideParamsDataAsset : public UDataAsset
 {
 public:
 	struct FWaterSlideParams                           WaterSlideParams;                                          // 0x0028(0x001C) (Edit)
-	unsigned char                                      UnknownData_PQBK[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PR0D[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -79,21 +79,21 @@ public:
 };
 
 // Class WaterSlide.WaterSlide
-// 0x0068 (FullSize[0x0490] - InheritedSize[0x0428])
+// 0x0070 (FullSize[0x04A0] - InheritedSize[0x0430])
 class AWaterSlide : public AActor
 {
 public:
-	class USplineComponent*                            SlideSpline;                                               // 0x0428(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	class USceneComponent*                             Root;                                                      // 0x0430(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	class UWaterSlideParamsDataAsset*                  WaterSlideParamsDataAsset;                                 // 0x0438(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	class UPrimitiveComponent*                         EntranceCollisionComponent;                                // 0x0440(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	class AWaterSlide*                                 ContinuedWaterSlideRoute;                                  // 0x0448(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	class AWaterSlide*                                 LeftWaterSlideRoute;                                       // 0x0450(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	class AWaterSlide*                                 RightWaterSlideRoute;                                      // 0x0458(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	bool                                               IsEndOfSlide;                                              // 0x0460(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_4N32[0x3];                                     // 0x0461(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FVector                                     EndOfSlideLaunchForce;                                     // 0x0464(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_QSLV[0x20];                                    // 0x0470(0x0020) MISSED OFFSET (PADDING)
+	class USplineComponent*                            SlideSpline;                                               // 0x0430(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	class USceneComponent*                             Root;                                                      // 0x0438(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	class UWaterSlideParamsDataAsset*                  WaterSlideParamsDataAsset;                                 // 0x0440(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	class UPrimitiveComponent*                         EntranceCollisionComponent;                                // 0x0448(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	class AWaterSlide*                                 ContinuedWaterSlideRoute;                                  // 0x0450(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	class AWaterSlide*                                 LeftWaterSlideRoute;                                       // 0x0458(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	class AWaterSlide*                                 RightWaterSlideRoute;                                      // 0x0460(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	bool                                               IsEndOfSlide;                                              // 0x0468(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
+	unsigned char                                      UnknownData_EG3E[0x3];                                     // 0x0469(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FVector                                     EndOfSlideLaunchForce;                                     // 0x046C(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
+	unsigned char                                      UnknownData_IIV7[0x28];                                    // 0x0478(0x0028) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -130,7 +130,7 @@ public:
 class UWaterSlideCompositeInputHandler : public ULookAtOffsetCompositeInputHandler
 {
 public:
-	unsigned char                                      UnknownData_5607[0x30];                                    // 0x01D8(0x0030) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_MRJ8[0x30];                                    // 0x01D8(0x0030) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

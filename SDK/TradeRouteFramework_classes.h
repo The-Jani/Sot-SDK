@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -25,7 +25,7 @@ class UTradeRouteDifficultyBand : public UObject
 {
 public:
 	int                                                MinimumRank;                                               // 0x0028(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_MP66[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_6614[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -47,7 +47,7 @@ public:
 	struct FIslandSelectionType                        EndIsland;                                                 // 0x0030(0x0008) (Edit, DisableEditOnInstance)
 	struct FPlayerStat                                 RouteCompletionStat;                                       // 0x0038(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
 	TEnumAsByte<TradeRouteFramework_ETradeRouteMapOrientation> MapOrientation;                                            // 0x0044(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_14T7[0x3];                                     // 0x0045(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_U3QT[0x3];                                     // 0x0045(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FTradeRouteMapData                          TradeRouteMapData;                                         // 0x0048(0x0080) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
 
 
@@ -66,7 +66,7 @@ public:
 class UTaleQuestGetProjectionPointOnTradeRouteStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData_3PB0[0x38];                                    // 0x0068(0x0038) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_FXXF[0x38];                                    // 0x0068(0x0038) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -102,7 +102,7 @@ class UTaleQuestGetProjectionPointOnTradeRouteStepDesc : public UTaleQuestStepDe
 {
 public:
 	float                                              ProjectionProportion;                                      // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_MOR8[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_AYRB[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FQuestVariableVector                        SourcePoint;                                               // 0x0038(0x0010) (Edit)
 	struct FQuestVariableTradeRouteData                TradeRouteData;                                            // 0x0048(0x0010) (Edit)
 	struct FQuestVariableVector                        ProjectedPoint;                                            // 0x0058(0x0010) (Edit)
@@ -124,7 +124,7 @@ class UTaleQuestSelectTradeRouteStep : public UTaleQuestStep
 {
 public:
 	class UTaleQuestSelectTradeRouteStepDesc*          Desc;                                                      // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_893B[0x18];                                    // 0x0070(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_9RJS[0x18];                                    // 0x0070(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -143,7 +143,7 @@ class UTaleQuestSelectTradeRouteStepDesc : public UTaleQuestStepDesc
 {
 public:
 	int                                                NumSelectFromClosestIslands;                               // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CQSR[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LT20[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FQuestVariableVector                        SelectionOriginPointVar;                                   // 0x0038(0x0010) (Edit)
 	struct FQuestVariableInt                           TradeRouteDifficulty;                                      // 0x0048(0x0010) (Edit)
 	struct FQuestVariableTradeRouteData                TradeRoute;                                                // 0x0058(0x0010) (Edit)

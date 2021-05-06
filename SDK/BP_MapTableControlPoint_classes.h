@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MapTableControlPoint.BP_MapTableControlPoint_C
-// 0x0000 (FullSize[0x0580] - InheritedSize[0x0580])
+// 0x0000 (FullSize[0x0588] - InheritedSize[0x0588])
 class ABP_MapTableControlPoint_C : public AMapTableControlPoint
 {
 public:

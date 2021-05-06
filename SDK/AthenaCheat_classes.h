@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -26,12 +26,12 @@ class UAthenaCheatManager : public UCheatManager
 public:
 	class ACinematicCameraController*                  CinematicCameraController;                                 // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                      CinematicCameraControllerClass;                            // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_MJRY[0x28];                                    // 0x0088(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_H8ZW[0x28];                                    // 0x0088(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FWorldMarkerDesc>                    CreatedWorldMarkers;                                       // 0x00B0(0x0010) (ZeroConstructor, Transient)
 	class UGameEventSchedulerSettingsAsset*            DebugSchedulerSettings;                                    // 0x00C0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AServerPerformanceReplicator*                ServerPerformanceReplicator;                               // 0x00C8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TeleportToDigsiteHeightOffset;                             // 0x00D0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EHN4[0x3C];                                    // 0x00D4(0x003C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_MRRX[0x3C];                                    // 0x00D4(0x003C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -75,10 +75,12 @@ public:
 	void TriggerAIShipAggressive();
 	void ToggleVideprinter(const struct FString& Id);
 	void ToggleThirdPerson();
+	void ToggleSeaClueLocationQueryDebugDisplay();
 	void ToggleRetailDrawDebug();
 	void ToggleNearestSuperheatedWater();
 	void ToggleNearestLava();
 	void ToggleMigrationPointOfInterestChecks(bool Enabled);
+	void ToggleIslandSelectionDebugDisplay();
 	void ToggleFastShipControls();
 	void ToggleDrowning();
 	void ToggleDrawShipSpeed();
@@ -209,6 +211,7 @@ public:
 	void SingleStickRight();
 	void SingleStickOff();
 	void SingleStickLeft();
+	void SimulateTunnelFailure();
 	void SimulatePetReactRequest(const struct FString& Id);
 	void SimulatePetReactCancellation(const struct FString& Id);
 	void ShowTavernBanners();
@@ -346,6 +349,7 @@ public:
 	void RenameTreasure(const struct FString& InVendorName);
 	void RemovePetsFromAllPlayers();
 	void RemovePetFromPlayer();
+	void RemoveLostShipmentsDebugging();
 	void RemoveItemInSlot(int SlotIndex);
 	void RemoveDebugPetSpawners();
 	void RemoveDebugHealthStage();
@@ -471,7 +475,7 @@ public:
 	void EndDemoSession();
 	void EnableVoiceChatMeteringForOutgoingSignals(bool Enabled);
 	void EnableVoiceChatMeteringForIncomingSignals(bool Enabled);
-	void EnableSafeWreckSpawnQueryDebugDisplay(int TrueFalse);
+	void EnableSelectShipwreckLocationFromValidCandidatesDebugDisplay(int TrueFalse);
 	void EnableNTP(bool Enable);
 	void EnableMermaidSpawning(int Enable);
 	void EnableMermaidDeletion(int Enable);

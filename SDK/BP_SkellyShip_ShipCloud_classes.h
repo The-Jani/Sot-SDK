@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SkellyShip_ShipCloud.BP_SkellyShip_ShipCloud_C
-// 0x0000 (FullSize[0x0520] - InheritedSize[0x0520])
+// 0x0000 (FullSize[0x0528] - InheritedSize[0x0528])
 class ABP_SkellyShip_ShipCloud_C : public ABP_SkellyFort_SkullCloud_C
 {
 public:

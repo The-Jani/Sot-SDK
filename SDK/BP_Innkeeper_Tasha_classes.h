@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Innkeeper_Tasha.BP_Innkeeper_Tasha_C
-// 0x0000 (FullSize[0x0668] - InheritedSize[0x0668])
+// 0x0000 (FullSize[0x0670] - InheritedSize[0x0670])
 class ABP_Innkeeper_Tasha_C : public ABP_Innkeeper_C
 {
 public:

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -24,7 +24,7 @@ namespace CG
 class ABP_PlayerPirate_C : public AAthenaPlayerCharacter
 {
 public:
-	unsigned char                                      UnknownData_HL1A[0x8];                                     // 0x19C8(0x0008) Fix Super Size
+	unsigned char                                      UnknownData_1Q8C[0x8];                                     // 0x19C8(0x0008) Fix Super Size
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x19D0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 	class UChainLightningReceiverComponent*            ChainLightningReceiver;                                    // 0x19D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 	class UStatusApplicationMonitorComponent*          StatusApplicationMonitor;                                  // 0x19E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
@@ -44,13 +44,13 @@ public:
 	class UCharacterFootImpactComponent*               CharacterFootImpact;                                       // 0x1A50(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 	class UPlayerOceanAudioComponent*                  PlayerOceanAudio;                                          // 0x1A58(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 	float                                              TattooGlowDuration;                                        // 0x1A60(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_F08O[0x4];                                     // 0x1A64(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_H8PB[0x4];                                     // 0x1A64(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UStaticMesh*                                 CurrentStaticMesh;                                         // 0x1A68(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	class USkeletalMesh*                               CurrentSkeletalMesh;                                       // 0x1A70(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	TArray<class USkeletalMesh*>                       SkeletalMeshArray;                                         // 0x1A78(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<class UStaticMesh*>                         StaticMeshArray;                                           // 0x1A88(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	bool                                               IsSkeletalMesh;                                            // 0x1A98(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_263M[0x3];                                     // 0x1A99(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QYLV[0x3];                                     // 0x1A99(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                ItemSelectArray;                                           // 0x1A9C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	struct FVector                                     ItemScale;                                                 // 0x1AA0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 

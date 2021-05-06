@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -24,7 +24,7 @@ namespace CG
 struct FGameServiceCoordinatorUnit
 {
 	class UObject*                                     Service;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_3HPS[0x10];                                    // 0x0008(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_A5P9[0x10];                                    // 0x0008(0x0010) MISSED OFFSET (PADDING)
 
 };
 
@@ -32,7 +32,7 @@ struct FGameServiceCoordinatorUnit
 // 0x0070
 struct FGameServiceMap
 {
-	unsigned char                                      UnknownData_ETW1[0x70];                                    // 0x0000(0x0070) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_RQVM[0x70];                                    // 0x0000(0x0070) MISSED OFFSET (PADDING)
 
 };
 

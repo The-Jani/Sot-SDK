@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -24,10 +24,10 @@ namespace CG
 class AMockActorWithCharacterInteractionComponent : public ACharacter
 {
 public:
-	unsigned char                                      UnknownData_VP30[0x8];                                     // 0x0628(0x0008) Fix Super Size
-	unsigned char                                      UnknownData_HUSV[0x8];                                     // 0x0630(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_VK4P[0x8];                                     // 0x0628(0x0008) Fix Super Size
+	unsigned char                                      UnknownData_VMR3[0x8];                                     // 0x0630(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UCharacterInteractionComponent*              CharacterInteractionComponent;                             // 0x0638(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_7IFO[0xA0];                                    // 0x0640(0x00A0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_YQK7[0xA0];                                    // 0x0640(0x00A0) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -45,7 +45,7 @@ public:
 class UMockInteractableService : public UObject
 {
 public:
-	unsigned char                                      UnknownData_6RH1[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_CEW3[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -59,15 +59,15 @@ public:
 };
 
 // Class Interaction.MockInteractorActor
-// 0x0028 (FullSize[0x0450] - InheritedSize[0x0428])
+// 0x0028 (FullSize[0x0458] - InheritedSize[0x0430])
 class AMockInteractorActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData_3IDR[0x8];                                     // 0x0428(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UObject*                                     FocusedInteractable;                                       // 0x0430(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                     InteractedObject;                                          // 0x0438(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                      InteractNotificationType;                                  // 0x0440(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_UR3H[0x8];                                     // 0x0448(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_98E0[0x8];                                     // 0x0430(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UObject*                                     FocusedInteractable;                                       // 0x0438(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                     InteractedObject;                                          // 0x0440(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                      InteractNotificationType;                                  // 0x0448(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_9MZU[0x8];                                     // 0x0450(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -102,21 +102,21 @@ public:
 class UInteractableComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_YHXS[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_VH6R[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       FeatureFlag;                                               // 0x00D0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	struct FVector                                     BoxExtent;                                                 // 0x00D8(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	struct FVector                                     BoxOrigin;                                                 // 0x00E4(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	struct FRotator                                    BoxRotation;                                               // 0x00F0(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	unsigned char                                      MayBeGrouped : 1;                                          // 0x00FC(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, Protected)
 	unsigned char                                      ProxyForActorInteraction : 1;                              // 0x00FC(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, Protected)
-	unsigned char                                      UnknownData_0UBD[0x3];                                     // 0x00FD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HKB4[0x3];                                     // 0x00FD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	bool                                               RequiresFacingFront;                                       // 0x0100(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	bool                                               RequiresNotAirborne;                                       // 0x0101(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	bool                                               RequiresNotSwimming;                                       // 0x0102(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_STCC[0x5];                                     // 0x0103(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YM5J[0x5];                                     // 0x0103(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UInteractableArea*                           InteractableArea;                                          // 0x0108(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Athena_EInteractableState>             CurrentInteractionState;                                   // 0x0110(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_8XN0[0x7];                                     // 0x0111(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_G7VZ[0x7];                                     // 0x0111(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -158,9 +158,9 @@ public:
 class UCharacterInteractionComponent : public UBoxComponent
 {
 public:
-	unsigned char                                      UnknownData_08GM[0x8];                                     // 0x0580(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Z1AN[0x8];                                     // 0x0580(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UInteractableArea*                           CurrentOptimalInteractable;                                // 0x0588(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_MV1D[0xB0];                                    // 0x0590(0x00B0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_O1I9[0xB0];                                    // 0x0590(0x00B0) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -201,7 +201,7 @@ class UInteractableArea : public UObject
 public:
 	struct FBoxSphereBounds                            Bounds;                                                    // 0x0028(0x001C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FName                                       Name;                                                      // 0x0044(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_R9HG[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MMG3[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UObject*                                     Interactable;                                              // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                      Parent;                                                    // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -294,9 +294,9 @@ public:
 class UInteractableService : public UObject
 {
 public:
-	unsigned char                                      UnknownData_21TN[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_PWV3[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UInteractableArea*>                   InteractableAreas;                                         // 0x0038(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData_9D9M[0x28];                                    // 0x0048(0x0028) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PA4Y[0x28];                                    // 0x0048(0x0028) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

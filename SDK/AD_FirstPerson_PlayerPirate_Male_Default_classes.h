@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -33,7 +33,7 @@ public:
 	struct FADS_CameraAdditiveNative                   CameraAdditive;                                            // 0x0268(0x0050) (Edit, BlueprintVisible)
 	struct FADS_ObjectsNative                          Items;                                                     // 0x02B8(0x0010) (Edit, BlueprintVisible)
 	struct FADS_Sockets                                Sockets;                                                   // 0x02C8(0x0002) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData_PPC5[0x6];                                     // 0x02CA(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3QF5[0x6];                                     // 0x02CA(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FADS_CannonNative                           Cannon;                                                    // 0x02D0(0x0038) (Edit, BlueprintVisible)
 	struct FADS_RowingBoatNative                       Rowboat;                                                   // 0x0308(0x0098) (Edit, BlueprintVisible)
 	struct FADS_WaterPumpNative                        WaterPump;                                                 // 0x03A0(0x0028) (Edit, BlueprintVisible)

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -40,11 +40,29 @@ struct FGameTime
 
 };
 
+// ScriptStruct Time.GameTimeRange
+// 0x0010
+struct FGameTimeRange
+{
+	struct FGameTime                                   Start;                                                     // 0x0000(0x0008) (Edit)
+	struct FGameTime                                   End;                                                       // 0x0008(0x0008) (Edit)
+
+};
+
 // ScriptStruct Time.ReplicatedDateTime
 // 0x0008
 struct FReplicatedDateTime
 {
 	int64_t                                            Ticks;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct Time.ReplicatedAuthoritativeTime
+// 0x0010
+struct FReplicatedAuthoritativeTime
+{
+	struct FReplicatedDateTime                         WorldTime;                                                 // 0x0000(0x0008)
+	struct FReplicatedDateTime                         SyncTime;                                                  // 0x0008(0x0008)
 
 };
 
@@ -57,24 +75,6 @@ struct FEventSetDateTime
 	int                                                Day;                                                       // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                Hour;                                                      // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                Minute;                                                    // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct Time.GameTimeRange
-// 0x0010
-struct FGameTimeRange
-{
-	struct FGameTime                                   Start;                                                     // 0x0000(0x0008) (Edit)
-	struct FGameTime                                   End;                                                       // 0x0008(0x0008) (Edit)
-
-};
-
-// ScriptStruct Time.ReplicatedAuthoritativeTime
-// 0x0010
-struct FReplicatedAuthoritativeTime
-{
-	struct FReplicatedDateTime                         WorldTime;                                                 // 0x0000(0x0008)
-	struct FReplicatedDateTime                         SyncTime;                                                  // 0x0008(0x0008)
 
 };
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Constellation_Fish_ENE.BP_Constellation_Fish_ENE_C
-// 0x0000 (FullSize[0x04C8] - InheritedSize[0x04C8])
+// 0x0000 (FullSize[0x04D0] - InheritedSize[0x04D0])
 class ABP_Constellation_Fish_ENE_C : public ABP_Constellation_C
 {
 public:

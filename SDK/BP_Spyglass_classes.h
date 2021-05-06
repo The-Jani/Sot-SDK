@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -24,7 +24,7 @@ namespace CG
 class ABP_Spyglass_C : public ASpyglass
 {
 public:
-	unsigned char                                      UnknownData_2PSY[0x8];                                     // 0x08C8(0x0008) Fix Super Size
+	unsigned char                                      UnknownData_SXZ4[0x8];                                     // 0x08C8(0x0008) Fix Super Size
 
 
 	static UClass* StaticClass()

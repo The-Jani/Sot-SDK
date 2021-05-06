@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_VomitProjectile_NoSplash.BP_VomitProjectile_NoSplash_C
-// 0x0000 (FullSize[0x0770] - InheritedSize[0x0770])
+// 0x0000 (FullSize[0x0778] - InheritedSize[0x0778])
 class ABP_VomitProjectile_NoSplash_C : public ABP_VomitProjectile_C
 {
 public:

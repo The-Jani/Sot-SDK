@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -24,7 +24,7 @@ namespace CG
 class UAnimSequencerInstance : public UAnimInstance
 {
 public:
-	unsigned char                                      UnknownData_45ET[0x1A0];                                   // 0x0440(0x01A0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DER4[0x1A0];                                   // 0x0440(0x01A0) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()

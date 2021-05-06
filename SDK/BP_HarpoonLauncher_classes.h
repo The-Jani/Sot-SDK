@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,13 +20,13 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HarpoonLauncher.BP_HarpoonLauncher_C
-// 0x0018 (FullSize[0x0B88] - InheritedSize[0x0B70])
+// 0x0018 (FullSize[0x0B98] - InheritedSize[0x0B80])
 class ABP_HarpoonLauncher_C : public AHarpoonLauncher
 {
 public:
-	class UStaticMeshComponent*                        CubeNotWalkable;                                           // 0x0B70(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UCapsuleComponent*                           MountCollision;                                            // 0x0B78(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UCapsuleComponent*                           BarrelCollision;                                           // 0x0B80(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UStaticMeshComponent*                        CubeNotWalkable;                                           // 0x0B80(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UCapsuleComponent*                           MountCollision;                                            // 0x0B88(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UCapsuleComponent*                           BarrelCollision;                                           // 0x0B90(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 
 
 	static UClass* StaticClass()

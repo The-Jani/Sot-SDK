@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,13 +20,13 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShipStorageBarrel_Cannonball.BP_ShipStorageBarrel_Cannonball_C
-// 0x0018 (FullSize[0x0530] - InheritedSize[0x0518])
+// 0x0018 (FullSize[0x0538] - InheritedSize[0x0520])
 class ABP_ShipStorageBarrel_Cannonball_C : public AStorageContainer
 {
 public:
-	class UReplenishableComponent*                     Replenishable;                                             // 0x0518(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UShipTelemetrySubjectComponent*              ShipTelemetrySubject;                                      // 0x0520(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UStorageContainerComponent*                  StorageContainer;                                          // 0x0528(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UReplenishableComponent*                     Replenishable;                                             // 0x0520(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UShipTelemetrySubjectComponent*              ShipTelemetrySubject;                                      // 0x0528(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UStorageContainerComponent*                  StorageContainer;                                          // 0x0530(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 
 
 	static UClass* StaticClass()

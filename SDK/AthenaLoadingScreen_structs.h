@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -18,38 +18,6 @@ namespace CG
 //---------------------------------------------------------------------------
 // Script Structs
 //---------------------------------------------------------------------------
-
-// ScriptStruct AthenaLoadingScreen.EventAthenaLoadingScreenBlockUntilUIIntialisedClear
-// 0x0010
-struct FEventAthenaLoadingScreenBlockUntilUIIntialisedClear
-{
-	struct FString                                     Description;                                               // 0x0000(0x0010) (BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaLoadingScreen.EventAthenaLoadingScreenBlockUntilUIIntialised
-// 0x0010
-struct FEventAthenaLoadingScreenBlockUntilUIIntialised
-{
-	struct FString                                     Description;                                               // 0x0000(0x0010) (BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaLoadingScreen.EventAthenaLoadingScreenClose
-// 0x0001
-struct FEventAthenaLoadingScreenClose
-{
-	unsigned char                                      UnknownData_JN94[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaLoadingScreen.EventAthenaLoadingScreenOpen
-// 0x0001
-struct FEventAthenaLoadingScreenOpen
-{
-	unsigned char                                      UnknownData_ZJDB[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
 
 // ScriptStruct AthenaLoadingScreen.SlateLoadingScreenImageParams
 // 0x0020
@@ -72,7 +40,39 @@ struct FEventAthenaLoadingScreenStateResponse
 // 0x0001
 struct FEventAthenaLoadingScreenStateRequest
 {
-	unsigned char                                      UnknownData_X5JU[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_UJU7[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaLoadingScreen.EventAthenaLoadingScreenBlockUntilUIIntialisedClear
+// 0x0010
+struct FEventAthenaLoadingScreenBlockUntilUIIntialisedClear
+{
+	struct FString                                     Description;                                               // 0x0000(0x0010) (BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaLoadingScreen.EventAthenaLoadingScreenBlockUntilUIIntialised
+// 0x0010
+struct FEventAthenaLoadingScreenBlockUntilUIIntialised
+{
+	struct FString                                     Description;                                               // 0x0000(0x0010) (BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaLoadingScreen.EventAthenaLoadingScreenClose
+// 0x0001
+struct FEventAthenaLoadingScreenClose
+{
+	unsigned char                                      UnknownData_292R[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaLoadingScreen.EventAthenaLoadingScreenOpen
+// 0x0001
+struct FEventAthenaLoadingScreenOpen
+{
+	unsigned char                                      UnknownData_YOIU[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 

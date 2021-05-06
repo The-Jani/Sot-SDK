@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -19,29 +19,12 @@ namespace CG
 // Classes
 //---------------------------------------------------------------------------
 
-// Class WwiseAudioUnitTests.WwiseEmitterComponentBlueprintLibraryTestActor
-// 0x0000 (FullSize[0x0428] - InheritedSize[0x0428])
-class AWwiseEmitterComponentBlueprintLibraryTestActor : public AActor
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class WwiseAudioUnitTests.WwiseEmitterComponentBlueprintLibraryTestActor");
-		return ptr;
-	}
-
-
-
-};
-
 // Class WwiseAudioUnitTests.MockWwiseInputManager
 // 0x0018 (FullSize[0x0040] - InheritedSize[0x0028])
 class UMockWwiseInputManager : public UObject
 {
 public:
-	unsigned char                                      UnknownData_HCX5[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PQ6Z[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
@@ -64,6 +47,23 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class WwiseAudioUnitTests.WwiseEventTest2");
+		return ptr;
+	}
+
+
+
+};
+
+// Class WwiseAudioUnitTests.WwiseEmitterComponentBlueprintLibraryTestActor
+// 0x0000 (FullSize[0x0430] - InheritedSize[0x0430])
+class AWwiseEmitterComponentBlueprintLibraryTestActor : public AActor
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class WwiseAudioUnitTests.WwiseEmitterComponentBlueprintLibraryTestActor");
 		return ptr;
 	}
 

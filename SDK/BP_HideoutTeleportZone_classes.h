@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HideoutTeleportZone.BP_HideoutTeleportZone_C
-// 0x0000 (FullSize[0x0470] - InheritedSize[0x0470])
+// 0x0000 (FullSize[0x0478] - InheritedSize[0x0478])
 class ABP_HideoutTeleportZone_C : public AHideoutEntrance
 {
 public:

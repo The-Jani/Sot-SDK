@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_LightingController.BP_LightingController_C
-// 0x0000 (FullSize[0x0E70] - InheritedSize[0x0E70])
+// 0x0000 (FullSize[0x0E90] - InheritedSize[0x0E90])
 class ABP_LightingController_C : public ALightingController
 {
 public:

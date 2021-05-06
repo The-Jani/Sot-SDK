@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.0.1
+﻿// Name: SoT, Version: 2.1.1
 
 #include "../SDK.h"
 
@@ -17,66 +17,6 @@ namespace CG
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
-
-// Function Tutorial.TutorialHelpersBlueprintLibrary.FirePromptCompleted
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UClass*                  AccessKey                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-void UTutorialHelpersBlueprintLibrary::STATIC_FirePromptCompleted(class UClass* AccessKey, class UObject* WorldContextObject)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Tutorial.TutorialHelpersBlueprintLibrary.FirePromptCompleted");
-
-	UTutorialHelpersBlueprintLibrary_FirePromptCompleted_Params params;
-	params.AccessKey = AccessKey;
-	params.WorldContextObject = WorldContextObject;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function Tutorial.TutorialManager.OnRep_SelectedTutorialClass
-// (Final, Native, Private)
-void UTutorialManager::OnRep_SelectedTutorialClass()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Tutorial.TutorialManager.OnRep_SelectedTutorialClass");
-
-	UTutorialManager_OnRep_SelectedTutorialClass_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function Tutorial.CompanyOnboardingStarter.HasPrerequisites
-// (Native, Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-bool UCompanyOnboardingStarter::HasPrerequisites()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Tutorial.CompanyOnboardingStarter.HasPrerequisites");
-
-	UCompanyOnboardingStarter_HasPrerequisites_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
 
 // Function Tutorial.CompanyTutorialVoyageProgress.IsSameVoyage
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
@@ -219,6 +159,66 @@ struct FTeleportLocation UTutorial2019FunctionLibrary::STATIC_GetNearestOnboardi
 
 	UTutorial2019FunctionLibrary_GetNearestOnboardingSpawnPoint_Params params;
 	params.CharacterToTeleport = CharacterToTeleport;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
+}
+
+
+// Function Tutorial.TutorialHelpersBlueprintLibrary.FirePromptCompleted
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  AccessKey                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+void UTutorialHelpersBlueprintLibrary::STATIC_FirePromptCompleted(class UClass* AccessKey, class UObject* WorldContextObject)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Tutorial.TutorialHelpersBlueprintLibrary.FirePromptCompleted");
+
+	UTutorialHelpersBlueprintLibrary_FirePromptCompleted_Params params;
+	params.AccessKey = AccessKey;
+	params.WorldContextObject = WorldContextObject;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function Tutorial.TutorialManager.OnRep_SelectedTutorialClass
+// (Final, Native, Private)
+void UTutorialManager::OnRep_SelectedTutorialClass()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Tutorial.TutorialManager.OnRep_SelectedTutorialClass");
+
+	UTutorialManager_OnRep_SelectedTutorialClass_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function Tutorial.CompanyOnboardingStarter.HasPrerequisites
+// (Native, Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+bool UCompanyOnboardingStarter::HasPrerequisites()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Tutorial.CompanyOnboardingStarter.HasPrerequisites");
+
+	UCompanyOnboardingStarter_HasPrerequisites_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;

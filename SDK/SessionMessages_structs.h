@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -23,7 +23,7 @@ namespace CG
 // 0x0001
 struct FSessionServicePing
 {
-	unsigned char                                      UnknownData_W9RO[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_M1BG[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -31,7 +31,7 @@ struct FSessionServicePing
 // 0x0001
 struct FSessionServiceLogSubscribe
 {
-	unsigned char                                      UnknownData_RQGM[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_7IV3[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -44,7 +44,15 @@ struct FSessionServiceLog
 	struct FGuid                                       InstanceId;                                                // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	double                                             TimeSeconds;                                               // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      Verbosity;                                                 // 0x0030(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_PRXR[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_I0ND[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct SessionMessages.SessionServiceLogUnsubscribe
+// 0x0001
+struct FSessionServiceLogUnsubscribe
+{
+	unsigned char                                      UnknownData_XZTN[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -57,21 +65,13 @@ struct FSessionServicePong
 	struct FGuid                                       InstanceId;                                                // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FString                                     InstanceName;                                              // 0x0030(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	bool                                               IsConsoleBuild;                                            // 0x0040(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_DZZE[0x7];                                     // 0x0041(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MHVT[0x7];                                     // 0x0041(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FString                                     PlatformName;                                              // 0x0048(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	struct FGuid                                       SessionId;                                                 // 0x0058(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FString                                     SessionName;                                               // 0x0068(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	struct FString                                     SessionOwner;                                              // 0x0078(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	bool                                               Standalone;                                                // 0x0088(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_AQHO[0x7];                                     // 0x0089(0x0007) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct SessionMessages.SessionServiceLogUnsubscribe
-// 0x0001
-struct FSessionServiceLogUnsubscribe
-{
-	unsigned char                                      UnknownData_CRCT[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_YOMT[0x7];                                     // 0x0089(0x0007) MISSED OFFSET (PADDING)
 
 };
 

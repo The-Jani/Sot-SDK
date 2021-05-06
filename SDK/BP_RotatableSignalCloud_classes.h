@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.0.1
+// Name: SoT, Version: 2.1.1
 
 
 /*!!DEFINE!!*/
@@ -20,12 +20,12 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RotatableSignalCloud.BP_RotatableSignalCloud_C
-// 0x0010 (FullSize[0x0518] - InheritedSize[0x0508])
+// 0x0010 (FullSize[0x0520] - InheritedSize[0x0510])
 class ABP_RotatableSignalCloud_C : public AGameplayEventSignal_StaticMesh
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0508(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class URotateMeshToLocalPlayerComponent*           RotateMeshToLocalPlayer;                                   // 0x0510(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0510(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class URotateMeshToLocalPlayerComponent*           RotateMeshToLocalPlayer;                                   // 0x0518(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 
 
 	static UClass* StaticClass()

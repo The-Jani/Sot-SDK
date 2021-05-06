@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.0.1
+﻿// Name: SoT, Version: 2.1.1
 
 #include "../SDK.h"
 
@@ -45,44 +45,6 @@ void ABP_Cannon_C::UserConstructionScript()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Cannon.BP_Cannon_C.UserConstructionScript");
 
 	ABP_Cannon_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function BP_Cannon.BP_Cannon_C.OnCannonDescLoaded
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UCannonDescAsset*        CannonDesc                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-void ABP_Cannon_C::OnCannonDescLoaded(class UCannonDescAsset* CannonDesc)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Cannon.BP_Cannon_C.OnCannonDescLoaded");
-
-	ABP_Cannon_C_OnCannonDescLoaded_Params params;
-	params.CannonDesc = CannonDesc;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function BP_Cannon.BP_Cannon_C.ExecuteUbergraph_BP_Cannon
-// ()
-// Parameters:
-// int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-void ABP_Cannon_C::ExecuteUbergraph_BP_Cannon(int EntryPoint)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Cannon.BP_Cannon_C.ExecuteUbergraph_BP_Cannon");
-
-	ABP_Cannon_C_ExecuteUbergraph_BP_Cannon_Params params;
-	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.0.1
+﻿// Name: SoT, Version: 2.1.1
 
 #include "../SDK.h"
 
@@ -633,6 +633,23 @@ void UAthenaCheatManager::ToggleThirdPerson()
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.ToggleSeaClueLocationQueryDebugDisplay
+// (Final, Exec, Native, Public)
+void UAthenaCheatManager::ToggleSeaClueLocationQueryDebugDisplay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.ToggleSeaClueLocationQueryDebugDisplay");
+
+	UAthenaCheatManager_ToggleSeaClueLocationQueryDebugDisplay_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.ToggleRetailDrawDebug
 // (Final, Exec, Native, Public)
 void UAthenaCheatManager::ToggleRetailDrawDebug()
@@ -694,6 +711,23 @@ void UAthenaCheatManager::ToggleMigrationPointOfInterestChecks(bool Enabled)
 
 	UAthenaCheatManager_ToggleMigrationPointOfInterestChecks_Params params;
 	params.Enabled = Enabled;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.ToggleIslandSelectionDebugDisplay
+// (Final, Exec, Native, Public)
+void UAthenaCheatManager::ToggleIslandSelectionDebugDisplay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.ToggleIslandSelectionDebugDisplay");
+
+	UAthenaCheatManager_ToggleIslandSelectionDebugDisplay_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
@@ -3212,6 +3246,23 @@ void UAthenaCheatManager::SingleStickLeft()
 	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.SingleStickLeft");
 
 	UAthenaCheatManager_SingleStickLeft_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.SimulateTunnelFailure
+// (Final, Exec, Native, Public)
+void UAthenaCheatManager::SimulateTunnelFailure()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.SimulateTunnelFailure");
+
+	UAthenaCheatManager_SimulateTunnelFailure_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
@@ -5759,6 +5810,23 @@ void UAthenaCheatManager::RemovePetFromPlayer()
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.RemoveLostShipmentsDebugging
+// (Final, Exec, Native, Public)
+void UAthenaCheatManager::RemoveLostShipmentsDebugging()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.RemoveLostShipmentsDebugging");
+
+	UAthenaCheatManager_RemoveLostShipmentsDebugging_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.RemoveItemInSlot
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -8108,15 +8176,15 @@ void UAthenaCheatManager::EnableVoiceChatMeteringForIncomingSignals(bool Enabled
 }
 
 
-// Function AthenaCheat.AthenaCheatManager.EnableSafeWreckSpawnQueryDebugDisplay
+// Function AthenaCheat.AthenaCheatManager.EnableSelectShipwreckLocationFromValidCandidatesDebugDisplay
 // (Final, Exec, Native, Public)
 // Parameters:
 // int                            TrueFalse                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-void UAthenaCheatManager::EnableSafeWreckSpawnQueryDebugDisplay(int TrueFalse)
+void UAthenaCheatManager::EnableSelectShipwreckLocationFromValidCandidatesDebugDisplay(int TrueFalse)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.EnableSafeWreckSpawnQueryDebugDisplay");
+	static auto fn = UObject::FindObject<UFunction>("Function AthenaCheat.AthenaCheatManager.EnableSelectShipwreckLocationFromValidCandidatesDebugDisplay");
 
-	UAthenaCheatManager_EnableSafeWreckSpawnQueryDebugDisplay_Params params;
+	UAthenaCheatManager_EnableSelectShipwreckLocationFromValidCandidatesDebugDisplay_Params params;
 	params.TrueFalse = TrueFalse;
 
 	auto flags = fn->FunctionFlags;

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RailingLight_LargeShip_BowRightBack.BP_RailingLight_LargeShip_BowRightBack_C
-// 0x0000 (FullSize[0x07A9] - InheritedSize[0x07A9])
+// 0x0000 (FullSize[0x0749] - InheritedSize[0x0749])
 class ABP_RailingLight_LargeShip_BowRightBack_C : public ABP_InteractableShipRailingLight_C
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_RailingLight_LargeShip_BowRightBack.BP_RailingLight_LargeShip_BowRightBack_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_RailingLight_LargeShip_BowRightBack.BP_RailingLight_LargeShip_BowRightBack_C");
 		return ptr;
 	}
 

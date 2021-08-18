@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,13 +28,13 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MerchantContracts.MerchantContractsBlueprintLibrary");
+		static UClass* ptr = UObject::FindClass("Class MerchantContracts.MerchantContractsBlueprintLibrary");
 		return ptr;
 	}
 
 
 
-	struct FText STATIC_GetDateFromTimeLimit(const TScriptInterface<class UGameServiceProviderInterface>& ServiceProviderInterface, float TimeLimit);
+	struct FText STATIC_GetDateFromTimeLimit(float TimeLimit);
 };
 
 // Class MerchantContracts.MerchantContractsServiceInterface
@@ -46,7 +46,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MerchantContracts.MerchantContractsServiceInterface");
+		static UClass* ptr = UObject::FindClass("Class MerchantContracts.MerchantContractsServiceInterface");
 		return ptr;
 	}
 
@@ -59,14 +59,14 @@ public:
 class UMerchantContractsService : public UObject
 {
 public:
-	unsigned char                                      UnknownData_9IK3[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_40U3[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FMerchantContract>                   Contracts;                                                 // 0x0030(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_7FWV[0x18];                                    // 0x0040(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_Q9R7[0x18];                                    // 0x0040(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MerchantContracts.MerchantContractsService");
+		static UClass* ptr = UObject::FindClass("Class MerchantContracts.MerchantContractsService");
 		return ptr;
 	}
 
@@ -83,7 +83,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MerchantContracts.PlayerMerchantContractsInterface");
+		static UClass* ptr = UObject::FindClass("Class MerchantContracts.PlayerMerchantContractsInterface");
 		return ptr;
 	}
 
@@ -96,13 +96,13 @@ public:
 class UPlayerMerchantContractsComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_UX3H[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QFW5[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FPlayerMerchantContract>             Contracts;                                                 // 0x00D0(0x0010) (Net, ZeroConstructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MerchantContracts.PlayerMerchantContractsComponent");
+		static UClass* ptr = UObject::FindClass("Class MerchantContracts.PlayerMerchantContractsComponent");
 		return ptr;
 	}
 

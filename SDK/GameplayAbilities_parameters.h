@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -269,7 +269,6 @@ struct UAbilitySystemBlueprintLibrary_GetAbilitySystemComponent_Params
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.ForwardGameplayCueToTarget
 struct UAbilitySystemBlueprintLibrary_ForwardGameplayCueToTarget_Params
 {
-	TScriptInterface<class UGameplayCueInterface>      TargetCueInterface;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 	TEnumAsByte<GameplayAbilities_EGameplayCueEvent>   EventType;                                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGameplayCueParameters                      Parameters;                                                // (Parm)
 };

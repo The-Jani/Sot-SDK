@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -30,7 +30,7 @@ namespace CG
 // bool                           Hit_Max                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_DriveValueToClampByDelta(float* Value, float Min, float Max, float Delta, class UObject* __WorldContext, bool* Hit_Min, bool* Hit_Max)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.DriveValueToClampByDelta");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.DriveValueToClampByDelta");
 
 	UBP_LocomotionFunctionLibrary_C_DriveValueToClampByDelta_Params params;
 	params.Min = Min;
@@ -63,7 +63,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_DriveValueToClampByDelta(float* Val
 // struct FVector                 Location_On_Rope               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_FindSailControlHandIKPositionFromAnimation(const struct FVector& Animation_Hand_IK_Location, const struct FVector& LowerRopeLocation, const struct FVector& UpperRopeLocation, class UObject* __WorldContext, struct FVector* Location_On_Rope)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.FindSailControlHandIKPositionFromAnimation");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.FindSailControlHandIKPositionFromAnimation");
 
 	UBP_LocomotionFunctionLibrary_C_FindSailControlHandIKPositionFromAnimation_Params params;
 	params.Animation_Hand_IK_Location = Animation_Hand_IK_Location;
@@ -91,7 +91,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_FindSailControlHandIKPositionFromAn
 // class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_ArrayLoadingFromDataDrivenBlendSpace(TArray<class UBlendSpace*>* TargetArrayBlendspace, TArray<class UBlendSpace*>* LoadedArrayDataBlendspace, class UBlendSpace* FallbackBlendspace, class UObject* __WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.ArrayLoadingFromDataDrivenBlendSpace");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.ArrayLoadingFromDataDrivenBlendSpace");
 
 	UBP_LocomotionFunctionLibrary_C_ArrayLoadingFromDataDrivenBlendSpace_Params params;
 	params.FallbackBlendspace = FallbackBlendspace;
@@ -119,7 +119,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_ArrayLoadingFromDataDrivenBlendSpac
 // class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_ArrayLoadingFromDataDriven1DBlendSpace(TArray<class UBlendSpace1D*>* TargetArray_1D, TArray<class UBlendSpace1D*>* LoadedArrayData_1D, class UBlendSpace1D* FallbackBlendspace1D, class UObject* __WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.ArrayLoadingFromDataDriven1DBlendSpace");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.ArrayLoadingFromDataDriven1DBlendSpace");
 
 	UBP_LocomotionFunctionLibrary_C_ArrayLoadingFromDataDriven1DBlendSpace_Params params;
 	params.FallbackBlendspace1D = FallbackBlendspace1D;
@@ -147,7 +147,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_ArrayLoadingFromDataDriven1DBlendSp
 // class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_ArrayLoadingFromDataDriven(TArray<class UAnimSequence*>* TargetArray, TArray<class UAnimSequence*>* LoadedArrayData, class UAnimSequence* FallBackAnimation, class UObject* __WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.ArrayLoadingFromDataDriven");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.ArrayLoadingFromDataDriven");
 
 	UBP_LocomotionFunctionLibrary_C_ArrayLoadingFromDataDriven_Params params;
 	params.FallBackAnimation = FallBackAnimation;
@@ -181,7 +181,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_ArrayLoadingFromDataDriven(TArray<c
 // class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_Update_IK_Limb_Controls(class USkeletalMeshComponent* SkeletalMeshComponent, TEnumAsByte<EIKLimbName_EIKLimbName> Limb_ID, bool Active, TEnumAsByte<Animation_ELimbIKSpace> Coordinate_Space, float Translation_Strength, float Rotation_Strength, const struct FTransform& Transform, float BlendIn, float BlendOut, class UObject* __WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Update IK Limb Controls");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Update IK Limb Controls");
 
 	UBP_LocomotionFunctionLibrary_C_Update_IK_Limb_Controls_Params params;
 	params.SkeletalMeshComponent = SkeletalMeshComponent;
@@ -211,7 +211,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Update_IK_Limb_Controls(class USkel
 // class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_Decrement_Integer(int* Value, int Decrement, class UObject* __WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Decrement Integer");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Decrement Integer");
 
 	UBP_LocomotionFunctionLibrary_C_Decrement_Integer_Params params;
 	params.Decrement = Decrement;
@@ -236,7 +236,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Decrement_Integer(int* Value, int D
 // class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_Increment_Integer(int* integer, int Increment, class UObject* __WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Increment Integer");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Increment Integer");
 
 	UBP_LocomotionFunctionLibrary_C_Increment_Integer_Params params;
 	params.Increment = Increment;
@@ -263,7 +263,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Increment_Integer(int* integer, int
 // class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_Calculate_Turn_Times(bool TurnLeft, float CurrentControllerYaw, float* PreviousControllerYaw, struct FBP_Turning* Turning, class UObject* __WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Calculate Turn Times");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Calculate Turn Times");
 
 	UBP_LocomotionFunctionLibrary_C_Calculate_Turn_Times_Params params;
 	params.TurnLeft = TurnLeft;
@@ -294,7 +294,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Calculate_Turn_Times(bool TurnLeft,
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool UBP_LocomotionFunctionLibrary_C::STATIC_InRangeAndRate(bool InZone, float Min, float Max, struct FBP_Turning* Turning, class UObject* __WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.InRangeAndRate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.InRangeAndRate");
 
 	UBP_LocomotionFunctionLibrary_C_InRangeAndRate_Params params;
 	params.InZone = InZone;
@@ -323,7 +323,7 @@ bool UBP_LocomotionFunctionLibrary_C::STATIC_InRangeAndRate(bool InZone, float M
 // class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_Turn_State_Change_Check(struct FBP_Turning* Turning, bool InZone, class UObject* __WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Turn State Change Check");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Turn State Change Check");
 
 	UBP_LocomotionFunctionLibrary_C_Turn_State_Change_Check_Params params;
 	params.InZone = InZone;
@@ -350,7 +350,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Turn_State_Change_Check(struct FBP_
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool UBP_LocomotionFunctionLibrary_C::STATIC_Not_In_Range(float Value, float Min, float Max, class UObject* __WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Not In Range");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Not In Range");
 
 	UBP_LocomotionFunctionLibrary_C_Not_In_Range_Params params;
 	params.Value = Value;
@@ -375,7 +375,7 @@ bool UBP_LocomotionFunctionLibrary_C::STATIC_Not_In_Range(float Value, float Min
 // class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_Update_Animation_Turn_State(struct FBP_Turning* Turning, class UObject* __WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Update Animation Turn State");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Update Animation Turn State");
 
 	UBP_LocomotionFunctionLibrary_C_Update_Animation_Turn_State_Params params;
 	params.__WorldContext = __WorldContext;
@@ -403,7 +403,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Update_Animation_Turn_State(struct 
 // class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_Update_Animation_Turn_Time(bool TurningLeft, float* CurrentTurnAngle, float Reset_Angle, float* Previous_Controller_Yaw, float Current_Controller_Yaw, float* Animation_Time, class UObject* __WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Update Animation Turn Time");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Update Animation Turn Time");
 
 	UBP_LocomotionFunctionLibrary_C_Update_Animation_Turn_Time_Params params;
 	params.TurningLeft = TurningLeft;
@@ -439,7 +439,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Update_Animation_Turn_Time(bool Tur
 // class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_JumpingLogic(class ACharacter* PlayerCharacter, float MovementSpeed, float FrameDelta, float* JumpImpactTimerMax, TEnumAsByte<EJumping_EJumping>* JumpingState, float* PreImpactTime, float* JumpImpactTimer, class UObject* __WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.JumpingLogic");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.JumpingLogic");
 
 	UBP_LocomotionFunctionLibrary_C_JumpingLogic_Params params;
 	params.PlayerCharacter = PlayerCharacter;
@@ -477,7 +477,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_JumpingLogic(class ACharacter* Play
 // class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_Ik_Blending(float* BlendCounter, bool IKON, float* Translation_Strength, float* Rotation_Strength, TEnumAsByte<Engine_EEasingFunc> EaseingType, float BlendMax, float FrameDeltaTime, class UObject* __WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Ik Blending");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Ik Blending");
 
 	UBP_LocomotionFunctionLibrary_C_Ik_Blending_Params params;
 	params.IKON = IKON;
@@ -512,7 +512,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Ik_Blending(float* BlendCounter, bo
 // float                          IncrementedCounter             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_Increment_Counter(float Counter, float CounterMax, float DeltaTime, class UObject* __WorldContext, bool* Hit_Max_Count, float* IncrementedCounter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Increment Counter");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Increment Counter");
 
 	UBP_LocomotionFunctionLibrary_C_Increment_Counter_Params params;
 	params.Counter = Counter;
@@ -544,7 +544,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Increment_Counter(float Counter, fl
 // float                          DecrementedCounter             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_Decrement_Counter(float Counter, float CounterMin, float DeltaTime, class UObject* __WorldContext, bool* Hit_Min_Count, float* DecrementedCounter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Decrement Counter");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Decrement Counter");
 
 	UBP_LocomotionFunctionLibrary_C_Decrement_Counter_Params params;
 	params.Counter = Counter;
@@ -575,7 +575,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Decrement_Counter(float Counter, fl
 // float                          Return_Val___0_1               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_Out_Over_Time(float CurrentTime, float MaxTime, TEnumAsByte<Engine_EEasingFunc> EasingType, class UObject* __WorldContext, float* Return_Val___0_1)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Out Over Time");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Out Over Time");
 
 	UBP_LocomotionFunctionLibrary_C_Out_Over_Time_Params params;
 	params.CurrentTime = CurrentTime;
@@ -604,7 +604,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Out_Over_Time(float CurrentTime, fl
 // class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_Update_Animation_Times(bool TurningLeft, float Current_Controller_Yaw, float* Previous_Controller_Yaw, struct FBP_Turning* Turning, class UObject* __WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Update Animation Times");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Update Animation Times");
 
 	UBP_LocomotionFunctionLibrary_C_Update_Animation_Times_Params params;
 	params.TurningLeft = TurningLeft;
@@ -635,7 +635,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Update_Animation_Times(bool Turning
 // class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_Update_Turn_Animations(bool TurningLeft, float CurrentYaw, float PreviousYaw, float FrameDeltaTime, struct FBP_Turning* Turning, class UObject* __WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Update Turn Animations");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Update Turn Animations");
 
 	UBP_LocomotionFunctionLibrary_C_Update_Turn_Animations_Params params;
 	params.TurningLeft = TurningLeft;
@@ -664,7 +664,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Update_Turn_Animations(bool Turning
 // float                          NewPreviousYaw                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_Fix_Yaw_Wraparound(float CurrentYaw, float PreviousYaw, class UObject* __WorldContext, float* NewPreviousYaw)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Fix Yaw Wraparound");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Fix Yaw Wraparound");
 
 	UBP_LocomotionFunctionLibrary_C_Fix_Yaw_Wraparound_Params params;
 	params.CurrentYaw = CurrentYaw;
@@ -691,7 +691,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_Fix_Yaw_Wraparound(float CurrentYaw
 // bool                           ReflexAngle                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_ReflexAngleCheck(float Direction_A, float Direction_B, class UObject* __WorldContext, bool* ReflexAngle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.ReflexAngleCheck");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.ReflexAngleCheck");
 
 	UBP_LocomotionFunctionLibrary_C_ReflexAngleCheck_Params params;
 	params.Direction_A = Direction_A;
@@ -718,7 +718,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_ReflexAngleCheck(float Direction_A,
 // float                          Yaw                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_ControllerRotation(class ACharacter* Character, class UObject* __WorldContext, float* Pitch, float* Yaw)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.ControllerRotation");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.ControllerRotation");
 
 	UBP_LocomotionFunctionLibrary_C_ControllerRotation_Params params;
 	params.Character = Character;
@@ -746,7 +746,7 @@ void UBP_LocomotionFunctionLibrary_C::STATIC_ControllerRotation(class ACharacter
 // float                          Speed                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_LocomotionFunctionLibrary_C::STATIC_Character_Speed(class ACharacter* Character, class UObject* __WorldContext, struct FVector* Velocity, float* Speed)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Character Speed");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LocomotionFunctionLibrary.BP_LocomotionFunctionLibrary_C.Character Speed");
 
 	UBP_LocomotionFunctionLibrary_C_Character_Speed_Params params;
 	params.Character = Character;

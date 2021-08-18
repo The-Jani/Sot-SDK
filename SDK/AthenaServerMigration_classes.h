@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaServerMigration.AthenaServerMigrationGameAuthorityProviderInterface");
+		static UClass* ptr = UObject::FindClass("Class AthenaServerMigration.AthenaServerMigrationGameAuthorityProviderInterface");
 		return ptr;
 	}
 
@@ -45,7 +45,26 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaServerMigration.MigrationServiceInterface");
+		static UClass* ptr = UObject::FindClass("Class AthenaServerMigration.MigrationServiceInterface");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaServerMigration.RegisterServerMigrationPointOfInterestComponent
+// 0x0020 (FullSize[0x00E8] - InheritedSize[0x00C8])
+class URegisterServerMigrationPointOfInterestComponent : public UActorComponent
+{
+public:
+	float                                              MigrationRadius;                                           // 0x00C8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_257I[0x1C];                                    // 0x00CC(0x001C) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class AthenaServerMigration.RegisterServerMigrationPointOfInterestComponent");
 		return ptr;
 	}
 
@@ -62,7 +81,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaServerMigration.ServerMigrationGatherableActorInterface");
+		static UClass* ptr = UObject::FindClass("Class AthenaServerMigration.ServerMigrationGatherableActorInterface");
 		return ptr;
 	}
 

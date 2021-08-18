@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -18,13 +18,57 @@ namespace CG
 // Functions
 //---------------------------------------------------------------------------
 
+// Function AthenaInput.CompositeInputHandler.SetNotificationInputHandler
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// class UClass*                  Id                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// struct FScriptDelegate         Handler                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+void UCompositeInputHandler::SetNotificationInputHandler(class UClass* Id, const struct FScriptDelegate& Handler)
+{
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaInput.CompositeInputHandler.SetNotificationInputHandler");
+
+	UCompositeInputHandler_SetNotificationInputHandler_Params params;
+	params.Id = Id;
+	params.Handler = Handler;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function AthenaInput.CompositeInputHandler.SetAnalogInputHandler
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// class UClass*                  Id                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// struct FScriptDelegate         Handler                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+void UCompositeInputHandler::SetAnalogInputHandler(class UClass* Id, const struct FScriptDelegate& Handler)
+{
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaInput.CompositeInputHandler.SetAnalogInputHandler");
+
+	UCompositeInputHandler_SetAnalogInputHandler_Params params;
+	params.Id = Id;
+	params.Handler = Handler;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
 // Function AthenaInput.InputBinder.SpoofNotificationInput
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class UClass*                  Id                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 void UInputBinder::SpoofNotificationInput(class UClass* Id)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.InputBinder.SpoofNotificationInput");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaInput.InputBinder.SpoofNotificationInput");
 
 	UInputBinder_SpoofNotificationInput_Params params;
 	params.Id = Id;
@@ -45,7 +89,7 @@ void UInputBinder::SpoofNotificationInput(class UClass* Id)
 // float                          Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UInputBinder::SpoofAnalogInput(class UClass* Id, float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.InputBinder.SpoofAnalogInput");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaInput.InputBinder.SpoofAnalogInput");
 
 	UInputBinder_SpoofAnalogInput_Params params;
 	params.Id = Id;
@@ -67,7 +111,7 @@ void UInputBinder::SpoofAnalogInput(class UClass* Id, float Value)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool UInputBinder::IsContinuousActionActive(class UClass* BeginNotificationInputId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.InputBinder.IsContinuousActionActive");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaInput.InputBinder.IsContinuousActionActive");
 
 	UInputBinder_IsContinuousActionActive_Params params;
 	params.BeginNotificationInputId = BeginNotificationInputId;
@@ -89,7 +133,7 @@ bool UInputBinder::IsContinuousActionActive(class UClass* BeginNotificationInput
 // bool                           InShouldIgnore                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UInputBinder::IgnoreNonSpoofedInput(bool InShouldIgnore)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.InputBinder.IgnoreNonSpoofedInput");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaInput.InputBinder.IgnoreNonSpoofedInput");
 
 	UInputBinder_IgnoreNonSpoofedInput_Params params;
 	params.InShouldIgnore = InShouldIgnore;
@@ -110,7 +154,7 @@ void UInputBinder::IgnoreNonSpoofedInput(bool InShouldIgnore)
 // TEnumAsByte<AthenaInput_EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 TEnumAsByte<AthenaInput_EInputHandlerResult> UInputHandlerInterface::HandleNotificationInput(class UClass* Id)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.InputHandlerInterface.HandleNotificationInput");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaInput.InputHandlerInterface.HandleNotificationInput");
 
 	UInputHandlerInterface_HandleNotificationInput_Params params;
 	params.Id = Id;
@@ -134,7 +178,7 @@ TEnumAsByte<AthenaInput_EInputHandlerResult> UInputHandlerInterface::HandleNotif
 // TEnumAsByte<AthenaInput_EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 TEnumAsByte<AthenaInput_EInputHandlerResult> UInputHandlerInterface::HandleAnalogInput(class UClass* Id, float Input)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.InputHandlerInterface.HandleAnalogInput");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaInput.InputHandlerInterface.HandleAnalogInput");
 
 	UInputHandlerInterface_HandleAnalogInput_Params params;
 	params.Id = Id;
@@ -157,7 +201,7 @@ TEnumAsByte<AthenaInput_EInputHandlerResult> UInputHandlerInterface::HandleAnalo
 // TEnumAsByte<AthenaInput_EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 TEnumAsByte<AthenaInput_EInputHandlerResult> UCompositeInputDelegatorTestsCallbackHelper::OnSecondNotificationHandler()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.CompositeInputDelegatorTestsCallbackHelper.OnSecondNotificationHandler");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaInput.CompositeInputDelegatorTestsCallbackHelper.OnSecondNotificationHandler");
 
 	UCompositeInputDelegatorTestsCallbackHelper_OnSecondNotificationHandler_Params params;
 
@@ -179,7 +223,7 @@ TEnumAsByte<AthenaInput_EInputHandlerResult> UCompositeInputDelegatorTestsCallba
 // TEnumAsByte<AthenaInput_EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 TEnumAsByte<AthenaInput_EInputHandlerResult> UCompositeInputDelegatorTestsCallbackHelper::OnSecondHandler(float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.CompositeInputDelegatorTestsCallbackHelper.OnSecondHandler");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaInput.CompositeInputDelegatorTestsCallbackHelper.OnSecondHandler");
 
 	UCompositeInputDelegatorTestsCallbackHelper_OnSecondHandler_Params params;
 	params.Value = Value;
@@ -201,7 +245,7 @@ TEnumAsByte<AthenaInput_EInputHandlerResult> UCompositeInputDelegatorTestsCallba
 // TEnumAsByte<AthenaInput_EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 TEnumAsByte<AthenaInput_EInputHandlerResult> UCompositeInputDelegatorTestsCallbackHelper::OnFirstNotificationHandler()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.CompositeInputDelegatorTestsCallbackHelper.OnFirstNotificationHandler");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaInput.CompositeInputDelegatorTestsCallbackHelper.OnFirstNotificationHandler");
 
 	UCompositeInputDelegatorTestsCallbackHelper_OnFirstNotificationHandler_Params params;
 
@@ -223,7 +267,7 @@ TEnumAsByte<AthenaInput_EInputHandlerResult> UCompositeInputDelegatorTestsCallba
 // TEnumAsByte<AthenaInput_EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 TEnumAsByte<AthenaInput_EInputHandlerResult> UCompositeInputDelegatorTestsCallbackHelper::OnFirstHandler(float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.CompositeInputDelegatorTestsCallbackHelper.OnFirstHandler");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaInput.CompositeInputDelegatorTestsCallbackHelper.OnFirstHandler");
 
 	UCompositeInputDelegatorTestsCallbackHelper_OnFirstHandler_Params params;
 	params.Value = Value;
@@ -239,57 +283,13 @@ TEnumAsByte<AthenaInput_EInputHandlerResult> UCompositeInputDelegatorTestsCallba
 }
 
 
-// Function AthenaInput.CompositeInputHandler.SetNotificationInputHandler
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class UClass*                  Id                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-// struct FScriptDelegate         Handler                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
-void UCompositeInputHandler::SetNotificationInputHandler(class UClass* Id, const struct FScriptDelegate& Handler)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.CompositeInputHandler.SetNotificationInputHandler");
-
-	UCompositeInputHandler_SetNotificationInputHandler_Params params;
-	params.Id = Id;
-	params.Handler = Handler;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function AthenaInput.CompositeInputHandler.SetAnalogInputHandler
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class UClass*                  Id                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-// struct FScriptDelegate         Handler                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
-void UCompositeInputHandler::SetAnalogInputHandler(class UClass* Id, const struct FScriptDelegate& Handler)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.CompositeInputHandler.SetAnalogInputHandler");
-
-	UCompositeInputHandler_SetAnalogInputHandler_Params params;
-	params.Id = Id;
-	params.Handler = Handler;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
 // Function AthenaInput.InputHandlerFunctionLibrary.MakeCompositeInputHandler
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UCompositeInputHandler*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 class UCompositeInputHandler* UInputHandlerFunctionLibrary::STATIC_MakeCompositeInputHandler()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.InputHandlerFunctionLibrary.MakeCompositeInputHandler");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaInput.InputHandlerFunctionLibrary.MakeCompositeInputHandler");
 
 	UInputHandlerFunctionLibrary_MakeCompositeInputHandler_Params params;
 
@@ -311,7 +311,7 @@ class UCompositeInputHandler* UInputHandlerFunctionLibrary::STATIC_MakeComposite
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 struct FText UNamedNotificationInputInterface::GetNotificationInputDisplayName(class UClass* InputID)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaInput.NamedNotificationInputInterface.GetNotificationInputDisplayName");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaInput.NamedNotificationInputInterface.GetNotificationInputDisplayName");
 
 	UNamedNotificationInputInterface_GetNotificationInputDisplayName_Params params;
 	params.InputID = InputID;

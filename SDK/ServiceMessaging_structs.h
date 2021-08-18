@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -19,19 +19,19 @@ namespace CG
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct ServiceMessaging.ServiceMessagingUnsubscribedEvent
-// 0x0010
-struct FServiceMessagingUnsubscribedEvent
-{
-	struct FString                                     RoutingKey;                                                // 0x0000(0x0010) (ZeroConstructor, HasGetValueTypeHash)
-
-};
-
 // ScriptStruct ServiceMessaging.ServiceMessagingTestMessage
 // 0x0004
 struct FServiceMessagingTestMessage
 {
 	int                                                Data;                                                      // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct ServiceMessaging.ServiceMessagingUnsubscribedEvent
+// 0x0010
+struct FServiceMessagingUnsubscribedEvent
+{
+	struct FString                                     RoutingKey;                                                // 0x0000(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 
 };
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -19,128 +19,20 @@ namespace CG
 // Classes
 //---------------------------------------------------------------------------
 
-// Class EnchantedCompass.TaleQuestMultiTargetCompassRemoveTrackedLocationStepDesc
-// 0x0010 (FullSize[0x0040] - InheritedSize[0x0030])
-class UTaleQuestMultiTargetCompassRemoveTrackedLocationStepDesc : public UTaleQuestStepDesc
-{
-public:
-	struct FQuestVariableGuid                          TargetID;                                                  // 0x0030(0x0010) (Edit, DisableEditOnInstance)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestMultiTargetCompassRemoveTrackedLocationStepDesc");
-		return ptr;
-	}
-
-
-
-};
-
-// Class EnchantedCompass.TaleQuestMultiTargetCompassService
-// 0x0020 (FullSize[0x0120] - InheritedSize[0x0100])
-class UTaleQuestMultiTargetCompassService : public UTaleQuestToolService
-{
-public:
-	unsigned char                                      UnknownData_14O6[0x20];                                    // 0x0100(0x0020) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestMultiTargetCompassService");
-		return ptr;
-	}
-
-
-
-};
-
-// Class EnchantedCompass.TaleQuestMultiTargetCompassServiceDesc
-// 0x0008 (FullSize[0x0038] - InheritedSize[0x0030])
-class UTaleQuestMultiTargetCompassServiceDesc : public UTaleQuestToolServiceDesc
-{
-public:
-	class UClass*                                      CompassDesc;                                               // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestMultiTargetCompassServiceDesc");
-		return ptr;
-	}
-
-
-
-};
-
-// Class EnchantedCompass.TaleQuestSetCompassTargetToTargetStep
-// 0x0028 (FullSize[0x0090] - InheritedSize[0x0068])
-class UTaleQuestSetCompassTargetToTargetStep : public UTaleQuestStep
-{
-public:
-	unsigned char                                      UnknownData_30Z2[0x28];                                    // 0x0068(0x0028) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestSetCompassTargetToTargetStep");
-		return ptr;
-	}
-
-
-
-};
-
-// Class EnchantedCompass.TaleQuestSetCompassTargetBaseStepDesc
-// 0x0008 (FullSize[0x0038] - InheritedSize[0x0030])
-class UTaleQuestSetCompassTargetBaseStepDesc : public UTaleQuestStepDesc
-{
-public:
-	TEnumAsByte<EnchantedCompass_ETargetUpdateReason>  TargetUpdateReason;                                        // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_WC2Z[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestSetCompassTargetBaseStepDesc");
-		return ptr;
-	}
-
-
-
-};
-
-// Class EnchantedCompass.TaleQuestSetCompassTargetToActorStepDesc
-// 0x0010 (FullSize[0x0048] - InheritedSize[0x0038])
-class UTaleQuestSetCompassTargetToActorStepDesc : public UTaleQuestSetCompassTargetBaseStepDesc
-{
-public:
-	struct FQuestVariableActor                         TargetActor;                                               // 0x0038(0x0010) (Edit)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestSetCompassTargetToActorStepDesc");
-		return ptr;
-	}
-
-
-
-};
-
 // Class EnchantedCompass.MultiTargetEnchantedCompass
-// 0x0028 (FullSize[0x08D0] - InheritedSize[0x08A8])
+// 0x0030 (FullSize[0x0880] - InheritedSize[0x0850])
 class AMultiTargetEnchantedCompass : public ACompass
 {
 public:
-	TArray<struct FVector>                             Locations;                                                 // 0x08A8(0x0010) (Edit, Net, ZeroConstructor, Transient, EditConst)
-	TArray<struct FGuid>                               LocationIds;                                               // 0x08B8(0x0010) (ZeroConstructor, Transient)
-	class UInventoryItemComponent*                     InventoryItem;                                             // 0x08C8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FVector>                             Locations;                                                 // 0x0850(0x0010) (Edit, Net, ZeroConstructor, Transient, EditConst)
+	TArray<struct FGuid>                               LocationIds;                                               // 0x0860(0x0010) (ZeroConstructor, Transient)
+	class UInventoryItemComponent*                     InventoryItem;                                             // 0x0870(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_4WIQ[0x8];                                     // 0x0878(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EnchantedCompass.MultiTargetEnchantedCompass");
+		static UClass* ptr = UObject::FindClass("Class EnchantedCompass.MultiTargetEnchantedCompass");
 		return ptr;
 	}
 
@@ -149,7 +41,7 @@ public:
 };
 
 // Class EnchantedCompass.PrototypeMultiTargetEnchantedCompass
-// 0x0000 (FullSize[0x08D0] - InheritedSize[0x08D0])
+// 0x0000 (FullSize[0x0880] - InheritedSize[0x0880])
 class APrototypeMultiTargetEnchantedCompass : public AMultiTargetEnchantedCompass
 {
 public:
@@ -157,7 +49,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EnchantedCompass.PrototypeMultiTargetEnchantedCompass");
+		static UClass* ptr = UObject::FindClass("Class EnchantedCompass.PrototypeMultiTargetEnchantedCompass");
 		return ptr;
 	}
 
@@ -169,16 +61,16 @@ public:
 };
 
 // Class EnchantedCompass.TaleQuestMultiTargetCompassAddTrackedLocationStep
-// 0x0008 (FullSize[0x0070] - InheritedSize[0x0068])
+// 0x0008 (FullSize[0x0090] - InheritedSize[0x0088])
 class UTaleQuestMultiTargetCompassAddTrackedLocationStep : public UTaleQuestStep
 {
 public:
-	class UTaleQuestMultiTargetCompassAddTrackedLocationStepDesc* Desc;                                                      // 0x0068(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTaleQuestMultiTargetCompassAddTrackedLocationStepDesc* Desc;                                                      // 0x0088(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestMultiTargetCompassAddTrackedLocationStep");
+		static UClass* ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestMultiTargetCompassAddTrackedLocationStep");
 		return ptr;
 	}
 
@@ -197,7 +89,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestMultiTargetCompassAddTrackedLocationStepDesc");
+		static UClass* ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestMultiTargetCompassAddTrackedLocationStepDesc");
 		return ptr;
 	}
 
@@ -206,16 +98,125 @@ public:
 };
 
 // Class EnchantedCompass.TaleQuestMultiTargetCompassRemoveTrackedLocationStep
-// 0x0010 (FullSize[0x0078] - InheritedSize[0x0068])
+// 0x0010 (FullSize[0x0098] - InheritedSize[0x0088])
 class UTaleQuestMultiTargetCompassRemoveTrackedLocationStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData_879O[0x10];                                    // 0x0068(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HVDD[0x10];                                    // 0x0088(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestMultiTargetCompassRemoveTrackedLocationStep");
+		static UClass* ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestMultiTargetCompassRemoveTrackedLocationStep");
+		return ptr;
+	}
+
+
+
+};
+
+// Class EnchantedCompass.TaleQuestMultiTargetCompassRemoveTrackedLocationStepDesc
+// 0x0010 (FullSize[0x0040] - InheritedSize[0x0030])
+class UTaleQuestMultiTargetCompassRemoveTrackedLocationStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableGuid                          TargetID;                                                  // 0x0030(0x0010) (Edit, DisableEditOnInstance)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestMultiTargetCompassRemoveTrackedLocationStepDesc");
+		return ptr;
+	}
+
+
+
+};
+
+// Class EnchantedCompass.TaleQuestMultiTargetCompassService
+// 0x0020 (FullSize[0x0140] - InheritedSize[0x0120])
+class UTaleQuestMultiTargetCompassService : public UTaleQuestToolService
+{
+public:
+	unsigned char                                      UnknownData_4QZ7[0x20];                                    // 0x0120(0x0020) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestMultiTargetCompassService");
+		return ptr;
+	}
+
+
+
+};
+
+// Class EnchantedCompass.TaleQuestMultiTargetCompassServiceDesc
+// 0x0008 (FullSize[0x0038] - InheritedSize[0x0030])
+class UTaleQuestMultiTargetCompassServiceDesc : public UTaleQuestToolServiceDesc
+{
+public:
+	class UClass*                                      CompassDesc;                                               // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestMultiTargetCompassServiceDesc");
+		return ptr;
+	}
+
+
+
+};
+
+// Class EnchantedCompass.TaleQuestSetCompassTargetToTargetStep
+// 0x0028 (FullSize[0x00B0] - InheritedSize[0x0088])
+class UTaleQuestSetCompassTargetToTargetStep : public UTaleQuestStep
+{
+public:
+	unsigned char                                      UnknownData_UH5A[0x28];                                    // 0x0088(0x0028) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestSetCompassTargetToTargetStep");
+		return ptr;
+	}
+
+
+
+};
+
+// Class EnchantedCompass.TaleQuestSetCompassTargetBaseStepDesc
+// 0x0008 (FullSize[0x0038] - InheritedSize[0x0030])
+class UTaleQuestSetCompassTargetBaseStepDesc : public UTaleQuestStepDesc
+{
+public:
+	TEnumAsByte<EnchantedCompass_ETargetUpdateReason>  TargetUpdateReason;                                        // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_IY1I[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestSetCompassTargetBaseStepDesc");
+		return ptr;
+	}
+
+
+
+};
+
+// Class EnchantedCompass.TaleQuestSetCompassTargetToActorStepDesc
+// 0x0010 (FullSize[0x0048] - InheritedSize[0x0038])
+class UTaleQuestSetCompassTargetToActorStepDesc : public UTaleQuestSetCompassTargetBaseStepDesc
+{
+public:
+	struct FQuestVariableActor                         TargetActor;                                               // 0x0038(0x0010) (Edit)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestSetCompassTargetToActorStepDesc");
 		return ptr;
 	}
 
@@ -233,7 +234,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestSetCompassTargetToPointStepDesc");
+		static UClass* ptr = UObject::FindClass("Class EnchantedCompass.TaleQuestSetCompassTargetToPointStepDesc");
 		return ptr;
 	}
 

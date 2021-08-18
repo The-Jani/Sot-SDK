@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_Anim_Wheel_C::ExecuteUbergraph_BP_Anim_Wheel(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_Wheel.BP_Anim_Wheel_C.ExecuteUbergraph_BP_Anim_Wheel");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Anim_Wheel.BP_Anim_Wheel_C.ExecuteUbergraph_BP_Anim_Wheel");
 
 	UBP_Anim_Wheel_C_ExecuteUbergraph_BP_Anim_Wheel_Params params;
 	params.EntryPoint = EntryPoint;

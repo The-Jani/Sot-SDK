@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("AnimBlueprintGeneratedClass BP_Anim_Orderofsouls.BP_Anim_Orderofsouls_C");
+		static UClass* ptr = UObject::FindClass("AnimBlueprintGeneratedClass BP_Anim_Orderofsouls.BP_Anim_Orderofsouls_C");
 		return ptr;
 	}
 

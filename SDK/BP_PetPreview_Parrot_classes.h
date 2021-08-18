@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PetPreview_Parrot.BP_PetPreview_Parrot_C
-// 0x0000 (FullSize[0x0518] - InheritedSize[0x0518])
+// 0x0000 (FullSize[0x04C0] - InheritedSize[0x04C0])
 class ABP_PetPreview_Parrot_C : public ABP_PetPreview_Base_C
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_PetPreview_Parrot.BP_PetPreview_Parrot_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_PetPreview_Parrot.BP_PetPreview_Parrot_C");
 		return ptr;
 	}
 

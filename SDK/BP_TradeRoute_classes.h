@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,16 +20,16 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TradeRoute.BP_TradeRoute_C
-// 0x0008 (FullSize[0x0448] - InheritedSize[0x0440])
+// 0x0008 (FullSize[0x03E8] - InheritedSize[0x03E0])
 class ABP_TradeRoute_C : public ATradeRoute
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                          // 0x0440(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class USceneComponent*                             DefaultSceneRoot;                                          // 0x03E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_TradeRoute.BP_TradeRoute_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_TradeRoute.BP_TradeRoute_C");
 		return ptr;
 	}
 

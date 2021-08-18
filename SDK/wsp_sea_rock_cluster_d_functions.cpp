@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void Awsp_sea_rock_cluster_d_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function wsp_sea_rock_cluster_d.wsp_sea_rock_cluster_d_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function wsp_sea_rock_cluster_d.wsp_sea_rock_cluster_d_C.UserConstructionScript");
 
 	Awsp_sea_rock_cluster_d_C_UserConstructionScript_Params params;
 

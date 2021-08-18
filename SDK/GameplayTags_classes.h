@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -19,59 +19,20 @@ namespace CG
 // Classes
 //---------------------------------------------------------------------------
 
-// Class GameplayTags.GameplayTagsManager
-// 0x0178 (FullSize[0x01A0] - InheritedSize[0x0028])
-class UGameplayTagsManager : public UObject
-{
-public:
-	unsigned char                                      UnknownData_JMUI[0x118];                                   // 0x0028(0x0118) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<class UDataTable*>                          GameplayTagTables;                                         // 0x0140(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_8UKX[0x50];                                    // 0x0150(0x0050) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class GameplayTags.GameplayTagsManager");
-		return ptr;
-	}
-
-
-
-	struct FGameplayTag RequestGameplayTag(const struct FName& TagName, bool ErrorIfNotFound);
-};
-
-// Class GameplayTags.GameplayTagsSettings
-// 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
-class UGameplayTagsSettings : public UObject
-{
-public:
-	TArray<struct FString>                             GameplayTags;                                              // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class GameplayTags.GameplayTagsSettings");
-		return ptr;
-	}
-
-
-
-};
-
 // Class GameplayTags.EditableGameplayTagQuery
 // 0x0070 (FullSize[0x0098] - InheritedSize[0x0028])
 class UEditableGameplayTagQuery : public UObject
 {
 public:
 	struct FString                                     UserDescription;                                           // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_391Q[0x10];                                    // 0x0038(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7I0Y[0x10];                                    // 0x0038(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UEditableGameplayTagQueryExpression*         RootExpression;                                            // 0x0048(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	struct FGameplayTagQuery                           TagQueryExportText_Helper;                                 // 0x0050(0x0048)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQuery");
+		static UClass* ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQuery");
 		return ptr;
 	}
 
@@ -88,7 +49,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression");
+		static UClass* ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression");
 		return ptr;
 	}
 
@@ -106,7 +67,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AnyTagsMatch");
+		static UClass* ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AnyTagsMatch");
 		return ptr;
 	}
 
@@ -124,7 +85,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AllTagsMatch");
+		static UClass* ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AllTagsMatch");
 		return ptr;
 	}
 
@@ -142,7 +103,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_NoTagsMatch");
+		static UClass* ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_NoTagsMatch");
 		return ptr;
 	}
 
@@ -160,7 +121,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AnyExprMatch");
+		static UClass* ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AnyExprMatch");
 		return ptr;
 	}
 
@@ -178,7 +139,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AllExprMatch");
+		static UClass* ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AllExprMatch");
 		return ptr;
 	}
 
@@ -196,7 +157,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch");
+		static UClass* ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch");
 		return ptr;
 	}
 
@@ -213,7 +174,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayTags.GameplayTagAssetInterface");
+		static UClass* ptr = UObject::FindClass("Class GameplayTags.GameplayTagAssetInterface");
 		return ptr;
 	}
 
@@ -234,7 +195,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayTags.BlueprintGameplayTagLibrary");
+		static UClass* ptr = UObject::FindClass("Class GameplayTags.BlueprintGameplayTagLibrary");
 		return ptr;
 	}
 
@@ -242,15 +203,54 @@ public:
 
 	struct FGameplayTag STATIC_MakeLiteralGameplayTag(const struct FGameplayTag& Value);
 	struct FGameplayTagQuery STATIC_MakeGameplayTagQuery(const struct FGameplayTagQuery& TagQuery);
-	bool STATIC_HasAllMatchingGameplayTags(const TScriptInterface<class UGameplayTagAssetInterface>& TagContainerInterface, const struct FGameplayTagContainer& OtherContainer, bool bCountEmptyAsMatch);
+	bool STATIC_HasAllMatchingGameplayTags(const struct FGameplayTagContainer& OtherContainer, bool bCountEmptyAsMatch);
 	int STATIC_GetNumGameplayTagsInContainer(const struct FGameplayTagContainer& TagContainer);
 	bool STATIC_DoGameplayTagsMatch(const struct FGameplayTag& TagOne, const struct FGameplayTag& TagTwo, TEnumAsByte<GameplayTags_EGameplayTagMatchType> TagOneMatchType, TEnumAsByte<GameplayTags_EGameplayTagMatchType> TagTwoMatchType);
-	bool STATIC_DoesTagAssetInterfaceHaveTag(const TScriptInterface<class UGameplayTagAssetInterface>& TagContainerInterface, TEnumAsByte<GameplayTags_EGameplayTagMatchType> ContainerTagsMatchType, const struct FGameplayTag& Tag, TEnumAsByte<GameplayTags_EGameplayTagMatchType> TagMatchType);
+	bool STATIC_DoesTagAssetInterfaceHaveTag(TEnumAsByte<GameplayTags_EGameplayTagMatchType> ContainerTagsMatchType, const struct FGameplayTag& Tag, TEnumAsByte<GameplayTags_EGameplayTagMatchType> TagMatchType);
 	bool STATIC_DoesContainerMatchTagQuery(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagQuery& TagQuery);
 	bool STATIC_DoesContainerMatchAnyTagsInContainer(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagContainer& OtherContainer, bool bCountEmptyAsMatch);
 	bool STATIC_DoesContainerMatchAllTagsInContainer(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagContainer& OtherContainer, bool bCountEmptyAsMatch);
 	bool STATIC_DoesContainerHaveTag(const struct FGameplayTagContainer& TagContainer, TEnumAsByte<GameplayTags_EGameplayTagMatchType> ContainerTagsMatchType, const struct FGameplayTag& Tag, TEnumAsByte<GameplayTags_EGameplayTagMatchType> TagMatchType);
 	bool STATIC_AppendGameplayTagContainers(const struct FGameplayTagContainer& InTagContainer, struct FGameplayTagContainer* InOutTagContainer);
+};
+
+// Class GameplayTags.GameplayTagsManager
+// 0x0148 (FullSize[0x0170] - InheritedSize[0x0028])
+class UGameplayTagsManager : public UObject
+{
+public:
+	unsigned char                                      UnknownData_AWJA[0x118];                                   // 0x0028(0x0118) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<class UDataTable*>                          GameplayTagTables;                                         // 0x0140(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData_LS8C[0x20];                                    // 0x0150(0x0020) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class GameplayTags.GameplayTagsManager");
+		return ptr;
+	}
+
+
+
+	struct FGameplayTag RequestGameplayTag(const struct FName& TagName, bool ErrorIfNotFound);
+};
+
+// Class GameplayTags.GameplayTagsSettings
+// 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+class UGameplayTagsSettings : public UObject
+{
+public:
+	TArray<struct FString>                             GameplayTags;                                              // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class GameplayTags.GameplayTagsSettings");
+		return ptr;
+	}
+
+
+
 };
 
 }

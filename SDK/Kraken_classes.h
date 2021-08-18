@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,21 +20,21 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // Class Kraken.KrakenTentacle
-// 0x0138 (FullSize[0x0568] - InheritedSize[0x0430])
+// 0x0138 (FullSize[0x0508] - InheritedSize[0x03D0])
 class AKrakenTentacle : public AActor
 {
 public:
-	unsigned char                                      UnknownData_PXGX[0x20];                                    // 0x0430(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UHealthComponent*                            HealthComponent;                                           // 0x0450(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UActorDamageableComponent*                   DamageableComponent;                                       // 0x0458(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UVenomComponent*                             VenomComponent;                                            // 0x0460(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              VenomChance;                                               // 0x0468(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_PS70[0xFC];                                    // 0x046C(0x00FC) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8W3P[0x20];                                    // 0x03D0(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UHealthComponent*                            HealthComponent;                                           // 0x03F0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UActorDamageableComponent*                   DamageableComponent;                                       // 0x03F8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UVenomComponent*                             VenomComponent;                                            // 0x0400(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              VenomChance;                                               // 0x0408(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_SMR7[0xFC];                                    // 0x040C(0x00FC) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenTentacle");
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenTentacle");
 		return ptr;
 	}
 
@@ -52,7 +52,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.CoordinatedKrakenInterface");
+		static UClass* ptr = UObject::FindClass("Class Kraken.CoordinatedKrakenInterface");
 		return ptr;
 	}
 
@@ -67,13 +67,13 @@ class UCoordinatedKrakenPhaseActionsDataAsset : public UDataAsset
 public:
 	TArray<int>                                        TentaclesUsed;                                             // 0x0028(0x0010) (Edit, ZeroConstructor)
 	bool                                               KrakenHeadUsed;                                            // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_HAWR[0x7];                                     // 0x0039(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TE3O[0x7];                                     // 0x0039(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FCoordinatedKrakenAction>            Actions;                                                   // 0x0040(0x0010) (Edit, ZeroConstructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.CoordinatedKrakenPhaseActionsDataAsset");
+		static UClass* ptr = UObject::FindClass("Class Kraken.CoordinatedKrakenPhaseActionsDataAsset");
 		return ptr;
 	}
 
@@ -90,7 +90,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.EnvQueryContext_AllKrakenOccupiedLocations");
+		static UClass* ptr = UObject::FindClass("Class Kraken.EnvQueryContext_AllKrakenOccupiedLocations");
 		return ptr;
 	}
 
@@ -107,7 +107,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.EnvQueryContext_AllocatedShip");
+		static UClass* ptr = UObject::FindClass("Class Kraken.EnvQueryContext_AllocatedShip");
 		return ptr;
 	}
 
@@ -124,7 +124,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.EnvQueryContext_AllShipsInWorld");
+		static UClass* ptr = UObject::FindClass("Class Kraken.EnvQueryContext_AllShipsInWorld");
 		return ptr;
 	}
 
@@ -141,7 +141,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.EnvQueryContext_AllWatercraftsInWorld");
+		static UClass* ptr = UObject::FindClass("Class Kraken.EnvQueryContext_AllWatercraftsInWorld");
 		return ptr;
 	}
 
@@ -158,7 +158,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.EnvQueryContext_PreviousLocation");
+		static UClass* ptr = UObject::FindClass("Class Kraken.EnvQueryContext_PreviousLocation");
 		return ptr;
 	}
 
@@ -175,7 +175,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.EnvQueryGenerator_KrakenSpawnLocations");
+		static UClass* ptr = UObject::FindClass("Class Kraken.EnvQueryGenerator_KrakenSpawnLocations");
 		return ptr;
 	}
 
@@ -192,7 +192,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.EnvQueryGenerator_KrakenTentacleSpawnLocations");
+		static UClass* ptr = UObject::FindClass("Class Kraken.EnvQueryGenerator_KrakenTentacleSpawnLocations");
 		return ptr;
 	}
 
@@ -201,24 +201,24 @@ public:
 };
 
 // Class Kraken.Murk
-// 0x00A0 (FullSize[0x04D0] - InheritedSize[0x0430])
+// 0x00A0 (FullSize[0x0470] - InheritedSize[0x03D0])
 class AMurk : public AActor
 {
 public:
-	class UMurkWaterModifierZoneComponent*             WaterModifierZone;                                         // 0x0430(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                             SceneRootComponent;                                        // 0x0438(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                        InnerSheet;                                                // 0x0440(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                        OuterSheet;                                                // 0x0448(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              UnderwaterSheetHeightScale;                                // 0x0450(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YSX3[0x4];                                     // 0x0454(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UMaterialInstanceDynamic*                    InnerSheetMaterialInstance;                                // 0x0458(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*                    OuterSheetMaterialInstance;                                // 0x0460(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_0WGP[0x68];                                    // 0x0468(0x0068) MISSED OFFSET (PADDING)
+	class UMurkWaterModifierZoneComponent*             WaterModifierZone;                                         // 0x03D0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                             SceneRootComponent;                                        // 0x03D8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                        InnerSheet;                                                // 0x03E0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                        OuterSheet;                                                // 0x03E8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              UnderwaterSheetHeightScale;                                // 0x03F0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_QPO1[0x4];                                     // 0x03F4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UMaterialInstanceDynamic*                    InnerSheetMaterialInstance;                                // 0x03F8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*                    OuterSheetMaterialInstance;                                // 0x0400(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_G80O[0x68];                                    // 0x0408(0x0068) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.Murk");
+		static UClass* ptr = UObject::FindClass("Class Kraken.Murk");
 		return ptr;
 	}
 
@@ -229,32 +229,32 @@ public:
 };
 
 // Class Kraken.KrakenShipWrappingTentacle
-// 0x01F0 (FullSize[0x0758] - InheritedSize[0x0568])
+// 0x01F0 (FullSize[0x06F8] - InheritedSize[0x0508])
 class AKrakenShipWrappingTentacle : public AKrakenTentacle
 {
 public:
-	class USceneComponent*                             SceneRoot;                                                 // 0x0568(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                        TentacleCollisions;                                        // 0x0570(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                        TentacleMesh;                                              // 0x0578(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                               DamageZone;                                                // 0x0580(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                             InteractableBlockingRegions;                               // 0x0588(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                             KnockbackRegions;                                          // 0x0590(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                               TentacleHeadCollisions;                                    // 0x0598(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                             TentacleHeadKnockbackRegions;                              // 0x05A0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UKrakenShipWrappingTentacleAIAudioComponent* AudioComponent;                                            // 0x05A8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMesh*                                 LowDetailTentacleMesh;                                     // 0x05B0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FStringAssetReference                       HighDetailTentacleMeshAsset;                               // 0x05B8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FKrakenShipWrappingTentacleParams           Params;                                                    // 0x05C8(0x00F0) (Edit, DisableEditOnInstance)
-	class UMaterialInstanceDynamic*                    TentacleDynamicMaterialInstance;                           // 0x06B8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMesh*                                 HighDetailTentacleMesh;                                    // 0x06C0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FKrakenShipWrappingTentacleAnimationState   CurrentServerAnimationState;                               // 0x06C8(0x0010) (Net, Transient, RepNotify)
-	struct FKrakenShipWrappingTentacleAnimationState   PendingServerAnimationState;                               // 0x06D8(0x0010) (Net, Transient)
-	unsigned char                                      UnknownData_PNUC[0x70];                                    // 0x06E8(0x0070) MISSED OFFSET (PADDING)
+	class USceneComponent*                             SceneRoot;                                                 // 0x0508(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                        TentacleCollisions;                                        // 0x0510(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                        TentacleMesh;                                              // 0x0518(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                               DamageZone;                                                // 0x0520(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                             InteractableBlockingRegions;                               // 0x0528(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                             KnockbackRegions;                                          // 0x0530(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                               TentacleHeadCollisions;                                    // 0x0538(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                             TentacleHeadKnockbackRegions;                              // 0x0540(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UKrakenShipWrappingTentacleAIAudioComponent* AudioComponent;                                            // 0x0548(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMesh*                                 LowDetailTentacleMesh;                                     // 0x0550(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FStringAssetReference                       HighDetailTentacleMeshAsset;                               // 0x0558(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FKrakenShipWrappingTentacleParams           Params;                                                    // 0x0568(0x00F0) (Edit, DisableEditOnInstance)
+	class UMaterialInstanceDynamic*                    TentacleDynamicMaterialInstance;                           // 0x0658(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMesh*                                 HighDetailTentacleMesh;                                    // 0x0660(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FKrakenShipWrappingTentacleAnimationState   CurrentServerAnimationState;                               // 0x0668(0x0010) (Net, Transient, RepNotify)
+	struct FKrakenShipWrappingTentacleAnimationState   PendingServerAnimationState;                               // 0x0678(0x0010) (Net, Transient)
+	unsigned char                                      UnknownData_LR1B[0x70];                                    // 0x0688(0x0070) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenShipWrappingTentacle");
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenShipWrappingTentacle");
 		return ptr;
 	}
 
@@ -268,12 +268,12 @@ public:
 class UKrakenTelemetryComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_G2UH[0x108];                                   // 0x00C8(0x0108) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_COGS[0x108];                                   // 0x00C8(0x0108) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenTelemetryComponent");
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenTelemetryComponent");
 		return ptr;
 	}
 
@@ -282,32 +282,32 @@ public:
 };
 
 // Class Kraken.Kraken
-// 0x0540 (FullSize[0x0970] - InheritedSize[0x0430])
+// 0x0540 (FullSize[0x0910] - InheritedSize[0x03D0])
 class AKraken : public AActor
 {
 public:
-	unsigned char                                      UnknownData_C6XN[0x18];                                    // 0x0430(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              RelevancyDistance;                                         // 0x0448(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HWVW[0x14];                                    // 0x044C(0x0014) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              InnerRadius;                                               // 0x0460(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              OuterRadius;                                               // 0x0464(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<Kraken_EKrakenState>                   CurrentState;                                              // 0x0468(0x0001) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_AIYO[0x1A7];                                   // 0x0469(0x01A7) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class AMurk*                                       MurkActor;                                                 // 0x0610(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_LKEX[0xA0];                                    // 0x0618(0x00A0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UKrakenAICharacterAudioComponent*            KrakenAudioComponent;                                      // 0x06B8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	class UKrakenTelemetryComponent*                   KrakenTelemetryComponent;                                  // 0x06C0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	struct FEncounterParams                            SightingEncounterParams;                                   // 0x06C8(0x000C) (Edit, DisableEditOnInstance, Protected)
-	struct FEncounterParams                            CloseEncounterParams;                                      // 0x06D4(0x000C) (Edit, DisableEditOnInstance, Protected)
-	unsigned char                                      UnknownData_TG5I[0x10];                                    // 0x06E0(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FKrakenParams                               Params;                                                    // 0x06F0(0x0160) (Transient)
-	int                                                NumTentaclesRemaining;                                     // 0x0850(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_A79S[0x11C];                                   // 0x0854(0x011C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LTEB[0x18];                                    // 0x03D0(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              RelevancyDistance;                                         // 0x03E8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_SQLB[0x14];                                    // 0x03EC(0x0014) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              InnerRadius;                                               // 0x0400(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              OuterRadius;                                               // 0x0404(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<Kraken_EKrakenState>                   CurrentState;                                              // 0x0408(0x0001) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_JGTA[0x1A7];                                   // 0x0409(0x01A7) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class AMurk*                                       MurkActor;                                                 // 0x05B0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_SSXA[0xA0];                                    // 0x05B8(0x00A0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UKrakenAICharacterAudioComponent*            KrakenAudioComponent;                                      // 0x0658(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	class UKrakenTelemetryComponent*                   KrakenTelemetryComponent;                                  // 0x0660(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	struct FEncounterParams                            SightingEncounterParams;                                   // 0x0668(0x000C) (Edit, DisableEditOnInstance, Protected)
+	struct FEncounterParams                            CloseEncounterParams;                                      // 0x0674(0x000C) (Edit, DisableEditOnInstance, Protected)
+	unsigned char                                      UnknownData_59X5[0x10];                                    // 0x0680(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FKrakenParams                               Params;                                                    // 0x0690(0x0160) (Transient)
+	int                                                NumTentaclesRemaining;                                     // 0x07F0(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_SHUF[0x11C];                                   // 0x07F4(0x011C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.Kraken");
+		static UClass* ptr = UObject::FindClass("Class Kraken.Kraken");
 		return ptr;
 	}
 
@@ -328,15 +328,15 @@ public:
 	int                                                NumFrames;                                                 // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               AllowLookAround;                                           // 0x003C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               RequiresWaterHeightQuery;                                  // 0x003D(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_BME0[0x2];                                     // 0x003E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TC05[0x2];                                     // 0x003E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              AnimationPlayRateScale;                                    // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_148J[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_E5WX[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FKrakenAnimatedTentacleAnimationBoneTrack> Bones;                                                     // 0x0048(0x0010) (Edit, ZeroConstructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenAnimatedTentacleAnimationDataAsset");
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenAnimatedTentacleAnimationDataAsset");
 		return ptr;
 	}
 
@@ -354,7 +354,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenAnimatedTentacleAnimationMappingDataAsset");
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenAnimatedTentacleAnimationMappingDataAsset");
 		return ptr;
 	}
 
@@ -372,7 +372,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenAnimatedTentacleAnimationSpecDataAsset");
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenAnimatedTentacleAnimationSpecDataAsset");
 		return ptr;
 	}
 
@@ -386,13 +386,31 @@ class UKrakenAnimatedTentacleStateAnimationsDataAsset : public UDataAsset
 {
 public:
 	TAssetPtr<class UKrakenAnimatedTentacleAnimationMappingDataAsset> MappingAssetReference;                                     // 0x0028(0x001C) ELEMENT_SIZE_MISMATCH (Edit, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_UQTV[0x4];                                     // 0x0028(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_SAQZ[0x4];                                     // 0x0028(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	TArray<struct FKrakenAnimatedTentacleStateAnimationMapping> States;                                                    // 0x0048(0x0010) (Edit, ZeroConstructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenAnimatedTentacleStateAnimationsDataAsset");
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenAnimatedTentacleStateAnimationsDataAsset");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Kraken.KrakenHeadStateAnimationsDataAsset
+// 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+class UKrakenHeadStateAnimationsDataAsset : public UDataAsset
+{
+public:
+	TArray<struct FKrakenHeadStateAnimationMapping>    States;                                                    // 0x0028(0x0010) (Edit, ZeroConstructor)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenHeadStateAnimationsDataAsset");
 		return ptr;
 	}
 
@@ -401,46 +419,84 @@ public:
 };
 
 // Class Kraken.KrakenHead
-// 0x01C8 (FullSize[0x05F8] - InheritedSize[0x0430])
+// 0x0218 (FullSize[0x05E8] - InheritedSize[0x03D0])
 class AKrakenHead : public AActor
 {
 public:
-	unsigned char                                      UnknownData_OLLZ[0x8];                                     // 0x0430(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UHealthComponent*                            HealthComponent;                                           // 0x0438(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UActorDamageableComponent*                   ActorDamageableComponent;                                  // 0x0440(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UExplosionComponent*                         ExplosionComponent;                                        // 0x0448(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                             BiteAttackVFX;                                             // 0x0450(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FStatus>                             BreathingInContinuousStatusesToApply;                      // 0x0458(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	float                                              BreatheInStatusDuration;                                   // 0x0468(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZQBL[0x4];                                     // 0x046C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<struct FStatus>                             RoarContinuousStatusesToApply;                             // 0x0470(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	float                                              RoarStatusDuration;                                        // 0x0480(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_27QV[0x4];                                     // 0x0484(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UEnvQuery*                                   RoarEQSQuery;                                              // 0x0488(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                      RoarVenomSource;                                           // 0x0490(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	float                                              RoarVenomInitialDamage;                                    // 0x0498(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              RoarVenomDamageOverTime;                                   // 0x049C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              RoarVenomDamageOverTimeDuration;                           // 0x04A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_II5R[0x4];                                     // 0x04A4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UClass*                                      KnockbackDamagerType;                                      // 0x04A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	struct FKnockBackInfo                              RoarKnockbackInfo;                                         // 0x04B0(0x0050) (Edit)
-	class UClass*                                      RequestedState;                                            // 0x0500(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash)
-	class USceneComponent*                             Root;                                                      // 0x0508(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_MK0E[0xC0];                                    // 0x0510(0x00C0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FName                                       BiteAttackImpactNamedPointsGroupName;                      // 0x05D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_7EL5[0x20];                                    // 0x05D8(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_V4F0[0x10];                                    // 0x03D0(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class USkeletalMeshComponent*                      SkeletalMesh;                                              // 0x03E0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UHealthComponent*                            HealthComponent;                                           // 0x03E8(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UActorDamageableComponent*                   ActorDamageableComponent;                                  // 0x03F0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                            SphereComponent;                                           // 0x03F8(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UExplosionComponent*                         ExplosionComponent;                                        // 0x0400(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                             BiteAttackVFX;                                             // 0x0408(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FStatus>                             BreathingInContinuousStatusesToApply;                      // 0x0410(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	float                                              BreatheInStatusDuration;                                   // 0x0420(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_SN9X[0x4];                                     // 0x0424(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<struct FStatus>                             RoarContinuousStatusesToApply;                             // 0x0428(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	float                                              RoarStatusDuration;                                        // 0x0438(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_F0OQ[0x4];                                     // 0x043C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UEnvQuery*                                   RoarEQSQuery;                                              // 0x0440(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                      RoarVenomSource;                                           // 0x0448(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	float                                              RoarVenomInitialDamage;                                    // 0x0450(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              RoarVenomDamageOverTime;                                   // 0x0454(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              RoarVenomDamageOverTimeDuration;                           // 0x0458(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_Q9KD[0x4];                                     // 0x045C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UClass*                                      KnockbackDamagerType;                                      // 0x0460(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	struct FKnockBackInfo                              RoarKnockbackInfo;                                         // 0x0468(0x0050) (Edit)
+	class UKrakenHeadAnimationInstance*                HeadAnimInstance;                                          // 0x04B8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                     EQSQuerierLocation;                                        // 0x04C0(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_V1JQ[0x4];                                     // 0x04CC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UKrakenHeadHealthParamsDataAsset*            KrakenHeadHealthParams;                                    // 0x04D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHeadStateChangeRequest                     HeadStateRequest;                                          // 0x04D8(0x0018) (Net, RepNotify, Protected)
+	bool                                               IsDamageEnabled;                                           // 0x04F0(0x0001) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected)
+	unsigned char                                      UnknownData_LILO[0x7];                                     // 0x04F1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class USceneComponent*                             Root;                                                      // 0x04F8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_W8GG[0xC0];                                    // 0x0500(0x00C0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FName                                       BiteAttackImpactNamedPointsGroupName;                      // 0x05C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_VM2A[0x20];                                    // 0x05C8(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenHead");
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenHead");
 		return ptr;
 	}
 
 
 
 	void RequestState(class UClass* NewState);
+	void OnRep_IsDamageEnabled();
+	void OnRep_HeadStateRequest();
 	void OnCoordinatedKrakenSpecialEvent(TEnumAsByte<Kraken_ECoordinatedKrakenSpecialEventTypes> InEventType);
+};
+
+// Class Kraken.KrakenHeadAnimationInstance
+// 0x0060 (FullSize[0x04A0] - InheritedSize[0x0440])
+class UKrakenHeadAnimationInstance : public UAnimInstance
+{
+public:
+	class UClass*                                      CurrentState;                                              // 0x0440(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	class UClass*                                      PreviousState;                                             // 0x0448(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	class UKrakenHeadStateAnimationsDataAsset*         MappingAsset;                                              // 0x0450(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              SpawnBlendTime;                                            // 0x0458(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              DefaultBlendTime;                                          // 0x045C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               IsInIntro;                                                 // 0x0460(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_IV0E[0x7];                                     // 0x0461(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UAnimMontage*                                PlayingMontage;                                            // 0x0468(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_00K3[0x10];                                    // 0x0470(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UKrakenHeadHitReactAnimationsDataAsset*      KrakenHeadHitReactionAsset;                                // 0x0480(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_FW3X[0x18];                                    // 0x0488(0x0018) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenHeadAnimationInstance");
+		return ptr;
+	}
+
+
+
 };
 
 // Class Kraken.KrakenHeadBreathingInStatus
@@ -452,7 +508,43 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenHeadBreathingInStatus");
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenHeadBreathingInStatus");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Kraken.KrakenHeadHealthParamsDataAsset
+// 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+class UKrakenHeadHealthParamsDataAsset : public UDataAsset
+{
+public:
+	TArray<struct FKrakenHeadHealthPair>               KrakenHeadHealthPairs;                                     // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenHeadHealthParamsDataAsset");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Kraken.KrakenHeadHitReactAnimationsDataAsset
+// 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+class UKrakenHeadHitReactAnimationsDataAsset : public UDataAsset
+{
+public:
+	TArray<struct FKrakenHeadHitReactAnimations>       HitReactionAnimations;                                     // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenHeadHitReactAnimationsDataAsset");
 		return ptr;
 	}
 
@@ -469,7 +561,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenHeadRoaringStatus");
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenHeadRoaringStatus");
 		return ptr;
 	}
 
@@ -487,7 +579,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenIdleBehaviourParamsDataAsset");
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenIdleBehaviourParamsDataAsset");
 		return ptr;
 	}
 
@@ -505,7 +597,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenParamsDataAsset");
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenParamsDataAsset");
 		return ptr;
 	}
 
@@ -523,7 +615,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenPlayerGrabbingBehaviourParamsDataAsset");
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenPlayerGrabbingBehaviourParamsDataAsset");
 		return ptr;
 	}
 
@@ -540,7 +632,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenServiceInterface");
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenServiceInterface");
 		return ptr;
 	}
 
@@ -549,20 +641,20 @@ public:
 };
 
 // Class Kraken.KrakenService
-// 0x0220 (FullSize[0x0650] - InheritedSize[0x0430])
+// 0x0220 (FullSize[0x05F0] - InheritedSize[0x03D0])
 class AKrakenService : public AActor
 {
 public:
-	unsigned char                                      UnknownData_V5BN[0x8];                                     // 0x0430(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FKrakenServiceParams                        KrakenServiceParams;                                       // 0x0438(0x00A0) (Transient, Protected)
-	unsigned char                                      UnknownData_EV5Y[0xA0];                                    // 0x04D8(0x00A0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class AKraken*                                     Kraken;                                                    // 0x0578(0x0008) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9XWG[0xD0];                                    // 0x0580(0x00D0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8M1J[0x8];                                     // 0x03D0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FKrakenServiceParams                        KrakenServiceParams;                                       // 0x03D8(0x00A0) (Transient, Protected)
+	unsigned char                                      UnknownData_GVHK[0xA0];                                    // 0x0478(0x00A0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class AKraken*                                     Kraken;                                                    // 0x0518(0x0008) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_M38C[0xD0];                                    // 0x0520(0x00D0) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenService");
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenService");
 		return ptr;
 	}
 
@@ -584,7 +676,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenServiceParamsDataAsset");
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenServiceParamsDataAsset");
 		return ptr;
 	}
 
@@ -602,7 +694,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenShipHittingBehaviourParamsDataAsset");
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenShipHittingBehaviourParamsDataAsset");
 		return ptr;
 	}
 
@@ -615,13 +707,13 @@ public:
 class UKrakenShipWrappingBehaviourParamsDataAsset : public UDataAsset
 {
 public:
-	unsigned char                                      UnknownData_QHSK[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YIA5[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FKrakenShipWrappingBehaviourParams          Params;                                                    // 0x0030(0x0420) (Edit, DisableEditOnInstance)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenShipWrappingBehaviourParamsDataAsset");
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenShipWrappingBehaviourParamsDataAsset");
 		return ptr;
 	}
 
@@ -638,12 +730,12 @@ public:
 	struct FVector                                     KnockbackDirection;                                        // 0x02B8(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              KnockbackTime;                                             // 0x02C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FKnockBackInfo                              KnockbackParams;                                           // 0x02C8(0x0050) (Edit)
-	unsigned char                                      UnknownData_XJ6V[0x38];                                    // 0x0318(0x0038) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_UVZ2[0x38];                                    // 0x0318(0x0038) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Kraken.KrakenShipWrappingKnockbackRegionComponent");
+		static UClass* ptr = UObject::FindClass("Class Kraken.KrakenShipWrappingKnockbackRegionComponent");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Occlusion.OcclusionInterface");
+		static UClass* ptr = UObject::FindClass("Class Occlusion.OcclusionInterface");
 		return ptr;
 	}
 
@@ -41,12 +41,12 @@ public:
 class UOcclusionService : public UObject
 {
 public:
-	unsigned char                                      UnknownData_1HF5[0x68];                                    // 0x0028(0x0068) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4U4Y[0x68];                                    // 0x0028(0x0068) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Occlusion.OcclusionService");
+		static UClass* ptr = UObject::FindClass("Class Occlusion.OcclusionService");
 		return ptr;
 	}
 

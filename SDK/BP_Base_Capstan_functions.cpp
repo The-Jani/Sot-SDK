@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -19,12 +19,12 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // Function BP_Base_Capstan.BP_Base_Capstan_C.GetArms
-// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // TArray<class ACapstanArm*>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 TArray<class ACapstanArm*> ABP_Base_Capstan_C::GetArms()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.GetArms");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.GetArms");
 
 	ABP_Base_Capstan_C_GetArms_Params params;
 
@@ -42,7 +42,7 @@ TArray<class ACapstanArm*> ABP_Base_Capstan_C::GetArms()
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_Base_Capstan_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.UserConstructionScript");
 
 	ABP_Base_Capstan_C_UserConstructionScript_Params params;
 
@@ -60,7 +60,7 @@ void ABP_Base_Capstan_C::UserConstructionScript()
 // class AAthenaCharacter*        AthenaCharacter                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Base_Capstan_C::Update_Athena_Character(class AAthenaCharacter* AthenaCharacter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.Update Athena Character");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.Update Athena Character");
 
 	ABP_Base_Capstan_C_Update_Athena_Character_Params params;
 	params.AthenaCharacter = AthenaCharacter;
@@ -79,7 +79,7 @@ void ABP_Base_Capstan_C::Update_Athena_Character(class AAthenaCharacter* AthenaC
 // float                          RotationSpeed                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Base_Capstan_C::CapstanRotationSpeed(float RotationSpeed)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.CapstanRotationSpeed");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.CapstanRotationSpeed");
 
 	ABP_Base_Capstan_C_CapstanRotationSpeed_Params params;
 	params.RotationSpeed = RotationSpeed;
@@ -98,7 +98,7 @@ void ABP_Base_Capstan_C::CapstanRotationSpeed(float RotationSpeed)
 // struct FBP_Docking             Docking                        (Parm)
 void ABP_Base_Capstan_C::DockingInterface(const struct FBP_Docking& Docking)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.DockingInterface");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.DockingInterface");
 
 	ABP_Base_Capstan_C_DockingInterface_Params params;
 	params.Docking = Docking;
@@ -120,7 +120,7 @@ void ABP_Base_Capstan_C::DockingInterface(const struct FBP_Docking& Docking)
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Base_Capstan_C::CapstanForce(float IndividualForce, const struct FTransform& LH_IK, const struct FTransform& RH_IK, class AActor* Actor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.CapstanForce");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.CapstanForce");
 
 	ABP_Base_Capstan_C_CapstanForce_Params params;
 	params.IndividualForce = IndividualForce;
@@ -143,7 +143,7 @@ void ABP_Base_Capstan_C::CapstanForce(float IndividualForce, const struct FTrans
 // struct FTransform              TransformUpdate                (Parm, IsPlainOldData, NoDestructor)
 void ABP_Base_Capstan_C::IK_Limb_Update_Transform(TEnumAsByte<EIKLimbName_EIKLimbName> LimbId, const struct FTransform& TransformUpdate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.IK Limb Update Transform");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.IK Limb Update Transform");
 
 	ABP_Base_Capstan_C_IK_Limb_Update_Transform_Params params;
 	params.LimbId = LimbId;
@@ -165,7 +165,7 @@ void ABP_Base_Capstan_C::IK_Limb_Update_Transform(TEnumAsByte<EIKLimbName_EIKLim
 // float                          BlendOut                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Base_Capstan_C::IK_Limb_Blend_Timing(TEnumAsByte<EIKLimbName_EIKLimbName> LimbId, float BlendIn, float BlendOut)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.IK Limb Blend Timing");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.IK Limb Blend Timing");
 
 	ABP_Base_Capstan_C_IK_Limb_Blend_Timing_Params params;
 	params.LimbId = LimbId;
@@ -188,7 +188,7 @@ void ABP_Base_Capstan_C::IK_Limb_Blend_Timing(TEnumAsByte<EIKLimbName_EIKLimbNam
 // float                          RotationStrength               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Base_Capstan_C::IK_Limb_Update_Strength(TEnumAsByte<EIKLimbName_EIKLimbName> LimbId, float LocationStrength, float RotationStrength)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.IK Limb Update Strength");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.IK Limb Update Strength");
 
 	ABP_Base_Capstan_C_IK_Limb_Update_Strength_Params params;
 	params.LimbId = LimbId;
@@ -211,7 +211,7 @@ void ABP_Base_Capstan_C::IK_Limb_Update_Strength(TEnumAsByte<EIKLimbName_EIKLimb
 // TEnumAsByte<Animation_ELimbIKSpace> CoordinateSpace                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Base_Capstan_C::IK_Limb_Active(TEnumAsByte<EIKLimbName_EIKLimbName> LimbId, bool Active, TEnumAsByte<Animation_ELimbIKSpace> CoordinateSpace)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.IK Limb Active");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.IK Limb Active");
 
 	ABP_Base_Capstan_C_IK_Limb_Active_Params params;
 	params.LimbId = LimbId;
@@ -234,7 +234,7 @@ void ABP_Base_Capstan_C::IK_Limb_Active(TEnumAsByte<EIKLimbName_EIKLimbName> Lim
 // float                          LegStretch                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Base_Capstan_C::IK_Limb_Stretch(float ArmStretch, float SpineStretch, float LegStretch)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.IK Limb Stretch");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.IK Limb Stretch");
 
 	ABP_Base_Capstan_C_IK_Limb_Stretch_Params params;
 	params.ArmStretch = ArmStretch;
@@ -255,7 +255,7 @@ void ABP_Base_Capstan_C::IK_Limb_Stretch(float ArmStretch, float SpineStretch, f
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Base_Capstan_C::ExecuteUbergraph_BP_Base_Capstan(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.ExecuteUbergraph_BP_Base_Capstan");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Base_Capstan.BP_Base_Capstan_C.ExecuteUbergraph_BP_Base_Capstan");
 
 	ABP_Base_Capstan_C_ExecuteUbergraph_BP_Base_Capstan_Params params;
 	params.EntryPoint = EntryPoint;

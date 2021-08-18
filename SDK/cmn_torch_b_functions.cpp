@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void Acmn_torch_b_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function cmn_torch_b.cmn_torch_b_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function cmn_torch_b.cmn_torch_b_C.UserConstructionScript");
 
 	Acmn_torch_b_C_UserConstructionScript_Params params;
 
@@ -38,7 +38,7 @@ void Acmn_torch_b_C::UserConstructionScript()
 // (Event, Public, BlueprintEvent)
 void Acmn_torch_b_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function cmn_torch_b.cmn_torch_b_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function cmn_torch_b.cmn_torch_b_C.ReceiveBeginPlay");
 
 	Acmn_torch_b_C_ReceiveBeginPlay_Params params;
 
@@ -56,7 +56,7 @@ void Acmn_torch_b_C::ReceiveBeginPlay()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void Acmn_torch_b_C::ExecuteUbergraph_cmn_torch_b(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function cmn_torch_b.cmn_torch_b_C.ExecuteUbergraph_cmn_torch_b");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function cmn_torch_b.cmn_torch_b_C.ExecuteUbergraph_cmn_torch_b");
 
 	Acmn_torch_b_C_ExecuteUbergraph_cmn_torch_b_Params params;
 	params.EntryPoint = EntryPoint;

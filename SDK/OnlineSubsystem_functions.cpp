@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -25,7 +25,7 @@ namespace CG
 // bool                           bDidBecomeActive               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UTurnBasedMatchInterface::OnMatchReceivedTurn(const struct FString& Match, bool bDidBecomeActive)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchReceivedTurn");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchReceivedTurn");
 
 	UTurnBasedMatchInterface_OnMatchReceivedTurn_Params params;
 	params.Match = Match;
@@ -45,7 +45,7 @@ void UTurnBasedMatchInterface::OnMatchReceivedTurn(const struct FString& Match, 
 // struct FString                 Match                          (Parm, ZeroConstructor, HasGetValueTypeHash)
 void UTurnBasedMatchInterface::OnMatchEnded(const struct FString& Match)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchEnded");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchEnded");
 
 	UTurnBasedMatchInterface_OnMatchEnded_Params params;
 	params.Match = Match;

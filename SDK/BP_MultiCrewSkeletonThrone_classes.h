@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,20 +20,20 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MultiCrewSkeletonThrone.BP_MultiCrewSkeletonThrone_C
-// 0x0028 (FullSize[0x04B0] - InheritedSize[0x0488])
+// 0x0028 (FullSize[0x0450] - InheritedSize[0x0428])
 class ABP_MultiCrewSkeletonThrone_C : public AMultiCrewSkeletonThrone
 {
 public:
-	class UParticleSystemComponent*                    VFX_Skull_4;                                               // 0x0488(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UParticleSystemComponent*                    VFX_Skull_3;                                               // 0x0490(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UParticleSystemComponent*                    VFX_Skull_2;                                               // 0x0498(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UParticleSystemComponent*                    VFX_Skull_1;                                               // 0x04A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UParticleSystemComponent*                    VFX_Under_Chair;                                           // 0x04A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UParticleSystemComponent*                    VFX_Skull_4;                                               // 0x0428(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UParticleSystemComponent*                    VFX_Skull_3;                                               // 0x0430(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UParticleSystemComponent*                    VFX_Skull_2;                                               // 0x0438(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UParticleSystemComponent*                    VFX_Skull_1;                                               // 0x0440(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UParticleSystemComponent*                    VFX_Under_Chair;                                           // 0x0448(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_MultiCrewSkeletonThrone.BP_MultiCrewSkeletonThrone_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_MultiCrewSkeletonThrone.BP_MultiCrewSkeletonThrone_C");
 		return ptr;
 	}
 

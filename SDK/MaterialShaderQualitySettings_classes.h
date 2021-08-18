@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -25,12 +25,12 @@ class UMaterialShaderQualitySettings : public UObject
 {
 public:
 	TMap<struct FName, class UShaderPlatformQualitySettings*> ForwardSettingMap;                                         // 0x0028(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData_R4ZM[0x8];                                     // 0x0078(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_N8T6[0x8];                                     // 0x0078(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MaterialShaderQualitySettings.MaterialShaderQualitySettings");
+		static UClass* ptr = UObject::FindClass("Class MaterialShaderQualitySettings.MaterialShaderQualitySettings");
 		return ptr;
 	}
 
@@ -44,12 +44,12 @@ class UShaderPlatformQualitySettings : public UObject
 {
 public:
 	struct FMaterialQualityOverrides                   QualityOverrides[0x3];                                     // 0x0028(0x000C) (ZeroConstructor, Config, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_CUHA[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_N91J[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MaterialShaderQualitySettings.ShaderPlatformQualitySettings");
+		static UClass* ptr = UObject::FindClass("Class MaterialShaderQualitySettings.ShaderPlatformQualitySettings");
 		return ptr;
 	}
 

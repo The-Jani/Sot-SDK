@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -223,6 +223,13 @@ struct UInteractableInterface_CanInteract_Params
 {
 	class AActor*                                      InInteractor;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+
+// Function Interaction.InteractableBlueprintFunctionLibrary.SetInteractionState
+struct UInteractableBlueprintFunctionLibrary_SetInteractionState_Params
+{
+	class AActor*                                      InteractableActor;                                         // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<Athena_EInteractableState>             NewInteractableState;                                      // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 }

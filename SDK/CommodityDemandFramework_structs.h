@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -34,43 +34,21 @@ enum class CommodityDemandFramework_ECommodityDemand : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct CommodityDemandFramework.TrackCommodityPurchaseOnServerRpc
-// 0x0030 (0x0040 - 0x0010)
-struct FTrackCommodityPurchaseOnServerRpc : public FBoxedRpc
-{
-	class UObject*                                     CommodityDemandStorageObject;                              // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	struct FName                                       NPCName;                                                   // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	struct FGuid                                       ItemOfferId;                                               // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
-	struct FString                                     ItemClientId;                                              // 0x0030(0x0010) (ZeroConstructor, Protected, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct CommodityDemandFramework.CommodityRedemptionTrackingModel
-// 0x0018
-struct FCommodityRedemptionTrackingModel
-{
-	class UClass*                                      EntitlementDesc;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	struct FName                                       NPCName;                                                   // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64_t                                            TickWhenTracked;                                           // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct CommodityDemandFramework.CommodityTrackingModel
+// ScriptStruct CommodityDemandFramework.ActiveCommodityDemands
 // 0x0020
-struct FCommodityTrackingModel
+struct FActiveCommodityDemands
 {
-	struct FGuid                                       ItemOfferId;                                               // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FName                                       NPCName;                                                   // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64_t                                            TickWhenTracked;                                           // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<uint32_t>                                   CommodityIdHashes;                                         // 0x0000(0x0010) (ZeroConstructor)
+	TArray<TEnumAsByte<CommodityDemandFramework_ECommodityDemand>> CommodityDemands;                                          // 0x0010(0x0010) (ZeroConstructor)
 
 };
 
-// ScriptStruct CommodityDemandFramework.CommodityTypeDataEntry
-// 0x0010
-struct FCommodityTypeDataEntry
+// ScriptStruct CommodityDemandFramework.ActiveNPCDemands
+// 0x0020
+struct FActiveNPCDemands
 {
-	struct FName                                       CommodityType;                                             // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FName                                       DisplayName;                                               // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<uint32_t>                                   NPCIdHashes;                                               // 0x0000(0x0010) (ZeroConstructor)
+	TArray<struct FActiveCommodityDemands>             NPCDemands;                                                // 0x0010(0x0010) (ZeroConstructor)
 
 };
 
@@ -100,29 +78,53 @@ struct FEntitlementToRedeemItems
 
 };
 
+// ScriptStruct CommodityDemandFramework.CommodityTypeDataEntry
+// 0x0010
+struct FCommodityTypeDataEntry
+{
+	struct FName                                       CommodityType;                                             // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FName                                       DisplayName;                                               // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
 // ScriptStruct CommodityDemandFramework.EventCommodityCrateRedeemed
 // 0x0018
 struct FEventCommodityCrateRedeemed
 {
-	unsigned char                                      UnknownData_4E4Z[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_XPVG[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
 
 };
 
-// ScriptStruct CommodityDemandFramework.ActiveCommodityDemands
-// 0x0020
-struct FActiveCommodityDemands
+// ScriptStruct CommodityDemandFramework.CommodityRedemptionTrackingModel
+// 0x0010
+struct FCommodityRedemptionTrackingModel
 {
-	TArray<struct FName>                               CommodityIds;                                              // 0x0000(0x0010) (ZeroConstructor)
-	TArray<TEnumAsByte<CommodityDemandFramework_ECommodityDemand>> CommodityDemands;                                          // 0x0010(0x0010) (ZeroConstructor)
+	uint16_t                                           EntitlementDesc;                                           // 0x0000(0x0002) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      NPCName;                                                   // 0x0002(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_PZC3[0x5];                                     // 0x0003(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	int64_t                                            TickWhenTracked;                                           // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
-// ScriptStruct CommodityDemandFramework.ActiveNPCDemands
+// ScriptStruct CommodityDemandFramework.CommodityTrackingModel
 // 0x0020
-struct FActiveNPCDemands
+struct FCommodityTrackingModel
 {
-	TArray<struct FName>                               NPCIds;                                                    // 0x0000(0x0010) (ZeroConstructor)
-	TArray<struct FActiveCommodityDemands>             NPCDemands;                                                // 0x0010(0x0010) (ZeroConstructor)
+	struct FGuid                                       ItemOfferId;                                               // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      NPCName;                                                   // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_PYVJ[0x7];                                     // 0x0011(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	int64_t                                            TickWhenTracked;                                           // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct CommodityDemandFramework.TrackCommodityPurchaseOnServerRpc
+// 0x0030 (0x0040 - 0x0010)
+struct FTrackCommodityPurchaseOnServerRpc : public FBoxedRpc
+{
+	class UObject*                                     CommodityDemandStorageObject;                              // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	struct FName                                       NPCName;                                                   // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	struct FGuid                                       ItemOfferId;                                               // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
+	struct FString                                     ItemClientId;                                              // 0x0030(0x0010) (ZeroConstructor, Protected, HasGetValueTypeHash)
 
 };
 

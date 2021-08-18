@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -26,7 +26,7 @@ namespace CG
 // int                            InOtherBodyIndex               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UShantyPuzzleComponent::OnEndOverlap(class AActor* InActor, class UPrimitiveComponent* InComponent, int InOtherBodyIndex)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ShantyPuzzle.ShantyPuzzleComponent.OnEndOverlap");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function ShantyPuzzle.ShantyPuzzleComponent.OnEndOverlap");
 
 	UShantyPuzzleComponent_OnEndOverlap_Params params;
 	params.InActor = InActor;
@@ -52,7 +52,7 @@ void UShantyPuzzleComponent::OnEndOverlap(class AActor* InActor, class UPrimitiv
 // struct FHitResult              SweepResult                    (ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 void UShantyPuzzleComponent::OnBeginOverlap(class AActor* InActor, class UPrimitiveComponent* InComponent, int InOtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ShantyPuzzle.ShantyPuzzleComponent.OnBeginOverlap");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function ShantyPuzzle.ShantyPuzzleComponent.OnBeginOverlap");
 
 	UShantyPuzzleComponent_OnBeginOverlap_Params params;
 	params.InActor = InActor;

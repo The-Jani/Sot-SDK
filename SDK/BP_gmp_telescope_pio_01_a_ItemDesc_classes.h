@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_gmp_telescope_pio_01_a_ItemDesc.BP_gmp_telescope_pio_01_a_ItemDesc_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_gmp_telescope_pio_01_a_ItemDesc.BP_gmp_telescope_pio_01_a_ItemDesc_C");
 		return ptr;
 	}
 

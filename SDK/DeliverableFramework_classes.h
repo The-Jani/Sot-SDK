@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,43 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class DeliverableFramework.DeliverableRequirementBase");
+		static UClass* ptr = UObject::FindClass("Class DeliverableFramework.DeliverableRequirementBase");
+		return ptr;
+	}
+
+
+
+};
+
+// Class DeliverableFramework.DeliverableInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UDeliverableInterface : public UInterface
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class DeliverableFramework.DeliverableInterface");
+		return ptr;
+	}
+
+
+
+};
+
+// Class DeliverableFramework.DeliverableComponent
+// 0x0010 (FullSize[0x00D8] - InheritedSize[0x00C8])
+class UDeliverableComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData_7RR2[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UDeliverableRequirementsDataAsset*           DeliveryRequirementsAsset;                                 // 0x00D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class DeliverableFramework.DeliverableComponent");
 		return ptr;
 	}
 
@@ -46,43 +82,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class DeliverableFramework.DeliverableRequirementsDataAsset");
-		return ptr;
-	}
-
-
-
-};
-
-// Class DeliverableFramework.DeliverableInterface
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UDeliverableInterface : public UInterface
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class DeliverableFramework.DeliverableInterface");
-		return ptr;
-	}
-
-
-
-};
-
-// Class DeliverableFramework.DeliverableComponent
-// 0x0010 (FullSize[0x00D8] - InheritedSize[0x00C8])
-class UDeliverableComponent : public UActorComponent
-{
-public:
-	unsigned char                                      UnknownData_7E3S[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UDeliverableRequirementsDataAsset*           DeliveryRequirementsAsset;                                 // 0x00D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class DeliverableFramework.DeliverableComponent");
+		static UClass* ptr = UObject::FindClass("Class DeliverableFramework.DeliverableRequirementsDataAsset");
 		return ptr;
 	}
 
@@ -99,7 +99,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class DeliverableFramework.DeliverableTooltipCustomizerInterface");
+		static UClass* ptr = UObject::FindClass("Class DeliverableFramework.DeliverableTooltipCustomizerInterface");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,16 +20,16 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_msc_banjo_leg_01_a_ItemInfo.BP_msc_banjo_leg_01_a_ItemInfo_C
-// 0x0008 (FullSize[0x0570] - InheritedSize[0x0568])
+// 0x0008 (FullSize[0x0518] - InheritedSize[0x0510])
 class ABP_msc_banjo_leg_01_a_ItemInfo_C : public AItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                          // 0x0568(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class USceneComponent*                             DefaultSceneRoot;                                          // 0x0510(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_msc_banjo_leg_01_a_ItemInfo.BP_msc_banjo_leg_01_a_ItemInfo_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_msc_banjo_leg_01_a_ItemInfo.BP_msc_banjo_leg_01_a_ItemInfo_C");
 		return ptr;
 	}
 

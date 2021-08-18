@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -75,7 +75,6 @@ struct AGeyser_Multicast_TriggerExplosion_Params
 // Function NaturalDisasters.MechanismGeyser.OnMechanismActionStateChanged
 struct AMechanismGeyser_OnMechanismActionStateChanged_Params
 {
-	TScriptInterface<class UMechanismActionInterface>  Action;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 	TEnumAsByte<Athena_EMechanismActionState>          PreviousState;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Athena_EMechanismActionState>          NewState;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                      InInstigator;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -84,7 +83,6 @@ struct AMechanismGeyser_OnMechanismActionStateChanged_Params
 // Function NaturalDisasters.MechanismGeyser.OnMechanismActionReset
 struct AMechanismGeyser_OnMechanismActionReset_Params
 {
-	TScriptInterface<class UMechanismResetInterface>   Action;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 };
 
 // Function NaturalDisasters.GeyserItemSpawnComponent.OnGeyserSpawned

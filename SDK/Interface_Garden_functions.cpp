@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -26,7 +26,7 @@ namespace CG
 // bool                           Instances_Created              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UInterface_Garden_C::Set_Garden_Parameters(float Radius, int Int, bool* Instances_Created)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interface_Garden.Interface_Garden_C.Set Garden Parameters");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Interface_Garden.Interface_Garden_C.Set Garden Parameters");
 
 	UInterface_Garden_C_Set_Garden_Parameters_Params params;
 	params.Radius = Radius;

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ObjectMessaging.ObjectMessagingDispatcherInterface");
+		static UClass* ptr = UObject::FindClass("Class ObjectMessaging.ObjectMessagingDispatcherInterface");
 		return ptr;
 	}
 
@@ -41,12 +41,12 @@ public:
 class UObjectMessagingDispatcherComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_UJT3[0xA8];                                    // 0x00C8(0x00A8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PO3R[0xA8];                                    // 0x00C8(0x00A8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ObjectMessaging.ObjectMessagingDispatcherComponent");
+		static UClass* ptr = UObject::FindClass("Class ObjectMessaging.ObjectMessagingDispatcherComponent");
 		return ptr;
 	}
 
@@ -63,7 +63,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ObjectMessaging.ObjectMessagingInterface");
+		static UClass* ptr = UObject::FindClass("Class ObjectMessaging.ObjectMessagingInterface");
 		return ptr;
 	}
 
@@ -80,7 +80,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ObjectMessaging.ObjectMessagingFunctions");
+		static UClass* ptr = UObject::FindClass("Class ObjectMessaging.ObjectMessagingFunctions");
 		return ptr;
 	}
 
@@ -96,7 +96,7 @@ public:
 	bool STATIC_IsObjectMessagingDispatcherValid(struct FObjectMessagingDispatcherHandle* Handle);
 	bool STATIC_IsHandleRegistered(struct FObjectMessagingHandle* Handle);
 	struct FObjectMessagingDispatcherHandle STATIC_GetObjectMessagingDispatcherFromActor(class UObject* Object);
-	struct FObjectMessagingDispatcherHandle STATIC_GetObjectMessagingDispatcher(const TScriptInterface<class UObjectMessagingDispatcherInterface>& ObjectMessagingDispatcher);
+	struct FObjectMessagingDispatcherHandle STATIC_GetObjectMessagingDispatcher();
 	void STATIC_FireEventWithDataFromHandle(struct FObjectMessagingDispatcherHandle* MessageDispatcher, class UStruct* EventDataStruct, const struct FString& Scope, const struct FString& ScopeId, struct FGenericStruct* Value);
 	void STATIC_FireEventWithData(struct FObjectMessagingDispatcher* MessageDispatcher, class UStruct* EventDataStruct, const struct FString& Scope, const struct FString& ScopeId, struct FGenericStruct* Value);
 };

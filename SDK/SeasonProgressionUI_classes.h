@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -46,7 +46,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonPopupAsset");
+		static UClass* ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonPopupAsset");
 		return ptr;
 	}
 
@@ -64,7 +64,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonPopupListAsset");
+		static UClass* ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonPopupListAsset");
 		return ptr;
 	}
 
@@ -81,7 +81,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonProgressionUIInterface");
+		static UClass* ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonProgressionUIInterface");
 		return ptr;
 	}
 
@@ -98,7 +98,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonProgressionUITelemetryInterface");
+		static UClass* ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonProgressionUITelemetryInterface");
 		return ptr;
 	}
 
@@ -111,17 +111,17 @@ public:
 class USeasonProgressionUIComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_EBWQ[0x10];                                    // 0x00C8(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_I45J[0x10];                                    // 0x00C8(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class USeasonProgressionUIInputBinder*             InputBinder;                                               // 0x00D8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USeasonProgressionUICompositeInputHandler*   InputHandler;                                              // 0x00E0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FEnableMoreButtonEvent>              DetailsNavigationDesc;                                     // 0x00E8(0x0010) (ZeroConstructor)
 	struct FSeasonProgressionUITelemetryFragment       NextReceivedEventsTelemetryData;                           // 0x00F8(0x0018)
-	unsigned char                                      UnknownData_WL5T[0xB8];                                    // 0x0110(0x00B8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_IYLS[0xB8];                                    // 0x0110(0x00B8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonProgressionUIComponent");
+		static UClass* ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonProgressionUIComponent");
 		return ptr;
 	}
 
@@ -135,12 +135,12 @@ public:
 class USeasonProgressionUICompositeInputHandler : public UCompositeInputHandler
 {
 public:
-	unsigned char                                      UnknownData_LO91[0x20];                                    // 0x00D8(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_SAM8[0x20];                                    // 0x00D8(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonProgressionUICompositeInputHandler");
+		static UClass* ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonProgressionUICompositeInputHandler");
 		return ptr;
 	}
 
@@ -158,7 +158,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonProgressionUIInputBinder");
+		static UClass* ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonProgressionUIInputBinder");
 		return ptr;
 	}
 
@@ -175,7 +175,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonProgressionUIServiceInterface");
+		static UClass* ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonProgressionUIServiceInterface");
 		return ptr;
 	}
 
@@ -184,18 +184,18 @@ public:
 };
 
 // Class SeasonProgressionUI.SeasonProgressionUIService
-// 0x0150 (FullSize[0x0580] - InheritedSize[0x0430])
+// 0x0150 (FullSize[0x0520] - InheritedSize[0x03D0])
 class ASeasonProgressionUIService : public AActor
 {
 public:
-	unsigned char                                      UnknownData_DSAU[0x30];                                    // 0x0430(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class USeasonPopupListAsset*                       SeasonPopupListAsset;                                      // 0x0460(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2G0I[0x118];                                   // 0x0468(0x0118) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3ADN[0x30];                                    // 0x03D0(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class USeasonPopupListAsset*                       SeasonPopupListAsset;                                      // 0x0400(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_XT2K[0x118];                                   // 0x0408(0x0118) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonProgressionUIService");
+		static UClass* ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonProgressionUIService");
 		return ptr;
 	}
 
@@ -213,7 +213,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonProgressionUISettings");
+		static UClass* ptr = UObject::FindClass("Class SeasonProgressionUI.SeasonProgressionUISettings");
 		return ptr;
 	}
 

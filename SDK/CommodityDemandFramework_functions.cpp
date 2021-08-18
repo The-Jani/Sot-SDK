@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Final, RequiredAPI, Native, Private)
 void ACommodityDemandService::OnRep_ActiveCommodityDemands()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CommodityDemandFramework.CommodityDemandService.OnRep_ActiveCommodityDemands");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function CommodityDemandFramework.CommodityDemandService.OnRep_ActiveCommodityDemands");
 
 	ACommodityDemandService_OnRep_ActiveCommodityDemands_Params params;
 

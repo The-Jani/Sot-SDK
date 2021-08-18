@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MysteriousNote.BP_MysteriousNote_C
-// 0x0000 (FullSize[0x0980] - InheritedSize[0x0980])
+// 0x0000 (FullSize[0x0920] - InheritedSize[0x0920])
 class ABP_MysteriousNote_C : public AWieldableMysteriousNote
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_MysteriousNote.BP_MysteriousNote_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_MysteriousNote.BP_MysteriousNote_C");
 		return ptr;
 	}
 

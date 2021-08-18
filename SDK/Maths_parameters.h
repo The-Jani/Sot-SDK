@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -283,6 +283,16 @@ struct UFloatMaths_IncrementCounter_Params
 	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
 
+// Function Maths.FloatMaths.GetShortestSignedDistanceBetweenPointsInWrappedRange
+struct UFloatMaths_GetShortestSignedDistanceBetweenPointsInWrappedRange_Params
+{
+	float                                              FromValue;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              ToValue;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              LowerLimit;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              UpperLimit;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
 // Function Maths.FloatMaths.FindMidpointInWrappedRange
 struct UFloatMaths_FindMidpointInWrappedRange_Params
 {
@@ -389,6 +399,25 @@ struct URotationMaths_RotatorToQuat_Params
 {
 	struct FRotator                                    Rotation;                                                  // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
 	struct FQuat                                       ReturnValue;                                               // (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor)
+};
+
+// Function Maths.RotationMaths.RotateDirectionInterpConstantTo
+struct URotationMaths_RotateDirectionInterpConstantTo_Params
+{
+	struct FVector                                     CurrentDirectionNormalised;                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+	struct FVector                                     TargetDirectionNormalised;                                 // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+	float                                              DeltaTime;                                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              InterpSpeedRadPerSec;                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+
+// Function Maths.RotationMaths.FindRotationAxisAndRadAngleBetweenVectors
+struct URotationMaths_FindRotationAxisAndRadAngleBetweenVectors_Params
+{
+	struct FVector                                     FromVectorNormalised;                                      // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+	struct FVector                                     ToVectorNormalised;                                        // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+	struct FVector                                     OutRotationAxis;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              OutRotationAngleRadians;                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 // Function Maths.RotationMaths.AreRotatorsTheSameRotation

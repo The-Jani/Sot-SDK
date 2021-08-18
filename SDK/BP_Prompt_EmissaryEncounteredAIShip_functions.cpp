@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // struct FEmissaryEncounteredAIShipEvent NewParam                       (Parm)
 void UBP_Prompt_EmissaryEncounteredAIShip_C::OnEmissaryEncounteredAIShip(const struct FEmissaryEncounteredAIShipEvent& NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredAIShip.BP_Prompt_EmissaryEncounteredAIShip_C.OnEmissaryEncounteredAIShip");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredAIShip.BP_Prompt_EmissaryEncounteredAIShip_C.OnEmissaryEncounteredAIShip");
 
 	UBP_Prompt_EmissaryEncounteredAIShip_C_OnEmissaryEncounteredAIShip_Params params;
 	params.NewParam = NewParam;
@@ -43,7 +43,7 @@ void UBP_Prompt_EmissaryEncounteredAIShip_C::OnEmissaryEncounteredAIShip(const s
 // struct FEmissaryEncounteredAIShipEvent NewParam                       (Parm)
 void UBP_Prompt_EmissaryEncounteredAIShip_C::EmissaryEncounteredAIShip(const struct FEmissaryEncounteredAIShipEvent& NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredAIShip.BP_Prompt_EmissaryEncounteredAIShip_C.EmissaryEncounteredAIShip");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredAIShip.BP_Prompt_EmissaryEncounteredAIShip_C.EmissaryEncounteredAIShip");
 
 	UBP_Prompt_EmissaryEncounteredAIShip_C_EmissaryEncounteredAIShip_Params params;
 	params.NewParam = NewParam;
@@ -60,7 +60,7 @@ void UBP_Prompt_EmissaryEncounteredAIShip_C::EmissaryEncounteredAIShip(const str
 // (Public, BlueprintCallable, BlueprintEvent)
 void UBP_Prompt_EmissaryEncounteredAIShip_C::Evaluate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredAIShip.BP_Prompt_EmissaryEncounteredAIShip_C.Evaluate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredAIShip.BP_Prompt_EmissaryEncounteredAIShip_C.Evaluate");
 
 	UBP_Prompt_EmissaryEncounteredAIShip_C_Evaluate_Params params;
 
@@ -76,7 +76,7 @@ void UBP_Prompt_EmissaryEncounteredAIShip_C::Evaluate()
 // (Event, Public, BlueprintEvent)
 void UBP_Prompt_EmissaryEncounteredAIShip_C::RegisterOtherEvents_Implementable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredAIShip.BP_Prompt_EmissaryEncounteredAIShip_C.RegisterOtherEvents_Implementable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredAIShip.BP_Prompt_EmissaryEncounteredAIShip_C.RegisterOtherEvents_Implementable");
 
 	UBP_Prompt_EmissaryEncounteredAIShip_C_RegisterOtherEvents_Implementable_Params params;
 
@@ -92,7 +92,7 @@ void UBP_Prompt_EmissaryEncounteredAIShip_C::RegisterOtherEvents_Implementable()
 // (Event, Public, BlueprintEvent)
 void UBP_Prompt_EmissaryEncounteredAIShip_C::UnregisterOtherEvents_Implementable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredAIShip.BP_Prompt_EmissaryEncounteredAIShip_C.UnregisterOtherEvents_Implementable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredAIShip.BP_Prompt_EmissaryEncounteredAIShip_C.UnregisterOtherEvents_Implementable");
 
 	UBP_Prompt_EmissaryEncounteredAIShip_C_UnregisterOtherEvents_Implementable_Params params;
 
@@ -110,7 +110,7 @@ void UBP_Prompt_EmissaryEncounteredAIShip_C::UnregisterOtherEvents_Implementable
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_Prompt_EmissaryEncounteredAIShip_C::ExecuteUbergraph_BP_Prompt_EmissaryEncounteredAIShip(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredAIShip.BP_Prompt_EmissaryEncounteredAIShip_C.ExecuteUbergraph_BP_Prompt_EmissaryEncounteredAIShip");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredAIShip.BP_Prompt_EmissaryEncounteredAIShip_C.ExecuteUbergraph_BP_Prompt_EmissaryEncounteredAIShip");
 
 	UBP_Prompt_EmissaryEncounteredAIShip_C_ExecuteUbergraph_BP_Prompt_EmissaryEncounteredAIShip_Params params;
 	params.EntryPoint = EntryPoint;

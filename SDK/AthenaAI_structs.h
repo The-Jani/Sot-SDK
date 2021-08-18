@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -18,75 +18,6 @@ namespace CG
 //---------------------------------------------------------------------------
 // Enums
 //---------------------------------------------------------------------------
-
-// Enum AthenaAI.EAIDialogueState
-enum class AthenaAI_EAIDialogueState : uint8_t
-{
-	EAIDialogueState__Inactive     = 0,
-	EAIDialogueState__Passive      = 1,
-	EAIDialogueState__Alerted      = 2,
-	EAIDialogueState__Dead         = 3,
-	EAIDialogueState__EAIDialogueState_MAX = 4,
-
-};
-
-// Enum AthenaAI.EBountySpawnerAudioState
-enum class AthenaAI_EBountySpawnerAudioState : uint8_t
-{
-	EBountySpawnerAudioState__None = 0,
-	EBountySpawnerAudioState__Action = 1,
-	EBountySpawnerAudioState__Anticipation = 2,
-	EBountySpawnerAudioState__EBountySpawnerAudioState_MAX = 3,
-
-};
-
-// Enum AthenaAI.EBountySpawnerType
-enum class AthenaAI_EBountySpawnerType : uint8_t
-{
-	EBountySpawnerType__Default    = 0,
-	EBountySpawnerType__BountyQuest = 1,
-	EBountySpawnerType__BountyFort = 2,
-	EBountySpawnerType__EBountySpawnerType_MAX = 3,
-
-};
-
-// Enum AthenaAI.EBountyTargetRank
-enum class AthenaAI_EBountyTargetRank : uint8_t
-{
-	EBountyTargetRank__Captain     = 0,
-	EBountyTargetRank__Crew        = 1,
-	EBountyTargetRank__EBountyTargetRank_MAX = 2,
-
-};
-
-// Enum AthenaAI.EBountyTargetGender
-enum class AthenaAI_EBountyTargetGender : uint8_t
-{
-	EBountyTargetGender__Male      = 0,
-	EBountyTargetGender__Female    = 1,
-	EBountyTargetGender__EBountyTargetGender_MAX = 2,
-
-};
-
-// Enum AthenaAI.EFaunaInWaterState
-enum class AthenaAI_EFaunaInWaterState : uint8_t
-{
-	EFaunaInWaterState__NotInWater = 0,
-	EFaunaInWaterState__FloatingOnSurface = 1,
-	EFaunaInWaterState__Underwater = 2,
-	EFaunaInWaterState__EFaunaInWaterState_MAX = 3,
-
-};
-
-// Enum AthenaAI.EFaunaCratedState
-enum class AthenaAI_EFaunaCratedState : uint8_t
-{
-	EFaunaCratedState__NotInCrate  = 0,
-	EFaunaCratedState__InProxyCrate = 1,
-	EFaunaCratedState__InWieldedCrate = 2,
-	EFaunaCratedState__EFaunaCratedState_MAX = 3,
-
-};
 
 // Enum AthenaAI.EAIKnockbackStrengthType
 enum class AthenaAI_EAIKnockbackStrengthType : uint8_t
@@ -251,6 +182,27 @@ enum class AthenaAI_EFloatValueComparisonType : uint8_t
 
 };
 
+// Enum AthenaAI.ECoralShieldVFXRole
+enum class AthenaAI_ECoralShieldVFXRole : uint8_t
+{
+	ECoralShieldVFXRole__None      = 0,
+	ECoralShieldVFXRole__Caster    = 1,
+	ECoralShieldVFXRole__Receiver  = 2,
+	ECoralShieldVFXRole__ECoralShieldVFXRole_MAX = 3,
+
+};
+
+// Enum AthenaAI.ECoralShieldVFXState
+enum class AthenaAI_ECoralShieldVFXState : uint8_t
+{
+	ECoralShieldVFXState__Off      = 0,
+	ECoralShieldVFXState__Starting = 1,
+	ECoralShieldVFXState__On       = 2,
+	ECoralShieldVFXState__Ending   = 3,
+	ECoralShieldVFXState__ECoralShieldVFXState_MAX = 4,
+
+};
+
 // Enum AthenaAI.ETraceDirection
 enum class AthenaAI_ETraceDirection : uint8_t
 {
@@ -284,21 +236,91 @@ enum class AthenaAI_EOceanCrawlerAbilityAudioKey : uint8_t
 	EOceanCrawlerAbilityAudioKey__Hermit_Play_BullRushChargeUp_OneShot = 7,
 	EOceanCrawlerAbilityAudioKey__Hermit_Play_BullRushChargeGo_OneShot = 8,
 	EOceanCrawlerAbilityAudioKey__Hermit_Play_BullRushStaticImpact_OneShot = 9,
-	EOceanCrawlerAbilityAudioKey__Crab_Play_PummelWindBack_OneShot = 10,
-	EOceanCrawlerAbilityAudioKey__Crab_Play_PummelImpact_OneShot = 11,
-	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldStart_OneShot = 12,
-	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldEnd_OneShot = 13,
-	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldInterrupted_OneShot = 14,
-	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldApplied_OneShot = 15,
-	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldStopApplying_OneShot = 16,
-	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldStartCharge_OneShot = 17,
-	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldCast_OneShot = 18,
-	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldInterrupted_OneShot = 19,
-	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldAppliedToTarget_OneShot = 20,
-	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldHitToChain_OneShot = 21,
-	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldFinishedOnTarget_OneShot = 22,
-	EOceanCrawlerAbilityAudioKey__Eel_Play_EelElectricEelThrowCharge_OneShot = 23,
-	EOceanCrawlerAbilityAudioKey__EOceanCrawlerAbilityAudioKey_MAX = 24,
+	EOceanCrawlerAbilityAudioKey__Hermit_Play_BullRushCharacterImpact_OneShot = 10,
+	EOceanCrawlerAbilityAudioKey__Crab_Play_PummelWindBack_OneShot = 11,
+	EOceanCrawlerAbilityAudioKey__Crab_Play_PummelImpact_OneShot = 12,
+	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldStart_OneShot = 13,
+	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldEnd_OneShot = 14,
+	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldInterrupted_OneShot = 15,
+	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldApplied_OneShot = 16,
+	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldStopApplying_OneShot = 17,
+	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldStartCharge_OneShot = 18,
+	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldCast_OneShot = 19,
+	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldInterrupted_OneShot = 20,
+	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldAppliedToTarget_OneShot = 21,
+	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldHitToChain_OneShot = 22,
+	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldFinishedOnTarget_OneShot = 23,
+	EOceanCrawlerAbilityAudioKey__Eel_Play_EelElectricEelThrowCharge_OneShot = 24,
+	EOceanCrawlerAbilityAudioKey__EOceanCrawlerAbilityAudioKey_MAX = 25,
+
+};
+
+// Enum AthenaAI.EAIDialogueState
+enum class AthenaAI_EAIDialogueState : uint8_t
+{
+	EAIDialogueState__Inactive     = 0,
+	EAIDialogueState__Passive      = 1,
+	EAIDialogueState__Alerted      = 2,
+	EAIDialogueState__Dead         = 3,
+	EAIDialogueState__EAIDialogueState_MAX = 4,
+
+};
+
+// Enum AthenaAI.EBountySpawnerAudioState
+enum class AthenaAI_EBountySpawnerAudioState : uint8_t
+{
+	EBountySpawnerAudioState__None = 0,
+	EBountySpawnerAudioState__Action = 1,
+	EBountySpawnerAudioState__Anticipation = 2,
+	EBountySpawnerAudioState__EBountySpawnerAudioState_MAX = 3,
+
+};
+
+// Enum AthenaAI.EBountySpawnerType
+enum class AthenaAI_EBountySpawnerType : uint8_t
+{
+	EBountySpawnerType__Default    = 0,
+	EBountySpawnerType__BountyQuest = 1,
+	EBountySpawnerType__BountyFort = 2,
+	EBountySpawnerType__EBountySpawnerType_MAX = 3,
+
+};
+
+// Enum AthenaAI.EBountyTargetRank
+enum class AthenaAI_EBountyTargetRank : uint8_t
+{
+	EBountyTargetRank__Captain     = 0,
+	EBountyTargetRank__Crew        = 1,
+	EBountyTargetRank__EBountyTargetRank_MAX = 2,
+
+};
+
+// Enum AthenaAI.EBountyTargetGender
+enum class AthenaAI_EBountyTargetGender : uint8_t
+{
+	EBountyTargetGender__Male      = 0,
+	EBountyTargetGender__Female    = 1,
+	EBountyTargetGender__EBountyTargetGender_MAX = 2,
+
+};
+
+// Enum AthenaAI.EFaunaInWaterState
+enum class AthenaAI_EFaunaInWaterState : uint8_t
+{
+	EFaunaInWaterState__NotInWater = 0,
+	EFaunaInWaterState__FloatingOnSurface = 1,
+	EFaunaInWaterState__Underwater = 2,
+	EFaunaInWaterState__EFaunaInWaterState_MAX = 3,
+
+};
+
+// Enum AthenaAI.EFaunaCratedState
+enum class AthenaAI_EFaunaCratedState : uint8_t
+{
+	EFaunaCratedState__NotInCrate  = 0,
+	EFaunaCratedState__InProxyCrate = 1,
+	EFaunaCratedState__InWieldedCrate = 2,
+	EFaunaCratedState__EFaunaCratedState_MAX = 3,
 
 };
 
@@ -447,100 +469,65 @@ enum class AthenaAI_EPetSize : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct AthenaAI.AIBountySpawnerWaveLocation
-// 0x0014
-struct FAIBountySpawnerWaveLocation
-{
-	struct FVector                                     Location;                                                  // 0x0000(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                              SelectionWeight;                                           // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               AllowForTarget;                                            // 0x0010(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_4TZQ[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.AISpawnerArchive
-// 0x0008
-struct FAISpawnerArchive
-{
-	unsigned char                                      UnknownData_FF9C[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.AIBountySpawnerArchiveWaveEntry
-// 0x0004
-struct FAIBountySpawnerArchiveWaveEntry
-{
-	int                                                NumPawnsToSpawn;                                           // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.AIBountySpawnerArchiveWaveGroupEntry
+// ScriptStruct AthenaAI.AthenaAIFormComponentVfxCustomisation
 // 0x0018
-struct FAIBountySpawnerArchiveWaveGroupEntry
+struct FAthenaAIFormComponentVfxCustomisation
 {
-	int                                                NumNonTargetAIKills;                                       // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                NumTargetAIKills;                                          // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FAIBountySpawnerArchiveWaveEntry>    WaveEntries;                                               // 0x0008(0x0010) (ZeroConstructor)
+	class UClass*                                      VfxCustomisationType;                                      // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	bool                                               VfxEnabled;                                                // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_ICD6[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UObject*                                     VfxTemplate;                                               // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
-// ScriptStruct AthenaAI.AIBountySpawnerArchive
-// 0x0020 (0x0028 - 0x0008)
-struct FAIBountySpawnerArchive : public FAISpawnerArchive
+// ScriptStruct AthenaAI.AIEncounterAndWaveSettingsOverride
+// 0x0020
+struct FAIEncounterAndWaveSettingsOverride
 {
-	int                                                CurrentWaveIndex;                                          // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_BZTN[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<struct FAIBountySpawnerArchiveWaveGroupEntry> WaveGroupEntries;                                          // 0x0010(0x0010) (ZeroConstructor)
-	float                                              BountyAudioIntensity;                                      // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2YAB[0x4];                                     // 0x0024(0x0004) MISSED OFFSET (PADDING)
+	class UAIEncounterSettings*                        EncounterSettings;                                         // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAISpawnWaveSequenceRankProgression*         SpawnWaveProgression;                                      // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Chance;                                                    // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FName                                       FeatureToggle;                                             // 0x0014(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_78SN[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (PADDING)
 
 };
 
-// ScriptStruct AthenaAI.BountySpawnerNewWaveGroupSpawnedEvent
-// 0x0001
-struct FBountySpawnerNewWaveGroupSpawnedEvent
+// ScriptStruct AthenaAI.AdditionalSpawnerBehaviour
+// 0x0010
+struct FAdditionalSpawnerBehaviour
 {
-	bool                                               IsFinalWave;                                               // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	class USpawnerBehaviourStrategy*                   BehaviourStrategy;                                         // 0x0000(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_5RON[0x8];                                     // 0x0008(0x0008) MISSED OFFSET (PADDING)
 
 };
 
-// ScriptStruct AthenaAI.BountySpawnerAudioChangedNetworkEvent
-// 0x0018 (0x0028 - 0x0010)
-struct FBountySpawnerAudioChangedNetworkEvent : public FNetworkEventStruct
+// ScriptStruct AthenaAI.AISpawnOverride
+// 0x0010
+struct FAISpawnOverride
 {
-	TEnumAsByte<AthenaAI_EBountySpawnerAudioState>     AudioState;                                                // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_PQWU[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              Intensity;                                                 // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<AthenaAI_EBountySpawnerType>           BountyType;                                                // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZB68[0x3];                                     // 0x0019(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FVector                                     BountyPosition;                                            // 0x001C(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FStringAssetReference                       FormOverride;                                              // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 };
 
-// ScriptStruct AthenaAI.EventAIBountySpawnerTargetKilled
-// 0x0060
-struct FEventAIBountySpawnerTargetKilled
+// ScriptStruct AthenaAI.ConditionalAISpawnOverride
+// 0x0018
+struct FConditionalAISpawnOverride
 {
-	struct FText                                       TargetName;                                                // 0x0000(0x0018) ELEMENT_SIZE_MISMATCH
-	unsigned char                                      UnknownData_PUZ8[0x20];                                    // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FName                                       RewardId;                                                  // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AItemInfo*                                   ItemDropped;                                               // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<AthenaAI_EBountyTargetRank>            Rank;                                                      // 0x0048(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EJP8[0x3];                                     // 0x0049(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FVector                                     DeathLocation;                                             // 0x004C(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	class AActor*                                      Instigator;                                                // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAISpawnOverrideCondition*                   Condition;                                                 // 0x0000(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FAISpawnOverride                            Override;                                                  // 0x0008(0x0010) (Edit, DisableEditOnInstance)
 
 };
 
-// ScriptStruct AthenaAI.EventAIBountySpawnerWaveCompleted
-// 0x0028
-struct FEventAIBountySpawnerWaveCompleted
+// ScriptStruct AthenaAI.AISpawnContextIdEncounterSettingsPair
+// 0x0038
+struct FAISpawnContextIdEncounterSettingsPair
 {
-	struct FName                                       IslandName;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                       CrewId;                                                    // 0x0008(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	int                                                WaveIndex;                                                 // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                TotalWaves;                                                // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                      InstigatorOfFinalAIPawnDeath;                              // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UClass*>                              SpawnContexts;                                             // 0x0000(0x0010) (Edit, ZeroConstructor, UObjectWrapper)
+	bool                                               DisableSpawning;                                           // 0x0010(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_B46Y[0x7];                                     // 0x0011(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UAIEncounterSettings*                        EncounterSettings;                                         // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAISpawnWaveSequenceRankProgression*         SpawnWaveProgression;                                      // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FAIEncounterAndWaveSettingsOverride> EncounterAndWaveSettingsOverride;                          // 0x0028(0x0010) (Edit, ZeroConstructor)
 
 };
 
@@ -549,20 +536,20 @@ struct FEventAIBountySpawnerWaveCompleted
 struct FAISpawnTypeParams
 {
 	TAssetPtr<class UClass>                            AIClass;                                                   // 0x0000(0x001C) ELEMENT_SIZE_MISMATCH (Edit, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EX2O[0x4];                                     // 0x0000(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_7KA0[0x4];                                     // 0x0000(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	struct FStringAssetReference                       SkillsetOverride;                                          // 0x0020(0x0010) (Edit, ZeroConstructor)
 	struct FStringAssetReference                       LoadoutOverride;                                           // 0x0030(0x0010) (Edit, ZeroConstructor)
 	struct FStringAssetReference                       FormOverride;                                              // 0x0040(0x0010) (Edit, ZeroConstructor)
 	struct FStringAssetReference                       AmmoOverride;                                              // 0x0050(0x0010) (Edit, ZeroConstructor)
 	TAssetPtr<class UClass>                            ItemDropComponentClassOverride;                            // 0x0060(0x001C) ELEMENT_SIZE_MISMATCH (Edit, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_F7IV[0x4];                                     // 0x0060(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_ZA7W[0x4];                                     // 0x0060(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	class UClass*                                      AIClassIdOverride;                                         // 0x0080(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	struct FStringAssetReference                       TeamColorOverride;                                         // 0x0088(0x0010) (Edit, ZeroConstructor)
 	struct FEncounterParams                            EncounterTrackingParams;                                   // 0x0098(0x000C) (Edit)
 	struct FName                                       DioramaRole;                                               // 0x00A4(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_VHBN[0x4];                                     // 0x00AC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_VH6W[0x4];                                     // 0x00AC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FText                                       LocalisableName;                                           // 0x00B0(0x0018) ELEMENT_SIZE_MISMATCH (Edit)
-	unsigned char                                      UnknownData_PXGD[0x20];                                    // 0x00AC(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_GWD0[0x20];                                    // 0x00AC(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 
 };
 
@@ -580,67 +567,50 @@ struct FWeightedAISpawnTypeParams
 // 0x0048
 struct FAISpawnTypeParamsCollection
 {
-	unsigned char                                      UnknownData_2316[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_EU9S[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FWeightedAISpawnTypeParams>          SpawnParams;                                               // 0x0008(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData_S9XJ[0x30];                                    // 0x0018(0x0030) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3UZT[0x30];                                    // 0x0018(0x0030) MISSED OFFSET (PADDING)
 
 };
 
-// ScriptStruct AthenaAI.AISpawnerWave
-// 0x0100
-struct FAISpawnerWave
+// ScriptStruct AthenaAI.AIFormDamageResponse
+// 0x0010
+struct FAIFormDamageResponse
 {
-	float                                              SpawnChance;                                               // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_Y4D5[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FWeightedProbabilityRange                   NumOfSpawnsInWave;                                         // 0x0008(0x0020) (Edit)
-	struct FAISpawnTypeParamsCollection                SpawnTypeParamsOverride;                                   // 0x0028(0x0048) (Edit)
-	struct FWeightedProbabilityRangeOfRanges           DelayBeforeWave;                                           // 0x0070(0x0030) (Edit)
-	struct FWeightedProbabilityRangeOfRanges           DelayBetweenSpawns;                                        // 0x00A0(0x0030) (Edit)
-	struct FWeightedProbabilityRangeOfRanges           DelayBeforeNextWaveIfSuccessful;                           // 0x00D0(0x0030) (Edit)
+	class UClass*                                      DamagerType;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	float                                              DamageMultiplier;                                          // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<Athena_ECharacterHitReactionAnimType>  HitReaction;                                               // 0x000C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               IsKnockbackDisabled;                                       // 0x000D(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                               IsStunDisabled;                                            // 0x000E(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_IQA3[0x1];                                     // 0x000F(0x0001) MISSED OFFSET (PADDING)
 
 };
 
-// ScriptStruct AthenaAI.AIFaunaSpawnerWave
-// 0x0010 (0x0110 - 0x0100)
-struct FAIFaunaSpawnerWave : public FAISpawnerWave
+// ScriptStruct AthenaAI.AthenaAIControllerParamValue
+// 0x000C
+struct FAthenaAIControllerParamValue
 {
-	unsigned char                                      UnknownData_SV5J[0x10];                                    // 0x0100(0x0010) MISSED OFFSET (PADDING)
+	struct FName                                       ParamName;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Value;                                                     // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
-// ScriptStruct AthenaAI.EventFaunaThreatLevelChanged
-// 0x0001
-struct FEventFaunaThreatLevelChanged
-{
-	TEnumAsByte<AthenaAI_EAIThreatLevel>               ThreatLevel;                                               // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.EventFaunaAgitationEnded
-// 0x0001
-struct FEventFaunaAgitationEnded
-{
-	unsigned char                                      UnknownData_XU7R[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.EventFaunaAgitationBegun
+// ScriptStruct AthenaAI.MinMaxAbilityRange
 // 0x0008
-struct FEventFaunaAgitationBegun
+struct FMinMaxAbilityRange
 {
-	class AActor*                                      SourceActor;                                               // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MinDistanceToTarget;                                       // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MaxDistanceToTarget;                                       // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
-// ScriptStruct AthenaAI.AthenaAIItemParamValue
-// 0x0030
-struct FAthenaAIItemParamValue
+// ScriptStruct AthenaAI.AIAbilityFollowUp
+// 0x0010
+struct FAIAbilityFollowUp
 {
-	TAssetPtr<class UClass>                            ItemClass;                                                 // 0x0000(0x001C) ELEMENT_SIZE_MISMATCH (Edit, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_A7YX[0x4];                                     // 0x0000(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FName                                       ParamName;                                                 // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              Value;                                                     // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_74HX[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
+	class UClass*                                      AbilityType;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	float                                              Chance;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_6JLQ[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -649,7 +619,7 @@ struct FAthenaAIItemParamValue
 struct FAthenaAIAbilityPlayerBasedRange
 {
 	int                                                MaxPlayers;                                                // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_L7R4[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HD4T[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FWeightedProbabilityRangeOfRanges           WeightedArray;                                             // 0x0008(0x0030) (Edit)
 
 };
@@ -671,6 +641,38 @@ struct FAIAbilityContinuousCooldownParameterData
 
 };
 
+// ScriptStruct AthenaAI.AttackableTypeToAnimMapping
+// 0x0028
+struct FAttackableTypeToAnimMapping
+{
+	TEnumAsByte<Athena_ESwimAttackableType>            AttackType;                                                // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_0G8A[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UObject*                                     AnimMontage;                                               // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               PlayAsDynamicMontage;                                      // 0x0010(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_TT22[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              AnimLength;                                                // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              TimeIntoAnimOfAttack;                                      // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              TargetKnockBackStrength;                                   // 0x001C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FName                                       RumbleTag;                                                 // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.SwimAttackTargetShipImpulseData
+// 0x0038
+struct FSwimAttackTargetShipImpulseData
+{
+	class UClass*                                      ShipSize;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	float                                              PushImpulseForce;                                          // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                     PushImpulseLocation;                                       // 0x000C(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              PushForceScalingFactorForeAndAftOfShipLowerBound;          // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              PushForceScalingFactorForeAndAftOfShipUpperBound;          // 0x001C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              RollImpulseForce;                                          // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                     RollImpulseLocation;                                       // 0x0024(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              RollForceScalingFactorForeAndAftOfShipLowerBound;          // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              RollForceScalingFactorForeAndAftOfShipUpperBound;          // 0x0034(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
 // ScriptStruct AthenaAI.AthenaAIControllerSenseSettings
 // 0x0014
 struct FAthenaAIControllerSenseSettings
@@ -678,11 +680,32 @@ struct FAthenaAIControllerSenseSettings
 	bool                                               EnableSight;                                               // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               EnableHearing;                                             // 0x0001(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               EnableDamage;                                              // 0x0002(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_HAYG[0x1];                                     // 0x0003(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8LTF[0x1];                                     // 0x0003(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              SightRadius;                                               // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              LoseSightRadius;                                           // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              PeripheralVisionAngleDegrees;                              // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxHearingRange;                                           // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.AthenaAIControllerHealthCustomisation
+// 0x000C
+struct FAthenaAIControllerHealthCustomisation
+{
+	bool                                               OverrideMaxHealth;                                         // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                               OverrideMaxHealthWithMinMax;                               // 0x0001(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_XKSA[0x2];                                     // 0x0002(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              MinHealth;                                                 // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MaxHealth;                                                 // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.AthenaAIControllerWeightedRangesParamValue
+// 0x0038
+struct FAthenaAIControllerWeightedRangesParamValue
+{
+	struct FName                                       ParamName;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FWeightedProbabilityRangeOfRanges           Value;                                                     // 0x0008(0x0030) (Edit)
 
 };
 
@@ -698,38 +721,6 @@ struct FAthenaAIControllerDamageTargetScoreFromPerceivedTarget
 
 };
 
-// ScriptStruct AthenaAI.AthenaAIControllerHealthCustomisation
-// 0x000C
-struct FAthenaAIControllerHealthCustomisation
-{
-	bool                                               OverrideMaxHealth;                                         // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                               OverrideMaxHealthWithMinMax;                               // 0x0001(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_V3WJ[0x2];                                     // 0x0002(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              MinHealth;                                                 // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MaxHealth;                                                 // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.AthenaAIControllerSenseSettingOverride
-// 0x0020
-struct FAthenaAIControllerSenseSettingOverride
-{
-	class UClass*                                      AIStrategy;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	struct FAthenaAIControllerSenseSettings            SenseSettings;                                             // 0x0008(0x0014) (Edit)
-	bool                                               ClearPerceivedData;                                        // 0x001C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_H4SF[0x3];                                     // 0x001D(0x0003) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.AthenaAIControllerWeightedRangesParamValue
-// 0x0038
-struct FAthenaAIControllerWeightedRangesParamValue
-{
-	struct FName                                       ParamName;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FWeightedProbabilityRangeOfRanges           Value;                                                     // 0x0008(0x0030) (Edit)
-
-};
-
 // ScriptStruct AthenaAI.AIStrategyMovementProperties
 // 0x0018
 struct FAIStrategyMovementProperties
@@ -742,47 +733,12 @@ struct FAIStrategyMovementProperties
 
 };
 
-// ScriptStruct AthenaAI.AthenaAIAbilityDamageStage
-// 0x0010
-struct FAthenaAIAbilityDamageStage
-{
-	TArray<class UAthenaAIAbilityStageParams*>         AbilitiesInStage;                                          // 0x0000(0x0010) (Edit, ExportObject, ZeroConstructor, ContainsInstancedReference)
-
-};
-
-// ScriptStruct AthenaAI.AthenaAICharacterControllerSpawnItemDescForItemCategory
-// 0x0010
-struct FAthenaAICharacterControllerSpawnItemDescForItemCategory
-{
-	class UClass*                                      ItemCategory;                                              // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class UClass*                                      ItemDesc;                                                  // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.AthenaAICharacterControllerWeightedAmmoType
-// 0x0010
-struct FAthenaAICharacterControllerWeightedAmmoType
-{
-	class UClass*                                      AmmoType;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	float                                              Weighting;                                                 // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_09JD[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
-
-};
-
 // ScriptStruct AthenaAI.AthenaAICharacterCannonTarget
 // 0x000C
 struct FAthenaAICharacterCannonTarget
 {
 	float                                              Weight;                                                    // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       TargetLocation;                                            // 0x0004(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.AthenaAICharacterCannonTargetingParams
-// 0x0010
-struct FAthenaAICharacterCannonTargetingParams
-{
-	TArray<struct FAthenaAICharacterCannonTarget>      Params;                                                    // 0x0000(0x0010) (Edit, ZeroConstructor)
 
 };
 
@@ -795,12 +751,24 @@ struct FAthenaAICharacterControllerItemCategoryProjectileEffectivenessProperties
 
 };
 
-// ScriptStruct AthenaAI.AthenaAIControllerParamValue
-// 0x000C
-struct FAthenaAIControllerParamValue
+// ScriptStruct AthenaAI.AthenaAIItemParamValue
+// 0x0030
+struct FAthenaAIItemParamValue
 {
-	struct FName                                       ParamName;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              Value;                                                     // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TAssetPtr<class UClass>                            ItemClass;                                                 // 0x0000(0x001C) ELEMENT_SIZE_MISMATCH (Edit, UObjectWrapper, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_5EWH[0x4];                                     // 0x0000(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FName                                       ParamName;                                                 // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Value;                                                     // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_LTGK[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AthenaAICharacterControllerSpawnItemDescForItemCategory
+// 0x0010
+struct FAthenaAICharacterControllerSpawnItemDescForItemCategory
+{
+	class UClass*                                      ItemCategory;                                              // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	class UClass*                                      ItemDesc;                                                  // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
 };
 
@@ -813,12 +781,46 @@ struct FAthenaAICharacterControllerItemCategoryNamedParams
 
 };
 
+// ScriptStruct AthenaAI.AthenaAICharacterCannonTargetingParams
+// 0x0010
+struct FAthenaAICharacterCannonTargetingParams
+{
+	TArray<struct FAthenaAICharacterCannonTarget>      Params;                                                    // 0x0000(0x0010) (Edit, ZeroConstructor)
+
+};
+
+// ScriptStruct AthenaAI.AthenaAIAbilityDamageStage
+// 0x0010
+struct FAthenaAIAbilityDamageStage
+{
+	TArray<class UAthenaAIAbilityStageParams*>         AbilitiesInStage;                                          // 0x0000(0x0010) (Edit, ExportObject, ZeroConstructor, ContainsInstancedReference)
+
+};
+
+// ScriptStruct AthenaAI.AthenaAICharacterControllerWeightedAmmoType
+// 0x0010
+struct FAthenaAICharacterControllerWeightedAmmoType
+{
+	class UClass*                                      AmmoType;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	float                                              Weighting;                                                 // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_4JZV[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
 // ScriptStruct AthenaAI.AIAmmoRankMapping
 // 0x0018
 struct FAIAmmoRankMapping
 {
 	class UAthenaAIAmmoDataAsset*                      Ammo;                                                      // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<float>                                      Weights;                                                   // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+
+};
+
+// ScriptStruct AthenaAI.AIPartId
+// 0x0008
+struct FAIPartId
+{
+	struct FName                                       PartId;                                                    // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
@@ -833,7 +835,7 @@ struct FAIDebugVisualisationCone
 	float                                              AngleHeightRadians;                                        // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              LifeTime;                                                  // 0x0024(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<AthenaAI_EAIDebugColour>               Colour;                                                    // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HG8U[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_F1RD[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (PADDING)
 
 };
 
@@ -845,46 +847,16 @@ struct FAIDebugVisualisationSphere
 	float                                              Radius;                                                    // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              LifeTime;                                                  // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<AthenaAI_EAIDebugColour>               Colour;                                                    // 0x0014(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_OGRN[0x3];                                     // 0x0015(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8S5V[0x3];                                     // 0x0015(0x0003) MISSED OFFSET (PADDING)
 
 };
 
-// ScriptStruct AthenaAI.AIDebugVisualisationCylinder
-// 0x0024
-struct FAIDebugVisualisationCylinder
-{
-	struct FVector                                     To;                                                        // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                     From;                                                      // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                              Radius;                                                    // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              LifeTime;                                                  // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<AthenaAI_EAIDebugColour>               Colour;                                                    // 0x0020(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_J8PF[0x3];                                     // 0x0021(0x0003) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.AIDebugVisualisationBox
-// 0x0040
-struct FAIDebugVisualisationBox
-{
-	struct FVector                                     Centre;                                                    // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                     Extents;                                                   // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_CRFH[0x8];                                     // 0x0018(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FQuat                                       Rotation;                                                  // 0x0020(0x0010) (IsPlainOldData, NoDestructor)
-	float                                              LifeTime;                                                  // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<AthenaAI_EAIDebugColour>               Colour;                                                    // 0x0034(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_05F7[0xB];                                     // 0x0035(0x000B) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.AIDebugVisualisationLine
+// ScriptStruct AthenaAI.TargetSkillsetProgressionPair
 // 0x0020
-struct FAIDebugVisualisationLine
+struct FTargetSkillsetProgressionPair
 {
-	struct FVector                                     From;                                                      // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                     To;                                                        // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                              LifeTime;                                                  // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<AthenaAI_EAIDebugColour>               Colour;                                                    // 0x001C(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FQ8G[0x3];                                     // 0x001D(0x0003) MISSED OFFSET (PADDING)
+	struct FStringAssetReference                       CrewSkillset;                                              // 0x0000(0x0010) (Edit, ZeroConstructor)
+	struct FStringAssetReference                       CaptainSkillset;                                           // 0x0010(0x0010) (Edit, ZeroConstructor)
 
 };
 
@@ -894,29 +866,6 @@ struct FTargetItemDropProgressionPair
 {
 	struct FStringAssetReference                       CrewItemSpawn;                                             // 0x0000(0x0010) (Edit, ZeroConstructor)
 	struct FStringAssetReference                       CaptainItemSpawn;                                          // 0x0010(0x0010) (Edit, ZeroConstructor)
-
-};
-
-// ScriptStruct AthenaAI.AIIndividualVarietyEntry
-// 0x0020
-struct FAIIndividualVarietyEntry
-{
-	TArray<struct FStringAssetReference>               Loadouts;                                                  // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	int                                                RankOffset;                                                // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              Weight;                                                    // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                MaxPerEncounter;                                           // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DK9S[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.AIFormVarietyEntry
-// 0x0028
-struct FAIFormVarietyEntry
-{
-	struct FStringAssetReference                       Form;                                                      // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	float                                              Weight;                                                    // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                MaxPerEncounter;                                           // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FAIIndividualVarietyEntry>           Individuals;                                               // 0x0018(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 };
 
@@ -970,7 +919,7 @@ struct FAISkillsetRankMapping
 struct FAIDropSpawnerRankMapping
 {
 	TAssetPtr<class UClass>                            SpawnerClass;                                              // 0x0000(0x001C) ELEMENT_SIZE_MISMATCH (Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_7O4H[0x4];                                     // 0x0000(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_ZXKI[0x4];                                     // 0x0000(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	TArray<float>                                      Weights;                                                   // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 };
@@ -984,15 +933,6 @@ struct FAILoadoutRankMapping
 
 };
 
-// ScriptStruct AthenaAI.CustomPlayersAITrackerData
-// 0x0020
-struct FCustomPlayersAITrackerData
-{
-	class UAIPlayerTracker*                            Tracker;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_M4GB[0x18];                                    // 0x0008(0x0018) MISSED OFFSET (PADDING)
-
-};
-
 // ScriptStruct AthenaAI.AITypeData
 // 0x0058
 struct FAITypeData
@@ -1003,11 +943,25 @@ struct FAITypeData
 	struct FStringAssetReference                       DefaultDebugLoadout;                                       // 0x0028(0x0010) (Edit, ZeroConstructor)
 	class UClass*                                      DefaultDebugAIClassId;                                     // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	bool                                               RequireNavMesh;                                            // 0x0040(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_691L[0x3];                                     // 0x0041(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HTS9[0x3];                                     // 0x0041(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                AIRegionCostUnits;                                         // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                AIWorldCostUnits;                                          // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       FeatureToggle;                                             // 0x004C(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CF8J[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_T5OV[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AISpawnerWave
+// 0x0100
+struct FAISpawnerWave
+{
+	float                                              SpawnChance;                                               // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_IC7M[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FWeightedProbabilityRange                   NumOfSpawnsInWave;                                         // 0x0008(0x0020) (Edit)
+	struct FAISpawnTypeParamsCollection                SpawnTypeParamsOverride;                                   // 0x0028(0x0048) (Edit)
+	struct FWeightedProbabilityRangeOfRanges           DelayBeforeWave;                                           // 0x0070(0x0030) (Edit)
+	struct FWeightedProbabilityRangeOfRanges           DelayBetweenSpawns;                                        // 0x00A0(0x0030) (Edit)
+	struct FWeightedProbabilityRangeOfRanges           DelayBeforeNextWaveIfSuccessful;                           // 0x00D0(0x0030) (Edit)
 
 };
 
@@ -1029,28 +983,21 @@ struct FAIWeightedProbabilityRangeOfRangesRankMapping
 
 };
 
+// ScriptStruct AthenaAI.CustomPlayersAITrackerData
+// 0x0020
+struct FCustomPlayersAITrackerData
+{
+	class UAIPlayerTracker*                            Tracker;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_F34U[0x18];                                    // 0x0008(0x0018) MISSED OFFSET (PADDING)
+
+};
+
 // ScriptStruct AthenaAI.AIPartIdNumVariantInfo
 // 0x000C
 struct FAIPartIdNumVariantInfo
 {
 	struct FName                                       AIPartId;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                NumVariants;                                               // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.EventAIPartsRetrievalComponentBeforeBeginLoad
-// 0x0001
-struct FEventAIPartsRetrievalComponentBeforeBeginLoad
-{
-	unsigned char                                      UnknownData_CMK7[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.AIPartId
-// 0x0008
-struct FAIPartId
-{
-	struct FName                                       PartId;                                                    // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
@@ -1083,38 +1030,38 @@ struct FAISpawnContextData
 
 };
 
-// ScriptStruct AthenaAI.AIFixedWavesSpawnerArchive
-// 0x0018 (0x0020 - 0x0008)
-struct FAIFixedWavesSpawnerArchive : public FAISpawnerArchive
+// ScriptStruct AthenaAI.AIPersistentSpawnerWave
+// 0x0018 (0x0118 - 0x0100)
+struct FAIPersistentSpawnerWave : public FAISpawnerWave
 {
-	TArray<int>                                        NumSpawnedPawnsInWaves;                                    // 0x0008(0x0010) (ZeroConstructor)
-	bool                                               WavesSpawnedOnSpottedNewTarget;                            // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_FZKA[0x7];                                     // 0x0019(0x0007) MISSED OFFSET (PADDING)
+	bool                                               CacheHealthOnDespawn;                                      // 0x0100(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_TW9M[0x17];                                    // 0x0101(0x0017) MISSED OFFSET (PADDING)
 
 };
 
-// ScriptStruct AthenaAI.AIIncrementalWaveSpawnerArchive
-// 0x0010 (0x0018 - 0x0008)
-struct FAIIncrementalWaveSpawnerArchive : public FAISpawnerArchive
+// ScriptStruct AthenaAI.AIPerPlayerSpawnerPlayerDetailsUnit
+// 0x0030
+struct FAIPerPlayerSpawnerPlayerDetailsUnit
 {
-	struct FVector                                     LastTargetPosition;                                        // 0x0008(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	int                                                CurrentNumSpawnedPawns;                                    // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_UNJ5[0x30];                                    // 0x0000(0x0030) MISSED OFFSET (PADDING)
 
 };
 
-// ScriptStruct AthenaAI.AIPerCrewSpawnerRespawnUnit
-// 0x0018
-struct FAIPerCrewSpawnerRespawnUnit
+// ScriptStruct AthenaAI.TemporaryPlayerDetailsUnitEntry
+// 0x0038
+struct FTemporaryPlayerDetailsUnitEntry
 {
-	unsigned char                                      UnknownData_GQRB[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_B6EW[0x38];                                    // 0x0000(0x0038) MISSED OFFSET (PADDING)
 
 };
 
-// ScriptStruct AthenaAI.AIPerCrewSpawnerCrewUnit
-// 0x0020
-struct FAIPerCrewSpawnerCrewUnit
+// ScriptStruct AthenaAI.AICustomNameTitleMapping
+// 0x0040
+struct FAICustomNameTitleMapping
 {
-	unsigned char                                      UnknownData_X588[0x20];                                    // 0x0000(0x0020) MISSED OFFSET (PADDING)
+	class UClass*                                      AIClassId;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	struct FText                                       Title;                                                     // 0x0008(0x0018) ELEMENT_SIZE_MISMATCH (Edit)
+	unsigned char                                      UnknownData_8UIA[0x20];                                    // 0x0008(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 
 };
 
@@ -1127,22 +1074,250 @@ struct FAICustomClassIdNameOverrides
 
 };
 
-// ScriptStruct AthenaAI.AICustomNameTitleMapping
-// 0x0040
-struct FAICustomNameTitleMapping
+// ScriptStruct AthenaAI.ChanceForSharksToBlockSirenEncounterData
+// 0x000C
+struct FChanceForSharksToBlockSirenEncounterData
 {
-	class UClass*                                      AIClassId;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	struct FText                                       Title;                                                     // 0x0008(0x0018) ELEMENT_SIZE_MISMATCH (Edit)
-	unsigned char                                      UnknownData_RQ4D[0x20];                                    // 0x0008(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	int                                                NumberOfSharks;                                            // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              ChanceToSpawn;                                             // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              RadiusToCheck;                                             // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
-// ScriptStruct AthenaAI.AIProgressiveWavesSpawnerArchive
-// 0x0008 (0x0010 - 0x0008)
-struct FAIProgressiveWavesSpawnerArchive : public FAISpawnerArchive
+// ScriptStruct AthenaAI.PerDepthSpawnChance
+// 0x000C
+struct FPerDepthSpawnChance
 {
-	int                                                CurrentWaveIndex;                                          // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_1GIG[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
+	float                                              DepthUpperBound;                                           // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              DepthLowerBound;                                           // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              ChanceToSpawn;                                             // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.PlayerInWaterData
+// 0x0020
+struct FPlayerInWaterData
+{
+	unsigned char                                      UnknownData_8JG1[0x20];                                    // 0x0000(0x0020) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.SirenEncounterData
+// 0x0028
+struct FSirenEncounterData
+{
+	class UWorld*                                      GameWorld;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAIPerPlayerSpawner*                         SirenSpawner;                                              // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USimpleAIRegion*                             AIRegion;                                                  // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAIProximityPlayerTracker*                   ProximityPlayerTracker;                                    // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              ShutdownTime;                                              // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<AthenaAI_ESirenEncounterState>         SirenEncounterState;                                       // 0x0024(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_VYFF[0x3];                                     // 0x0025(0x0003) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.MinMaxBurrowAbility
+// 0x0008
+struct FMinMaxBurrowAbility
+{
+	float                                              MinValue;                                                  // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MaxValue;                                                  // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.WeightedAmmoType
+// 0x0010
+struct FWeightedAmmoType
+{
+	float                                              ProbabilityAtRange;                                        // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_1ZDG[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UClass*                                      AmmoType;                                                  // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.WeightedAmmoTypeRange
+// 0x0018
+struct FWeightedAmmoTypeRange
+{
+	float                                              MinRange;                                                  // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_0WRQ[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<struct FWeightedAmmoType>                   AmmoTypeProbabilities;                                     // 0x0008(0x0010) (Edit, ZeroConstructor)
+
+};
+
+// ScriptStruct AthenaAI.CarriedItemThreatOverride
+// 0x0010
+struct FCarriedItemThreatOverride
+{
+	class UClass*                                      ItemDesc;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	float                                              Threat;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_LCFH[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.HearingThreat
+// 0x0010
+struct FHearingThreat
+{
+	struct FName                                       SoundTag;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Threat;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              CarrierSpeedThreshold;                                     // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.BlackboardValueCondition
+// 0x0038
+struct FBlackboardValueCondition
+{
+	struct FBlackboardKeySelector                      BlackboardKey;                                             // 0x0000(0x0028) (Edit)
+	TEnumAsByte<AthenaAI_EBlackboardValueComparisonType> Comparison;                                                // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_EWC4[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              Value;                                                     // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               OnEntry;                                                   // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                               OnExit;                                                    // 0x0031(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_LH5O[0x6];                                     // 0x0032(0x0006) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AthenaAIControllerSenseSettingOverride
+// 0x0020
+struct FAthenaAIControllerSenseSettingOverride
+{
+	class UClass*                                      AIStrategy;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	struct FAthenaAIControllerSenseSettings            SenseSettings;                                             // 0x0008(0x0014) (Edit)
+	bool                                               ClearPerceivedData;                                        // 0x001C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_9I9S[0x3];                                     // 0x001D(0x0003) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AIDebugVisualisationLine
+// 0x0020
+struct FAIDebugVisualisationLine
+{
+	struct FVector                                     From;                                                      // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                     To;                                                        // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              LifeTime;                                                  // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<AthenaAI_EAIDebugColour>               Colour;                                                    // 0x001C(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_LLXD[0x3];                                     // 0x001D(0x0003) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AIDebugVisualisationBox
+// 0x0040
+struct FAIDebugVisualisationBox
+{
+	struct FVector                                     Centre;                                                    // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                     Extents;                                                   // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_JVJ5[0x8];                                     // 0x0018(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FQuat                                       Rotation;                                                  // 0x0020(0x0010) (IsPlainOldData, NoDestructor)
+	float                                              LifeTime;                                                  // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<AthenaAI_EAIDebugColour>               Colour;                                                    // 0x0034(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_8ROD[0xB];                                     // 0x0035(0x000B) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AIDebugVisualisationCylinder
+// 0x0024
+struct FAIDebugVisualisationCylinder
+{
+	struct FVector                                     To;                                                        // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                     From;                                                      // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              Radius;                                                    // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              LifeTime;                                                  // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<AthenaAI_EAIDebugColour>               Colour;                                                    // 0x0020(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_CQWB[0x3];                                     // 0x0021(0x0003) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AIIndividualVarietyEntry
+// 0x0020
+struct FAIIndividualVarietyEntry
+{
+	TArray<struct FStringAssetReference>               Loadouts;                                                  // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int                                                RankOffset;                                                // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Weight;                                                    // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                MaxPerEncounter;                                           // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_TP2G[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AIFormVarietyEntry
+// 0x0028
+struct FAIFormVarietyEntry
+{
+	struct FStringAssetReference                       Form;                                                      // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	float                                              Weight;                                                    // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                MaxPerEncounter;                                           // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FAIIndividualVarietyEntry>           Individuals;                                               // 0x0018(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+
+};
+
+// ScriptStruct AthenaAI.ChanceAndBlackboardKeyPair
+// 0x0058
+struct FChanceAndBlackboardKeyPair
+{
+	struct FAIDataProviderFloatValue                   Chance;                                                    // 0x0000(0x0030) (Edit, ContainsInstancedReference)
+	struct FBlackboardKeySelector                      BlackboardKey;                                             // 0x0030(0x0028) (Edit)
+
+};
+
+// ScriptStruct AthenaAI.ConditionalBasedOnBlackboardKey
+// 0x0038
+struct FConditionalBasedOnBlackboardKey
+{
+	bool                                               UseCondition;                                              // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_460M[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FBlackboardKeySelector                      BlackboardKey;                                             // 0x0008(0x0028) (Edit)
+	bool                                               NegateCondition;                                           // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_OZR6[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.WeightedAIStrategyChance
+// 0x0038
+struct FWeightedAIStrategyChance
+{
+	class UClass*                                      Strategy;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	struct FAIDataProviderFloatValue                   WeightedChance;                                            // 0x0008(0x0030) (Edit, ContainsInstancedReference)
+
+};
+
+// ScriptStruct AthenaAI.PetLoadedMaterial
+// 0x0010
+struct FPetLoadedMaterial
+{
+	class UMaterialInstance*                           MaterialInstance;                                          // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               CastShadows;                                               // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_716T[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.PetPartSizeMapping
+// 0x0008
+struct FPetPartSizeMapping
+{
+	TEnumAsByte<AthenaAI_EPetSize>                     PetSize;                                                   // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_YNMV[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              PetScale;                                                  // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.PetMaterialEntry
+// 0x0018
+struct FPetMaterialEntry
+{
+	struct FStringAssetReference                       MaterialReference;                                         // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	bool                                               CastShadows;                                               // 0x0010(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_1F64[0x7];                                     // 0x0011(0x0007) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.PetWieldableReactMapping
+// 0x0010
+struct FPetWieldableReactMapping
+{
+	class UClass*                                      WieldableType;                                             // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	struct FName                                       ReactId;                                                   // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
@@ -1166,77 +1341,6 @@ struct FAITargetInfo
 
 };
 
-// ScriptStruct AthenaAI.PerDepthSpawnChance
-// 0x000C
-struct FPerDepthSpawnChance
-{
-	float                                              DepthUpperBound;                                           // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              DepthLowerBound;                                           // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              ChanceToSpawn;                                             // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.PlayerInWaterData
-// 0x0020
-struct FPlayerInWaterData
-{
-	unsigned char                                      UnknownData_WTP3[0x20];                                    // 0x0000(0x0020) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.SirenEncounterData
-// 0x0028
-struct FSirenEncounterData
-{
-	class UWorld*                                      GameWorld;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAIPerPlayerSpawner*                         SirenSpawner;                                              // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USimpleAIRegion*                             AIRegion;                                                  // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAIProximityPlayerTracker*                   ProximityPlayerTracker;                                    // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              ShutdownTime;                                              // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<AthenaAI_ESirenEncounterState>         SirenEncounterState;                                       // 0x0024(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_178F[0x3];                                     // 0x0025(0x0003) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.ChanceForSharksToBlockSirenEncounterData
-// 0x000C
-struct FChanceForSharksToBlockSirenEncounterData
-{
-	int                                                NumberOfSharks;                                            // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              ChanceToSpawn;                                             // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              RadiusToCheck;                                             // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.MinMaxBurrowAbility
-// 0x0008
-struct FMinMaxBurrowAbility
-{
-	float                                              MinValue;                                                  // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MaxValue;                                                  // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.WeightedAmmoType
-// 0x0010
-struct FWeightedAmmoType
-{
-	float                                              ProbabilityAtRange;                                        // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_6BET[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UClass*                                      AmmoType;                                                  // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.WeightedAmmoTypeRange
-// 0x0018
-struct FWeightedAmmoTypeRange
-{
-	float                                              MinRange;                                                  // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_E4U3[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<struct FWeightedAmmoType>                   AmmoTypeProbabilities;                                     // 0x0008(0x0010) (Edit, ZeroConstructor)
-
-};
-
 // ScriptStruct AthenaAI.AthenaAIControllerTargetPickingData
 // 0x0038
 struct FAthenaAIControllerTargetPickingData
@@ -1244,7 +1348,7 @@ struct FAthenaAIControllerTargetPickingData
 	struct FString                                     TargetName;                                                // 0x0000(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	bool                                               BestTargetByScore;                                         // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               IsCurrentTargetActor;                                      // 0x0011(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_BCFC[0x2];                                     // 0x0012(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5SDC[0x2];                                     // 0x0012(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              TargetScore;                                               // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              DistScore;                                                 // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              FacingScore;                                               // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1257,76 +1361,11 @@ struct FAthenaAIControllerTargetPickingData
 
 };
 
-// ScriptStruct AthenaAI.AIStategyControllerMovementMod
-// 0x0010
-struct FAIStategyControllerMovementMod
-{
-	class UClass*                                      AIStrategy;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	float                                              OverrideControlRotationInterpSpeed;                        // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_C0B6[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.CarriedItemThreatOverride
-// 0x0010
-struct FCarriedItemThreatOverride
-{
-	class UClass*                                      ItemDesc;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	float                                              Threat;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_WA2O[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.HearingThreat
-// 0x0010
-struct FHearingThreat
-{
-	struct FName                                       SoundTag;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              Threat;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              CarrierSpeedThreshold;                                     // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.BlackboardValueCondition
-// 0x0038
-struct FBlackboardValueCondition
-{
-	struct FBlackboardKeySelector                      BlackboardKey;                                             // 0x0000(0x0028) (Edit)
-	TEnumAsByte<AthenaAI_EBlackboardValueComparisonType> Comparison;                                                // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_J49G[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              Value;                                                     // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               OnEntry;                                                   // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                               OnExit;                                                    // 0x0031(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_ZKOQ[0x6];                                     // 0x0032(0x0006) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.ChanceAndBlackboardKeyPair
-// 0x0058
-struct FChanceAndBlackboardKeyPair
-{
-	struct FAIDataProviderFloatValue                   Chance;                                                    // 0x0000(0x0030) (Edit, ContainsInstancedReference)
-	struct FBlackboardKeySelector                      BlackboardKey;                                             // 0x0030(0x0028) (Edit)
-
-};
-
-// ScriptStruct AthenaAI.ConditionalBasedOnBlackboardKey
-// 0x0038
-struct FConditionalBasedOnBlackboardKey
-{
-	bool                                               UseCondition;                                              // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_IU7A[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FBlackboardKeySelector                      BlackboardKey;                                             // 0x0008(0x0028) (Edit)
-	bool                                               NegateCondition;                                           // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_G7Q5[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
-
-};
-
 // ScriptStruct AthenaAI.EventSporeBreathAIAbilityFinished
 // 0x0001
 struct FEventSporeBreathAIAbilityFinished
 {
-	unsigned char                                      UnknownData_CMZR[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5DFH[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -1334,7 +1373,7 @@ struct FEventSporeBreathAIAbilityFinished
 // 0x0001
 struct FEventSporeBreathAIAbilityStarted
 {
-	unsigned char                                      UnknownData_S6GH[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PXXN[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -1342,7 +1381,7 @@ struct FEventSporeBreathAIAbilityStarted
 // 0x0001
 struct FEventAIVulnerabilityAbilityEnded
 {
-	unsigned char                                      UnknownData_YBHJ[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HYA6[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -1350,16 +1389,7 @@ struct FEventAIVulnerabilityAbilityEnded
 // 0x0001
 struct FEventAIVulnerabilityAbilityStarted
 {
-	unsigned char                                      UnknownData_JRL8[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.EventAIOnDelayedAssignedMeshConsumed
-// 0x0010
-struct FEventAIOnDelayedAssignedMeshConsumed
-{
-	class USkeletalMeshComponent*                      MeshComponent;                                             // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMesh*                               ConsumedMesh;                                              // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_K1IE[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -1375,7 +1405,7 @@ struct FEventAIPawnCarrierChange
 // 0x0001
 struct FEventAIDebugTextUpdated
 {
-	unsigned char                                      UnknownData_00FC[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_IGP9[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -1383,7 +1413,7 @@ struct FEventAIDebugTextUpdated
 // 0x0001
 struct FEventAIControllerUnPossess
 {
-	unsigned char                                      UnknownData_0DB9[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_C9TD[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -1391,7 +1421,7 @@ struct FEventAIControllerUnPossess
 // 0x0001
 struct FEventAIKnockbackEnded
 {
-	unsigned char                                      UnknownData_DYHB[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LW4O[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -1399,7 +1429,7 @@ struct FEventAIKnockbackEnded
 // 0x0018
 struct FEventAIKnockbackStarted
 {
-	unsigned char                                      UnknownData_78N5[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_WFEC[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
 
 };
 
@@ -1423,7 +1453,7 @@ struct FEventNewAIStrategy
 // 0x0001
 struct FEventPawnRequestDespawn
 {
-	unsigned char                                      UnknownData_893N[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_P8VI[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -1439,7 +1469,7 @@ struct FEventPawnRemoveOwnership
 // 0x0001
 struct FEventOwnedPawnRemoveOwnership
 {
-	unsigned char                                      UnknownData_8NFR[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_NGHC[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -1447,7 +1477,7 @@ struct FEventOwnedPawnRemoveOwnership
 // 0x0001
 struct FEventAIPartRetrievalRequestFailed
 {
-	unsigned char                                      UnknownData_P4F2[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_XHK4[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -1468,7 +1498,7 @@ struct FEventAILoadoutSelected
 {
 	struct FItemLoadout                                Loadout;                                                   // 0x0000(0x0020)
 	class UClass*                                      NonStorableItem;                                           // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_V9JT[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TEVM[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
 };
 
@@ -1492,7 +1522,7 @@ struct FEventAIFormSelected
 // 0x0001
 struct FEventAIPawnReadyToConstructDebugText
 {
-	unsigned char                                      UnknownData_G9SP[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_E5HF[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -1503,10 +1533,10 @@ struct FEventOwnedPawnFinishedSpawning
 	class UObject*                                     AICoordinator;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       Region;                                                    // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     SpawnPos;                                                  // 0x0010(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_HXVS[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_C2E6[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class AActor*                                      ActorToPerceiveOnSpawn;                                    // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaximumDistanceToPerceiveOnSpawn;                          // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CX3U[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_O0GW[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UAthenaAIControllerParamsDataAsset*          Skillset;                                                  // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       HomeRegionZone;                                            // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                     TargetInteractableOnSpawn;                                 // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1527,7 +1557,7 @@ struct FEventPlayerLeftAISpawnableWater
 struct FEventPlayerEnterAISpawnableWater
 {
 	class AActor*                                      Player;                                                    // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_7ZI6[0x10];                                    // 0x0008(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3JJK[0x10];                                    // 0x0008(0x0010) MISSED OFFSET (PADDING)
 
 };
 
@@ -1536,7 +1566,7 @@ struct FEventPlayerEnterAISpawnableWater
 struct FEventPlayerSetFootUponAISpawnRegion
 {
 	class AActor*                                      Player;                                                    // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DZAI[0x18];                                    // 0x0008(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_0PI6[0x18];                                    // 0x0008(0x0018) MISSED OFFSET (PADDING)
 
 };
 
@@ -1545,7 +1575,7 @@ struct FEventPlayerSetFootUponAISpawnRegion
 struct FEventPlayerLeftAISpawnRegion
 {
 	class AActor*                                      Player;                                                    // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_Z78G[0x10];                                    // 0x0008(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_1CP0[0x10];                                    // 0x0008(0x0010) MISSED OFFSET (PADDING)
 
 };
 
@@ -1554,7 +1584,7 @@ struct FEventPlayerLeftAISpawnRegion
 struct FEventPlayerEnteredAISpawnRegion
 {
 	class AActor*                                      Player;                                                    // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EFPT[0x18];                                    // 0x0008(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_A5VC[0x18];                                    // 0x0008(0x0018) MISSED OFFSET (PADDING)
 
 };
 
@@ -1562,7 +1592,7 @@ struct FEventPlayerEnteredAISpawnRegion
 // 0x0001
 struct FEventAllAIProgressiveWavesCompleted
 {
-	unsigned char                                      UnknownData_7L8C[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_S3X3[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -1571,7 +1601,7 @@ struct FEventAllAIProgressiveWavesCompleted
 struct FEventAIPawnRemovedFromAIRegion
 {
 	class APawn*                                       AIPawn;                                                    // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_RE7S[0x8];                                     // 0x0008(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_RK1V[0x8];                                     // 0x0008(0x0008) MISSED OFFSET (PADDING)
 
 };
 
@@ -1580,15 +1610,56 @@ struct FEventAIPawnRemovedFromAIRegion
 struct FEventAIPawnAddedToAIRegion
 {
 	class APawn*                                       AIPawn;                                                    // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_BPA7[0x8];                                     // 0x0008(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PD36[0x8];                                     // 0x0008(0x0008) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.EventOceanCrawlerAIBuffAudioRequest
+// 0x0001
+struct FEventOceanCrawlerAIBuffAudioRequest
+{
+	bool                                               IsBuffGiver;                                               // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
 
 };
 
 // ScriptStruct AthenaAI.EventOceanCrawlerAIAbilityAudioRequest
-// 0x0001
+// 0x0008
 struct FEventOceanCrawlerAIAbilityAudioRequest
 {
 	TEnumAsByte<AthenaAI_EOceanCrawlerAbilityAudioKey> RequestAudioKey;                                           // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_Q6DP[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              AudioDelay;                                                // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.EventAthenaAISpawnBeginAnim
+// 0x0001
+struct FEventAthenaAISpawnBeginAnim
+{
+	TEnumAsByte<AthenaAI_EAthenaAISpawnType>           SpawnType;                                                 // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.EventAthenaAISpawnActive
+// 0x0002
+struct FEventAthenaAISpawnActive
+{
+	TEnumAsByte<AthenaAI_EAthenaAISpawnType>           SpawnType;                                                 // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               SpawnActive;                                               // 0x0001(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
+
+};
+
+// ScriptStruct AthenaAI.AISpawnerTelemetryEvent
+// 0x0040
+struct FAISpawnerTelemetryEvent
+{
+	struct FString                                     AISpawnerType;                                             // 0x0000(0x0010) (ZeroConstructor, HasGetValueTypeHash)
+	struct FString                                     AISpawnerRegion;                                           // 0x0010(0x0010) (ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FString>                             AISpawnerContexts;                                         // 0x0020(0x0010) (ZeroConstructor)
+	int                                                AISpawnerWaveSpawnNumber;                                  // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              AISpawnerWaveDelayBefore;                                  // 0x0034(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              AISpawnerWaveDelayAfter;                                   // 0x0038(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_XFJR[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -1597,7 +1668,7 @@ struct FEventOceanCrawlerAIAbilityAudioRequest
 struct FAIEncounterSpecification
 {
 	TAssetPtr<class UClass>                            PawnClass;                                                 // 0x0000(0x001C) ELEMENT_SIZE_MISMATCH (Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZF7E[0x4];                                     // 0x0000(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_VNHD[0x4];                                     // 0x0000(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	class UAthenaAIControllerParamsDataAsset*          Skillset;                                                  // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ULoadoutAsset*                               Loadout;                                                   // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAthenaAIFormDataAsset*                      Form;                                                      // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1605,15 +1676,16 @@ struct FAIEncounterSpecification
 	class UClass*                                      AIClass;                                                   // 0x0040(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	class UAIPartsCategory*                            PartsCategory;                                             // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TAssetPtr<class UClass>                            ItemDropComponentClass;                                    // 0x0050(0x001C) ELEMENT_SIZE_MISMATCH (UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HHTN[0x4];                                     // 0x0050(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_VQTA[0x4];                                     // 0x0050(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	int                                                TeamColorIndex;                                            // 0x0070(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       DioramaRole;                                               // 0x0074(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZMPA[0x4];                                     // 0x007C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HP9N[0x4];                                     // 0x007C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FText                                       LocalisableName;                                           // 0x0080(0x0018) ELEMENT_SIZE_MISMATCH
-	unsigned char                                      UnknownData_AQVE[0x20];                                    // 0x007C(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_0RGO[0x20];                                    // 0x007C(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	struct FEncounterParams                            EncounterTrackingParams;                                   // 0x00B8(0x000C)
 	bool                                               ShowNameplate;                                             // 0x00C4(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_PT9S[0x3];                                     // 0x00C5(0x0003) MISSED OFFSET (PADDING)
+	bool                                               IsUsingDialogue;                                           // 0x00C5(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_3I3O[0x2];                                     // 0x00C6(0x0002) MISSED OFFSET (PADDING)
 
 };
 
@@ -1640,6 +1712,349 @@ struct FAITelemetryFragment
 
 };
 
+// ScriptStruct AthenaAI.AIStrategyVulnerabilityData
+// 0x0018
+struct FAIStrategyVulnerabilityData
+{
+	class UClass*                                      Strategy;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	TArray<TEnumAsByte<Athena_EHealthChangedReason>>   PreventedHealthChanges;                                    // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+};
+
+// ScriptStruct AthenaAI.AIBountySpawnerWave
+// 0x0058 (0x0170 - 0x0118)
+struct FAIBountySpawnerWave : public FAIPersistentSpawnerWave
+{
+	bool                                               IsTarget;                                                  // 0x0118(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                               IsUsingDialogue;                                           // 0x0119(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	TEnumAsByte<AthenaAI_EBountyTargetGender>          Gender;                                                    // 0x011A(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<AthenaAI_EBountyTargetRank>            Rank;                                                      // 0x011B(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_N9G0[0x4];                                     // 0x011C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UPostBountyAIPawnSpawnedAction*              PostSpawnAction;                                           // 0x0120(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_UOIG[0x38];                                    // 0x0128(0x0038) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UClass*                                      BountyReward;                                              // 0x0160(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	TWeakObjectPtr<class UItemSpawnData>               BountyRewardSpawnData;                                     // 0x0168(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper)
+
+};
+
+// ScriptStruct AthenaAI.AIBountySpawnerWaveGroup
+// 0x0030
+struct FAIBountySpawnerWaveGroup
+{
+	TArray<struct FAIBountySpawnerWave>                Waves;                                                     // 0x0000(0x0010) (Edit, ZeroConstructor, ContainsInstancedReference)
+	int                                                NumNonTargetAIToKillToMoveToNextWaveGroup;                 // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_0QV7[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UClass*                                      CombatDialogueForWaveGroup;                                // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_OPMX[0x10];                                    // 0x0020(0x0010) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AIDioramaPawn
+// 0x0048
+struct FAIDioramaPawn
+{
+	class APawn*                                       Pawn;                                                      // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_T2XD[0x40];                                    // 0x0008(0x0040) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AIDioramaRoleDesc
+// 0x0028
+struct FAIDioramaRoleDesc
+{
+	struct FName                                       RoleName;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FStringAssetReference                       CustomAnimationAsset;                                      // 0x0008(0x0010) (Edit, ZeroConstructor)
+	struct FName                                       CustomAnimationToRunOnSpawn;                               // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                      StartingItemCategory;                                      // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.IslandDioramas
+// 0x0010
+struct FIslandDioramas
+{
+	unsigned char                                      Entries[0x10];                                             // 0x0000(0x0010) UNKNOWN PROPERTY: ArrayProperty AthenaAI.IslandDioramas.Entries
+
+};
+
+// ScriptStruct AthenaAI.DioramaCategoryEntries
+// 0x00A0
+struct FDioramaCategoryEntries
+{
+	TMap<struct FName, struct FIslandDioramas>         EntriesByIslandName;                                       // 0x0000(0x0050) (ZeroConstructor)
+	unsigned char                                      UnknownData_5ZRU[0x50];                                    // 0x0050(0x0050) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AIFaunaSpawnerWave
+// 0x0010 (0x0110 - 0x0100)
+struct FAIFaunaSpawnerWave : public FAISpawnerWave
+{
+	unsigned char                                      UnknownData_BDI5[0x10];                                    // 0x0100(0x0010) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AIStategyControllerMovementMod
+// 0x0010
+struct FAIStategyControllerMovementMod
+{
+	class UClass*                                      AIStrategy;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	float                                              OverrideControlRotationInterpSpeed;                        // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_P62M[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.TinySharkParams
+// 0x00B8
+struct FTinySharkParams
+{
+	class UClass*                                      TinySharkType;                                             // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	float                                              TargetRadius;                                              // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                     SpawnOffset;                                               // 0x000C(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	TAssetPtr<class UClass>                            TinySharkAIType;                                           // 0x0018(0x001C) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_0TJ0[0x4];                                     // 0x0018(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	TAssetPtr<class UAthenaAIControllerParamsDataAsset> TinySharkSkillset;                                         // 0x0038(0x001C) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_9K44[0x4];                                     // 0x0038(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	TAssetPtr<class ULoadoutAsset>                     TinySharkLoadout;                                          // 0x0058(0x001C) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_MR0P[0x4];                                     // 0x0058(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	class UClass*                                      TinySharkClassID;                                          // 0x0078(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	struct FWeightedProbabilityRangeOfRanges           LifetimeTimeout;                                           // 0x0080(0x0030) (Edit, DisableEditOnInstance)
+	float                                              TrackedShipDistanceThreshold;                              // 0x00B0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              RepositionTime;                                            // 0x00B4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.AIDioramaLocationSourceComponentData
+// 0x0040
+struct FAIDioramaLocationSourceComponentData
+{
+	struct FTransform                                  RelativeTransform;                                         // 0x0000(0x0030) (Edit, IsPlainOldData, NoDestructor)
+	class AActor*                                      Interactable;                                              // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_4USL[0x8];                                     // 0x0038(0x0008) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.TinySharkShipSpawnData
+// 0x0068
+struct FTinySharkShipSpawnData
+{
+	class UClass*                                      ShipSize;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	struct FWeightedProbabilityRangeOfRanges           Timer;                                                     // 0x0008(0x0030) (Edit, DisableEditOnInstance)
+	TArray<TAssetPtr<class UAthenaAIControllerParamsDataAsset>> ControllerParams;                                          // 0x0038(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, UObjectWrapper)
+	struct FWeightedProbabilityRange                   ControllerParamsToUse;                                     // 0x0048(0x0020) (Edit, DisableEditOnInstance)
+
+};
+
+// ScriptStruct AthenaAI.TinySharkServiceParams
+// 0x0028
+struct FTinySharkServiceParams
+{
+	class UTinySharkParamsDataAsset*                   TinySharkParams;                                           // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FTinySharkShipSpawnData>             SpawnForShipData;                                          // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UEnvQuery*                                   SpawnForShipQuery;                                         // 0x0018(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              SpawnFailureTimer;                                         // 0x0020(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_CH9J[0x4];                                     // 0x0024(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.PetFlyingStrategyProperties
+// 0x0018
+struct FPetFlyingStrategyProperties
+{
+	class UClass*                                      Strategy;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	float                                              ChanceOfFlying;                                            // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MinFlyingMeshZOffset;                                      // 0x000C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MaxFlyingMeshZOffset;                                      // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_KV96[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.PetMovementRequest
+// 0x000C
+struct FPetMovementRequest
+{
+	TEnumAsByte<Athena_EAthenaAnimationPetRoamingState> State;                                                     // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_QFWP[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              TargetMeshZOffset;                                         // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               AdjustingFlight;                                           // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_G3WE[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.PetTurnRateModifier
+// 0x0010
+struct FPetTurnRateModifier
+{
+	class UClass*                                      Strategy;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	float                                              TurnRateModifier;                                          // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_MFNC[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AIAbilityDebugReplicatedIntervals
+// 0x000C
+struct FAIAbilityDebugReplicatedIntervals
+{
+	float                                              ActivationTimerCooldown;                                   // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              TimeBeforeNextExecution;                                   // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              DamageBeforeNextExecution;                                 // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.AIEncounterWave
+// 0x0020
+struct FAIEncounterWave
+{
+	TArray<struct FAIEncounterSpecification>           Specifications;                                            // 0x0000(0x0010) (ZeroConstructor)
+	TArray<int>                                        SpecificationSpawnOrder;                                   // 0x0010(0x0010) (ZeroConstructor)
+
+};
+
+// ScriptStruct AthenaAI.AIBountySpawnerParams
+// 0x00C8
+struct FAIBountySpawnerParams
+{
+	TArray<struct FAIEncounterWave>                    AISpawnerCreationDesc;                                     // 0x0000(0x0010) (ZeroConstructor)
+	struct FStringAssetReference                       TeamColor;                                                 // 0x0010(0x0010) (ZeroConstructor)
+	TArray<int>                                        NumTargetsInWave;                                          // 0x0020(0x0010) (ZeroConstructor)
+	TArray<int>                                        NumCaptainsInWave;                                         // 0x0030(0x0010) (ZeroConstructor)
+	float                                              MinTimeBetweenSpawns;                                      // 0x0040(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MaxTimeBetweenSpawns;                                      // 0x0044(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MinTimeBetweenWaves;                                       // 0x0048(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MaxTimeBetweenWaves;                                       // 0x004C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FWeightedProbabilityRange                   WavesPerRelocate;                                          // 0x0050(0x0020)
+	struct FWeightedProbabilityRange                   WaveSplitChance;                                           // 0x0070(0x0020)
+	TArray<float>                                      WaveSuicideTime;                                           // 0x0090(0x0010) (ZeroConstructor)
+	float                                              WaveSuicideMinDist;                                        // 0x00A0(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                NumWavesPerGroup;                                          // 0x00A4(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                NumWaveGroups;                                             // 0x00A8(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                NumTotalWaves;                                             // 0x00AC(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                NumTargetsPerWaveGroup;                                    // 0x00B0(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                NumCaptainsPerWaveGroup;                                   // 0x00B4(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UClass*>                              AICombatDialogue;                                          // 0x00B8(0x0010) (ZeroConstructor, UObjectWrapper)
+
+};
+
+// ScriptStruct AthenaAI.EventAIStartedDeadActionState
+// 0x0010
+struct FEventAIStartedDeadActionState
+{
+	TEnumAsByte<Athena_ECharacterDeathType>            DeathReason;                                               // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_KJ8U[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class AActor*                                      Killer;                                                    // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.EventPawnFinishedDying
+// 0x0010
+struct FEventPawnFinishedDying
+{
+	class APawn*                                       AIPawn;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<Athena_ECharacterDeathType>            DeathType;                                                 // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_WMLT[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.EventPawnStartedDying
+// 0x0018
+struct FEventPawnStartedDying
+{
+	class APawn*                                       AIPawn;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<Athena_ECharacterDeathType>            DeathType;                                                 // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_DQGN[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class AActor*                                      Instigator;                                                // 0x0010(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.EventOwnedPawnFinishedDying
+// 0x0001
+struct FEventOwnedPawnFinishedDying
+{
+	TEnumAsByte<Athena_ECharacterDeathType>            DeathType;                                                 // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.EventOwnedPawnStartedDying
+// 0x0010
+struct FEventOwnedPawnStartedDying
+{
+	TEnumAsByte<Athena_ECharacterDeathType>            DeathType;                                                 // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_QMNI[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class AActor*                                      Instigator;                                                // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.AISpawnerArchive
+// 0x0008
+struct FAISpawnerArchive
+{
+	unsigned char                                      UnknownData_15GF[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AIExclusionZone
+// 0x0018
+struct FAIExclusionZone
+{
+	struct FVector                                     Location;                                                  // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              RadiusSquared;                                             // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Radius;                                                    // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Height;                                                    // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.EventAIPartsRetrievalComponentBeforeBeginLoad
+// 0x0001
+struct FEventAIPartsRetrievalComponentBeforeBeginLoad
+{
+	unsigned char                                      UnknownData_2PYB[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AIFixedWavesSpawnerArchive
+// 0x0018 (0x0020 - 0x0008)
+struct FAIFixedWavesSpawnerArchive : public FAISpawnerArchive
+{
+	TArray<int>                                        NumSpawnedPawnsInWaves;                                    // 0x0008(0x0010) (ZeroConstructor)
+	bool                                               WavesSpawnedOnSpottedNewTarget;                            // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_9FK4[0x7];                                     // 0x0019(0x0007) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AIIncrementalWaveSpawnerArchive
+// 0x0010 (0x0018 - 0x0008)
+struct FAIIncrementalWaveSpawnerArchive : public FAISpawnerArchive
+{
+	struct FVector                                     LastTargetPosition;                                        // 0x0008(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	int                                                CurrentNumSpawnedPawns;                                    // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.AIPerCrewSpawnerRespawnUnit
+// 0x0018
+struct FAIPerCrewSpawnerRespawnUnit
+{
+	unsigned char                                      UnknownData_7WMM[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AIPerCrewSpawnerCrewUnit
+// 0x0020
+struct FAIPerCrewSpawnerCrewUnit
+{
+	unsigned char                                      UnknownData_Q38A[0x20];                                    // 0x0000(0x0020) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AIProgressiveWavesSpawnerArchive
+// 0x0008 (0x0010 - 0x0008)
+struct FAIProgressiveWavesSpawnerArchive : public FAISpawnerArchive
+{
+	int                                                CurrentWaveIndex;                                          // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_XNN6[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
 // ScriptStruct AthenaAI.PlayerKillAITelemetryEvent
 // 0x0010
 struct FPlayerKillAITelemetryEvent
@@ -1662,7 +2077,131 @@ struct FAIActorTimeout
 {
 	class AActor*                                      AIActor;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              Timer;                                                     // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_1ZL0[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AJIQ[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.BountySpawnerTargetDesc
+// 0x0018
+struct FBountySpawnerTargetDesc
+{
+	TEnumAsByte<AthenaAI_EBountyTargetGender>          Gender;                                                    // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<AthenaAI_EBountyTargetRank>            Rank;                                                      // 0x0001(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_5YML[0x16];                                    // 0x0002(0x0016) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AIBountySpawnerWaveLocation
+// 0x0014
+struct FAIBountySpawnerWaveLocation
+{
+	struct FVector                                     Location;                                                  // 0x0000(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              SelectionWeight;                                           // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               AllowForTarget;                                            // 0x0010(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_N75G[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.AIBountySpawnerArchiveWaveEntry
+// 0x0004
+struct FAIBountySpawnerArchiveWaveEntry
+{
+	int                                                NumPawnsToSpawn;                                           // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.AIBountySpawnerArchiveWaveGroupEntry
+// 0x0018
+struct FAIBountySpawnerArchiveWaveGroupEntry
+{
+	int                                                NumNonTargetAIKills;                                       // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                NumTargetAIKills;                                          // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FAIBountySpawnerArchiveWaveEntry>    WaveEntries;                                               // 0x0008(0x0010) (ZeroConstructor)
+
+};
+
+// ScriptStruct AthenaAI.AIBountySpawnerArchive
+// 0x0020 (0x0028 - 0x0008)
+struct FAIBountySpawnerArchive : public FAISpawnerArchive
+{
+	int                                                CurrentWaveIndex;                                          // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_OADH[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<struct FAIBountySpawnerArchiveWaveGroupEntry> WaveGroupEntries;                                          // 0x0010(0x0010) (ZeroConstructor)
+	float                                              BountyAudioIntensity;                                      // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_MTKV[0x4];                                     // 0x0024(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.BountySpawnerNewWaveGroupSpawnedEvent
+// 0x0001
+struct FBountySpawnerNewWaveGroupSpawnedEvent
+{
+	bool                                               IsFinalWave;                                               // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
+
+};
+
+// ScriptStruct AthenaAI.BountySpawnerAudioChangedNetworkEvent
+// 0x0018 (0x0028 - 0x0010)
+struct FBountySpawnerAudioChangedNetworkEvent : public FNetworkEventStruct
+{
+	TEnumAsByte<AthenaAI_EBountySpawnerAudioState>     AudioState;                                                // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_IXTX[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              Intensity;                                                 // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<AthenaAI_EBountySpawnerType>           BountyType;                                                // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_D4BX[0x3];                                     // 0x0019(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FVector                                     BountyPosition;                                            // 0x001C(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
+
+};
+
+// ScriptStruct AthenaAI.EventAIBountySpawnerTargetKilled
+// 0x0068
+struct FEventAIBountySpawnerTargetKilled
+{
+	struct FText                                       TargetName;                                                // 0x0000(0x0018) ELEMENT_SIZE_MISMATCH
+	unsigned char                                      UnknownData_MP6O[0x20];                                    // 0x0000(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	class AActor*                                      TargetActor;                                               // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FName                                       RewardId;                                                  // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AItemInfo*                                   ItemDropped;                                               // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<AthenaAI_EBountyTargetRank>            Rank;                                                      // 0x0050(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_575A[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FVector                                     DeathLocation;                                             // 0x0054(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	class AActor*                                      Instigator;                                                // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.EventAIBountySpawnerWaveCompleted
+// 0x0028
+struct FEventAIBountySpawnerWaveCompleted
+{
+	struct FName                                       IslandName;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                       CrewId;                                                    // 0x0008(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	int                                                WaveIndex;                                                 // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                TotalWaves;                                                // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                      InstigatorOfFinalAIPawnDeath;                              // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.EventFaunaThreatLevelChanged
+// 0x0001
+struct FEventFaunaThreatLevelChanged
+{
+	TEnumAsByte<AthenaAI_EAIThreatLevel>               ThreatLevel;                                               // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaAI.EventFaunaAgitationEnded
+// 0x0001
+struct FEventFaunaAgitationEnded
+{
+	unsigned char                                      UnknownData_EV6U[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaAI.EventFaunaAgitationBegun
+// 0x0008
+struct FEventFaunaAgitationBegun
+{
+	class AActor*                                      SourceActor;                                               // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
@@ -1670,7 +2209,9 @@ struct FAIActorTimeout
 // 0x0008
 struct FEventSwimRotationModeChanged
 {
-	unsigned char                                      UnknownData_LAJW[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (PADDING)
+	TEnumAsByte<AthenaAI_ESwimRotationMode>            NewSwimRotationMode;                                       // 0x0000(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_42FS[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              NewRotationRate;                                           // 0x0004(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
@@ -1686,7 +2227,7 @@ struct FTinySharkWorldSettingsParams
 // 0x0048
 struct FTinySharkEQSRequest
 {
-	unsigned char                                      UnknownData_SEJZ[0x48];                                    // 0x0000(0x0048) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_JGPA[0x48];                                    // 0x0000(0x0048) MISSED OFFSET (PADDING)
 
 };
 
@@ -1708,7 +2249,7 @@ struct FTinySharkKilledNetworkEvent : public FNetworkEventStruct
 // 0x0001
 struct FEventTinySharkKilled
 {
-	unsigned char                                      UnknownData_LB9A[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_H6V6[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -1743,7 +2284,7 @@ struct FTinySharkDespawnTelemetryEvent
 {
 	struct FString                                     TinySharkId;                                               // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash)
 	TEnumAsByte<AthenaAI_ETinySharkDespawnReason>      TinySharkDespawnReason;                                    // 0x0010(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CT21[0x7];                                     // 0x0011(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_EOFQ[0x7];                                     // 0x0011(0x0007) MISSED OFFSET (PADDING)
 
 };
 
@@ -1754,442 +2295,6 @@ struct FTinySharkSpawnTelemetryEvent
 	struct FString                                     TinySharkId;                                               // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash)
 	struct FString                                     TinySharkType;                                             // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash)
 	struct FGuid                                       ConfigSpawnId;                                             // 0x0020(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-};
-
-// ScriptStruct AthenaAI.AthenaAIFormComponentVfxCustomisation
-// 0x0018
-struct FAthenaAIFormComponentVfxCustomisation
-{
-	class UClass*                                      VfxCustomisationType;                                      // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	bool                                               VfxEnabled;                                                // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_4FPL[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UObject*                                     VfxTemplate;                                               // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.AISpawnContextIdEncounterSettingsPair
-// 0x0028
-struct FAISpawnContextIdEncounterSettingsPair
-{
-	TArray<class UClass*>                              SpawnContexts;                                             // 0x0000(0x0010) (Edit, ZeroConstructor, UObjectWrapper)
-	bool                                               DisableSpawning;                                           // 0x0010(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_K2DG[0x7];                                     // 0x0011(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UAIEncounterSettings*                        EncounterSettings;                                         // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAISpawnWaveSequenceRankProgression*         SpawnWaveProgression;                                      // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.AISpawnOverride
-// 0x0010
-struct FAISpawnOverride
-{
-	struct FStringAssetReference                       FormOverride;                                              // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-
-};
-
-// ScriptStruct AthenaAI.ConditionalAISpawnOverride
-// 0x0018
-struct FConditionalAISpawnOverride
-{
-	class UAISpawnOverrideCondition*                   Condition;                                                 // 0x0000(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FAISpawnOverride                            Override;                                                  // 0x0008(0x0010) (Edit, DisableEditOnInstance)
-
-};
-
-// ScriptStruct AthenaAI.AdditionalSpawnerBehaviour
-// 0x0010
-struct FAdditionalSpawnerBehaviour
-{
-	class USpawnerBehaviourStrategy*                   BehaviourStrategy;                                         // 0x0000(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_PJ6A[0x8];                                     // 0x0008(0x0008) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.AIFormDamageResponse
-// 0x0010
-struct FAIFormDamageResponse
-{
-	class UClass*                                      DamagerType;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	float                                              DamageMultiplier;                                          // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<Athena_ECharacterHitReactionAnimType>  HitReaction;                                               // 0x000C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               IsKnockbackDisabled;                                       // 0x000D(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                               IsStunDisabled;                                            // 0x000E(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_AVK2[0x1];                                     // 0x000F(0x0001) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.MinMaxAbilityRange
-// 0x0008
-struct FMinMaxAbilityRange
-{
-	float                                              MinDistanceToTarget;                                       // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MaxDistanceToTarget;                                       // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.AIAbilityFollowUp
-// 0x0010
-struct FAIAbilityFollowUp
-{
-	class UClass*                                      AbilityType;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	float                                              Chance;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DE6I[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.AttackableTypeToAnimMapping
-// 0x0028
-struct FAttackableTypeToAnimMapping
-{
-	TEnumAsByte<Athena_ESwimAttackableType>            AttackType;                                                // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_D4MN[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UObject*                                     AnimMontage;                                               // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               PlayAsDynamicMontage;                                      // 0x0010(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_IQGT[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              AnimLength;                                                // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              TimeIntoAnimOfAttack;                                      // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              TargetKnockBackStrength;                                   // 0x001C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FName                                       RumbleTag;                                                 // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.SwimAttackTargetShipImpulseData
-// 0x0038
-struct FSwimAttackTargetShipImpulseData
-{
-	class UClass*                                      ShipSize;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	float                                              PushImpulseForce;                                          // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                     PushImpulseLocation;                                       // 0x000C(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                              PushForceScalingFactorForeAndAftOfShipLowerBound;          // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              PushForceScalingFactorForeAndAftOfShipUpperBound;          // 0x001C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              RollImpulseForce;                                          // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                     RollImpulseLocation;                                       // 0x0024(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                              RollForceScalingFactorForeAndAftOfShipLowerBound;          // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              RollForceScalingFactorForeAndAftOfShipUpperBound;          // 0x0034(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.AIPersistentSpawnerWave
-// 0x0018 (0x0118 - 0x0100)
-struct FAIPersistentSpawnerWave : public FAISpawnerWave
-{
-	bool                                               CacheHealthOnDespawn;                                      // 0x0100(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_Z5FL[0x17];                                    // 0x0101(0x0017) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.AIBountySpawnerWave
-// 0x0058 (0x0170 - 0x0118)
-struct FAIBountySpawnerWave : public FAIPersistentSpawnerWave
-{
-	bool                                               IsTarget;                                                  // 0x0118(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                               IsAdditionalTarget;                                        // 0x0119(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	TEnumAsByte<AthenaAI_EBountyTargetGender>          Gender;                                                    // 0x011A(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<AthenaAI_EBountyTargetRank>            Rank;                                                      // 0x011B(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EIKF[0x4];                                     // 0x011C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UPostBountyAIPawnSpawnedAction*              PostSpawnAction;                                           // 0x0120(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_J4LV[0x38];                                    // 0x0128(0x0038) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UClass*                                      BountyReward;                                              // 0x0160(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	TWeakObjectPtr<class UItemSpawnData>               BountyRewardSpawnData;                                     // 0x0168(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper)
-
-};
-
-// ScriptStruct AthenaAI.AIBountySpawnerWaveGroup
-// 0x0028
-struct FAIBountySpawnerWaveGroup
-{
-	TArray<struct FAIBountySpawnerWave>                Waves;                                                     // 0x0000(0x0010) (Edit, ZeroConstructor, ContainsInstancedReference)
-	int                                                NumNonTargetAIToKillToMoveToNextWaveGroup;                 // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_L879[0x14];                                    // 0x0014(0x0014) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.TargetSkillsetProgressionPair
-// 0x0020
-struct FTargetSkillsetProgressionPair
-{
-	struct FStringAssetReference                       CrewSkillset;                                              // 0x0000(0x0010) (Edit, ZeroConstructor)
-	struct FStringAssetReference                       CaptainSkillset;                                           // 0x0010(0x0010) (Edit, ZeroConstructor)
-
-};
-
-// ScriptStruct AthenaAI.PetLoadedMaterial
-// 0x0010
-struct FPetLoadedMaterial
-{
-	class UMaterialInstance*                           MaterialInstance;                                          // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               CastShadows;                                               // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_FNRM[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.PetPartSizeMapping
-// 0x0008
-struct FPetPartSizeMapping
-{
-	TEnumAsByte<AthenaAI_EPetSize>                     PetSize;                                                   // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_AUSH[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              PetScale;                                                  // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.PetMaterialEntry
-// 0x0018
-struct FPetMaterialEntry
-{
-	struct FStringAssetReference                       MaterialReference;                                         // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	bool                                               CastShadows;                                               // 0x0010(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_8KGJ[0x7];                                     // 0x0011(0x0007) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.PetWieldableReactMapping
-// 0x0010
-struct FPetWieldableReactMapping
-{
-	class UClass*                                      WieldableType;                                             // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	struct FName                                       ReactId;                                                   // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.WeightedAIStrategyChance
-// 0x0038
-struct FWeightedAIStrategyChance
-{
-	class UClass*                                      Strategy;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	struct FAIDataProviderFloatValue                   WeightedChance;                                            // 0x0008(0x0030) (Edit, ContainsInstancedReference)
-
-};
-
-// ScriptStruct AthenaAI.AIStrategyVulnerabilityData
-// 0x0018
-struct FAIStrategyVulnerabilityData
-{
-	class UClass*                                      Strategy;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	TArray<TEnumAsByte<Athena_EHealthChangedReason>>   PreventedHealthChanges;                                    // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-
-};
-
-// ScriptStruct AthenaAI.AIDioramaPawn
-// 0x0048
-struct FAIDioramaPawn
-{
-	class APawn*                                       Pawn;                                                      // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_8N2L[0x40];                                    // 0x0008(0x0040) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.AIDioramaRoleDesc
-// 0x0028
-struct FAIDioramaRoleDesc
-{
-	struct FName                                       RoleName;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FStringAssetReference                       CustomAnimationAsset;                                      // 0x0008(0x0010) (Edit, ZeroConstructor)
-	struct FName                                       CustomAnimationToRunOnSpawn;                               // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                      StartingItemCategory;                                      // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.AIDioramaLocationSourceComponentData
-// 0x0040
-struct FAIDioramaLocationSourceComponentData
-{
-	struct FTransform                                  RelativeTransform;                                         // 0x0000(0x0030) (Edit, IsPlainOldData, NoDestructor)
-	class AActor*                                      Interactable;                                              // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FKQ2[0x8];                                     // 0x0038(0x0008) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.IslandDioramas
-// 0x0010
-struct FIslandDioramas
-{
-	TArray<TScriptInterface<class UAIDioramaLocationSourceInterface>> Entries;                                                   // 0x0000(0x0010) (ZeroConstructor, UObjectWrapper)
-
-};
-
-// ScriptStruct AthenaAI.DioramaCategoryEntries
-// 0x00A0
-struct FDioramaCategoryEntries
-{
-	TMap<struct FName, struct FIslandDioramas>         EntriesByIslandName;                                       // 0x0000(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData_QQZ8[0x50];                                    // 0x0050(0x0050) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.TinySharkParams
-// 0x00B8
-struct FTinySharkParams
-{
-	class UClass*                                      TinySharkType;                                             // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	float                                              TargetRadius;                                              // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                     SpawnOffset;                                               // 0x000C(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	TAssetPtr<class UClass>                            TinySharkAIType;                                           // 0x0018(0x001C) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZLSA[0x4];                                     // 0x0018(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	TAssetPtr<class UAthenaAIControllerParamsDataAsset> TinySharkSkillset;                                         // 0x0038(0x001C) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_SHKW[0x4];                                     // 0x0038(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	TAssetPtr<class ULoadoutAsset>                     TinySharkLoadout;                                          // 0x0058(0x001C) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_4TX9[0x4];                                     // 0x0058(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	class UClass*                                      TinySharkClassID;                                          // 0x0078(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	struct FWeightedProbabilityRangeOfRanges           LifetimeTimeout;                                           // 0x0080(0x0030) (Edit, DisableEditOnInstance)
-	float                                              TrackedShipDistanceThreshold;                              // 0x00B0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              RepositionTime;                                            // 0x00B4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.TinySharkShipSpawnData
-// 0x0068
-struct FTinySharkShipSpawnData
-{
-	class UClass*                                      ShipSize;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	struct FWeightedProbabilityRangeOfRanges           Timer;                                                     // 0x0008(0x0030) (Edit, DisableEditOnInstance)
-	TArray<TAssetPtr<class UAthenaAIControllerParamsDataAsset>> ControllerParams;                                          // 0x0038(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, UObjectWrapper)
-	struct FWeightedProbabilityRange                   ControllerParamsToUse;                                     // 0x0048(0x0020) (Edit, DisableEditOnInstance)
-
-};
-
-// ScriptStruct AthenaAI.TinySharkServiceParams
-// 0x0028
-struct FTinySharkServiceParams
-{
-	class UTinySharkParamsDataAsset*                   TinySharkParams;                                           // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FTinySharkShipSpawnData>             SpawnForShipData;                                          // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class UEnvQuery*                                   SpawnForShipQuery;                                         // 0x0018(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              SpawnFailureTimer;                                         // 0x0020(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_WDZ2[0x4];                                     // 0x0024(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.PetFlyingStrategyProperties
-// 0x0018
-struct FPetFlyingStrategyProperties
-{
-	class UClass*                                      Strategy;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	float                                              ChanceOfFlying;                                            // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MinFlyingMeshZOffset;                                      // 0x000C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MaxFlyingMeshZOffset;                                      // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TRX7[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.PetMovementRequest
-// 0x000C
-struct FPetMovementRequest
-{
-	TEnumAsByte<Athena_EAthenaAnimationPetRoamingState> State;                                                     // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_V4H3[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              TargetMeshZOffset;                                         // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               AdjustingFlight;                                           // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_77EL[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.PetTurnRateModifier
-// 0x0010
-struct FPetTurnRateModifier
-{
-	class UClass*                                      Strategy;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	float                                              TurnRateModifier;                                          // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_6IQK[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.AIAbilityDebugReplicatedIntervals
-// 0x000C
-struct FAIAbilityDebugReplicatedIntervals
-{
-	float                                              ActivationTimerCooldown;                                   // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              TimeBeforeNextExecution;                                   // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              DamageBeforeNextExecution;                                 // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.AIEncounterWave
-// 0x0020
-struct FAIEncounterWave
-{
-	TArray<struct FAIEncounterSpecification>           Specifications;                                            // 0x0000(0x0010) (ZeroConstructor)
-	TArray<int>                                        SpecificationSpawnOrder;                                   // 0x0010(0x0010) (ZeroConstructor)
-
-};
-
-// ScriptStruct AthenaAI.AIBountySpawnerParams
-// 0x00A8
-struct FAIBountySpawnerParams
-{
-	TArray<struct FAIEncounterWave>                    AISpawnerCreationDesc;                                     // 0x0000(0x0010) (ZeroConstructor)
-	struct FStringAssetReference                       TeamColor;                                                 // 0x0010(0x0010) (ZeroConstructor)
-	TArray<int>                                        NumTargetsInWave;                                          // 0x0020(0x0010) (ZeroConstructor)
-	TArray<int>                                        NumCaptainsInWave;                                         // 0x0030(0x0010) (ZeroConstructor)
-	float                                              MinTimeBetweenSpawns;                                      // 0x0040(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MaxTimeBetweenSpawns;                                      // 0x0044(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MinTimeBetweenWaves;                                       // 0x0048(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MaxTimeBetweenWaves;                                       // 0x004C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FWeightedProbabilityRange                   WavesPerRelocate;                                          // 0x0050(0x0020)
-	struct FWeightedProbabilityRange                   WaveSplitChance;                                           // 0x0070(0x0020)
-	TArray<float>                                      WaveSuicideTime;                                           // 0x0090(0x0010) (ZeroConstructor)
-	float                                              WaveSuicideMinDist;                                        // 0x00A0(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                NumAdditionalWaves;                                        // 0x00A4(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.EventAIStartedDeadActionState
-// 0x0010
-struct FEventAIStartedDeadActionState
-{
-	TEnumAsByte<Athena_ECharacterDeathType>            DeathReason;                                               // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2INO[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class AActor*                                      Killer;                                                    // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.EventPawnFinishedDying
-// 0x0010
-struct FEventPawnFinishedDying
-{
-	class APawn*                                       AIPawn;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<Athena_ECharacterDeathType>            DeathType;                                                 // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_RO1F[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaAI.EventPawnStartedDying
-// 0x0018
-struct FEventPawnStartedDying
-{
-	class APawn*                                       AIPawn;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<Athena_ECharacterDeathType>            DeathType;                                                 // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_GCAD[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class AActor*                                      Instigator;                                                // 0x0010(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.EventOwnedPawnFinishedDying
-// 0x0001
-struct FEventOwnedPawnFinishedDying
-{
-	TEnumAsByte<Athena_ECharacterDeathType>            DeathType;                                                 // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.EventOwnedPawnStartedDying
-// 0x0010
-struct FEventOwnedPawnStartedDying
-{
-	TEnumAsByte<Athena_ECharacterDeathType>            DeathType;                                                 // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_SKPM[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class AActor*                                      Instigator;                                                // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct AthenaAI.BountySpawnerTargetDesc
-// 0x0018
-struct FBountySpawnerTargetDesc
-{
-	TEnumAsByte<AthenaAI_EBountyTargetGender>          Gender;                                                    // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<AthenaAI_EBountyTargetRank>            Rank;                                                      // 0x0001(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9PIC[0x16];                                    // 0x0002(0x0016) MISSED OFFSET (PADDING)
 
 };
 

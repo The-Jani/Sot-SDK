@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -60,15 +60,14 @@ struct FSeasonReward
 
 };
 
-// ScriptStruct SeasonProgressionFramework.SeasonGoalCompletionEvent
-// 0x0034
-struct FSeasonGoalCompletionEvent
+// ScriptStruct SeasonProgressionFramework.SeasonRewardEarnedEvent
+// 0x0028
+struct FSeasonRewardEarnedEvent
 {
 	struct FGuid                                       SeasonId;                                                  // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FGuid                                       GoalId;                                                    // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	TEnumAsByte<SeasonProgressionFramework_ESeasonGoalType> GoalType;                                                  // 0x0020(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_R3NJ[0x3];                                     // 0x0021(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FGuid                                       GoalGroupId;                                               // 0x0024(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                               MultipleRewards;                                           // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_ZPB5[0x7];                                     // 0x0011(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<struct FSeasonReward>                       Rewards;                                                   // 0x0018(0x0010) (ZeroConstructor)
 
 };
 
@@ -83,7 +82,32 @@ struct FLevelCompletionEvent
 	int                                                TimeSpentInTier;                                           // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               TierCompleted;                                             // 0x0020(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               SeasonCompleted;                                           // 0x0021(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_6VLD[0x2];                                     // 0x0022(0x0002) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_FCMY[0x2];                                     // 0x0022(0x0002) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct SeasonProgressionFramework.LevelProgressionEvent
+// 0x0030
+struct FLevelProgressionEvent
+{
+	struct FGuid                                       SeasonId;                                                  // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FGuid                                       SourceGoalId;                                              // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	int                                                XpChange;                                                  // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                CurrentXP;                                                 // 0x0024(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                CurrentTier;                                               // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                CurrentLevel;                                              // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct SeasonProgressionFramework.SeasonGoalCompletionEvent
+// 0x0034
+struct FSeasonGoalCompletionEvent
+{
+	struct FGuid                                       SeasonId;                                                  // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FGuid                                       GoalId;                                                    // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	TEnumAsByte<SeasonProgressionFramework_ESeasonGoalType> GoalType;                                                  // 0x0020(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_52UW[0x3];                                     // 0x0021(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FGuid                                       GoalGroupId;                                               // 0x0024(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 
 };
 
@@ -97,29 +121,8 @@ struct FSeasonGoalProgressionEvent
 	struct FGuid                                       SeasonId;                                                  // 0x000C(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FGuid                                       GoalId;                                                    // 0x001C(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<SeasonProgressionFramework_ESeasonGoalType> GoalType;                                                  // 0x002C(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_WW2Z[0x3];                                     // 0x002D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_N0TN[0x3];                                     // 0x002D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FGuid                                       GoalGroupId;                                               // 0x0030(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-
-};
-
-// ScriptStruct SeasonProgressionFramework.TrackedObjectiveProgressUpdateMessage
-// 0x00E0
-struct FTrackedObjectiveProgressUpdateMessage
-{
-	struct FGuid                                       ObjectiveId;                                               // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FPirateIdentity                             PirateIdentity;                                            // 0x0010(0x0078)
-	struct FPlayerBaseTelemetryFragment                PlayerInfo;                                                // 0x0088(0x0048)
-	int                                                Value;                                                     // 0x00D0(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_N92U[0x4];                                     // 0x00D4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	double                                             CreatedAt;                                                 // 0x00D8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct SeasonProgressionFramework.TrackedObjectiveEvent
-// 0x0018
-struct FTrackedObjectiveEvent
-{
-	unsigned char                                      UnknownData_0VE0[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
 
 };
 
@@ -134,27 +137,24 @@ struct FTrackedObjectiveCompletionMessage
 
 };
 
-// ScriptStruct SeasonProgressionFramework.SeasonRewardEarnedEvent
-// 0x0028
-struct FSeasonRewardEarnedEvent
+// ScriptStruct SeasonProgressionFramework.TrackedObjectiveProgressUpdateMessage
+// 0x00E0
+struct FTrackedObjectiveProgressUpdateMessage
 {
-	struct FGuid                                       SeasonId;                                                  // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                               MultipleRewards;                                           // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_TS8N[0x7];                                     // 0x0011(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<struct FSeasonReward>                       Rewards;                                                   // 0x0018(0x0010) (ZeroConstructor)
+	struct FGuid                                       ObjectiveId;                                               // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FPirateIdentity                             PirateIdentity;                                            // 0x0010(0x0078)
+	struct FPlayerBaseTelemetryFragment                PlayerInfo;                                                // 0x0088(0x0048)
+	int                                                Value;                                                     // 0x00D0(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_30BT[0x4];                                     // 0x00D4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	double                                             CreatedAt;                                                 // 0x00D8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
-// ScriptStruct SeasonProgressionFramework.LevelProgressionEvent
-// 0x0030
-struct FLevelProgressionEvent
+// ScriptStruct SeasonProgressionFramework.TrackedObjectiveEvent
+// 0x0018
+struct FTrackedObjectiveEvent
 {
-	struct FGuid                                       SeasonId;                                                  // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FGuid                                       SourceGoalId;                                              // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	int                                                XpChange;                                                  // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                CurrentXP;                                                 // 0x0024(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                CurrentTier;                                               // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                CurrentLevel;                                              // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_ARJM[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
 
 };
 

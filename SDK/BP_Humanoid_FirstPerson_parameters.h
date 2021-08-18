@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -35,7 +35,6 @@ struct UBP_Humanoid_FirstPerson_C_SetInitialAthenaCharacterAndAnimSet_Params
 // Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.ItemWielded
 struct UBP_Humanoid_FirstPerson_C_ItemWielded_Params
 {
-	TScriptInterface<class UWieldableInterface>        Item;                                                      // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
 	struct FWieldAnimationParams                       AnimParams;                                                // (Parm, OutParm)
 };
 
@@ -48,7 +47,6 @@ struct UBP_Humanoid_FirstPerson_C_Start_Stow_Params
 // Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.Start Wield
 struct UBP_Humanoid_FirstPerson_C_Start_Wield_Params
 {
-	TScriptInterface<class UWieldableInterface>        Wielded_Item;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 
 // Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.Update Athena Character
@@ -1923,7 +1921,6 @@ struct UBP_Humanoid_FirstPerson_C_AnimNotify_OnIdle_Params
 // Function BP_Humanoid_FirstPerson.BP_Humanoid_FirstPerson_C.ItemStowed
 struct UBP_Humanoid_FirstPerson_C_ItemStowed_Params
 {
-	TScriptInterface<class UWieldableInterface>        Item;                                                      // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
 	bool                                               FastStow;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -64,11 +64,16 @@ struct UTaleQuestSelectorServiceBlueprintFunctionLibrary_ResetVoyageDebugSeed_Pa
 {
 };
 
+// Function Tales.CutsceneResponsesTaleService.TrackResponseCoordinator
+struct UCutsceneResponsesTaleService_TrackResponseCoordinator_Params
+{
+	class UCutsceneResponseCoordinator*                Coordinator;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
 // Function Tales.CutsceneResponsesTaleService.StartCutsceneResponseSheet
 struct UCutsceneResponsesTaleService_StartCutsceneResponseSheet_Params
 {
 	class AActor*                                      TargetActor;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class UCutsceneResponsePlayerInterface> CutsceneResponsePlayer;                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 	class UClass*                                      ResponseSheetClass;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	class UCutsceneResponseSheet*                      ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

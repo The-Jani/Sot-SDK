@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,30 +20,30 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HullDamage.BP_HullDamage_C
-// 0x0088 (FullSize[0x0650] - InheritedSize[0x05C8])
+// 0x0088 (FullSize[0x05F0] - InheritedSize[0x0568])
 class ABP_HullDamage_C : public AHullDamage
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x05C8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UHitReactionComponent*                       HitReaction;                                               // 0x05D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UBakedDecalComponent*                        ImpactDecalComponent;                                      // 0x05D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	TArray<class UTexture2D*>                          Persistent_Damage_Decals;                                  // 0x05E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	class UParticleSystem*                             Damage_VFX;                                                // 0x05F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	TArray<class UMaterialInstance*>                   Deferred_Damage_Decals;                                    // 0x05F8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	float                                              Deferred_Min_Size;                                         // 0x0608(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                              Deferred_Max_Size;                                         // 0x060C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                              Persistent_Min_Size;                                       // 0x0610(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                              Persistent_Max_Size;                                       // 0x0614(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRandomStream                               RandomDecalStream;                                         // 0x0618(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	float                                              TEST_HitStrength;                                          // 0x0620(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                              TEST_PenetrationThreshold;                                 // 0x0624(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	class AShip*                                       ParentShip;                                                // 0x0628(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FWwiseEmitter                               CannonballHitEmitter;                                      // 0x0630(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0568(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UHitReactionComponent*                       HitReaction;                                               // 0x0570(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UBakedDecalComponent*                        ImpactDecalComponent;                                      // 0x0578(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	TArray<class UTexture2D*>                          Persistent_Damage_Decals;                                  // 0x0580(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	class UParticleSystem*                             Damage_VFX;                                                // 0x0590(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	TArray<class UMaterialInstance*>                   Deferred_Damage_Decals;                                    // 0x0598(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	float                                              Deferred_Min_Size;                                         // 0x05A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              Deferred_Max_Size;                                         // 0x05AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              Persistent_Min_Size;                                       // 0x05B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              Persistent_Max_Size;                                       // 0x05B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRandomStream                               RandomDecalStream;                                         // 0x05B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	float                                              TEST_HitStrength;                                          // 0x05C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              TEST_PenetrationThreshold;                                 // 0x05C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class AShip*                                       ParentShip;                                                // 0x05C8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FWwiseEmitter                               CannonballHitEmitter;                                      // 0x05D0(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_HullDamage.BP_HullDamage_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_HullDamage.BP_HullDamage_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,24 +20,24 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ProtoDoorMechanism_GalleonFront.BP_ProtoDoorMechanism_GalleonFront_C
-// 0x0041 (FullSize[0x0709] - InheritedSize[0x06C8])
+// 0x0041 (FullSize[0x05B9] - InheritedSize[0x0578])
 class ABP_ProtoDoorMechanism_GalleonFront_C : public ADoorMechanism
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x06C8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UArrowComponent*                             OpenJumpToLocation;                                        // 0x06D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UArrowComponent*                             ClosedJumpToLocation;                                      // 0x06D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UArrowComponent*                             OpenKnockbackDirection;                                    // 0x06E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UArrowComponent*                             ClosedKnockbackDirection;                                  // 0x06E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UChildActorComponent*                        InteractionPoint;                                          // 0x06F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UBoxComponent*                               OpenVolume;                                                // 0x06F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UBoxComponent*                               ClosedVolume;                                              // 0x0700(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	bool                                               EnableJumpToLocation;                                      // 0x0708(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0578(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UArrowComponent*                             OpenJumpToLocation;                                        // 0x0580(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UArrowComponent*                             ClosedJumpToLocation;                                      // 0x0588(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UArrowComponent*                             OpenKnockbackDirection;                                    // 0x0590(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UArrowComponent*                             ClosedKnockbackDirection;                                  // 0x0598(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UChildActorComponent*                        InteractionPoint;                                          // 0x05A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UBoxComponent*                               OpenVolume;                                                // 0x05A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UBoxComponent*                               ClosedVolume;                                              // 0x05B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	bool                                               EnableJumpToLocation;                                      // 0x05B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_ProtoDoorMechanism_GalleonFront.BP_ProtoDoorMechanism_GalleonFront_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ProtoDoorMechanism_GalleonFront.BP_ProtoDoorMechanism_GalleonFront_C");
 		return ptr;
 	}
 

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -75,7 +75,7 @@ bool UObject::IsA(UClass* cmp) const
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UObject::ExecuteUbergraph(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoreUObject.Object.ExecuteUbergraph");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function CoreUObject.Object.ExecuteUbergraph");
 
 	UObject_ExecuteUbergraph_Params params;
 	params.EntryPoint = EntryPoint;

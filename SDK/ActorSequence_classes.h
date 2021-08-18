@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -19,23 +19,6 @@ namespace CG
 // Classes
 //---------------------------------------------------------------------------
 
-// Class ActorSequence.ActorSequencePlayer
-// 0x0000 (FullSize[0x0660] - InheritedSize[0x0660])
-class UActorSequencePlayer : public UMovieSceneSequencePlayer
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ActorSequence.ActorSequencePlayer");
-		return ptr;
-	}
-
-
-
-};
-
 // Class ActorSequence.ActorSequence
 // 0x0028 (FullSize[0x02D0] - InheritedSize[0x02A8])
 class UActorSequence : public UMovieSceneSequence
@@ -47,7 +30,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActorSequence.ActorSequence");
+		static UClass* ptr = UObject::FindClass("Class ActorSequence.ActorSequence");
 		return ptr;
 	}
 
@@ -64,12 +47,29 @@ public:
 	class UActorSequence*                              Sequence;                                                  // 0x00F0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, PersistentInstance, HasGetValueTypeHash)
 	class UActorSequencePlayer*                        SequencePlayer;                                            // 0x00F8(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	bool                                               bAutoPlay;                                                 // 0x0100(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_7RYE[0x7];                                     // 0x0101(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_9U5H[0x7];                                     // 0x0101(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActorSequence.ActorSequenceComponent");
+		static UClass* ptr = UObject::FindClass("Class ActorSequence.ActorSequenceComponent");
+		return ptr;
+	}
+
+
+
+};
+
+// Class ActorSequence.ActorSequencePlayer
+// 0x0000 (FullSize[0x0600] - InheritedSize[0x0600])
+class UActorSequencePlayer : public UMovieSceneSequencePlayer
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class ActorSequence.ActorSequencePlayer");
 		return ptr;
 	}
 

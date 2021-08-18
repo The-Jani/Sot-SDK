@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -36,7 +36,7 @@ public:
 	struct FADS_CannonNative                           Cannon;                                                    // 0x0438(0x0038) (Edit, BlueprintVisible)
 	struct FADS_HarpoonLauncherNative                  HarpoonLauncher;                                           // 0x0470(0x0028) (Edit, BlueprintVisible)
 	struct FADS_Sockets                                Sockets;                                                   // 0x0498(0x0002) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData_5RFW[0x6];                                     // 0x049A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_VXFM[0x6];                                     // 0x049A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FADS_FacialNative                           Facial;                                                    // 0x04A0(0x0088) (Edit, BlueprintVisible)
 	struct FADS_IKFootPlantingNative                   IkFootPlanting;                                            // 0x0528(0x0028) (Edit, BlueprintVisible)
 	struct FADS_HitReactsNative                        HitReacts;                                                 // 0x0550(0x0040) (Edit, BlueprintVisible)
@@ -55,7 +55,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass AD_ThirdPerson_PlayerPirate_Female_Default.AD_ThirdPerson_PlayerPirate_Female_Default_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass AD_ThirdPerson_PlayerPirate_Female_Default.AD_ThirdPerson_PlayerPirate_Female_Default_C");
 		return ptr;
 	}
 

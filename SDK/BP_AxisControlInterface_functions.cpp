@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // float                          StickInputX                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_AxisControlInterface_C::StickInput(float StickInputX)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AxisControlInterface.BP_AxisControlInterface_C.StickInput");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_AxisControlInterface.BP_AxisControlInterface_C.StickInput");
 
 	UBP_AxisControlInterface_C_StickInput_Params params;
 	params.StickInputX = StickInputX;

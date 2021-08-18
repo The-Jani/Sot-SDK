@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Public, BlueprintCallable, BlueprintEvent)
 void ABP_Cutlass_Item_C::DoBlockEffect()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Cutlass_Item.BP_Cutlass_Item_C.DoBlockEffect");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cutlass_Item.BP_Cutlass_Item_C.DoBlockEffect");
 
 	ABP_Cutlass_Item_C_DoBlockEffect_Params params;
 
@@ -38,7 +38,7 @@ void ABP_Cutlass_Item_C::DoBlockEffect()
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_Cutlass_Item_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Cutlass_Item.BP_Cutlass_Item_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cutlass_Item.BP_Cutlass_Item_C.UserConstructionScript");
 
 	ABP_Cutlass_Item_C_UserConstructionScript_Params params;
 
@@ -56,7 +56,7 @@ void ABP_Cutlass_Item_C::UserConstructionScript()
 // struct FEventBlocked           Event                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
 void ABP_Cutlass_Item_C::OnBlockedAttack(const struct FEventBlocked& Event)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Cutlass_Item.BP_Cutlass_Item_C.OnBlockedAttack");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cutlass_Item.BP_Cutlass_Item_C.OnBlockedAttack");
 
 	ABP_Cutlass_Item_C_OnBlockedAttack_Params params;
 	params.Event = Event;
@@ -75,7 +75,7 @@ void ABP_Cutlass_Item_C::OnBlockedAttack(const struct FEventBlocked& Event)
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Cutlass_Item_C::ExecuteUbergraph_BP_Cutlass_Item(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Cutlass_Item.BP_Cutlass_Item_C.ExecuteUbergraph_BP_Cutlass_Item");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cutlass_Item.BP_Cutlass_Item_C.ExecuteUbergraph_BP_Cutlass_Item");
 
 	ABP_Cutlass_Item_C_ExecuteUbergraph_BP_Cutlass_Item_Params params;
 	params.EntryPoint = EntryPoint;

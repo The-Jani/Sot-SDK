@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -34,14 +34,6 @@ enum class ShantyPuzzle_EGlitterBeardPlayerPuzzleOutcome : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct ShantyPuzzle.ShantyPuzzleUnlockedCompleteEvent
-// 0x0001
-struct FShantyPuzzleUnlockedCompleteEvent
-{
-	unsigned char                                      UnknownData_GY8W[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
 // ScriptStruct ShantyPuzzle.ShantyPuzzleInteractionZoneDefinition
 // 0x0018
 struct FShantyPuzzleInteractionZoneDefinition
@@ -49,18 +41,8 @@ struct FShantyPuzzleInteractionZoneDefinition
 	struct FVector                                     Location;                                                  // 0x0000(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              Radius;                                                    // 0x000C(0x0004) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Athena_EMusicalInstrumentType>         RequiredMusicalInstrumentType;                             // 0x0010(0x0001) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_36KN[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_TJH8[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                RequiredNumInteractors;                                    // 0x0014(0x0004) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct ShantyPuzzle.ShantyPuzzleSingleInteractionZoneUnlockEvent
-// 0x0010
-struct FShantyPuzzleSingleInteractionZoneUnlockEvent
-{
-	class AActor*                                      Player;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                InteractionZoneIdx;                                        // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_PUHA[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -68,7 +50,7 @@ struct FShantyPuzzleSingleInteractionZoneUnlockEvent
 // 0x0001
 struct FShantyPuzzleUnlockCanceledEvent
 {
-	unsigned char                                      UnknownData_CX4N[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_GGT7[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -78,7 +60,41 @@ struct FShantyPuzzleSingleInteractionZoneStopInteractingEvent
 {
 	class AActor*                                      Player;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                InteractionZoneIdx;                                        // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9ZO1[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4YQO[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct ShantyPuzzle.ShantyPuzzleSingleInteractionZoneUnlockEvent
+// 0x0010
+struct FShantyPuzzleSingleInteractionZoneUnlockEvent
+{
+	class AActor*                                      Player;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                InteractionZoneIdx;                                        // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_UEE5[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct ShantyPuzzle.ShantyPuzzlePlayerExitInteractionZoneEvent
+// 0x0008
+struct FShantyPuzzlePlayerExitInteractionZoneEvent
+{
+	class AActor*                                      Player;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct ShantyPuzzle.ShantyPuzzlePlayerEnterInteractionZoneEvent
+// 0x0008
+struct FShantyPuzzlePlayerEnterInteractionZoneEvent
+{
+	class AActor*                                      Player;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct ShantyPuzzle.ShantyPuzzleUnlockedCompleteEvent
+// 0x0001
+struct FShantyPuzzleUnlockedCompleteEvent
+{
+	unsigned char                                      UnknownData_WBAV[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 

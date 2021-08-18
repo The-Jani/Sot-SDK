@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // struct FCookingClientRepresentation OldRepresentation              (ConstParm, Parm, OutParm, ReferenceParm)
 void UCookerComponent::OnRep_CookingState(const struct FCookingClientRepresentation& OldRepresentation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Cooking.CookerComponent.OnRep_CookingState");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Cooking.CookerComponent.OnRep_CookingState");
 
 	UCookerComponent_OnRep_CookingState_Params params;
 	params.OldRepresentation = OldRepresentation;

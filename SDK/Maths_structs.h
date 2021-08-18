@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -52,15 +52,6 @@ enum class Maths_ESpatialOffsetMethod : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct Maths.WeightedProbabilityRangeOfRangesFloatPair
-// 0x0008
-struct FWeightedProbabilityRangeOfRangesFloatPair
-{
-	float                                              Min;                                                       // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              Max;                                                       // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
 // ScriptStruct Maths.OrientedPoint
 // 0x0018
 struct FOrientedPoint
@@ -85,7 +76,35 @@ struct FRotationUpdateResult
 // 0x0018
 struct FTimedBuffer
 {
-	unsigned char                                      UnknownData_XULF[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_YKMO[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Maths.WeightedProbabilityRange
+// 0x0020
+struct FWeightedProbabilityRange
+{
+	unsigned char                                      UnknownData_KGZQ[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	uint32_t                                           Min;                                                       // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint32_t                                           Max;                                                       // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<float>                                      Weights;                                                   // 0x0010(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+};
+
+// ScriptStruct Maths.WeightedProbabilityRangeOfRangesFloatPair
+// 0x0008
+struct FWeightedProbabilityRangeOfRangesFloatPair
+{
+	float                                              Min;                                                       // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Max;                                                       // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct Maths.WeightedProbabilityRangeOfRanges
+// 0x0010 (0x0030 - 0x0020)
+struct FWeightedProbabilityRangeOfRanges : public FWeightedProbabilityRange
+{
+	TArray<struct FWeightedProbabilityRangeOfRangesFloatPair> SubRanges;                                                 // 0x0020(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 };
 
@@ -105,7 +124,7 @@ struct FFixedStepInterpCurveVector2D
 	TArray<struct FFixedStepInterpCurvePointVector2D>  Points;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	float                                              StepTime;                                                  // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               IsLooped;                                                  // 0x0014(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_B5VK[0x3];                                     // 0x0015(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_P705[0x3];                                     // 0x0015(0x0003) MISSED OFFSET (PADDING)
 
 };
 
@@ -126,26 +145,7 @@ struct FSpatialOffset
 {
 	float                                              OffsetValue;                                               // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Maths_ESpatialOffsetMethod>            OffsetMethod;                                              // 0x0004(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZLNA[0x3];                                     // 0x0005(0x0003) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct Maths.WeightedProbabilityRange
-// 0x0020
-struct FWeightedProbabilityRange
-{
-	unsigned char                                      UnknownData_EBRK[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	uint32_t                                           Min;                                                       // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint32_t                                           Max;                                                       // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<float>                                      Weights;                                                   // 0x0010(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-
-};
-
-// ScriptStruct Maths.WeightedProbabilityRangeOfRanges
-// 0x0010 (0x0030 - 0x0020)
-struct FWeightedProbabilityRangeOfRanges : public FWeightedProbabilityRange
-{
-	TArray<struct FWeightedProbabilityRangeOfRangesFloatPair> SubRanges;                                                 // 0x0020(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char                                      UnknownData_P69W[0x3];                                     // 0x0005(0x0003) MISSED OFFSET (PADDING)
 
 };
 

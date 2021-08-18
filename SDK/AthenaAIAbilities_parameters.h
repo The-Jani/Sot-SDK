@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -19,6 +19,11 @@ namespace CG
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function AthenaAIAbilities.BurrowHealVFXComponent.OnRep_IsVFXActive
+struct UBurrowHealVFXComponent_OnRep_IsVFXActive_Params
+{
+};
 
 // Function AthenaAIAbilities.ElectricShieldBuffComponent.OnRep_IsShieldActive
 struct UElectricShieldBuffComponent_OnRep_IsShieldActive_Params

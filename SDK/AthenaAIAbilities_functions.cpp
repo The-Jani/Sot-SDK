@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -18,11 +18,28 @@ namespace CG
 // Functions
 //---------------------------------------------------------------------------
 
+// Function AthenaAIAbilities.BurrowHealVFXComponent.OnRep_IsVFXActive
+// (Final, Native, Private)
+void UBurrowHealVFXComponent::OnRep_IsVFXActive()
+{
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaAIAbilities.BurrowHealVFXComponent.OnRep_IsVFXActive");
+
+	UBurrowHealVFXComponent_OnRep_IsVFXActive_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
 // Function AthenaAIAbilities.ElectricShieldBuffComponent.OnRep_IsShieldActive
 // (Final, Native, Public)
 void UElectricShieldBuffComponent::OnRep_IsShieldActive()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAIAbilities.ElectricShieldBuffComponent.OnRep_IsShieldActive");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaAIAbilities.ElectricShieldBuffComponent.OnRep_IsShieldActive");
 
 	UElectricShieldBuffComponent_OnRep_IsShieldActive_Params params;
 
@@ -39,7 +56,7 @@ void UElectricShieldBuffComponent::OnRep_IsShieldActive()
 // (Native, Public)
 void UElectricShieldBuffComponent::DeactivateShield()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaAIAbilities.ElectricShieldBuffComponent.DeactivateShield");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaAIAbilities.ElectricShieldBuffComponent.DeactivateShield");
 
 	UElectricShieldBuffComponent_DeactivateShield_Params params;
 

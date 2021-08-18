@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -29,7 +29,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SirensAnimation.SirenAnimationData");
+		static UClass* ptr = UObject::FindClass("Class SirensAnimation.SirenAnimationData");
 		return ptr;
 	}
 
@@ -38,32 +38,37 @@ public:
 };
 
 // Class SirensAnimation.SirenAnimationInstance
-// 0x0260 (FullSize[0x06A0] - InheritedSize[0x0440])
+// 0x0280 (FullSize[0x06C0] - InheritedSize[0x0440])
 class USirenAnimationInstance : public UAnimInstance
 {
 public:
-	unsigned char                                      UnknownData_2M6G[0x10];                                    // 0x0440(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FName                                       PropAttachmentSocket;                                      // 0x0450(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSirenAnimationDataStructure                SirenAnimationData;                                        // 0x0458(0x0048) (BlueprintVisible, BlueprintReadOnly)
-	struct FAthenaAnimationWeapon                      AttackAnimations;                                          // 0x04A0(0x00B8) (BlueprintVisible, BlueprintReadOnly)
-	float                                              ForwardSpeed;                                              // 0x0558(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              TiltDirectionAngleDegrees;                                 // 0x055C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              TiltAngleAlpha;                                            // 0x0560(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              SpinAngleDegrees;                                          // 0x0564(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MaxTiltAngleRepresentedByAdditiveBendAnimations;           // 0x0568(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               UpperBodyOverlayActive;                                    // 0x056C(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                               SwimmingLongways;                                          // 0x056D(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_9YM2[0x6];                                     // 0x056E(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	bool                                               AnimationsLoaded;                                          // 0x0574(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_0WOQ[0x3];                                     // 0x0575(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FCustomAnimationMontageStateMachine         FullBodyStateMachine;                                      // 0x0578(0x00D8)
-	struct FHitReactionAnimationState                  HitReacts;                                                 // 0x0650(0x0028) (BlueprintVisible)
-	unsigned char                                      UnknownData_YRWG[0x28];                                    // 0x0678(0x0028) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_M1FP[0x10];                                    // 0x0440(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TWeakObjectPtr<class APawn>                        PawnOwner;                                                 // 0x0450(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
+	struct FName                                       PropAttachmentSocket;                                      // 0x0458(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSirenAnimationDataStructure                SirenAnimationData;                                        // 0x0460(0x0048) (BlueprintVisible, BlueprintReadOnly)
+	struct FAthenaAnimationWeapon                      AttackAnimations;                                          // 0x04A8(0x00B8) (BlueprintVisible, BlueprintReadOnly)
+	float                                              ForwardSpeed;                                              // 0x0560(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_1BF3[0xC];                                     // 0x0564(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              TiltDirectionAngleDegrees;                                 // 0x0570(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              TiltAngleAlpha;                                            // 0x0574(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              SpinAngleDegrees;                                          // 0x0578(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MaxTiltAngleRepresentedByAdditiveBendAnimations;           // 0x057C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               UpperBodyOverlayActive;                                    // 0x0580(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                               SwimmingLongways;                                          // 0x0581(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_263P[0x6];                                     // 0x0582(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	bool                                               AnimationsLoaded;                                          // 0x0588(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_1T6C[0x3];                                     // 0x0589(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              AimUpAlpha;                                                // 0x058C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              AimDownAlpha;                                              // 0x0590(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_OXTW[0x4];                                     // 0x0594(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FCustomAnimationMontageStateMachine         FullBodyStateMachine;                                      // 0x0598(0x00D8)
+	struct FHitReactionAnimationState                  HitReacts;                                                 // 0x0670(0x0028) (BlueprintVisible)
+	unsigned char                                      UnknownData_HIP4[0x28];                                    // 0x0698(0x0028) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SirensAnimation.SirenAnimationInstance");
+		static UClass* ptr = UObject::FindClass("Class SirensAnimation.SirenAnimationInstance");
 		return ptr;
 	}
 

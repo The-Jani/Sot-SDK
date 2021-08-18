@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -1171,6 +1171,26 @@ struct UBTTask_BlueprintBase_FinishAbort_Params
 {
 };
 
+// Function AIModule.PawnAction.GetActionPriority
+struct UPawnAction_GetActionPriority_Params
+{
+	TEnumAsByte<AIModule_EAIRequestPriority>           ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function AIModule.PawnAction.Finish
+struct UPawnAction_Finish_Params
+{
+	TEnumAsByte<AIModule_EPawnActionResult>            WithResult;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function AIModule.PawnAction.CreateActionInstance
+struct UPawnAction_CreateActionInstance_Params
+{
+	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                      ActionClass;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	class UPawnAction*                                 ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
 // Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleLocation
 struct UEnvQueryContext_BlueprintBase_ProvideSingleLocation_Params
 {
@@ -1236,54 +1256,10 @@ struct UEnvQueryManager_RunEQSQuery_Params
 	class UEnvQueryInstanceBlueprintWrapper*           ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
-// Function AIModule.EnvQueryGenerator_BlueprintBase.GetQuerier
-struct UEnvQueryGenerator_BlueprintBase_GetQuerier_Params
-{
-	class UObject*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function AIModule.EnvQueryGenerator_BlueprintBase.DoItemGeneration
-struct UEnvQueryGenerator_BlueprintBase_DoItemGeneration_Params
-{
-	TArray<struct FVector>                             ContextLocations;                                          // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-};
-
-// Function AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedVector
-struct UEnvQueryGenerator_BlueprintBase_AddGeneratedVector_Params
-{
-	struct FVector                                     GeneratedVector;                                           // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-
-// Function AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedActor
-struct UEnvQueryGenerator_BlueprintBase_AddGeneratedActor_Params
-{
-	class AActor*                                      GeneratedActor;                                            // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
 // Function AIModule.CrowdFollowingComponent.SuspendCrowdSteering
 struct UCrowdFollowingComponent_SuspendCrowdSteering_Params
 {
 	bool                                               bSuspend;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-
-// Function AIModule.PawnAction.GetActionPriority
-struct UPawnAction_GetActionPriority_Params
-{
-	TEnumAsByte<AIModule_EAIRequestPriority>           ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function AIModule.PawnAction.Finish
-struct UPawnAction_Finish_Params
-{
-	TEnumAsByte<AIModule_EPawnActionResult>            WithResult;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function AIModule.PawnAction.CreateActionInstance
-struct UPawnAction_CreateActionInstance_Params
-{
-	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                      ActionClass;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class UPawnAction*                                 ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 // Function AIModule.PawnAction_BlueprintBase.ActionTick
@@ -1360,6 +1336,30 @@ struct UPawnSensingComponent_GetPeripheralVisionCosine_Params
 struct UPawnSensingComponent_GetPeripheralVisionAngle_Params
 {
 	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function AIModule.EnvQueryGenerator_BlueprintBase.GetQuerier
+struct UEnvQueryGenerator_BlueprintBase_GetQuerier_Params
+{
+	class UObject*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function AIModule.EnvQueryGenerator_BlueprintBase.DoItemGeneration
+struct UEnvQueryGenerator_BlueprintBase_DoItemGeneration_Params
+{
+	TArray<struct FVector>                             ContextLocations;                                          // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
+// Function AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedVector
+struct UEnvQueryGenerator_BlueprintBase_AddGeneratedVector_Params
+{
+	struct FVector                                     GeneratedVector;                                           // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedActor
+struct UEnvQueryGenerator_BlueprintBase_AddGeneratedActor_Params
+{
+	class AActor*                                      GeneratedActor;                                            // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 }

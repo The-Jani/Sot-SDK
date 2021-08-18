@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -21,15 +21,13 @@ namespace CG
 // Function MerchantContracts.MerchantContractsBlueprintLibrary.GetDateFromTimeLimit
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// TScriptInterface<class UGameServiceProviderInterface> ServiceProviderInterface       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 // float                          TimeLimit                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
-struct FText UMerchantContractsBlueprintLibrary::STATIC_GetDateFromTimeLimit(const TScriptInterface<class UGameServiceProviderInterface>& ServiceProviderInterface, float TimeLimit)
+struct FText UMerchantContractsBlueprintLibrary::STATIC_GetDateFromTimeLimit(float TimeLimit)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MerchantContracts.MerchantContractsBlueprintLibrary.GetDateFromTimeLimit");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MerchantContracts.MerchantContractsBlueprintLibrary.GetDateFromTimeLimit");
 
 	UMerchantContractsBlueprintLibrary_GetDateFromTimeLimit_Params params;
-	params.ServiceProviderInterface = ServiceProviderInterface;
 	params.TimeLimit = TimeLimit;
 
 	auto flags = fn->FunctionFlags;

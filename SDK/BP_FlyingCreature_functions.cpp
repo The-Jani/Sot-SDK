@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 void ABP_FlyingCreature_C::CreateCreature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_FlyingCreature.BP_FlyingCreature_C.CreateCreature");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FlyingCreature.BP_FlyingCreature_C.CreateCreature");
 
 	ABP_FlyingCreature_C_CreateCreature_Params params;
 
@@ -38,7 +38,7 @@ void ABP_FlyingCreature_C::CreateCreature()
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_FlyingCreature_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_FlyingCreature.BP_FlyingCreature_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FlyingCreature.BP_FlyingCreature_C.UserConstructionScript");
 
 	ABP_FlyingCreature_C_UserConstructionScript_Params params;
 

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (BlueprintCallable, BlueprintEvent)
 void UBP_Anim_ReviveGhost_C::AnimNotify_OutOfComplete()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_ReviveGhost.BP_Anim_ReviveGhost_C.AnimNotify_OutOfComplete");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Anim_ReviveGhost.BP_Anim_ReviveGhost_C.AnimNotify_OutOfComplete");
 
 	UBP_Anim_ReviveGhost_C_AnimNotify_OutOfComplete_Params params;
 
@@ -40,7 +40,7 @@ void UBP_Anim_ReviveGhost_C::AnimNotify_OutOfComplete()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_Anim_ReviveGhost_C::ExecuteUbergraph_BP_Anim_ReviveGhost(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_ReviveGhost.BP_Anim_ReviveGhost_C.ExecuteUbergraph_BP_Anim_ReviveGhost");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Anim_ReviveGhost.BP_Anim_ReviveGhost_C.ExecuteUbergraph_BP_Anim_ReviveGhost");
 
 	UBP_Anim_ReviveGhost_C_ExecuteUbergraph_BP_Anim_ReviveGhost_Params params;
 	params.EntryPoint = EntryPoint;

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,16 +20,16 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponShopkeeper.BP_WeaponShopkeeper_C
-// 0x0008 (FullSize[0x04E8] - InheritedSize[0x04E0])
+// 0x0008 (FullSize[0x0488] - InheritedSize[0x0480])
 class ABP_WeaponShopkeeper_C : public AShopkeeperInteractionProxy
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                          // 0x04E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class USceneComponent*                             DefaultSceneRoot;                                          // 0x0480(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_WeaponShopkeeper.BP_WeaponShopkeeper_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_WeaponShopkeeper.BP_WeaponShopkeeper_C");
 		return ptr;
 	}
 

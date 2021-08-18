@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -25,7 +25,7 @@ namespace CG
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool UCustomMeshComponent::SetCustomMeshTriangles(TArray<struct FCustomMeshTriangle> Triangles)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CustomMeshComponent.CustomMeshComponent.SetCustomMeshTriangles");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function CustomMeshComponent.CustomMeshComponent.SetCustomMeshTriangles");
 
 	UCustomMeshComponent_SetCustomMeshTriangles_Params params;
 	params.Triangles = Triangles;
@@ -45,7 +45,7 @@ bool UCustomMeshComponent::SetCustomMeshTriangles(TArray<struct FCustomMeshTrian
 // (Final, Native, Public, BlueprintCallable)
 void UCustomMeshComponent::ClearCustomMeshTriangles()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CustomMeshComponent.CustomMeshComponent.ClearCustomMeshTriangles");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function CustomMeshComponent.CustomMeshComponent.ClearCustomMeshTriangles");
 
 	UCustomMeshComponent_ClearCustomMeshTriangles_Params params;
 
@@ -64,7 +64,7 @@ void UCustomMeshComponent::ClearCustomMeshTriangles()
 // TArray<struct FCustomMeshTriangle> Triangles                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 void UCustomMeshComponent::AddCustomMeshTriangles(TArray<struct FCustomMeshTriangle> Triangles)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CustomMeshComponent.CustomMeshComponent.AddCustomMeshTriangles");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function CustomMeshComponent.CustomMeshComponent.AddCustomMeshTriangles");
 
 	UCustomMeshComponent_AddCustomMeshTriangles_Params params;
 	params.Triangles = Triangles;

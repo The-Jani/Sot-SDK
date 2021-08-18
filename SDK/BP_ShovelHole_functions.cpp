@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // float                          FadeTime                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_ShovelHole_C::SetFadeInParameters(float FadeTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.SetFadeInParameters");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.SetFadeInParameters");
 
 	ABP_ShovelHole_C_SetFadeInParameters_Params params;
 	params.FadeTime = FadeTime;
@@ -43,7 +43,7 @@ void ABP_ShovelHole_C::SetFadeInParameters(float FadeTime)
 // float                          FadeTime                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_ShovelHole_C::SetFadeOutParameters(float FadeTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.SetFadeOutParameters");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.SetFadeOutParameters");
 
 	ABP_ShovelHole_C_SetFadeOutParameters_Params params;
 	params.FadeTime = FadeTime;
@@ -60,7 +60,7 @@ void ABP_ShovelHole_C::SetFadeOutParameters(float FadeTime)
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_ShovelHole_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.UserConstructionScript");
 
 	ABP_ShovelHole_C_UserConstructionScript_Params params;
 
@@ -78,7 +78,7 @@ void ABP_ShovelHole_C::UserConstructionScript()
 // TEnumAsByte<Athena_EHoleState> InState                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_ShovelHole_C::OnStateChanged(TEnumAsByte<Athena_EHoleState> InState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.OnStateChanged");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.OnStateChanged");
 
 	ABP_ShovelHole_C_OnStateChanged_Params params;
 	params.InState = InState;
@@ -95,7 +95,7 @@ void ABP_ShovelHole_C::OnStateChanged(TEnumAsByte<Athena_EHoleState> InState)
 // (Event, Public, BlueprintEvent)
 void ABP_ShovelHole_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.ReceiveBeginPlay");
 
 	ABP_ShovelHole_C_ReceiveBeginPlay_Params params;
 
@@ -113,7 +113,7 @@ void ABP_ShovelHole_C::ReceiveBeginPlay()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_ShovelHole_C::ExecuteUbergraph_BP_ShovelHole(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.ExecuteUbergraph_BP_ShovelHole");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ShovelHole.BP_ShovelHole_C.ExecuteUbergraph_BP_ShovelHole");
 
 	ABP_ShovelHole_C_ExecuteUbergraph_BP_ShovelHole_Params params;
 	params.EntryPoint = EntryPoint;

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_VomitProjectile.BP_VomitProjectile_C
-// 0x0000 (FullSize[0x0778] - InheritedSize[0x0778])
+// 0x0000 (FullSize[0x0718] - InheritedSize[0x0718])
 class ABP_VomitProjectile_C : public AVomitProjectile
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_VomitProjectile.BP_VomitProjectile_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_VomitProjectile.BP_VomitProjectile_C");
 		return ptr;
 	}
 

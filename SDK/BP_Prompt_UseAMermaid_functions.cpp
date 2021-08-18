@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Public, BlueprintCallable, BlueprintEvent)
 void UBP_Prompt_UseAMermaid_C::ResetState()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.ResetState");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.ResetState");
 
 	UBP_Prompt_UseAMermaid_C_ResetState_Params params;
 
@@ -40,7 +40,7 @@ void UBP_Prompt_UseAMermaid_C::ResetState()
 // struct FPromptEvaluation       ReturnValue                    (Parm, OutParm, ReturnParm)
 struct FPromptEvaluation UBP_Prompt_UseAMermaid_C::EvaluatePromptDisplayState()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.EvaluatePromptDisplayState");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.EvaluatePromptDisplayState");
 
 	UBP_Prompt_UseAMermaid_C_EvaluatePromptDisplayState_Params params;
 
@@ -58,7 +58,7 @@ struct FPromptEvaluation UBP_Prompt_UseAMermaid_C::EvaluatePromptDisplayState()
 // (Public, BlueprintCallable, BlueprintEvent)
 void UBP_Prompt_UseAMermaid_C::PostInitialize()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.PostInitialize");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.PostInitialize");
 
 	UBP_Prompt_UseAMermaid_C_PostInitialize_Params params;
 
@@ -76,7 +76,7 @@ void UBP_Prompt_UseAMermaid_C::PostInitialize()
 // struct FMermaidActivatedLocally Ev                             (Parm)
 void UBP_Prompt_UseAMermaid_C::Prompt_MermaidActivatedLocally(const struct FMermaidActivatedLocally& Ev)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.Prompt_MermaidActivatedLocally");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.Prompt_MermaidActivatedLocally");
 
 	UBP_Prompt_UseAMermaid_C_Prompt_MermaidActivatedLocally_Params params;
 	params.Ev = Ev;
@@ -95,7 +95,7 @@ void UBP_Prompt_UseAMermaid_C::Prompt_MermaidActivatedLocally(const struct FMerm
 // struct FMermaidDeactivatedLocally Ev                             (Parm)
 void UBP_Prompt_UseAMermaid_C::Prompt_MermaidDeactivatedLocally(const struct FMermaidDeactivatedLocally& Ev)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.Prompt_MermaidDeactivatedLocally");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.Prompt_MermaidDeactivatedLocally");
 
 	UBP_Prompt_UseAMermaid_C_Prompt_MermaidDeactivatedLocally_Params params;
 	params.Ev = Ev;
@@ -114,7 +114,7 @@ void UBP_Prompt_UseAMermaid_C::Prompt_MermaidDeactivatedLocally(const struct FMe
 // struct FMermaidUsedEvent       Ev                             (Parm)
 void UBP_Prompt_UseAMermaid_C::Prompt_MermaidUsed(const struct FMermaidUsedEvent& Ev)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.Prompt_MermaidUsed");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.Prompt_MermaidUsed");
 
 	UBP_Prompt_UseAMermaid_C_Prompt_MermaidUsed_Params params;
 	params.Ev = Ev;
@@ -131,7 +131,7 @@ void UBP_Prompt_UseAMermaid_C::Prompt_MermaidUsed(const struct FMermaidUsedEvent
 // (Event, Public, BlueprintEvent)
 void UBP_Prompt_UseAMermaid_C::UnregisterOtherEvents_Implementable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.UnregisterOtherEvents_Implementable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.UnregisterOtherEvents_Implementable");
 
 	UBP_Prompt_UseAMermaid_C_UnregisterOtherEvents_Implementable_Params params;
 
@@ -149,7 +149,7 @@ void UBP_Prompt_UseAMermaid_C::UnregisterOtherEvents_Implementable()
 // struct FObjectMessagingDispatcherHandle CharacterDispatcher            (ConstParm, Parm, OutParm, ReferenceParm)
 void UBP_Prompt_UseAMermaid_C::RegisterCharacterEvents_Implementable(const struct FObjectMessagingDispatcherHandle& CharacterDispatcher)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.RegisterCharacterEvents_Implementable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.RegisterCharacterEvents_Implementable");
 
 	UBP_Prompt_UseAMermaid_C_RegisterCharacterEvents_Implementable_Params params;
 	params.CharacterDispatcher = CharacterDispatcher;
@@ -168,7 +168,7 @@ void UBP_Prompt_UseAMermaid_C::RegisterCharacterEvents_Implementable(const struc
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_Prompt_UseAMermaid_C::ExecuteUbergraph_BP_Prompt_UseAMermaid(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.ExecuteUbergraph_BP_Prompt_UseAMermaid");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.ExecuteUbergraph_BP_Prompt_UseAMermaid");
 
 	UBP_Prompt_UseAMermaid_C_ExecuteUbergraph_BP_Prompt_UseAMermaid_Params params;
 	params.EntryPoint = EntryPoint;

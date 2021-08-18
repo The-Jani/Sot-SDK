@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -40,7 +40,7 @@ struct FEventAthenaLoadingScreenStateResponse
 // 0x0001
 struct FEventAthenaLoadingScreenStateRequest
 {
-	unsigned char                                      UnknownData_UJU7[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_YI6I[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -64,7 +64,7 @@ struct FEventAthenaLoadingScreenBlockUntilUIIntialised
 // 0x0001
 struct FEventAthenaLoadingScreenClose
 {
-	unsigned char                                      UnknownData_292R[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DB0W[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -72,7 +72,7 @@ struct FEventAthenaLoadingScreenClose
 // 0x0001
 struct FEventAthenaLoadingScreenOpen
 {
-	unsigned char                                      UnknownData_YOIU[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_D158[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 

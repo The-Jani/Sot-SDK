@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -18,6 +18,17 @@ namespace CG
 //---------------------------------------------------------------------------
 // Enums
 //---------------------------------------------------------------------------
+
+// Enum Water.EWaterQueryResult
+enum class Water_EWaterQueryResult : uint8_t
+{
+	EWaterQueryResult__Success     = 0,
+	EWaterQueryResult__Failed      = 1,
+	EWaterQueryResult__NoWater     = 2,
+	EWaterQueryResult__Count       = 3,
+	EWaterQueryResult__EWaterQueryResult_MAX = 4,
+
+};
 
 // Enum Water.EWaterHeightType
 enum class Water_EWaterHeightType : uint8_t
@@ -59,17 +70,6 @@ enum class Water_EBuoyancySampleType : uint8_t
 
 };
 
-// Enum Water.EWaterQueryResult
-enum class Water_EWaterQueryResult : uint8_t
-{
-	EWaterQueryResult__Success     = 0,
-	EWaterQueryResult__Failed      = 1,
-	EWaterQueryResult__NoWater     = 2,
-	EWaterQueryResult__Count       = 3,
-	EWaterQueryResult__EWaterQueryResult_MAX = 4,
-
-};
-
 //---------------------------------------------------------------------------
 // Script Structs
 //---------------------------------------------------------------------------
@@ -80,7 +80,7 @@ struct FWaterInformation
 {
 	class UClass*                                      WaterType;                                                 // 0x0000(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	bool                                               CanSwim;                                                   // 0x0008(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_H1F0[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_6GA0[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (PADDING)
 
 };
 
@@ -88,7 +88,7 @@ struct FWaterInformation
 // 0x00D8
 struct FWaterSplashProbe
 {
-	unsigned char                                      UnknownData_PMJ7[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_84Y8[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FString                                     ProbeDebugName;                                            // 0x0008(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash)
 	struct FVector                                     LocalOffset;                                               // 0x0018(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              Height;                                                    // 0x0024(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -100,9 +100,9 @@ struct FWaterSplashProbe
 	float                                              LocalOffsetAdjustmentDuration;                             // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Water_EWaterSplashProbeType>           Type;                                                      // 0x0048(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Water_EWaterHeightType>                WaterHeightType;                                           // 0x0049(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_91AL[0x2];                                     // 0x004A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QQI2[0x2];                                     // 0x004A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              StaticWaterHeightValue;                                    // 0x004C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CPIU[0x88];                                    // 0x0050(0x0088) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_A28H[0x88];                                    // 0x0050(0x0088) MISSED OFFSET (PADDING)
 
 };
 
@@ -110,7 +110,7 @@ struct FWaterSplashProbe
 // 0x0128
 struct FSplashProbe
 {
-	unsigned char                                      UnknownData_UHEM[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_20F6[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FWaterSplashProbe                           Probe;                                                     // 0x0008(0x00D8) (Edit, DisableEditOnInstance)
 	float                                              ProbeSamplingTime;                                         // 0x00E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TimeBetweenProbeVfx;                                       // 0x00E4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -118,12 +118,123 @@ struct FSplashProbe
 	bool                                               SpawnAttached;                                             // 0x00F0(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               AttachToWaterSurface;                                      // 0x00F1(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Engine_EAttachLocation>                SplashAttachType;                                          // 0x00F2(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_WAHU[0x1];                                     // 0x00F3(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XBHI[0x1];                                     // 0x00F3(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     VfxSpawnOffset;                                            // 0x00F4(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               Enabled;                                                   // 0x0100(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_7OSN[0x7];                                     // 0x0101(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GQ6A[0x7];                                     // 0x0101(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UParticleSystemComponent*                    CurrentlyPlayingVFX;                                       // 0x0108(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_IK4N[0x18];                                    // 0x0110(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_7IGU[0x18];                                    // 0x0110(0x0018) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Water.BuoyancyDragSample
+// 0x0090
+struct FBuoyancyDragSample
+{
+	struct FVector                                     Offset;                                                    // 0x0000(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                     Normal;                                                    // 0x000C(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                     Tangent;                                                   // 0x0018(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              Radius;                                                    // 0x0024(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              DragCoefficient;                                           // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<Water_EBuoyancyDragSampleType>         Type;                                                      // 0x002C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_LX4T[0x63];                                    // 0x002D(0x0063) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Water.BuoyancyVolumeSample
+// 0x0058
+struct FBuoyancyVolumeSample
+{
+	struct FVector                                     Offset;                                                    // 0x0000(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              Radius;                                                    // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<Water_EBuoyancySampleType>             Type;                                                      // 0x0010(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               bRelevantForSubmersionVolumeCalculation;                   // 0x0011(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_G8N9[0x2];                                     // 0x0012(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              Scalar;                                                    // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              DampingScalar;                                             // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_IX9S[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UCurveFloat*                                 DistUnderwaterVSBuoyancyForce;                             // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCurveFloat*                                 DistUnderwaterVSBuoyancyForceSecondary;                    // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCurveFloat*                                 DistUnderwaterVSBuoyancyForceTertiary;                     // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCurveFloat*                                 FakeZOffsetGeneratorCurve;                                 // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              FakeZOffsetAmp;                                            // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              FakeZOffsetGeneratorTimeScale;                             // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_D7VJ[0x10];                                    // 0x0048(0x0010) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Water.WaterBuoyancy
+// 0x0130
+struct FWaterBuoyancy
+{
+	class UPrimitiveComponent*                         PrimitiveComponent;                                        // 0x0000(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              OverallBuyoancyScalar;                                     // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              DampingPerSample;                                          // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              AdditionalAngularDampingWhenSubmerged;                     // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_ZM8H[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<struct FBuoyancyVolumeSample>               VolumeSamples;                                             // 0x0018(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FBuoyancyDragSample>                 DragSamples;                                               // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UCurveFloat*                                 BuyoancySampleZSpeedVSDampeningScalar;                     // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              QuadSubmersionTestSampleResolution;                        // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_80SH[0xEC];                                    // 0x0044(0x00EC) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Water.BuoyancySampleMovementConfigurationEntry
+// 0x0018
+struct FBuoyancySampleMovementConfigurationEntry
+{
+	struct FVector                                     SampleOffset;                                              // 0x0000(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_9FF2[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UCurveFloat*                                 BuoyancyScaleCurve;                                        // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct Water.BuoyancySampleMovementConfiguration
+// 0x0038
+struct FBuoyancySampleMovementConfiguration
+{
+	class UCurveVector*                                CenterOfMassOffsetCurve;                                   // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBuoyancySampleMovementConfigurationEntry> SampleMoveData;                                            // 0x0008(0x0010) (Edit, ZeroConstructor)
+	float                                              OverallBuoyancyScalar;                                     // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_MKEC[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UCurveFloat*                                 OverallBuoyancyScalarBlendCurve;                           // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCurveFloat*                                 ProbeMovementBlendCurve;                                   // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Duration;                                                  // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_Y5X6[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Water.BuoyancySampleMovement
+// 0x0068
+struct FBuoyancySampleMovement
+{
+	TArray<struct FBuoyancySampleMovementConfiguration> Configurations;                                            // 0x0000(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      UnknownData_2BRD[0x40];                                    // 0x0010(0x0040) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UCurveFloat*                                 BuoyancyScalarCurve;                                       // 0x0050(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCurveFloat*                                 ProbeMovementCurve;                                        // 0x0058(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_RKIC[0x8];                                     // 0x0060(0x0008) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Water.WaterSpout
+// 0x0070
+struct FWaterSpout
+{
+	struct FTransform                                  SpoutLocatorTransform;                                     // 0x0000(0x0030) (Edit, IsPlainOldData, NoDestructor)
+	class UParticleSystemComponent*                    SpoutParticleSystem;                                       // 0x0030(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*                    SplashParticleSystem;                                      // 0x0038(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_R7A0[0x30];                                    // 0x0040(0x0030) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Water.WaterSplashProbesContainer
+// 0x0018
+struct FWaterSplashProbesContainer
+{
+	TArray<struct FWaterSplashProbe>                   Probes;                                                    // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	float                                              ProbeSamplingTime;                                         // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_YTM6[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -140,7 +251,7 @@ struct FEventCurrentWaterPlaneChange
 // 0x0001
 struct FEventLeftWaterExclusionZone
 {
-	unsigned char                                      UnknownData_LGW2[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_RH77[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -148,7 +259,7 @@ struct FEventLeftWaterExclusionZone
 // 0x0001
 struct FEventEnteredWaterExclusionZone
 {
-	unsigned char                                      UnknownData_DH58[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3590[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -160,118 +271,7 @@ struct FFFTWaterQueryResult
 	struct FVector2D                                   Choppiness;                                                // 0x0004(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                     Normal;                                                    // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Water_EWaterQueryResult>               WaterQueryResult;                                          // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_6SKQ[0x3];                                     // 0x0019(0x0003) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct Water.BuoyancySampleMovementConfigurationEntry
-// 0x0018
-struct FBuoyancySampleMovementConfigurationEntry
-{
-	struct FVector                                     SampleOffset;                                              // 0x0000(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_9DJG[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UCurveFloat*                                 BuoyancyScaleCurve;                                        // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct Water.BuoyancySampleMovementConfiguration
-// 0x0038
-struct FBuoyancySampleMovementConfiguration
-{
-	class UCurveVector*                                CenterOfMassOffsetCurve;                                   // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBuoyancySampleMovementConfigurationEntry> SampleMoveData;                                            // 0x0008(0x0010) (Edit, ZeroConstructor)
-	float                                              OverallBuoyancyScalar;                                     // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FNQE[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UCurveFloat*                                 OverallBuoyancyScalarBlendCurve;                           // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCurveFloat*                                 ProbeMovementBlendCurve;                                   // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              Duration;                                                  // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_VE8F[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct Water.BuoyancySampleMovement
-// 0x0068
-struct FBuoyancySampleMovement
-{
-	TArray<struct FBuoyancySampleMovementConfiguration> Configurations;                                            // 0x0000(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData_1STL[0x40];                                    // 0x0010(0x0040) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UCurveFloat*                                 BuoyancyScalarCurve;                                       // 0x0050(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCurveFloat*                                 ProbeMovementCurve;                                        // 0x0058(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2EOA[0x8];                                     // 0x0060(0x0008) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct Water.WaterSpout
-// 0x0070
-struct FWaterSpout
-{
-	struct FTransform                                  SpoutLocatorTransform;                                     // 0x0000(0x0030) (Edit, IsPlainOldData, NoDestructor)
-	class UParticleSystemComponent*                    SpoutParticleSystem;                                       // 0x0030(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*                    SplashParticleSystem;                                      // 0x0038(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_F9NI[0x30];                                    // 0x0040(0x0030) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct Water.BuoyancyVolumeSample
-// 0x0058
-struct FBuoyancyVolumeSample
-{
-	struct FVector                                     Offset;                                                    // 0x0000(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                              Radius;                                                    // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<Water_EBuoyancySampleType>             Type;                                                      // 0x0010(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               bRelevantForSubmersionVolumeCalculation;                   // 0x0011(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_0Q56[0x2];                                     // 0x0012(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              Scalar;                                                    // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              DampingScalar;                                             // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TCNN[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UCurveFloat*                                 DistUnderwaterVSBuoyancyForce;                             // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCurveFloat*                                 DistUnderwaterVSBuoyancyForceSecondary;                    // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCurveFloat*                                 DistUnderwaterVSBuoyancyForceTertiary;                     // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCurveFloat*                                 FakeZOffsetGeneratorCurve;                                 // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              FakeZOffsetAmp;                                            // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              FakeZOffsetGeneratorTimeScale;                             // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_H831[0x10];                                    // 0x0048(0x0010) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct Water.BuoyancyDragSample
-// 0x0090
-struct FBuoyancyDragSample
-{
-	struct FVector                                     Offset;                                                    // 0x0000(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                     Normal;                                                    // 0x000C(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                     Tangent;                                                   // 0x0018(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                              Radius;                                                    // 0x0024(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              DragCoefficient;                                           // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<Water_EBuoyancyDragSampleType>         Type;                                                      // 0x002C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_JQKC[0x63];                                    // 0x002D(0x0063) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct Water.WaterBuoyancy
-// 0x0130
-struct FWaterBuoyancy
-{
-	class UPrimitiveComponent*                         PrimitiveComponent;                                        // 0x0000(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              OverallBuyoancyScalar;                                     // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              DampingPerSample;                                          // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              AdditionalAngularDampingWhenSubmerged;                     // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_JZHK[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<struct FBuoyancyVolumeSample>               VolumeSamples;                                             // 0x0018(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FBuoyancyDragSample>                 DragSamples;                                               // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class UCurveFloat*                                 BuyoancySampleZSpeedVSDampeningScalar;                     // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              QuadSubmersionTestSampleResolution;                        // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_O7G0[0xEC];                                    // 0x0044(0x00EC) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct Water.WaterSplashProbesContainer
-// 0x0018
-struct FWaterSplashProbesContainer
-{
-	TArray<struct FWaterSplashProbe>                   Probes;                                                    // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	float                                              ProbeSamplingTime;                                         // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_0AGP[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_XRGJ[0x3];                                     // 0x0019(0x0003) MISSED OFFSET (PADDING)
 
 };
 

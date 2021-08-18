@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -42,43 +42,13 @@ enum class GlitterBeard_EGlitterbeardVFXState : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct GlitterBeard.GlitterbeardPuzzleUnlockTelemetryEvent
+// ScriptStruct GlitterBeard.FinaleReplicationState
 // 0x0010
-struct FGlitterbeardPuzzleUnlockTelemetryEvent
+struct FFinaleReplicationState
 {
-	unsigned char                                      UnknownData_9757[0x10];                                    // 0x0000(0x0010) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct GlitterBeard.GlitterbeardPlayerPuzzleUnlockSuccessTelemetryEvent
-// 0x0010
-struct FGlitterbeardPlayerPuzzleUnlockSuccessTelemetryEvent
-{
-	unsigned char                                      UnknownData_4NZH[0x10];                                    // 0x0000(0x0010) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct GlitterBeard.GlitterbeardPlayerPuzzleUnlockFailureTelemetryEvent
-// 0x0020
-struct FGlitterbeardPlayerPuzzleUnlockFailureTelemetryEvent
-{
-	unsigned char                                      UnknownData_OKU6[0x20];                                    // 0x0000(0x0020) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct GlitterBeard.GlitterbeardSessionEndTelemetryEvent
-// 0x0010
-struct FGlitterbeardSessionEndTelemetryEvent
-{
-	unsigned char                                      UnknownData_J4H4[0x10];                                    // 0x0000(0x0010) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct GlitterBeard.GlitterbeardSessionBeginTelemetryEvent
-// 0x0010
-struct FGlitterbeardSessionBeginTelemetryEvent
-{
-	unsigned char                                      UnknownData_KYH6[0x10];                                    // 0x0000(0x0010) MISSED OFFSET (PADDING)
+	TEnumAsByte<GlitterBeard_EFinaleState>             State;                                                     // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_CI55[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UObject*                                     TargetEnsemble;                                            // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
@@ -104,7 +74,7 @@ struct FChangeGlitterBeardVFXStateEvent
 {
 	int                                                Index;                                                     // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<GlitterBeard_EGlitterbeardVFXState>    Target;                                                    // 0x0004(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_IBCV[0x3];                                     // 0x0005(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_F2YB[0x3];                                     // 0x0005(0x0003) MISSED OFFSET (PADDING)
 
 };
 
@@ -112,17 +82,47 @@ struct FChangeGlitterBeardVFXStateEvent
 // 0x0010
 struct FGlitterbeardPuzzleCancelTelemetryEvent
 {
-	unsigned char                                      UnknownData_311C[0x10];                                    // 0x0000(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_YRQK[0x10];                                    // 0x0000(0x0010) MISSED OFFSET (PADDING)
 
 };
 
-// ScriptStruct GlitterBeard.FinaleReplicationState
+// ScriptStruct GlitterBeard.GlitterbeardPuzzleUnlockTelemetryEvent
 // 0x0010
-struct FFinaleReplicationState
+struct FGlitterbeardPuzzleUnlockTelemetryEvent
 {
-	TEnumAsByte<GlitterBeard_EFinaleState>             State;                                                     // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EOE9[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UObject*                                     TargetEnsemble;                                            // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_3SDJ[0x10];                                    // 0x0000(0x0010) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct GlitterBeard.GlitterbeardPlayerPuzzleUnlockSuccessTelemetryEvent
+// 0x0010
+struct FGlitterbeardPlayerPuzzleUnlockSuccessTelemetryEvent
+{
+	unsigned char                                      UnknownData_N7WV[0x10];                                    // 0x0000(0x0010) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct GlitterBeard.GlitterbeardPlayerPuzzleUnlockFailureTelemetryEvent
+// 0x0020
+struct FGlitterbeardPlayerPuzzleUnlockFailureTelemetryEvent
+{
+	unsigned char                                      UnknownData_63VT[0x20];                                    // 0x0000(0x0020) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct GlitterBeard.GlitterbeardSessionEndTelemetryEvent
+// 0x0010
+struct FGlitterbeardSessionEndTelemetryEvent
+{
+	unsigned char                                      UnknownData_XBAC[0x10];                                    // 0x0000(0x0010) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct GlitterBeard.GlitterbeardSessionBeginTelemetryEvent
+// 0x0010
+struct FGlitterbeardSessionBeginTelemetryEvent
+{
+	unsigned char                                      UnknownData_JFQR[0x10];                                    // 0x0000(0x0010) MISSED OFFSET (PADDING)
 
 };
 

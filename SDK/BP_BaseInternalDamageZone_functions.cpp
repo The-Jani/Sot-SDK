@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 void ABP_BaseInternalDamageZone_C::OnRepairMounted()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.OnRepairMounted");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.OnRepairMounted");
 
 	ABP_BaseInternalDamageZone_C_OnRepairMounted_Params params;
 
@@ -42,7 +42,7 @@ void ABP_BaseInternalDamageZone_C::OnRepairMounted()
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool ABP_BaseInternalDamageZone_C::GetRepairMountLocation(class USceneComponent** MountLocation, struct FName* MountSocket)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.GetRepairMountLocation");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.GetRepairMountLocation");
 
 	ABP_BaseInternalDamageZone_C_GetRepairMountLocation_Params params;
 
@@ -69,7 +69,7 @@ bool ABP_BaseInternalDamageZone_C::GetRepairMountLocation(class USceneComponent*
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool ABP_BaseInternalDamageZone_C::ShouldDrawTooltipInWorldSpace(class AActor* InInteractor, struct FVector* DesiredTooltipWorldPosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.ShouldDrawTooltipInWorldSpace");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.ShouldDrawTooltipInWorldSpace");
 
 	ABP_BaseInternalDamageZone_C_ShouldDrawTooltipInWorldSpace_Params params;
 	params.InInteractor = InInteractor;
@@ -91,7 +91,7 @@ bool ABP_BaseInternalDamageZone_C::ShouldDrawTooltipInWorldSpace(class AActor* I
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_BaseInternalDamageZone_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.UserConstructionScript");
 
 	ABP_BaseInternalDamageZone_C_UserConstructionScript_Params params;
 
@@ -109,7 +109,7 @@ void ABP_BaseInternalDamageZone_C::UserConstructionScript()
 // TEnumAsByte<Engine_EEndPlayReason> EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_BaseInternalDamageZone_C::ReceiveEndPlay(TEnumAsByte<Engine_EEndPlayReason> EndPlayReason)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.ReceiveEndPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.ReceiveEndPlay");
 
 	ABP_BaseInternalDamageZone_C_ReceiveEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
@@ -128,7 +128,7 @@ void ABP_BaseInternalDamageZone_C::ReceiveEndPlay(TEnumAsByte<Engine_EEndPlayRea
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_BaseInternalDamageZone_C::ExecuteUbergraph_BP_BaseInternalDamageZone(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.ExecuteUbergraph_BP_BaseInternalDamageZone");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BaseInternalDamageZone.BP_BaseInternalDamageZone_C.ExecuteUbergraph_BP_BaseInternalDamageZone");
 
 	ABP_BaseInternalDamageZone_C_ExecuteUbergraph_BP_BaseInternalDamageZone_Params params;
 	params.EntryPoint = EntryPoint;

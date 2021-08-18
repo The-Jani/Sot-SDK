@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // struct FDockableInfo           ReturnValue                    (Parm, OutParm, ReturnParm)
 struct FDockableInfo ABP_Wheel_C::GetDockableInfo()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.GetDockableInfo");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.GetDockableInfo");
 
 	ABP_Wheel_C_GetDockableInfo_Params params;
 
@@ -46,7 +46,7 @@ struct FDockableInfo ABP_Wheel_C::GetDockableInfo()
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 struct FVector ABP_Wheel_C::GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.GetClosestInteractionPoint");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.GetClosestInteractionPoint");
 
 	ABP_Wheel_C_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
@@ -70,7 +70,7 @@ struct FVector ABP_Wheel_C::GetClosestInteractionPoint(const struct FVector& Ref
 // class USkeletalMeshComponent*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 class USkeletalMeshComponent* ABP_Wheel_C::GetWheelMesh()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.GetWheelMesh");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.GetWheelMesh");
 
 	ABP_Wheel_C_GetWheelMesh_Params params;
 
@@ -88,7 +88,7 @@ class USkeletalMeshComponent* ABP_Wheel_C::GetWheelMesh()
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_Wheel_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.UserConstructionScript");
 
 	ABP_Wheel_C_UserConstructionScript_Params params;
 
@@ -110,7 +110,7 @@ void ABP_Wheel_C::UserConstructionScript()
 // float                          WheelRate                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Wheel_C::Receive_Animation_State(const struct FRotator& WheelRotation, float WheelAnimationTime, TEnumAsByte<EWheel_EWheel> EWheel, float Direction, float WheelRate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.Receive Animation State");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.Receive Animation State");
 
 	ABP_Wheel_C_Receive_Animation_State_Params params;
 	params.WheelRotation = WheelRotation;
@@ -133,7 +133,7 @@ void ABP_Wheel_C::Receive_Animation_State(const struct FRotator& WheelRotation, 
 // float                          StickInputX                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Wheel_C::StickInput(float StickInputX)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.StickInput");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.StickInput");
 
 	ABP_Wheel_C_StickInput_Params params;
 	params.StickInputX = StickInputX;
@@ -152,7 +152,7 @@ void ABP_Wheel_C::StickInput(float StickInputX)
 // class AAthenaCharacter*        AthenaCharacter                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Wheel_C::Update_Athena_Character(class AAthenaCharacter* AthenaCharacter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.Update Athena Character");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.Update Athena Character");
 
 	ABP_Wheel_C_Update_Athena_Character_Params params;
 	params.AthenaCharacter = AthenaCharacter;
@@ -171,7 +171,7 @@ void ABP_Wheel_C::Update_Athena_Character(class AAthenaCharacter* AthenaCharacte
 // float                          RotationSpeed                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Wheel_C::CapstanRotationSpeed(float RotationSpeed)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.CapstanRotationSpeed");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.CapstanRotationSpeed");
 
 	ABP_Wheel_C_CapstanRotationSpeed_Params params;
 	params.RotationSpeed = RotationSpeed;
@@ -190,7 +190,7 @@ void ABP_Wheel_C::CapstanRotationSpeed(float RotationSpeed)
 // struct FBP_Docking             Docking                        (Parm)
 void ABP_Wheel_C::DockingInterface(const struct FBP_Docking& Docking)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.DockingInterface");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.DockingInterface");
 
 	ABP_Wheel_C_DockingInterface_Params params;
 	params.Docking = Docking;
@@ -212,7 +212,7 @@ void ABP_Wheel_C::DockingInterface(const struct FBP_Docking& Docking)
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Wheel_C::CapstanForce(float IndividualForce, const struct FTransform& LH_IK, const struct FTransform& RH_IK, class AActor* Actor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.CapstanForce");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.CapstanForce");
 
 	ABP_Wheel_C_CapstanForce_Params params;
 	params.IndividualForce = IndividualForce;
@@ -235,7 +235,7 @@ void ABP_Wheel_C::CapstanForce(float IndividualForce, const struct FTransform& L
 // struct FTransform              TransformUpdate                (Parm, IsPlainOldData, NoDestructor)
 void ABP_Wheel_C::IK_Limb_Update_Transform(TEnumAsByte<EIKLimbName_EIKLimbName> LimbId, const struct FTransform& TransformUpdate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.IK Limb Update Transform");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.IK Limb Update Transform");
 
 	ABP_Wheel_C_IK_Limb_Update_Transform_Params params;
 	params.LimbId = LimbId;
@@ -257,7 +257,7 @@ void ABP_Wheel_C::IK_Limb_Update_Transform(TEnumAsByte<EIKLimbName_EIKLimbName> 
 // float                          BlendOut                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Wheel_C::IK_Limb_Blend_Timing(TEnumAsByte<EIKLimbName_EIKLimbName> LimbId, float BlendIn, float BlendOut)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.IK Limb Blend Timing");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.IK Limb Blend Timing");
 
 	ABP_Wheel_C_IK_Limb_Blend_Timing_Params params;
 	params.LimbId = LimbId;
@@ -280,7 +280,7 @@ void ABP_Wheel_C::IK_Limb_Blend_Timing(TEnumAsByte<EIKLimbName_EIKLimbName> Limb
 // float                          RotationStrength               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Wheel_C::IK_Limb_Update_Strength(TEnumAsByte<EIKLimbName_EIKLimbName> LimbId, float LocationStrength, float RotationStrength)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.IK Limb Update Strength");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.IK Limb Update Strength");
 
 	ABP_Wheel_C_IK_Limb_Update_Strength_Params params;
 	params.LimbId = LimbId;
@@ -303,7 +303,7 @@ void ABP_Wheel_C::IK_Limb_Update_Strength(TEnumAsByte<EIKLimbName_EIKLimbName> L
 // TEnumAsByte<Animation_ELimbIKSpace> CoordinateSpace                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Wheel_C::IK_Limb_Active(TEnumAsByte<EIKLimbName_EIKLimbName> LimbId, bool Active, TEnumAsByte<Animation_ELimbIKSpace> CoordinateSpace)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.IK Limb Active");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.IK Limb Active");
 
 	ABP_Wheel_C_IK_Limb_Active_Params params;
 	params.LimbId = LimbId;
@@ -326,7 +326,7 @@ void ABP_Wheel_C::IK_Limb_Active(TEnumAsByte<EIKLimbName_EIKLimbName> LimbId, bo
 // float                          LegStretch                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Wheel_C::IK_Limb_Stretch(float ArmStretch, float SpineStretch, float LegStretch)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.IK Limb Stretch");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.IK Limb Stretch");
 
 	ABP_Wheel_C_IK_Limb_Stretch_Params params;
 	params.ArmStretch = ArmStretch;
@@ -347,7 +347,7 @@ void ABP_Wheel_C::IK_Limb_Stretch(float ArmStretch, float SpineStretch, float Le
 // class AActor*                  Controller                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Wheel_C::RequestStateChange(class AActor* Controller)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.RequestStateChange");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.RequestStateChange");
 
 	ABP_Wheel_C_RequestStateChange_Params params;
 	params.Controller = Controller;
@@ -366,7 +366,7 @@ void ABP_Wheel_C::RequestStateChange(class AActor* Controller)
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Wheel_C::ExecuteUbergraph_BP_Wheel(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.ExecuteUbergraph_BP_Wheel");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Wheel.BP_Wheel_C.ExecuteUbergraph_BP_Wheel");
 
 	ABP_Wheel_C_ExecuteUbergraph_BP_Wheel_Params params;
 	params.EntryPoint = EntryPoint;

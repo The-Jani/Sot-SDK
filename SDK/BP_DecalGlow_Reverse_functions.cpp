@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Public, BlueprintCallable, BlueprintEvent)
 void ABP_DecalGlow_Reverse_C::StartGlowEffect()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.StartGlowEffect");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.StartGlowEffect");
 
 	ABP_DecalGlow_Reverse_C_StartGlowEffect_Params params;
 
@@ -40,7 +40,7 @@ void ABP_DecalGlow_Reverse_C::StartGlowEffect()
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool ABP_DecalGlow_Reverse_C::StartReaction()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.StartReaction");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.StartReaction");
 
 	ABP_DecalGlow_Reverse_C_StartReaction_Params params;
 
@@ -60,7 +60,7 @@ bool ABP_DecalGlow_Reverse_C::StartReaction()
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool ABP_DecalGlow_Reverse_C::StopReaction()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.StopReaction");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.StopReaction");
 
 	ABP_DecalGlow_Reverse_C_StopReaction_Params params;
 
@@ -78,7 +78,7 @@ bool ABP_DecalGlow_Reverse_C::StopReaction()
 // (Public, BlueprintCallable, BlueprintEvent)
 void ABP_DecalGlow_Reverse_C::CollectDecalMaterials()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.CollectDecalMaterials");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.CollectDecalMaterials");
 
 	ABP_DecalGlow_Reverse_C_CollectDecalMaterials_Params params;
 
@@ -94,7 +94,7 @@ void ABP_DecalGlow_Reverse_C::CollectDecalMaterials()
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_DecalGlow_Reverse_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.UserConstructionScript");
 
 	ABP_DecalGlow_Reverse_C_UserConstructionScript_Params params;
 
@@ -110,7 +110,7 @@ void ABP_DecalGlow_Reverse_C::UserConstructionScript()
 // (Event, Public, BlueprintEvent)
 void ABP_DecalGlow_Reverse_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.ReceiveBeginPlay");
 
 	ABP_DecalGlow_Reverse_C_ReceiveBeginPlay_Params params;
 
@@ -128,7 +128,7 @@ void ABP_DecalGlow_Reverse_C::ReceiveBeginPlay()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_DecalGlow_Reverse_C::ExecuteUbergraph_BP_DecalGlow_Reverse(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.ExecuteUbergraph_BP_DecalGlow_Reverse");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DecalGlow_Reverse.BP_DecalGlow_Reverse_C.ExecuteUbergraph_BP_DecalGlow_Reverse");
 
 	ABP_DecalGlow_Reverse_C_ExecuteUbergraph_BP_DecalGlow_Reverse_Params params;
 	params.EntryPoint = EntryPoint;

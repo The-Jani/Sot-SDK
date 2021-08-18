@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -25,7 +25,7 @@ namespace CG
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool UDebugMenuTestFunctions::STATIC_IsDebugMenuReady(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuReady");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuReady");
 
 	UDebugMenuTestFunctions_IsDebugMenuReady_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -48,7 +48,7 @@ bool UDebugMenuTestFunctions::STATIC_IsDebugMenuReady(class UObject* WorldContex
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool UDebugMenuTestFunctions::STATIC_IsDebugMenuOpen(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuOpen");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuOpen");
 
 	UDebugMenuTestFunctions_IsDebugMenuOpen_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -70,7 +70,7 @@ bool UDebugMenuTestFunctions::STATIC_IsDebugMenuOpen(class UObject* WorldContext
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool UDebugMenuTestFunctions::STATIC_IsDebugMenuAvailable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuAvailable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuAvailable");
 
 	UDebugMenuTestFunctions_IsDebugMenuAvailable_Params params;
 
@@ -91,7 +91,7 @@ bool UDebugMenuTestFunctions::STATIC_IsDebugMenuAvailable()
 // struct FKey                    ReturnValue                    (Parm, OutParm, ReturnParm)
 struct FKey UDebugMenuTestFunctions::STATIC_GetDebugMenuToggleKeyComboBetaKeyboard()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleKeyComboBetaKeyboard");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleKeyComboBetaKeyboard");
 
 	UDebugMenuTestFunctions_GetDebugMenuToggleKeyComboBetaKeyboard_Params params;
 
@@ -112,7 +112,7 @@ struct FKey UDebugMenuTestFunctions::STATIC_GetDebugMenuToggleKeyComboBetaKeyboa
 // struct FKey                    ReturnValue                    (Parm, OutParm, ReturnParm)
 struct FKey UDebugMenuTestFunctions::STATIC_GetDebugMenuToggleKeyComboAlphaKeyboard()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleKeyComboAlphaKeyboard");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleKeyComboAlphaKeyboard");
 
 	UDebugMenuTestFunctions_GetDebugMenuToggleKeyComboAlphaKeyboard_Params params;
 
@@ -133,7 +133,7 @@ struct FKey UDebugMenuTestFunctions::STATIC_GetDebugMenuToggleKeyComboAlphaKeybo
 // struct FKey                    ReturnValue                    (Parm, OutParm, ReturnParm)
 struct FKey UDebugMenuTestFunctions::STATIC_GetDebugMenuToggleButtonComboBetaGamepad()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleButtonComboBetaGamepad");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleButtonComboBetaGamepad");
 
 	UDebugMenuTestFunctions_GetDebugMenuToggleButtonComboBetaGamepad_Params params;
 
@@ -154,7 +154,7 @@ struct FKey UDebugMenuTestFunctions::STATIC_GetDebugMenuToggleButtonComboBetaGam
 // struct FKey                    ReturnValue                    (Parm, OutParm, ReturnParm)
 struct FKey UDebugMenuTestFunctions::STATIC_GetDebugMenuToggleButtonComboAlphaGamepad()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleButtonComboAlphaGamepad");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleButtonComboAlphaGamepad");
 
 	UDebugMenuTestFunctions_GetDebugMenuToggleButtonComboAlphaGamepad_Params params;
 

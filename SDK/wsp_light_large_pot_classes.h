@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,17 +20,17 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wsp_light_large_pot.wsp_light_large_pot_C
-// 0x0010 (FullSize[0x0450] - InheritedSize[0x0440])
+// 0x0010 (FullSize[0x03F0] - InheritedSize[0x03E0])
 class Awsp_light_large_pot_C : public AStaticMeshActor
 {
 public:
-	class USpotLightComponent*                         SpotLight;                                                 // 0x0440(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UParticleSystemComponent*                    ParticleSystem;                                            // 0x0448(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class USpotLightComponent*                         SpotLight;                                                 // 0x03E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UParticleSystemComponent*                    ParticleSystem;                                            // 0x03E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass wsp_light_large_pot.wsp_light_large_pot_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass wsp_light_large_pot.wsp_light_large_pot_C");
 		return ptr;
 	}
 

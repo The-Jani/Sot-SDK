@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -19,75 +19,6 @@ namespace CG
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
-
-// Function OnlineSubsystemUtils.OnlineBlueprintCallProxyBase.Activate
-struct UOnlineBlueprintCallProxyBase_Activate_Params
-{
-};
-
-// Function OnlineSubsystemUtils.JoinSessionCallbackProxy.JoinSession
-struct UJoinSessionCallbackProxy_JoinSession_Params
-{
-	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                           PlayerController;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBlueprintSessionResult                     SearchResult;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
-	class UJoinSessionCallbackProxy*                   ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function OnlineSubsystemUtils.QuitMatchCallbackProxy.QuitMatch
-struct UQuitMatchCallbackProxy_QuitMatch_Params
-{
-	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                           PlayerController;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FString                                     MatchID;                                                   // (Parm, ZeroConstructor, HasGetValueTypeHash)
-	TEnumAsByte<OnlineSubsystem_EMPMatchOutcome>       Outcome;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                TurnTimeoutInSeconds;                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UQuitMatchCallbackProxy*                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function OnlineSubsystemUtils.ShowLoginUICallbackProxy.ShowExternalLoginUI
-struct UShowLoginUICallbackProxy_ShowExternalLoginUI_Params
-{
-	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                           InPlayerController;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UShowLoginUICallbackProxy*                   ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.RegisterTurnBasedMatchInterfaceObject
-struct UTurnBasedBlueprintLibrary_RegisterTurnBasedMatchInterfaceObject_Params
-{
-	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                           PlayerController;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                     Object;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetPlayerDisplayName
-struct UTurnBasedBlueprintLibrary_GetPlayerDisplayName_Params
-{
-	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                           PlayerController;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FString                                     MatchID;                                                   // (Parm, ZeroConstructor, HasGetValueTypeHash)
-	int                                                PlayerIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FString                                     PlayerDisplayName;                                         // (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
-};
-
-// Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetMyPlayerIndex
-struct UTurnBasedBlueprintLibrary_GetMyPlayerIndex_Params
-{
-	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                           PlayerController;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FString                                     MatchID;                                                   // (Parm, ZeroConstructor, HasGetValueTypeHash)
-	int                                                PlayerIndex;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetIsMyTurn
-struct UTurnBasedBlueprintLibrary_GetIsMyTurn_Params
-{
-	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                           PlayerController;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FString                                     MatchID;                                                   // (Parm, ZeroConstructor, HasGetValueTypeHash)
-	bool                                               bIsMyTurn;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
 
 // Function OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementProgress
 struct UAchievementBlueprintLibrary_GetCachedAchievementProgress_Params
@@ -215,6 +146,11 @@ struct ATestBeaconClient_ClientPing_Params
 {
 };
 
+// Function OnlineSubsystemUtils.OnlineBlueprintCallProxyBase.Activate
+struct UOnlineBlueprintCallProxyBase_Activate_Params
+{
+};
+
 // Function OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievements
 struct UAchievementQueryCallbackProxy_CacheAchievements_Params
 {
@@ -273,7 +209,6 @@ struct UEndMatchCallbackProxy_EndMatch_Params
 {
 	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                           PlayerController;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class UTurnBasedMatchInterface>   MatchActor;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 	struct FString                                     MatchID;                                                   // (Parm, ZeroConstructor, HasGetValueTypeHash)
 	TEnumAsByte<OnlineSubsystem_EMPMatchOutcome>       LocalPlayerOutcome;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<OnlineSubsystem_EMPMatchOutcome>       OtherPlayersOutcome;                                       // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -286,7 +221,6 @@ struct UEndTurnCallbackProxy_EndTurn_Params
 	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                           PlayerController;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FString                                     MatchID;                                                   // (Parm, ZeroConstructor, HasGetValueTypeHash)
-	TScriptInterface<class UTurnBasedMatchInterface>   TurnBasedMatchInterface;                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 	class UEndTurnCallbackProxy*                       ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
@@ -333,12 +267,75 @@ struct UFindTurnBasedMatchCallbackProxy_FindTurnBasedMatch_Params
 {
 	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                           PlayerController;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class UTurnBasedMatchInterface>   MatchActor;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 	int                                                MinPlayers;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                MaxPlayers;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                PlayerGroup;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               ShowExistingMatches;                                       // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	class UFindTurnBasedMatchCallbackProxy*            ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function OnlineSubsystemUtils.JoinSessionCallbackProxy.JoinSession
+struct UJoinSessionCallbackProxy_JoinSession_Params
+{
+	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                           PlayerController;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBlueprintSessionResult                     SearchResult;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
+	class UJoinSessionCallbackProxy*                   ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function OnlineSubsystemUtils.QuitMatchCallbackProxy.QuitMatch
+struct UQuitMatchCallbackProxy_QuitMatch_Params
+{
+	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                           PlayerController;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FString                                     MatchID;                                                   // (Parm, ZeroConstructor, HasGetValueTypeHash)
+	TEnumAsByte<OnlineSubsystem_EMPMatchOutcome>       Outcome;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                TurnTimeoutInSeconds;                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UQuitMatchCallbackProxy*                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function OnlineSubsystemUtils.ShowLoginUICallbackProxy.ShowExternalLoginUI
+struct UShowLoginUICallbackProxy_ShowExternalLoginUI_Params
+{
+	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                           InPlayerController;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UShowLoginUICallbackProxy*                   ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.RegisterTurnBasedMatchInterfaceObject
+struct UTurnBasedBlueprintLibrary_RegisterTurnBasedMatchInterfaceObject_Params
+{
+	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                           PlayerController;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                     Object;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetPlayerDisplayName
+struct UTurnBasedBlueprintLibrary_GetPlayerDisplayName_Params
+{
+	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                           PlayerController;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FString                                     MatchID;                                                   // (Parm, ZeroConstructor, HasGetValueTypeHash)
+	int                                                PlayerIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FString                                     PlayerDisplayName;                                         // (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+};
+
+// Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetMyPlayerIndex
+struct UTurnBasedBlueprintLibrary_GetMyPlayerIndex_Params
+{
+	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                           PlayerController;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FString                                     MatchID;                                                   // (Parm, ZeroConstructor, HasGetValueTypeHash)
+	int                                                PlayerIndex;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetIsMyTurn
+struct UTurnBasedBlueprintLibrary_GetIsMyTurn_Params
+{
+	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                           PlayerController;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FString                                     MatchID;                                                   // (Parm, ZeroConstructor, HasGetValueTypeHash)
+	bool                                               bIsMyTurn;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 
 }

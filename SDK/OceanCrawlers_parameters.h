@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -20,10 +20,17 @@ namespace CG
 // Parameters
 //---------------------------------------------------------------------------
 
+// Function OceanCrawlers.OceanCrawlerAudioBroadcaster.Multicast_PlayBuffAudio
+struct UOceanCrawlerAudioBroadcaster_Multicast_PlayBuffAudio_Params
+{
+	struct FEventOceanCrawlerAIBuffAudioRequest        InRequest;                                                 // (ConstParm, Parm, ReferenceParm)
+};
+
 // Function OceanCrawlers.OceanCrawlerAudioBroadcaster.Multicast_PlayAudio
 struct UOceanCrawlerAudioBroadcaster_Multicast_PlayAudio_Params
 {
 	TEnumAsByte<AthenaAI_EOceanCrawlerAbilityAudioKey> InAudioKey;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              InAudioDelay;                                              // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 }

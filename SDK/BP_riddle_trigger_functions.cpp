@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Public, BlueprintCallable, BlueprintEvent)
 void ABP_riddle_trigger_C::Destroy()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_riddle_trigger.BP_riddle_trigger_C.Destroy");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_riddle_trigger.BP_riddle_trigger_C.Destroy");
 
 	ABP_riddle_trigger_C_Destroy_Params params;
 
@@ -38,7 +38,7 @@ void ABP_riddle_trigger_C::Destroy()
 // (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 void ABP_riddle_trigger_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_riddle_trigger.BP_riddle_trigger_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_riddle_trigger.BP_riddle_trigger_C.UserConstructionScript");
 
 	ABP_riddle_trigger_C_UserConstructionScript_Params params;
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Bell.BP_Bell_C
-// 0x0000 (FullSize[0x05C8] - InheritedSize[0x05C8])
+// 0x0000 (FullSize[0x0568] - InheritedSize[0x0568])
 class ABP_Bell_C : public ABell
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Bell.BP_Bell_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Bell.BP_Bell_C");
 		return ptr;
 	}
 

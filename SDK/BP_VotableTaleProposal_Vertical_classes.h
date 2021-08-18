@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,25 +20,25 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_VotableTaleProposal_Vertical.BP_VotableTaleProposal_Vertical_C
-// 0x0050 (FullSize[0x0598] - InheritedSize[0x0548])
+// 0x0050 (FullSize[0x0538] - InheritedSize[0x04E8])
 class ABP_VotableTaleProposal_Vertical_C : public AVotableObjectView
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0548(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                        Token_1;                                                   // 0x0550(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UStaticMeshComponent*                        Token_4;                                                   // 0x0558(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UStaticMeshComponent*                        Token_3;                                                   // 0x0560(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UStaticMeshComponent*                        Token_2;                                                   // 0x0568(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	TArray<class UStaticMeshComponent*>                Tokens;                                                    // 0x0570(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UStaticMesh*                                 Token_Asset;                                               // 0x0580(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	int                                                VoteCount;                                                 // 0x0588(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	float                                              Show_Token_Animation_Time;                                 // 0x058C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	class UMaterialInterface*                          Token_Material;                                            // 0x0590(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x04E8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                        Token_1;                                                   // 0x04F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UStaticMeshComponent*                        Token_4;                                                   // 0x04F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UStaticMeshComponent*                        Token_3;                                                   // 0x0500(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UStaticMeshComponent*                        Token_2;                                                   // 0x0508(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	TArray<class UStaticMeshComponent*>                Tokens;                                                    // 0x0510(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UStaticMesh*                                 Token_Asset;                                               // 0x0520(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	int                                                VoteCount;                                                 // 0x0528(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	float                                              Show_Token_Animation_Time;                                 // 0x052C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	class UMaterialInterface*                          Token_Material;                                            // 0x0530(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_VotableTaleProposal_Vertical.BP_VotableTaleProposal_Vertical_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_VotableTaleProposal_Vertical.BP_VotableTaleProposal_Vertical_C");
 		return ptr;
 	}
 
@@ -48,8 +48,8 @@ public:
 	void Is_Session_Locked(bool* IsLocked);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void OnVoteAdded(const TScriptInterface<class UVoterInterface>& Voter);
-	void OnVoteRemoved(const TScriptInterface<class UVoterInterface>& Voter);
+	void OnVoteAdded();
+	void OnVoteRemoved();
 	void ExecuteUbergraph_BP_VotableTaleProposal_Vertical(int EntryPoint);
 };
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -19,14 +19,6 @@ namespace CG
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
-
-// Function Wind.WindServiceParamsFunctionLibrary.AreWindServiceParamsEqual
-struct UWindServiceParamsFunctionLibrary_AreWindServiceParamsEqual_Params
-{
-	struct FWindServiceParams                          Params1;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FWindServiceParams                          Params2;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-};
 
 // Function Wind.WindZoneInterface.GetWindZoneParams
 struct UWindZoneInterface_GetWindZoneParams_Params
@@ -50,7 +42,6 @@ struct UWindZoneInterface_GetTurbulence_Params
 // Function Wind.WindInterface.UnregisterWindZone
 struct UWindInterface_UnregisterWindZone_Params
 {
-	TScriptInterface<class UWindZoneInterface>         InWindZone;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 };
 
 // Function Wind.WindInterface.TriggerChange
@@ -92,14 +83,12 @@ struct UWindInterface_SetGlobalWindAngle_Params
 // Function Wind.WindInterface.RegisterWindZone
 struct UWindInterface_RegisterWindZone_Params
 {
-	TScriptInterface<class UWindZoneInterface>         InWindZone;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 };
 
 // Function Wind.WindInterface.GetWindZoneAtLocation
 struct UWindInterface_GetWindZoneAtLocation_Params
 {
 	struct FVector                                     SamplePosition;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
-	TScriptInterface<class UWindZoneInterface>         ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper)
 };
 
 // Function Wind.WindInterface.GetWindVector
@@ -178,6 +167,14 @@ struct AWindService_OnRep_WindAngle_Params
 struct AWindService_GetWindParams_Params
 {
 	struct FWindServiceParams                          ReturnValue;                                               // (Parm, OutParm, ReturnParm)
+};
+
+// Function Wind.WindServiceParamsFunctionLibrary.AreWindServiceParamsEqual
+struct UWindServiceParamsFunctionLibrary_AreWindServiceParamsEqual_Params
+{
+	struct FWindServiceParams                          Params1;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FWindServiceParams                          Params2;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
 
 }

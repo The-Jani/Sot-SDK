@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_wil_monkey_02_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_wil_monkey_02.BP_wil_monkey_02_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_wil_monkey_02.BP_wil_monkey_02_C.UserConstructionScript");
 
 	ABP_wil_monkey_02_C_UserConstructionScript_Params params;
 

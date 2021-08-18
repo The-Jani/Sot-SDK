@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,31 +20,31 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Mast.BP_Mast_C
-// 0x00A0 (FullSize[0x0A50] - InheritedSize[0x09B0])
+// 0x00A0 (FullSize[0x09F8] - InheritedSize[0x0958])
 class ABP_Mast_C : public AMast
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x09B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                        MastTopComponent;                                          // 0x09B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UChildActorComponent*                        TopgallantActor;                                           // 0x09C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UChildActorComponent*                        MainsailActor;                                             // 0x09C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UChildActorComponent*                        TopsailActor;                                              // 0x09D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UStaticMeshComponent*                        Main_Yard;                                                 // 0x09D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UStaticMeshComponent*                        Topgallant_Yard;                                           // 0x09E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UStaticMeshComponent*                        Top_Yard;                                                  // 0x09E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UStaticMeshComponent*                        MastBaseComponent;                                         // 0x09F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	TArray<struct FBP_SailStructure>                   Sail_Parameters;                                           // 0x09F8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UStaticMeshComponent*>                Yards;                                                     // 0x0A08(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UChildActorComponent*>                Sails;                                                     // 0x0A18(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UMaterialInstance*                           Sail_Material;                                             // 0x0A28(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	TArray<class ABP_Sail_C*>                          SailActors;                                                // 0x0A30(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	class UDecalComponent*                             DamageDecalRight;                                          // 0x0A40(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	class UDecalComponent*                             DamageDecalLeft;                                           // 0x0A48(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0958(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                        MastTopComponent;                                          // 0x0960(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UChildActorComponent*                        TopgallantActor;                                           // 0x0968(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UChildActorComponent*                        MainsailActor;                                             // 0x0970(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UChildActorComponent*                        TopsailActor;                                              // 0x0978(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UStaticMeshComponent*                        Main_Yard;                                                 // 0x0980(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UStaticMeshComponent*                        Topgallant_Yard;                                           // 0x0988(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UStaticMeshComponent*                        Top_Yard;                                                  // 0x0990(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UStaticMeshComponent*                        MastBaseComponent;                                         // 0x0998(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	TArray<struct FBP_SailStructure>                   Sail_Parameters;                                           // 0x09A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UStaticMeshComponent*>                Yards;                                                     // 0x09B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UChildActorComponent*>                Sails;                                                     // 0x09C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UMaterialInstance*                           Sail_Material;                                             // 0x09D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	TArray<class ABP_Sail_C*>                          SailActors;                                                // 0x09D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	class UDecalComponent*                             DamageDecalRight;                                          // 0x09E8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	class UDecalComponent*                             DamageDecalLeft;                                           // 0x09F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Mast.BP_Mast_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Mast.BP_Mast_C");
 		return ptr;
 	}
 

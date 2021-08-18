@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // struct FEmissaryDiscoveredCargoRunCrateNetworkEvent NewParam                       (Parm)
 void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::OnEmissaryDiscoveredCargoRunCrate(const struct FEmissaryDiscoveredCargoRunCrateNetworkEvent& NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.OnEmissaryDiscoveredCargoRunCrate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.OnEmissaryDiscoveredCargoRunCrate");
 
 	UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C_OnEmissaryDiscoveredCargoRunCrate_Params params;
 	params.NewParam = NewParam;
@@ -43,7 +43,7 @@ void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::OnEmissaryDiscoveredCargoRunC
 // struct FEmissaryDiscoveredCargoRunCrateNetworkEvent NewParam                       (Parm)
 void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::EmissaryDiscoveredCargoRunCrate(const struct FEmissaryDiscoveredCargoRunCrateNetworkEvent& NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.EmissaryDiscoveredCargoRunCrate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.EmissaryDiscoveredCargoRunCrate");
 
 	UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C_EmissaryDiscoveredCargoRunCrate_Params params;
 	params.NewParam = NewParam;
@@ -60,7 +60,7 @@ void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::EmissaryDiscoveredCargoRunCra
 // (Public, BlueprintCallable, BlueprintEvent)
 void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::Evaluate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.Evaluate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.Evaluate");
 
 	UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C_Evaluate_Params params;
 
@@ -76,7 +76,7 @@ void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::Evaluate()
 // (Event, Public, BlueprintEvent)
 void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::RegisterOtherEvents_Implementable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.RegisterOtherEvents_Implementable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.RegisterOtherEvents_Implementable");
 
 	UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C_RegisterOtherEvents_Implementable_Params params;
 
@@ -92,7 +92,7 @@ void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::RegisterOtherEvents_Implement
 // (Event, Public, BlueprintEvent)
 void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::UnregisterOtherEvents_Implementable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.UnregisterOtherEvents_Implementable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.UnregisterOtherEvents_Implementable");
 
 	UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C_UnregisterOtherEvents_Implementable_Params params;
 
@@ -110,7 +110,7 @@ void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::UnregisterOtherEvents_Impleme
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::ExecuteUbergraph_BP_Prompt_EmissaryDiscoveredCargoRunCrate(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.ExecuteUbergraph_BP_Prompt_EmissaryDiscoveredCargoRunCrate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.ExecuteUbergraph_BP_Prompt_EmissaryDiscoveredCargoRunCrate");
 
 	UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C_ExecuteUbergraph_BP_Prompt_EmissaryDiscoveredCargoRunCrate_Params params;
 	params.EntryPoint = EntryPoint;

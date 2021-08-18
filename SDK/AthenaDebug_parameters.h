@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,6 +22,11 @@ namespace CG
 
 // Function AthenaDebug.DrawDebugService.OnRep_PersistentShapeChanged
 struct ADrawDebugService_OnRep_PersistentShapeChanged_Params
+{
+};
+
+// Function AthenaDebug.DrawDebugService.OnRep_IsDrawDebugActiveChanged
+struct ADrawDebugService_OnRep_IsDrawDebugActiveChanged_Params
 {
 };
 

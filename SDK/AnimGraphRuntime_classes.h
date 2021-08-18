@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -24,12 +24,12 @@ namespace CG
 class UAnimSequencerInstance : public UAnimInstance
 {
 public:
-	unsigned char                                      UnknownData_DER4[0x1A0];                                   // 0x0440(0x01A0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_I7NF[0x1A0];                                   // 0x0440(0x01A0) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AnimGraphRuntime.AnimSequencerInstance");
+		static UClass* ptr = UObject::FindClass("Class AnimGraphRuntime.AnimSequencerInstance");
 		return ptr;
 	}
 

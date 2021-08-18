@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // float                          FadeTime                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_GeyserHole_C::SetFadeOutParameters(float FadeTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GeyserHole.BP_GeyserHole_C.SetFadeOutParameters");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GeyserHole.BP_GeyserHole_C.SetFadeOutParameters");
 
 	ABP_GeyserHole_C_SetFadeOutParameters_Params params;
 	params.FadeTime = FadeTime;
@@ -43,7 +43,7 @@ void ABP_GeyserHole_C::SetFadeOutParameters(float FadeTime)
 // float                          FadeTime                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_GeyserHole_C::SetFadeInParameters(float FadeTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GeyserHole.BP_GeyserHole_C.SetFadeInParameters");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GeyserHole.BP_GeyserHole_C.SetFadeInParameters");
 
 	ABP_GeyserHole_C_SetFadeInParameters_Params params;
 	params.FadeTime = FadeTime;
@@ -60,7 +60,7 @@ void ABP_GeyserHole_C::SetFadeInParameters(float FadeTime)
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_GeyserHole_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GeyserHole.BP_GeyserHole_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GeyserHole.BP_GeyserHole_C.UserConstructionScript");
 
 	ABP_GeyserHole_C_UserConstructionScript_Params params;
 
@@ -76,7 +76,7 @@ void ABP_GeyserHole_C::UserConstructionScript()
 // (Event, Public, BlueprintEvent)
 void ABP_GeyserHole_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GeyserHole.BP_GeyserHole_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GeyserHole.BP_GeyserHole_C.ReceiveBeginPlay");
 
 	ABP_GeyserHole_C_ReceiveBeginPlay_Params params;
 
@@ -94,7 +94,7 @@ void ABP_GeyserHole_C::ReceiveBeginPlay()
 // TEnumAsByte<Athena_EHoleState> InState                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_GeyserHole_C::OnStateChanged(TEnumAsByte<Athena_EHoleState> InState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GeyserHole.BP_GeyserHole_C.OnStateChanged");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GeyserHole.BP_GeyserHole_C.OnStateChanged");
 
 	ABP_GeyserHole_C_OnStateChanged_Params params;
 	params.InState = InState;
@@ -113,7 +113,7 @@ void ABP_GeyserHole_C::OnStateChanged(TEnumAsByte<Athena_EHoleState> InState)
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_GeyserHole_C::ExecuteUbergraph_BP_GeyserHole(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GeyserHole.BP_GeyserHole_C.ExecuteUbergraph_BP_GeyserHole");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GeyserHole.BP_GeyserHole_C.ExecuteUbergraph_BP_GeyserHole");
 
 	ABP_GeyserHole_C_ExecuteUbergraph_BP_GeyserHole_Params params;
 	params.EntryPoint = EntryPoint;

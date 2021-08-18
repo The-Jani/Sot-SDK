@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_CT_VoyageProgress_C::IsPurchaseable(bool* Result)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.IsPurchaseable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.IsPurchaseable");
 
 	UBP_CT_VoyageProgress_C_IsPurchaseable_Params params;
 
@@ -45,7 +45,7 @@ void UBP_CT_VoyageProgress_C::IsPurchaseable(bool* Result)
 // TEnumAsByte<TutorialVoyageInternalState_ETutorialVoyageInternalState> NewProgress                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_CT_VoyageProgress_C::SetProgress(TEnumAsByte<TutorialVoyageInternalState_ETutorialVoyageInternalState> NewProgress)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.SetProgress");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.SetProgress");
 
 	UBP_CT_VoyageProgress_C_SetProgress_Params params;
 	params.NewProgress = NewProgress;
@@ -65,7 +65,7 @@ void UBP_CT_VoyageProgress_C::SetProgress(TEnumAsByte<TutorialVoyageInternalStat
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_CT_VoyageProgress_C::IsCurrently(TEnumAsByte<TutorialVoyageInternalState_ETutorialVoyageInternalState> ProgressState, bool* Result)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.IsCurrently");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.IsCurrently");
 
 	UBP_CT_VoyageProgress_C_IsCurrently_Params params;
 	params.ProgressState = ProgressState;
@@ -88,7 +88,7 @@ void UBP_CT_VoyageProgress_C::IsCurrently(TEnumAsByte<TutorialVoyageInternalStat
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_CT_VoyageProgress_C::IsPast(TEnumAsByte<TutorialVoyageInternalState_ETutorialVoyageInternalState> ProgressState, bool* Result)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.IsPast");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.IsPast");
 
 	UBP_CT_VoyageProgress_C_IsPast_Params params;
 	params.ProgressState = ProgressState;
@@ -108,7 +108,7 @@ void UBP_CT_VoyageProgress_C::IsPast(TEnumAsByte<TutorialVoyageInternalState_ETu
 // (Public, BlueprintCallable, BlueprintEvent)
 void UBP_CT_VoyageProgress_C::PopulateExistingState()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.PopulateExistingState");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.PopulateExistingState");
 
 	UBP_CT_VoyageProgress_C_PopulateExistingState_Params params;
 
@@ -126,7 +126,7 @@ void UBP_CT_VoyageProgress_C::PopulateExistingState()
 // bool                           Disabled                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_CT_VoyageProgress_C::Initialise(bool Disabled)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.Initialise");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.Initialise");
 
 	UBP_CT_VoyageProgress_C_Initialise_Params params;
 	params.Disabled = Disabled;
@@ -145,7 +145,7 @@ void UBP_CT_VoyageProgress_C::Initialise(bool Disabled)
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_CT_VoyageProgress_C::ExecuteUbergraph_BP_CT_VoyageProgress(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.ExecuteUbergraph_BP_CT_VoyageProgress");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.ExecuteUbergraph_BP_CT_VoyageProgress");
 
 	UBP_CT_VoyageProgress_C_ExecuteUbergraph_BP_CT_VoyageProgress_Params params;
 	params.EntryPoint = EntryPoint;

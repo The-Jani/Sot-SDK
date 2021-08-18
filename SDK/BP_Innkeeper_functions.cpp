@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -26,7 +26,7 @@ namespace CG
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 struct FVector ABP_Innkeeper_C::GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Innkeeper.BP_Innkeeper_C.GetClosestInteractionPoint");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Innkeeper.BP_Innkeeper_C.GetClosestInteractionPoint");
 
 	ABP_Innkeeper_C_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
@@ -48,7 +48,7 @@ struct FVector ABP_Innkeeper_C::GetClosestInteractionPoint(const struct FVector&
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_Innkeeper_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Innkeeper.BP_Innkeeper_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Innkeeper.BP_Innkeeper_C.UserConstructionScript");
 
 	ABP_Innkeeper_C_UserConstructionScript_Params params;
 
@@ -64,7 +64,7 @@ void ABP_Innkeeper_C::UserConstructionScript()
 // (Event, Public, BlueprintEvent)
 void ABP_Innkeeper_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Innkeeper.BP_Innkeeper_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Innkeeper.BP_Innkeeper_C.ReceiveBeginPlay");
 
 	ABP_Innkeeper_C_ReceiveBeginPlay_Params params;
 
@@ -82,7 +82,7 @@ void ABP_Innkeeper_C::ReceiveBeginPlay()
 // TEnumAsByte<Engine_EEndPlayReason> EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Innkeeper_C::ReceiveEndPlay(TEnumAsByte<Engine_EEndPlayReason> EndPlayReason)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Innkeeper.BP_Innkeeper_C.ReceiveEndPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Innkeeper.BP_Innkeeper_C.ReceiveEndPlay");
 
 	ABP_Innkeeper_C_ReceiveEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
@@ -101,7 +101,7 @@ void ABP_Innkeeper_C::ReceiveEndPlay(TEnumAsByte<Engine_EEndPlayReason> EndPlayR
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Innkeeper_C::ExecuteUbergraph_BP_Innkeeper(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Innkeeper.BP_Innkeeper_C.ExecuteUbergraph_BP_Innkeeper");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Innkeeper.BP_Innkeeper_C.ExecuteUbergraph_BP_Innkeeper");
 
 	ABP_Innkeeper_C_ExecuteUbergraph_BP_Innkeeper_Params params;
 	params.EntryPoint = EntryPoint;

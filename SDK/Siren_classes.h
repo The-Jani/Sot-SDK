@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Siren.SirenTeleportAIAbilityType");
+		static UClass* ptr = UObject::FindClass("Class Siren.SirenTeleportAIAbilityType");
 		return ptr;
 	}
 
@@ -45,7 +45,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Siren.DistantIdleAIAbility");
+		static UClass* ptr = UObject::FindClass("Class Siren.DistantIdleAIAbility");
 		return ptr;
 	}
 
@@ -62,7 +62,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Siren.DistantIdleAIAbilityParams");
+		static UClass* ptr = UObject::FindClass("Class Siren.DistantIdleAIAbilityParams");
 		return ptr;
 	}
 
@@ -79,7 +79,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Siren.DistantIdleAIAbilityType");
+		static UClass* ptr = UObject::FindClass("Class Siren.DistantIdleAIAbilityType");
 		return ptr;
 	}
 
@@ -96,7 +96,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Siren.ScratchAIAbility");
+		static UClass* ptr = UObject::FindClass("Class Siren.ScratchAIAbility");
 		return ptr;
 	}
 
@@ -113,7 +113,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Siren.ScratchAIAbilityParams");
+		static UClass* ptr = UObject::FindClass("Class Siren.ScratchAIAbilityParams");
 		return ptr;
 	}
 
@@ -130,7 +130,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Siren.ScratchAIAbilityType");
+		static UClass* ptr = UObject::FindClass("Class Siren.ScratchAIAbilityType");
 		return ptr;
 	}
 
@@ -147,7 +147,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Siren.SirenCalmHealStrategyId");
+		static UClass* ptr = UObject::FindClass("Class Siren.SirenCalmHealStrategyId");
 		return ptr;
 	}
 
@@ -156,101 +156,16 @@ public:
 };
 
 // Class Siren.SirenController
-// 0x0008 (FullSize[0x0A38] - InheritedSize[0x0A30])
+// 0x0008 (FullSize[0x09D8] - InheritedSize[0x09D0])
 class ASirenController : public AAthenaSwimmingAIController
 {
 public:
-	unsigned char                                      UnknownData_24IC[0x8];                                     // 0x0A30(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_KTVK[0x8];                                     // 0x09D0(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Siren.SirenController");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Siren.SirenScratchStrategyId
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class USirenScratchStrategyId : public UAIStrategyId
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Siren.SirenScratchStrategyId");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Siren.SirenSongAIAbility
-// 0x0000 (FullSize[0x0078] - InheritedSize[0x0078])
-class USirenSongAIAbility : public UAthenaAIAbility
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Siren.SirenSongAIAbility");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Siren.SirenSongAIAbilityParams
-// 0x0000 (FullSize[0x00C8] - InheritedSize[0x00C8])
-class USirenSongAIAbilityParams : public UAthenaAIAbilityParams
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Siren.SirenSongAIAbilityParams");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Siren.SirenSongAIAbilityType
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class USirenSongAIAbilityType : public UAthenaAIAbilityType
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Siren.SirenSongAIAbilityType");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Siren.SirenTeleportAIAbility
-// 0x0000 (FullSize[0x0080] - InheritedSize[0x0080])
-class USirenTeleportAIAbility : public UTeleportAIAbility
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Siren.SirenTeleportAIAbility");
+		static UClass* ptr = UObject::FindClass("Class Siren.SirenController");
 		return ptr;
 	}
 
@@ -267,7 +182,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Siren.SirenEmeraldHealStatus");
+		static UClass* ptr = UObject::FindClass("Class Siren.SirenEmeraldHealStatus");
 		return ptr;
 	}
 
@@ -276,23 +191,16 @@ public:
 };
 
 // Class Siren.SirenPartsDesc
-// 0x0058 (FullSize[0x0088] - InheritedSize[0x0030])
-class USirenPartsDesc : public UAIPartsDesc
+// 0x0008 (FullSize[0x0088] - InheritedSize[0x0080])
+class USirenPartsDesc : public UMeshMemoryConstraintsAIPartsDesc
 {
 public:
-	unsigned char                                      UnknownData_T2W8[0x8];                                     // 0x0030(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FStringAssetReference                       Mesh;                                                      // 0x0038(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	class UClass*                                      AnimationID;                                               // 0x0048(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	int64_t                                            CachedMeshResourceSize;                                    // 0x0050(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                      MeshFallbackCategory;                                      // 0x0058(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class UClass*                                      BudgetToCountMemoryAgainstIfNoFallback;                    // 0x0060(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	TArray<class UMaterialInterface*>                  OverrideMaterials;                                         // 0x0068(0x0010) (ZeroConstructor)
-	TArray<struct FStringAssetReference>               FallbackOverrideMaterials;                                 // 0x0078(0x0010) (ZeroConstructor)
+	class UClass*                                      AnimationID;                                               // 0x0080(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Siren.SirenPartsDesc");
+		static UClass* ptr = UObject::FindClass("Class Siren.SirenPartsDesc");
 		return ptr;
 	}
 
@@ -309,7 +217,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Siren.SirenRubyHealStatus");
+		static UClass* ptr = UObject::FindClass("Class Siren.SirenRubyHealStatus");
 		return ptr;
 	}
 
@@ -326,7 +234,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Siren.SirenSapphireHealStatus");
+		static UClass* ptr = UObject::FindClass("Class Siren.SirenSapphireHealStatus");
 		return ptr;
 	}
 
@@ -343,7 +251,92 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Siren.SirenScratchRespiteStrategyId");
+		static UClass* ptr = UObject::FindClass("Class Siren.SirenScratchRespiteStrategyId");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Siren.SirenScratchStrategyId
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class USirenScratchStrategyId : public UAIStrategyId
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Siren.SirenScratchStrategyId");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Siren.SirenSongAIAbility
+// 0x0000 (FullSize[0x0078] - InheritedSize[0x0078])
+class USirenSongAIAbility : public UAthenaAIAbility
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Siren.SirenSongAIAbility");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Siren.SirenSongAIAbilityParams
+// 0x0000 (FullSize[0x00C8] - InheritedSize[0x00C8])
+class USirenSongAIAbilityParams : public UAthenaAIAbilityParams
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Siren.SirenSongAIAbilityParams");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Siren.SirenSongAIAbilityType
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class USirenSongAIAbilityType : public UAthenaAIAbilityType
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Siren.SirenSongAIAbilityType");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Siren.SirenTeleportAIAbility
+// 0x0000 (FullSize[0x0080] - InheritedSize[0x0080])
+class USirenTeleportAIAbility : public UTeleportAIAbility
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Siren.SirenTeleportAIAbility");
 		return ptr;
 	}
 
@@ -360,7 +353,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Siren.SirenTeleportAIAbilityParams");
+		static UClass* ptr = UObject::FindClass("Class Siren.SirenTeleportAIAbilityParams");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,33 +20,33 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Lantern.BP_Lantern_C
-// 0x0098 (FullSize[0x09E8] - InheritedSize[0x0950])
+// 0x0098 (FullSize[0x0998] - InheritedSize[0x0900])
 class ABP_Lantern_C : public ALantern
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0950(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                        LanternTriggerGlow;                                        // 0x0958(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UStaticMeshComponent*                        LanternGlow;                                               // 0x0960(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UAmbientLightSourceComponent*                AmbientLightSource;                                        // 0x0968(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class USpotLightComponent*                         SpotLight;                                                 // 0x0970(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UUsableWieldableComponent*                   UsableWieldable;                                           // 0x0978(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UMaterialInstanceDynamic*                    LanternGlowDynamicMaterial;                                // 0x0980(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	float                                              EmissiveInt_threshold;                                     // 0x0988(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_7USW[0x4];                                     // 0x098C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UMaterialInstanceDynamic*                    LanternTriggerGlowDynamicMaterial;                         // 0x0990(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	float                                              TriggerGlowDuration;                                       // 0x0998(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                              TriggerGlowRampInDuration;                                 // 0x099C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                              TriggerGlowRampOutDuration;                                // 0x09A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FLinearColor                                DefaultSpotlightColour;                                    // 0x09A4(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FLinearColor                                DefaultAmbientLightColour;                                 // 0x09B4(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FLinearColor                                DefaultGlowColour;                                         // 0x09C4(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_6MWU[0x4];                                     // 0x09D4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<class UMaterialInstanceDynamic*>            DynamicMaterials;                                          // 0x09D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0900(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                        LanternTriggerGlow;                                        // 0x0908(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UStaticMeshComponent*                        LanternGlow;                                               // 0x0910(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UAmbientLightSourceComponent*                AmbientLightSource;                                        // 0x0918(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class USpotLightComponent*                         SpotLight;                                                 // 0x0920(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UUsableWieldableComponent*                   UsableWieldable;                                           // 0x0928(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UMaterialInstanceDynamic*                    LanternGlowDynamicMaterial;                                // 0x0930(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	float                                              EmissiveInt_threshold;                                     // 0x0938(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_5A7L[0x4];                                     // 0x093C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UMaterialInstanceDynamic*                    LanternTriggerGlowDynamicMaterial;                         // 0x0940(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	float                                              TriggerGlowDuration;                                       // 0x0948(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              TriggerGlowRampInDuration;                                 // 0x094C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              TriggerGlowRampOutDuration;                                // 0x0950(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FLinearColor                                DefaultSpotlightColour;                                    // 0x0954(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FLinearColor                                DefaultAmbientLightColour;                                 // 0x0964(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FLinearColor                                DefaultGlowColour;                                         // 0x0974(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_HGQC[0x4];                                     // 0x0984(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<class UMaterialInstanceDynamic*>            DynamicMaterials;                                          // 0x0988(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Lantern.BP_Lantern_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Lantern.BP_Lantern_C");
 		return ptr;
 	}
 

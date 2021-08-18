@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -29,7 +29,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityDemandFrameworkEditorSettings");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityDemandFrameworkEditorSettings");
 		return ptr;
 	}
 
@@ -38,25 +38,26 @@ public:
 };
 
 // Class CommodityDemandFramework.CommodityDemandFrameworkSettings
-// 0x0090 (FullSize[0x00C8] - InheritedSize[0x0038])
+// 0x00A0 (FullSize[0x00D8] - InheritedSize[0x0038])
 class UCommodityDemandFrameworkSettings : public UDeveloperSettings
 {
 public:
 	float                                              DemandRefreshFrequencyInSeconds;                           // 0x0038(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       DemandCollectionId;                                        // 0x003C(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZQ9H[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1J7Z[0x4];                                     // 0x0044(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FText                                       EmissaryLockedCommodityOfferDescription;                   // 0x0048(0x0018) ELEMENT_SIZE_MISMATCH (Edit, Config)
-	unsigned char                                      UnknownData_3LAP[0x20];                                    // 0x0044(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_GD7Q[0x20];                                    // 0x0044(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	struct FText                                       OutOfStockLockedCommodityOfferDescription;                 // 0x0080(0x0018) ELEMENT_SIZE_MISMATCH (Edit, Config)
-	unsigned char                                      UnknownData_CHMN[0x20];                                    // 0x0080(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_YJ8P[0x20];                                    // 0x0080(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	int                                                CommodityPurchaseLockoutInGameDays;                        // 0x00B8(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                InGameHourWhenCommoditiesRestock;                          // 0x00BC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGameTime                                   CommodityRedemptionTimeOutPeriodInDays;                    // 0x00C0(0x0008) (Edit, Config)
+	struct FStringAssetReference                       NPCListAsset;                                              // 0x00C8(0x0010) (Edit, ZeroConstructor, Config)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityDemandFrameworkSettings");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityDemandFrameworkSettings");
 		return ptr;
 	}
 
@@ -73,7 +74,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityDemandServiceInterface");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityDemandServiceInterface");
 		return ptr;
 	}
 
@@ -82,17 +83,17 @@ public:
 };
 
 // Class CommodityDemandFramework.CommodityDemandService
-// 0x0070 (FullSize[0x04A0] - InheritedSize[0x0430])
+// 0x0040 (FullSize[0x0410] - InheritedSize[0x03D0])
 class ACommodityDemandService : public AActor
 {
 public:
-	unsigned char                                      UnknownData_NVGF[0x50];                                    // 0x0430(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FActiveNPCDemands                           ActiveCommodityDemands;                                    // 0x0480(0x0020) (Net, RepNotify)
+	unsigned char                                      UnknownData_Z5WV[0x20];                                    // 0x03D0(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FActiveNPCDemands                           ActiveCommodityDemands;                                    // 0x03F0(0x0020) (Net, RepNotify)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityDemandService");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityDemandService");
 		return ptr;
 	}
 
@@ -110,7 +111,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityDemandStorageInterface");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityDemandStorageInterface");
 		return ptr;
 	}
 
@@ -127,7 +128,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityDemandStorageProviderInterface");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityDemandStorageProviderInterface");
 		return ptr;
 	}
 
@@ -145,7 +146,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityEntitlementRedemptionAsset");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityEntitlementRedemptionAsset");
 		return ptr;
 	}
 
@@ -160,12 +161,12 @@ class UCommodityItemDesc : public UBootyItemDesc
 public:
 	struct FCommoditySelectionType                     CommodityType;                                             // 0x0130(0x0008) (Edit, DisableEditOnInstance)
 	TEnumAsByte<CommodityDemandFramework_ECommodityDemand> CommodityDemand;                                           // 0x0138(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_4WSF[0x7];                                     // 0x0139(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_CVOG[0x7];                                     // 0x0139(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityItemDesc");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityItemDesc");
 		return ptr;
 	}
 
@@ -178,12 +179,12 @@ public:
 class UCommodityPurchaseTrackingComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_LFCB[0x80];                                    // 0x00C8(0x0080) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_B2PT[0x80];                                    // 0x00C8(0x0080) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityPurchaseTrackingComponent");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityPurchaseTrackingComponent");
 		return ptr;
 	}
 
@@ -200,7 +201,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityRedemptionInterface");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityRedemptionInterface");
 		return ptr;
 	}
 
@@ -213,13 +214,13 @@ public:
 class UCommodityRedemptionComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_3TRG[0x80];                                    // 0x00C8(0x0080) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5I5U[0x80];                                    // 0x00C8(0x0080) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class AActor*>                              PendingRedemptions;                                        // 0x0148(0x0010) (ZeroConstructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityRedemptionComponent");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityRedemptionComponent");
 		return ptr;
 	}
 
@@ -236,7 +237,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CommoditySourceInterface");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.CommoditySourceInterface");
 		return ptr;
 	}
 
@@ -249,13 +250,13 @@ public:
 class UCommoditySourceComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_2NAA[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_OCBV[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       NPCIdentifier;                                             // 0x00D0(0x0008) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CommoditySourceComponent");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.CommoditySourceComponent");
 		return ptr;
 	}
 
@@ -274,7 +275,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityTokenEntitlementDesc");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityTokenEntitlementDesc");
 		return ptr;
 	}
 
@@ -292,7 +293,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityTypeDataAsset");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.CommodityTypeDataAsset");
 		return ptr;
 	}
 
@@ -309,7 +310,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CrateFillerInterface");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.CrateFillerInterface");
 		return ptr;
 	}
 
@@ -322,12 +323,12 @@ public:
 class UCrateFillerComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_ZK01[0x10];                                    // 0x00C8(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_OOID[0x10];                                    // 0x00C8(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.CrateFillerComponent");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.CrateFillerComponent");
 		return ptr;
 	}
 
@@ -344,7 +345,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.DeliverableCommodityRequirement");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.DeliverableCommodityRequirement");
 		return ptr;
 	}
 
@@ -358,12 +359,12 @@ class UIsWieldedCommodityItemInDemandStatCondition : public UTargetedStatConditi
 {
 public:
 	TEnumAsByte<CommodityDemandFramework_ECommodityDemand> CommodityDemand;                                           // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_X1M7[0x1F];                                    // 0x0031(0x001F) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_FIR8[0x1F];                                    // 0x0031(0x001F) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.IsWieldedCommodityItemInDemandStatCondition");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.IsWieldedCommodityItemInDemandStatCondition");
 		return ptr;
 	}
 
@@ -377,12 +378,12 @@ class UWasWieldedCommodityItemBoughtAtDemandStatCondition : public UTargetedStat
 {
 public:
 	TEnumAsByte<CommodityDemandFramework_ECommodityDemand> CommodityDemand;                                           // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_3FOX[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_GPBO[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CommodityDemandFramework.WasWieldedCommodityItemBoughtAtDemandStatCondition");
+		static UClass* ptr = UObject::FindClass("Class CommodityDemandFramework.WasWieldedCommodityItemBoughtAtDemandStatCondition");
 		return ptr;
 	}
 

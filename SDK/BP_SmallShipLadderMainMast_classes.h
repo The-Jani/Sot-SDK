@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,18 +20,18 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SmallShipLadderMainMast.BP_SmallShipLadderMainMast_C
-// 0x0028 (FullSize[0x0648] - InheritedSize[0x0620])
+// 0x0028 (FullSize[0x05E8] - InheritedSize[0x05C0])
 class ABP_SmallShipLadderMainMast_C : public ALadder
 {
 public:
-	class UInteractableComponent*                      Interactable;                                              // 0x0620(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	TArray<struct FVector>                             OnTopSplinePositions;                                      // 0x0628(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FVector>                             OffTopSplinePositions;                                     // 0x0638(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UInteractableComponent*                      Interactable;                                              // 0x05C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	TArray<struct FVector>                             OnTopSplinePositions;                                      // 0x05C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FVector>                             OffTopSplinePositions;                                     // 0x05D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_SmallShipLadderMainMast.BP_SmallShipLadderMainMast_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_SmallShipLadderMainMast.BP_SmallShipLadderMainMast_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -18,50 +18,6 @@ namespace CG
 //---------------------------------------------------------------------------
 // Enums
 //---------------------------------------------------------------------------
-
-// Enum SlateCore.ESlateCheckBoxType
-enum class SlateCore_ESlateCheckBoxType : uint8_t
-{
-	ESlateCheckBoxType__CheckBox   = 0,
-	ESlateCheckBoxType__ToggleButton = 1,
-	ESlateCheckBoxType__ESlateCheckBoxType_MAX = 2,
-
-};
-
-// Enum SlateCore.EConsumeMouseWheel
-enum class SlateCore_EConsumeMouseWheel : uint8_t
-{
-	EConsumeMouseWheel__WhenScrollingPossible = 0,
-	EConsumeMouseWheel__Always     = 1,
-	EConsumeMouseWheel__EConsumeMouseWheel_MAX = 2,
-
-};
-
-// Enum SlateCore.EFocusCause
-enum class SlateCore_EFocusCause : uint8_t
-{
-	EFocusCause__Mouse             = 0,
-	EFocusCause__Navigation        = 1,
-	EFocusCause__SetDirectly       = 2,
-	EFocusCause__Cleared           = 3,
-	EFocusCause__OtherWidgetLostFocus = 4,
-	EFocusCause__WindowActivate    = 5,
-	EFocusCause__EFocusCause_MAX   = 6,
-
-};
-
-// Enum SlateCore.EUINavigationRule
-enum class SlateCore_EUINavigationRule : uint8_t
-{
-	EUINavigationRule__Escape      = 0,
-	EUINavigationRule__Explicit    = 1,
-	EUINavigationRule__Wrap        = 2,
-	EUINavigationRule__Stop        = 3,
-	EUINavigationRule__Custom      = 4,
-	EUINavigationRule__Invalid     = 5,
-	EUINavigationRule__EUINavigationRule_MAX = 6,
-
-};
 
 // Enum SlateCore.EFontHinting
 enum class SlateCore_EFontHinting : uint8_t
@@ -261,97 +217,53 @@ enum class SlateCore_ECheckBoxState : uint8_t
 
 };
 
+// Enum SlateCore.ESlateCheckBoxType
+enum class SlateCore_ESlateCheckBoxType : uint8_t
+{
+	ESlateCheckBoxType__CheckBox   = 0,
+	ESlateCheckBoxType__ToggleButton = 1,
+	ESlateCheckBoxType__ESlateCheckBoxType_MAX = 2,
+
+};
+
+// Enum SlateCore.EConsumeMouseWheel
+enum class SlateCore_EConsumeMouseWheel : uint8_t
+{
+	EConsumeMouseWheel__WhenScrollingPossible = 0,
+	EConsumeMouseWheel__Always     = 1,
+	EConsumeMouseWheel__EConsumeMouseWheel_MAX = 2,
+
+};
+
+// Enum SlateCore.EFocusCause
+enum class SlateCore_EFocusCause : uint8_t
+{
+	EFocusCause__Mouse             = 0,
+	EFocusCause__Navigation        = 1,
+	EFocusCause__SetDirectly       = 2,
+	EFocusCause__Cleared           = 3,
+	EFocusCause__OtherWidgetLostFocus = 4,
+	EFocusCause__WindowActivate    = 5,
+	EFocusCause__EFocusCause_MAX   = 6,
+
+};
+
+// Enum SlateCore.EUINavigationRule
+enum class SlateCore_EUINavigationRule : uint8_t
+{
+	EUINavigationRule__Escape      = 0,
+	EUINavigationRule__Explicit    = 1,
+	EUINavigationRule__Wrap        = 2,
+	EUINavigationRule__Stop        = 3,
+	EUINavigationRule__Custom      = 4,
+	EUINavigationRule__Invalid     = 5,
+	EUINavigationRule__EUINavigationRule_MAX = 6,
+
+};
+
 //---------------------------------------------------------------------------
 // Script Structs
 //---------------------------------------------------------------------------
-
-// ScriptStruct SlateCore.InputEvent
-// 0x0028
-struct FInputEvent
-{
-	unsigned char                                      UnknownData_UH5C[0x28];                                    // 0x0000(0x0028) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct SlateCore.NavigationEvent
-// 0x0008 (0x0030 - 0x0028)
-struct FNavigationEvent : public FInputEvent
-{
-	unsigned char                                      UnknownData_G4GK[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct SlateCore.MotionEvent
-// 0x0030 (0x0058 - 0x0028)
-struct FMotionEvent : public FInputEvent
-{
-	unsigned char                                      UnknownData_9WJD[0x30];                                    // 0x0028(0x0030) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct SlateCore.ControllerEvent
-// 0x0028 (0x0050 - 0x0028)
-struct FControllerEvent : public FInputEvent
-{
-	unsigned char                                      UnknownData_OV5D[0x28];                                    // 0x0028(0x0028) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct SlateCore.CharacterEvent
-// 0x0008 (0x0030 - 0x0028)
-struct FCharacterEvent : public FInputEvent
-{
-	unsigned char                                      UnknownData_0Z94[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct SlateCore.KeyEvent
-// 0x0028 (0x0050 - 0x0028)
-struct FKeyEvent : public FInputEvent
-{
-	unsigned char                                      UnknownData_Y4VS[0x28];                                    // 0x0028(0x0028) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct SlateCore.AnalogInputEvent
-// 0x0008 (0x0058 - 0x0050)
-struct FAnalogInputEvent : public FKeyEvent
-{
-	unsigned char                                      UnknownData_A7NN[0x8];                                     // 0x0050(0x0008) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct SlateCore.FocusEvent
-// 0x0008
-struct FFocusEvent
-{
-	unsigned char                                      UnknownData_O5QL[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct SlateCore.PointerEvent
-// 0x0060 (0x0088 - 0x0028)
-struct FPointerEvent : public FInputEvent
-{
-	unsigned char                                      UnknownData_ZX6K[0x60];                                    // 0x0028(0x0060) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct SlateCore.Geometry
-// 0x0034
-struct FGeometry
-{
-	unsigned char                                      UnknownData_K20Q[0x34];                                    // 0x0000(0x0034) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct SlateCore.SlateWidgetStyle
-// 0x0008
-struct FSlateWidgetStyle
-{
-	unsigned char                                      UnknownData_9HQT[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (PADDING)
-
-};
 
 // ScriptStruct SlateCore.Margin
 // 0x0010
@@ -370,7 +282,7 @@ struct FSlateColor
 {
 	struct FLinearColor                                SpecifiedColor;                                            // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	TEnumAsByte<SlateCore_ESlateColorStylingMode>      ColorUseRule;                                              // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_63ER[0x1F];                                    // 0x0011(0x001F) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TLB2[0x1F];                                    // 0x0011(0x001F) MISSED OFFSET (PADDING)
 
 };
 
@@ -380,21 +292,53 @@ struct FSlateBrush
 {
 	struct FVector2D                                   ImageSize;                                                 // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<SlateCore_ESlateBrushDrawType>         DrawAs;                                                    // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_D04Q[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_13GC[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FMargin                                     Margin;                                                    // 0x000C(0x0010) (Edit, BlueprintVisible)
 	struct FLinearColor                                Tint;                                                      // 0x001C(0x0010) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_UWGD[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_361S[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FSlateColor                                 TintColor;                                                 // 0x0030(0x0030) (Edit, BlueprintVisible)
 	TEnumAsByte<SlateCore_ESlateBrushTileType>         Tiling;                                                    // 0x0060(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<SlateCore_ESlateBrushMirrorType>       Mirroring;                                                 // 0x0061(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<SlateCore_ESlateBrushImageType>        ImageType;                                                 // 0x0062(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_JC1Z[0x5];                                     // 0x0063(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5Q3U[0x5];                                     // 0x0063(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UObject*                                     ResourceObject;                                            // 0x0068(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	struct FName                                       ResourceName;                                              // 0x0070(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	bool                                               bIsDynamicallyLoaded;                                      // 0x0078(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	bool                                               bHasUObject;                                               // 0x0079(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_4JBC[0x2];                                     // 0x007A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YM33[0x2];                                     // 0x007A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FBox2D                                      UVRegion;                                                  // 0x007C(0x0014) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
+
+};
+
+// ScriptStruct SlateCore.InputEvent
+// 0x0028
+struct FInputEvent
+{
+	unsigned char                                      UnknownData_9PPF[0x28];                                    // 0x0000(0x0028) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct SlateCore.PointerEvent
+// 0x0060 (0x0088 - 0x0028)
+struct FPointerEvent : public FInputEvent
+{
+	unsigned char                                      UnknownData_EPDC[0x60];                                    // 0x0028(0x0060) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct SlateCore.Geometry
+// 0x0034
+struct FGeometry
+{
+	unsigned char                                      UnknownData_YKM5[0x34];                                    // 0x0000(0x0034) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct SlateCore.SlateWidgetStyle
+// 0x0008
+struct FSlateWidgetStyle
+{
+	unsigned char                                      UnknownData_SVVX[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (PADDING)
 
 };
 
@@ -403,7 +347,7 @@ struct FSlateBrush
 struct FSlateSound
 {
 	class UObject*                                     ResourceObject;                                            // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_4OY0[0x10];                                    // 0x0008(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_1YLT[0x10];                                    // 0x0008(0x0010) MISSED OFFSET (PADDING)
 
 };
 
@@ -453,12 +397,59 @@ struct FSlateFontInfo
 {
 	class UObject*                                     FontObject;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                     FontMaterial;                                              // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_5NKJ[0x18];                                    // 0x0010(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ECEB[0x18];                                    // 0x0010(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       TypefaceFontName;                                          // 0x0028(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                Size;                                                      // 0x0030(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       FontName;                                                  // 0x0034(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<SlateCore_EFontHinting>                Hinting;                                                   // 0x003C(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_T37Z[0x3];                                     // 0x003D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DZC0[0x3];                                     // 0x003D(0x0003) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct SlateCore.EditableTextStyle
+// 0x0220 (0x0228 - 0x0008)
+struct FEditableTextStyle : public FSlateWidgetStyle
+{
+	struct FSlateFontInfo                              Font;                                                      // 0x0008(0x0040) (Edit, BlueprintVisible)
+	struct FSlateColor                                 ColorAndOpacity;                                           // 0x0048(0x0030) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 BackgroundImageSelected;                                   // 0x0078(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 BackgroundImageComposing;                                  // 0x0108(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 CaretImage;                                                // 0x0198(0x0090) (Edit, BlueprintVisible)
+
+};
+
+// ScriptStruct SlateCore.ScrollBarStyle
+// 0x0510 (0x0518 - 0x0008)
+struct FScrollBarStyle : public FSlateWidgetStyle
+{
+	struct FSlateBrush                                 HorizontalBackgroundImage;                                 // 0x0008(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 VerticalBackgroundImage;                                   // 0x0098(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 VerticalTopSlotImage;                                      // 0x0128(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 HorizontalTopSlotImage;                                    // 0x01B8(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 VerticalBottomSlotImage;                                   // 0x0248(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 HorizontalBottomSlotImage;                                 // 0x02D8(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 NormalThumbImage;                                          // 0x0368(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 HoveredThumbImage;                                         // 0x03F8(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 DraggedThumbImage;                                         // 0x0488(0x0090) (Edit, BlueprintVisible)
+
+};
+
+// ScriptStruct SlateCore.EditableTextBoxStyle
+// 0x0858 (0x0860 - 0x0008)
+struct FEditableTextBoxStyle : public FSlateWidgetStyle
+{
+	struct FSlateBrush                                 BackgroundImageNormal;                                     // 0x0008(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 BackgroundImageHovered;                                    // 0x0098(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 BackgroundImageFocused;                                    // 0x0128(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 BackgroundImageReadOnly;                                   // 0x01B8(0x0090) (Edit, BlueprintVisible)
+	struct FMargin                                     Padding;                                                   // 0x0248(0x0010) (Edit, BlueprintVisible)
+	struct FSlateFontInfo                              Font;                                                      // 0x0258(0x0040) (Edit, BlueprintVisible)
+	struct FSlateColor                                 ForegroundColor;                                           // 0x0298(0x0030) (Edit, BlueprintVisible)
+	struct FSlateColor                                 BackgroundColor;                                           // 0x02C8(0x0030) (Edit, BlueprintVisible)
+	struct FSlateColor                                 ReadOnlyForegroundColor;                                   // 0x02F8(0x0030) (Edit, BlueprintVisible)
+	struct FMargin                                     HScrollBarPadding;                                         // 0x0328(0x0010) (Edit, BlueprintVisible)
+	struct FMargin                                     VScrollBarPadding;                                         // 0x0338(0x0010) (Edit, BlueprintVisible)
+	struct FScrollBarStyle                             ScrollBarStyle;                                            // 0x0348(0x0518) (Edit, BlueprintVisible)
 
 };
 
@@ -473,6 +464,70 @@ struct FTextBlockStyle : public FSlateWidgetStyle
 	struct FSlateColor                                 SelectedBackgroundColor;                                   // 0x0090(0x0030) (Edit)
 	struct FLinearColor                                HighlightColor;                                            // 0x00C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	struct FSlateBrush                                 HighlightShape;                                            // 0x00D0(0x0090) (Edit, BlueprintVisible, AdvancedDisplay)
+
+};
+
+// ScriptStruct SlateCore.SpinBoxStyle
+// 0x0310 (0x0318 - 0x0008)
+struct FSpinBoxStyle : public FSlateWidgetStyle
+{
+	struct FSlateBrush                                 BackgroundBrush;                                           // 0x0008(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 HoveredBackgroundBrush;                                    // 0x0098(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 ActiveFillBrush;                                           // 0x0128(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 InactiveFillBrush;                                         // 0x01B8(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 ArrowsImage;                                               // 0x0248(0x0090) (Edit, BlueprintVisible)
+	struct FSlateColor                                 ForegroundColor;                                           // 0x02D8(0x0030)
+	struct FMargin                                     TextPadding;                                               // 0x0308(0x0010) (Edit, BlueprintVisible)
+
+};
+
+// ScriptStruct SlateCore.FontData
+// 0x0030
+struct FFontData
+{
+	struct FString                                     FontFilename;                                              // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class UFontBulkData*                               BulkDataPtr;                                               // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<SlateCore_EFontHinting>                Hinting;                                                   // 0x0018(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_3K67[0x7];                                     // 0x0019(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<unsigned char>                              FontData;                                                  // 0x0020(0x0010) (ZeroConstructor, Deprecated)
+
+};
+
+// ScriptStruct SlateCore.TypefaceEntry
+// 0x0038
+struct FTypefaceEntry
+{
+	struct FName                                       Name;                                                      // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFontData                                   Font;                                                      // 0x0008(0x0030) (Edit, BlueprintVisible)
+
+};
+
+// ScriptStruct SlateCore.Typeface
+// 0x0010
+struct FTypeface
+{
+	TArray<struct FTypefaceEntry>                      Fonts;                                                     // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+
+};
+
+// ScriptStruct SlateCore.CompositeSubFont
+// 0x0028
+struct FCompositeSubFont
+{
+	struct FTypeface                                   Typeface;                                                  // 0x0000(0x0010) (Edit, BlueprintVisible)
+	TArray<struct FInt32Range>                         CharacterRanges;                                           // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	float                                              ScalingFactor;                                             // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_RGSZ[0x4];                                     // 0x0024(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct SlateCore.CompositeFont
+// 0x0028
+struct FCompositeFont
+{
+	struct FTypeface                                   DefaultTypeface;                                           // 0x0000(0x0010) (Edit, BlueprintVisible)
+	TArray<struct FCompositeSubFont>                   SubTypefaces;                                              // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char                                      UnknownData_TVJ4[0x8];                                     // 0x0020(0x0008) MISSED OFFSET (PADDING)
 
 };
 
@@ -516,106 +571,6 @@ struct FScrollBoxStyle : public FSlateWidgetStyle
 
 };
 
-// ScriptStruct SlateCore.ExpandableAreaStyle
-// 0x0120 (0x0128 - 0x0008)
-struct FExpandableAreaStyle : public FSlateWidgetStyle
-{
-	struct FSlateBrush                                 CollapsedImage;                                            // 0x0008(0x0090) (Edit)
-	struct FSlateBrush                                 ExpandedImage;                                             // 0x0098(0x0090) (Edit)
-
-};
-
-// ScriptStruct SlateCore.ProgressBarStyle
-// 0x01B0 (0x01B8 - 0x0008)
-struct FProgressBarStyle : public FSlateWidgetStyle
-{
-	struct FSlateBrush                                 BackgroundImage;                                           // 0x0008(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 FillImage;                                                 // 0x0098(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 MarqueeImage;                                              // 0x0128(0x0090) (Edit, BlueprintVisible)
-
-};
-
-// ScriptStruct SlateCore.ScrollBarStyle
-// 0x0510 (0x0518 - 0x0008)
-struct FScrollBarStyle : public FSlateWidgetStyle
-{
-	struct FSlateBrush                                 HorizontalBackgroundImage;                                 // 0x0008(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 VerticalBackgroundImage;                                   // 0x0098(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 VerticalTopSlotImage;                                      // 0x0128(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 HorizontalTopSlotImage;                                    // 0x01B8(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 VerticalBottomSlotImage;                                   // 0x0248(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 HorizontalBottomSlotImage;                                 // 0x02D8(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 NormalThumbImage;                                          // 0x0368(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 HoveredThumbImage;                                         // 0x03F8(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 DraggedThumbImage;                                         // 0x0488(0x0090) (Edit, BlueprintVisible)
-
-};
-
-// ScriptStruct SlateCore.EditableTextBoxStyle
-// 0x0858 (0x0860 - 0x0008)
-struct FEditableTextBoxStyle : public FSlateWidgetStyle
-{
-	struct FSlateBrush                                 BackgroundImageNormal;                                     // 0x0008(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 BackgroundImageHovered;                                    // 0x0098(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 BackgroundImageFocused;                                    // 0x0128(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 BackgroundImageReadOnly;                                   // 0x01B8(0x0090) (Edit, BlueprintVisible)
-	struct FMargin                                     Padding;                                                   // 0x0248(0x0010) (Edit, BlueprintVisible)
-	struct FSlateFontInfo                              Font;                                                      // 0x0258(0x0040) (Edit, BlueprintVisible)
-	struct FSlateColor                                 ForegroundColor;                                           // 0x0298(0x0030) (Edit, BlueprintVisible)
-	struct FSlateColor                                 BackgroundColor;                                           // 0x02C8(0x0030) (Edit, BlueprintVisible)
-	struct FSlateColor                                 ReadOnlyForegroundColor;                                   // 0x02F8(0x0030) (Edit, BlueprintVisible)
-	struct FMargin                                     HScrollBarPadding;                                         // 0x0328(0x0010) (Edit, BlueprintVisible)
-	struct FMargin                                     VScrollBarPadding;                                         // 0x0338(0x0010) (Edit, BlueprintVisible)
-	struct FScrollBarStyle                             ScrollBarStyle;                                            // 0x0348(0x0518) (Edit, BlueprintVisible)
-
-};
-
-// ScriptStruct SlateCore.InlineEditableTextBlockStyle
-// 0x09C0 (0x09C8 - 0x0008)
-struct FInlineEditableTextBlockStyle : public FSlateWidgetStyle
-{
-	struct FEditableTextBoxStyle                       EditableTextBoxStyle;                                      // 0x0008(0x0860) (Edit, BlueprintVisible)
-	struct FTextBlockStyle                             TextStyle;                                                 // 0x0868(0x0160) (Edit, BlueprintVisible)
-
-};
-
-// ScriptStruct SlateCore.HyperlinkStyle
-// 0x0418 (0x0420 - 0x0008)
-struct FHyperlinkStyle : public FSlateWidgetStyle
-{
-	struct FButtonStyle                                UnderlineStyle;                                            // 0x0008(0x02A8) (Edit, BlueprintVisible)
-	struct FTextBlockStyle                             TextStyle;                                                 // 0x02B0(0x0160) (Edit, BlueprintVisible)
-	struct FMargin                                     Padding;                                                   // 0x0410(0x0010) (Edit, BlueprintVisible)
-
-};
-
-// ScriptStruct SlateCore.CheckBoxStyle
-// 0x05E8 (0x05F0 - 0x0008)
-struct FCheckBoxStyle : public FSlateWidgetStyle
-{
-	TEnumAsByte<SlateCore_ESlateCheckBoxType>          CheckBoxType;                                              // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EBAD[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FSlateBrush                                 UncheckedImage;                                            // 0x0010(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 UncheckedHoveredImage;                                     // 0x00A0(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 UncheckedPressedImage;                                     // 0x0130(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 CheckedImage;                                              // 0x01C0(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 CheckedHoveredImage;                                       // 0x0250(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 CheckedPressedImage;                                       // 0x02E0(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 UndeterminedImage;                                         // 0x0370(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 UndeterminedHoveredImage;                                  // 0x0400(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 UndeterminedPressedImage;                                  // 0x0490(0x0090) (Edit, BlueprintVisible)
-	struct FMargin                                     Padding;                                                   // 0x0520(0x0010) (Edit, BlueprintVisible)
-	struct FSlateColor                                 ForegroundColor;                                           // 0x0530(0x0030) (Edit, BlueprintVisible)
-	struct FSlateColor                                 BorderBackgroundColor;                                     // 0x0560(0x0030) (Edit, BlueprintVisible)
-	struct FSlateSound                                 CheckedSlateSound;                                         // 0x0590(0x0018) (Edit, BlueprintVisible)
-	struct FSlateSound                                 UncheckedSlateSound;                                       // 0x05A8(0x0018) (Edit, BlueprintVisible)
-	struct FSlateSound                                 HoveredSlateSound;                                         // 0x05C0(0x0018) (Edit, BlueprintVisible)
-	struct FName                                       CheckedSound;                                              // 0x05D8(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FName                                       UncheckedSound;                                            // 0x05E0(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FName                                       HoveredSound;                                              // 0x05E8(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
 // ScriptStruct SlateCore.DockTabStyle
 // 0x06E0 (0x06E8 - 0x0008)
 struct FDockTabStyle : public FSlateWidgetStyle
@@ -630,8 +585,17 @@ struct FDockTabStyle : public FSlateWidgetStyle
 	struct FSlateBrush                                 TabWellBrush;                                              // 0x0610(0x0090) (Edit)
 	struct FMargin                                     TabPadding;                                                // 0x06A0(0x0010) (Edit)
 	float                                              OverlapWidth;                                              // 0x06B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_0ZS7[0x4];                                     // 0x06B4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WW7U[0x4];                                     // 0x06B4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FSlateColor                                 FlashColor;                                                // 0x06B8(0x0030) (Edit)
+
+};
+
+// ScriptStruct SlateCore.SplitterStyle
+// 0x0120 (0x0128 - 0x0008)
+struct FSplitterStyle : public FSlateWidgetStyle
+{
+	struct FSlateBrush                                 HandleNormalBrush;                                         // 0x0008(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 HandleHighlightBrush;                                      // 0x0098(0x0090) (Edit, BlueprintVisible)
 
 };
 
@@ -651,15 +615,6 @@ struct FTableColumnHeaderStyle : public FSlateWidgetStyle
 
 };
 
-// ScriptStruct SlateCore.SplitterStyle
-// 0x0120 (0x0128 - 0x0008)
-struct FSplitterStyle : public FSlateWidgetStyle
-{
-	struct FSlateBrush                                 HandleNormalBrush;                                         // 0x0008(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 HandleHighlightBrush;                                      // 0x0098(0x0090) (Edit, BlueprintVisible)
-
-};
-
 // ScriptStruct SlateCore.HeaderRowStyle
 // 0x0C18 (0x0C20 - 0x0008)
 struct FHeaderRowStyle : public FSlateWidgetStyle
@@ -672,13 +627,34 @@ struct FHeaderRowStyle : public FSlateWidgetStyle
 
 };
 
+// ScriptStruct SlateCore.TableRowStyle
+// 0x0720 (0x0728 - 0x0008)
+struct FTableRowStyle : public FSlateWidgetStyle
+{
+	struct FSlateBrush                                 SelectorFocusedBrush;                                      // 0x0008(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 ActiveHoveredBrush;                                        // 0x0098(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 ActiveBrush;                                               // 0x0128(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 InactiveHoveredBrush;                                      // 0x01B8(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 InactiveBrush;                                             // 0x0248(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 EvenRowBackgroundHoveredBrush;                             // 0x02D8(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 EvenRowBackgroundBrush;                                    // 0x0368(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 OddRowBackgroundHoveredBrush;                              // 0x03F8(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 OddRowBackgroundBrush;                                     // 0x0488(0x0090) (Edit, BlueprintVisible)
+	struct FSlateColor                                 TextColor;                                                 // 0x0518(0x0030) (Edit, BlueprintVisible)
+	struct FSlateColor                                 SelectedTextColor;                                         // 0x0548(0x0030) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 DropIndicator_Above;                                       // 0x0578(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 DropIndicator_Onto;                                        // 0x0608(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 DropIndicator_Below;                                       // 0x0698(0x0090) (Edit, BlueprintVisible)
+
+};
+
 // ScriptStruct SlateCore.InlineTextImageStyle
 // 0x0098 (0x00A0 - 0x0008)
 struct FInlineTextImageStyle : public FSlateWidgetStyle
 {
 	struct FSlateBrush                                 Image;                                                     // 0x0008(0x0090) (Edit)
 	int16_t                                            Baseline;                                                  // 0x0098(0x0002) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TJSN[0x6];                                     // 0x009A(0x0006) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3T9Z[0x6];                                     // 0x009A(0x0006) MISSED OFFSET (PADDING)
 
 };
 
@@ -718,104 +694,128 @@ struct FSearchBoxStyle : public FSlateWidgetStyle
 	struct FSlateBrush                                 ClearImage;                                                // 0x0A58(0x0090) (Edit)
 	struct FMargin                                     ImagePadding;                                              // 0x0AE8(0x0010) (Edit)
 	bool                                               bLeftAlignButtons;                                         // 0x0AF8(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_Y27C[0x7];                                     // 0x0AF9(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_6XWD[0x7];                                     // 0x0AF9(0x0007) MISSED OFFSET (PADDING)
 
 };
 
-// ScriptStruct SlateCore.EditableTextStyle
-// 0x0220 (0x0228 - 0x0008)
-struct FEditableTextStyle : public FSlateWidgetStyle
+// ScriptStruct SlateCore.ExpandableAreaStyle
+// 0x0120 (0x0128 - 0x0008)
+struct FExpandableAreaStyle : public FSlateWidgetStyle
 {
-	struct FSlateFontInfo                              Font;                                                      // 0x0008(0x0040) (Edit, BlueprintVisible)
-	struct FSlateColor                                 ColorAndOpacity;                                           // 0x0048(0x0030) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 BackgroundImageSelected;                                   // 0x0078(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 BackgroundImageComposing;                                  // 0x0108(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 CaretImage;                                                // 0x0198(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 CollapsedImage;                                            // 0x0008(0x0090) (Edit)
+	struct FSlateBrush                                 ExpandedImage;                                             // 0x0098(0x0090) (Edit)
 
 };
 
-// ScriptStruct SlateCore.SpinBoxStyle
-// 0x0310 (0x0318 - 0x0008)
-struct FSpinBoxStyle : public FSlateWidgetStyle
+// ScriptStruct SlateCore.ProgressBarStyle
+// 0x01B0 (0x01B8 - 0x0008)
+struct FProgressBarStyle : public FSlateWidgetStyle
 {
-	struct FSlateBrush                                 BackgroundBrush;                                           // 0x0008(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 HoveredBackgroundBrush;                                    // 0x0098(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 ActiveFillBrush;                                           // 0x0128(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 InactiveFillBrush;                                         // 0x01B8(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 ArrowsImage;                                               // 0x0248(0x0090) (Edit, BlueprintVisible)
-	struct FSlateColor                                 ForegroundColor;                                           // 0x02D8(0x0030)
-	struct FMargin                                     TextPadding;                                               // 0x0308(0x0010) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 BackgroundImage;                                           // 0x0008(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 FillImage;                                                 // 0x0098(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 MarqueeImage;                                              // 0x0128(0x0090) (Edit, BlueprintVisible)
 
 };
 
-// ScriptStruct SlateCore.FontData
-// 0x0030
-struct FFontData
+// ScriptStruct SlateCore.InlineEditableTextBlockStyle
+// 0x09C0 (0x09C8 - 0x0008)
+struct FInlineEditableTextBlockStyle : public FSlateWidgetStyle
 {
-	struct FString                                     FontFilename;                                              // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class UFontBulkData*                               BulkDataPtr;                                               // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<SlateCore_EFontHinting>                Hinting;                                                   // 0x0018(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_K90M[0x7];                                     // 0x0019(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<unsigned char>                              FontData;                                                  // 0x0020(0x0010) (ZeroConstructor, Deprecated)
+	struct FEditableTextBoxStyle                       EditableTextBoxStyle;                                      // 0x0008(0x0860) (Edit, BlueprintVisible)
+	struct FTextBlockStyle                             TextStyle;                                                 // 0x0868(0x0160) (Edit, BlueprintVisible)
 
 };
 
-// ScriptStruct SlateCore.TypefaceEntry
-// 0x0038
-struct FTypefaceEntry
+// ScriptStruct SlateCore.HyperlinkStyle
+// 0x0418 (0x0420 - 0x0008)
+struct FHyperlinkStyle : public FSlateWidgetStyle
 {
-	struct FName                                       Name;                                                      // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFontData                                   Font;                                                      // 0x0008(0x0030) (Edit, BlueprintVisible)
+	struct FButtonStyle                                UnderlineStyle;                                            // 0x0008(0x02A8) (Edit, BlueprintVisible)
+	struct FTextBlockStyle                             TextStyle;                                                 // 0x02B0(0x0160) (Edit, BlueprintVisible)
+	struct FMargin                                     Padding;                                                   // 0x0410(0x0010) (Edit, BlueprintVisible)
 
 };
 
-// ScriptStruct SlateCore.Typeface
-// 0x0010
-struct FTypeface
+// ScriptStruct SlateCore.CheckBoxStyle
+// 0x05E8 (0x05F0 - 0x0008)
+struct FCheckBoxStyle : public FSlateWidgetStyle
 {
-	TArray<struct FTypefaceEntry>                      Fonts;                                                     // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TEnumAsByte<SlateCore_ESlateCheckBoxType>          CheckBoxType;                                              // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_PDH8[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FSlateBrush                                 UncheckedImage;                                            // 0x0010(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 UncheckedHoveredImage;                                     // 0x00A0(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 UncheckedPressedImage;                                     // 0x0130(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 CheckedImage;                                              // 0x01C0(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 CheckedHoveredImage;                                       // 0x0250(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 CheckedPressedImage;                                       // 0x02E0(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 UndeterminedImage;                                         // 0x0370(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 UndeterminedHoveredImage;                                  // 0x0400(0x0090) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 UndeterminedPressedImage;                                  // 0x0490(0x0090) (Edit, BlueprintVisible)
+	struct FMargin                                     Padding;                                                   // 0x0520(0x0010) (Edit, BlueprintVisible)
+	struct FSlateColor                                 ForegroundColor;                                           // 0x0530(0x0030) (Edit, BlueprintVisible)
+	struct FSlateColor                                 BorderBackgroundColor;                                     // 0x0560(0x0030) (Edit, BlueprintVisible)
+	struct FSlateSound                                 CheckedSlateSound;                                         // 0x0590(0x0018) (Edit, BlueprintVisible)
+	struct FSlateSound                                 UncheckedSlateSound;                                       // 0x05A8(0x0018) (Edit, BlueprintVisible)
+	struct FSlateSound                                 HoveredSlateSound;                                         // 0x05C0(0x0018) (Edit, BlueprintVisible)
+	struct FName                                       CheckedSound;                                              // 0x05D8(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FName                                       UncheckedSound;                                            // 0x05E0(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FName                                       HoveredSound;                                              // 0x05E8(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
-// ScriptStruct SlateCore.CompositeSubFont
-// 0x0028
-struct FCompositeSubFont
+// ScriptStruct SlateCore.NavigationEvent
+// 0x0008 (0x0030 - 0x0028)
+struct FNavigationEvent : public FInputEvent
 {
-	struct FTypeface                                   Typeface;                                                  // 0x0000(0x0010) (Edit, BlueprintVisible)
-	TArray<struct FInt32Range>                         CharacterRanges;                                           // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	float                                              ScalingFactor;                                             // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_7896[0x4];                                     // 0x0024(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ADX3[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
 };
 
-// ScriptStruct SlateCore.CompositeFont
-// 0x0028
-struct FCompositeFont
+// ScriptStruct SlateCore.MotionEvent
+// 0x0030 (0x0058 - 0x0028)
+struct FMotionEvent : public FInputEvent
 {
-	struct FTypeface                                   DefaultTypeface;                                           // 0x0000(0x0010) (Edit, BlueprintVisible)
-	TArray<struct FCompositeSubFont>                   SubTypefaces;                                              // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData_IO9A[0x8];                                     // 0x0020(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HT8J[0x30];                                    // 0x0028(0x0030) MISSED OFFSET (PADDING)
 
 };
 
-// ScriptStruct SlateCore.TableRowStyle
-// 0x0720 (0x0728 - 0x0008)
-struct FTableRowStyle : public FSlateWidgetStyle
+// ScriptStruct SlateCore.ControllerEvent
+// 0x0028 (0x0050 - 0x0028)
+struct FControllerEvent : public FInputEvent
 {
-	struct FSlateBrush                                 SelectorFocusedBrush;                                      // 0x0008(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 ActiveHoveredBrush;                                        // 0x0098(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 ActiveBrush;                                               // 0x0128(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 InactiveHoveredBrush;                                      // 0x01B8(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 InactiveBrush;                                             // 0x0248(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 EvenRowBackgroundHoveredBrush;                             // 0x02D8(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 EvenRowBackgroundBrush;                                    // 0x0368(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 OddRowBackgroundHoveredBrush;                              // 0x03F8(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 OddRowBackgroundBrush;                                     // 0x0488(0x0090) (Edit, BlueprintVisible)
-	struct FSlateColor                                 TextColor;                                                 // 0x0518(0x0030) (Edit, BlueprintVisible)
-	struct FSlateColor                                 SelectedTextColor;                                         // 0x0548(0x0030) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 DropIndicator_Above;                                       // 0x0578(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 DropIndicator_Onto;                                        // 0x0608(0x0090) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 DropIndicator_Below;                                       // 0x0698(0x0090) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData_OAMS[0x28];                                    // 0x0028(0x0028) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct SlateCore.CharacterEvent
+// 0x0008 (0x0030 - 0x0028)
+struct FCharacterEvent : public FInputEvent
+{
+	unsigned char                                      UnknownData_XTSI[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct SlateCore.KeyEvent
+// 0x0028 (0x0050 - 0x0028)
+struct FKeyEvent : public FInputEvent
+{
+	unsigned char                                      UnknownData_CIVJ[0x28];                                    // 0x0028(0x0028) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct SlateCore.AnalogInputEvent
+// 0x0008 (0x0058 - 0x0050)
+struct FAnalogInputEvent : public FKeyEvent
+{
+	unsigned char                                      UnknownData_10C7[0x8];                                     // 0x0050(0x0008) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct SlateCore.FocusEvent
+// 0x0008
+struct FFocusEvent
+{
+	unsigned char                                      UnknownData_VZN7[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (PADDING)
 
 };
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Time.TimeInterface");
+		static UClass* ptr = UObject::FindClass("Class Time.TimeInterface");
 		return ptr;
 	}
 
@@ -50,7 +50,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Time.CustomizableTimeInterface");
+		static UClass* ptr = UObject::FindClass("Class Time.CustomizableTimeInterface");
 		return ptr;
 	}
 
@@ -73,7 +73,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Time.DebugTimeInterface");
+		static UClass* ptr = UObject::FindClass("Class Time.DebugTimeInterface");
 		return ptr;
 	}
 
@@ -96,7 +96,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Time.LocationProviderInterface");
+		static UClass* ptr = UObject::FindClass("Class Time.LocationProviderInterface");
 		return ptr;
 	}
 
@@ -113,7 +113,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Time.TimeBlueprintLibrary");
+		static UClass* ptr = UObject::FindClass("Class Time.TimeBlueprintLibrary");
 		return ptr;
 	}
 
@@ -134,7 +134,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Time.TimeFormatterInterface");
+		static UClass* ptr = UObject::FindClass("Class Time.TimeFormatterInterface");
 		return ptr;
 	}
 
@@ -143,36 +143,36 @@ public:
 };
 
 // Class Time.TimeService
-// 0x0110 (FullSize[0x0540] - InheritedSize[0x0430])
+// 0x0110 (FullSize[0x04E0] - InheritedSize[0x03D0])
 class ATimeService : public AActor
 {
 public:
-	unsigned char                                      UnknownData_U8O8[0x38];                                    // 0x0430(0x0038) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FTimespan                                   GameWorldTimeOffset;                                       // 0x0468(0x0008) (Edit, ZeroConstructor, Config, DisableEditOnInstance, Protected)
-	unsigned char                                      UnknownData_KWU3[0x4];                                     // 0x0470(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	uint32_t                                           TimeScalar;                                                // 0x0474(0x0004) (Edit, Net, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	uint32_t                                           NumberOfDaysInEachGameMonth;                               // 0x0478(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_S8U0[0x4];                                     // 0x047C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	double                                             ServiceTimeQueryRapidFrequencyOffsetMax;                   // 0x0480(0x0008) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	float                                              ServiceTimeQueryRapidFrequencyInSeconds;                   // 0x0488(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	float                                              ServiceTimeQueryFrequencyInSeconds;                        // 0x048C(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	float                                              ClientTimeUpdateFrequencyInSeconds;                        // 0x0490(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	float                                              SunriseTimeHours;                                          // 0x0494(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	float                                              SunsetTimeHours;                                           // 0x0498(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	float                                              LocalTimeUpdateAdjustMaxTimeDelta;                         // 0x049C(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	float                                              MinLocalTimeUpdateAdjustPercentageToSlowDown;              // 0x04A0(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	float                                              MaxLocalTimeUpdateAdjustPercentageToSlowDown;              // 0x04A4(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	float                                              MinLocalTimeUpdateAdjustPercentageToSpeedUp;               // 0x04A8(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	float                                              MaxLocalTimeUpdateAdjustPercentageToSpeedUp;               // 0x04AC(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	uint32_t                                           MaxNumReplicatedTimeEntriesToAverage;                      // 0x04B0(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_WBMJ[0x4C];                                    // 0x04B4(0x004C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FReplicatedAuthoritativeTime                ReplicatedServerTime;                                      // 0x0500(0x0010) (BlueprintVisible, BlueprintReadOnly, Net, RepNotify)
-	unsigned char                                      UnknownData_GOG8[0x30];                                    // 0x0510(0x0030) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_FZH7[0x38];                                    // 0x03D0(0x0038) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FTimespan                                   GameWorldTimeOffset;                                       // 0x0408(0x0008) (Edit, ZeroConstructor, Config, DisableEditOnInstance, Protected)
+	unsigned char                                      UnknownData_LQM6[0x4];                                     // 0x0410(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	uint32_t                                           TimeScalar;                                                // 0x0414(0x0004) (Edit, Net, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	uint32_t                                           NumberOfDaysInEachGameMonth;                               // 0x0418(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_ZQVO[0x4];                                     // 0x041C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	double                                             ServiceTimeQueryRapidFrequencyOffsetMax;                   // 0x0420(0x0008) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	float                                              ServiceTimeQueryRapidFrequencyInSeconds;                   // 0x0428(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	float                                              ServiceTimeQueryFrequencyInSeconds;                        // 0x042C(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	float                                              ClientTimeUpdateFrequencyInSeconds;                        // 0x0430(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	float                                              SunriseTimeHours;                                          // 0x0434(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	float                                              SunsetTimeHours;                                           // 0x0438(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	float                                              LocalTimeUpdateAdjustMaxTimeDelta;                         // 0x043C(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	float                                              MinLocalTimeUpdateAdjustPercentageToSlowDown;              // 0x0440(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	float                                              MaxLocalTimeUpdateAdjustPercentageToSlowDown;              // 0x0444(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	float                                              MinLocalTimeUpdateAdjustPercentageToSpeedUp;               // 0x0448(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	float                                              MaxLocalTimeUpdateAdjustPercentageToSpeedUp;               // 0x044C(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	uint32_t                                           MaxNumReplicatedTimeEntriesToAverage;                      // 0x0450(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_DU2O[0x4C];                                    // 0x0454(0x004C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FReplicatedAuthoritativeTime                ReplicatedServerTime;                                      // 0x04A0(0x0010) (BlueprintVisible, BlueprintReadOnly, Net, RepNotify)
+	unsigned char                                      UnknownData_5I3F[0x30];                                    // 0x04B0(0x0030) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Time.TimeService");
+		static UClass* ptr = UObject::FindClass("Class Time.TimeService");
 		return ptr;
 	}
 
@@ -183,16 +183,16 @@ public:
 };
 
 // Class Time.DebugTimeService
-// 0x0008 (FullSize[0x0548] - InheritedSize[0x0540])
+// 0x0008 (FullSize[0x04E8] - InheritedSize[0x04E0])
 class ADebugTimeService : public ATimeService
 {
 public:
-	unsigned char                                      UnknownData_ORV1[0x8];                                     // 0x0540(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_MD3M[0x8];                                     // 0x04E0(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Time.DebugTimeService");
+		static UClass* ptr = UObject::FindClass("Class Time.DebugTimeService");
 		return ptr;
 	}
 
@@ -202,16 +202,16 @@ public:
 };
 
 // Class Time.CustomizableTimeService
-// 0x0008 (FullSize[0x0550] - InheritedSize[0x0548])
+// 0x0008 (FullSize[0x04F0] - InheritedSize[0x04E8])
 class ACustomizableTimeService : public ADebugTimeService
 {
 public:
-	unsigned char                                      UnknownData_ESZV[0x8];                                     // 0x0548(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_W90I[0x8];                                     // 0x04E8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Time.CustomizableTimeService");
+		static UClass* ptr = UObject::FindClass("Class Time.CustomizableTimeService");
 		return ptr;
 	}
 

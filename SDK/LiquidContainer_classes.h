@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LiquidContainer.LiquidContainerInterface");
+		static UClass* ptr = UObject::FindClass("Class LiquidContainer.LiquidContainerInterface");
 		return ptr;
 	}
 
@@ -50,17 +50,17 @@ public:
 	struct FName                                       LiquidMaterialParameterName;                               // 0x00D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FLiquidTypeParams>                   LiquidTypeParams;                                          // 0x00D8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	float                                              StartingLiquidLevelNormalised;                             // 0x00E8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_LGOC[0x4];                                     // 0x00EC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_SNIK[0x4];                                     // 0x00EC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UCurveFloat*                                 TransitionCurve;                                           // 0x00F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TransitionSpeedDecrease;                                   // 0x00F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TransitionSpeedIncrease;                                   // 0x00FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UMaterialInstanceDynamic*>            LiquidMaterials;                                           // 0x0100(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_GNK0[0x18];                                    // 0x0110(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LZNQ[0x18];                                    // 0x0110(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LiquidContainer.LiquidContainerComponent");
+		static UClass* ptr = UObject::FindClass("Class LiquidContainer.LiquidContainerComponent");
 		return ptr;
 	}
 
@@ -81,7 +81,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LiquidContainer.LiquidContainerServiceInterface");
+		static UClass* ptr = UObject::FindClass("Class LiquidContainer.LiquidContainerServiceInterface");
 		return ptr;
 	}
 
@@ -94,12 +94,12 @@ public:
 class ULiquidContainerService : public UInteractableService
 {
 public:
-	unsigned char                                      UnknownData_XFUD[0x8];                                     // 0x0070(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_JT26[0x8];                                     // 0x0070(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LiquidContainer.LiquidContainerService");
+		static UClass* ptr = UObject::FindClass("Class LiquidContainer.LiquidContainerService");
 		return ptr;
 	}
 

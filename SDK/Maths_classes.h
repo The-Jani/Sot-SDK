@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.AngleMaths");
+		static UClass* ptr = UObject::FindClass("Class Maths.AngleMaths");
 		return ptr;
 	}
 
@@ -50,7 +50,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.BuoyancyMaths");
+		static UClass* ptr = UObject::FindClass("Class Maths.BuoyancyMaths");
 		return ptr;
 	}
 
@@ -69,7 +69,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.CircleMaths");
+		static UClass* ptr = UObject::FindClass("Class Maths.CircleMaths");
 		return ptr;
 	}
 
@@ -88,7 +88,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.CurveMaths");
+		static UClass* ptr = UObject::FindClass("Class Maths.CurveMaths");
 		return ptr;
 	}
 
@@ -110,7 +110,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.Density");
+		static UClass* ptr = UObject::FindClass("Class Maths.Density");
 		return ptr;
 	}
 
@@ -133,7 +133,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.DragCoefficients");
+		static UClass* ptr = UObject::FindClass("Class Maths.DragCoefficients");
 		return ptr;
 	}
 
@@ -157,7 +157,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.DragMaths");
+		static UClass* ptr = UObject::FindClass("Class Maths.DragMaths");
 		return ptr;
 	}
 
@@ -175,7 +175,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.FloatMaths");
+		static UClass* ptr = UObject::FindClass("Class Maths.FloatMaths");
 		return ptr;
 	}
 
@@ -187,6 +187,7 @@ public:
 	float STATIC_MoveTowards(float From, float To, float Speed, float Time);
 	float STATIC_Map(float ValueToMapFrom, float FromRangeStart, float FromRangeEnd, float ToRangeStart, float ToRangeEnd, bool Clamp);
 	bool STATIC_IncrementCounter(float* Counter, float Delta, float CounterMax);
+	float STATIC_GetShortestSignedDistanceBetweenPointsInWrappedRange(float FromValue, float ToValue, float LowerLimit, float UpperLimit);
 	float STATIC_FindMidpointInWrappedRange(float Value1, float Value2, float LowerLimit, float UpperLimit);
 	float STATIC_Bound(float ValueToBound, float Bound1, float Bound2);
 };
@@ -200,7 +201,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.Gravity");
+		static UClass* ptr = UObject::FindClass("Class Maths.Gravity");
 		return ptr;
 	}
 
@@ -218,7 +219,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.OrientedPointBlueprintFunctionLibrary");
+		static UClass* ptr = UObject::FindClass("Class Maths.OrientedPointBlueprintFunctionLibrary");
 		return ptr;
 	}
 
@@ -236,7 +237,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.PoissonDiscSampling");
+		static UClass* ptr = UObject::FindClass("Class Maths.PoissonDiscSampling");
 		return ptr;
 	}
 
@@ -254,7 +255,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.ProjectileMaths");
+		static UClass* ptr = UObject::FindClass("Class Maths.ProjectileMaths");
 		return ptr;
 	}
 
@@ -275,7 +276,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.RotationMaths");
+		static UClass* ptr = UObject::FindClass("Class Maths.RotationMaths");
 		return ptr;
 	}
 
@@ -283,6 +284,8 @@ public:
 
 	struct FTransform STATIC_TransformAroundArbitraryPivot(const struct FTransform& TargetTransform, const struct FTransform& BaseTransform, const struct FTransform& TransformToApply, bool LockFinalOrientation);
 	struct FQuat STATIC_RotatorToQuat(const struct FRotator& Rotation);
+	struct FVector STATIC_RotateDirectionInterpConstantTo(const struct FVector& CurrentDirectionNormalised, const struct FVector& TargetDirectionNormalised, float DeltaTime, float InterpSpeedRadPerSec);
+	void STATIC_FindRotationAxisAndRadAngleBetweenVectors(const struct FVector& FromVectorNormalised, const struct FVector& ToVectorNormalised, struct FVector* OutRotationAxis, float* OutRotationAngleRadians);
 	bool STATIC_AreRotatorsTheSameRotation(const struct FRotator& Rotator1, const struct FRotator& Rotator2, float ErrorTolerance);
 	struct FRotationUpdateResult STATIC_AdvanceRotationBySpinAndTiltSynced(const struct FRotator& StartRotation, const struct FRotator& TargetRotation, float RotationRateDegrees, float DeltaTime);
 };
@@ -296,7 +299,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.ShapeMathsBlueprintLibrary");
+		static UClass* ptr = UObject::FindClass("Class Maths.ShapeMathsBlueprintLibrary");
 		return ptr;
 	}
 
@@ -318,7 +321,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.SphereMaths");
+		static UClass* ptr = UObject::FindClass("Class Maths.SphereMaths");
 		return ptr;
 	}
 
@@ -337,7 +340,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.SphericalCapMaths");
+		static UClass* ptr = UObject::FindClass("Class Maths.SphericalCapMaths");
 		return ptr;
 	}
 
@@ -357,7 +360,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.StatisticsMaths");
+		static UClass* ptr = UObject::FindClass("Class Maths.StatisticsMaths");
 		return ptr;
 	}
 
@@ -374,7 +377,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.TimedBufferFunctionLibrary");
+		static UClass* ptr = UObject::FindClass("Class Maths.TimedBufferFunctionLibrary");
 		return ptr;
 	}
 
@@ -394,7 +397,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.TimeMaths");
+		static UClass* ptr = UObject::FindClass("Class Maths.TimeMaths");
 		return ptr;
 	}
 
@@ -412,7 +415,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Maths.VectorMaths");
+		static UClass* ptr = UObject::FindClass("Class Maths.VectorMaths");
 		return ptr;
 	}
 

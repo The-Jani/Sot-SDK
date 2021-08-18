@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -47,11 +47,41 @@ enum class AthenaEngine_EPlayMode : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct AthenaEngine.SerialisedRpc
+// 0x0020
+struct FSerialisedRpc
+{
+	unsigned char                                      UnknownData_3RSB[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UScriptStruct*                               ContentsType;                                              // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaEngine.StringAssetClassPairFeatureOverride
+// 0x0028
+struct FStringAssetClassPairFeatureOverride
+{
+	struct FName                                       FeatureName;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TAssetPtr<class UClass>                            AssetClass;                                                // 0x0008(0x001C) ELEMENT_SIZE_MISMATCH (Edit, UObjectWrapper, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_UHRC[0x4];                                     // 0x0008(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+
+};
+
+// ScriptStruct AthenaEngine.StringAssetClassPair
+// 0x0040
+struct FStringAssetClassPair
+{
+	struct FString                                     String;                                                    // 0x0000(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash)
+	TAssetPtr<class UClass>                            AssetClass;                                                // 0x0010(0x001C) ELEMENT_SIZE_MISMATCH (Edit, UObjectWrapper, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_TRWU[0x4];                                     // 0x0010(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	TArray<struct FStringAssetClassPairFeatureOverride> FeatureOverrides;                                          // 0x0030(0x0010) (Edit, ZeroConstructor, AdvancedDisplay)
+
+};
+
 // ScriptStruct AthenaEngine.BoxedRpc
 // 0x0010
 struct FBoxedRpc
 {
-	unsigned char                                      UnknownData_V95K[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GUZ8[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UScriptStruct*                               Type;                                                      // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
 
 };
@@ -67,20 +97,20 @@ struct FPlayModeDefiniton
 
 };
 
-// ScriptStruct AthenaEngine.SerialisedRpc
-// 0x0020
-struct FSerialisedRpc
-{
-	unsigned char                                      UnknownData_GHFG[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UScriptStruct*                               ContentsType;                                              // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
 // ScriptStruct AthenaEngine.ServicesStampId
 // 0x0010
 struct FServicesStampId
 {
 	struct FString                                     StampId;                                                   // 0x0000(0x0010) (ZeroConstructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct AthenaEngine.ActorComponentSelector
+// 0x0010
+struct FActorComponentSelector
+{
+	struct FName                                       ComponentName;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UActorComponent*                             CachedComponent;                                           // 0x0008(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
@@ -90,7 +120,7 @@ struct FPlaySoundRpc : public FBoxedRpc
 {
 	class UWwiseEvent*                                 WwiseEvent;                                                // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               PlayOnTarget;                                              // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_JLD3[0x7];                                     // 0x0019(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_X2XP[0x7];                                     // 0x0019(0x0007) MISSED OFFSET (PADDING)
 
 };
 
@@ -109,9 +139,9 @@ struct FEventTriggerForceFeedback
 {
 	class UForceFeedbackEffect*                        ForceFeedbackEffect;                                       // 0x0000(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               Looping;                                                   // 0x0008(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_PYFE[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_4HRY[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       Tag;                                                       // 0x000C(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_SA94[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_Z3E0[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -119,7 +149,7 @@ struct FEventTriggerForceFeedback
 // 0x0018
 struct FAthenaAsyncAssetLoaderWrapper
 {
-	unsigned char                                      UnknownData_F5JC[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_EHW2[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
 
 };
 
@@ -127,37 +157,7 @@ struct FAthenaAsyncAssetLoaderWrapper
 // 0x0001
 struct FEventMeshAssigned
 {
-	unsigned char                                      UnknownData_AXMS[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaEngine.StringAssetClassPairFeatureOverride
-// 0x0028
-struct FStringAssetClassPairFeatureOverride
-{
-	struct FName                                       FeatureName;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TAssetPtr<class UClass>                            AssetClass;                                                // 0x0008(0x001C) ELEMENT_SIZE_MISMATCH (Edit, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2RQL[0x4];                                     // 0x0008(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-
-};
-
-// ScriptStruct AthenaEngine.StringAssetClassPair
-// 0x0040
-struct FStringAssetClassPair
-{
-	struct FString                                     String;                                                    // 0x0000(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash)
-	TAssetPtr<class UClass>                            AssetClass;                                                // 0x0010(0x001C) ELEMENT_SIZE_MISMATCH (Edit, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CQGI[0x4];                                     // 0x0010(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	TArray<struct FStringAssetClassPairFeatureOverride> FeatureOverrides;                                          // 0x0030(0x0010) (Edit, ZeroConstructor, AdvancedDisplay)
-
-};
-
-// ScriptStruct AthenaEngine.ActorComponentSelector
-// 0x0010
-struct FActorComponentSelector
-{
-	struct FName                                       ComponentName;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UActorComponent*                             CachedComponent;                                           // 0x0008(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_LY26[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -19,6 +19,12 @@ namespace CG
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function Watercrafts.FakeShip.OnAttachedItemEndPlay
+struct AFakeShip_OnAttachedItemEndPlay_Params
+{
+	class AActor*                                      Actor;                                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
 
 // Function Watercrafts.ItemProxyWatercraftTrackerComponent.OnRep_CurrentWatercraft
 struct UItemProxyWatercraftTrackerComponent_OnRep_CurrentWatercraft_Params
@@ -53,42 +59,6 @@ struct ARowboat_SetAlwaysEnabledInteractables_Params
 // Function Watercrafts.Rowboat.OnRep_IsSinking
 struct ARowboat_OnRep_IsSinking_Params
 {
-};
-
-// Function Watercrafts.RowingCompositeInputHandler.OnUseRightOar
-struct URowingCompositeInputHandler_OnUseRightOar_Params
-{
-	TEnumAsByte<AthenaInput_EInputHandlerResult>       ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function Watercrafts.RowingCompositeInputHandler.OnUseLeftOar
-struct URowingCompositeInputHandler_OnUseLeftOar_Params
-{
-	TEnumAsByte<AthenaInput_EInputHandlerResult>       ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function Watercrafts.RowingCompositeInputHandler.OnStopUseRightOar
-struct URowingCompositeInputHandler_OnStopUseRightOar_Params
-{
-	TEnumAsByte<AthenaInput_EInputHandlerResult>       ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function Watercrafts.RowingCompositeInputHandler.OnStopUseLeftOar
-struct URowingCompositeInputHandler_OnStopUseLeftOar_Params
-{
-	TEnumAsByte<AthenaInput_EInputHandlerResult>       ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function Watercrafts.RowingCompositeInputHandler.OnBrakeRightOar
-struct URowingCompositeInputHandler_OnBrakeRightOar_Params
-{
-	TEnumAsByte<AthenaInput_EInputHandlerResult>       ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function Watercrafts.RowingCompositeInputHandler.OnBrakeLeftOar
-struct URowingCompositeInputHandler_OnBrakeLeftOar_Params
-{
-	TEnumAsByte<AthenaInput_EInputHandlerResult>       ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 // Function Watercrafts.WatercraftBlueprintFunctionLibrary.SpawnWatercraft

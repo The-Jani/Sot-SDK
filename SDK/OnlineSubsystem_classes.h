@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -26,14 +26,14 @@ class UDefaultOnlineEnvironmentSettings : public UObject
 public:
 	struct FString                                     EnvironmentId;                                             // 0x0028(0x0010) (Edit, ZeroConstructor, Config, HasGetValueTypeHash)
 	uint32_t                                           TitleId;                                                   // 0x0038(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_5U5Y[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_2U95[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FString                                     ServiceConfigId;                                           // 0x0040(0x0010) (Edit, ZeroConstructor, Config, HasGetValueTypeHash)
 	struct FString                                     ClientCertificateThumbprint;                               // 0x0050(0x0010) (Edit, ZeroConstructor, Config, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystem.DefaultOnlineEnvironmentSettings");
+		static UClass* ptr = UObject::FindClass("Class OnlineSubsystem.DefaultOnlineEnvironmentSettings");
 		return ptr;
 	}
 
@@ -42,18 +42,18 @@ public:
 };
 
 // Class OnlineSubsystem.NamedInterfaces
-// 0x0068 (FullSize[0x0090] - InheritedSize[0x0028])
+// 0x0038 (FullSize[0x0060] - InheritedSize[0x0028])
 class UNamedInterfaces : public UObject
 {
 public:
 	TArray<struct FNamedInterface>                     NamedInterfaces;                                           // 0x0028(0x0010) (ZeroConstructor)
 	TArray<struct FNamedInterfaceDef>                  NamedInterfaceDefs;                                        // 0x0038(0x0010) (ZeroConstructor, Config)
-	unsigned char                                      UnknownData_EPEH[0x48];                                    // 0x0048(0x0048) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2A18[0x18];                                    // 0x0048(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystem.NamedInterfaces");
+		static UClass* ptr = UObject::FindClass("Class OnlineSubsystem.NamedInterfaces");
 		return ptr;
 	}
 
@@ -70,7 +70,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystem.TurnBasedMatchInterface");
+		static UClass* ptr = UObject::FindClass("Class OnlineSubsystem.TurnBasedMatchInterface");
 		return ptr;
 	}
 

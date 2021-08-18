@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_FishingFish_Pondie_03_Colour_03_Bronze_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingFish_Pondie_03_Colour_03_Bronze.BP_FishingFish_Pondie_03_Colour_03_Bronze_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FishingFish_Pondie_03_Colour_03_Bronze.BP_FishingFish_Pondie_03_Colour_03_Bronze_C.UserConstructionScript");
 
 	ABP_FishingFish_Pondie_03_Colour_03_Bronze_C_UserConstructionScript_Params params;
 

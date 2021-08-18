@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_FishingFish_Wrecker_05_Colour_03_Snow.BP_FishingFish_Wrecker_05_Colour_03_Snow_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_FishingFish_Wrecker_05_Colour_03_Snow.BP_FishingFish_Wrecker_05_Colour_03_Snow_C");
 		return ptr;
 	}
 

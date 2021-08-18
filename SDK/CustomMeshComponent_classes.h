@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,16 +20,17 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // Class CustomMeshComponent.CustomMeshComponent
-// 0x0010 (FullSize[0x0570] - InheritedSize[0x0560])
+// 0x0018 (FullSize[0x05B0] - InheritedSize[0x0598])
 class UCustomMeshComponent : public UMeshComponent
 {
 public:
-	unsigned char                                      UnknownData_C03Z[0x10];                                    // 0x0560(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LITW[0x8];                                     // 0x0598(0x0008) Fix Super Size
+	unsigned char                                      UnknownData_VKRX[0x10];                                    // 0x05A0(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CustomMeshComponent.CustomMeshComponent");
+		static UClass* ptr = UObject::FindClass("Class CustomMeshComponent.CustomMeshComponent");
 		return ptr;
 	}
 

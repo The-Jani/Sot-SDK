@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -25,7 +25,7 @@ namespace CG
 // class UObject*                 Service                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UGameServiceMapFunctions::STATIC_UnregisterService(struct FGameServiceMap* ServiceMap, class UObject* Service)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameService.GameServiceMapFunctions.UnregisterService");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function GameService.GameServiceMapFunctions.UnregisterService");
 
 	UGameServiceMapFunctions_UnregisterService_Params params;
 	params.Service = Service;
@@ -50,7 +50,7 @@ void UGameServiceMapFunctions::STATIC_UnregisterService(struct FGameServiceMap* 
 // class UClass*                  Class                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 void UGameServiceMapFunctions::STATIC_RegisterService(struct FGameServiceMap* ServiceMap, class UObject* Service, class UClass* Class)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameService.GameServiceMapFunctions.RegisterService");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function GameService.GameServiceMapFunctions.RegisterService");
 
 	UGameServiceMapFunctions_RegisterService_Params params;
 	params.Service = Service;
@@ -76,7 +76,7 @@ void UGameServiceMapFunctions::STATIC_RegisterService(struct FGameServiceMap* Se
 // class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 class UObject* UGameServiceMapFunctions::STATIC_GetService(struct FGameServiceMap* ServiceMap, class UClass* Class)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameService.GameServiceMapFunctions.GetService");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function GameService.GameServiceMapFunctions.GetService");
 
 	UGameServiceMapFunctions_GetService_Params params;
 	params.Class = Class;
@@ -102,7 +102,7 @@ class UObject* UGameServiceMapFunctions::STATIC_GetService(struct FGameServiceMa
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 int UGameServiceMapFunctions::STATIC_GetNumServices(struct FGameServiceMap* ServiceMap)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameService.GameServiceMapFunctions.GetNumServices");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function GameService.GameServiceMapFunctions.GetNumServices");
 
 	UGameServiceMapFunctions_GetNumServices_Params params;
 
@@ -126,7 +126,7 @@ int UGameServiceMapFunctions::STATIC_GetNumServices(struct FGameServiceMap* Serv
 // class UObject*                 Service                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UGameServiceProviderInterface::UnregisterService(class UObject* Service)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameService.GameServiceProviderInterface.UnregisterService");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function GameService.GameServiceProviderInterface.UnregisterService");
 
 	UGameServiceProviderInterface_UnregisterService_Params params;
 	params.Service = Service;
@@ -147,7 +147,7 @@ void UGameServiceProviderInterface::UnregisterService(class UObject* Service)
 // class UClass*                  Class                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 void UGameServiceProviderInterface::RegisterService(class UObject* Service, class UClass* Class)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameService.GameServiceProviderInterface.RegisterService");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function GameService.GameServiceProviderInterface.RegisterService");
 
 	UGameServiceProviderInterface_RegisterService_Params params;
 	params.Service = Service;
@@ -169,7 +169,7 @@ void UGameServiceProviderInterface::RegisterService(class UObject* Service, clas
 // class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 class UObject* UGameServiceProviderInterface::GetService(class UClass* Class)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameService.GameServiceProviderInterface.GetService");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function GameService.GameServiceProviderInterface.GetService");
 
 	UGameServiceProviderInterface_GetService_Params params;
 	params.Class = Class;

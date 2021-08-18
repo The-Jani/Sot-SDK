@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -26,7 +26,7 @@ namespace CG
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool UJsonUtilitiesBlueprintHelperLibrary::STATIC_UStructToJsonObjectString(const struct FGenericStruct& Struct, struct FString* OutJsonString)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function JsonUtilities.JsonUtilitiesBlueprintHelperLibrary.UStructToJsonObjectString");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function JsonUtilities.JsonUtilitiesBlueprintHelperLibrary.UStructToJsonObjectString");
 
 	UJsonUtilitiesBlueprintHelperLibrary_UStructToJsonObjectString_Params params;
 	params.Struct = Struct;
@@ -53,7 +53,7 @@ bool UJsonUtilitiesBlueprintHelperLibrary::STATIC_UStructToJsonObjectString(cons
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool UJsonUtilitiesBlueprintHelperLibrary::STATIC_JsonObjectStringToUStruct(const struct FString& InJsonString, const struct FGenericStruct& Struct)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function JsonUtilities.JsonUtilitiesBlueprintHelperLibrary.JsonObjectStringToUStruct");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function JsonUtilities.JsonUtilitiesBlueprintHelperLibrary.JsonObjectStringToUStruct");
 
 	UJsonUtilitiesBlueprintHelperLibrary_JsonObjectStringToUStruct_Params params;
 	params.InJsonString = InJsonString;

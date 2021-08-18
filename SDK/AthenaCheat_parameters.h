@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -214,6 +214,21 @@ struct UAthenaCheatManager_ToggleRetailDrawDebug_Params
 {
 };
 
+// Function AthenaCheat.AthenaCheatManager.ToggleProjectileAimBaseAdjustmentsServer
+struct UAthenaCheatManager_ToggleProjectileAimBaseAdjustmentsServer_Params
+{
+};
+
+// Function AthenaCheat.AthenaCheatManager.ToggleProjectileAimBaseAdjustmentsLocalClient
+struct UAthenaCheatManager_ToggleProjectileAimBaseAdjustmentsLocalClient_Params
+{
+};
+
+// Function AthenaCheat.AthenaCheatManager.ToggleNoClip
+struct UAthenaCheatManager_ToggleNoClip_Params
+{
+};
+
 // Function AthenaCheat.AthenaCheatManager.ToggleNearestSuperheatedWater
 struct UAthenaCheatManager_ToggleNearestSuperheatedWater_Params
 {
@@ -328,6 +343,13 @@ struct UAthenaCheatManager_TeleportToHideout_Params
 {
 };
 
+// Function AthenaCheat.AthenaCheatManager.TeleportToDebugDestinationLocation
+struct UAthenaCheatManager_TeleportToDebugDestinationLocation_Params
+{
+	struct FString                                     ActorIdString;                                             // (Parm, ZeroConstructor, HasGetValueTypeHash)
+	struct FString                                     DestinationId;                                             // (Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+
 // Function AthenaCheat.AthenaCheatManager.TeleportToAggressiveGhostShipEncounter
 struct UAthenaCheatManager_TeleportToAggressiveGhostShipEncounter_Params
 {
@@ -339,6 +361,12 @@ struct UAthenaCheatManager_TeleportShip_Params
 	float                                              X;                                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              Y;                                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              Z;                                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function AthenaCheat.AthenaCheatManager.TeleportPlayerToSpireLocation
+struct UAthenaCheatManager_TeleportPlayerToSpireLocation_Params
+{
+	int                                                SpireIndex;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 // Function AthenaCheat.AthenaCheatManager.TeleportPlayerToSafety
@@ -1023,6 +1051,11 @@ struct UAthenaCheatManager_SimulatePetReactCancellation_Params
 
 // Function AthenaCheat.AthenaCheatManager.ShowTavernBanners
 struct UAthenaCheatManager_ShowTavernBanners_Params
+{
+};
+
+// Function AthenaCheat.AthenaCheatManager.ShowTaleDebug_WithVariables
+struct UAthenaCheatManager_ShowTaleDebug_WithVariables_Params
 {
 };
 
@@ -1887,6 +1920,19 @@ struct UAthenaCheatManager_MoveStormToPlayer_Params
 {
 };
 
+// Function AthenaCheat.AthenaCheatManager.MoveStormToLocation
+struct UAthenaCheatManager_MoveStormToLocation_Params
+{
+	float                                              LocationX;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              LocationY;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function AthenaCheat.AthenaCheatManager.MoveStormToIsland
+struct UAthenaCheatManager_MoveStormToIsland_Params
+{
+	struct FString                                     IslandNameString;                                          // (Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+
 // Function AthenaCheat.AthenaCheatManager.MessageBoxOnGraphicsThreadTest
 struct UAthenaCheatManager_MessageBoxOnGraphicsThreadTest_Params
 {
@@ -2270,6 +2316,11 @@ struct UAthenaCheatManager_ForceStartAllPetsDanger_Params
 	struct FString                                     ResponseType;                                              // (Parm, ZeroConstructor, HasGetValueTypeHash)
 };
 
+// Function AthenaCheat.AthenaCheatManager.ForceSkipTallTaleSteps_WaitAndCutscenes
+struct UAthenaCheatManager_ForceSkipTallTaleSteps_WaitAndCutscenes_Params
+{
+};
+
 // Function AthenaCheat.AthenaCheatManager.ForceRequestCampaignsFromServices
 struct UAthenaCheatManager_ForceRequestCampaignsFromServices_Params
 {
@@ -2482,6 +2533,12 @@ struct UAthenaCheatManager_EnableVoiceChatMeteringForOutgoingSignals_Params
 struct UAthenaCheatManager_EnableVoiceChatMeteringForIncomingSignals_Params
 {
 	bool                                               Enabled;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function AthenaCheat.AthenaCheatManager.EnableStormEffects
+struct UAthenaCheatManager_EnableStormEffects_Params
+{
+	unsigned char                                      LockReason;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 // Function AthenaCheat.AthenaCheatManager.EnableSelectShipwreckLocationFromValidCandidatesDebugDisplay
@@ -2699,9 +2756,20 @@ struct UAthenaCheatManager_DisplayDrunkenness_Params
 	bool                                               Flag;                                                      // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 
+// Function AthenaCheat.AthenaCheatManager.DismissProjectileAimAdjustmentsMessages
+struct UAthenaCheatManager_DismissProjectileAimAdjustmentsMessages_Params
+{
+};
+
 // Function AthenaCheat.AthenaCheatManager.DismissAllPickupPoints
 struct UAthenaCheatManager_DismissAllPickupPoints_Params
 {
+};
+
+// Function AthenaCheat.AthenaCheatManager.DisableStormEffects
+struct UAthenaCheatManager_DisableStormEffects_Params
+{
+	unsigned char                                      LockReason;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 // Function AthenaCheat.AthenaCheatManager.DisableEmergentSirenSpawning
@@ -2787,6 +2855,11 @@ struct UAthenaCheatManager_DestroyAllTreasureChests_Params
 
 // Function AthenaCheat.AthenaCheatManager.DestroyAllTinySharks
 struct UAthenaCheatManager_DestroyAllTinySharks_Params
+{
+};
+
+// Function AthenaCheat.AthenaCheatManager.DestroyAllSirenStatues
+struct UAthenaCheatManager_DestroyAllSirenStatues_Params
 {
 };
 
@@ -3043,6 +3116,11 @@ struct UAthenaCheatManager_CancelActiveAIShipEncounters_Params
 {
 };
 
+// Function AthenaCheat.AthenaCheatManager.BuryNearestBuriable
+struct UAthenaCheatManager_BuryNearestBuriable_Params
+{
+};
+
 // Function AthenaCheat.AthenaCheatManager.BuryItem
 struct UAthenaCheatManager_BuryItem_Params
 {
@@ -3223,6 +3301,11 @@ struct UAthenaCheatManager_ActivateSkellyFort_Params
 struct UAthenaCheatManager_ActivateEmissaryFlagCompany_Params
 {
 	struct FString                                     CompanyId;                                                 // (Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+
+// Function AthenaCheat.AthenaCheatManager.ActivateDebugTeleportationDestinationService
+struct UAthenaCheatManager_ActivateDebugTeleportationDestinationService_Params
+{
 };
 
 }

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -41,13 +41,29 @@ struct FEmoteId
 
 };
 
+// ScriptStruct EmotingFramework.EmoteData
+// 0x0088
+struct FEmoteData
+{
+	struct FEmoteId                                    EmoteId;                                                   // 0x0000(0x0008) (Edit)
+	struct FText                                       EmoteDisplayName;                                          // 0x0008(0x0018) ELEMENT_SIZE_MISMATCH (Edit)
+	unsigned char                                      UnknownData_3F5O[0x20];                                    // 0x0008(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       AudioDescription;                                          // 0x0040(0x0018) ELEMENT_SIZE_MISMATCH (Edit)
+	unsigned char                                      UnknownData_MHHP[0x20];                                    // 0x0040(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	float                                              DelayBeforeAllowingExit;                                   // 0x0078(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              VerticalOffsetFactorWhenZoomed;                            // 0x007C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               HideNameplate;                                             // 0x0080(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_99AZ[0x7];                                     // 0x0081(0x0007) MISSED OFFSET (PADDING)
+
+};
+
 // ScriptStruct EmotingFramework.EventEmoteEndRequested
 // 0x000C
 struct FEventEmoteEndRequested
 {
 	struct FName                                       EmoteIdentifier;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               EndForcedEmote;                                            // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_TS5F[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4YOX[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (PADDING)
 
 };
 
@@ -55,23 +71,7 @@ struct FEventEmoteEndRequested
 // 0x0001
 struct FEventEndEmoteAnimation
 {
-	unsigned char                                      UnknownData_YA7V[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct EmotingFramework.EmoteData
-// 0x0088
-struct FEmoteData
-{
-	struct FEmoteId                                    EmoteId;                                                   // 0x0000(0x0008) (Edit)
-	struct FText                                       EmoteDisplayName;                                          // 0x0008(0x0018) ELEMENT_SIZE_MISMATCH (Edit)
-	unsigned char                                      UnknownData_BOVW[0x20];                                    // 0x0008(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       AudioDescription;                                          // 0x0040(0x0018) ELEMENT_SIZE_MISMATCH (Edit)
-	unsigned char                                      UnknownData_KTKE[0x20];                                    // 0x0040(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	float                                              DelayBeforeAllowingExit;                                   // 0x0078(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              VerticalOffsetFactorWhenZoomed;                            // 0x007C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               HideNameplate;                                             // 0x0080(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_19E4[0x7];                                     // 0x0081(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_QWY6[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -80,6 +80,15 @@ struct FEmoteData
 struct FEventEmoteSwapped
 {
 	struct FEmoteData                                  EmoteData;                                                 // 0x0000(0x0088)
+
+};
+
+// ScriptStruct EmotingFramework.EventEmoteCompleted
+// 0x000C
+struct FEventEmoteCompleted
+{
+	struct FName                                       EmoteName;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint32_t                                           EmoteDuration;                                             // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
@@ -98,16 +107,7 @@ struct FEventEmoteRequested
 	struct FEmoteData                                  EmoteData;                                                 // 0x0000(0x0088)
 	struct FName                                       ForcedEmoteIdentifier;                                     // 0x0088(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               ForcedEmote;                                               // 0x0090(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_U9NW[0x7];                                     // 0x0091(0x0007) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct EmotingFramework.EventEmoteCompleted
-// 0x000C
-struct FEventEmoteCompleted
-{
-	struct FName                                       EmoteName;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint32_t                                           EmoteDuration;                                             // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_BMV8[0x7];                                     // 0x0091(0x0007) MISSED OFFSET (PADDING)
 
 };
 

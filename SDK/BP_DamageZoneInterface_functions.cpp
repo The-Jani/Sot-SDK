@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // int                            NumExternalHits                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_DamageZoneInterface_C::GetNumExternalHits(int* NumExternalHits)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZoneInterface.BP_DamageZoneInterface_C.GetNumExternalHits");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DamageZoneInterface.BP_DamageZoneInterface_C.GetNumExternalHits");
 
 	UBP_DamageZoneInterface_C_GetNumExternalHits_Params params;
 
@@ -43,7 +43,7 @@ void UBP_DamageZoneInterface_C::GetNumExternalHits(int* NumExternalHits)
 // (Public, BlueprintCallable, BlueprintEvent)
 void UBP_DamageZoneInterface_C::ClearDecalFlags()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZoneInterface.BP_DamageZoneInterface_C.ClearDecalFlags");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DamageZoneInterface.BP_DamageZoneInterface_C.ClearDecalFlags");
 
 	UBP_DamageZoneInterface_C_ClearDecalFlags_Params params;
 
@@ -61,7 +61,7 @@ void UBP_DamageZoneInterface_C::ClearDecalFlags()
 // struct FHullDamageHit          Hit_Data                       (Parm)
 void UBP_DamageZoneInterface_C::AddExternalHit(const struct FHullDamageHit& Hit_Data)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DamageZoneInterface.BP_DamageZoneInterface_C.AddExternalHit");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DamageZoneInterface.BP_DamageZoneInterface_C.AddExternalHit");
 
 	UBP_DamageZoneInterface_C_AddExternalHit_Params params;
 	params.Hit_Data = Hit_Data;

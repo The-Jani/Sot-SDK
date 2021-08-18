@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,16 +20,17 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // Class AthenaAudio.AthenaAudioConfig
-// 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
+// 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
 class UAthenaAudioConfig : public UDataAsset
 {
 public:
 	class UWwiseObjectPoolWrapper*                     ItemProxyPool;                                             // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWwiseObjectPoolWrapper*                     AnimNotifyPool;                                            // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaAudio.AthenaAudioConfig");
+		static UClass* ptr = UObject::FindClass("Class AthenaAudio.AthenaAudioConfig");
 		return ptr;
 	}
 
@@ -47,7 +48,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaAudio.AthenaAudioModuleSettings");
+		static UClass* ptr = UObject::FindClass("Class AthenaAudio.AthenaAudioModuleSettings");
 		return ptr;
 	}
 

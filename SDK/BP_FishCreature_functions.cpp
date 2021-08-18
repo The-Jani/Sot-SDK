@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Public, BlueprintCallable, BlueprintEvent)
 void ABP_FishCreature_C::ConfigureMaterialInstance()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_FishCreature.BP_FishCreature_C.ConfigureMaterialInstance");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FishCreature.BP_FishCreature_C.ConfigureMaterialInstance");
 
 	ABP_FishCreature_C_ConfigureMaterialInstance_Params params;
 
@@ -38,7 +38,7 @@ void ABP_FishCreature_C::ConfigureMaterialInstance()
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 void ABP_FishCreature_C::CreateCreature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_FishCreature.BP_FishCreature_C.CreateCreature");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FishCreature.BP_FishCreature_C.CreateCreature");
 
 	ABP_FishCreature_C_CreateCreature_Params params;
 
@@ -54,7 +54,7 @@ void ABP_FishCreature_C::CreateCreature()
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_FishCreature_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_FishCreature.BP_FishCreature_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FishCreature.BP_FishCreature_C.UserConstructionScript");
 
 	ABP_FishCreature_C_UserConstructionScript_Params params;
 

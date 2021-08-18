@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,26 +20,26 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_EmissaryTable_01.BP_EmissaryTable_01_C
-// 0x0058 (FullSize[0x05F8] - InheritedSize[0x05A0])
+// 0x0058 (FullSize[0x0640] - InheritedSize[0x05E8])
 class ABP_EmissaryTable_01_C : public AEmissaryVoteInteractionActor
 {
 public:
-	class UEmissaryActiveTableVisualiserComponent*     EmissaryActiveTableVisualiser;                             // 0x05A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UVoteAudioComponent*                         VoteAudio;                                                 // 0x05A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UStaticMeshVoteVisualiserComponent*          StaticMeshVoteVisualiser;                                  // 0x05B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UInlineVotingInteractionComponent*           InlineVotingInteraction;                                   // 0x05B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UActionRulesComponent*                       ActionRules;                                               // 0x05C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UStaticMeshComponent*                        VoteIndicator4;                                            // 0x05C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UStaticMeshComponent*                        VoteIndicator3;                                            // 0x05D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UStaticMeshComponent*                        VoteIndicator2;                                            // 0x05D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UStaticMeshComponent*                        VoteIndicator1;                                            // 0x05E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UStaticMeshComponent*                        bld_emissary_table_01_a;                                   // 0x05E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class USceneComponent*                             DefaultSceneRoot;                                          // 0x05F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UEmissaryActiveTableVisualiserComponent*     EmissaryActiveTableVisualiser;                             // 0x05E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UVoteAudioComponent*                         VoteAudio;                                                 // 0x05F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UStaticMeshVoteVisualiserComponent*          StaticMeshVoteVisualiser;                                  // 0x05F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UInlineVotingInteractionComponent*           InlineVotingInteraction;                                   // 0x0600(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UActionRulesComponent*                       ActionRules;                                               // 0x0608(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UStaticMeshComponent*                        VoteIndicator4;                                            // 0x0610(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UStaticMeshComponent*                        VoteIndicator3;                                            // 0x0618(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UStaticMeshComponent*                        VoteIndicator2;                                            // 0x0620(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UStaticMeshComponent*                        VoteIndicator1;                                            // 0x0628(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UStaticMeshComponent*                        bld_emissary_table_01_a;                                   // 0x0630(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class USceneComponent*                             DefaultSceneRoot;                                          // 0x0638(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_EmissaryTable_01.BP_EmissaryTable_01_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_EmissaryTable_01.BP_EmissaryTable_01_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -51,13 +51,11 @@ struct ABP_VotableCancelTale_C_ReceiveBeginPlay_Params
 // Function BP_VotableCancelTale.BP_VotableCancelTale_C.OnVoteAdded
 struct ABP_VotableCancelTale_C_OnVoteAdded_Params
 {
-	TScriptInterface<class UVoterInterface>            Voter;                                                     // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
 };
 
 // Function BP_VotableCancelTale.BP_VotableCancelTale_C.OnVoteRemoved
 struct ABP_VotableCancelTale_C_OnVoteRemoved_Params
 {
-	TScriptInterface<class UVoterInterface>            Voter;                                                     // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
 };
 
 // Function BP_VotableCancelTale.BP_VotableCancelTale_C.ExecuteUbergraph_BP_VotableCancelTale

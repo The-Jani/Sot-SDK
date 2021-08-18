@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void Abp_light_volume_sphere_large_a_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function bp_light_volume_sphere_large_a.bp_light_volume_sphere_large_a_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function bp_light_volume_sphere_large_a.bp_light_volume_sphere_large_a_C.UserConstructionScript");
 
 	Abp_light_volume_sphere_large_a_C_UserConstructionScript_Params params;
 

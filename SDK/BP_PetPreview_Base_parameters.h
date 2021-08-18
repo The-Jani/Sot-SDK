@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -19,6 +19,11 @@ namespace CG
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function BP_PetPreview_Base.BP_PetPreview_Base_C.UserConstructionScript
+struct ABP_PetPreview_Base_C_UserConstructionScript_Params
+{
+};
 
 }
 

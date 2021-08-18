@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -24,12 +24,12 @@ namespace CG
 class UAttributeSet : public UObject
 {
 public:
-	unsigned char                                      UnknownData_60JO[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_QO47[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AttributeSet");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AttributeSet");
 		return ptr;
 	}
 
@@ -46,7 +46,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueInterface");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueInterface");
 		return ptr;
 	}
 
@@ -65,7 +65,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemBlueprintLibrary");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemBlueprintLibrary");
 		return ptr;
 	}
 
@@ -101,7 +101,7 @@ public:
 	class AActor* STATIC_GetActorByIndex(const struct FGameplayCueParameters& Parameters, int Index);
 	int STATIC_GetActiveGameplayEffectStackCount(const struct FActiveGameplayEffectHandle& ActiveHandle);
 	class UAbilitySystemComponent* STATIC_GetAbilitySystemComponent(class AActor* Actor);
-	void STATIC_ForwardGameplayCueToTarget(const TScriptInterface<class UGameplayCueInterface>& TargetCueInterface, TEnumAsByte<GameplayAbilities_EGameplayCueEvent> EventType, const struct FGameplayCueParameters& Parameters);
+	void STATIC_ForwardGameplayCueToTarget(TEnumAsByte<GameplayAbilities_EGameplayCueEvent> EventType, const struct FGameplayCueParameters& Parameters);
 	struct FGameplayAbilityTargetDataHandle STATIC_FilterTargetData(const struct FGameplayAbilityTargetDataHandle& TargetDataHandle, const struct FGameplayTargetDataFilterHandle& ActorFilterClass);
 	bool STATIC_EffectContextIsInstigatorLocallyControlled(const struct FGameplayEffectContextHandle& EffectContext);
 	bool STATIC_EffectContextHasHitResult(const struct FGameplayEffectContextHandle& EffectContext);
@@ -131,13 +131,13 @@ public:
 class UGameplayEffect : public UObject
 {
 public:
-	unsigned char                                      UnknownData_CAHD[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZZG9[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<GameplayAbilities_EGameplayEffectDurationType> DurationPolicy;                                            // 0x0030(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_1NUM[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_NH1M[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FGameplayEffectModifierMagnitude            DurationMagnitude;                                         // 0x0038(0x0170) (Edit, DisableEditOnInstance)
 	struct FScalableFloat                              Period;                                                    // 0x01A8(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
 	bool                                               bExecutePeriodicEffectOnApplication;                       // 0x01C8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_DTOL[0x7];                                     // 0x01C9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GVW1[0x7];                                     // 0x01C9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FGameplayModifierInfo>               Modifiers;                                                 // 0x01D0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
 	TArray<struct FGameplayEffectExecutionDefinition>  Executions;                                                // 0x01E0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
 	struct FScalableFloat                              ChanceToApplyToTarget;                                     // 0x01F0(0x0020) (Edit, DisableEditOnInstance)
@@ -146,11 +146,11 @@ public:
 	TArray<class UClass*>                              OverflowEffects;                                           // 0x0230(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, UObjectWrapper)
 	bool                                               bDenyOverflowApplication;                                  // 0x0240(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                               bClearStackOnOverflow;                                     // 0x0241(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_FLUA[0x6];                                     // 0x0242(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_33EL[0x6];                                     // 0x0242(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UClass*>                              PrematureExpirationEffectClasses;                          // 0x0248(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, UObjectWrapper)
 	TArray<class UClass*>                              RoutineExpirationEffectClasses;                            // 0x0258(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, UObjectWrapper)
 	bool                                               bRequireModifierSuccessToTriggerCues;                      // 0x0268(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_Z340[0x7];                                     // 0x0269(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6TMO[0x7];                                     // 0x0269(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FGameplayEffectCue>                  GameplayCues;                                              // 0x0270(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
 	class UGameplayEffectUIData*                       UIData;                                                    // 0x0280(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	struct FInheritedTagContainer                      InheritableGameplayEffectTags;                             // 0x0288(0x0078) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
@@ -163,17 +163,17 @@ public:
 	struct FGameplayTagContainer                       ClearTagsContainer;                                        // 0x04E0(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
 	struct FGameplayTagRequirements                    GrantedApplicationImmunityTags;                            // 0x0508(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
 	TEnumAsByte<GameplayAbilities_EGameplayEffectStackingType> StackingType;                                              // 0x0558(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_UE2E[0x3];                                     // 0x0559(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YEZR[0x3];                                     // 0x0559(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                StackLimitCount;                                           // 0x055C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<GameplayAbilities_EGameplayEffectStackingDurationPolicy> StackDurationRefreshPolicy;                                // 0x0560(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<GameplayAbilities_EGameplayEffectStackingPeriodPolicy> StackPeriodResetPolicy;                                    // 0x0561(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TV2S[0x6];                                     // 0x0562(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GSGD[0x6];                                     // 0x0562(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FGameplayAbilitySpecDef>             GrantedAbilities;                                          // 0x0568(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffect");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffect");
 		return ptr;
 	}
 
@@ -182,51 +182,51 @@ public:
 };
 
 // Class GameplayAbilities.GameplayAbility
-// 0x04B0 (FullSize[0x04D8] - InheritedSize[0x0028])
+// 0x0420 (FullSize[0x0448] - InheritedSize[0x0028])
 class UGameplayAbility : public UObject
 {
 public:
-	unsigned char                                      UnknownData_Y43G[0xA0];                                    // 0x0028(0x00A0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FGameplayTagContainer                       AbilityTags;                                               // 0x00C8(0x0028) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData_BF8K[0x48];                                    // 0x00F0(0x0048) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	bool                                               bReplicateInputDirectly;                                   // 0x0138(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_KPX6[0x27];                                    // 0x0139(0x0027) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TEnumAsByte<GameplayAbilities_EGameplayAbilityReplicationPolicy> ReplicationPolicy;                                         // 0x0160(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	TEnumAsByte<GameplayAbilities_EGameplayAbilityInstancingPolicy> InstancingPolicy;                                          // 0x0161(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	bool                                               bServerRespectsRemoteAbilityCancellation;                  // 0x0162(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected)
-	bool                                               bRetriggerInstancedAbility;                                // 0x0163(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_DVRY[0x4];                                     // 0x0164(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FGameplayAbilityActivationInfo              CurrentActivationInfo;                                     // 0x0168(0x0020) (BlueprintVisible, BlueprintReadOnly, Protected)
-	struct FGameplayEventData                          CurrentEventData;                                          // 0x0188(0x00A0) (BlueprintVisible, BlueprintReadOnly, Protected)
-	TEnumAsByte<GameplayAbilities_EGameplayAbilityNetExecutionPolicy> NetExecutionPolicy;                                        // 0x0228(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_D448[0x7];                                     // 0x0229(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UClass*                                      CostGameplayEffectClass;                                   // 0x0230(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash)
-	class UGameplayEffect*                             CostGameplayEffect;                                        // 0x0238(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	TArray<struct FAbilityTriggerData>                 AbilityTriggers;                                           // 0x0240(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, Protected)
-	class UClass*                                      CooldownGameplayEffectClass;                               // 0x0250(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash)
-	class UGameplayEffect*                             CooldownGameplayEffect;                                    // 0x0258(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	struct FGameplayTagQuery                           CancelAbilitiesMatchingTagQuery;                           // 0x0260(0x0048) (Edit, DisableEditOnInstance, Protected)
-	struct FGameplayTagQuery                           ConstTagQuery;                                             // 0x02A8(0x0048) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, EditConst, Protected)
-	struct FGameplayTagContainer                       CancelAbilitiesWithTag;                                    // 0x02F0(0x0028) (Edit, DisableEditOnInstance, Protected)
-	struct FGameplayTagContainer                       BlockAbilitiesWithTag;                                     // 0x0318(0x0028) (Edit, DisableEditOnInstance, Protected)
-	struct FGameplayTagContainer                       ActivationOwnedTags;                                       // 0x0340(0x0028) (Edit, DisableEditOnInstance, Protected)
-	struct FGameplayTagContainer                       ActivationRequiredTags;                                    // 0x0368(0x0028) (Edit, DisableEditOnInstance, Protected)
-	struct FGameplayTagContainer                       ActivationBlockedTags;                                     // 0x0390(0x0028) (Edit, DisableEditOnInstance, Protected)
-	struct FGameplayTagContainer                       SourceRequiredTags;                                        // 0x03B8(0x0028) (Edit, DisableEditOnInstance, Protected)
-	struct FGameplayTagContainer                       SourceBlockedTags;                                         // 0x03E0(0x0028) (Edit, DisableEditOnInstance, Protected)
-	struct FGameplayTagContainer                       TargetRequiredTags;                                        // 0x0408(0x0028) (Edit, DisableEditOnInstance, Protected)
-	struct FGameplayTagContainer                       TargetBlockedTags;                                         // 0x0430(0x0028) (Edit, DisableEditOnInstance, Protected)
-	unsigned char                                      UnknownData_7963[0x70];                                    // 0x0458(0x0070) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UAnimMontage*                                CurrentMontage;                                            // 0x04C8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	bool                                               bIsActive;                                                 // 0x04D0(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
-	bool                                               bIsCancelable;                                             // 0x04D1(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
-	bool                                               bIsBlockingOtherAbilities;                                 // 0x04D2(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_PHJN[0x5];                                     // 0x04D3(0x0005) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_OHSX[0x40];                                    // 0x0028(0x0040) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FGameplayTagContainer                       AbilityTags;                                               // 0x0068(0x0028) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData_LV05[0x18];                                    // 0x0090(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	bool                                               bReplicateInputDirectly;                                   // 0x00A8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_ILJ9[0x27];                                    // 0x00A9(0x0027) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TEnumAsByte<GameplayAbilities_EGameplayAbilityReplicationPolicy> ReplicationPolicy;                                         // 0x00D0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	TEnumAsByte<GameplayAbilities_EGameplayAbilityInstancingPolicy> InstancingPolicy;                                          // 0x00D1(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	bool                                               bServerRespectsRemoteAbilityCancellation;                  // 0x00D2(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected)
+	bool                                               bRetriggerInstancedAbility;                                // 0x00D3(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected)
+	unsigned char                                      UnknownData_JPDU[0x4];                                     // 0x00D4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FGameplayAbilityActivationInfo              CurrentActivationInfo;                                     // 0x00D8(0x0020) (BlueprintVisible, BlueprintReadOnly, Protected)
+	struct FGameplayEventData                          CurrentEventData;                                          // 0x00F8(0x00A0) (BlueprintVisible, BlueprintReadOnly, Protected)
+	TEnumAsByte<GameplayAbilities_EGameplayAbilityNetExecutionPolicy> NetExecutionPolicy;                                        // 0x0198(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_IF5Y[0x7];                                     // 0x0199(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UClass*                                      CostGameplayEffectClass;                                   // 0x01A0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash)
+	class UGameplayEffect*                             CostGameplayEffect;                                        // 0x01A8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	TArray<struct FAbilityTriggerData>                 AbilityTriggers;                                           // 0x01B0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, Protected)
+	class UClass*                                      CooldownGameplayEffectClass;                               // 0x01C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash)
+	class UGameplayEffect*                             CooldownGameplayEffect;                                    // 0x01C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	struct FGameplayTagQuery                           CancelAbilitiesMatchingTagQuery;                           // 0x01D0(0x0048) (Edit, DisableEditOnInstance, Protected)
+	struct FGameplayTagQuery                           ConstTagQuery;                                             // 0x0218(0x0048) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, EditConst, Protected)
+	struct FGameplayTagContainer                       CancelAbilitiesWithTag;                                    // 0x0260(0x0028) (Edit, DisableEditOnInstance, Protected)
+	struct FGameplayTagContainer                       BlockAbilitiesWithTag;                                     // 0x0288(0x0028) (Edit, DisableEditOnInstance, Protected)
+	struct FGameplayTagContainer                       ActivationOwnedTags;                                       // 0x02B0(0x0028) (Edit, DisableEditOnInstance, Protected)
+	struct FGameplayTagContainer                       ActivationRequiredTags;                                    // 0x02D8(0x0028) (Edit, DisableEditOnInstance, Protected)
+	struct FGameplayTagContainer                       ActivationBlockedTags;                                     // 0x0300(0x0028) (Edit, DisableEditOnInstance, Protected)
+	struct FGameplayTagContainer                       SourceRequiredTags;                                        // 0x0328(0x0028) (Edit, DisableEditOnInstance, Protected)
+	struct FGameplayTagContainer                       SourceBlockedTags;                                         // 0x0350(0x0028) (Edit, DisableEditOnInstance, Protected)
+	struct FGameplayTagContainer                       TargetRequiredTags;                                        // 0x0378(0x0028) (Edit, DisableEditOnInstance, Protected)
+	struct FGameplayTagContainer                       TargetBlockedTags;                                         // 0x03A0(0x0028) (Edit, DisableEditOnInstance, Protected)
+	unsigned char                                      UnknownData_XSJY[0x70];                                    // 0x03C8(0x0070) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UAnimMontage*                                CurrentMontage;                                            // 0x0438(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	bool                                               bIsActive;                                                 // 0x0440(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
+	bool                                               bIsCancelable;                                             // 0x0441(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
+	bool                                               bIsBlockingOtherAbilities;                                 // 0x0442(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
+	unsigned char                                      UnknownData_AOOX[0x5];                                     // 0x0443(0x0005) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbility");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbility");
 		return ptr;
 	}
 
@@ -281,38 +281,38 @@ public:
 };
 
 // Class GameplayAbilities.AbilitySystemComponent
-// 0x0D50 (FullSize[0x0E78] - InheritedSize[0x0128])
+// 0x0B70 (FullSize[0x0C98] - InheritedSize[0x0128])
 class UAbilitySystemComponent : public UGameplayTasksComponent
 {
 public:
-	unsigned char                                      UnknownData_A6JX[0x8];                                     // 0x0128(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_UETL[0x8];                                     // 0x0128(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FAttributeDefaults>                  DefaultStartingData;                                       // 0x0130(0x0010) (Edit, ZeroConstructor)
 	TArray<class UAttributeSet*>                       SpawnedAttributes;                                         // 0x0140(0x0010) (ExportObject, Net, ZeroConstructor, ContainsInstancedReference)
 	struct FPredictionKey                              ReplicatedPredictionKey;                                   // 0x0150(0x0018) (Net, RepNotify)
-	unsigned char                                      UnknownData_UKCJ[0xD8];                                    // 0x0168(0x00D8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              OutgoingDuration;                                          // 0x0240(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              IncomingDuration;                                          // 0x0244(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayAbilitySpecContainer               ActivatableAbilities;                                      // 0x0248(0x00C0) (BlueprintVisible, BlueprintReadOnly, Net, RepNotify, Protected)
-	unsigned char                                      UnknownData_LQF4[0x50];                                    // 0x0308(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<class UGameplayAbility*>                    AllReplicatedInstancedAbilities;                           // 0x0358(0x0010) (ZeroConstructor, Protected)
-	unsigned char                                      UnknownData_HFNC[0x270];                                   // 0x0368(0x0270) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<class AGameplayAbilityTargetActor*>         SpawnedTargetActors;                                       // 0x05D8(0x0010) (ZeroConstructor)
-	struct FGameplayAbilityRepAnimMontage              RepAnimMontageInfo;                                        // 0x05E8(0x0030) (Net, RepNotify, Protected)
-	struct FGameplayAbilityLocalAnimMontage            LocalAnimMontageInfo;                                      // 0x0618(0x0030) (Protected)
-	unsigned char                                      UnknownData_GJJF[0xA0];                                    // 0x0648(0x00A0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class AActor*                                      OwnerActor;                                                // 0x06E8(0x0008) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                      AvatarActor;                                               // 0x06F0(0x0008) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FJMX[0x18];                                    // 0x06F8(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FActiveGameplayEffectsContainer             ActiveGameplayEffects;                                     // 0x0710(0x03C8) (Net, RepNotify, Protected)
-	struct FActiveGameplayCueContainer                 ActiveGameplayCues;                                        // 0x0AD8(0x00C0) (Net, RepNotify, ContainsInstancedReference, Protected)
-	unsigned char                                      UnknownData_7AJW[0x160];                                   // 0x0B98(0x0160) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<unsigned char>                              BlockedAbilityBindings;                                    // 0x0CF8(0x0010) (Net, ZeroConstructor, Transient, Protected)
-	unsigned char                                      UnknownData_U3KB[0x170];                                   // 0x0D08(0x0170) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LHBL[0x78];                                    // 0x0168(0x0078) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              OutgoingDuration;                                          // 0x01E0(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              IncomingDuration;                                          // 0x01E4(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayAbilitySpecContainer               ActivatableAbilities;                                      // 0x01E8(0x00C0) (BlueprintVisible, BlueprintReadOnly, Net, RepNotify, Protected)
+	unsigned char                                      UnknownData_VKQE[0x50];                                    // 0x02A8(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<class UGameplayAbility*>                    AllReplicatedInstancedAbilities;                           // 0x02F8(0x0010) (ZeroConstructor, Protected)
+	unsigned char                                      UnknownData_ML55[0x1B0];                                   // 0x0308(0x01B0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<class AGameplayAbilityTargetActor*>         SpawnedTargetActors;                                       // 0x04B8(0x0010) (ZeroConstructor)
+	struct FGameplayAbilityRepAnimMontage              RepAnimMontageInfo;                                        // 0x04C8(0x0030) (Net, RepNotify, Protected)
+	struct FGameplayAbilityLocalAnimMontage            LocalAnimMontageInfo;                                      // 0x04F8(0x0030) (Protected)
+	unsigned char                                      UnknownData_7Z15[0xA0];                                    // 0x0528(0x00A0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class AActor*                                      OwnerActor;                                                // 0x05C8(0x0008) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                      AvatarActor;                                               // 0x05D0(0x0008) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_WT6H[0x18];                                    // 0x05D8(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FActiveGameplayEffectsContainer             ActiveGameplayEffects;                                     // 0x05F0(0x0368) (Net, RepNotify, Protected)
+	struct FActiveGameplayCueContainer                 ActiveGameplayCues;                                        // 0x0958(0x00C0) (Net, RepNotify, ContainsInstancedReference, Protected)
+	unsigned char                                      UnknownData_NYW7[0x130];                                   // 0x0A18(0x0130) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<unsigned char>                              BlockedAbilityBindings;                                    // 0x0B48(0x0010) (Net, ZeroConstructor, Transient, Protected)
+	unsigned char                                      UnknownData_6A7S[0x140];                                   // 0x0B58(0x0140) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemComponent");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemComponent");
 		return ptr;
 	}
 
@@ -374,7 +374,7 @@ public:
 };
 
 // Class GameplayAbilities.AbilitySystemDebugHUD
-// 0x0000 (FullSize[0x0528] - InheritedSize[0x0528])
+// 0x0000 (FullSize[0x04C8] - InheritedSize[0x04C8])
 class AAbilitySystemDebugHUD : public AHUD
 {
 public:
@@ -382,7 +382,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemDebugHUD");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemDebugHUD");
 		return ptr;
 	}
 
@@ -414,17 +414,17 @@ public:
 	struct FStringAssetReference                       GameplayTagResponseTableName;                              // 0x00D8(0x0010) (ZeroConstructor, Config)
 	class UGameplayTagReponseTable*                    GameplayTagResponseTable;                                  // 0x00E8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               PredictTargetGameplayEffects;                              // 0x00F0(0x0001) (ZeroConstructor, Config, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_WODB[0x7];                                     // 0x00F1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ACU9[0x7];                                     // 0x00F1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UCurveTable*                                 GlobalCurveTable;                                          // 0x00F8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCurveTable*                                 GlobalAttributeDefaultsTable;                              // 0x0100(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UDataTable*                                  GlobalAttributeMetaDataTable;                              // 0x0108(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UGameplayCueManager*                         GlobalGameplayCueManager;                                  // 0x0110(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DS7H[0x18];                                    // 0x0118(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_W0FU[0x18];                                    // 0x0118(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemGlobals");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemGlobals");
 		return ptr;
 	}
 
@@ -443,7 +443,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemInterface");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemInterface");
 		return ptr;
 	}
 
@@ -452,17 +452,17 @@ public:
 };
 
 // Class GameplayAbilities.AbilitySystemTestPawn
-// 0x0020 (FullSize[0x04E0] - InheritedSize[0x04C0])
+// 0x0020 (FullSize[0x0490] - InheritedSize[0x0470])
 class AAbilitySystemTestPawn : public ADefaultPawn
 {
 public:
-	unsigned char                                      UnknownData_50SD[0x18];                                    // 0x04C0(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UAbilitySystemComponent*                     AbilitySystemComponent;                                    // 0x04D8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_C298[0x18];                                    // 0x0470(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UAbilitySystemComponent*                     AbilitySystemComponent;                                    // 0x0488(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemTestPawn");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemTestPawn");
 		return ptr;
 	}
 
@@ -475,12 +475,12 @@ public:
 class UAbilityTask : public UGameplayTask
 {
 public:
-	unsigned char                                      UnknownData_64HC[0x10];                                    // 0x0058(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_JCDG[0x10];                                    // 0x0058(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask");
 		return ptr;
 	}
 
@@ -494,18 +494,18 @@ class UAbilityTask_MoveToLocation : public UAbilityTask
 {
 public:
 	struct FScriptMulticastDelegate                    OnTargetLocationReached;                                   // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_4A78[0x4];                                     // 0x0078(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HIHS[0x4];                                     // 0x0078(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     StartLocation;                                             // 0x007C(0x000C) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	struct FVector                                     TargetLocation;                                            // 0x0088(0x000C) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	float                                              DurationOfMovement;                                        // 0x0094(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_OJ64[0x8];                                     // 0x0098(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8MNE[0x8];                                     // 0x0098(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UCurveFloat*                                 LerpCurve;                                                 // 0x00A0(0x0008) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	class UCurveVector*                                LerpCurveVector;                                           // 0x00A8(0x0008) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_MoveToLocation");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_MoveToLocation");
 		return ptr;
 	}
 
@@ -520,12 +520,12 @@ class UAbilityTask_NetworkSyncPoint : public UAbilityTask
 {
 public:
 	struct FScriptMulticastDelegate                    OnSync;                                                    // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_4S9Q[0x8];                                     // 0x0078(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_VZA4[0x8];                                     // 0x0078(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_NetworkSyncPoint");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_NetworkSyncPoint");
 		return ptr;
 	}
 
@@ -543,12 +543,12 @@ public:
 	struct FScriptMulticastDelegate                    OnComplete;                                                // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnInterrupted;                                             // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnCancelled;                                               // 0x0088(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_E6OX[0x28];                                    // 0x0098(0x0028) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_848X[0x28];                                    // 0x0098(0x0028) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_PlayMontageAndWait");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_PlayMontageAndWait");
 		return ptr;
 	}
 
@@ -566,12 +566,12 @@ class UAbilityTask_Repeat : public UAbilityTask
 public:
 	struct FScriptMulticastDelegate                    OnPerformAction;                                           // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnFinished;                                                // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_BBIS[0x10];                                    // 0x0088(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_RWWZ[0x10];                                    // 0x0088(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_Repeat");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_Repeat");
 		return ptr;
 	}
 
@@ -587,12 +587,12 @@ class UAbilityTask_SpawnActor : public UAbilityTask
 public:
 	struct FScriptMulticastDelegate                    Success;                                                   // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    DidNotSpawn;                                               // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_L2G5[0x10];                                    // 0x0088(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_XXQ8[0x10];                                    // 0x0088(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_SpawnActor");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_SpawnActor");
 		return ptr;
 	}
 
@@ -610,12 +610,12 @@ class UAbilityTask_StartAbilityState : public UAbilityTask
 public:
 	struct FScriptMulticastDelegate                    OnStateEnded;                                              // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnStateInterrupted;                                        // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_QTBR[0x18];                                    // 0x0088(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_9N1P[0x18];                                    // 0x0088(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_StartAbilityState");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_StartAbilityState");
 		return ptr;
 	}
 
@@ -625,22 +625,22 @@ public:
 };
 
 // Class GameplayAbilities.GameplayAbilityWorldReticle
-// 0x0020 (FullSize[0x0450] - InheritedSize[0x0430])
+// 0x0020 (FullSize[0x03F0] - InheritedSize[0x03D0])
 class AGameplayAbilityWorldReticle : public AActor
 {
 public:
-	struct FWorldReticleParameters                     Parameters;                                                // 0x0430(0x000C) (Edit, BlueprintVisible, DisableEditOnTemplate, ExposeOnSpawn)
-	bool                                               bFaceOwnerFlat;                                            // 0x043C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	bool                                               bSnapToTargetedActor;                                      // 0x043D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	bool                                               bIsTargetValid;                                            // 0x043E(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
-	bool                                               bIsTargetAnActor;                                          // 0x043F(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
-	class APlayerController*                           MasterPC;                                                  // 0x0440(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	class AActor*                                      TargetingActor;                                            // 0x0448(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	struct FWorldReticleParameters                     Parameters;                                                // 0x03D0(0x000C) (Edit, BlueprintVisible, DisableEditOnTemplate, ExposeOnSpawn)
+	bool                                               bFaceOwnerFlat;                                            // 0x03DC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	bool                                               bSnapToTargetedActor;                                      // 0x03DD(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	bool                                               bIsTargetValid;                                            // 0x03DE(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
+	bool                                               bIsTargetAnActor;                                          // 0x03DF(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
+	class APlayerController*                           MasterPC;                                                  // 0x03E0(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	class AActor*                                      TargetingActor;                                            // 0x03E8(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityWorldReticle");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityWorldReticle");
 		return ptr;
 	}
 
@@ -655,30 +655,30 @@ public:
 };
 
 // Class GameplayAbilities.GameplayAbilityTargetActor
-// 0x017C (FullSize[0x05AC] - InheritedSize[0x0430])
+// 0x011C (FullSize[0x04EC] - InheritedSize[0x03D0])
 class AGameplayAbilityTargetActor : public AActor
 {
 public:
-	bool                                               ShouldProduceTargetDataOnServer;                           // 0x0430(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_4H75[0xF];                                     // 0x0431(0x000F) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FGameplayAbilityTargetingLocationInfo       StartLocation;                                             // 0x0440(0x0070) (BlueprintVisible, BlueprintReadOnly, Net, ContainsInstancedReference, ExposeOnSpawn)
-	unsigned char                                      UnknownData_M6AW[0x90];                                    // 0x04B0(0x0090) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class APlayerController*                           MasterPC;                                                  // 0x0540(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGameplayAbility*                            OwningAbility;                                             // 0x0548(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               bDestroyOnConfirmation;                                    // 0x0550(0x0001) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_CA90[0x7];                                     // 0x0551(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class AActor*                                      SourceActor;                                               // 0x0558(0x0008) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FWorldReticleParameters                     ReticleParams;                                             // 0x0560(0x000C) (BlueprintVisible, ExposeOnSpawn)
-	unsigned char                                      UnknownData_WMKO[0x4];                                     // 0x056C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UClass*                                      ReticleClass;                                              // 0x0570(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash)
-	struct FGameplayTargetDataFilterHandle             Filter;                                                    // 0x0578(0x0018) (BlueprintVisible, Net, ExposeOnSpawn)
-	bool                                               bDebug;                                                    // 0x0590(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	unsigned char                                      UnknownData_MNCS[0x1B];                                    // 0x0591(0x001B) Fix Super Size
+	bool                                               ShouldProduceTargetDataOnServer;                           // 0x03D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_T9JX[0xF];                                     // 0x03D1(0x000F) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FGameplayAbilityTargetingLocationInfo       StartLocation;                                             // 0x03E0(0x0070) (BlueprintVisible, BlueprintReadOnly, Net, ContainsInstancedReference, ExposeOnSpawn)
+	unsigned char                                      UnknownData_AS6H[0x30];                                    // 0x0450(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class APlayerController*                           MasterPC;                                                  // 0x0480(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGameplayAbility*                            OwningAbility;                                             // 0x0488(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               bDestroyOnConfirmation;                                    // 0x0490(0x0001) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_7F1J[0x7];                                     // 0x0491(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class AActor*                                      SourceActor;                                               // 0x0498(0x0008) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FWorldReticleParameters                     ReticleParams;                                             // 0x04A0(0x000C) (BlueprintVisible, ExposeOnSpawn)
+	unsigned char                                      UnknownData_40G9[0x4];                                     // 0x04AC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UClass*                                      ReticleClass;                                              // 0x04B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash)
+	struct FGameplayTargetDataFilterHandle             Filter;                                                    // 0x04B8(0x0018) (BlueprintVisible, Net, ExposeOnSpawn)
+	bool                                               bDebug;                                                    // 0x04D0(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	unsigned char                                      UnknownData_DIUP[0x1B];                                    // 0x04D1(0x001B) Fix Super Size
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor");
 		return ptr;
 	}
 
@@ -694,12 +694,12 @@ class UAbilityTask_VisualizeTargeting : public UAbilityTask
 {
 public:
 	struct FScriptMulticastDelegate                    TimeElapsed;                                               // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_0LE8[0x18];                                    // 0x0078(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2RU3[0x18];                                    // 0x0078(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_VisualizeTargeting");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_VisualizeTargeting");
 		return ptr;
 	}
 
@@ -717,12 +717,12 @@ class UAbilityTask_WaitAbilityActivate : public UAbilityTask
 {
 public:
 	struct FScriptMulticastDelegate                    OnActivate;                                                // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_Y41J[0x20];                                    // 0x0078(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ZSKK[0x20];                                    // 0x0078(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitAbilityActivate");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitAbilityActivate");
 		return ptr;
 	}
 
@@ -738,12 +738,12 @@ class UAbilityTask_WaitAbilityCommit : public UAbilityTask
 {
 public:
 	struct FScriptMulticastDelegate                    OnCommit;                                                  // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_3GPL[0x20];                                    // 0x0078(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_OMXE[0x20];                                    // 0x0078(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitAbilityCommit");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitAbilityCommit");
 		return ptr;
 	}
 
@@ -759,12 +759,12 @@ class UAbilityTask_WaitAttributeChange : public UAbilityTask
 {
 public:
 	struct FScriptMulticastDelegate                    OnChange;                                                  // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_CO28[0x30];                                    // 0x0078(0x0030) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_59QO[0x30];                                    // 0x0078(0x0030) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitAttributeChange");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitAttributeChange");
 		return ptr;
 	}
 
@@ -780,12 +780,12 @@ class UAbilityTask_WaitCancel : public UAbilityTask
 {
 public:
 	struct FScriptMulticastDelegate                    OnCancel;                                                  // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_2W0C[0x8];                                     // 0x0078(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2RRJ[0x8];                                     // 0x0078(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitCancel");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitCancel");
 		return ptr;
 	}
 
@@ -802,12 +802,12 @@ class UAbilityTask_WaitConfirm : public UAbilityTask
 {
 public:
 	struct FScriptMulticastDelegate                    OnConfirm;                                                 // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_1A1U[0x10];                                    // 0x0078(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_7VKS[0x10];                                    // 0x0078(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitConfirm");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitConfirm");
 		return ptr;
 	}
 
@@ -824,12 +824,12 @@ class UAbilityTask_WaitConfirmCancel : public UAbilityTask
 public:
 	struct FScriptMulticastDelegate                    OnConfirm;                                                 // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnCancel;                                                  // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_DX0O[0x8];                                     // 0x0088(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_OC5G[0x8];                                     // 0x0088(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitConfirmCancel");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitConfirmCancel");
 		return ptr;
 	}
 
@@ -848,12 +848,12 @@ class UAbilityTask_WaitDelay : public UAbilityTask
 {
 public:
 	struct FScriptMulticastDelegate                    OnFinish;                                                  // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_1UWE[0x8];                                     // 0x0078(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TII6[0x8];                                     // 0x0078(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitDelay");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitDelay");
 		return ptr;
 	}
 
@@ -867,12 +867,12 @@ public:
 class UAbilityTask_WaitGameplayEffectApplied : public UAbilityTask
 {
 public:
-	unsigned char                                      UnknownData_421T[0xC8];                                    // 0x0068(0x00C8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_K3C3[0xC8];                                    // 0x0068(0x00C8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied");
 		return ptr;
 	}
 
@@ -887,12 +887,12 @@ class UAbilityTask_WaitGameplayEffectApplied_Self : public UAbilityTask_WaitGame
 {
 public:
 	struct FScriptMulticastDelegate                    OnApplied;                                                 // 0x0130(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_F036[0x8];                                     // 0x0140(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HJH7[0x8];                                     // 0x0140(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Self");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Self");
 		return ptr;
 	}
 
@@ -907,12 +907,12 @@ class UAbilityTask_WaitGameplayEffectApplied_Target : public UAbilityTask_WaitGa
 {
 public:
 	struct FScriptMulticastDelegate                    OnApplied;                                                 // 0x0130(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_VWR0[0x8];                                     // 0x0140(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_XPUV[0x8];                                     // 0x0140(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Target");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Target");
 		return ptr;
 	}
 
@@ -928,12 +928,12 @@ class UAbilityTask_WaitGameplayEffectRemoved : public UAbilityTask
 public:
 	struct FScriptMulticastDelegate                    OnRemoved;                                                 // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    InvalidHandle;                                             // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_TU5B[0x10];                                    // 0x0088(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_9NUA[0x10];                                    // 0x0088(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayEffectRemoved");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayEffectRemoved");
 		return ptr;
 	}
 
@@ -948,12 +948,12 @@ public:
 class UAbilityTask_WaitGameplayTag : public UAbilityTask
 {
 public:
-	unsigned char                                      UnknownData_ENSI[0x20];                                    // 0x0068(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AZGM[0x20];                                    // 0x0068(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayTag");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayTag");
 		return ptr;
 	}
 
@@ -972,7 +972,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayTagAdded");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayTagAdded");
 		return ptr;
 	}
 
@@ -991,7 +991,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayTagRemoved");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitGameplayTagRemoved");
 		return ptr;
 	}
 
@@ -1006,12 +1006,12 @@ class UAbilityTask_WaitInputPress : public UAbilityTask
 {
 public:
 	struct FScriptMulticastDelegate                    OnPress;                                                   // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_ULQK[0x10];                                    // 0x0078(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_WSZL[0x10];                                    // 0x0078(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitInputPress");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitInputPress");
 		return ptr;
 	}
 
@@ -1027,12 +1027,12 @@ class UAbilityTask_WaitInputRelease : public UAbilityTask
 {
 public:
 	struct FScriptMulticastDelegate                    OnRelease;                                                 // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_XI54[0x10];                                    // 0x0078(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PYBX[0x10];                                    // 0x0078(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitInputRelease");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitInputRelease");
 		return ptr;
 	}
 
@@ -1048,12 +1048,12 @@ class UAbilityTask_WaitMovementModeChange : public UAbilityTask
 {
 public:
 	struct FScriptMulticastDelegate                    OnChange;                                                  // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_PJ7B[0x10];                                    // 0x0078(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_R4G4[0x10];                                    // 0x0078(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitMovementModeChange");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitMovementModeChange");
 		return ptr;
 	}
 
@@ -1073,7 +1073,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitOverlap");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitOverlap");
 		return ptr;
 	}
 
@@ -1091,12 +1091,12 @@ class UAbilityTask_WaitTargetData : public UAbilityTask
 public:
 	struct FScriptMulticastDelegate                    ValidData;                                                 // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    Cancelled;                                                 // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_G58P[0x20];                                    // 0x0088(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AKOE[0x20];                                    // 0x0088(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitTargetData");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitTargetData");
 		return ptr;
 	}
 
@@ -1119,12 +1119,12 @@ class UAbilityTask_WaitVelocityChange : public UAbilityTask
 public:
 	struct FScriptMulticastDelegate                    OnVelocityChage;                                           // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	class UMovementComponent*                          CachedMovementComponent;                                   // 0x0078(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9S3P[0x10];                                    // 0x0080(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_1M8B[0x10];                                    // 0x0080(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitVelocityChange");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilityTask_WaitVelocityChange");
 		return ptr;
 	}
 
@@ -1158,7 +1158,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemTestAttributeSet");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.AbilitySystemTestAttributeSet");
 		return ptr;
 	}
 
@@ -1167,7 +1167,7 @@ public:
 };
 
 // Class GameplayAbilities.GameplayAbility_CharacterJump
-// 0x0000 (FullSize[0x04D8] - InheritedSize[0x04D8])
+// 0x0000 (FullSize[0x0448] - InheritedSize[0x0448])
 class UGameplayAbility_CharacterJump : public UGameplayAbility
 {
 public:
@@ -1175,7 +1175,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbility_CharacterJump");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbility_CharacterJump");
 		return ptr;
 	}
 
@@ -1184,21 +1184,21 @@ public:
 };
 
 // Class GameplayAbilities.GameplayAbility_Montage
-// 0x0038 (FullSize[0x0510] - InheritedSize[0x04D8])
+// 0x0038 (FullSize[0x0480] - InheritedSize[0x0448])
 class UGameplayAbility_Montage : public UGameplayAbility
 {
 public:
-	class UAnimMontage*                                MontageToPlay;                                             // 0x04D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              PlayRate;                                                  // 0x04E0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FName                                       SectionName;                                               // 0x04E4(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_94SI[0x4];                                     // 0x04EC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<class UClass*>                              GameplayEffectClassesWhileAnimating;                       // 0x04F0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, UObjectWrapper)
-	TArray<class UGameplayEffect*>                     GameplayEffectsWhileAnimating;                             // 0x0500(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, EditConst)
+	class UAnimMontage*                                MontageToPlay;                                             // 0x0448(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              PlayRate;                                                  // 0x0450(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FName                                       SectionName;                                               // 0x0454(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_2KBE[0x4];                                     // 0x045C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<class UClass*>                              GameplayEffectClassesWhileAnimating;                       // 0x0460(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, UObjectWrapper)
+	TArray<class UGameplayEffect*>                     GameplayEffectsWhileAnimating;                             // 0x0470(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, EditConst)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbility_Montage");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbility_Montage");
 		return ptr;
 	}
 
@@ -1207,7 +1207,7 @@ public:
 };
 
 // Class GameplayAbilities.GameplayAbilityBlueprint
-// 0x0000 (FullSize[0x0138] - InheritedSize[0x0138])
+// 0x0000 (FullSize[0x00D8] - InheritedSize[0x00D8])
 class UGameplayAbilityBlueprint : public UBlueprint
 {
 public:
@@ -1215,7 +1215,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityBlueprint");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityBlueprint");
 		return ptr;
 	}
 
@@ -1232,7 +1232,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityBlueprintGeneratedClass");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityBlueprintGeneratedClass");
 		return ptr;
 	}
 
@@ -1250,7 +1250,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilitySet");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilitySet");
 		return ptr;
 	}
 
@@ -1259,16 +1259,16 @@ public:
 };
 
 // Class GameplayAbilities.GameplayAbilityTargetActor_Radius
-// 0x0004 (FullSize[0x05B0] - InheritedSize[0x05AC])
+// 0x0004 (FullSize[0x04F0] - InheritedSize[0x04EC])
 class AGameplayAbilityTargetActor_Radius : public AGameplayAbilityTargetActor
 {
 public:
-	unsigned char                                      UnknownData_BM9V[0x4];                                     // 0x05AC(0x0004) Fix Super Size
+	unsigned char                                      UnknownData_H0NF[0x4];                                     // 0x04EC(0x0004) Fix Super Size
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_Radius");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_Radius");
 		return ptr;
 	}
 
@@ -1277,18 +1277,18 @@ public:
 };
 
 // Class GameplayAbilities.GameplayAbilityTargetActor_Trace
-// 0x0014 (FullSize[0x05C0] - InheritedSize[0x05AC])
+// 0x0014 (FullSize[0x0500] - InheritedSize[0x04EC])
 class AGameplayAbilityTargetActor_Trace : public AGameplayAbilityTargetActor
 {
 public:
-	struct FCollisionProfileName                       TraceProfile;                                              // 0x05AC(0x0008) (Edit, BlueprintVisible, Config, ExposeOnSpawn)
-	bool                                               bTraceAffectsAimPitch;                                     // 0x05B4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	unsigned char                                      UnknownData_DFM1[0xB];                                     // 0x05B5(0x000B) MISSED OFFSET (PADDING)
+	struct FCollisionProfileName                       TraceProfile;                                              // 0x04EC(0x0008) (Edit, BlueprintVisible, Config, ExposeOnSpawn)
+	bool                                               bTraceAffectsAimPitch;                                     // 0x04F4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	unsigned char                                      UnknownData_Z4B8[0xB];                                     // 0x04F5(0x000B) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_Trace");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_Trace");
 		return ptr;
 	}
 
@@ -1297,18 +1297,18 @@ public:
 };
 
 // Class GameplayAbilities.GameplayAbilityTargetActor_GroundTrace
-// 0x0020 (FullSize[0x05E0] - InheritedSize[0x05C0])
+// 0x0020 (FullSize[0x0520] - InheritedSize[0x0500])
 class AGameplayAbilityTargetActor_GroundTrace : public AGameplayAbilityTargetActor_Trace
 {
 public:
-	float                                              CollisionRadius;                                           // 0x05C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	float                                              CollisionHeight;                                           // 0x05C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_IUMK[0x18];                                    // 0x05C8(0x0018) MISSED OFFSET (PADDING)
+	float                                              CollisionRadius;                                           // 0x0500(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	float                                              CollisionHeight;                                           // 0x0504(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_FKZZ[0x18];                                    // 0x0508(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_GroundTrace");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_GroundTrace");
 		return ptr;
 	}
 
@@ -1317,18 +1317,18 @@ public:
 };
 
 // Class GameplayAbilities.GameplayAbilityTargetActor_ActorPlacement
-// 0x0020 (FullSize[0x0600] - InheritedSize[0x05E0])
+// 0x0020 (FullSize[0x0540] - InheritedSize[0x0520])
 class AGameplayAbilityTargetActor_ActorPlacement : public AGameplayAbilityTargetActor_GroundTrace
 {
 public:
-	class UClass*                                      PlacedActorClass;                                          // 0x05E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class UMaterialInterface*                          PlacedActorMaterial;                                       // 0x05E8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HNUL[0x10];                                    // 0x05F0(0x0010) MISSED OFFSET (PADDING)
+	class UClass*                                      PlacedActorClass;                                          // 0x0520(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class UMaterialInterface*                          PlacedActorMaterial;                                       // 0x0528(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_TLMT[0x10];                                    // 0x0530(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_ActorPlacement");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_ActorPlacement");
 		return ptr;
 	}
 
@@ -1337,7 +1337,7 @@ public:
 };
 
 // Class GameplayAbilities.GameplayAbilityTargetActor_SingleLineTrace
-// 0x0000 (FullSize[0x05C0] - InheritedSize[0x05C0])
+// 0x0000 (FullSize[0x0500] - InheritedSize[0x0500])
 class AGameplayAbilityTargetActor_SingleLineTrace : public AGameplayAbilityTargetActor_Trace
 {
 public:
@@ -1345,7 +1345,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_SingleLineTrace");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityTargetActor_SingleLineTrace");
 		return ptr;
 	}
 
@@ -1354,17 +1354,17 @@ public:
 };
 
 // Class GameplayAbilities.GameplayAbilityWorldReticle_ActorVisualization
-// 0x0018 (FullSize[0x0468] - InheritedSize[0x0450])
+// 0x0018 (FullSize[0x0408] - InheritedSize[0x03F0])
 class AGameplayAbilityWorldReticle_ActorVisualization : public AGameplayAbilityWorldReticle
 {
 public:
-	class UCapsuleComponent*                           CollisionComponent;                                        // 0x0450(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UActorComponent*>                     VisualizationComponents;                                   // 0x0458(0x0010) (ExportObject, ZeroConstructor, ContainsInstancedReference)
+	class UCapsuleComponent*                           CollisionComponent;                                        // 0x03F0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UActorComponent*>                     VisualizationComponents;                                   // 0x03F8(0x0010) (ExportObject, ZeroConstructor, ContainsInstancedReference)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityWorldReticle_ActorVisualization");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayAbilityWorldReticle_ActorVisualization");
 		return ptr;
 	}
 
@@ -1381,15 +1381,15 @@ public:
 	class UObjectLibrary*                              GameplayCueNotifyActorObjectLibrary;                       // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObjectLibrary*                              GameplayCueNotifyStaticObjectLibrary;                      // 0x0038(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FStreamableManager                          StreamableManager;                                         // 0x0040(0x00C0) (Transient)
-	unsigned char                                      UnknownData_TCJZ[0x60];                                    // 0x0100(0x0060) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Q0L4[0x60];                                    // 0x0100(0x0060) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FGameplayCuePendingExecute>          PendingExecuteCues;                                        // 0x0160(0x0010) (ZeroConstructor, ContainsInstancedReference, Protected)
 	int                                                GameplayCueSendContextCount;                               // 0x0170(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2H8W[0xC];                                     // 0x0174(0x000C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_M9J5[0xC];                                     // 0x0174(0x000C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueManager");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueManager");
 		return ptr;
 	}
 
@@ -1398,24 +1398,24 @@ public:
 };
 
 // Class GameplayAbilities.GameplayCueNotify_Actor
-// 0x0020 (FullSize[0x0450] - InheritedSize[0x0430])
+// 0x0020 (FullSize[0x03F0] - InheritedSize[0x03D0])
 class AGameplayCueNotify_Actor : public AActor
 {
 public:
-	struct FGameplayTag                                GameplayCueTag;                                            // 0x0430(0x0008) (Edit, DisableEditOnInstance)
-	struct FName                                       GameplayCueName;                                           // 0x0438(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
-	bool                                               bAutoDestroyOnRemove;                                      // 0x0440(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_X7F6[0x3];                                     // 0x0441(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              AutoDestroyDelay;                                          // 0x0444(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               IsOverride;                                                // 0x0448(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                               bUniqueInstancePerInstigator;                              // 0x0449(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                               bUniqueInstancePerSourceObject;                            // 0x044A(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_IPWB[0x5];                                     // 0x044B(0x0005) MISSED OFFSET (PADDING)
+	struct FGameplayTag                                GameplayCueTag;                                            // 0x03D0(0x0008) (Edit, DisableEditOnInstance)
+	struct FName                                       GameplayCueName;                                           // 0x03D8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
+	bool                                               bAutoDestroyOnRemove;                                      // 0x03E0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_F4QB[0x3];                                     // 0x03E1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              AutoDestroyDelay;                                          // 0x03E4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               IsOverride;                                                // 0x03E8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                               bUniqueInstancePerInstigator;                              // 0x03E9(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                               bUniqueInstancePerSourceObject;                            // 0x03EA(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_EZY2[0x5];                                     // 0x03EB(0x0005) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueNotify_Actor");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueNotify_Actor");
 		return ptr;
 	}
 
@@ -1437,12 +1437,12 @@ public:
 	struct FGameplayTag                                GameplayCueTag;                                            // 0x0028(0x0008) (Edit, DisableEditOnInstance)
 	struct FName                                       GameplayCueName;                                           // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash)
 	bool                                               IsOverride;                                                // 0x0038(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_6WK6[0x7];                                     // 0x0039(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_QVHU[0x7];                                     // 0x0039(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueNotify_Static");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueNotify_Static");
 		return ptr;
 	}
 
@@ -1466,7 +1466,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueNotify_HitImpact");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueNotify_HitImpact");
 		return ptr;
 	}
 
@@ -1480,12 +1480,12 @@ class UGameplayCueSet : public UDataAsset
 {
 public:
 	TArray<struct FGameplayCueNotifyData>              GameplayCueData;                                           // 0x0028(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData_P4LK[0x50];                                    // 0x0038(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_67PL[0x50];                                    // 0x0038(0x0050) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueSet");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayCueSet");
 		return ptr;
 	}
 
@@ -1502,7 +1502,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectTemplate");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectTemplate");
 		return ptr;
 	}
 
@@ -1520,7 +1520,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectCalculation");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectCalculation");
 		return ptr;
 	}
 
@@ -1534,12 +1534,12 @@ class UGameplayEffectExecutionCalculation : public UGameplayEffectCalculation
 {
 public:
 	bool                                               bRequiresPassedInTags;                                     // 0x0038(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_K6TW[0x7];                                     // 0x0039(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ARIZ[0x7];                                     // 0x0039(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectExecutionCalculation");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectExecutionCalculation");
 		return ptr;
 	}
 
@@ -1557,7 +1557,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayModMagnitudeCalculation");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayModMagnitudeCalculation");
 		return ptr;
 	}
 
@@ -1577,7 +1577,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectExtension");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectExtension");
 		return ptr;
 	}
 
@@ -1595,7 +1595,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectExtension_LifestealTest");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectExtension_LifestealTest");
 		return ptr;
 	}
 
@@ -1613,7 +1613,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectExtension_ShieldTest");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectExtension_ShieldTest");
 		return ptr;
 	}
 
@@ -1630,7 +1630,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectUIData");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectUIData");
 		return ptr;
 	}
 
@@ -1644,12 +1644,12 @@ class UGameplayEffectUIData_TextOnly : public UGameplayEffectUIData
 {
 public:
 	struct FText                                       Description;                                               // 0x0028(0x0018) ELEMENT_SIZE_MISMATCH (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	unsigned char                                      UnknownData_V1DK[0x20];                                    // 0x0028(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_UTFN[0x20];                                    // 0x0028(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectUIData_TextOnly");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayEffectUIData_TextOnly");
 		return ptr;
 	}
 
@@ -1663,12 +1663,12 @@ class UGameplayTagReponseTable : public UDataAsset
 {
 public:
 	TArray<struct FGameplayTagResponseTableEntry>      Entries;                                                   // 0x0028(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData_Z8D7[0x50];                                    // 0x0038(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_RA24[0x50];                                    // 0x0038(0x0050) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.GameplayTagReponseTable");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.GameplayTagReponseTable");
 		return ptr;
 	}
 
@@ -1686,7 +1686,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayAbilities.TickableAttributeSetInterface");
+		static UClass* ptr = UObject::FindClass("Class GameplayAbilities.TickableAttributeSetInterface");
 		return ptr;
 	}
 

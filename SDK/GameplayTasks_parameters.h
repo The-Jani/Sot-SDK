@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -38,7 +38,6 @@ struct UGameplayTask_EndTask_Params
 // Function GameplayTasks.GameplayTask_SpawnActor.SpawnActor
 struct UGameplayTask_SpawnActor_SpawnActor_Params
 {
-	TScriptInterface<class UGameplayTaskOwnerInterface> TaskOwner;                                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper)
 	struct FVector                                     SpawnLocation;                                             // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FRotator                                    SpawnRotation;                                             // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	class UClass*                                      Class;                                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
@@ -64,7 +63,6 @@ struct UGameplayTask_SpawnActor_BeginSpawningActor_Params
 // Function GameplayTasks.GameplayTask_WaitDelay.TaskWaitDelay
 struct UGameplayTask_WaitDelay_TaskWaitDelay_Params
 {
-	TScriptInterface<class UGameplayTaskOwnerInterface> TaskOwner;                                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper)
 	float                                              Time;                                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UGameplayTask_WaitDelay*                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -82,7 +80,6 @@ struct UGameplayTasksComponent_OnRep_SimulatedTasks_Params
 // Function GameplayTasks.GameplayTasksComponent.K2_RunGameplayTask
 struct UGameplayTasksComponent_K2_RunGameplayTask_Params
 {
-	TScriptInterface<class UGameplayTaskOwnerInterface> TaskOwner;                                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 	class UGameplayTask*                               Task;                                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      Priority;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UClass*>                              AdditionalRequiredResources;                               // (Parm, ZeroConstructor, AdvancedDisplay, UObjectWrapper)

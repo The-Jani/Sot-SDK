@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -28,7 +28,7 @@ namespace CG
 // float                          WheelRate                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_WheelInterface_C::Receive_Animation_State(const struct FRotator& WheelRotation, float WheelAnimationTime, TEnumAsByte<EWheel_EWheel> EWheel, float Direction, float WheelRate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_WheelInterface.BP_WheelInterface_C.Receive Animation State");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_WheelInterface.BP_WheelInterface_C.Receive Animation State");
 
 	UBP_WheelInterface_C_Receive_Animation_State_Params params;
 	params.WheelRotation = WheelRotation;

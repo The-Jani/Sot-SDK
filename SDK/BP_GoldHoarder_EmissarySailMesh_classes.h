@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GoldHoarder_EmissarySailMesh.BP_GoldHoarder_EmissarySailMesh_C
-// 0x0000 (FullSize[0x05C0] - InheritedSize[0x05C0])
+// 0x0000 (FullSize[0x05F0] - InheritedSize[0x05F0])
 class UBP_GoldHoarder_EmissarySailMesh_C : public UEmissaryRepresentationMeshComponent
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_GoldHoarder_EmissarySailMesh.BP_GoldHoarder_EmissarySailMesh_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_GoldHoarder_EmissarySailMesh.BP_GoldHoarder_EmissarySailMesh_C");
 		return ptr;
 	}
 

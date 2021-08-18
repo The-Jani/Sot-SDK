@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -25,15 +25,15 @@ class UBasePromptCoordinator : public UObject
 {
 public:
 	class AAthenaPlayerController*                     PlayerController;                                          // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_O89S[0x10];                                    // 0x0030(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_1TQM[0x10];                                    // 0x0030(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UPrioritisedPromptsManager*                  PrioritisedPromptsManager;                                 // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ACharacter*                                  CharacterWithRegisteredEvents;                             // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EHR1[0xA8];                                    // 0x0050(0x00A8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LI71[0xA8];                                    // 0x0050(0x00A8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PrioritisedPrompts.BasePromptCoordinator");
+		static UClass* ptr = UObject::FindClass("Class PrioritisedPrompts.BasePromptCoordinator");
 		return ptr;
 	}
 
@@ -70,7 +70,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PrioritisedPrompts.GetPromptsLocalService");
+		static UClass* ptr = UObject::FindClass("Class PrioritisedPrompts.GetPromptsLocalService");
 		return ptr;
 	}
 
@@ -86,12 +86,12 @@ class UPrioritisedPromptsManager : public UObject
 public:
 	TArray<struct FPrioritisedPromptWithHandle>        AllPrompts;                                                // 0x0028(0x0010) (ZeroConstructor)
 	class APlayerController*                           PlayerController;                                          // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HLLV[0x28];                                    // 0x0040(0x0028) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_N8A7[0x28];                                    // 0x0040(0x0028) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PrioritisedPrompts.PrioritisedPromptsManager");
+		static UClass* ptr = UObject::FindClass("Class PrioritisedPrompts.PrioritisedPromptsManager");
 		return ptr;
 	}
 
@@ -109,7 +109,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PrioritisedPrompts.PromptCounterAccessKey");
+		static UClass* ptr = UObject::FindClass("Class PrioritisedPrompts.PromptCounterAccessKey");
 		return ptr;
 	}
 
@@ -126,7 +126,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PrioritisedPrompts.PromptsLocalServiceInterface");
+		static UClass* ptr = UObject::FindClass("Class PrioritisedPrompts.PromptsLocalServiceInterface");
 		return ptr;
 	}
 
@@ -141,12 +141,12 @@ public:
 class UPromptsLocalService : public UObject
 {
 public:
-	unsigned char                                      UnknownData_1P13[0x70];                                    // 0x0028(0x0070) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_M82F[0x70];                                    // 0x0028(0x0070) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PrioritisedPrompts.PromptsLocalService");
+		static UClass* ptr = UObject::FindClass("Class PrioritisedPrompts.PromptsLocalService");
 		return ptr;
 	}
 

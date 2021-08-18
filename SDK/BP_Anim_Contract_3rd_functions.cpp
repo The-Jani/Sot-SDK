@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -25,7 +25,7 @@ namespace CG
 // struct FWieldableItemActionVisuals ActionVisuals                  (ConstParm, Parm, OutParm, ReferenceParm)
 void UBP_Anim_Contract_3rd_C::OnUseStarted(class UClass* InputID, const struct FWieldableItemActionVisuals& ActionVisuals)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_Contract_3rd.BP_Anim_Contract_3rd_C.OnUseStarted");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Anim_Contract_3rd.BP_Anim_Contract_3rd_C.OnUseStarted");
 
 	UBP_Anim_Contract_3rd_C_OnUseStarted_Params params;
 	params.InputID = InputID;
@@ -45,7 +45,7 @@ void UBP_Anim_Contract_3rd_C::OnUseStarted(class UClass* InputID, const struct F
 // class UClass*                  InputID                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_Anim_Contract_3rd_C::OnUseStopped(class UClass* InputID)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_Contract_3rd.BP_Anim_Contract_3rd_C.OnUseStopped");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Anim_Contract_3rd.BP_Anim_Contract_3rd_C.OnUseStopped");
 
 	UBP_Anim_Contract_3rd_C_OnUseStopped_Params params;
 	params.InputID = InputID;
@@ -64,7 +64,7 @@ void UBP_Anim_Contract_3rd_C::OnUseStopped(class UClass* InputID)
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_Anim_Contract_3rd_C::ExecuteUbergraph_BP_Anim_Contract_3rd(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_Contract_3rd.BP_Anim_Contract_3rd_C.ExecuteUbergraph_BP_Anim_Contract_3rd");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Anim_Contract_3rd.BP_Anim_Contract_3rd_C.ExecuteUbergraph_BP_Anim_Contract_3rd");
 
 	UBP_Anim_Contract_3rd_C_ExecuteUbergraph_BP_Anim_Contract_3rd_Params params;
 	params.EntryPoint = EntryPoint;

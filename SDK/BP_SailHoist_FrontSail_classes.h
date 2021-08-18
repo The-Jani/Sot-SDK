@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SailHoist_FrontSail.BP_SailHoist_FrontSail_C
-// 0x0000 (FullSize[0x0850] - InheritedSize[0x0850])
+// 0x0000 (FullSize[0x07F0] - InheritedSize[0x07F0])
 class ABP_SailHoist_FrontSail_C : public ABP_SailHoist_C
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_SailHoist_FrontSail.BP_SailHoist_FrontSail_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_SailHoist_FrontSail.BP_SailHoist_FrontSail_C");
 		return ptr;
 	}
 

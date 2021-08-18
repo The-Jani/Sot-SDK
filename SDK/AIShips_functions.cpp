@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -25,7 +25,7 @@ namespace CG
 // struct FGuid                   CrewId                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UAIShipDebugFunctionLibrary::STATIC_RequestAIShipForCrew(class UObject* WorldContextObject, const struct FGuid& CrewId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AIShips.AIShipDebugFunctionLibrary.RequestAIShipForCrew");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AIShips.AIShipDebugFunctionLibrary.RequestAIShipForCrew");
 
 	UAIShipDebugFunctionLibrary_RequestAIShipForCrew_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -48,7 +48,7 @@ void UAIShipDebugFunctionLibrary::STATIC_RequestAIShipForCrew(class UObject* Wor
 // struct FAIShipEncounterBattleDesc ReturnValue                    (Parm, OutParm, ReturnParm)
 struct FAIShipEncounterBattleDesc UAIShipDebugFunctionLibrary::STATIC_GenerateAIShipBattleDesc(class UObject* WorldContextObject, class UAIShipServiceDataAsset* ServiceParams)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AIShips.AIShipDebugFunctionLibrary.GenerateAIShipBattleDesc");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AIShips.AIShipDebugFunctionLibrary.GenerateAIShipBattleDesc");
 
 	UAIShipDebugFunctionLibrary_GenerateAIShipBattleDesc_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -72,7 +72,7 @@ struct FAIShipEncounterBattleDesc UAIShipDebugFunctionLibrary::STATIC_GenerateAI
 // class APawn*                   InPawn                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void AAthenaAIShipController::ApplyControllerParams(class UAthenaAIControllerParamsDataAsset* ParamsAsset, class APawn* InPawn)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AIShips.AthenaAIShipController.ApplyControllerParams");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AIShips.AthenaAIShipController.ApplyControllerParams");
 
 	AAthenaAIShipController_ApplyControllerParams_Params params;
 	params.ParamsAsset = ParamsAsset;
@@ -93,7 +93,7 @@ void AAthenaAIShipController::ApplyControllerParams(class UAthenaAIControllerPar
 // struct FAIShipSailData         SailData                       (ConstParm, Parm, OutParm, ReferenceParm)
 void UCursedCrewCustomisationInterface::SetCursedCrewCustomisationProperties(const struct FAIShipSailData& SailData)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AIShips.CursedCrewCustomisationInterface.SetCursedCrewCustomisationProperties");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AIShips.CursedCrewCustomisationInterface.SetCursedCrewCustomisationProperties");
 
 	UCursedCrewCustomisationInterface_SetCursedCrewCustomisationProperties_Params params;
 	params.SailData = SailData;

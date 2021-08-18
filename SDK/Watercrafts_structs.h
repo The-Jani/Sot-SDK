@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -83,7 +83,7 @@ struct FScrapeableDamageSpeedEntry
 	class UClass*                                      SpeedBand;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	class UForceFeedbackEffect*                        ForceFeedbackEffect;                                       // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                DamageAmount;                                              // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_JS02[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_9OOO[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -93,7 +93,32 @@ struct FWatercraftRolloverCorrector
 {
 	float                                              RollThresholdToConsiderRolledOver;                         // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TorqueScalar;                                              // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_LBLI[0x4];                                     // 0x0008(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_IDN5[0x4];                                     // 0x0008(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Watercrafts.RowboatDamageEffectData
+// 0x0018
+struct FRowboatDamageEffectData
+{
+	class UMaterialInstanceDynamic*                    DynamicMaterialInstance;                                   // 0x0000(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              FadeInDuration;                                            // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_3LUI[0xC];                                     // 0x000C(0x000C) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Watercrafts.RowboatStrainDamageData
+// 0x0020
+struct FRowboatStrainDamageData
+{
+	float                                              StormDamageScalar;                                         // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              WaterStrengthToCountAsStorm;                               // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              StormStrengthThresholdForDamage;                           // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MinStormDamageFrequencyInSeconds;                          // 0x000C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MaxStormDamageFrequencyInSeconds;                          // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              WorldEdgeDamageScalar;                                     // 0x0014(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MinWorldEdgeDamageFrequencyInSeconds;                      // 0x0018(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MaxWorldEdgeDamageFrequencyInSeconds;                      // 0x001C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
@@ -118,7 +143,7 @@ struct FOarParams
 struct FOar
 {
 	struct FOarParams                                  OarParams;                                                 // 0x0000(0x0038) (Protected)
-	unsigned char                                      UnknownData_2W37[0x28];                                    // 0x0038(0x0028) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_X0CO[0x28];                                    // 0x0038(0x0028) MISSED OFFSET (PADDING)
 
 };
 
@@ -126,7 +151,7 @@ struct FOar
 // 0x0001
 struct FEventOarStrokeEnded
 {
-	unsigned char                                      UnknownData_93MY[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_0BST[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -134,7 +159,7 @@ struct FEventOarStrokeEnded
 // 0x0001
 struct FEventRowboatExitedWater
 {
-	unsigned char                                      UnknownData_N3LF[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_1MT9[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -142,7 +167,7 @@ struct FEventRowboatExitedWater
 // 0x0001
 struct FEventRowboatEnteredWater
 {
-	unsigned char                                      UnknownData_19OP[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_JFWI[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -152,7 +177,7 @@ struct FRowboatMountStateTelemetryEvent
 {
 	struct FGuid                                       WatercraftId;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Watercrafts_ERowboatActionTelemetry>   ActionName;                                                // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TAZZ[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_CA8B[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (PADDING)
 
 };
 
@@ -163,7 +188,7 @@ struct FWatercraftDespawnTelemetryEvent
 	struct FGuid                                       WatercraftId;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                     Location;                                                  // 0x0010(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Watercrafts_EWatercraftDespawnReason>  DespawnReason;                                             // 0x001C(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_IUG0[0x3];                                     // 0x001D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_EV4W[0x3];                                     // 0x001D(0x0003) MISSED OFFSET (PADDING)
 
 };
 
@@ -193,31 +218,6 @@ struct FEventEnteredWatercraft
 {
 	class AActor*                                      Watercraft;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                      Actor;                                                     // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct Watercrafts.RowboatDamageEffectData
-// 0x0018
-struct FRowboatDamageEffectData
-{
-	class UMaterialInstanceDynamic*                    DynamicMaterialInstance;                                   // 0x0000(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              FadeInDuration;                                            // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DK2O[0xC];                                     // 0x000C(0x000C) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct Watercrafts.RowboatStrainDamageData
-// 0x0020
-struct FRowboatStrainDamageData
-{
-	float                                              StormDamageScalar;                                         // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              WaterStrengthToCountAsStorm;                               // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              StormStrengthThresholdForDamage;                           // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MinStormDamageFrequencyInSeconds;                          // 0x000C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MaxStormDamageFrequencyInSeconds;                          // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              WorldEdgeDamageScalar;                                     // 0x0014(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MinWorldEdgeDamageFrequencyInSeconds;                      // 0x0018(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MaxWorldEdgeDamageFrequencyInSeconds;                      // 0x001C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 

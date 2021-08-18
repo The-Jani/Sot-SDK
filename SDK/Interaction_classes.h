@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -19,109 +19,32 @@ namespace CG
 // Classes
 //---------------------------------------------------------------------------
 
-// Class Interaction.MockActorWithCharacterInteractionComponent
-// 0x00B8 (FullSize[0x06E0] - InheritedSize[0x0628])
-class AMockActorWithCharacterInteractionComponent : public ACharacter
-{
-public:
-	unsigned char                                      UnknownData_VK4P[0x8];                                     // 0x0628(0x0008) Fix Super Size
-	unsigned char                                      UnknownData_VMR3[0x8];                                     // 0x0630(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UCharacterInteractionComponent*              CharacterInteractionComponent;                             // 0x0638(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YQK7[0xA0];                                    // 0x0640(0x00A0) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Interaction.MockActorWithCharacterInteractionComponent");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Interaction.MockInteractableService
-// 0x0018 (FullSize[0x0040] - InheritedSize[0x0028])
-class UMockInteractableService : public UObject
-{
-public:
-	unsigned char                                      UnknownData_CEW3[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Interaction.MockInteractableService");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Interaction.MockInteractorActor
-// 0x0028 (FullSize[0x0458] - InheritedSize[0x0430])
-class AMockInteractorActor : public AActor
-{
-public:
-	unsigned char                                      UnknownData_98E0[0x8];                                     // 0x0430(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UObject*                                     FocusedInteractable;                                       // 0x0438(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                     InteractedObject;                                          // 0x0440(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                      InteractNotificationType;                                  // 0x0448(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9MZU[0x8];                                     // 0x0450(0x0008) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Interaction.MockInteractorActor");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Interaction.SelfInteractionInterface
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class USelfInteractionInterface : public UInterface
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Interaction.SelfInteractionInterface");
-		return ptr;
-	}
-
-
-
-};
-
 // Class Interaction.InteractableComponent
 // 0x0050 (FullSize[0x0118] - InheritedSize[0x00C8])
 class UInteractableComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_VH6R[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6198[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FName                                       FeatureFlag;                                               // 0x00D0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	struct FVector                                     BoxExtent;                                                 // 0x00D8(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	struct FVector                                     BoxOrigin;                                                 // 0x00E4(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	struct FRotator                                    BoxRotation;                                               // 0x00F0(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	unsigned char                                      MayBeGrouped : 1;                                          // 0x00FC(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, Protected)
 	unsigned char                                      ProxyForActorInteraction : 1;                              // 0x00FC(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, Protected)
-	unsigned char                                      UnknownData_HKB4[0x3];                                     // 0x00FD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XT1C[0x3];                                     // 0x00FD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	bool                                               RequiresFacingFront;                                       // 0x0100(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	bool                                               RequiresNotAirborne;                                       // 0x0101(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
 	bool                                               RequiresNotSwimming;                                       // 0x0102(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_YM5J[0x5];                                     // 0x0103(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_W6XB[0x1];                                     // 0x0103(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              InteractionRadius;                                         // 0x0104(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	class UInteractableArea*                           InteractableArea;                                          // 0x0108(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Athena_EInteractableState>             CurrentInteractionState;                                   // 0x0110(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_G7VZ[0x7];                                     // 0x0111(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_KQED[0x7];                                     // 0x0111(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.InteractableComponent");
+		static UClass* ptr = UObject::FindClass("Class Interaction.InteractableComponent");
 		return ptr;
 	}
 
@@ -145,7 +68,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.InteractionValidatorSetterInterface");
+		static UClass* ptr = UObject::FindClass("Class Interaction.InteractionValidatorSetterInterface");
 		return ptr;
 	}
 
@@ -154,18 +77,18 @@ public:
 };
 
 // Class Interaction.CharacterInteractionComponent
-// 0x00C0 (FullSize[0x0640] - InheritedSize[0x0580])
+// 0x00C8 (FullSize[0x0680] - InheritedSize[0x05B8])
 class UCharacterInteractionComponent : public UBoxComponent
 {
 public:
-	unsigned char                                      UnknownData_Z1AN[0x8];                                     // 0x0580(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UInteractableArea*                           CurrentOptimalInteractable;                                // 0x0588(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_O1I9[0xB0];                                    // 0x0590(0x00B0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_669B[0x8];                                     // 0x05B8(0x0008) Fix Super Size
+	class UInteractableArea*                           CurrentOptimalInteractable;                                // 0x05C0(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_JJNF[0xB8];                                    // 0x05C8(0x00B8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.CharacterInteractionComponent");
+		static UClass* ptr = UObject::FindClass("Class Interaction.CharacterInteractionComponent");
 		return ptr;
 	}
 
@@ -186,7 +109,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.GroupedInteractableAreaComponent");
+		static UClass* ptr = UObject::FindClass("Class Interaction.GroupedInteractableAreaComponent");
 		return ptr;
 	}
 
@@ -201,14 +124,14 @@ class UInteractableArea : public UObject
 public:
 	struct FBoxSphereBounds                            Bounds;                                                    // 0x0028(0x001C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FName                                       Name;                                                      // 0x0044(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_MMG3[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_U4SF[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UObject*                                     Interactable;                                              // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                      Parent;                                                    // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.InteractableArea");
+		static UClass* ptr = UObject::FindClass("Class Interaction.InteractableArea");
 		return ptr;
 	}
 
@@ -234,7 +157,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.InteractableInterface");
+		static UClass* ptr = UObject::FindClass("Class Interaction.InteractableInterface");
 		return ptr;
 	}
 
@@ -255,6 +178,24 @@ public:
 	bool CanInteract(class AActor* InInteractor);
 };
 
+// Class Interaction.InteractableBlueprintFunctionLibrary
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UInteractableBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Interaction.InteractableBlueprintFunctionLibrary");
+		return ptr;
+	}
+
+
+
+	void STATIC_SetInteractionState(class AActor* InteractableActor, TEnumAsByte<Athena_EInteractableState> NewInteractableState);
+};
+
 // Class Interaction.InteractableIdentifierInterface
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 class UInteractableIdentifierInterface : public UInterface
@@ -264,7 +205,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.InteractableIdentifierInterface");
+		static UClass* ptr = UObject::FindClass("Class Interaction.InteractableIdentifierInterface");
 		return ptr;
 	}
 
@@ -281,7 +222,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.InteractableServiceInterface");
+		static UClass* ptr = UObject::FindClass("Class Interaction.InteractableServiceInterface");
 		return ptr;
 	}
 
@@ -294,14 +235,14 @@ public:
 class UInteractableService : public UObject
 {
 public:
-	unsigned char                                      UnknownData_PWV3[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LU7J[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UInteractableArea*>                   InteractableAreas;                                         // 0x0038(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData_PA4Y[0x28];                                    // 0x0048(0x0028) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_W26O[0x28];                                    // 0x0048(0x0028) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.InteractableService");
+		static UClass* ptr = UObject::FindClass("Class Interaction.InteractableService");
 		return ptr;
 	}
 
@@ -318,7 +259,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.InteractionValidatorOwnerInterface");
+		static UClass* ptr = UObject::FindClass("Class Interaction.InteractionValidatorOwnerInterface");
 		return ptr;
 	}
 
@@ -335,7 +276,85 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Interaction.InteractorInterface");
+		static UClass* ptr = UObject::FindClass("Class Interaction.InteractorInterface");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Interaction.MockActorWithCharacterInteractionComponent
+// 0x00B8 (FullSize[0x0690] - InheritedSize[0x05D8])
+class AMockActorWithCharacterInteractionComponent : public ACharacter
+{
+public:
+	unsigned char                                      UnknownData_NMQW[0x8];                                     // 0x05D8(0x0008) Fix Super Size
+	unsigned char                                      UnknownData_S9OE[0x8];                                     // 0x05E0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UCharacterInteractionComponent*              CharacterInteractionComponent;                             // 0x05E8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_STPL[0xA0];                                    // 0x05F0(0x00A0) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Interaction.MockActorWithCharacterInteractionComponent");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Interaction.MockInteractableService
+// 0x0018 (FullSize[0x0040] - InheritedSize[0x0028])
+class UMockInteractableService : public UObject
+{
+public:
+	unsigned char                                      UnknownData_QG8W[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Interaction.MockInteractableService");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Interaction.MockInteractorActor
+// 0x0028 (FullSize[0x03F8] - InheritedSize[0x03D0])
+class AMockInteractorActor : public AActor
+{
+public:
+	unsigned char                                      UnknownData_CO1S[0x8];                                     // 0x03D0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UObject*                                     FocusedInteractable;                                       // 0x03D8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                     InteractedObject;                                          // 0x03E0(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                      InteractNotificationType;                                  // 0x03E8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_2OJG[0x8];                                     // 0x03F0(0x0008) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Interaction.MockInteractorActor");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Interaction.SelfInteractionInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class USelfInteractionInterface : public UInterface
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Interaction.SelfInteractionInterface");
 		return ptr;
 	}
 

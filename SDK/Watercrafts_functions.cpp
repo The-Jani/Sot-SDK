@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -18,13 +18,33 @@ namespace CG
 // Functions
 //---------------------------------------------------------------------------
 
+// Function Watercrafts.FakeShip.OnAttachedItemEndPlay
+// (Final, Native, Private)
+// Parameters:
+// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+void AFakeShip::OnAttachedItemEndPlay(class AActor* Actor)
+{
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Watercrafts.FakeShip.OnAttachedItemEndPlay");
+
+	AFakeShip_OnAttachedItemEndPlay_Params params;
+	params.Actor = Actor;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
 // Function Watercrafts.ItemProxyWatercraftTrackerComponent.OnRep_CurrentWatercraft
 // (Final, Native, Private)
 // Parameters:
 // class AActor*                  PreviousWatercraft             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UItemProxyWatercraftTrackerComponent::OnRep_CurrentWatercraft(class AActor* PreviousWatercraft)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.ItemProxyWatercraftTrackerComponent.OnRep_CurrentWatercraft");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Watercrafts.ItemProxyWatercraftTrackerComponent.OnRep_CurrentWatercraft");
 
 	UItemProxyWatercraftTrackerComponent_OnRep_CurrentWatercraft_Params params;
 	params.PreviousWatercraft = PreviousWatercraft;
@@ -44,7 +64,7 @@ void UItemProxyWatercraftTrackerComponent::OnRep_CurrentWatercraft(class AActor*
 // class AActor*                  DestroyedWatercraft            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UItemProxyWatercraftTrackerComponent::OnCurrentWatercraftDestroyed(class AActor* DestroyedWatercraft)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.ItemProxyWatercraftTrackerComponent.OnCurrentWatercraftDestroyed");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Watercrafts.ItemProxyWatercraftTrackerComponent.OnCurrentWatercraftDestroyed");
 
 	UItemProxyWatercraftTrackerComponent_OnCurrentWatercraftDestroyed_Params params;
 	params.DestroyedWatercraft = DestroyedWatercraft;
@@ -64,7 +84,7 @@ void UItemProxyWatercraftTrackerComponent::OnCurrentWatercraftDestroyed(class AA
 // struct FName                   InBoneName                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void AWatercraft::OnRigidBodyWake(const struct FName& InBoneName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.Watercraft.OnRigidBodyWake");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Watercrafts.Watercraft.OnRigidBodyWake");
 
 	AWatercraft_OnRigidBodyWake_Params params;
 	params.InBoneName = InBoneName;
@@ -84,7 +104,7 @@ void AWatercraft::OnRigidBodyWake(const struct FName& InBoneName)
 // struct FName                   InBoneName                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void AWatercraft::OnRigidBodySleep(const struct FName& InBoneName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.Watercraft.OnRigidBodySleep");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Watercrafts.Watercraft.OnRigidBodySleep");
 
 	AWatercraft_OnRigidBodySleep_Params params;
 	params.InBoneName = InBoneName;
@@ -104,7 +124,7 @@ void AWatercraft::OnRigidBodySleep(const struct FName& InBoneName)
 // TArray<class UChildActorComponent*> InAlwaysEnabledInteractables   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference)
 void ARowboat::SetAlwaysEnabledInteractables(TArray<class UChildActorComponent*> InAlwaysEnabledInteractables)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.Rowboat.SetAlwaysEnabledInteractables");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Watercrafts.Rowboat.SetAlwaysEnabledInteractables");
 
 	ARowboat_SetAlwaysEnabledInteractables_Params params;
 	params.InAlwaysEnabledInteractables = InAlwaysEnabledInteractables;
@@ -122,7 +142,7 @@ void ARowboat::SetAlwaysEnabledInteractables(TArray<class UChildActorComponent*>
 // (Final, Native, Private)
 void ARowboat::OnRep_IsSinking()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.Rowboat.OnRep_IsSinking");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Watercrafts.Rowboat.OnRep_IsSinking");
 
 	ARowboat_OnRep_IsSinking_Params params;
 
@@ -132,132 +152,6 @@ void ARowboat::OnRep_IsSinking()
 	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
-}
-
-
-// Function Watercrafts.RowingCompositeInputHandler.OnUseRightOar
-// (Final, Native, Private)
-// Parameters:
-// TEnumAsByte<AthenaInput_EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-TEnumAsByte<AthenaInput_EInputHandlerResult> URowingCompositeInputHandler::OnUseRightOar()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.RowingCompositeInputHandler.OnUseRightOar");
-
-	URowingCompositeInputHandler_OnUseRightOar_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
-
-// Function Watercrafts.RowingCompositeInputHandler.OnUseLeftOar
-// (Final, Native, Private)
-// Parameters:
-// TEnumAsByte<AthenaInput_EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-TEnumAsByte<AthenaInput_EInputHandlerResult> URowingCompositeInputHandler::OnUseLeftOar()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.RowingCompositeInputHandler.OnUseLeftOar");
-
-	URowingCompositeInputHandler_OnUseLeftOar_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
-
-// Function Watercrafts.RowingCompositeInputHandler.OnStopUseRightOar
-// (Final, Native, Private)
-// Parameters:
-// TEnumAsByte<AthenaInput_EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-TEnumAsByte<AthenaInput_EInputHandlerResult> URowingCompositeInputHandler::OnStopUseRightOar()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.RowingCompositeInputHandler.OnStopUseRightOar");
-
-	URowingCompositeInputHandler_OnStopUseRightOar_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
-
-// Function Watercrafts.RowingCompositeInputHandler.OnStopUseLeftOar
-// (Final, Native, Private)
-// Parameters:
-// TEnumAsByte<AthenaInput_EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-TEnumAsByte<AthenaInput_EInputHandlerResult> URowingCompositeInputHandler::OnStopUseLeftOar()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.RowingCompositeInputHandler.OnStopUseLeftOar");
-
-	URowingCompositeInputHandler_OnStopUseLeftOar_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
-
-// Function Watercrafts.RowingCompositeInputHandler.OnBrakeRightOar
-// (Final, Native, Private)
-// Parameters:
-// TEnumAsByte<AthenaInput_EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-TEnumAsByte<AthenaInput_EInputHandlerResult> URowingCompositeInputHandler::OnBrakeRightOar()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.RowingCompositeInputHandler.OnBrakeRightOar");
-
-	URowingCompositeInputHandler_OnBrakeRightOar_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
-
-// Function Watercrafts.RowingCompositeInputHandler.OnBrakeLeftOar
-// (Final, Native, Private)
-// Parameters:
-// TEnumAsByte<AthenaInput_EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-TEnumAsByte<AthenaInput_EInputHandlerResult> URowingCompositeInputHandler::OnBrakeLeftOar()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.RowingCompositeInputHandler.OnBrakeLeftOar");
-
-	URowingCompositeInputHandler_OnBrakeLeftOar_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
 }
 
 
@@ -271,7 +165,7 @@ TEnumAsByte<AthenaInput_EInputHandlerResult> URowingCompositeInputHandler::OnBra
 // class AWatercraft*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 class AWatercraft* UWatercraftBlueprintFunctionLibrary::STATIC_SpawnWatercraft(class UObject* WorldContextObject, class UClass* WatercraftClass, const struct FVector& Location, const struct FRotator& Rotation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.WatercraftBlueprintFunctionLibrary.SpawnWatercraft");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Watercrafts.WatercraftBlueprintFunctionLibrary.SpawnWatercraft");
 
 	UWatercraftBlueprintFunctionLibrary_SpawnWatercraft_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -296,7 +190,7 @@ class AWatercraft* UWatercraftBlueprintFunctionLibrary::STATIC_SpawnWatercraft(c
 // class AActor*                  WatercraftActor                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UWatercraftTrackerComponent::OnWatercraftDestroyed(class AActor* WatercraftActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Watercrafts.WatercraftTrackerComponent.OnWatercraftDestroyed");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Watercrafts.WatercraftTrackerComponent.OnWatercraftDestroyed");
 
 	UWatercraftTrackerComponent_OnWatercraftDestroyed_Params params;
 	params.WatercraftActor = WatercraftActor;

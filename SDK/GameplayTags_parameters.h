@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -19,14 +19,6 @@ namespace CG
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
-
-// Function GameplayTags.GameplayTagsManager.RequestGameplayTag
-struct UGameplayTagsManager_RequestGameplayTag_Params
-{
-	struct FName                                       TagName;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               ErrorIfNotFound;                                           // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FGameplayTag                                ReturnValue;                                               // (Parm, OutParm, ReturnParm)
-};
 
 // Function GameplayTags.GameplayTagAssetInterface.HasMatchingGameplayTag
 struct UGameplayTagAssetInterface_HasMatchingGameplayTag_Params
@@ -74,7 +66,6 @@ struct UBlueprintGameplayTagLibrary_MakeGameplayTagQuery_Params
 // Function GameplayTags.BlueprintGameplayTagLibrary.HasAllMatchingGameplayTags
 struct UBlueprintGameplayTagLibrary_HasAllMatchingGameplayTags_Params
 {
-	TScriptInterface<class UGameplayTagAssetInterface> TagContainerInterface;                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 	struct FGameplayTagContainer                       OtherContainer;                                            // (ConstParm, Parm, OutParm, ReferenceParm)
 	bool                                               bCountEmptyAsMatch;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
@@ -100,7 +91,6 @@ struct UBlueprintGameplayTagLibrary_DoGameplayTagsMatch_Params
 // Function GameplayTags.BlueprintGameplayTagLibrary.DoesTagAssetInterfaceHaveTag
 struct UBlueprintGameplayTagLibrary_DoesTagAssetInterfaceHaveTag_Params
 {
-	TScriptInterface<class UGameplayTagAssetInterface> TagContainerInterface;                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 	TEnumAsByte<GameplayTags_EGameplayTagMatchType>    ContainerTagsMatchType;                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGameplayTag                                Tag;                                                       // (ConstParm, Parm, OutParm, ReferenceParm)
 	TEnumAsByte<GameplayTags_EGameplayTagMatchType>    TagMatchType;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -149,6 +139,14 @@ struct UBlueprintGameplayTagLibrary_AppendGameplayTagContainers_Params
 	struct FGameplayTagContainer                       InTagContainer;                                            // (ConstParm, Parm, OutParm, ReferenceParm)
 	struct FGameplayTagContainer                       InOutTagContainer;                                         // (Parm, OutParm, ReferenceParm)
 	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+
+// Function GameplayTags.GameplayTagsManager.RequestGameplayTag
+struct UGameplayTagsManager_RequestGameplayTag_Params
+{
+	struct FName                                       TagName;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               ErrorIfNotFound;                                           // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FGameplayTag                                ReturnValue;                                               // (Parm, OutParm, ReturnParm)
 };
 
 }

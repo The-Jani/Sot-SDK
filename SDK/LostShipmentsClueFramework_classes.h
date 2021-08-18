@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -19,6 +19,417 @@ namespace CG
 // Classes
 //---------------------------------------------------------------------------
 
+// Class LostShipmentsClueFramework.ClueSiteData
+// 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+class UClueSiteData : public UObject
+{
+public:
+	TEnumAsByte<Athena_ETrackedOwnerType>              DebrisTrackingType;                                        // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_AP9Q[0xF];                                     // 0x0029(0x000F) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueSiteData");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.ClueSiteType
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UClueSiteType : public UObject
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueSiteType");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.LandClueCreator
+// 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
+class ULandClueCreator : public UObject
+{
+public:
+	unsigned char                                      UnknownData_HS6X[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.LandClueCreator");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.SeaClueCreator
+// 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
+class USeaClueCreator : public UObject
+{
+public:
+	unsigned char                                      UnknownData_2J9C[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.SeaClueCreator");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.ClueChoiceSelectionStrategy
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UClueChoiceSelectionStrategy : public UObject
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueChoiceSelectionStrategy");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.FixedClueChoiceSelectionStrategy
+// 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
+class UFixedClueChoiceSelectionStrategy : public UClueChoiceSelectionStrategy
+{
+public:
+	int                                                IndexToSelect;                                             // 0x0028(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_2F92[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.FixedClueChoiceSelectionStrategy");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.RandomClueChoiceSelectionStrategy
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class URandomClueChoiceSelectionStrategy : public UClueChoiceSelectionStrategy
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.RandomClueChoiceSelectionStrategy");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.ClueDestinationDescriptor
+// 0x0018 (FullSize[0x0040] - InheritedSize[0x0028])
+class UClueDestinationDescriptor : public UObject
+{
+public:
+	unsigned char                                      UnknownData_F91X[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueDestinationDescriptor");
+		return ptr;
+	}
+
+
+
+	void OnRep_DestinationInfo();
+};
+
+// Class LostShipmentsClueFramework.ClueDescriptor
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UClueDescriptor : public UObject
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueDescriptor");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.ClueConnectionBlueprintFunctionLibrary
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UClueConnectionBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueConnectionBlueprintFunctionLibrary");
+		return ptr;
+	}
+
+
+
+	class UClueDescriptor* STATIC_CreateCluePointingToSite(class UClueConnectionConfig* ConnectionConfiguration, int Difficulty, TArray<class UClass*> AllowedClueTypes, class UTaleQuestSelectorService* SelectorService, const struct FVector& SourceLocation, const struct FClueSite& TargetSite);
+};
+
+// Class LostShipmentsClueFramework.ClueDescriptorGenerator
+// 0x0018 (FullSize[0x0040] - InheritedSize[0x0028])
+class UClueDescriptorGenerator : public UObject
+{
+public:
+	class UClass*                                      DescriptorType;                                            // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash)
+	TArray<class UClass*>                              SupportedDestinationTypes;                                 // 0x0030(0x0010) (Edit, ZeroConstructor, UObjectWrapper)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueDescriptorGenerator");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.ClueDestinationGenerator
+// 0x0068 (FullSize[0x0090] - InheritedSize[0x0028])
+class UClueDestinationGenerator : public UObject
+{
+public:
+	class UClass*                                      RequiredClueSiteDataType;                                  // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash)
+	TArray<struct FWeightedClueDestinationDescriptor>  WeightedSupportedDescriptorTypes;                          // 0x0030(0x0010) (Edit, ZeroConstructor, Protected)
+	unsigned char                                      UnknownData_P9N7[0x50];                                    // 0x0040(0x0050) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueDestinationGenerator");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.ClueConnectionConfig
+// 0x0030 (FullSize[0x0058] - InheritedSize[0x0028])
+class UClueConnectionConfig : public UDataAsset
+{
+public:
+	TArray<struct FClueSiteTypeSupportedDescribedByEntry> CluesThatCanDescribeSites;                                 // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UClueDescriptorGenerator*>            ClueGenerators;                                            // 0x0038(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<class UClueDestinationGenerator*>           DestinationGenerators;                                     // 0x0048(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueConnectionConfig");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.ClueDescriptorContainerInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UClueDescriptorContainerInterface : public UInterface
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueDescriptorContainerInterface");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.ClueDescriptorContainerComponent
+// 0x0018 (FullSize[0x00E0] - InheritedSize[0x00C8])
+class UClueDescriptorContainerComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData_CGAO[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UClueDescriptor*                             CurrentClue;                                               // 0x00D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	bool                                               HasClueBeenGiven;                                          // 0x00D8(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
+	unsigned char                                      UnknownData_JN67[0x7];                                     // 0x00D9(0x0007) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueDescriptorContainerComponent");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.ClueFactoryConfig
+// 0x0038 (FullSize[0x0060] - InheritedSize[0x0028])
+class UClueFactoryConfig : public UDataAsset
+{
+public:
+	TArray<class ULandClueCreator*>                    LandClueCreators;                                          // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<class USeaClueCreator*>                     SeaClueCreators;                                           // 0x0038(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference)
+	class UClueChoiceSelectionStrategy*                ChoiceStrategy;                                            // 0x0048(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<struct FRestrictedClueType>                 RestrictedClueTypes;                                       // 0x0050(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueFactoryConfig");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.ClueFactory
+// 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
+class UClueFactory : public UObject
+{
+public:
+	class UClueFactoryConfig*                          Config;                                                    // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueFactory");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.ClueLifetimeBlueprintFunctionLibrary
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UClueLifetimeBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueLifetimeBlueprintFunctionLibrary");
+		return ptr;
+	}
+
+
+
+	void STATIC_GiveClueToParticipant(class AActor* Participant, class UClueDescriptor* Clue, class UClass* ClueSite);
+};
+
+// Class LostShipmentsClueFramework.ClueSiteLootRestrictionsDataAsset
+// 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+class UClueSiteLootRestrictionsDataAsset : public UDataAsset
+{
+public:
+	TArray<struct FClueSiteLootRestriction>            ClueSiteLootRestrictions;                                  // 0x0028(0x0010) (Edit, ZeroConstructor)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueSiteLootRestrictionsDataAsset");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.DebrisForVoyageRankDescAsset
+// 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+class UDebrisForVoyageRankDescAsset : public UDataAsset
+{
+public:
+	TArray<struct FDebrisToRangeDist>                  RankBasedDebrisDistribution;                               // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.DebrisForVoyageRankDescAsset");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.EnvQueryTest_SeaClueSpawnLocation
+// 0x0028 (FullSize[0x0198] - InheritedSize[0x0170])
+class UEnvQueryTest_SeaClueSpawnLocation : public UEnvQueryTest
+{
+public:
+	float                                              MinProjectionDistance;                                     // 0x0170(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MaxProjectionDistance;                                     // 0x0174(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              ProjectionAngleInDegrees;                                  // 0x0178(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              IslandProximitySafeThreshold;                              // 0x017C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                      ContextSourcePoint;                                        // 0x0180(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	class UClass*                                      ContextProjectionPoint;                                    // 0x0188(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_EV0D[0x8];                                     // 0x0190(0x0008) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.EnvQueryTest_SeaClueSpawnLocation");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.LootForVoyageRankDescAsset
+// 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+class ULootForVoyageRankDescAsset : public UDataAsset
+{
+public:
+	TArray<struct FLootToRangeDist>                    RankBasedLootDistribution;                                 // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.LootForVoyageRankDescAsset");
+		return ptr;
+	}
+
+
+
+};
+
 // Class LostShipmentsClueFramework.NPCLootSpawnInterface
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 class UNPCLootSpawnInterface : public UInterface
@@ -28,7 +439,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.NPCLootSpawnInterface");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.NPCLootSpawnInterface");
 		return ptr;
 	}
 
@@ -41,13 +452,13 @@ public:
 class UNPCLootSpawnComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_2VQV[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_A36B[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FVector>                             LootItemSpawnRelativeLocations;                            // 0x00D0(0x0010) (Edit, ZeroConstructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.NPCLootSpawnComponent");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.NPCLootSpawnComponent");
 		return ptr;
 	}
 
@@ -65,7 +476,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.SeaClueSiteTypesDataAsset");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.SeaClueSiteTypesDataAsset");
 		return ptr;
 	}
 
@@ -74,18 +485,18 @@ public:
 };
 
 // Class LostShipmentsClueFramework.TaleQuestChooseLandOrSeaStep
-// 0x0068 (FullSize[0x00D0] - InheritedSize[0x0068])
+// 0x0068 (FullSize[0x00F0] - InheritedSize[0x0088])
 class UTaleQuestChooseLandOrSeaStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData_TLIN[0x18];                                    // 0x0068(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class USeaClueSiteTypesDataAsset*                  SeaClueSiteTypes;                                          // 0x0080(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_9L78[0x48];                                    // 0x0088(0x0048) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_1NMJ[0x18];                                    // 0x0088(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class USeaClueSiteTypesDataAsset*                  SeaClueSiteTypes;                                          // 0x00A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_RZOP[0x48];                                    // 0x00A8(0x0048) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestChooseLandOrSeaStep");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestChooseLandOrSeaStep");
 		return ptr;
 	}
 
@@ -94,18 +505,19 @@ public:
 };
 
 // Class LostShipmentsClueFramework.TaleQuestClueSiteService
-// 0x0068 (FullSize[0x00A8] - InheritedSize[0x0040])
+// 0x0078 (FullSize[0x00D8] - InheritedSize[0x0060])
 class UTaleQuestClueSiteService : public UTaleQuestService
 {
 public:
-	class UTaleQuestClueSiteServiceDesc*               Desc;                                                      // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FClueSite>                           ClueSites;                                                 // 0x0048(0x0010) (ZeroConstructor)
-	TMap<TEnumAsByte<LostShipmentsClueFramework_EClueSiteLootType>, struct FClueSiteLootHistory> SpawnedLoot;                                               // 0x0058(0x0050) (ZeroConstructor)
+	class UTaleQuestClueSiteServiceDesc*               Desc;                                                      // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FClueSite>                           ClueSites;                                                 // 0x0068(0x0010) (ZeroConstructor)
+	TMap<TEnumAsByte<LostShipmentsClueFramework_EClueSiteLootType>, struct FClueSiteLootHistory> SpawnedLoot;                                               // 0x0078(0x0050) (ZeroConstructor)
+	TArray<struct FGuid>                               DebugClueSiteIds;                                          // 0x00C8(0x0010) (ZeroConstructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestClueSiteService");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestClueSiteService");
 		return ptr;
 	}
 
@@ -123,7 +535,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestClueSiteServiceDesc");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestClueSiteServiceDesc");
 		return ptr;
 	}
 
@@ -142,7 +554,7 @@ public:
 	float                                              MaxProjectionProportion;                                   // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              LandClueChanceWhenPreviousClueWasSea;                      // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              LandClueChanceWhenPreviousClueWasLand;                     // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HYT7[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_44LH[0x4];                                     // 0x004C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FQuestVariableVector                        ProjectionPoint;                                           // 0x0050(0x0010) (Edit)
 	struct FQuestVariableTradeRouteData                TradeRouteData;                                            // 0x0060(0x0010) (Edit)
 	struct FQuestVariableBool                          IsSeaLocation;                                             // 0x0070(0x0010) (Edit)
@@ -151,7 +563,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestChooseLandOrSeaStepDesc");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestChooseLandOrSeaStepDesc");
 		return ptr;
 	}
 
@@ -160,18 +572,18 @@ public:
 };
 
 // Class LostShipmentsClueFramework.TaleQuestGenerateCluePointingToSiteStep
-// 0x0058 (FullSize[0x00C0] - InheritedSize[0x0068])
+// 0x0058 (FullSize[0x00E0] - InheritedSize[0x0088])
 class UTaleQuestGenerateCluePointingToSiteStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData_J4FV[0x40];                                    // 0x0068(0x0040) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<class UClass*>                              AllowedClueTypes;                                          // 0x00A8(0x0010) (ZeroConstructor, UObjectWrapper)
-	class UClueConnectionConfig*                       ConnectionConfiguration;                                   // 0x00B8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_N29W[0x40];                                    // 0x0088(0x0040) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<class UClass*>                              AllowedClueTypes;                                          // 0x00C8(0x0010) (ZeroConstructor, UObjectWrapper)
+	class UClueConnectionConfig*                       ConnectionConfiguration;                                   // 0x00D8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestGenerateCluePointingToSiteStep");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestGenerateCluePointingToSiteStep");
 		return ptr;
 	}
 
@@ -194,7 +606,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestGenerateCluePointingToSiteStepDesc");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestGenerateCluePointingToSiteStepDesc");
 		return ptr;
 	}
 
@@ -203,17 +615,17 @@ public:
 };
 
 // Class LostShipmentsClueFramework.TaleQuestGenerateClueSiteAtSeaLocationStep
-// 0x0028 (FullSize[0x0090] - InheritedSize[0x0068])
+// 0x0028 (FullSize[0x00B0] - InheritedSize[0x0088])
 class UTaleQuestGenerateClueSiteAtSeaLocationStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData_4DSG[0x20];                                    // 0x0068(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UClueFactoryConfig*                          ClueConfig;                                                // 0x0088(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_66QY[0x20];                                    // 0x0088(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UClueFactoryConfig*                          ClueConfig;                                                // 0x00A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestGenerateClueSiteAtSeaLocationStep");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestGenerateClueSiteAtSeaLocationStep");
 		return ptr;
 	}
 
@@ -233,7 +645,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestGenerateClueSiteAtSeaLocationStepDesc");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestGenerateClueSiteAtSeaLocationStepDesc");
 		return ptr;
 	}
 
@@ -242,17 +654,17 @@ public:
 };
 
 // Class LostShipmentsClueFramework.TaleQuestGenerateClueSiteOnIslandStep
-// 0x0028 (FullSize[0x0090] - InheritedSize[0x0068])
+// 0x0028 (FullSize[0x00B0] - InheritedSize[0x0088])
 class UTaleQuestGenerateClueSiteOnIslandStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData_3RCT[0x20];                                    // 0x0068(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UClueFactoryConfig*                          ClueConfig;                                                // 0x0088(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_1KQC[0x20];                                    // 0x0088(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UClueFactoryConfig*                          ClueConfig;                                                // 0x00A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestGenerateClueSiteOnIslandStep");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestGenerateClueSiteOnIslandStep");
 		return ptr;
 	}
 
@@ -272,7 +684,46 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestGenerateClueSiteOnIslandStepDesc");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestGenerateClueSiteOnIslandStepDesc");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.TaleQuestGenerateDebrisTypeForVoyageRankStep
+// 0x0028 (FullSize[0x00B0] - InheritedSize[0x0088])
+class UTaleQuestGenerateDebrisTypeForVoyageRankStep : public UTaleQuestStep
+{
+public:
+	class UDebrisForVoyageRankDescAsset*               DebrisForRankDescAsset;                                    // 0x0088(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_I9PD[0x20];                                    // 0x0090(0x0020) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestGenerateDebrisTypeForVoyageRankStep");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.TaleQuestGenerateDebrisTypeForVoyageRankStepDesc
+// 0x0028 (FullSize[0x0058] - InheritedSize[0x0030])
+class UTaleQuestGenerateDebrisTypeForVoyageRankStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableInt                           VoyageRank;                                                // 0x0030(0x0010) (Edit)
+	struct FQuestVariableActorAssetTypeArray           DebrisTypeArray;                                           // 0x0040(0x0010) (Edit)
+	class UDebrisForVoyageRankDescAsset*               DebrisForRankDescAsset;                                    // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestGenerateDebrisTypeForVoyageRankStepDesc");
 		return ptr;
 	}
 
@@ -281,17 +732,17 @@ public:
 };
 
 // Class LostShipmentsClueFramework.TaleQuestGenerateLootDescForVoyageRankStep
-// 0x0028 (FullSize[0x0090] - InheritedSize[0x0068])
+// 0x0028 (FullSize[0x00B0] - InheritedSize[0x0088])
 class UTaleQuestGenerateLootDescForVoyageRankStep : public UTaleQuestStep
 {
 public:
-	class ULootForVoyageRankDescAsset*                 LootForRankDescAsset;                                      // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DKZH[0x20];                                    // 0x0070(0x0020) MISSED OFFSET (PADDING)
+	class ULootForVoyageRankDescAsset*                 LootForRankDescAsset;                                      // 0x0088(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_2NIG[0x20];                                    // 0x0090(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestGenerateLootDescForVoyageRankStep");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestGenerateLootDescForVoyageRankStep");
 		return ptr;
 	}
 
@@ -311,7 +762,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestGenerateLootDescForVoyageRankStepDesc");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestGenerateLootDescForVoyageRankStepDesc");
 		return ptr;
 	}
 
@@ -320,17 +771,17 @@ public:
 };
 
 // Class LostShipmentsClueFramework.TaleQuestIsClueOfTypeStep
-// 0x0028 (FullSize[0x0090] - InheritedSize[0x0068])
+// 0x0028 (FullSize[0x00B0] - InheritedSize[0x0088])
 class UTaleQuestIsClueOfTypeStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData_11SE[0x20];                                    // 0x0068(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UClass*                                      ClueSiteTypeToMatchAgainst;                                // 0x0088(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_6W9D[0x20];                                    // 0x0088(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UClass*                                      ClueSiteTypeToMatchAgainst;                                // 0x00A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestIsClueOfTypeStep");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestIsClueOfTypeStep");
 		return ptr;
 	}
 
@@ -350,7 +801,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestIsClueOfTypeStepDesc");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestIsClueOfTypeStepDesc");
 		return ptr;
 	}
 
@@ -359,19 +810,19 @@ public:
 };
 
 // Class LostShipmentsClueFramework.TaleQuestSelectClueSiteForLootStep
-// 0x0038 (FullSize[0x00A0] - InheritedSize[0x0068])
+// 0x0038 (FullSize[0x00C0] - InheritedSize[0x0088])
 class UTaleQuestSelectClueSiteForLootStep : public UTaleQuestStep
 {
 public:
-	class UTaleQuestArrayEntrySelectionStrategy*       SelectionStrategy;                                         // 0x0068(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClueSiteLootRestrictionsDataAsset*          ClueSiteLootRestrictions;                                  // 0x0070(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<LostShipmentsClueFramework_EClueSiteLootType> LootType;                                                  // 0x0078(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_C2V3[0x27];                                    // 0x0079(0x0027) MISSED OFFSET (PADDING)
+	class UTaleQuestArrayEntrySelectionStrategy*       SelectionStrategy;                                         // 0x0088(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClueSiteLootRestrictionsDataAsset*          ClueSiteLootRestrictions;                                  // 0x0090(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<LostShipmentsClueFramework_EClueSiteLootType> LootType;                                                  // 0x0098(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_SM3T[0x27];                                    // 0x0099(0x0027) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestSelectClueSiteForLootStep");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestSelectClueSiteForLootStep");
 		return ptr;
 	}
 
@@ -387,14 +838,52 @@ public:
 	class UTaleQuestArrayEntrySelectionStrategy*       SelectionStrategy;                                         // 0x0030(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UClueSiteLootRestrictionsDataAsset*          ClueSiteLootRestrictions;                                  // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<LostShipmentsClueFramework_EClueSiteLootType> LootType;                                                  // 0x0040(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_L4RO[0x7];                                     // 0x0041(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YP5A[0x7];                                     // 0x0041(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FQuestVariableClueSite                      OutputClueSite;                                            // 0x0048(0x0010) (Edit)
 	struct FQuestVariableBool                          MaxedAllClueSites;                                         // 0x0058(0x0010) (Edit)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestSelectClueSiteForLootStepDesc");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestSelectClueSiteForLootStepDesc");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.TaleQuestSpawnDebrisAtClueSiteStep
+// 0x0048 (FullSize[0x00D0] - InheritedSize[0x0088])
+class UTaleQuestSpawnDebrisAtClueSiteStep : public UTaleQuestStep
+{
+public:
+	unsigned char                                      UnknownData_T24D[0x48];                                    // 0x0088(0x0048) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestSpawnDebrisAtClueSiteStep");
+		return ptr;
+	}
+
+
+
+};
+
+// Class LostShipmentsClueFramework.TaleQuestSpawnDebrisAtClueSiteStepDesc
+// 0x0030 (FullSize[0x0060] - InheritedSize[0x0030])
+class UTaleQuestSpawnDebrisAtClueSiteStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableClueSite                      ClueSiteVar;                                               // 0x0030(0x0010) (Edit)
+	struct FQuestVariableActorAssetType                DebrisTypeVar;                                             // 0x0040(0x0010) (Edit)
+	struct FQuestVariableActor                         OutDebrisActorVar;                                         // 0x0050(0x0010) (Edit)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestSpawnDebrisAtClueSiteStepDesc");
 		return ptr;
 	}
 
@@ -403,7 +892,7 @@ public:
 };
 
 // Class LostShipmentsClueFramework.TaleQuestSpawnLootItemInClueSiteStep
-// 0x0000 (FullSize[0x0068] - InheritedSize[0x0068])
+// 0x0000 (FullSize[0x0088] - InheritedSize[0x0088])
 class UTaleQuestSpawnLootItemInClueSiteStep : public UTaleQuestStep
 {
 public:
@@ -411,7 +900,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestSpawnLootItemInClueSiteStep");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestSpawnLootItemInClueSiteStep");
 		return ptr;
 	}
 
@@ -428,12 +917,12 @@ public:
 	struct FQuestVariableClueSite                      ClueSite;                                                  // 0x0040(0x0010) (Edit)
 	struct FQuestVariableItemInfo                      SpawnedLootItem;                                           // 0x0050(0x0010) (Edit)
 	bool                                               Tracked;                                                   // 0x0060(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_SYYC[0x7];                                     // 0x0061(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_BROL[0x7];                                     // 0x0061(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestSpawnLootItemInClueSiteStepDesc");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestSpawnLootItemInClueSiteStepDesc");
 		return ptr;
 	}
 
@@ -442,7 +931,7 @@ public:
 };
 
 // Class LostShipmentsClueFramework.TaleQuestStoreClueOnActorStep
-// 0x0000 (FullSize[0x0068] - InheritedSize[0x0068])
+// 0x0000 (FullSize[0x0088] - InheritedSize[0x0088])
 class UTaleQuestStoreClueOnActorStep : public UTaleQuestStep
 {
 public:
@@ -450,7 +939,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestStoreClueOnActorStep");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestStoreClueOnActorStep");
 		return ptr;
 	}
 
@@ -470,7 +959,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestStoreClueOnActorStepDesc");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestStoreClueOnActorStepDesc");
 		return ptr;
 	}
 
@@ -479,16 +968,16 @@ public:
 };
 
 // Class LostShipmentsClueFramework.TaleQuestUpdateBuoyancyAutoSinkSettingForItemStep
-// 0x0018 (FullSize[0x0080] - InheritedSize[0x0068])
+// 0x0018 (FullSize[0x00A0] - InheritedSize[0x0088])
 class UTaleQuestUpdateBuoyancyAutoSinkSettingForItemStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData_V93A[0x18];                                    // 0x0068(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_OYTY[0x18];                                    // 0x0088(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestUpdateBuoyancyAutoSinkSettingForItemStep");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestUpdateBuoyancyAutoSinkSettingForItemStep");
 		return ptr;
 	}
 
@@ -503,12 +992,12 @@ class UTaleQuestUpdateBuoyancyAutoSinkSettingForItemStepDesc : public UTaleQuest
 public:
 	struct FQuestVariableItemInfo                      Item;                                                      // 0x0030(0x0010) (Edit)
 	bool                                               EnableAutoSink;                                            // 0x0040(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_LI1Y[0x7];                                     // 0x0041(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_H8V7[0x7];                                     // 0x0041(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestUpdateBuoyancyAutoSinkSettingForItemStepDesc");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.TaleQuestUpdateBuoyancyAutoSinkSettingForItemStepDesc");
 		return ptr;
 	}
 
@@ -516,392 +1005,17 @@ public:
 
 };
 
-// Class LostShipmentsClueFramework.ClueSiteData
+// Class LostShipmentsClueFramework.WeightedDebrisDataAsset
 // 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
-class UClueSiteData : public UObject
+class UWeightedDebrisDataAsset : public UDataAsset
 {
 public:
-	TEnumAsByte<Athena_ETrackedOwnerType>              DebrisTrackingType;                                        // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2LWQ[0xF];                                     // 0x0029(0x000F) MISSED OFFSET (PADDING)
+	TArray<struct FWeightedDebris>                     Debris;                                                    // 0x0028(0x0010) (Edit, ZeroConstructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueSiteData");
-		return ptr;
-	}
-
-
-
-};
-
-// Class LostShipmentsClueFramework.ClueSiteType
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UClueSiteType : public UObject
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueSiteType");
-		return ptr;
-	}
-
-
-
-};
-
-// Class LostShipmentsClueFramework.LandClueCreator
-// 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
-class ULandClueCreator : public UObject
-{
-public:
-	unsigned char                                      UnknownData_6WDY[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.LandClueCreator");
-		return ptr;
-	}
-
-
-
-};
-
-// Class LostShipmentsClueFramework.SeaClueCreator
-// 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
-class USeaClueCreator : public UObject
-{
-public:
-	unsigned char                                      UnknownData_2RHO[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.SeaClueCreator");
-		return ptr;
-	}
-
-
-
-};
-
-// Class LostShipmentsClueFramework.ClueChoiceSelectionStrategy
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UClueChoiceSelectionStrategy : public UObject
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueChoiceSelectionStrategy");
-		return ptr;
-	}
-
-
-
-};
-
-// Class LostShipmentsClueFramework.FixedClueChoiceSelectionStrategy
-// 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
-class UFixedClueChoiceSelectionStrategy : public UClueChoiceSelectionStrategy
-{
-public:
-	int                                                IndexToSelect;                                             // 0x0028(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_RI5E[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.FixedClueChoiceSelectionStrategy");
-		return ptr;
-	}
-
-
-
-};
-
-// Class LostShipmentsClueFramework.RandomClueChoiceSelectionStrategy
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class URandomClueChoiceSelectionStrategy : public UClueChoiceSelectionStrategy
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.RandomClueChoiceSelectionStrategy");
-		return ptr;
-	}
-
-
-
-};
-
-// Class LostShipmentsClueFramework.ClueDestinationDescriptor
-// 0x0048 (FullSize[0x0070] - InheritedSize[0x0028])
-class UClueDestinationDescriptor : public UObject
-{
-public:
-	unsigned char                                      UnknownData_V744[0x48];                                    // 0x0028(0x0048) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueDestinationDescriptor");
-		return ptr;
-	}
-
-
-
-	void OnRep_DestinationInfo();
-};
-
-// Class LostShipmentsClueFramework.ClueDescriptor
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UClueDescriptor : public UObject
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueDescriptor");
-		return ptr;
-	}
-
-
-
-};
-
-// Class LostShipmentsClueFramework.ClueConnectionBlueprintFunctionLibrary
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UClueConnectionBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueConnectionBlueprintFunctionLibrary");
-		return ptr;
-	}
-
-
-
-	class UClueDescriptor* STATIC_CreateCluePointingToSite(class UClueConnectionConfig* ConnectionConfiguration, int Difficulty, TArray<class UClass*> AllowedClueTypes, class UTaleQuestSelectorService* SelectorService, const struct FVector& SourceLocation, const struct FClueSite& TargetSite);
-};
-
-// Class LostShipmentsClueFramework.ClueDescriptorGenerator
-// 0x0018 (FullSize[0x0040] - InheritedSize[0x0028])
-class UClueDescriptorGenerator : public UObject
-{
-public:
-	class UClass*                                      DescriptorType;                                            // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash)
-	TArray<class UClass*>                              SupportedDestinationTypes;                                 // 0x0030(0x0010) (Edit, ZeroConstructor, UObjectWrapper)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueDescriptorGenerator");
-		return ptr;
-	}
-
-
-
-};
-
-// Class LostShipmentsClueFramework.ClueDestinationGenerator
-// 0x0068 (FullSize[0x0090] - InheritedSize[0x0028])
-class UClueDestinationGenerator : public UObject
-{
-public:
-	class UClass*                                      RequiredClueSiteDataType;                                  // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash)
-	TArray<struct FWeightedClueDestinationDescriptor>  WeightedSupportedDescriptorTypes;                          // 0x0030(0x0010) (Edit, ZeroConstructor, Protected)
-	unsigned char                                      UnknownData_A7Y8[0x50];                                    // 0x0040(0x0050) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueDestinationGenerator");
-		return ptr;
-	}
-
-
-
-};
-
-// Class LostShipmentsClueFramework.ClueConnectionConfig
-// 0x0030 (FullSize[0x0058] - InheritedSize[0x0028])
-class UClueConnectionConfig : public UDataAsset
-{
-public:
-	TArray<struct FClueSiteTypeSupportedDescribedByEntry> CluesThatCanDescribeSites;                                 // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UClueDescriptorGenerator*>            ClueGenerators;                                            // 0x0038(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference)
-	TArray<class UClueDestinationGenerator*>           DestinationGenerators;                                     // 0x0048(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueConnectionConfig");
-		return ptr;
-	}
-
-
-
-};
-
-// Class LostShipmentsClueFramework.ClueDescriptorContainerInterface
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UClueDescriptorContainerInterface : public UInterface
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueDescriptorContainerInterface");
-		return ptr;
-	}
-
-
-
-};
-
-// Class LostShipmentsClueFramework.ClueDescriptorContainerComponent
-// 0x0018 (FullSize[0x00E0] - InheritedSize[0x00C8])
-class UClueDescriptorContainerComponent : public UActorComponent
-{
-public:
-	unsigned char                                      UnknownData_K3GW[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UClueDescriptor*                             CurrentClue;                                               // 0x00D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	bool                                               HasClueBeenGiven;                                          // 0x00D8(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_3323[0x7];                                     // 0x00D9(0x0007) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueDescriptorContainerComponent");
-		return ptr;
-	}
-
-
-
-};
-
-// Class LostShipmentsClueFramework.ClueFactoryConfig
-// 0x0038 (FullSize[0x0060] - InheritedSize[0x0028])
-class UClueFactoryConfig : public UDataAsset
-{
-public:
-	TArray<class ULandClueCreator*>                    LandClueCreators;                                          // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference)
-	TArray<class USeaClueCreator*>                     SeaClueCreators;                                           // 0x0038(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference)
-	class UClueChoiceSelectionStrategy*                ChoiceStrategy;                                            // 0x0048(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<struct FRestrictedClueType>                 RestrictedClueTypes;                                       // 0x0050(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueFactoryConfig");
-		return ptr;
-	}
-
-
-
-};
-
-// Class LostShipmentsClueFramework.ClueFactory
-// 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
-class UClueFactory : public UObject
-{
-public:
-	class UClueFactoryConfig*                          Config;                                                    // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueFactory");
-		return ptr;
-	}
-
-
-
-};
-
-// Class LostShipmentsClueFramework.ClueLifetimeBlueprintFunctionLibrary
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UClueLifetimeBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueLifetimeBlueprintFunctionLibrary");
-		return ptr;
-	}
-
-
-
-	void STATIC_GiveClueToParticipant(class AActor* Participant, class UClueDescriptor* Clue, class UClass* ClueSite);
-};
-
-// Class LostShipmentsClueFramework.ClueSiteLootRestrictionsDataAsset
-// 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
-class UClueSiteLootRestrictionsDataAsset : public UDataAsset
-{
-public:
-	TArray<struct FClueSiteLootRestriction>            ClueSiteLootRestrictions;                                  // 0x0028(0x0010) (Edit, ZeroConstructor)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.ClueSiteLootRestrictionsDataAsset");
-		return ptr;
-	}
-
-
-
-};
-
-// Class LostShipmentsClueFramework.EnvQueryTest_SeaClueSpawnLocation
-// 0x0028 (FullSize[0x0198] - InheritedSize[0x0170])
-class UEnvQueryTest_SeaClueSpawnLocation : public UEnvQueryTest
-{
-public:
-	float                                              MinProjectionDistance;                                     // 0x0170(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MaxProjectionDistance;                                     // 0x0174(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              ProjectionAngleInDegrees;                                  // 0x0178(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              IslandProximitySafeThreshold;                              // 0x017C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                      ContextSourcePoint;                                        // 0x0180(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class UClass*                                      ContextProjectionPoint;                                    // 0x0188(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_QIX1[0x8];                                     // 0x0190(0x0008) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.EnvQueryTest_SeaClueSpawnLocation");
-		return ptr;
-	}
-
-
-
-};
-
-// Class LostShipmentsClueFramework.LootForVoyageRankDescAsset
-// 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
-class ULootForVoyageRankDescAsset : public UDataAsset
-{
-public:
-	TArray<struct FLootToRangeDist>                    RankBasedLootDistribution;                                 // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LostShipmentsClueFramework.LootForVoyageRankDescAsset");
+		static UClass* ptr = UObject::FindClass("Class LostShipmentsClueFramework.WeightedDebrisDataAsset");
 		return ptr;
 	}
 

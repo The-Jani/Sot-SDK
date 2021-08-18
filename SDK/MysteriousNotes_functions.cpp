@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // bool                           InCinematicSkipped             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UPlayerMysteriousNoteComponent::TriggerNotesReceivedPopup(bool InCinematicSkipped)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MysteriousNotes.PlayerMysteriousNoteComponent.TriggerNotesReceivedPopup");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MysteriousNotes.PlayerMysteriousNoteComponent.TriggerNotesReceivedPopup");
 
 	UPlayerMysteriousNoteComponent_TriggerNotesReceivedPopup_Params params;
 	params.InCinematicSkipped = InCinematicSkipped;
@@ -45,7 +45,7 @@ void UPlayerMysteriousNoteComponent::TriggerNotesReceivedPopup(bool InCinematicS
 // struct FName                   InCompletionID                 (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UPlayerMysteriousNoteComponent::Server_NoteCompletionStepReceived(class APlayerController* InPlayerController, const struct FName& InCompletionID)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MysteriousNotes.PlayerMysteriousNoteComponent.Server_NoteCompletionStepReceived");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MysteriousNotes.PlayerMysteriousNoteComponent.Server_NoteCompletionStepReceived");
 
 	UPlayerMysteriousNoteComponent_Server_NoteCompletionStepReceived_Params params;
 	params.InPlayerController = InPlayerController;
@@ -67,7 +67,7 @@ void UPlayerMysteriousNoteComponent::Server_NoteCompletionStepReceived(class APl
 // struct FGuid                   NoteId                         (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
 void UPlayerMysteriousNoteComponent::Server_MarkNoteAsRead(class APlayerController* InPlayerController, const struct FGuid& NoteId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MysteriousNotes.PlayerMysteriousNoteComponent.Server_MarkNoteAsRead");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MysteriousNotes.PlayerMysteriousNoteComponent.Server_MarkNoteAsRead");
 
 	UPlayerMysteriousNoteComponent_Server_MarkNoteAsRead_Params params;
 	params.InPlayerController = InPlayerController;
@@ -89,7 +89,7 @@ void UPlayerMysteriousNoteComponent::Server_MarkNoteAsRead(class APlayerControll
 // struct FGuid                   NoteId                         (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
 void UPlayerMysteriousNoteComponent::Server_MarkNoteAsDeleted(class APlayerController* InPlayerController, const struct FGuid& NoteId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MysteriousNotes.PlayerMysteriousNoteComponent.Server_MarkNoteAsDeleted");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MysteriousNotes.PlayerMysteriousNoteComponent.Server_MarkNoteAsDeleted");
 
 	UPlayerMysteriousNoteComponent_Server_MarkNoteAsDeleted_Params params;
 	params.InPlayerController = InPlayerController;
@@ -108,7 +108,7 @@ void UPlayerMysteriousNoteComponent::Server_MarkNoteAsDeleted(class APlayerContr
 // (Final, RequiredAPI, Native, Private)
 void UPlayerMysteriousNoteComponent::OnRep_NoteData()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MysteriousNotes.PlayerMysteriousNoteComponent.OnRep_NoteData");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MysteriousNotes.PlayerMysteriousNoteComponent.OnRep_NoteData");
 
 	UPlayerMysteriousNoteComponent_OnRep_NoteData_Params params;
 
@@ -125,7 +125,7 @@ void UPlayerMysteriousNoteComponent::OnRep_NoteData()
 // (Final, RequiredAPI, Native, Private)
 void UPlayerMysteriousNoteComponent::OnRep_BeenPossessed()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MysteriousNotes.PlayerMysteriousNoteComponent.OnRep_BeenPossessed");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MysteriousNotes.PlayerMysteriousNoteComponent.OnRep_BeenPossessed");
 
 	UPlayerMysteriousNoteComponent_OnRep_BeenPossessed_Params params;
 
@@ -147,7 +147,7 @@ void UPlayerMysteriousNoteComponent::OnRep_BeenPossessed()
 // TArray<struct FString>         CompletionStrings              (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 void UPlayerMysteriousNoteComponent::AddFakeNote(const struct FString& NoteType, const struct FString& NoteTitle, const struct FString& NoteBody, TArray<struct FString> CompletionStrings)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MysteriousNotes.PlayerMysteriousNoteComponent.AddFakeNote");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MysteriousNotes.PlayerMysteriousNoteComponent.AddFakeNote");
 
 	UPlayerMysteriousNoteComponent_AddFakeNote_Params params;
 	params.NoteType = NoteType;
@@ -172,7 +172,7 @@ void UPlayerMysteriousNoteComponent::AddFakeNote(const struct FString& NoteType,
 // int                            Height                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void AWieldableMysteriousNote::OnTextCanvasUpdate(class UCanvas* Canvas, int Width, int Height)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MysteriousNotes.WieldableMysteriousNote.OnTextCanvasUpdate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MysteriousNotes.WieldableMysteriousNote.OnTextCanvasUpdate");
 
 	AWieldableMysteriousNote_OnTextCanvasUpdate_Params params;
 	params.Canvas = Canvas;
@@ -192,7 +192,7 @@ void AWieldableMysteriousNote::OnTextCanvasUpdate(class UCanvas* Canvas, int Wid
 // (Final, RequiredAPI, Native, Private)
 void AWieldableMysteriousNote::OnRep_NoteLayout()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MysteriousNotes.WieldableMysteriousNote.OnRep_NoteLayout");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MysteriousNotes.WieldableMysteriousNote.OnRep_NoteLayout");
 
 	AWieldableMysteriousNote_OnRep_NoteLayout_Params params;
 

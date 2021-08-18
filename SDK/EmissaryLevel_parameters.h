@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -42,8 +42,8 @@ struct UEmissaryShipAffiliationTrackerComponent_OnRep_EmissaryCount_Params
 {
 };
 
-// Function EmissaryLevel.EmissaryVotingService.OnRep_Votes
-struct AEmissaryVotingService_OnRep_Votes_Params
+// Function EmissaryLevel.EmissaryVoyageInlineVoteConsumerBase.OnRep_Votes
+struct UEmissaryVoyageInlineVoteConsumerBase_OnRep_Votes_Params
 {
 };
 

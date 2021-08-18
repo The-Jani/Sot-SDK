@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -24,12 +24,12 @@ namespace CG
 class UFontBulkData : public UObject
 {
 public:
-	unsigned char                                      UnknownData_LLIT[0x98];                                    // 0x0028(0x0098) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4HVR[0x98];                                    // 0x0028(0x0098) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SlateCore.FontBulkData");
+		static UClass* ptr = UObject::FindClass("Class SlateCore.FontBulkData");
 		return ptr;
 	}
 
@@ -46,7 +46,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SlateCore.FontProviderInterface");
+		static UClass* ptr = UObject::FindClass("Class SlateCore.FontProviderInterface");
 		return ptr;
 	}
 
@@ -63,7 +63,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SlateCore.SlateTypes");
+		static UClass* ptr = UObject::FindClass("Class SlateCore.SlateTypes");
 		return ptr;
 	}
 
@@ -80,7 +80,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SlateCore.SlateWidgetStyleContainerInterface");
+		static UClass* ptr = UObject::FindClass("Class SlateCore.SlateWidgetStyleContainerInterface");
 		return ptr;
 	}
 
@@ -93,12 +93,12 @@ public:
 class USlateWidgetStyleContainerBase : public UObject
 {
 public:
-	unsigned char                                      UnknownData_BN9F[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LE7L[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SlateCore.SlateWidgetStyleContainerBase");
+		static UClass* ptr = UObject::FindClass("Class SlateCore.SlateWidgetStyleContainerBase");
 		return ptr;
 	}
 
@@ -116,7 +116,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SlateCore.SlateWidgetStyleAsset");
+		static UClass* ptr = UObject::FindClass("Class SlateCore.SlateWidgetStyleAsset");
 		return ptr;
 	}
 

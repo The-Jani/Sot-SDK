@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaSocketLookup.SocketIdTestFunctions");
+		static UClass* ptr = UObject::FindClass("Class AthenaSocketLookup.SocketIdTestFunctions");
 		return ptr;
 	}
 
@@ -48,7 +48,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaSocketLookup.SocketLookupCacheTestFunctions");
+		static UClass* ptr = UObject::FindClass("Class AthenaSocketLookup.SocketLookupCacheTestFunctions");
 		return ptr;
 	}
 
@@ -67,7 +67,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaSocketLookup.SocketLookupFunctions");
+		static UClass* ptr = UObject::FindClass("Class AthenaSocketLookup.SocketLookupFunctions");
 		return ptr;
 	}
 
@@ -88,7 +88,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaSocketLookup.SocketLookupInterface");
+		static UClass* ptr = UObject::FindClass("Class AthenaSocketLookup.SocketLookupInterface");
 		return ptr;
 	}
 

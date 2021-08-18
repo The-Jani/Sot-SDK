@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MastEmissaryFlag.BP_MastEmissaryFlag_C
-// 0x0000 (FullSize[0x04D8] - InheritedSize[0x04D8])
+// 0x0000 (FullSize[0x0478] - InheritedSize[0x0478])
 class ABP_MastEmissaryFlag_C : public AMastEmissaryFlag
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_MastEmissaryFlag.BP_MastEmissaryFlag_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_MastEmissaryFlag.BP_MastEmissaryFlag_C");
 		return ptr;
 	}
 

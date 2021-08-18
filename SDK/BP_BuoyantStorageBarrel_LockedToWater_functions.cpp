@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // unsigned char                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 unsigned char ABP_BuoyantStorageBarrel_LockedToWater_C::GetPxActorCapacityForPhysXAggregate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BuoyantStorageBarrel_LockedToWater.BP_BuoyantStorageBarrel_LockedToWater_C.GetPxActorCapacityForPhysXAggregate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BuoyantStorageBarrel_LockedToWater.BP_BuoyantStorageBarrel_LockedToWater_C.GetPxActorCapacityForPhysXAggregate");
 
 	ABP_BuoyantStorageBarrel_LockedToWater_C_GetPxActorCapacityForPhysXAggregate_Params params;
 
@@ -42,7 +42,7 @@ unsigned char ABP_BuoyantStorageBarrel_LockedToWater_C::GetPxActorCapacityForPhy
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_BuoyantStorageBarrel_LockedToWater_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BuoyantStorageBarrel_LockedToWater.BP_BuoyantStorageBarrel_LockedToWater_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BuoyantStorageBarrel_LockedToWater.BP_BuoyantStorageBarrel_LockedToWater_C.UserConstructionScript");
 
 	ABP_BuoyantStorageBarrel_LockedToWater_C_UserConstructionScript_Params params;
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GeyserManager.BP_GeyserManager_C
-// 0x0000 (FullSize[0x0490] - InheritedSize[0x0490])
+// 0x0000 (FullSize[0x0430] - InheritedSize[0x0430])
 class ABP_GeyserManager_C : public AGeyserManager
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_GeyserManager.BP_GeyserManager_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_GeyserManager.BP_GeyserManager_C");
 		return ptr;
 	}
 

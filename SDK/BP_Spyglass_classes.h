@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,16 +20,16 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Spyglass.BP_Spyglass_C
-// 0x0008 (FullSize[0x08D0] - InheritedSize[0x08C8])
+// 0x0008 (FullSize[0x0870] - InheritedSize[0x0868])
 class ABP_Spyglass_C : public ASpyglass
 {
 public:
-	unsigned char                                      UnknownData_SXZ4[0x8];                                     // 0x08C8(0x0008) Fix Super Size
+	unsigned char                                      UnknownData_CI06[0x8];                                     // 0x0868(0x0008) Fix Super Size
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Spyglass.BP_Spyglass_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Spyglass.BP_Spyglass_C");
 		return ptr;
 	}
 

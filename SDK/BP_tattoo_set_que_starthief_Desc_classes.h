@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_tattoo_set_que_starthief_Desc.BP_tattoo_set_que_starthief_Desc_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_tattoo_set_que_starthief_Desc.BP_tattoo_set_que_starthief_Desc_C");
 		return ptr;
 	}
 

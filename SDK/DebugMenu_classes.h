@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -24,61 +24,19 @@ namespace CG
 class UDebugMenuComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_U4WT[0x28];                                    // 0x00C8(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_EJBT[0x28];                                    // 0x00C8(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class ADebugMenu*                                  DebugMenuInstance;                                         // 0x00F0(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_T1MX[0x20];                                    // 0x00F8(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TAR4[0x20];                                    // 0x00F8(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class DebugMenu.DebugMenuComponent");
+		static UClass* ptr = UObject::FindClass("Class DebugMenu.DebugMenuComponent");
 		return ptr;
 	}
 
 
 
-};
-
-// Class DebugMenu.DebugMenuComponentMock
-// 0x0008 (FullSize[0x0120] - InheritedSize[0x0118])
-class UDebugMenuComponentMock : public UDebugMenuComponent
-{
-public:
-	unsigned char                                      UnknownData_UR5B[0x8];                                     // 0x0118(0x0008) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class DebugMenu.DebugMenuComponentMock");
-		return ptr;
-	}
-
-
-
-};
-
-// Class DebugMenu.DebugMenuTestFunctions
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UDebugMenuTestFunctions : public UBlueprintFunctionLibrary
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class DebugMenu.DebugMenuTestFunctions");
-		return ptr;
-	}
-
-
-
-	bool STATIC_IsDebugMenuReady(class UObject* WorldContextObject);
-	bool STATIC_IsDebugMenuOpen(class UObject* WorldContextObject);
-	bool STATIC_IsDebugMenuAvailable();
-	struct FKey STATIC_GetDebugMenuToggleKeyComboBetaKeyboard();
-	struct FKey STATIC_GetDebugMenuToggleKeyComboAlphaKeyboard();
-	struct FKey STATIC_GetDebugMenuToggleButtonComboBetaGamepad();
-	struct FKey STATIC_GetDebugMenuToggleButtonComboAlphaGamepad();
 };
 
 // Class DebugMenu.DebugMenuEntryGenerator
@@ -90,7 +48,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class DebugMenu.DebugMenuEntryGenerator");
+		static UClass* ptr = UObject::FindClass("Class DebugMenu.DebugMenuEntryGenerator");
 		return ptr;
 	}
 
@@ -111,7 +69,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class DebugMenu.DebugMenuDataAsset");
+		static UClass* ptr = UObject::FindClass("Class DebugMenu.DebugMenuDataAsset");
 		return ptr;
 	}
 
@@ -120,21 +78,63 @@ public:
 };
 
 // Class DebugMenu.DebugMenu
-// 0x0060 (FullSize[0x0490] - InheritedSize[0x0430])
+// 0x0060 (FullSize[0x0430] - InheritedSize[0x03D0])
 class ADebugMenu : public AActor
 {
 public:
-	unsigned char                                      UnknownData_ZAB9[0x60];                                    // 0x0430(0x0060) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_WPKN[0x60];                                    // 0x03D0(0x0060) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class DebugMenu.DebugMenu");
+		static UClass* ptr = UObject::FindClass("Class DebugMenu.DebugMenu");
 		return ptr;
 	}
 
 
 
+};
+
+// Class DebugMenu.DebugMenuComponentMock
+// 0x0008 (FullSize[0x0120] - InheritedSize[0x0118])
+class UDebugMenuComponentMock : public UDebugMenuComponent
+{
+public:
+	unsigned char                                      UnknownData_55DZ[0x8];                                     // 0x0118(0x0008) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class DebugMenu.DebugMenuComponentMock");
+		return ptr;
+	}
+
+
+
+};
+
+// Class DebugMenu.DebugMenuTestFunctions
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UDebugMenuTestFunctions : public UBlueprintFunctionLibrary
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class DebugMenu.DebugMenuTestFunctions");
+		return ptr;
+	}
+
+
+
+	bool STATIC_IsDebugMenuReady(class UObject* WorldContextObject);
+	bool STATIC_IsDebugMenuOpen(class UObject* WorldContextObject);
+	bool STATIC_IsDebugMenuAvailable();
+	struct FKey STATIC_GetDebugMenuToggleKeyComboBetaKeyboard();
+	struct FKey STATIC_GetDebugMenuToggleKeyComboAlphaKeyboard();
+	struct FKey STATIC_GetDebugMenuToggleButtonComboBetaGamepad();
+	struct FKey STATIC_GetDebugMenuToggleButtonComboAlphaGamepad();
 };
 
 }

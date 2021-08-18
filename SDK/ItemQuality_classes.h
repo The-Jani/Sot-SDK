@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ItemQuality.ItemQualityInterface");
+		static UClass* ptr = UObject::FindClass("Class ItemQuality.ItemQualityInterface");
 		return ptr;
 	}
 
@@ -41,9 +41,9 @@ public:
 class UItemQualityComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_0SIT[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_X85C[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TEnumAsByte<ItemQuality_EEmissaryQualityLevel>     ItemQualityLevel;                                          // 0x00D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_AHES[0x7];                                     // 0x00D1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6IS7[0x7];                                     // 0x00D1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FPerComanyItemQualityEntry>          CompanySpecificItemQualityLevels;                          // 0x00D8(0x0010) (Edit, ZeroConstructor)
 	TArray<struct FPerComanyComplexItemQualityEntry>   CompanySpecificComplexItemQualityLevels;                   // 0x00E8(0x0010) (Edit, ZeroConstructor)
 	TArray<struct FPerComanyComplexItemQualityEntry>   CompanySpecificComplexItemQualityLevelsHandin;             // 0x00F8(0x0010) (Edit, ZeroConstructor)
@@ -51,7 +51,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ItemQuality.ItemQualityComponent");
+		static UClass* ptr = UObject::FindClass("Class ItemQuality.ItemQualityComponent");
 		return ptr;
 	}
 

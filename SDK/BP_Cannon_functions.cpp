@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // struct FDockableInfo           ReturnValue                    (Parm, OutParm, ReturnParm)
 struct FDockableInfo ABP_Cannon_C::GetDockableInfo()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Cannon.BP_Cannon_C.GetDockableInfo");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cannon.BP_Cannon_C.GetDockableInfo");
 
 	ABP_Cannon_C_GetDockableInfo_Params params;
 
@@ -42,7 +42,7 @@ struct FDockableInfo ABP_Cannon_C::GetDockableInfo()
 // (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 void ABP_Cannon_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Cannon.BP_Cannon_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cannon.BP_Cannon_C.UserConstructionScript");
 
 	ABP_Cannon_C_UserConstructionScript_Params params;
 

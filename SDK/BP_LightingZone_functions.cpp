@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 void ABP_LightingZone_C::Update_Lighting_Zone()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LightingZone.BP_LightingZone_C.Update Lighting Zone");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LightingZone.BP_LightingZone_C.Update Lighting Zone");
 
 	ABP_LightingZone_C_Update_Lighting_Zone_Params params;
 
@@ -38,7 +38,7 @@ void ABP_LightingZone_C::Update_Lighting_Zone()
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_LightingZone_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LightingZone.BP_LightingZone_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LightingZone.BP_LightingZone_C.UserConstructionScript");
 
 	ABP_LightingZone_C_UserConstructionScript_Params params;
 
@@ -54,7 +54,7 @@ void ABP_LightingZone_C::UserConstructionScript()
 // (Event, Public, BlueprintEvent)
 void ABP_LightingZone_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LightingZone.BP_LightingZone_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LightingZone.BP_LightingZone_C.ReceiveBeginPlay");
 
 	ABP_LightingZone_C_ReceiveBeginPlay_Params params;
 
@@ -72,7 +72,7 @@ void ABP_LightingZone_C::ReceiveBeginPlay()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_LightingZone_C::ExecuteUbergraph_BP_LightingZone(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LightingZone.BP_LightingZone_C.ExecuteUbergraph_BP_LightingZone");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LightingZone.BP_LightingZone_C.ExecuteUbergraph_BP_LightingZone");
 
 	ABP_LightingZone_C_ExecuteUbergraph_BP_LightingZone_Params params;
 	params.EntryPoint = EntryPoint;

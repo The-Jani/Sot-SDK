@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -19,6 +19,20 @@ namespace CG
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function AthenaInput.CompositeInputHandler.SetNotificationInputHandler
+struct UCompositeInputHandler_SetNotificationInputHandler_Params
+{
+	class UClass*                                      Id;                                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	struct FScriptDelegate                             Handler;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+};
+
+// Function AthenaInput.CompositeInputHandler.SetAnalogInputHandler
+struct UCompositeInputHandler_SetAnalogInputHandler_Params
+{
+	class UClass*                                      Id;                                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	struct FScriptDelegate                             Handler;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+};
 
 // Function AthenaInput.InputBinder.SpoofNotificationInput
 struct UInputBinder_SpoofNotificationInput_Params
@@ -85,20 +99,6 @@ struct UCompositeInputDelegatorTestsCallbackHelper_OnFirstHandler_Params
 {
 	float                                              Value;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<AthenaInput_EInputHandlerResult>       ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function AthenaInput.CompositeInputHandler.SetNotificationInputHandler
-struct UCompositeInputHandler_SetNotificationInputHandler_Params
-{
-	class UClass*                                      Id;                                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	struct FScriptDelegate                             Handler;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
-};
-
-// Function AthenaInput.CompositeInputHandler.SetAnalogInputHandler
-struct UCompositeInputHandler_SetAnalogInputHandler_Params
-{
-	class UClass*                                      Id;                                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	struct FScriptDelegate                             Handler;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
 };
 
 // Function AthenaInput.InputHandlerFunctionLibrary.MakeCompositeInputHandler

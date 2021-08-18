@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // class AActor*                  InActor                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UOcclusionService::OnPrimaryActorEndPlay(class AActor* InActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Occlusion.OcclusionService.OnPrimaryActorEndPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Occlusion.OcclusionService.OnPrimaryActorEndPlay");
 
 	UOcclusionService_OnPrimaryActorEndPlay_Params params;
 	params.InActor = InActor;
@@ -44,7 +44,7 @@ void UOcclusionService::OnPrimaryActorEndPlay(class AActor* InActor)
 // class AActor*                  InActor                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UOcclusionService::OnIgnoredActorEndPlay(class AActor* InActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Occlusion.OcclusionService.OnIgnoredActorEndPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Occlusion.OcclusionService.OnIgnoredActorEndPlay");
 
 	UOcclusionService_OnIgnoredActorEndPlay_Params params;
 	params.InActor = InActor;

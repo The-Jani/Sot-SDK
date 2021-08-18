@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -30,6 +30,12 @@ struct UHeightTriggerableEffectsComponent_SetMovementDirection_Params
 struct ASpireService_OnRep_SpireLevels_Params
 {
 	TArray<struct FSpireInfo>                          InPreviousSpireLevels;                                     // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
+// Function SpireFramework.TaleSpireService.RegisterResetMechanismInterface
+struct UTaleSpireService_RegisterResetMechanismInterface_Params
+{
+	class AActor*                                      InMechanismResetInterface;                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 }

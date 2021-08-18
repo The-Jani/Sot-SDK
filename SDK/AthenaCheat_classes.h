@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,23 +20,23 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // Class AthenaCheat.AthenaCheatManager
-// 0x0098 (FullSize[0x0110] - InheritedSize[0x0078])
+// 0x00A8 (FullSize[0x0120] - InheritedSize[0x0078])
 class UAthenaCheatManager : public UCheatManager
 {
 public:
 	class ACinematicCameraController*                  CinematicCameraController;                                 // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                      CinematicCameraControllerClass;                            // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_H8ZW[0x28];                                    // 0x0088(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HYMW[0x28];                                    // 0x0088(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FWorldMarkerDesc>                    CreatedWorldMarkers;                                       // 0x00B0(0x0010) (ZeroConstructor, Transient)
 	class UGameEventSchedulerSettingsAsset*            DebugSchedulerSettings;                                    // 0x00C0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AServerPerformanceReplicator*                ServerPerformanceReplicator;                               // 0x00C8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TeleportToDigsiteHeightOffset;                             // 0x00D0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_MRRX[0x3C];                                    // 0x00D4(0x003C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HT9E[0x4C];                                    // 0x00D4(0x004C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaCheat.AthenaCheatManager");
+		static UClass* ptr = UObject::FindClass("Class AthenaCheat.AthenaCheatManager");
 		return ptr;
 	}
 
@@ -77,6 +77,9 @@ public:
 	void ToggleThirdPerson();
 	void ToggleSeaClueLocationQueryDebugDisplay();
 	void ToggleRetailDrawDebug();
+	void ToggleProjectileAimBaseAdjustmentsServer();
+	void ToggleProjectileAimBaseAdjustmentsLocalClient();
+	void ToggleNoClip();
 	void ToggleNearestSuperheatedWater();
 	void ToggleNearestLava();
 	void ToggleMigrationPointOfInterestChecks(bool Enabled);
@@ -99,8 +102,10 @@ public:
 	void TeleportToNearestTreasureLocation();
 	void TeleportToLocation(float LocationX, float LocationY, float LocationZ);
 	void TeleportToHideout();
+	void TeleportToDebugDestinationLocation(const struct FString& ActorIdString, const struct FString& DestinationId);
 	void TeleportToAggressiveGhostShipEncounter();
 	void TeleportShip(float X, float Y, float Z);
+	void TeleportPlayerToSpireLocation(int SpireIndex);
 	void TeleportPlayerToSafety();
 	void TeleportPlayerToOffsetAndReturn(float OffsetX, float OffsetY, float OffsetZ, float ReturnTime);
 	void TeleportPlayerToKraken();
@@ -215,6 +220,7 @@ public:
 	void SimulatePetReactRequest(const struct FString& Id);
 	void SimulatePetReactCancellation(const struct FString& Id);
 	void ShowTavernBanners();
+	void ShowTaleDebug_WithVariables();
 	void ShowTaleDebug();
 	void ShowRandomCrewMemberGamerCard();
 	void ShowEmissaryVoteIndicators();
@@ -371,6 +377,8 @@ public:
 	void OverrideShipPartFromCatalogue(const struct FString& InShipActorIdConsoleString, int InCataloguePartIndex, int InCataloguePartCustomisationIndex);
 	void OpenSkeletonFortDoor();
 	void MoveStormToPlayer();
+	void MoveStormToLocation(float LocationX, float LocationY);
+	void MoveStormToIsland(const struct FString& IslandNameString);
 	void MessageBoxOnGraphicsThreadTest();
 	void MakeSharksBrainDead();
 	void MakeDebugPetSpawner();
@@ -441,6 +449,7 @@ public:
 	void ForceStopAllPetsDanger();
 	void ForceStartAllPetsDangerWithChangingThreatLocation(const struct FString& ResponseType, float UpdateThreatLocationTime);
 	void ForceStartAllPetsDanger(const struct FString& ResponseType);
+	void ForceSkipTallTaleSteps_WaitAndCutscenes();
 	void ForceRequestCampaignsFromServices();
 	void ForcePetHangout(const struct FName& HangoutName, int PositionIndex);
 	void ForceOpenShop();
@@ -475,6 +484,7 @@ public:
 	void EndDemoSession();
 	void EnableVoiceChatMeteringForOutgoingSignals(bool Enabled);
 	void EnableVoiceChatMeteringForIncomingSignals(bool Enabled);
+	void EnableStormEffects(unsigned char LockReason);
 	void EnableSelectShipwreckLocationFromValidCandidatesDebugDisplay(int TrueFalse);
 	void EnableNTP(bool Enable);
 	void EnableMermaidSpawning(int Enable);
@@ -514,7 +524,9 @@ public:
 	void DisplayLandmarkNames();
 	void DisplayFallDamageDebug(int Enable);
 	void DisplayDrunkenness(bool Flag);
+	void DismissProjectileAimAdjustmentsMessages();
 	void DismissAllPickupPoints();
+	void DisableStormEffects(unsigned char LockReason);
 	void DisableEmergentSirenSpawning();
 	void DisableEmergentSharkSpawning();
 	void DisableConsoleLogging();
@@ -531,6 +543,7 @@ public:
 	void DestroyKraken();
 	void DestroyAllTreasureChests();
 	void DestroyAllTinySharks();
+	void DestroyAllSirenStatues();
 	void DestroyAllShips();
 	void DespawnNumberOfAI(const struct FString& AITypeString, int NumToDespawn);
 	void DespawnFirstAI();
@@ -576,6 +589,7 @@ public:
 	void CancelEmergentVoyages();
 	void CancelAllCrewVoyages();
 	void CancelActiveAIShipEncounters();
+	void BuryNearestBuriable();
 	void BuryItem(const struct FString& NameOfItemToBury);
 	void BreakLeg();
 	void BlockMigrationForPlayer(bool Enabled);
@@ -605,6 +619,7 @@ public:
 	void AddAISpawnContext(const struct FString& ContextName);
 	void ActivateSkellyFort(const struct FString& FortEventName, const struct FString& FortName);
 	void ActivateEmissaryFlagCompany(const struct FString& CompanyId);
+	void ActivateDebugTeleportationDestinationService();
 };
 
 }

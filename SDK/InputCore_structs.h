@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -19,15 +19,6 @@ namespace CG
 // Enums
 //---------------------------------------------------------------------------
 
-// Enum InputCore.EControllerHand
-enum class InputCore_EControllerHand : uint8_t
-{
-	EControllerHand__Left          = 0,
-	EControllerHand__Right         = 1,
-	EControllerHand__EControllerHand_MAX = 2,
-
-};
-
 // Enum InputCore.ETouchIndex
 enum class InputCore_ETouchIndex : uint8_t
 {
@@ -45,16 +36,6 @@ enum class InputCore_ETouchIndex : uint8_t
 
 };
 
-// Enum InputCore.EConsoleForGamepadLabels
-enum class InputCore_EConsoleForGamepadLabels : uint8_t
-{
-	EConsoleForGamepadLabels__None = 0,
-	EConsoleForGamepadLabels__XBoxOne = 1,
-	EConsoleForGamepadLabels__PS4  = 2,
-	EConsoleForGamepadLabels__EConsoleForGamepadLabels_MAX = 3,
-
-};
-
 // Enum InputCore.ETouchType
 enum class InputCore_ETouchType : uint8_t
 {
@@ -67,6 +48,25 @@ enum class InputCore_ETouchType : uint8_t
 
 };
 
+// Enum InputCore.EConsoleForGamepadLabels
+enum class InputCore_EConsoleForGamepadLabels : uint8_t
+{
+	EConsoleForGamepadLabels__None = 0,
+	EConsoleForGamepadLabels__XBoxOne = 1,
+	EConsoleForGamepadLabels__PS4  = 2,
+	EConsoleForGamepadLabels__EConsoleForGamepadLabels_MAX = 3,
+
+};
+
+// Enum InputCore.EControllerHand
+enum class InputCore_EControllerHand : uint8_t
+{
+	EControllerHand__Left          = 0,
+	EControllerHand__Right         = 1,
+	EControllerHand__EControllerHand_MAX = 2,
+
+};
+
 //---------------------------------------------------------------------------
 // Script Structs
 //---------------------------------------------------------------------------
@@ -76,7 +76,7 @@ enum class InputCore_ETouchType : uint8_t
 struct FKey
 {
 	struct FName                                       KeyName;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_PZPP[0x18];                                    // 0x0008(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HVM1[0x18];                                    // 0x0008(0x0018) MISSED OFFSET (PADDING)
 
 };
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HarpoonTether.BP_HarpoonTether_C
-// 0x0000 (FullSize[0x0570] - InheritedSize[0x0570])
+// 0x0000 (FullSize[0x0510] - InheritedSize[0x0510])
 class ABP_HarpoonTether_C : public ATether
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_HarpoonTether.BP_HarpoonTether_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_HarpoonTether.BP_HarpoonTether_C");
 		return ptr;
 	}
 

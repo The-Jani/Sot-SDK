@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmp_telescope_mrh_01_e_Wieldable.BP_cmp_telescope_mrh_01_e_Wieldable_C
-// 0x0000 (FullSize[0x08D0] - InheritedSize[0x08D0])
+// 0x0000 (FullSize[0x0870] - InheritedSize[0x0870])
 class ABP_cmp_telescope_mrh_01_e_Wieldable_C : public ABP_Spyglass_C
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_cmp_telescope_mrh_01_e_Wieldable.BP_cmp_telescope_mrh_01_e_Wieldable_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_cmp_telescope_mrh_01_e_Wieldable.BP_cmp_telescope_mrh_01_e_Wieldable_C");
 		return ptr;
 	}
 

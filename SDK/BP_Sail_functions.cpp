@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 void ABP_Sail_C::Debug()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Sail.BP_Sail_C.Debug");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Sail.BP_Sail_C.Debug");
 
 	ABP_Sail_C_Debug_Params params;
 
@@ -41,7 +41,7 @@ void ABP_Sail_C::Debug()
 // float                          SailForceScalar                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Sail_C::Initialise(bool IsMainSail, float SailForceScalar)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Sail.BP_Sail_C.Initialise");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Sail.BP_Sail_C.Initialise");
 
 	ABP_Sail_C_Initialise_Params params;
 	params.IsMainSail = IsMainSail;
@@ -59,7 +59,7 @@ void ABP_Sail_C::Initialise(bool IsMainSail, float SailForceScalar)
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_Sail_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Sail.BP_Sail_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Sail.BP_Sail_C.UserConstructionScript");
 
 	ABP_Sail_C_UserConstructionScript_Params params;
 

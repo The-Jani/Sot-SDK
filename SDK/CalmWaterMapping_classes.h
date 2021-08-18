@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -19,17 +19,36 @@ namespace CG
 // Classes
 //---------------------------------------------------------------------------
 
-// Class CalmWaterMapping.AthenaCalmWaterZone
-// 0x0020 (FullSize[0x0458] - InheritedSize[0x0438])
-class AAthenaCalmWaterZone : public ACalmWaterZone
+// Class CalmWaterMapping.CalmWaterMappingInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UCalmWaterMappingInterface : public UInterface
 {
 public:
-	unsigned char                                      UnknownData_9DBP[0x20];                                    // 0x0438(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CalmWaterMapping.AthenaCalmWaterZone");
+		static UClass* ptr = UObject::FindClass("Class CalmWaterMapping.CalmWaterMappingInterface");
+		return ptr;
+	}
+
+
+
+	float GetDampeningFactor(const struct FVector2D& InPosition);
+	float GetChoppinessFactor(const struct FVector2D& InPosition);
+};
+
+// Class CalmWaterMapping.AthenaCalmWaterZone
+// 0x0020 (FullSize[0x03F8] - InheritedSize[0x03D8])
+class AAthenaCalmWaterZone : public ACalmWaterZone
+{
+public:
+	unsigned char                                      UnknownData_213Q[0x20];                                    // 0x03D8(0x0020) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class CalmWaterMapping.AthenaCalmWaterZone");
 		return ptr;
 	}
 
@@ -42,37 +61,18 @@ public:
 class UCalmWaterMappingService : public UObject
 {
 public:
-	unsigned char                                      UnknownData_5O8R[0x28];                                    // 0x0028(0x0028) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_1XRH[0x28];                                    // 0x0028(0x0028) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CalmWaterMapping.CalmWaterMappingService");
+		static UClass* ptr = UObject::FindClass("Class CalmWaterMapping.CalmWaterMappingService");
 		return ptr;
 	}
 
 
 
 	float STATIC_GetMaxWindSpeed();
-};
-
-// Class CalmWaterMapping.CalmWaterMappingInterface
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UCalmWaterMappingInterface : public UInterface
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CalmWaterMapping.CalmWaterMappingInterface");
-		return ptr;
-	}
-
-
-
-	float GetDampeningFactor(const struct FVector2D& InPosition);
-	float GetChoppinessFactor(const struct FVector2D& InPosition);
 };
 
 }

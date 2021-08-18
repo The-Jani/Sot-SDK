@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -26,18 +26,6 @@ enum class Slate_ETextJustify : uint8_t
 	ETextJustify__Center           = 1,
 	ETextJustify__Right            = 2,
 	ETextJustify__ETextJustify_MAX = 3,
-
-};
-
-// Enum Slate.EProgressBarFillType
-enum class Slate_EProgressBarFillType : uint8_t
-{
-	EProgressBarFillType__LeftToRight = 0,
-	EProgressBarFillType__RightToLeft = 1,
-	EProgressBarFillType__FillFromCenter = 2,
-	EProgressBarFillType__TopToBottom = 3,
-	EProgressBarFillType__BottomToTop = 4,
-	EProgressBarFillType__EProgressBarFillType_MAX = 5,
 
 };
 
@@ -86,18 +74,21 @@ enum class Slate_EStretchDirection : uint8_t
 
 };
 
+// Enum Slate.EProgressBarFillType
+enum class Slate_EProgressBarFillType : uint8_t
+{
+	EProgressBarFillType__LeftToRight = 0,
+	EProgressBarFillType__RightToLeft = 1,
+	EProgressBarFillType__FillFromCenter = 2,
+	EProgressBarFillType__TopToBottom = 3,
+	EProgressBarFillType__BottomToTop = 4,
+	EProgressBarFillType__EProgressBarFillType_MAX = 5,
+
+};
+
 //---------------------------------------------------------------------------
 // Script Structs
 //---------------------------------------------------------------------------
-
-// ScriptStruct Slate.Anchors
-// 0x0010
-struct FAnchors
-{
-	struct FVector2D                                   Minimum;                                                   // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector2D                                   Maximum;                                                   // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-};
 
 // ScriptStruct Slate.InputChord
 // 0x0028
@@ -108,7 +99,16 @@ struct FInputChord
 	unsigned char                                      bCtrl : 1;                                                 // 0x0020(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bAlt : 1;                                                  // 0x0020(0x0001) BIT_FIELD (NoDestructor)
 	unsigned char                                      bCmd : 1;                                                  // 0x0020(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_DI3R[0x7];                                     // 0x0021(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_JADD[0x7];                                     // 0x0021(0x0007) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Slate.Anchors
+// 0x0010
+struct FAnchors
+{
+	struct FVector2D                                   Minimum;                                                   // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector2D                                   Maximum;                                                   // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 };
 

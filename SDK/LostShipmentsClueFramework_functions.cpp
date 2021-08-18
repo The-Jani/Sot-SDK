@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -18,32 +18,11 @@ namespace CG
 // Functions
 //---------------------------------------------------------------------------
 
-// Function LostShipmentsClueFramework.TaleQuestClueSiteService.GetClueSites
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TArray<struct FClueSite>       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-TArray<struct FClueSite> UTaleQuestClueSiteService::GetClueSites()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LostShipmentsClueFramework.TaleQuestClueSiteService.GetClueSites");
-
-	UTaleQuestClueSiteService_GetClueSites_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
-
 // Function LostShipmentsClueFramework.ClueDestinationDescriptor.OnRep_DestinationInfo
 // (Native, Public)
 void UClueDestinationDescriptor::OnRep_DestinationInfo()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LostShipmentsClueFramework.ClueDestinationDescriptor.OnRep_DestinationInfo");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function LostShipmentsClueFramework.ClueDestinationDescriptor.OnRep_DestinationInfo");
 
 	UClueDestinationDescriptor_OnRep_DestinationInfo_Params params;
 
@@ -68,7 +47,7 @@ void UClueDestinationDescriptor::OnRep_DestinationInfo()
 // class UClueDescriptor*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 class UClueDescriptor* UClueConnectionBlueprintFunctionLibrary::STATIC_CreateCluePointingToSite(class UClueConnectionConfig* ConnectionConfiguration, int Difficulty, TArray<class UClass*> AllowedClueTypes, class UTaleQuestSelectorService* SelectorService, const struct FVector& SourceLocation, const struct FClueSite& TargetSite)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LostShipmentsClueFramework.ClueConnectionBlueprintFunctionLibrary.CreateCluePointingToSite");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function LostShipmentsClueFramework.ClueConnectionBlueprintFunctionLibrary.CreateCluePointingToSite");
 
 	UClueConnectionBlueprintFunctionLibrary_CreateCluePointingToSite_Params params;
 	params.ConnectionConfiguration = ConnectionConfiguration;
@@ -97,7 +76,7 @@ class UClueDescriptor* UClueConnectionBlueprintFunctionLibrary::STATIC_CreateClu
 // class UClass*                  ClueSite                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 void UClueLifetimeBlueprintFunctionLibrary::STATIC_GiveClueToParticipant(class AActor* Participant, class UClueDescriptor* Clue, class UClass* ClueSite)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LostShipmentsClueFramework.ClueLifetimeBlueprintFunctionLibrary.GiveClueToParticipant");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function LostShipmentsClueFramework.ClueLifetimeBlueprintFunctionLibrary.GiveClueToParticipant");
 
 	UClueLifetimeBlueprintFunctionLibrary_GiveClueToParticipant_Params params;
 	params.Participant = Participant;
@@ -110,6 +89,27 @@ void UClueLifetimeBlueprintFunctionLibrary::STATIC_GiveClueToParticipant(class A
 	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
+}
+
+
+// Function LostShipmentsClueFramework.TaleQuestClueSiteService.GetClueSites
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TArray<struct FClueSite>       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+TArray<struct FClueSite> UTaleQuestClueSiteService::GetClueSites()
+{
+	static UFunction* fn = UObject::FindObject<UFunction>("Function LostShipmentsClueFramework.TaleQuestClueSiteService.GetClueSites");
+
+	UTaleQuestClueSiteService_GetClueSites_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
 }
 
 

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // bool                           IsFemale                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UPlayerGenderInterface_C::CheckIsFemale(bool* IsFemale)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerGenderInterface.PlayerGenderInterface_C.CheckIsFemale");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function PlayerGenderInterface.PlayerGenderInterface_C.CheckIsFemale");
 
 	UPlayerGenderInterface_C_CheckIsFemale_Params params;
 

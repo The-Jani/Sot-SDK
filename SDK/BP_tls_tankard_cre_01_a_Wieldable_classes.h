@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_tls_tankard_cre_01_a_Wieldable.BP_tls_tankard_cre_01_a_Wieldable_C
-// 0x0000 (FullSize[0x0880] - InheritedSize[0x0880])
+// 0x0000 (FullSize[0x0820] - InheritedSize[0x0820])
 class ABP_tls_tankard_cre_01_a_Wieldable_C : public ABP_Tankard_C
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_tls_tankard_cre_01_a_Wieldable.BP_tls_tankard_cre_01_a_Wieldable_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_tls_tankard_cre_01_a_Wieldable.BP_tls_tankard_cre_01_a_Wieldable_C");
 		return ptr;
 	}
 

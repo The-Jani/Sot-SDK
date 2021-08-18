@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // float                          Level                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void ULiquidContainerInterface::SetLiquidLevel(float Level)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LiquidContainer.LiquidContainerInterface.SetLiquidLevel");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function LiquidContainer.LiquidContainerInterface.SetLiquidLevel");
 
 	ULiquidContainerInterface_SetLiquidLevel_Params params;
 	params.Level = Level;
@@ -44,7 +44,7 @@ void ULiquidContainerInterface::SetLiquidLevel(float Level)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 float ULiquidContainerInterface::GetWantedLiquidLevel()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LiquidContainer.LiquidContainerInterface.GetWantedLiquidLevel");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function LiquidContainer.LiquidContainerInterface.GetWantedLiquidLevel");
 
 	ULiquidContainerInterface_GetWantedLiquidLevel_Params params;
 
@@ -65,7 +65,7 @@ float ULiquidContainerInterface::GetWantedLiquidLevel()
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 float ULiquidContainerInterface::GetMaxLiquidCollectionAmount()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LiquidContainer.LiquidContainerInterface.GetMaxLiquidCollectionAmount");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function LiquidContainer.LiquidContainerInterface.GetMaxLiquidCollectionAmount");
 
 	ULiquidContainerInterface_GetMaxLiquidCollectionAmount_Params params;
 
@@ -86,7 +86,7 @@ float ULiquidContainerInterface::GetMaxLiquidCollectionAmount()
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 float ULiquidContainerInterface::GetLiquidLevel()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LiquidContainer.LiquidContainerInterface.GetLiquidLevel");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function LiquidContainer.LiquidContainerInterface.GetLiquidLevel");
 
 	ULiquidContainerInterface_GetLiquidLevel_Params params;
 
@@ -108,7 +108,7 @@ float ULiquidContainerInterface::GetLiquidLevel()
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 float ULiquidContainerInterface::CollectLiquidAmount(float DesiredAmount)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LiquidContainer.LiquidContainerInterface.CollectLiquidAmount");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function LiquidContainer.LiquidContainerInterface.CollectLiquidAmount");
 
 	ULiquidContainerInterface_CollectLiquidAmount_Params params;
 	params.DesiredAmount = DesiredAmount;
@@ -130,7 +130,7 @@ float ULiquidContainerInterface::CollectLiquidAmount(float DesiredAmount)
 // TEnumAsByte<LiquidContainer_ELiquidType> LiquidType                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void ULiquidContainerComponent::SetLiquidType(TEnumAsByte<LiquidContainer_ELiquidType> LiquidType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LiquidContainer.LiquidContainerComponent.SetLiquidType");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function LiquidContainer.LiquidContainerComponent.SetLiquidType");
 
 	ULiquidContainerComponent_SetLiquidType_Params params;
 	params.LiquidType = LiquidType;
@@ -150,7 +150,7 @@ void ULiquidContainerComponent::SetLiquidType(TEnumAsByte<LiquidContainer_ELiqui
 // float                          Level                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void ULiquidContainerComponent::SetLiquidLevel(float Level)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LiquidContainer.LiquidContainerComponent.SetLiquidLevel");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function LiquidContainer.LiquidContainerComponent.SetLiquidLevel");
 
 	ULiquidContainerComponent_SetLiquidLevel_Params params;
 	params.Level = Level;
@@ -170,7 +170,7 @@ void ULiquidContainerComponent::SetLiquidLevel(float Level)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 float ULiquidContainerComponent::GetLiquidLevel()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LiquidContainer.LiquidContainerComponent.GetLiquidLevel");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function LiquidContainer.LiquidContainerComponent.GetLiquidLevel");
 
 	ULiquidContainerComponent_GetLiquidLevel_Params params;
 
@@ -191,7 +191,7 @@ float ULiquidContainerComponent::GetLiquidLevel()
 // class UMeshComponent*          MeshComponent                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void ULiquidContainerComponent::CollectLiquidMaterials(class UMeshComponent* MeshComponent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LiquidContainer.LiquidContainerComponent.CollectLiquidMaterials");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function LiquidContainer.LiquidContainerComponent.CollectLiquidMaterials");
 
 	ULiquidContainerComponent_CollectLiquidMaterials_Params params;
 	params.MeshComponent = MeshComponent;

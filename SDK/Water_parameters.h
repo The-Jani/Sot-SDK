@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -133,11 +133,6 @@ struct UWaterInterface_GetActorWaterInformation_Params
 
 // Function Water.FFTWaterService.OnRep_FFTWaterComponent
 struct AFFTWaterService_OnRep_FFTWaterComponent_Params
-{
-};
-
-// Function Water.FFTWaterService.OnRep_FFTWaterActor
-struct AFFTWaterService_OnRep_FFTWaterActor_Params
 {
 };
 

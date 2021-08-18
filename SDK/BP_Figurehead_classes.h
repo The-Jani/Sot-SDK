@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,21 +20,23 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Figurehead.BP_Figurehead_C
-// 0x0008 (FullSize[0x0440] - InheritedSize[0x0438])
-class ABP_Figurehead_C : public AGenericPart
+// 0x0010 (FullSize[0x03E8] - InheritedSize[0x03D8])
+class ABP_Figurehead_C : public AGenericPartWithVFX
 {
 public:
-	class UStaticMeshComponent*                        Figurehead;                                                // 0x0438(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UParticleSystemComponent*                    ParticleSystem;                                            // 0x03D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UStaticMeshComponent*                        Figurehead;                                                // 0x03E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Figurehead.BP_Figurehead_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Figurehead.BP_Figurehead_C");
 		return ptr;
 	}
 
 
 
+	class UParticleSystemComponent* GetVFXComponent();
 	class UStaticMeshComponent* GetMeshComponent();
 	void UserConstructionScript();
 };

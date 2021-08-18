@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -49,17 +49,17 @@ public:
 	struct FObjectMessagingHandle                      Handle_ReelingWhileBattling;                               // 0x04B0(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FObjectMessagingHandle                      Handle_StowRod;                                            // 0x04F8(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                               FishStartedBattling;                                       // 0x0540(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_D3S3[0x7];                                     // 0x0541(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_VDSD[0x7];                                     // 0x0541(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FObjectMessagingHandle                      Handle_FishEscaped;                                        // 0x0548(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                               State_Completed;                                           // 0x0590(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_1C72[0x7];                                     // 0x0591(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_OJPU[0x7];                                     // 0x0591(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FObjectMessagingHandle                      Handle_PlayerDeath;                                        // 0x0598(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FObjectMessagingHandle                      Handle_DockToObject;                                       // 0x05E0(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Prompt_MaidenVoyage_FishingROdTutorial.BP_Prompt_MaidenVoyage_FishingRodTutorial_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Prompt_MaidenVoyage_FishingROdTutorial.BP_Prompt_MaidenVoyage_FishingRodTutorial_C");
 		return ptr;
 	}
 

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Public, BlueprintCallable, BlueprintEvent)
 void ABP_ActorGlow_C::StartGlowEffect()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ActorGlow.BP_ActorGlow_C.StartGlowEffect");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ActorGlow.BP_ActorGlow_C.StartGlowEffect");
 
 	ABP_ActorGlow_C_StartGlowEffect_Params params;
 
@@ -40,7 +40,7 @@ void ABP_ActorGlow_C::StartGlowEffect()
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool ABP_ActorGlow_C::StartReaction()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ActorGlow.BP_ActorGlow_C.StartReaction");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ActorGlow.BP_ActorGlow_C.StartReaction");
 
 	ABP_ActorGlow_C_StartReaction_Params params;
 
@@ -60,7 +60,7 @@ bool ABP_ActorGlow_C::StartReaction()
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool ABP_ActorGlow_C::StopReaction()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ActorGlow.BP_ActorGlow_C.StopReaction");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ActorGlow.BP_ActorGlow_C.StopReaction");
 
 	ABP_ActorGlow_C_StopReaction_Params params;
 
@@ -78,7 +78,7 @@ bool ABP_ActorGlow_C::StopReaction()
 // (Public, BlueprintCallable, BlueprintEvent)
 void ABP_ActorGlow_C::CollectDecalMaterials()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ActorGlow.BP_ActorGlow_C.CollectDecalMaterials");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ActorGlow.BP_ActorGlow_C.CollectDecalMaterials");
 
 	ABP_ActorGlow_C_CollectDecalMaterials_Params params;
 
@@ -94,7 +94,7 @@ void ABP_ActorGlow_C::CollectDecalMaterials()
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_ActorGlow_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ActorGlow.BP_ActorGlow_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ActorGlow.BP_ActorGlow_C.UserConstructionScript");
 
 	ABP_ActorGlow_C_UserConstructionScript_Params params;
 
@@ -110,7 +110,7 @@ void ABP_ActorGlow_C::UserConstructionScript()
 // (Event, Public, BlueprintEvent)
 void ABP_ActorGlow_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ActorGlow.BP_ActorGlow_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ActorGlow.BP_ActorGlow_C.ReceiveBeginPlay");
 
 	ABP_ActorGlow_C_ReceiveBeginPlay_Params params;
 
@@ -128,7 +128,7 @@ void ABP_ActorGlow_C::ReceiveBeginPlay()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_ActorGlow_C::ExecuteUbergraph_BP_ActorGlow(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ActorGlow.BP_ActorGlow_C.ExecuteUbergraph_BP_ActorGlow");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ActorGlow.BP_ActorGlow_C.ExecuteUbergraph_BP_ActorGlow");
 
 	ABP_ActorGlow_C_ExecuteUbergraph_BP_ActorGlow_Params params;
 	params.EntryPoint = EntryPoint;

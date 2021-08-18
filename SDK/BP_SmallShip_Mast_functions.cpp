@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_SmallShip_Mast_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShip_Mast.BP_SmallShip_Mast_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallShip_Mast.BP_SmallShip_Mast_C.UserConstructionScript");
 
 	ABP_SmallShip_Mast_C_UserConstructionScript_Params params;
 
@@ -40,7 +40,7 @@ void ABP_SmallShip_Mast_C::UserConstructionScript()
 // class UMastDescAsset*          MastDesc                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_SmallShip_Mast_C::OnMastDescLoaded(class UMastDescAsset* MastDesc)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShip_Mast.BP_SmallShip_Mast_C.OnMastDescLoaded");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallShip_Mast.BP_SmallShip_Mast_C.OnMastDescLoaded");
 
 	ABP_SmallShip_Mast_C_OnMastDescLoaded_Params params;
 	params.MastDesc = MastDesc;
@@ -59,7 +59,7 @@ void ABP_SmallShip_Mast_C::OnMastDescLoaded(class UMastDescAsset* MastDesc)
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_SmallShip_Mast_C::ExecuteUbergraph_BP_SmallShip_Mast(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShip_Mast.BP_SmallShip_Mast_C.ExecuteUbergraph_BP_SmallShip_Mast");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallShip_Mast.BP_SmallShip_Mast_C.ExecuteUbergraph_BP_SmallShip_Mast");
 
 	ABP_SmallShip_Mast_C_ExecuteUbergraph_BP_SmallShip_Mast_Params params;
 	params.EntryPoint = EntryPoint;

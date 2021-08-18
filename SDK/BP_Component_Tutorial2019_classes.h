@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -31,13 +31,13 @@ public:
 	TArray<TAssetPtr<class AActor>>                    NPCBlacklist;                                              // 0x0108(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<struct FName>                               OutpostNames;                                              // 0x0118(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	bool                                               GoldHoarderOnRepPrerequiste;                               // 0x0128(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_GW6S[0x7];                                     // 0x0129(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_UQ18[0x7];                                     // 0x0129(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FObjectMessagingHandle                      Handle_PlayerFinishedSpawning;                             // 0x0130(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Component_Tutorial2019.BP_Component_Tutorial2019_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Component_Tutorial2019.BP_Component_Tutorial2019_C");
 		return ptr;
 	}
 

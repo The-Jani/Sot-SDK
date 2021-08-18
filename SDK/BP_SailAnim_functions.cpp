@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (BlueprintCallable, BlueprintEvent)
 void UBP_SailAnim_C::Set_Billow_Animation_Rate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SailAnim.BP_SailAnim_C.Set Billow Animation Rate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SailAnim.BP_SailAnim_C.Set Billow Animation Rate");
 
 	UBP_SailAnim_C_Set_Billow_Animation_Rate_Params params;
 
@@ -41,7 +41,7 @@ void UBP_SailAnim_C::Set_Billow_Animation_Rate()
 // bool                           MainSail                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_SailAnim_C::InitialiseSail(float PlayRateMultiplier, bool MainSail)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SailAnim.BP_SailAnim_C.InitialiseSail");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SailAnim.BP_SailAnim_C.InitialiseSail");
 
 	UBP_SailAnim_C_InitialiseSail_Params params;
 	params.PlayRateMultiplier = PlayRateMultiplier;
@@ -61,7 +61,7 @@ void UBP_SailAnim_C::InitialiseSail(float PlayRateMultiplier, bool MainSail)
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_SailAnim_C::ExecuteUbergraph_BP_SailAnim(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SailAnim.BP_SailAnim_C.ExecuteUbergraph_BP_SailAnim");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SailAnim.BP_SailAnim_C.ExecuteUbergraph_BP_SailAnim");
 
 	UBP_SailAnim_C_ExecuteUbergraph_BP_SailAnim_Params params;
 	params.EntryPoint = EntryPoint;

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -26,12 +26,12 @@ class UCompanyTutorialVoyageProgress : public UObject
 public:
 	class UClass*                                      AssignedVoyageProposalDescClass;                           // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	class UClass*                                      AssignedTaleRankDescClass;                                 // 0x0030(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YCN6[0xA8];                                    // 0x0038(0x00A8) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_T1DH[0xA8];                                    // 0x0038(0x00A8) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Tutorial.CompanyTutorialVoyageProgress");
+		static UClass* ptr = UObject::FindClass("Class Tutorial.CompanyTutorialVoyageProgress");
 		return ptr;
 	}
 
@@ -48,12 +48,12 @@ class UContextualTutorialComponent : public UActorComponent
 public:
 	TArray<struct FContextualTutorialPromptDesc>       ContextualTutorialClasses;                                 // 0x00C8(0x0010) (Edit, ZeroConstructor)
 	TArray<class AActor*>                              SpawnedPromptActors;                                       // 0x00D8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_LYDS[0x38];                                    // 0x00E8(0x0038) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2K44[0x38];                                    // 0x00E8(0x0038) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Tutorial.ContextualTutorialComponent");
+		static UClass* ptr = UObject::FindClass("Class Tutorial.ContextualTutorialComponent");
 		return ptr;
 	}
 
@@ -70,7 +70,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Tutorial.OnboardingStatusInterface");
+		static UClass* ptr = UObject::FindClass("Class Tutorial.OnboardingStatusInterface");
 		return ptr;
 	}
 
@@ -85,12 +85,12 @@ class UTutorial2019Component : public UActorComponent
 public:
 	bool                                               IsEnabledByServer;                                         // 0x00C8(0x0001) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor)
 	bool                                               IsInTutorialTale;                                          // 0x00C9(0x0001) (Net, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_P9G9[0x6];                                     // 0x00CA(0x0006) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8U1L[0x6];                                     // 0x00CA(0x0006) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Tutorial.Tutorial2019Component");
+		static UClass* ptr = UObject::FindClass("Class Tutorial.Tutorial2019Component");
 		return ptr;
 	}
 
@@ -113,7 +113,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Tutorial.Tutorial2019ContextualDelegatingComponent");
+		static UClass* ptr = UObject::FindClass("Class Tutorial.Tutorial2019ContextualDelegatingComponent");
 		return ptr;
 	}
 
@@ -130,7 +130,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Tutorial.Tutorial2019FunctionLibrary");
+		static UClass* ptr = UObject::FindClass("Class Tutorial.Tutorial2019FunctionLibrary");
 		return ptr;
 	}
 
@@ -148,7 +148,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Tutorial.TutorialHelpersBlueprintLibrary");
+		static UClass* ptr = UObject::FindClass("Class Tutorial.TutorialHelpersBlueprintLibrary");
 		return ptr;
 	}
 
@@ -171,12 +171,12 @@ public:
 	bool                                               HasStartedTutorial;                                        // 0x00F1(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               HasReceivedEntitlements;                                   // 0x00F2(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               HasPosessedPawn;                                           // 0x00F3(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_MHFS[0x1C];                                    // 0x00F4(0x001C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_G4K0[0x1C];                                    // 0x00F4(0x001C) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Tutorial.TutorialManager");
+		static UClass* ptr = UObject::FindClass("Class Tutorial.TutorialManager");
 		return ptr;
 	}
 
@@ -193,13 +193,13 @@ public:
 	class AAthenaPlayerController*                     AthenaPlayerController;                                    // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	bool                                               ShouldPlayIntroAnimatic;                                   // 0x0030(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                               ShouldDisableAllIntroBehaviour;                            // 0x0031(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_68J7[0x2];                                     // 0x0032(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_B1WM[0x2];                                     // 0x0032(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FFirstPersonAnimaticSettings                IntroAnimationSettings;                                    // 0x0034(0x002C) (Edit, DisableEditOnInstance)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Tutorial.TutorialStarter");
+		static UClass* ptr = UObject::FindClass("Class Tutorial.TutorialStarter");
 		return ptr;
 	}
 
@@ -216,7 +216,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Tutorial.BeachNPCSpawnFlowStarter");
+		static UClass* ptr = UObject::FindClass("Class Tutorial.BeachNPCSpawnFlowStarter");
 		return ptr;
 	}
 
@@ -233,7 +233,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Tutorial.CompanyOnboardingStarter");
+		static UClass* ptr = UObject::FindClass("Class Tutorial.CompanyOnboardingStarter");
 		return ptr;
 	}
 
@@ -251,7 +251,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Tutorial.MaidenVoyageStarter");
+		static UClass* ptr = UObject::FindClass("Class Tutorial.MaidenVoyageStarter");
 		return ptr;
 	}
 

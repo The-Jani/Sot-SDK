@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,20 +20,20 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AmmoChest.BP_AmmoChest_C
-// 0x0040 (FullSize[0x0508] - InheritedSize[0x04C8])
+// 0x0040 (FullSize[0x04A8] - InheritedSize[0x0468])
 class ABP_AmmoChest_C : public AAmmoChest
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x04C8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UBoxComponent*                               Hits;                                                      // 0x04D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UInteractableComponent*                      Interactable;                                              // 0x04D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	struct FWwiseEmitter                               Emitter;                                                   // 0x04E0(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
-	class UMaterialInstanceDynamic*                    DynamicMaterial;                                           // 0x0500(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0468(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UBoxComponent*                               Hits;                                                      // 0x0470(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UInteractableComponent*                      Interactable;                                              // 0x0478(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	struct FWwiseEmitter                               Emitter;                                                   // 0x0480(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	class UMaterialInstanceDynamic*                    DynamicMaterial;                                           // 0x04A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_AmmoChest.BP_AmmoChest_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_AmmoChest.BP_AmmoChest_C");
 		return ptr;
 	}
 

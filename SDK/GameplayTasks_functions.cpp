@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Final, Native, Public, BlueprintCallable)
 void UGameplayTask::ReadyForActivation()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask.ReadyForActivation");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask.ReadyForActivation");
 
 	UGameplayTask_ReadyForActivation_Params params;
 
@@ -39,7 +39,7 @@ void UGameplayTask::ReadyForActivation()
 // (MulticastDelegate, Public, Delegate)
 void UGameplayTask::GenericGameplayTaskDelegate__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction GameplayTasks.GameplayTask.GenericGameplayTaskDelegate__DelegateSignature");
+	static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction GameplayTasks.GameplayTask.GenericGameplayTaskDelegate__DelegateSignature");
 
 	UGameplayTask_GenericGameplayTaskDelegate__DelegateSignature_Params params;
 
@@ -55,7 +55,7 @@ void UGameplayTask::GenericGameplayTaskDelegate__DelegateSignature()
 // (Final, Native, Public, BlueprintCallable)
 void UGameplayTask::EndTask()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask.EndTask");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask.EndTask");
 
 	UGameplayTask_EndTask_Params params;
 
@@ -71,18 +71,16 @@ void UGameplayTask::EndTask()
 // Function GameplayTasks.GameplayTask_SpawnActor.SpawnActor
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// TScriptInterface<class UGameplayTaskOwnerInterface> TaskOwner                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper)
 // struct FVector                 SpawnLocation                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // struct FRotator                SpawnRotation                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class UClass*                  Class                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 // bool                           bSpawnOnlyOnAuthority          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
 // class UGameplayTask_SpawnActor* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-class UGameplayTask_SpawnActor* UGameplayTask_SpawnActor::STATIC_SpawnActor(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, class UClass* Class, bool bSpawnOnlyOnAuthority)
+class UGameplayTask_SpawnActor* UGameplayTask_SpawnActor::STATIC_SpawnActor(const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, class UClass* Class, bool bSpawnOnlyOnAuthority)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_SpawnActor.SpawnActor");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_SpawnActor.SpawnActor");
 
 	UGameplayTask_SpawnActor_SpawnActor_Params params;
-	params.TaskOwner = TaskOwner;
 	params.SpawnLocation = SpawnLocation;
 	params.SpawnRotation = SpawnRotation;
 	params.Class = Class;
@@ -106,7 +104,7 @@ class UGameplayTask_SpawnActor* UGameplayTask_SpawnActor::STATIC_SpawnActor(cons
 // class AActor*                  SpawnedActor                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UGameplayTask_SpawnActor::FinishSpawningActor(class UObject* WorldContextObject, class AActor* SpawnedActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_SpawnActor.FinishSpawningActor");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_SpawnActor.FinishSpawningActor");
 
 	UGameplayTask_SpawnActor_FinishSpawningActor_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -129,7 +127,7 @@ void UGameplayTask_SpawnActor::FinishSpawningActor(class UObject* WorldContextOb
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool UGameplayTask_SpawnActor::BeginSpawningActor(class UObject* WorldContextObject, class AActor** SpawnedActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_SpawnActor.BeginSpawningActor");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_SpawnActor.BeginSpawningActor");
 
 	UGameplayTask_SpawnActor_BeginSpawningActor_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -151,15 +149,13 @@ bool UGameplayTask_SpawnActor::BeginSpawningActor(class UObject* WorldContextObj
 // Function GameplayTasks.GameplayTask_WaitDelay.TaskWaitDelay
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// TScriptInterface<class UGameplayTaskOwnerInterface> TaskOwner                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper)
 // float                          Time                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UGameplayTask_WaitDelay* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-class UGameplayTask_WaitDelay* UGameplayTask_WaitDelay::STATIC_TaskWaitDelay(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, float Time)
+class UGameplayTask_WaitDelay* UGameplayTask_WaitDelay::STATIC_TaskWaitDelay(float Time)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_WaitDelay.TaskWaitDelay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_WaitDelay.TaskWaitDelay");
 
 	UGameplayTask_WaitDelay_TaskWaitDelay_Params params;
-	params.TaskOwner = TaskOwner;
 	params.Time = Time;
 
 	auto flags = fn->FunctionFlags;
@@ -177,7 +173,7 @@ class UGameplayTask_WaitDelay* UGameplayTask_WaitDelay::STATIC_TaskWaitDelay(con
 // (MulticastDelegate, Public, Delegate)
 void UGameplayTask_WaitDelay::TaskDelayDelegate__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction GameplayTasks.GameplayTask_WaitDelay.TaskDelayDelegate__DelegateSignature");
+	static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction GameplayTasks.GameplayTask_WaitDelay.TaskDelayDelegate__DelegateSignature");
 
 	UGameplayTask_WaitDelay_TaskDelayDelegate__DelegateSignature_Params params;
 
@@ -193,7 +189,7 @@ void UGameplayTask_WaitDelay::TaskDelayDelegate__DelegateSignature()
 // (Final, Native, Public)
 void UGameplayTasksComponent::OnRep_SimulatedTasks()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTasksComponent.OnRep_SimulatedTasks");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTasksComponent.OnRep_SimulatedTasks");
 
 	UGameplayTasksComponent_OnRep_SimulatedTasks_Params params;
 
@@ -209,18 +205,16 @@ void UGameplayTasksComponent::OnRep_SimulatedTasks()
 // Function GameplayTasks.GameplayTasksComponent.K2_RunGameplayTask
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// TScriptInterface<class UGameplayTaskOwnerInterface> TaskOwner                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 // class UGameplayTask*           Task                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // unsigned char                  Priority                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // TArray<class UClass*>          AdditionalRequiredResources    (Parm, ZeroConstructor, AdvancedDisplay, UObjectWrapper)
 // TArray<class UClass*>          AdditionalClaimedResources     (Parm, ZeroConstructor, AdvancedDisplay, UObjectWrapper)
 // TEnumAsByte<GameplayTasks_EGameplayTaskRunResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-TEnumAsByte<GameplayTasks_EGameplayTaskRunResult> UGameplayTasksComponent::STATIC_K2_RunGameplayTask(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, class UGameplayTask* Task, unsigned char Priority, TArray<class UClass*> AdditionalRequiredResources, TArray<class UClass*> AdditionalClaimedResources)
+TEnumAsByte<GameplayTasks_EGameplayTaskRunResult> UGameplayTasksComponent::STATIC_K2_RunGameplayTask(class UGameplayTask* Task, unsigned char Priority, TArray<class UClass*> AdditionalRequiredResources, TArray<class UClass*> AdditionalClaimedResources)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTasksComponent.K2_RunGameplayTask");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTasksComponent.K2_RunGameplayTask");
 
 	UGameplayTasksComponent_K2_RunGameplayTask_Params params;
-	params.TaskOwner = TaskOwner;
 	params.Task = Task;
 	params.Priority = Priority;
 	params.AdditionalRequiredResources = AdditionalRequiredResources;

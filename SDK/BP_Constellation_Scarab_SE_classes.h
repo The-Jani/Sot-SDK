@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Constellation_Scarab_SE.BP_Constellation_Scarab_SE_C
-// 0x0000 (FullSize[0x04D0] - InheritedSize[0x04D0])
+// 0x0000 (FullSize[0x0470] - InheritedSize[0x0470])
 class ABP_Constellation_Scarab_SE_C : public ABP_Constellation_C
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Constellation_Scarab_SE.BP_Constellation_Scarab_SE_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Constellation_Scarab_SE.BP_Constellation_Scarab_SE_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_LightingController.BP_LightingController_C
-// 0x0000 (FullSize[0x0E90] - InheritedSize[0x0E90])
+// 0x0000 (FullSize[0x0E40] - InheritedSize[0x0E40])
 class ABP_LightingController_C : public ALightingController
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_LightingController.BP_LightingController_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LightingController.BP_LightingController_C");
 		return ptr;
 	}
 

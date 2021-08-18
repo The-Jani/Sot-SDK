@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -44,7 +44,6 @@ struct UBP_Humanoid_ThirdPerson_C_IsHitReactActive_Params
 // Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.ItemWielded
 struct UBP_Humanoid_ThirdPerson_C_ItemWielded_Params
 {
-	TScriptInterface<class UWieldableInterface>        Item;                                                      // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
 	struct FWieldAnimationParams                       AnimParams;                                                // (Parm, OutParm)
 };
 
@@ -57,7 +56,6 @@ struct UBP_Humanoid_ThirdPerson_C_Start_Stow_Params
 // Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.Start Wield
 struct UBP_Humanoid_ThirdPerson_C_Start_Wield_Params
 {
-	TScriptInterface<class UWieldableInterface>        Wielded_Item;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 
 // Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.Convert Blendspace 1D Structure to Array
@@ -127,6 +125,11 @@ struct UBP_Humanoid_ThirdPerson_C_IK_Limb_Blend_Timing_Params
 	TEnumAsByte<EIKLimbName_EIKLimbName>               LimbId;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              BlendIn;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              BlendOut;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_630B8B1242DB3AA4DEF629AAA656110F
+struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_630B8B1242DB3AA4DEF629AAA656110F_Params
+{
 };
 
 // Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_57FB99F740445562B7F05A9AFCB961C0
@@ -264,6 +267,11 @@ struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP
 {
 };
 
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_EF7D996446842139E8BA578F2F135C8D
+struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_EF7D996446842139E8BA578F2F135C8D_Params
+{
+};
+
 // Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_B8C5902E473BBF716C3095AEE335352C
 struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_B8C5902E473BBF716C3095AEE335352C_Params
 {
@@ -279,13 +287,13 @@ struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP
 {
 };
 
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_0DD5C48042DFA48462982EB3A0D0D766
-struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_0DD5C48042DFA48462982EB3A0D0D766_Params
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_876A2B1247CF3A251B14849C17E6B9CA
+struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_876A2B1247CF3A251B14849C17E6B9CA_Params
 {
 };
 
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_876A2B1247CF3A251B14849C17E6B9CA
-struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_876A2B1247CF3A251B14849C17E6B9CA_Params
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_6CC6CFB846EED58158F335AABECFEEE1
+struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_6CC6CFB846EED58158F335AABECFEEE1_Params
 {
 };
 
@@ -304,8 +312,8 @@ struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP
 {
 };
 
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_6CC6CFB846EED58158F335AABECFEEE1
-struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_6CC6CFB846EED58158F335AABECFEEE1_Params
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_0DD5C48042DFA48462982EB3A0D0D766
+struct UBP_Humanoid_ThirdPerson_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_0DD5C48042DFA48462982EB3A0D0D766_Params
 {
 };
 
@@ -2734,7 +2742,6 @@ struct UBP_Humanoid_ThirdPerson_C_AnimNotify_OnIdle_Params
 // Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.ItemStowed
 struct UBP_Humanoid_ThirdPerson_C_ItemStowed_Params
 {
-	TScriptInterface<class UWieldableInterface>        Item;                                                      // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
 	bool                                               FastStow;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 

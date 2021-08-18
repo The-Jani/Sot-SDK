@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_ItemPreview_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemPreview.BP_ItemPreview_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ItemPreview.BP_ItemPreview_C.UserConstructionScript");
 
 	ABP_ItemPreview_C_UserConstructionScript_Params params;
 
@@ -40,7 +40,7 @@ void ABP_ItemPreview_C::UserConstructionScript()
 // TEnumAsByte<Engine_EEndPlayReason> EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_ItemPreview_C::ReceiveEndPlay(TEnumAsByte<Engine_EEndPlayReason> EndPlayReason)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemPreview.BP_ItemPreview_C.ReceiveEndPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ItemPreview.BP_ItemPreview_C.ReceiveEndPlay");
 
 	ABP_ItemPreview_C_ReceiveEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
@@ -57,7 +57,7 @@ void ABP_ItemPreview_C::ReceiveEndPlay(TEnumAsByte<Engine_EEndPlayReason> EndPla
 // (Event, Public, BlueprintEvent)
 void ABP_ItemPreview_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemPreview.BP_ItemPreview_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ItemPreview.BP_ItemPreview_C.ReceiveBeginPlay");
 
 	ABP_ItemPreview_C_ReceiveBeginPlay_Params params;
 
@@ -75,7 +75,7 @@ void ABP_ItemPreview_C::ReceiveBeginPlay()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_ItemPreview_C::ExecuteUbergraph_BP_ItemPreview(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemPreview.BP_ItemPreview_C.ExecuteUbergraph_BP_ItemPreview");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ItemPreview.BP_ItemPreview_C.ExecuteUbergraph_BP_ItemPreview");
 
 	ABP_ItemPreview_C_ExecuteUbergraph_BP_ItemPreview_Params params;
 	params.EntryPoint = EntryPoint;
@@ -94,7 +94,7 @@ void ABP_ItemPreview_C::ExecuteUbergraph_BP_ItemPreview(int EntryPoint)
 // struct FPiratePreviewShutdownEvent Data                           (Parm)
 void ABP_ItemPreview_C::PreviewShutdown__DelegateSignature(const struct FPiratePreviewShutdownEvent& Data)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemPreview.BP_ItemPreview_C.PreviewShutdown__DelegateSignature");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ItemPreview.BP_ItemPreview_C.PreviewShutdown__DelegateSignature");
 
 	ABP_ItemPreview_C_PreviewShutdown__DelegateSignature_Params params;
 	params.Data = Data;
@@ -113,7 +113,7 @@ void ABP_ItemPreview_C::PreviewShutdown__DelegateSignature(const struct FPirateP
 // struct FPiratePreviewReadyEvent Data                           (Parm)
 void ABP_ItemPreview_C::PreviewReady__DelegateSignature(const struct FPiratePreviewReadyEvent& Data)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemPreview.BP_ItemPreview_C.PreviewReady__DelegateSignature");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ItemPreview.BP_ItemPreview_C.PreviewReady__DelegateSignature");
 
 	ABP_ItemPreview_C_PreviewReady__DelegateSignature_Params params;
 	params.Data = Data;
@@ -132,7 +132,7 @@ void ABP_ItemPreview_C::PreviewReady__DelegateSignature(const struct FPiratePrev
 // struct FPiratePreviewBusyEvent Data                           (Parm)
 void ABP_ItemPreview_C::PreviewBusy__DelegateSignature(const struct FPiratePreviewBusyEvent& Data)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemPreview.BP_ItemPreview_C.PreviewBusy__DelegateSignature");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ItemPreview.BP_ItemPreview_C.PreviewBusy__DelegateSignature");
 
 	ABP_ItemPreview_C_PreviewBusy__DelegateSignature_Params params;
 	params.Data = Data;

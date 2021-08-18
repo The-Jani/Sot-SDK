@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // struct FEmissarySoldLootNetworkEvent NewParam                       (Parm)
 void UBP_Prompt_EmissarySoldLoot_C::OnEmissarySoldLoot(const struct FEmissarySoldLootNetworkEvent& NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissarySoldLoot.BP_Prompt_EmissarySoldLoot_C.OnEmissarySoldLoot");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissarySoldLoot.BP_Prompt_EmissarySoldLoot_C.OnEmissarySoldLoot");
 
 	UBP_Prompt_EmissarySoldLoot_C_OnEmissarySoldLoot_Params params;
 	params.NewParam = NewParam;
@@ -43,7 +43,7 @@ void UBP_Prompt_EmissarySoldLoot_C::OnEmissarySoldLoot(const struct FEmissarySol
 // struct FEmissarySoldLootNetworkEvent NewParam                       (Parm)
 void UBP_Prompt_EmissarySoldLoot_C::EmissarySoldLoot(const struct FEmissarySoldLootNetworkEvent& NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissarySoldLoot.BP_Prompt_EmissarySoldLoot_C.EmissarySoldLoot");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissarySoldLoot.BP_Prompt_EmissarySoldLoot_C.EmissarySoldLoot");
 
 	UBP_Prompt_EmissarySoldLoot_C_EmissarySoldLoot_Params params;
 	params.NewParam = NewParam;
@@ -60,7 +60,7 @@ void UBP_Prompt_EmissarySoldLoot_C::EmissarySoldLoot(const struct FEmissarySoldL
 // (Public, BlueprintCallable, BlueprintEvent)
 void UBP_Prompt_EmissarySoldLoot_C::Evaluate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissarySoldLoot.BP_Prompt_EmissarySoldLoot_C.Evaluate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissarySoldLoot.BP_Prompt_EmissarySoldLoot_C.Evaluate");
 
 	UBP_Prompt_EmissarySoldLoot_C_Evaluate_Params params;
 
@@ -76,7 +76,7 @@ void UBP_Prompt_EmissarySoldLoot_C::Evaluate()
 // (Event, Public, BlueprintEvent)
 void UBP_Prompt_EmissarySoldLoot_C::RegisterOtherEvents_Implementable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissarySoldLoot.BP_Prompt_EmissarySoldLoot_C.RegisterOtherEvents_Implementable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissarySoldLoot.BP_Prompt_EmissarySoldLoot_C.RegisterOtherEvents_Implementable");
 
 	UBP_Prompt_EmissarySoldLoot_C_RegisterOtherEvents_Implementable_Params params;
 
@@ -92,7 +92,7 @@ void UBP_Prompt_EmissarySoldLoot_C::RegisterOtherEvents_Implementable()
 // (Event, Public, BlueprintEvent)
 void UBP_Prompt_EmissarySoldLoot_C::UnregisterOtherEvents_Implementable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissarySoldLoot.BP_Prompt_EmissarySoldLoot_C.UnregisterOtherEvents_Implementable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissarySoldLoot.BP_Prompt_EmissarySoldLoot_C.UnregisterOtherEvents_Implementable");
 
 	UBP_Prompt_EmissarySoldLoot_C_UnregisterOtherEvents_Implementable_Params params;
 
@@ -110,7 +110,7 @@ void UBP_Prompt_EmissarySoldLoot_C::UnregisterOtherEvents_Implementable()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_Prompt_EmissarySoldLoot_C::ExecuteUbergraph_BP_Prompt_EmissarySoldLoot(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissarySoldLoot.BP_Prompt_EmissarySoldLoot_C.ExecuteUbergraph_BP_Prompt_EmissarySoldLoot");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissarySoldLoot.BP_Prompt_EmissarySoldLoot_C.ExecuteUbergraph_BP_Prompt_EmissarySoldLoot");
 
 	UBP_Prompt_EmissarySoldLoot_C_ExecuteUbergraph_BP_Prompt_EmissarySoldLoot_Params params;
 	params.EntryPoint = EntryPoint;

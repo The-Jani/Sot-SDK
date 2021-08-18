@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // struct FEmissaryEncounteredKrakenEvent NewParam                       (Parm)
 void UBP_Prompt_EmissaryEncounteredKraken_C::OnEmissaryEncounteredKraken(const struct FEmissaryEncounteredKrakenEvent& NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.OnEmissaryEncounteredKraken");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.OnEmissaryEncounteredKraken");
 
 	UBP_Prompt_EmissaryEncounteredKraken_C_OnEmissaryEncounteredKraken_Params params;
 	params.NewParam = NewParam;
@@ -43,7 +43,7 @@ void UBP_Prompt_EmissaryEncounteredKraken_C::OnEmissaryEncounteredKraken(const s
 // struct FEmissaryEncounteredKrakenEvent NewParam                       (Parm)
 void UBP_Prompt_EmissaryEncounteredKraken_C::EmissaryEncounteredKraken(const struct FEmissaryEncounteredKrakenEvent& NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.EmissaryEncounteredKraken");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.EmissaryEncounteredKraken");
 
 	UBP_Prompt_EmissaryEncounteredKraken_C_EmissaryEncounteredKraken_Params params;
 	params.NewParam = NewParam;
@@ -60,7 +60,7 @@ void UBP_Prompt_EmissaryEncounteredKraken_C::EmissaryEncounteredKraken(const str
 // (Public, BlueprintCallable, BlueprintEvent)
 void UBP_Prompt_EmissaryEncounteredKraken_C::Evaluate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.Evaluate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.Evaluate");
 
 	UBP_Prompt_EmissaryEncounteredKraken_C_Evaluate_Params params;
 
@@ -76,7 +76,7 @@ void UBP_Prompt_EmissaryEncounteredKraken_C::Evaluate()
 // (Event, Public, BlueprintEvent)
 void UBP_Prompt_EmissaryEncounteredKraken_C::RegisterOtherEvents_Implementable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.RegisterOtherEvents_Implementable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.RegisterOtherEvents_Implementable");
 
 	UBP_Prompt_EmissaryEncounteredKraken_C_RegisterOtherEvents_Implementable_Params params;
 
@@ -92,7 +92,7 @@ void UBP_Prompt_EmissaryEncounteredKraken_C::RegisterOtherEvents_Implementable()
 // (Event, Public, BlueprintEvent)
 void UBP_Prompt_EmissaryEncounteredKraken_C::UnregisterOtherEvents_Implementable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.UnregisterOtherEvents_Implementable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.UnregisterOtherEvents_Implementable");
 
 	UBP_Prompt_EmissaryEncounteredKraken_C_UnregisterOtherEvents_Implementable_Params params;
 
@@ -110,7 +110,7 @@ void UBP_Prompt_EmissaryEncounteredKraken_C::UnregisterOtherEvents_Implementable
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_Prompt_EmissaryEncounteredKraken_C::ExecuteUbergraph_BP_Prompt_EmissaryEncounteredKraken(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.ExecuteUbergraph_BP_Prompt_EmissaryEncounteredKraken");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.ExecuteUbergraph_BP_Prompt_EmissaryEncounteredKraken");
 
 	UBP_Prompt_EmissaryEncounteredKraken_C_ExecuteUbergraph_BP_Prompt_EmissaryEncounteredKraken_Params params;
 	params.EntryPoint = EntryPoint;

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Public, BlueprintCallable, BlueprintEvent)
 void UBP_AnimatedStepsComponent_C::StartOpeningSteps()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.StartOpeningSteps");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.StartOpeningSteps");
 
 	UBP_AnimatedStepsComponent_C_StartOpeningSteps_Params params;
 
@@ -41,7 +41,7 @@ void UBP_AnimatedStepsComponent_C::StartOpeningSteps()
 // bool                           OpeningOrClosing               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_AnimatedStepsComponent_C::SetAllStepsZs(TArray<float>* TargetZOffsets, bool OpeningOrClosing)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.SetAllStepsZs");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.SetAllStepsZs");
 
 	UBP_AnimatedStepsComponent_C_SetAllStepsZs_Params params;
 	params.OpeningOrClosing = OpeningOrClosing;
@@ -67,7 +67,7 @@ void UBP_AnimatedStepsComponent_C::SetAllStepsZs(TArray<float>* TargetZOffsets, 
 // struct FVector                 BoxOrigin                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_AnimatedStepsComponent_C::UpdateStep(int BoneIndex, float TargetZ, float MovementDelay, class UBoxComponent* AttachedBox, const struct FVector& BoxOrigin)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.UpdateStep");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.UpdateStep");
 
 	UBP_AnimatedStepsComponent_C_UpdateStep_Params params;
 	params.BoneIndex = BoneIndex;
@@ -90,7 +90,7 @@ void UBP_AnimatedStepsComponent_C::UpdateStep(int BoneIndex, float TargetZ, floa
 // float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_AnimatedStepsComponent_C::ReceiveTick(float DeltaSeconds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.ReceiveTick");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.ReceiveTick");
 
 	UBP_AnimatedStepsComponent_C_ReceiveTick_Params params;
 	params.DeltaSeconds = DeltaSeconds;
@@ -107,7 +107,7 @@ void UBP_AnimatedStepsComponent_C::ReceiveTick(float DeltaSeconds)
 // (Event, Public, BlueprintEvent)
 void UBP_AnimatedStepsComponent_C::StartOpening()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.StartOpening");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.StartOpening");
 
 	UBP_AnimatedStepsComponent_C_StartOpening_Params params;
 
@@ -123,7 +123,7 @@ void UBP_AnimatedStepsComponent_C::StartOpening()
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void UBP_AnimatedStepsComponent_C::OpenImmediate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.OpenImmediate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.OpenImmediate");
 
 	UBP_AnimatedStepsComponent_C_OpenImmediate_Params params;
 
@@ -139,7 +139,7 @@ void UBP_AnimatedStepsComponent_C::OpenImmediate()
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void UBP_AnimatedStepsComponent_C::Close()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.Close");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.Close");
 
 	UBP_AnimatedStepsComponent_C_Close_Params params;
 
@@ -157,7 +157,7 @@ void UBP_AnimatedStepsComponent_C::Close()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_AnimatedStepsComponent_C::ExecuteUbergraph_BP_AnimatedStepsComponent(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.ExecuteUbergraph_BP_AnimatedStepsComponent");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_AnimatedStepsComponent.BP_AnimatedStepsComponent_C.ExecuteUbergraph_BP_AnimatedStepsComponent");
 
 	UBP_AnimatedStepsComponent_C_ExecuteUbergraph_BP_AnimatedStepsComponent_Params params;
 	params.EntryPoint = EntryPoint;

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -30,13 +30,13 @@ public:
 	struct FAnimNode_SequenceEvaluator                 AnimGraphNode_SequenceEvaluator_10C67A1147FD9A4753E31CA816D0F579; // 0x06E0(0x0050)
 	TEnumAsByte<EObjectAnimationState_EObjectAnimationState> ObjectAnimationState;                                      // 0x0730(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                               bReloadWanted;                                             // 0x0731(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_G4LM[0x6];                                     // 0x0732(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_86G5[0x6];                                     // 0x0732(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FObjectMessagingHandle                      ReloadEventHandle;                                         // 0x0738(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("AnimBlueprintGeneratedClass BP_Anim_FlintlockPistol.BP_Anim_FlintlockPistol_C");
+		static UClass* ptr = UObject::FindClass("AnimBlueprintGeneratedClass BP_Anim_FlintlockPistol.BP_Anim_FlintlockPistol_C");
 		return ptr;
 	}
 

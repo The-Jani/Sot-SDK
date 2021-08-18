@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ANPCObject_Sword_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NPCObject_Sword.NPCObject_Sword_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function NPCObject_Sword.NPCObject_Sword_C.UserConstructionScript");
 
 	ANPCObject_Sword_C_UserConstructionScript_Params params;
 

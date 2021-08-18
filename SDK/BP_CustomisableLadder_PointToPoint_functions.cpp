@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -25,7 +25,7 @@ namespace CG
 // struct FVector                 Point_B                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_CustomisableLadder_PointToPoint_C::Orientate_Ladder(const struct FVector& Point_A, const struct FVector& Point_B)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder_PointToPoint.BP_CustomisableLadder_PointToPoint_C.Orientate Ladder");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder_PointToPoint.BP_CustomisableLadder_PointToPoint_C.Orientate Ladder");
 
 	ABP_CustomisableLadder_PointToPoint_C_Orientate_Ladder_Params params;
 	params.Point_A = Point_A;
@@ -43,7 +43,7 @@ void ABP_CustomisableLadder_PointToPoint_C::Orientate_Ladder(const struct FVecto
 // (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 void ABP_CustomisableLadder_PointToPoint_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder_PointToPoint.BP_CustomisableLadder_PointToPoint_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder_PointToPoint.BP_CustomisableLadder_PointToPoint_C.UserConstructionScript");
 
 	ABP_CustomisableLadder_PointToPoint_C_UserConstructionScript_Params params;
 
@@ -59,7 +59,7 @@ void ABP_CustomisableLadder_PointToPoint_C::UserConstructionScript()
 // (Event, Public, BlueprintEvent)
 void ABP_CustomisableLadder_PointToPoint_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder_PointToPoint.BP_CustomisableLadder_PointToPoint_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder_PointToPoint.BP_CustomisableLadder_PointToPoint_C.ReceiveBeginPlay");
 
 	ABP_CustomisableLadder_PointToPoint_C_ReceiveBeginPlay_Params params;
 
@@ -77,7 +77,7 @@ void ABP_CustomisableLadder_PointToPoint_C::ReceiveBeginPlay()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_CustomisableLadder_PointToPoint_C::ExecuteUbergraph_BP_CustomisableLadder_PointToPoint(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder_PointToPoint.BP_CustomisableLadder_PointToPoint_C.ExecuteUbergraph_BP_CustomisableLadder_PointToPoint");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder_PointToPoint.BP_CustomisableLadder_PointToPoint_C.ExecuteUbergraph_BP_CustomisableLadder_PointToPoint");
 
 	ABP_CustomisableLadder_PointToPoint_C_ExecuteUbergraph_BP_CustomisableLadder_PointToPoint_Params params;
 	params.EntryPoint = EntryPoint;

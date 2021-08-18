@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,28 +20,28 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CustomisableLadder.BP_CustomisableLadder_C
-// 0x0088 (FullSize[0x06A8] - InheritedSize[0x0620])
+// 0x0088 (FullSize[0x0648] - InheritedSize[0x05C0])
 class ABP_CustomisableLadder_C : public ALadder
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0620(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UInteractableComponent*                      InteractableComponent;                                     // 0x0628(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UStaticMeshComponent*                        Ladder_Cap;                                                // 0x0630(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	struct FCustomisableLadderDefinitionStruct         LadderCustomisationDefinition;                             // 0x0638(0x0020) (Edit, BlueprintVisible)
-	TArray<struct FVector>                             OffTopSplineComponentPositions;                            // 0x0658(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FVector>                             OnTopSplineComponentPositions;                             // 0x0668(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	int                                                Steps;                                                     // 0x0678(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_LK82[0x4];                                     // 0x067C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UMaterialInterface*                          Material_Override;                                         // 0x0680(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                              StepHeight;                                                // 0x0688(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FVector                                     Interactable_Position;                                     // 0x068C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FVector                                     Interactable_Scale;                                        // 0x0698(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	int                                                Minimum_Steps;                                             // 0x06A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x05C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UInteractableComponent*                      InteractableComponent;                                     // 0x05C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UStaticMeshComponent*                        Ladder_Cap;                                                // 0x05D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	struct FCustomisableLadderDefinitionStruct         LadderCustomisationDefinition;                             // 0x05D8(0x0020) (Edit, BlueprintVisible)
+	TArray<struct FVector>                             OffTopSplineComponentPositions;                            // 0x05F8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FVector>                             OnTopSplineComponentPositions;                             // 0x0608(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int                                                Steps;                                                     // 0x0618(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_XCSB[0x4];                                     // 0x061C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UMaterialInterface*                          Material_Override;                                         // 0x0620(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              StepHeight;                                                // 0x0628(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FVector                                     Interactable_Position;                                     // 0x062C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FVector                                     Interactable_Scale;                                        // 0x0638(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	int                                                Minimum_Steps;                                             // 0x0644(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_CustomisableLadder.BP_CustomisableLadder_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_CustomisableLadder.BP_CustomisableLadder_C");
 		return ptr;
 	}
 

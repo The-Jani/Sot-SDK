@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // struct FEmissaryLevel_FEmissaryLevelRankChange NewParam                       (Parm)
 void UBP_Prompt_EmissaryLevelRankChange_C::OnEmissaryLevelRankChange(const struct FEmissaryLevel_FEmissaryLevelRankChange& NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.OnEmissaryLevelRankChange");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.OnEmissaryLevelRankChange");
 
 	UBP_Prompt_EmissaryLevelRankChange_C_OnEmissaryLevelRankChange_Params params;
 	params.NewParam = NewParam;
@@ -43,7 +43,7 @@ void UBP_Prompt_EmissaryLevelRankChange_C::OnEmissaryLevelRankChange(const struc
 // struct FEmissaryLevel_FEmissaryLevelRankChange NewParam                       (Parm)
 void UBP_Prompt_EmissaryLevelRankChange_C::EmissaryLevelRankChange(const struct FEmissaryLevel_FEmissaryLevelRankChange& NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.EmissaryLevelRankChange");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.EmissaryLevelRankChange");
 
 	UBP_Prompt_EmissaryLevelRankChange_C_EmissaryLevelRankChange_Params params;
 	params.NewParam = NewParam;
@@ -60,7 +60,7 @@ void UBP_Prompt_EmissaryLevelRankChange_C::EmissaryLevelRankChange(const struct 
 // (Public, BlueprintCallable, BlueprintEvent)
 void UBP_Prompt_EmissaryLevelRankChange_C::Evaluate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.Evaluate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.Evaluate");
 
 	UBP_Prompt_EmissaryLevelRankChange_C_Evaluate_Params params;
 
@@ -76,7 +76,7 @@ void UBP_Prompt_EmissaryLevelRankChange_C::Evaluate()
 // (Event, Public, BlueprintEvent)
 void UBP_Prompt_EmissaryLevelRankChange_C::RegisterOtherEvents_Implementable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.RegisterOtherEvents_Implementable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.RegisterOtherEvents_Implementable");
 
 	UBP_Prompt_EmissaryLevelRankChange_C_RegisterOtherEvents_Implementable_Params params;
 
@@ -92,7 +92,7 @@ void UBP_Prompt_EmissaryLevelRankChange_C::RegisterOtherEvents_Implementable()
 // (Event, Public, BlueprintEvent)
 void UBP_Prompt_EmissaryLevelRankChange_C::UnregisterOtherEvents_Implementable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.UnregisterOtherEvents_Implementable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.UnregisterOtherEvents_Implementable");
 
 	UBP_Prompt_EmissaryLevelRankChange_C_UnregisterOtherEvents_Implementable_Params params;
 
@@ -110,7 +110,7 @@ void UBP_Prompt_EmissaryLevelRankChange_C::UnregisterOtherEvents_Implementable()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_Prompt_EmissaryLevelRankChange_C::ExecuteUbergraph_BP_Prompt_EmissaryLevelRankChange(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.ExecuteUbergraph_BP_Prompt_EmissaryLevelRankChange");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.ExecuteUbergraph_BP_Prompt_EmissaryLevelRankChange");
 
 	UBP_Prompt_EmissaryLevelRankChange_C_ExecuteUbergraph_BP_Prompt_EmissaryLevelRankChange_Params params;
 	params.EntryPoint = EntryPoint;

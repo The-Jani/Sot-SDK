@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Native, Public)
 void URepairableInterface::HandleDestroy()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Repair.RepairableInterface.HandleDestroy");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Repair.RepairableInterface.HandleDestroy");
 
 	URepairableInterface_HandleDestroy_Params params;
 
@@ -41,7 +41,7 @@ void URepairableInterface::HandleDestroy()
 // class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 class UClass* URepairableInterface::GetRepairType()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Repair.RepairableInterface.GetRepairType");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Repair.RepairableInterface.GetRepairType");
 
 	URepairableInterface_GetRepairType_Params params;
 
@@ -62,7 +62,7 @@ class UClass* URepairableInterface::GetRepairType()
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 float URepairableInterface::GetRepairTime()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Repair.RepairableInterface.GetRepairTime");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Repair.RepairableInterface.GetRepairTime");
 
 	URepairableInterface_GetRepairTime_Params params;
 
@@ -83,7 +83,7 @@ float URepairableInterface::GetRepairTime()
 // TEnumAsByte<Repair_ERepairableState> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 TEnumAsByte<Repair_ERepairableState> URepairableInterface::GetRepairableState()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Repair.RepairableInterface.GetRepairableState");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Repair.RepairableInterface.GetRepairableState");
 
 	URepairableInterface_GetRepairableState_Params params;
 
@@ -104,7 +104,7 @@ TEnumAsByte<Repair_ERepairableState> URepairableInterface::GetRepairableState()
 // class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 class UClass* URepairingInterface::GetRepairType()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Repair.RepairingInterface.GetRepairType");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Repair.RepairingInterface.GetRepairType");
 
 	URepairingInterface_GetRepairType_Params params;
 

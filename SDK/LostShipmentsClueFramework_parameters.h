@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -19,12 +19,6 @@ namespace CG
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
-
-// Function LostShipmentsClueFramework.TaleQuestClueSiteService.GetClueSites
-struct UTaleQuestClueSiteService_GetClueSites_Params
-{
-	TArray<struct FClueSite>                           ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
 
 // Function LostShipmentsClueFramework.ClueDestinationDescriptor.OnRep_DestinationInfo
 struct UClueDestinationDescriptor_OnRep_DestinationInfo_Params
@@ -49,6 +43,12 @@ struct UClueLifetimeBlueprintFunctionLibrary_GiveClueToParticipant_Params
 	class AActor*                                      Participant;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClueDescriptor*                             Clue;                                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                      ClueSite;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+};
+
+// Function LostShipmentsClueFramework.TaleQuestClueSiteService.GetClueSites
+struct UTaleQuestClueSiteService_GetClueSites_Params
+{
+	TArray<struct FClueSite>                           ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 }

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_large_mast_main_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_large_mast_main.BP_large_mast_main_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_large_mast_main.BP_large_mast_main_C.UserConstructionScript");
 
 	ABP_large_mast_main_C_UserConstructionScript_Params params;
 
@@ -40,7 +40,7 @@ void ABP_large_mast_main_C::UserConstructionScript()
 // class UMastDescAsset*          MastDesc                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_large_mast_main_C::OnMastDescLoaded(class UMastDescAsset* MastDesc)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_large_mast_main.BP_large_mast_main_C.OnMastDescLoaded");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_large_mast_main.BP_large_mast_main_C.OnMastDescLoaded");
 
 	ABP_large_mast_main_C_OnMastDescLoaded_Params params;
 	params.MastDesc = MastDesc;
@@ -59,7 +59,7 @@ void ABP_large_mast_main_C::OnMastDescLoaded(class UMastDescAsset* MastDesc)
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_large_mast_main_C::ExecuteUbergraph_BP_large_mast_main(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_large_mast_main.BP_large_mast_main_C.ExecuteUbergraph_BP_large_mast_main");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_large_mast_main.BP_large_mast_main_C.ExecuteUbergraph_BP_large_mast_main");
 
 	ABP_large_mast_main_C_ExecuteUbergraph_BP_large_mast_main_Params params;
 	params.EntryPoint = EntryPoint;

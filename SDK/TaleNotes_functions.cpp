@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -26,7 +26,7 @@ namespace CG
 // int                            InHeight                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void ATaleNote::OnTextCanvasUpdate(class UCanvas* InCanvas, int InWidth, int InHeight)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TaleNotes.TaleNote.OnTextCanvasUpdate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function TaleNotes.TaleNote.OnTextCanvasUpdate");
 
 	ATaleNote_OnTextCanvasUpdate_Params params;
 	params.InCanvas = InCanvas;

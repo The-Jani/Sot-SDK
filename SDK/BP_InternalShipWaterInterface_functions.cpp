@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -27,7 +27,7 @@ namespace CG
 // struct FVector                 IntersectionPoint              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_InternalShipWaterInterface_C::GetLineIntersectionFromPlane(const struct FVector& LineStart, const struct FVector& LineEnd, bool* Intersect, struct FVector* IntersectionPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_InternalShipWaterInterface.BP_InternalShipWaterInterface_C.GetLineIntersectionFromPlane");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_InternalShipWaterInterface.BP_InternalShipWaterInterface_C.GetLineIntersectionFromPlane");
 
 	UBP_InternalShipWaterInterface_C_GetLineIntersectionFromPlane_Params params;
 	params.LineStart = LineStart;
@@ -53,7 +53,7 @@ void UBP_InternalShipWaterInterface_C::GetLineIntersectionFromPlane(const struct
 // float                          Distance                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_InternalShipWaterInterface_C::GetDistanceFromPlane(const struct FVector& Location, float* Distance)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_InternalShipWaterInterface.BP_InternalShipWaterInterface_C.GetDistanceFromPlane");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_InternalShipWaterInterface.BP_InternalShipWaterInterface_C.GetDistanceFromPlane");
 
 	UBP_InternalShipWaterInterface_C_GetDistanceFromPlane_Params params;
 	params.Location = Location;
@@ -75,7 +75,7 @@ void UBP_InternalShipWaterInterface_C::GetDistanceFromPlane(const struct FVector
 // float                          WaterLevel                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_InternalShipWaterInterface_C::GetWaterLevel(float* WaterLevel)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_InternalShipWaterInterface.BP_InternalShipWaterInterface_C.GetWaterLevel");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_InternalShipWaterInterface.BP_InternalShipWaterInterface_C.GetWaterLevel");
 
 	UBP_InternalShipWaterInterface_C_GetWaterLevel_Params params;
 
@@ -96,7 +96,7 @@ void UBP_InternalShipWaterInterface_C::GetWaterLevel(float* WaterLevel)
 // float                          Water_Amount                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_InternalShipWaterInterface_C::AddWater(float Water_Amount)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_InternalShipWaterInterface.BP_InternalShipWaterInterface_C.AddWater");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_InternalShipWaterInterface.BP_InternalShipWaterInterface_C.AddWater");
 
 	UBP_InternalShipWaterInterface_C_AddWater_Params params;
 	params.Water_Amount = Water_Amount;

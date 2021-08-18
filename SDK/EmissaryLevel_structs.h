@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -45,27 +45,51 @@ enum class EmissaryLevel_EEmissaryDeactivateReason : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct EmissaryLevel.EmissaryFlagMeshReferences
-// 0x0020
-struct FEmissaryFlagMeshReferences
+// ScriptStruct EmissaryLevel.ParticleVisualisation
+// 0x0028
+struct FParticleVisualisation
 {
-	struct FStringAssetReference                       BackOfShipEmissaryFlagMeshAssetReference;                  // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FStringAssetReference                       MastEmissaryFlagMeshAssetReference;                        // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FActorComponentSelector                     TargetParticles;                                           // 0x0000(0x0010) (Edit, ContainsInstancedReference)
+	float                                              Delay;                                                     // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              DelayAfterPutOutParticles;                                 // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                             PutOutParticles;                                           // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*                    ParticleSystem;                                            // 0x0020(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
-// ScriptStruct EmissaryLevel.EmissaryLevelData
-// 0x0070
-struct FEmissaryLevelData
+// ScriptStruct EmissaryLevel.LightVisualisation
+// 0x0028
+struct FLightVisualisation
 {
-	int                                                LevelTarget;                                               // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2X2R[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FEmissaryFlagMeshReferences                 EmissaryFlagMeshAssetReferences;                           // 0x0008(0x0020) (Edit, DisableEditOnInstance)
-	TAssetPtr<class UWeightedItemDescSpawnDataAsset>   EmissaryFlotsamSpawnDataAsset;                             // 0x0028(0x001C) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_98GO[0x4];                                     // 0x0028(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FRewardId                                   EmissaryDeactivationReward;                                // 0x0048(0x0008) (Edit, DisableEditOnInstance)
-	TArray<struct FPlayerStat>                         StatsToFireOnEmissaryLevelReached;                         // 0x0050(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FStringAssetReference                       TreasureSoldNotificationFlag;                              // 0x0060(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FActorComponentSelector                     TargetLight;                                               // 0x0000(0x0010) (Edit, ContainsInstancedReference)
+	float                                              TransitionTime;                                            // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              ActiveValue;                                               // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              InactiveValue;                                             // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_D5Z7[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class ULightComponent*                             Light;                                                     // 0x0020(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct EmissaryLevel.MaterialVisualisation
+// 0x0030
+struct FMaterialVisualisation
+{
+	struct FActorComponentSelector                     TargetMesh;                                                // 0x0000(0x0010) (Edit, ContainsInstancedReference)
+	float                                              TransitionTime;                                            // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                MaterialIndex;                                             // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FName                                       ParameterName;                                             // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              ActiveValue;                                               // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              InactiveValue;                                             // 0x0024(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*                    DynamicMaterial;                                           // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct EmissaryLevel.EmissaryCompanyCosmetics
+// 0x0020
+struct FEmissaryCompanyCosmetics
+{
+	TArray<class UClass*>                              CompanyCostumeCosmetics;                                   // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, UObjectWrapper)
+	TArray<class UClass*>                              CompanyShipCosmetics;                                      // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, UObjectWrapper)
 
 };
 
@@ -78,29 +102,43 @@ struct FEmissaryPointBoostMultipliers
 
 };
 
-// ScriptStruct EmissaryLevel.EmissaryLevelStatusStatInfo
-// 0x000C
-struct FEmissaryLevelStatusStatInfo
+// ScriptStruct EmissaryLevel.EmissaryFlagMeshReferences
+// 0x0020
+struct FEmissaryFlagMeshReferences
 {
-	struct FPlayerStat                                 StatToFire;                                                // 0x0000(0x000C) (Edit, DisableEditOnInstance)
+	struct FStringAssetReference                       BackOfShipEmissaryFlagMeshAssetReference;                  // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FStringAssetReference                       MastEmissaryFlagMeshAssetReference;                        // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 };
 
-// ScriptStruct EmissaryLevel.EmissaryPointsBoostCriteria
-// 0x0008
-struct FEmissaryPointsBoostCriteria
+// ScriptStruct EmissaryLevel.EmissaryLevelData
+// 0x0080
+struct FEmissaryLevelData
 {
-	unsigned char                                      UnknownData_OTYF[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (PADDING)
+	int                                                LevelTarget;                                               // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_L0IW[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FEmissaryFlagMeshReferences                 EmissaryFlagMeshAssetReferences;                           // 0x0008(0x0020) (Edit, DisableEditOnInstance)
+	TAssetPtr<class UWeightedItemDescSpawnDataAsset>   EmissaryFlotsamSpawnDataAsset;                             // 0x0028(0x001C) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_TDD8[0x4];                                     // 0x0028(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FRewardId                                   EmissaryDeactivationReward;                                // 0x0048(0x0008) (Edit, DisableEditOnInstance)
+	TArray<struct FPlayerStat>                         StatsToFireOnEmissaryLevelReached;                         // 0x0050(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FStringAssetReference                       TreasureSoldNotificationFlag;                              // 0x0060(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FStringAssetReference                       EmissaryFlagTextureReference;                              // 0x0070(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 };
 
-// ScriptStruct EmissaryLevel.TrackedPlayerKillEntry
-// 0x0018
-struct FTrackedPlayerKillEntry
+// ScriptStruct EmissaryLevel.EmissaryLevelEntry
+// 0x0078
+struct FEmissaryLevelEntry
 {
-	struct FString                                     KilledPlayer;                                              // 0x0000(0x0010) (ZeroConstructor, HasGetValueTypeHash)
-	int                                                KillCount;                                                 // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              KillTime;                                                  // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                      Company;                                                   // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	TArray<struct FEmissaryLevelData>                  CompanyLevelData;                                          // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UDataAsset*                                  MaxRankPopUpToastData;                                     // 0x0018(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UDataAsset*                                  EmissarySunkPopUpToastData;                                // 0x0020(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FEmissaryCompanyCosmetics                   CompanyCosmetics;                                          // 0x0028(0x0020) (Edit, DisableEditOnInstance)
+	TArray<struct FPlayerStat>                         StatsToFireOnFullEmissaryClothing;                         // 0x0048(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FPlayerStat>                         StatsToFireOnFullEmissaryShipCustomizations;               // 0x0058(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FPlayerStat>                         StatsToFireOnFullShipCustomizationsAndClothing;            // 0x0068(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 };
 
@@ -138,6 +176,164 @@ struct FEmissaryCompanyCampaignSettings
 	class UClass*                                      Company;                                                   // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	TArray<struct FEmissaryCompanyCampaignKillPlayer>  KillPlayers;                                               // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	TArray<struct FEmissaryCompanyCampaignGameEvent>   GameEvents;                                                // 0x0018(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+};
+
+// ScriptStruct EmissaryLevel.EmissaryEventAward
+// 0x0008
+struct FEmissaryEventAward
+{
+	bool                                               FirstTimeOnly;                                             // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                               NotOriginalOwner;                                          // 0x0001(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	TEnumAsByte<ItemQuality_EEmissaryQualityLevel>     ItemQualityRequirement;                                    // 0x0002(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_64R8[0x1];                                     // 0x0003(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	int                                                EmissaryLevelIncrease;                                     // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct EmissaryLevel.EmissaryKillScaleFactor
+// 0x0008
+struct FEmissaryKillScaleFactor
+{
+	int                                                KillCount;                                                 // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              ScaleFactor;                                               // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct EmissaryLevel.EmissaryGameEventsReward
+// 0x0010
+struct FEmissaryGameEventsReward
+{
+	class UClass*                                      FinishedEventType;                                         // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	float                                              Amount;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_IGF8[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct EmissaryLevel.EmissaryCompanyActionReward
+// 0x0008
+struct FEmissaryCompanyActionReward
+{
+	TEnumAsByte<EmissaryFramework_EEmisaryCompanyActionType> CompanyActionType;                                         // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_9HK8[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              Amount;                                                    // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct EmissaryLevel.EmissaryKillPlayerReward
+// 0x0028
+struct FEmissaryKillPlayerReward
+{
+	int                                                EmissaryLevelIncrease;                                     // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_LWYF[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<struct FEmissaryKillScaleFactor>            EmissaryLevelKillCountScaleFactors;                        // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UClass*>                              ValidEmissariesToKill;                                     // 0x0018(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, UObjectWrapper)
+
+};
+
+// ScriptStruct EmissaryLevel.EmissaryActionRewardData
+// 0x0078
+struct FEmissaryActionRewardData
+{
+	TArray<struct FEmissaryEventAward>                 OwnershipChangedRewards;                                   // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FEmissaryEventAward>                 PlacedOnShipRewards;                                       // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FEmissaryKillPlayerReward                   KillPlayerReward;                                          // 0x0020(0x0028) (Edit, DisableEditOnInstance)
+	TArray<struct FEmissaryGameEventsReward>           GameEventsRewards;                                         // 0x0048(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FEmissaryEventAward>                 HandinRewards;                                             // 0x0058(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FEmissaryCompanyActionReward>        CompanyActionRewards;                                      // 0x0068(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+};
+
+// ScriptStruct EmissaryLevel.EmissaryRewardEntry
+// 0x0080
+struct FEmissaryRewardEntry
+{
+	class UClass*                                      Company;                                                   // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	struct FEmissaryActionRewardData                   ActionRewardData;                                          // 0x0008(0x0078) (Edit, DisableEditOnInstance)
+
+};
+
+// ScriptStruct EmissaryLevel.PerCompanyVotes
+// 0x0018
+struct FPerCompanyVotes
+{
+	TArray<class APlayerState*>                        MemberVotes;                                               // 0x0000(0x0010) (ZeroConstructor, Transient)
+	struct FName                                       CompanyIdentifier;                                         // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct EmissaryLevel.CrewMemberVotes
+// 0x0020
+struct FCrewMemberVotes
+{
+	struct FGuid                                       CrewId;                                                    // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	TArray<struct FPerCompanyVotes>                    CompanyVotes;                                              // 0x0010(0x0010) (ZeroConstructor)
+
+};
+
+// ScriptStruct EmissaryLevel.EmissaryLevelStatusStatInfo
+// 0x000C
+struct FEmissaryLevelStatusStatInfo
+{
+	struct FPlayerStat                                 StatToFire;                                                // 0x0000(0x000C) (Edit, DisableEditOnInstance)
+
+};
+
+// ScriptStruct EmissaryLevel.EmissaryPointsBoostCriteria
+// 0x0008
+struct FEmissaryPointsBoostCriteria
+{
+	unsigned char                                      UnknownData_AL98[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct EmissaryLevel.TrackedPlayerKillEntry
+// 0x0018
+struct FTrackedPlayerKillEntry
+{
+	struct FString                                     KilledPlayer;                                              // 0x0000(0x0010) (ZeroConstructor, HasGetValueTypeHash)
+	int                                                KillCount;                                                 // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              KillTime;                                                  // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct EmissaryLevel.EmissaryVoteRemovedEvent
+// 0x0008
+struct FEmissaryVoteRemovedEvent
+{
+	struct FName                                       Company;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct EmissaryLevel.EmissaryVoteAddedEvent
+// 0x0008
+struct FEmissaryVoteAddedEvent
+{
+	struct FName                                       Company;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct EmissaryLevel.ChaliceStatuePhaseUpdate
+// 0x0004
+struct FChaliceStatuePhaseUpdate
+{
+	int                                                NewLevel;                                                  // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct EmissaryLevel.EmissaryEncounteredSkellyFortNetworkEvent
+// 0x0008 (0x0018 - 0x0010)
+struct FEmissaryEncounteredSkellyFortNetworkEvent : public FNetworkEventStruct
+{
+	struct FName                                       CompanyName;                                               // 0x0010(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct EmissaryLevel.EmissaryEncounteredAIShipEvent
+// 0x0008
+struct FEmissaryEncounteredAIShipEvent
+{
+	struct FName                                       CompanyName;                                               // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
@@ -248,122 +444,6 @@ struct FEmissaryMaxLevelReachedNetworkEvent : public FNetworkEventStruct
 
 };
 
-// ScriptStruct EmissaryLevel.EmissaryEventAward
-// 0x0008
-struct FEmissaryEventAward
-{
-	bool                                               FirstTimeOnly;                                             // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                               NotOriginalOwner;                                          // 0x0001(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	TEnumAsByte<ItemQuality_EEmissaryQualityLevel>     ItemQualityRequirement;                                    // 0x0002(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_F8EE[0x1];                                     // 0x0003(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	int                                                EmissaryLevelIncrease;                                     // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct EmissaryLevel.EmissaryGameEventsReward
-// 0x0010
-struct FEmissaryGameEventsReward
-{
-	class UClass*                                      FinishedEventType;                                         // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	float                                              Amount;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_PRM4[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct EmissaryLevel.EmissaryCompanyActionReward
-// 0x0008
-struct FEmissaryCompanyActionReward
-{
-	TEnumAsByte<EmissaryFramework_EEmisaryCompanyActionType> CompanyActionType;                                         // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_E2PW[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              Amount;                                                    // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct EmissaryLevel.EmissaryKillScaleFactor
-// 0x0008
-struct FEmissaryKillScaleFactor
-{
-	int                                                KillCount;                                                 // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              ScaleFactor;                                               // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct EmissaryLevel.EmissaryKillPlayerReward
-// 0x0028
-struct FEmissaryKillPlayerReward
-{
-	int                                                EmissaryLevelIncrease;                                     // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_F29F[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<struct FEmissaryKillScaleFactor>            EmissaryLevelKillCountScaleFactors;                        // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UClass*>                              ValidEmissariesToKill;                                     // 0x0018(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, UObjectWrapper)
-
-};
-
-// ScriptStruct EmissaryLevel.EmissaryActionRewardData
-// 0x0078
-struct FEmissaryActionRewardData
-{
-	TArray<struct FEmissaryEventAward>                 OwnershipChangedRewards;                                   // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FEmissaryEventAward>                 PlacedOnShipRewards;                                       // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FEmissaryKillPlayerReward                   KillPlayerReward;                                          // 0x0020(0x0028) (Edit, DisableEditOnInstance)
-	TArray<struct FEmissaryGameEventsReward>           GameEventsRewards;                                         // 0x0048(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FEmissaryEventAward>                 HandinRewards;                                             // 0x0058(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FEmissaryCompanyActionReward>        CompanyActionRewards;                                      // 0x0068(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-
-};
-
-// ScriptStruct EmissaryLevel.EmissaryRewardEntry
-// 0x0080
-struct FEmissaryRewardEntry
-{
-	class UClass*                                      Company;                                                   // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	struct FEmissaryActionRewardData                   ActionRewardData;                                          // 0x0008(0x0078) (Edit, DisableEditOnInstance)
-
-};
-
-// ScriptStruct EmissaryLevel.PerCompanyVotes
-// 0x0018
-struct FPerCompanyVotes
-{
-	TArray<class APlayerState*>                        MemberVotes;                                               // 0x0000(0x0010) (ZeroConstructor, Transient)
-	struct FName                                       CompanyIdentifier;                                         // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct EmissaryLevel.CrewMemberVotes
-// 0x0020
-struct FCrewMemberVotes
-{
-	struct FGuid                                       CrewId;                                                    // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	TArray<struct FPerCompanyVotes>                    CompanyVotes;                                              // 0x0010(0x0010) (ZeroConstructor)
-
-};
-
-// ScriptStruct EmissaryLevel.ChaliceStatuePhaseUpdate
-// 0x0004
-struct FChaliceStatuePhaseUpdate
-{
-	int                                                NewLevel;                                                  // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct EmissaryLevel.EmissaryEncounteredSkellyFortNetworkEvent
-// 0x0008 (0x0018 - 0x0010)
-struct FEmissaryEncounteredSkellyFortNetworkEvent : public FNetworkEventStruct
-{
-	struct FName                                       CompanyName;                                               // 0x0010(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct EmissaryLevel.EmissaryEncounteredAIShipEvent
-// 0x0008
-struct FEmissaryEncounteredAIShipEvent
-{
-	struct FName                                       CompanyName;                                               // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
 // ScriptStruct EmissaryLevel.EmissaryDeactivatedNetworkEvent
 // 0x0000 (0x0010 - 0x0010)
 struct FEmissaryDeactivatedNetworkEvent : public FNetworkEventStruct
@@ -403,7 +483,7 @@ struct FEmissaryLevelProgressUpdatedEvent
 // 0x0001
 struct FActivateEmissaryMaxRankQuestForSession
 {
-	unsigned char                                      UnknownData_5PMD[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_WETY[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -415,7 +495,7 @@ struct FUpdateEmissaryValueForCompany
 	struct FName                                       Company;                                                   // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                       AssociatedCrew;                                            // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<EmissaryLevel_EBootyRewardType>        RewardType;                                                // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_RFGQ[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BIQ3[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                UpdateAmount;                                              // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
@@ -438,7 +518,7 @@ struct FDeactivateEmissaryForCrew
 	struct FName                                       Company;                                                   // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                       AssociatedCrew;                                            // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<EmissaryLevel_EEmissaryDeactivateReason> EmissaryDeactivateReason;                                  // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TBTS[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_5G3A[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                EmissaryTotal;                                             // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
@@ -450,74 +530,6 @@ struct FActivateEmissaryForCrew
 	struct FGuid                                       SessionId;                                                 // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FName                                       Company;                                                   // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                       AssociatedCrew;                                            // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-
-};
-
-// ScriptStruct EmissaryLevel.MaterialVisualisation
-// 0x0030
-struct FMaterialVisualisation
-{
-	struct FActorComponentSelector                     TargetMesh;                                                // 0x0000(0x0010) (Edit, ContainsInstancedReference)
-	float                                              TransitionTime;                                            // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                MaterialIndex;                                             // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FName                                       ParameterName;                                             // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              ActiveValue;                                               // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              InactiveValue;                                             // 0x0024(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*                    DynamicMaterial;                                           // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct EmissaryLevel.ParticleVisualisation
-// 0x0028
-struct FParticleVisualisation
-{
-	struct FActorComponentSelector                     TargetParticles;                                           // 0x0000(0x0010) (Edit, ContainsInstancedReference)
-	float                                              Delay;                                                     // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              DelayAfterPutOutParticles;                                 // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                             PutOutParticles;                                           // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*                    ParticleSystem;                                            // 0x0020(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct EmissaryLevel.EmissaryVotesChangedEvent
-// 0x0001
-struct FEmissaryVotesChangedEvent
-{
-	unsigned char                                      UnknownData_98I5[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct EmissaryLevel.EmissaryVoteRemovedEvent
-// 0x0008
-struct FEmissaryVoteRemovedEvent
-{
-	struct FName                                       Company;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct EmissaryLevel.EmissaryVoteAddedEvent
-// 0x0008
-struct FEmissaryVoteAddedEvent
-{
-	struct FName                                       Company;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct EmissaryLevel.VoteAddedNetworkEvent
-// 0x0018 (0x0028 - 0x0010)
-struct FVoteAddedNetworkEvent : public FBoxedRpc
-{
-	struct FName                                       CompanyId;                                                 // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                       CrewId;                                                    // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
-
-};
-
-// ScriptStruct EmissaryLevel.VoteRemovedNetworkEvent
-// 0x0018 (0x0028 - 0x0010)
-struct FVoteRemovedNetworkEvent : public FBoxedRpc
-{
-	struct FName                                       CompanyId;                                                 // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                       CrewId;                                                    // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 
 };
 
@@ -535,7 +547,7 @@ struct FEmissaryLevelChanged
 // 0x0001
 struct FEmissaryLevelResetProgress
 {
-	unsigned char                                      UnknownData_LI82[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_5GNR[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -543,7 +555,7 @@ struct FEmissaryLevelResetProgress
 // 0x0001
 struct FPlayerRemovedFromEmissaryCrew
 {
-	unsigned char                                      UnknownData_YABK[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_927S[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -565,7 +577,7 @@ struct FEmissaryRoleplayActionTelemetryEvent
 	struct FName                                       EmissaryCompany;                                           // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                EmissaryRank;                                              // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<EmissaryLevel_EBootyRewardType>        ActionName;                                                // 0x001C(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_WWFH[0x3];                                     // 0x001D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WON8[0x3];                                     // 0x001D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                PointsRewarded;                                            // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                PointsAccumulated;                                         // 0x0024(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                PointsRequiredToNextRank;                                  // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -579,7 +591,7 @@ struct FEmissarySessionEndTelemetryEvent
 	struct FGuid                                       EmissarySessionId;                                         // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FName                                       EmissaryCompany;                                           // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<EmissaryLevel_EEmissaryDeactivateReason> DisbandedReason;                                           // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_KM69[0x3];                                     // 0x0019(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4VLQ[0x3];                                     // 0x0019(0x0003) MISSED OFFSET (PADDING)
 
 };
 
@@ -593,49 +605,21 @@ struct FEmissarySessionStartTelemetryEvent
 
 };
 
-// ScriptStruct EmissaryLevel.EmissaryVotePassedEvent
-// 0x0030
-struct FEmissaryVotePassedEvent
+// ScriptStruct EmissaryLevel.VoteAddedNetworkEvent
+// 0x0018 (0x0028 - 0x0010)
+struct FVoteAddedNetworkEvent : public FBoxedRpc
 {
-	unsigned char                                      UnknownData_OHHO[0x20];                                    // 0x0000(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<class APlayerState*>                        Voters;                                                    // 0x0020(0x0010) (ZeroConstructor)
+	struct FName                                       CompanyId;                                                 // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                       CrewId;                                                    // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 
 };
 
-// ScriptStruct EmissaryLevel.LightVisualisation
-// 0x0028
-struct FLightVisualisation
+// ScriptStruct EmissaryLevel.VoteRemovedNetworkEvent
+// 0x0018 (0x0028 - 0x0010)
+struct FVoteRemovedNetworkEvent : public FBoxedRpc
 {
-	struct FActorComponentSelector                     TargetLight;                                               // 0x0000(0x0010) (Edit, ContainsInstancedReference)
-	float                                              TransitionTime;                                            // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              ActiveValue;                                               // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              InactiveValue;                                             // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_Q4DP[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class ULightComponent*                             Light;                                                     // 0x0020(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct EmissaryLevel.EmissaryCompanyCosmetics
-// 0x0020
-struct FEmissaryCompanyCosmetics
-{
-	TArray<class UClass*>                              CompanyCostumeCosmetics;                                   // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, UObjectWrapper)
-	TArray<class UClass*>                              CompanyShipCosmetics;                                      // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, UObjectWrapper)
-
-};
-
-// ScriptStruct EmissaryLevel.EmissaryLevelEntry
-// 0x0078
-struct FEmissaryLevelEntry
-{
-	class UClass*                                      Company;                                                   // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	TArray<struct FEmissaryLevelData>                  CompanyLevelData;                                          // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class UDataAsset*                                  MaxRankPopUpToastData;                                     // 0x0018(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UDataAsset*                                  EmissarySunkPopUpToastData;                                // 0x0020(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FEmissaryCompanyCosmetics                   CompanyCosmetics;                                          // 0x0028(0x0020) (Edit, DisableEditOnInstance)
-	TArray<struct FPlayerStat>                         StatsToFireOnFullEmissaryClothing;                         // 0x0048(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FPlayerStat>                         StatsToFireOnFullEmissaryShipCustomizations;               // 0x0058(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FPlayerStat>                         StatsToFireOnFullShipCustomizationsAndClothing;            // 0x0068(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FName                                       CompanyId;                                                 // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                       CrewId;                                                    // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 
 };
 

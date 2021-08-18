@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass EmissaryStoleLoot_GH_PromptAccessKey.EmissaryStoleLoot_GH_PromptAccessKey_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass EmissaryStoleLoot_GH_PromptAccessKey.EmissaryStoleLoot_GH_PromptAccessKey_C");
 		return ptr;
 	}
 

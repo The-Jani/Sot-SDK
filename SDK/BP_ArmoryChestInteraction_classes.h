@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,16 +20,16 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ArmoryChestInteraction.BP_ArmoryChestInteraction_C
-// 0x0008 (FullSize[0x0500] - InheritedSize[0x04F8])
+// 0x0008 (FullSize[0x04A0] - InheritedSize[0x0498])
 class ABP_ArmoryChestInteraction_C : public AArmoryChestInteraction
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                          // 0x04F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class USceneComponent*                             DefaultSceneRoot;                                          // 0x0498(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_ArmoryChestInteraction.BP_ArmoryChestInteraction_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ArmoryChestInteraction.BP_ArmoryChestInteraction_C");
 		return ptr;
 	}
 

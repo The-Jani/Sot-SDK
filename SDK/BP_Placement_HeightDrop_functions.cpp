@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Public, BlueprintCallable, BlueprintEvent)
 void ABP_Placement_HeightDrop_C::CreateComponentList()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_HeightDrop.BP_Placement_HeightDrop_C.CreateComponentList");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Placement_HeightDrop.BP_Placement_HeightDrop_C.CreateComponentList");
 
 	ABP_Placement_HeightDrop_C_CreateComponentList_Params params;
 
@@ -38,7 +38,7 @@ void ABP_Placement_HeightDrop_C::CreateComponentList()
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 void ABP_Placement_HeightDrop_C::CreateParentBounds()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_HeightDrop.BP_Placement_HeightDrop_C.CreateParentBounds");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Placement_HeightDrop.BP_Placement_HeightDrop_C.CreateParentBounds");
 
 	ABP_Placement_HeightDrop_C_CreateParentBounds_Params params;
 
@@ -54,7 +54,7 @@ void ABP_Placement_HeightDrop_C::CreateParentBounds()
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 void ABP_Placement_HeightDrop_C::CheckMobilityState()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_HeightDrop.BP_Placement_HeightDrop_C.CheckMobilityState");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Placement_HeightDrop.BP_Placement_HeightDrop_C.CheckMobilityState");
 
 	ABP_Placement_HeightDrop_C_CheckMobilityState_Params params;
 
@@ -77,7 +77,7 @@ void ABP_Placement_HeightDrop_C::CheckMobilityState()
 // struct FVector                 Impact_Normal                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Placement_HeightDrop_C::Get_Valid_Collision(TArray<struct FHitResult>* Hit_Results, bool Hit_Success, class USceneComponent* Current_Component, bool* Return_Value, struct FVector* Impact_Position, struct FVector* Impact_Normal)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_HeightDrop.BP_Placement_HeightDrop_C.Get Valid Collision");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Placement_HeightDrop.BP_Placement_HeightDrop_C.Get Valid Collision");
 
 	ABP_Placement_HeightDrop_C_Get_Valid_Collision_Params params;
 	params.Hit_Success = Hit_Success;
@@ -104,7 +104,7 @@ void ABP_Placement_HeightDrop_C::Get_Valid_Collision(TArray<struct FHitResult>* 
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 void ABP_Placement_HeightDrop_C::Drop_Components()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_HeightDrop.BP_Placement_HeightDrop_C.Drop Components");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Placement_HeightDrop.BP_Placement_HeightDrop_C.Drop Components");
 
 	ABP_Placement_HeightDrop_C_Drop_Components_Params params;
 
@@ -120,7 +120,7 @@ void ABP_Placement_HeightDrop_C::Drop_Components()
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_Placement_HeightDrop_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Placement_HeightDrop.BP_Placement_HeightDrop_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Placement_HeightDrop.BP_Placement_HeightDrop_C.UserConstructionScript");
 
 	ABP_Placement_HeightDrop_C_UserConstructionScript_Params params;
 

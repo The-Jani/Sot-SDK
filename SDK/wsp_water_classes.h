@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wsp_water.wsp_water_C
-// 0x0000 (FullSize[0x0438] - InheritedSize[0x0438])
+// 0x0000 (FullSize[0x03D8] - InheritedSize[0x03D8])
 class Awsp_water_C : public ALevelScriptActor
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass wsp_water.wsp_water_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass wsp_water.wsp_water_C");
 		return ptr;
 	}
 

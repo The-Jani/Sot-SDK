@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -19,6 +19,12 @@ namespace CG
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function BP_Figurehead.BP_Figurehead_C.GetVFXComponent
+struct ABP_Figurehead_C_GetVFXComponent_Params
+{
+	class UParticleSystemComponent*                    ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
 
 // Function BP_Figurehead.BP_Figurehead_C.GetMeshComponent
 struct ABP_Figurehead_C_GetMeshComponent_Params

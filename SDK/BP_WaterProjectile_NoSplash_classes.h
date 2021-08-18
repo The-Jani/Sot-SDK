@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WaterProjectile_NoSplash.BP_WaterProjectile_NoSplash_C
-// 0x0000 (FullSize[0x0770] - InheritedSize[0x0770])
+// 0x0000 (FullSize[0x0710] - InheritedSize[0x0710])
 class ABP_WaterProjectile_NoSplash_C : public ABP_WaterProjectile_C
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_WaterProjectile_NoSplash.BP_WaterProjectile_NoSplash_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_WaterProjectile_NoSplash.BP_WaterProjectile_NoSplash_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -56,6 +56,16 @@ struct AKraken_AddActorToKnownTargets_Params
 struct AKrakenHead_RequestState_Params
 {
 	class UClass*                                      NewState;                                                  // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+};
+
+// Function Kraken.KrakenHead.OnRep_IsDamageEnabled
+struct AKrakenHead_OnRep_IsDamageEnabled_Params
+{
+};
+
+// Function Kraken.KrakenHead.OnRep_HeadStateRequest
+struct AKrakenHead_OnRep_HeadStateRequest_Params
+{
 };
 
 // Function Kraken.KrakenHead.OnCoordinatedKrakenSpecialEvent

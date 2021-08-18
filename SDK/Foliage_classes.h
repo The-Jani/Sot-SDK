@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,17 +20,18 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // Class Foliage.FoliageInstancedStaticMeshComponent
-// 0x0020 (FullSize[0x0750] - InheritedSize[0x0730])
+// 0x0028 (FullSize[0x0790] - InheritedSize[0x0768])
 class UFoliageInstancedStaticMeshComponent : public UHierarchicalInstancedStaticMeshComponent
 {
 public:
-	struct FScriptMulticastDelegate                    OnInstanceTakePointDamage;                                 // 0x0730(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnInstanceTakeRadialDamage;                                // 0x0740(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnInstanceTakePointDamage;                                 // 0x0768(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnInstanceTakeRadialDamage;                                // 0x0778(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData_BRLF[0x8];                                     // 0x0788(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.FoliageInstancedStaticMeshComponent");
+		static UClass* ptr = UObject::FindClass("Class Foliage.FoliageInstancedStaticMeshComponent");
 		return ptr;
 	}
 
@@ -47,7 +48,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.FoliageStatistics");
+		static UClass* ptr = UObject::FindClass("Class Foliage.FoliageStatistics");
 		return ptr;
 	}
 
@@ -67,35 +68,35 @@ public:
 	float                                              DensityAdjustmentFactor;                                   // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              Radius;                                                    // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Foliage_EFoliageScaling>               Scaling;                                                   // 0x0044(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_67UM[0x3];                                     // 0x0045(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_JP20[0x3];                                     // 0x0045(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FFloatInterval                              ScaleX;                                                    // 0x0048(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FFloatInterval                              ScaleY;                                                    // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FFloatInterval                              ScaleZ;                                                    // 0x0058(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Foliage_EFoliageVertexColorMask>       VertexColorMask;                                           // 0x0060(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_8O3D[0x3];                                     // 0x0061(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZLDQ[0x3];                                     // 0x0061(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              VertexColorMaskThreshold;                                  // 0x0064(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	unsigned char                                      VertexColorMaskInvert : 1;                                 // 0x0068(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_KDAZ[0x3];                                     // 0x0069(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZENK[0x3];                                     // 0x0069(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FFloatInterval                              ZOffset;                                                   // 0x006C(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	unsigned char                                      AlignToNormal : 1;                                         // 0x0074(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_T985[0x3];                                     // 0x0075(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_EIGS[0x3];                                     // 0x0075(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              AlignMaxAngle;                                             // 0x0078(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      RandomYaw : 1;                                             // 0x007C(0x0001) BIT_FIELD (Edit, NoDestructor)
-	unsigned char                                      UnknownData_5ME2[0x3];                                     // 0x007D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GWGO[0x3];                                     // 0x007D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              RandomPitchAngle;                                          // 0x0080(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FFloatInterval                              GroundSlopeAngle;                                          // 0x0084(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FFloatInterval                              Height;                                                    // 0x008C(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_H4QI[0x4];                                     // 0x0094(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_IPQO[0x4];                                     // 0x0094(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FName>                               LandscapeLayers;                                           // 0x0098(0x0010) (Edit, ZeroConstructor, AdvancedDisplay)
 	struct FName                                       LandscapeLayer;                                            // 0x00A8(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      CollisionWithWorld : 1;                                    // 0x00B0(0x0001) BIT_FIELD (Edit, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_OOCS[0x3];                                     // 0x00B1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LLGF[0x3];                                     // 0x00B1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     CollisionScale;                                            // 0x00B4(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
 	float                                              MinimumLayerWeight;                                        // 0x00C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	struct FBoxSphereBounds                            MeshBounds;                                                // 0x00C4(0x001C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                     LowBoundOriginRadius;                                      // 0x00E0(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Engine_EComponentMobility>             Mobility;                                                  // 0x00EC(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_N673[0x3];                                     // 0x00ED(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WSLU[0x3];                                     // 0x00ED(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FInt32Interval                              CullDistance;                                              // 0x00F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	unsigned char                                      bEnableStaticLighting : 1;                                 // 0x00F8(0x0001) BIT_FIELD (Deprecated, NoDestructor)
 	unsigned char                                      CastShadow : 1;                                            // 0x00F8(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor)
@@ -106,16 +107,16 @@ public:
 	unsigned char                                      bCastShadowAsTwoSided : 1;                                 // 0x00F8(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bReceivesDecals : 1;                                       // 0x00F8(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
 	unsigned char                                      bOverrideLightMapRes : 1;                                  // 0x00F9(0x0001) BIT_FIELD (BlueprintVisible, BlueprintReadOnly, NoDestructor)
-	unsigned char                                      UnknownData_JVNW[0x2];                                     // 0x00FA(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZOZG[0x2];                                     // 0x00FA(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                OverriddenLightMapRes;                                     // 0x00FC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      bUseAsOccluder : 1;                                        // 0x0100(0x0001) BIT_FIELD (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_UQO3[0x7];                                     // 0x0101(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_VXIM[0x7];                                     // 0x0101(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FBodyInstance                               BodyInstance;                                              // 0x0108(0x0180) (Edit)
 	TEnumAsByte<Engine_EHasCustomNavigableGeometry>    CustomNavigableGeometry;                                   // 0x0288(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ORX4[0x7];                                     // 0x0289(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_NUB0[0x7];                                     // 0x0289(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	uint64_t                                           HiddenEditorViews;                                         // 0x0290(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	unsigned char                                      IsSelected : 1;                                            // 0x0298(0x0001) BIT_FIELD (NoDestructor)
-	unsigned char                                      UnknownData_4T7T[0x3];                                     // 0x0299(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_IBL6[0x3];                                     // 0x0299(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              CollisionRadius;                                           // 0x029C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ShadeRadius;                                               // 0x02A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                NumSteps;                                                  // 0x02A4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -127,7 +128,7 @@ public:
 	float                                              MaxInitialSeedOffset;                                      // 0x02BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               bCanGrowInShade;                                           // 0x02C0(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               bSpawnsInShade;                                            // 0x02C1(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_32U1[0x2];                                     // 0x02C2(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3F3N[0x2];                                     // 0x02C2(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              MaxInitialAge;                                             // 0x02C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxAge;                                                    // 0x02C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              OverlapPriority;                                           // 0x02CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -149,12 +150,12 @@ public:
 	unsigned char                                      ReapplyZOffset : 1;                                        // 0x035D(0x0001) BIT_FIELD (Edit, DisableEditOnInstance, NoDestructor)
 	unsigned char                                      ReapplyCollisionWithWorld : 1;                             // 0x035D(0x0001) BIT_FIELD (Edit, DisableEditOnInstance, NoDestructor)
 	unsigned char                                      ReapplyVertexColorMask : 1;                                // 0x035D(0x0001) BIT_FIELD (Edit, DisableEditOnInstance, NoDestructor)
-	unsigned char                                      UnknownData_EX59[0x2];                                     // 0x035E(0x0002) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_F83H[0x2];                                     // 0x035E(0x0002) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.FoliageType");
+		static UClass* ptr = UObject::FindClass("Class Foliage.FoliageType");
 		return ptr;
 	}
 
@@ -174,7 +175,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.FoliageType_InstancedStaticMesh");
+		static UClass* ptr = UObject::FindClass("Class Foliage.FoliageType_InstancedStaticMesh");
 		return ptr;
 	}
 
@@ -183,16 +184,16 @@ public:
 };
 
 // Class Foliage.InstancedFoliageActor
-// 0x0050 (FullSize[0x0480] - InheritedSize[0x0430])
+// 0x0050 (FullSize[0x0420] - InheritedSize[0x03D0])
 class AInstancedFoliageActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData_9K15[0x50];                                    // 0x0430(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AKMR[0x50];                                    // 0x03D0(0x0050) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.InstancedFoliageActor");
+		static UClass* ptr = UObject::FindClass("Class Foliage.InstancedFoliageActor");
 		return ptr;
 	}
 
@@ -201,30 +202,30 @@ public:
 };
 
 // Class Foliage.InteractiveFoliageActor
-// 0x0060 (FullSize[0x04A0] - InheritedSize[0x0440])
+// 0x0060 (FullSize[0x0440] - InheritedSize[0x03E0])
 class AInteractiveFoliageActor : public AStaticMeshActor
 {
 public:
-	class UCapsuleComponent*                           CapsuleComponent;                                          // 0x0440(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                     TouchingActorEntryPosition;                                // 0x0448(0x000C) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	struct FVector                                     FoliageVelocity;                                           // 0x0454(0x000C) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	struct FVector                                     FoliageForce;                                              // 0x0460(0x000C) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	struct FVector                                     FoliagePosition;                                           // 0x046C(0x000C) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	float                                              FoliageDamageImpulseScale;                                 // 0x0478(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              FoliageTouchImpulseScale;                                  // 0x047C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              FoliageStiffness;                                          // 0x0480(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              FoliageStiffnessQuadratic;                                 // 0x0484(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              FoliageDamping;                                            // 0x0488(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MaxDamageImpulse;                                          // 0x048C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MaxTouchImpulse;                                           // 0x0490(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MaxForce;                                                  // 0x0494(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              Mass;                                                      // 0x0498(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ARLW[0x4];                                     // 0x049C(0x0004) MISSED OFFSET (PADDING)
+	class UCapsuleComponent*                           CapsuleComponent;                                          // 0x03E0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                     TouchingActorEntryPosition;                                // 0x03E8(0x000C) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
+	struct FVector                                     FoliageVelocity;                                           // 0x03F4(0x000C) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
+	struct FVector                                     FoliageForce;                                              // 0x0400(0x000C) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
+	struct FVector                                     FoliagePosition;                                           // 0x040C(0x000C) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
+	float                                              FoliageDamageImpulseScale;                                 // 0x0418(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              FoliageTouchImpulseScale;                                  // 0x041C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              FoliageStiffness;                                          // 0x0420(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              FoliageStiffnessQuadratic;                                 // 0x0424(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              FoliageDamping;                                            // 0x0428(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MaxDamageImpulse;                                          // 0x042C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MaxTouchImpulse;                                           // 0x0430(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MaxForce;                                                  // 0x0434(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Mass;                                                      // 0x0438(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_J4HO[0x4];                                     // 0x043C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.InteractiveFoliageActor");
+		static UClass* ptr = UObject::FindClass("Class Foliage.InteractiveFoliageActor");
 		return ptr;
 	}
 
@@ -234,16 +235,16 @@ public:
 };
 
 // Class Foliage.InteractiveFoliageComponent
-// 0x0008 (FullSize[0x05C0] - InheritedSize[0x05B8])
+// 0x0010 (FullSize[0x0600] - InheritedSize[0x05F0])
 class UInteractiveFoliageComponent : public UStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData_R67B[0x8];                                     // 0x05B8(0x0008) Fix Super Size
+	unsigned char                                      UnknownData_137P[0x10];                                    // 0x05F0(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.InteractiveFoliageComponent");
+		static UClass* ptr = UObject::FindClass("Class Foliage.InteractiveFoliageComponent");
 		return ptr;
 	}
 
@@ -252,16 +253,16 @@ public:
 };
 
 // Class Foliage.ProceduralFoliageBlockingVolume
-// 0x0008 (FullSize[0x0470] - InheritedSize[0x0468])
+// 0x0008 (FullSize[0x0410] - InheritedSize[0x0408])
 class AProceduralFoliageBlockingVolume : public AVolume
 {
 public:
-	class AProceduralFoliageVolume*                    ProceduralFoliageVolume;                                   // 0x0468(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AProceduralFoliageVolume*                    ProceduralFoliageVolume;                                   // 0x0408(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageBlockingVolume");
+		static UClass* ptr = UObject::FindClass("Class Foliage.ProceduralFoliageBlockingVolume");
 		return ptr;
 	}
 
@@ -276,14 +277,14 @@ class UProceduralFoliageComponent : public UActorComponent
 public:
 	class UProceduralFoliageSpawner*                   FoliageSpawner;                                            // 0x00C8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TileOverlap;                                               // 0x00D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2P20[0x4];                                     // 0x00D4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QUN3[0x4];                                     // 0x00D4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class AVolume*                                     SpawningVolume;                                            // 0x00D8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                       ProceduralGuid;                                            // 0x00E0(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageComponent");
+		static UClass* ptr = UObject::FindClass("Class Foliage.ProceduralFoliageComponent");
 		return ptr;
 	}
 
@@ -299,15 +300,15 @@ public:
 	int                                                RandomSeed;                                                // 0x0028(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              TileSize;                                                  // 0x002C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                NumUniqueTiles;                                            // 0x0030(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HVN5[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QR1W[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FFoliageTypeObject>                  FoliageTypes;                                              // 0x0038(0x0010) (Edit, ZeroConstructor)
 	bool                                               bNeedsSimulation;                                          // 0x0048(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_QSZU[0x1F];                                    // 0x0049(0x001F) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_20JT[0x1F];                                    // 0x0049(0x001F) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageSpawner");
+		static UClass* ptr = UObject::FindClass("Class Foliage.ProceduralFoliageSpawner");
 		return ptr;
 	}
 
@@ -322,14 +323,14 @@ class UProceduralFoliageTile : public UObject
 {
 public:
 	class UProceduralFoliageSpawner*                   FoliageSpawner;                                            // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZNWJ[0xA0];                                    // 0x0030(0x00A0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_EE5S[0xA0];                                    // 0x0030(0x00A0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FProceduralFoliageInstance>          InstancesArray;                                            // 0x00D0(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_YS26[0x70];                                    // 0x00E0(0x0070) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_7RF3[0x70];                                    // 0x00E0(0x0070) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageTile");
+		static UClass* ptr = UObject::FindClass("Class Foliage.ProceduralFoliageTile");
 		return ptr;
 	}
 
@@ -338,16 +339,16 @@ public:
 };
 
 // Class Foliage.ProceduralFoliageVolume
-// 0x0008 (FullSize[0x0470] - InheritedSize[0x0468])
+// 0x0008 (FullSize[0x0410] - InheritedSize[0x0408])
 class AProceduralFoliageVolume : public AVolume
 {
 public:
-	class UProceduralFoliageComponent*                 ProceduralComponent;                                       // 0x0468(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UProceduralFoliageComponent*                 ProceduralComponent;                                       // 0x0408(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageVolume");
+		static UClass* ptr = UObject::FindClass("Class Foliage.ProceduralFoliageVolume");
 		return ptr;
 	}
 

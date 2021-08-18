@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -24,12 +24,12 @@ namespace CG
 class UPlayfabPartyVoiceChannel : public UVoiceChannel
 {
 public:
-	unsigned char                                      UnknownData_4LM1[0x20];                                    // 0x0090(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PNJZ[0x20];                                    // 0x0090(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class VoiceGameChat.PlayfabPartyVoiceChannel");
+		static UClass* ptr = UObject::FindClass("Class VoiceGameChat.PlayfabPartyVoiceChannel");
 		return ptr;
 	}
 

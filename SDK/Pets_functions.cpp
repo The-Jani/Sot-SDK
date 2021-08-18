@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // TArray<class AActor*>          ChangedPerceivedActors         (Parm, ZeroConstructor)
 void APetAIController::OnPerceptionUpdated(TArray<class AActor*> ChangedPerceivedActors)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Pets.PetAIController.OnPerceptionUpdated");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Pets.PetAIController.OnPerceptionUpdated");
 
 	APetAIController_OnPerceptionUpdated_Params params;
 	params.ChangedPerceivedActors = ChangedPerceivedActors;
@@ -44,7 +44,7 @@ void APetAIController::OnPerceptionUpdated(TArray<class AActor*> ChangedPerceive
 // class UAthenaAICharacterPathFollowingComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 class UAthenaAICharacterPathFollowingComponent* APetAIController::GetAthenaAICharPathFollowingComp()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Pets.PetAIController.GetAthenaAICharPathFollowingComp");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Pets.PetAIController.GetAthenaAICharPathFollowingComp");
 
 	APetAIController_GetAthenaAICharPathFollowingComp_Params params;
 
@@ -63,7 +63,7 @@ class UAthenaAICharacterPathFollowingComponent* APetAIController::GetAthenaAICha
 // (Final, Native, Private)
 void UPetHangoutSpotComponent::OnRep_IsOwnerSinking()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Pets.PetHangoutSpotComponent.OnRep_IsOwnerSinking");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Pets.PetHangoutSpotComponent.OnRep_IsOwnerSinking");
 
 	UPetHangoutSpotComponent_OnRep_IsOwnerSinking_Params params;
 
@@ -80,7 +80,7 @@ void UPetHangoutSpotComponent::OnRep_IsOwnerSinking()
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 void UPetOwnerComponent::Server_RequestDismissal()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Pets.PetOwnerComponent.Server_RequestDismissal");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Pets.PetOwnerComponent.Server_RequestDismissal");
 
 	UPetOwnerComponent_Server_RequestDismissal_Params params;
 
@@ -99,7 +99,7 @@ void UPetOwnerComponent::Server_RequestDismissal()
 // class AActor*                  InOwner                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UPetsService::RemovePetFromActor(class AActor* InOwner)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Pets.PetsService.RemovePetFromActor");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Pets.PetsService.RemovePetFromActor");
 
 	UPetsService_RemovePetFromActor_Params params;
 	params.InOwner = InOwner;
@@ -122,7 +122,7 @@ void UPetsService::RemovePetFromActor(class AActor* InOwner)
 // bool                           IsWielded                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UPetsService::AddPetForActorAndWield(class UClass* InPetType, const struct FPetCustomisation& InCustomisation, class AActor* InOwner, bool IsWielded)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Pets.PetsService.AddPetForActorAndWield");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Pets.PetsService.AddPetForActorAndWield");
 
 	UPetsService_AddPetForActorAndWield_Params params;
 	params.InPetType = InPetType;
@@ -147,7 +147,7 @@ void UPetsService::AddPetForActorAndWield(class UClass* InPetType, const struct 
 // class AActor*                  InOwner                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UPetsService::AddPetForActor(class UClass* InPetType, const struct FPetCustomisation& InCustomisation, class AActor* InOwner)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Pets.PetsService.AddPetForActor");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Pets.PetsService.AddPetForActor");
 
 	UPetsService_AddPetForActor_Params params;
 	params.InPetType = InPetType;
@@ -167,7 +167,7 @@ void UPetsService::AddPetForActor(class UClass* InPetType, const struct FPetCust
 // (Final, Native, Private)
 void AWieldablePet::OnRep_HungerReactAnimationState()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Pets.WieldablePet.OnRep_HungerReactAnimationState");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Pets.WieldablePet.OnRep_HungerReactAnimationState");
 
 	AWieldablePet_OnRep_HungerReactAnimationState_Params params;
 
@@ -186,7 +186,7 @@ void AWieldablePet::OnRep_HungerReactAnimationState()
 // TEnumAsByte<Pets_EWieldablePetDropRequestReason> PriorDropRequest               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void AWieldablePet::OnRep_DropRequest(TEnumAsByte<Pets_EWieldablePetDropRequestReason> PriorDropRequest)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Pets.WieldablePet.OnRep_DropRequest");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Pets.WieldablePet.OnRep_DropRequest");
 
 	AWieldablePet_OnRep_DropRequest_Params params;
 	params.PriorDropRequest = PriorDropRequest;

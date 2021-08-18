@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SeasonProgressionFramework.SeasonProgressionExclusionInterface");
+		static UClass* ptr = UObject::FindClass("Class SeasonProgressionFramework.SeasonProgressionExclusionInterface");
 		return ptr;
 	}
 
@@ -41,14 +41,14 @@ public:
 class USeasonProgressionExclusionComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_VZLX[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_6E8G[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	bool                                               ShouldBeExcludedFromSeasonProgessionValue;                 // 0x00D0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_1TWA[0x7];                                     // 0x00D1(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PVV4[0x7];                                     // 0x00D1(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class SeasonProgressionFramework.SeasonProgressionExclusionComponent");
+		static UClass* ptr = UObject::FindClass("Class SeasonProgressionFramework.SeasonProgressionExclusionComponent");
 		return ptr;
 	}
 

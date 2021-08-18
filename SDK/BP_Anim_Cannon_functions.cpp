@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (BlueprintCallable, BlueprintEvent)
 void UBP_Anim_Cannon_C::AnimNotify_FireEnd()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_Cannon.BP_Anim_Cannon_C.AnimNotify_FireEnd");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Anim_Cannon.BP_Anim_Cannon_C.AnimNotify_FireEnd");
 
 	UBP_Anim_Cannon_C_AnimNotify_FireEnd_Params params;
 
@@ -40,7 +40,7 @@ void UBP_Anim_Cannon_C::AnimNotify_FireEnd()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_Anim_Cannon_C::ExecuteUbergraph_BP_Anim_Cannon(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_Cannon.BP_Anim_Cannon_C.ExecuteUbergraph_BP_Anim_Cannon");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Anim_Cannon.BP_Anim_Cannon_C.ExecuteUbergraph_BP_Anim_Cannon");
 
 	UBP_Anim_Cannon_C_ExecuteUbergraph_BP_Anim_Cannon_Params params;
 	params.EntryPoint = EntryPoint;

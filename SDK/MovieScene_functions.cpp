@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Final, Native, Public, BlueprintCallable)
 void UMovieSceneSequencePlayer::Stop()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.Stop");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.Stop");
 
 	UMovieSceneSequencePlayer_Stop_Params params;
 
@@ -39,7 +39,7 @@ void UMovieSceneSequencePlayer::Stop()
 // (Final, Native, Public, BlueprintCallable)
 void UMovieSceneSequencePlayer::StartPlayingNextTick()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.StartPlayingNextTick");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.StartPlayingNextTick");
 
 	UMovieSceneSequencePlayer_StartPlayingNextTick_Params params;
 
@@ -58,7 +58,7 @@ void UMovieSceneSequencePlayer::StartPlayingNextTick()
 // float                          PlayRate                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UMovieSceneSequencePlayer::SetPlayRate(float PlayRate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetPlayRate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetPlayRate");
 
 	UMovieSceneSequencePlayer_SetPlayRate_Params params;
 	params.PlayRate = PlayRate;
@@ -79,7 +79,7 @@ void UMovieSceneSequencePlayer::SetPlayRate(float PlayRate)
 // float                          NewEndTime                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UMovieSceneSequencePlayer::SetPlaybackRange(float NewStartTime, float NewEndTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetPlaybackRange");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetPlaybackRange");
 
 	UMovieSceneSequencePlayer_SetPlaybackRange_Params params;
 	params.NewStartTime = NewStartTime;
@@ -100,7 +100,7 @@ void UMovieSceneSequencePlayer::SetPlaybackRange(float NewStartTime, float NewEn
 // float                          NewPlaybackPosition            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UMovieSceneSequencePlayer::SetPlaybackPosition(float NewPlaybackPosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetPlaybackPosition");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetPlaybackPosition");
 
 	UMovieSceneSequencePlayer_SetPlaybackPosition_Params params;
 	params.NewPlaybackPosition = NewPlaybackPosition;
@@ -118,7 +118,7 @@ void UMovieSceneSequencePlayer::SetPlaybackPosition(float NewPlaybackPosition)
 // (Final, Native, Public, BlueprintCallable)
 void UMovieSceneSequencePlayer::PlayReverse()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayReverse");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayReverse");
 
 	UMovieSceneSequencePlayer_PlayReverse_Params params;
 
@@ -137,7 +137,7 @@ void UMovieSceneSequencePlayer::PlayReverse()
 // int                            NumLoops                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UMovieSceneSequencePlayer::PlayLooping(int NumLoops)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayLooping");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayLooping");
 
 	UMovieSceneSequencePlayer_PlayLooping_Params params;
 	params.NumLoops = NumLoops;
@@ -155,7 +155,7 @@ void UMovieSceneSequencePlayer::PlayLooping(int NumLoops)
 // (Final, Native, Public, BlueprintCallable)
 void UMovieSceneSequencePlayer::Play()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.Play");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.Play");
 
 	UMovieSceneSequencePlayer_Play_Params params;
 
@@ -172,7 +172,7 @@ void UMovieSceneSequencePlayer::Play()
 // (Final, Native, Public, BlueprintCallable)
 void UMovieSceneSequencePlayer::Pause()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.Pause");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.Pause");
 
 	UMovieSceneSequencePlayer_Pause_Params params;
 
@@ -191,7 +191,7 @@ void UMovieSceneSequencePlayer::Pause()
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool UMovieSceneSequencePlayer::IsPlaying()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.IsPlaying");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.IsPlaying");
 
 	UMovieSceneSequencePlayer_IsPlaying_Params params;
 
@@ -212,7 +212,7 @@ bool UMovieSceneSequencePlayer::IsPlaying()
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 float UMovieSceneSequencePlayer::GetPlayRate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetPlayRate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetPlayRate");
 
 	UMovieSceneSequencePlayer_GetPlayRate_Params params;
 
@@ -233,7 +233,7 @@ float UMovieSceneSequencePlayer::GetPlayRate()
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 float UMovieSceneSequencePlayer::GetPlaybackStart()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetPlaybackStart");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetPlaybackStart");
 
 	UMovieSceneSequencePlayer_GetPlaybackStart_Params params;
 
@@ -254,7 +254,7 @@ float UMovieSceneSequencePlayer::GetPlaybackStart()
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 float UMovieSceneSequencePlayer::GetPlaybackPosition()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetPlaybackPosition");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetPlaybackPosition");
 
 	UMovieSceneSequencePlayer_GetPlaybackPosition_Params params;
 
@@ -275,7 +275,7 @@ float UMovieSceneSequencePlayer::GetPlaybackPosition()
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 float UMovieSceneSequencePlayer::GetPlaybackEnd()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetPlaybackEnd");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetPlaybackEnd");
 
 	UMovieSceneSequencePlayer_GetPlaybackEnd_Params params;
 
@@ -296,7 +296,7 @@ float UMovieSceneSequencePlayer::GetPlaybackEnd()
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 float UMovieSceneSequencePlayer::GetLength()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetLength");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetLength");
 
 	UMovieSceneSequencePlayer_GetLength_Params params;
 
@@ -315,7 +315,7 @@ float UMovieSceneSequencePlayer::GetLength()
 // (Final, Native, Public, BlueprintCallable)
 void UMovieSceneSequencePlayer::ChangePlaybackDirection()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.ChangePlaybackDirection");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.ChangePlaybackDirection");
 
 	UMovieSceneSequencePlayer_ChangePlaybackDirection_Params params;
 

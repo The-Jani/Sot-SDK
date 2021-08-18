@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_wpn_sniper_rifle_blb_01_a_ItemInfo_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_wpn_sniper_rifle_blb_01_a_ItemInfo.BP_wpn_sniper_rifle_blb_01_a_ItemInfo_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_wpn_sniper_rifle_blb_01_a_ItemInfo.BP_wpn_sniper_rifle_blb_01_a_ItemInfo_C.UserConstructionScript");
 
 	ABP_wpn_sniper_rifle_blb_01_a_ItemInfo_C_UserConstructionScript_Params params;
 

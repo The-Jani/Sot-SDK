@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (BlueprintCallable, BlueprintEvent)
 void UBP_FishAnimGraph_C::AnimNotify_StartJump()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_FishAnimGraph.BP_FishAnimGraph_C.AnimNotify_StartJump");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FishAnimGraph.BP_FishAnimGraph_C.AnimNotify_StartJump");
 
 	UBP_FishAnimGraph_C_AnimNotify_StartJump_Params params;
 
@@ -38,7 +38,7 @@ void UBP_FishAnimGraph_C::AnimNotify_StartJump()
 // (BlueprintCallable, BlueprintEvent)
 void UBP_FishAnimGraph_C::AnimNotify_EndJump()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_FishAnimGraph.BP_FishAnimGraph_C.AnimNotify_EndJump");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FishAnimGraph.BP_FishAnimGraph_C.AnimNotify_EndJump");
 
 	UBP_FishAnimGraph_C_AnimNotify_EndJump_Params params;
 
@@ -56,7 +56,7 @@ void UBP_FishAnimGraph_C::AnimNotify_EndJump()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_FishAnimGraph_C::ExecuteUbergraph_BP_FishAnimGraph(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_FishAnimGraph.BP_FishAnimGraph_C.ExecuteUbergraph_BP_FishAnimGraph");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FishAnimGraph.BP_FishAnimGraph_C.ExecuteUbergraph_BP_FishAnimGraph");
 
 	UBP_FishAnimGraph_C_ExecuteUbergraph_BP_FishAnimGraph_Params params;
 	params.EntryPoint = EntryPoint;

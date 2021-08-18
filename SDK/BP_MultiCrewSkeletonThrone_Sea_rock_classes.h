@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MultiCrewSkeletonThrone_Sea_rock.BP_MultiCrewSkeletonThrone_Sea_rock_C
-// 0x0000 (FullSize[0x04B0] - InheritedSize[0x04B0])
+// 0x0000 (FullSize[0x0450] - InheritedSize[0x0450])
 class ABP_MultiCrewSkeletonThrone_Sea_rock_C : public ABP_MultiCrewSkeletonThrone_C
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_MultiCrewSkeletonThrone_Sea_rock.BP_MultiCrewSkeletonThrone_Sea_rock_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_MultiCrewSkeletonThrone_Sea_rock.BP_MultiCrewSkeletonThrone_Sea_rock_C");
 		return ptr;
 	}
 

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Public, BlueprintCallable, BlueprintEvent)
 void AMapTable_C::UpdateBlurEffect()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.UpdateBlurEffect");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.UpdateBlurEffect");
 
 	AMapTable_C_UpdateBlurEffect_Params params;
 
@@ -42,7 +42,7 @@ void AMapTable_C::UpdateBlurEffect()
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 struct FVector AMapTable_C::GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.GetClosestInteractionPoint");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.GetClosestInteractionPoint");
 
 	AMapTable_C_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
@@ -64,7 +64,7 @@ struct FVector AMapTable_C::GetClosestInteractionPoint(const struct FVector& Ref
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void AMapTable_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.UserConstructionScript");
 
 	AMapTable_C_UserConstructionScript_Params params;
 
@@ -80,7 +80,7 @@ void AMapTable_C::UserConstructionScript()
 // (Event, Public, BlueprintEvent)
 void AMapTable_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.ReceiveBeginPlay");
 
 	AMapTable_C_ReceiveBeginPlay_Params params;
 
@@ -96,7 +96,7 @@ void AMapTable_C::ReceiveBeginPlay()
 // (BlueprintCallable, BlueprintEvent)
 void AMapTable_C::SetEffectActiveWhenClose()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.SetEffectActiveWhenClose");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.SetEffectActiveWhenClose");
 
 	AMapTable_C_SetEffectActiveWhenClose_Params params;
 
@@ -115,7 +115,7 @@ void AMapTable_C::SetEffectActiveWhenClose()
 // class UTextureRenderTarget2D*  Texture                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void AMapTable_C::OnMapActivate(bool IsMapActive, class UTextureRenderTarget2D* Texture)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.OnMapActivate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.OnMapActivate");
 
 	AMapTable_C_OnMapActivate_Params params;
 	params.IsMapActive = IsMapActive;
@@ -136,7 +136,7 @@ void AMapTable_C::OnMapActivate(bool IsMapActive, class UTextureRenderTarget2D* 
 // struct FVector2D               ZoomLevel                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void AMapTable_C::OnMapMove(const struct FVector2D& CentreLocation, const struct FVector2D& ZoomLevel)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.OnMapMove");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.OnMapMove");
 
 	AMapTable_C_OnMapMove_Params params;
 	params.CentreLocation = CentreLocation;
@@ -156,7 +156,7 @@ void AMapTable_C::OnMapMove(const struct FVector2D& CentreLocation, const struct
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void AMapTable_C::ExecuteUbergraph_MapTable(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.ExecuteUbergraph_MapTable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function MapTable.MapTable_C.ExecuteUbergraph_MapTable");
 
 	AMapTable_C_ExecuteUbergraph_MapTable_Params params;
 	params.EntryPoint = EntryPoint;

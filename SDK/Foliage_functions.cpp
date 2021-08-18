@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -28,7 +28,7 @@ namespace CG
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 int UFoliageStatistics::STATIC_FoliageOverlappingSphereCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FVector& CenterPosition, float Radius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Foliage.FoliageStatistics.FoliageOverlappingSphereCount");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Foliage.FoliageStatistics.FoliageOverlappingSphereCount");
 
 	UFoliageStatistics_FoliageOverlappingSphereCount_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -56,7 +56,7 @@ int UFoliageStatistics::STATIC_FoliageOverlappingSphereCount(class UObject* Worl
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 int UFoliageStatistics::STATIC_FoliageOverlappingBoxCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FBox& Box)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Foliage.FoliageStatistics.FoliageOverlappingBoxCount");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Foliage.FoliageStatistics.FoliageOverlappingBoxCount");
 
 	UFoliageStatistics_FoliageOverlappingBoxCount_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -84,7 +84,7 @@ int UFoliageStatistics::STATIC_FoliageOverlappingBoxCount(class UObject* WorldCo
 // struct FHitResult              OverlapInfo                    (ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 void AInteractiveFoliageActor::CapsuleTouched(class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& OverlapInfo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Foliage.InteractiveFoliageActor.CapsuleTouched");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Foliage.InteractiveFoliageActor.CapsuleTouched");
 
 	AInteractiveFoliageActor_CapsuleTouched_Params params;
 	params.Other = Other;
@@ -108,7 +108,7 @@ void AInteractiveFoliageActor::CapsuleTouched(class AActor* Other, class UPrimit
 // int                            NumSteps                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UProceduralFoliageSpawner::Simulate(int NumSteps)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Foliage.ProceduralFoliageSpawner.Simulate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Foliage.ProceduralFoliageSpawner.Simulate");
 
 	UProceduralFoliageSpawner_Simulate_Params params;
 	params.NumSteps = NumSteps;

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // bool                           Underwater                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UInstancedRopeComponent::SetUnderwater(bool Underwater)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaRigging.InstancedRopeComponent.SetUnderwater");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaRigging.InstancedRopeComponent.SetUnderwater");
 
 	UInstancedRopeComponent_SetUnderwater_Params params;
 	params.Underwater = Underwater;
@@ -44,7 +44,7 @@ void UInstancedRopeComponent::SetUnderwater(bool Underwater)
 // TArray<struct FInstancedRopeParams> InRopes                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 void UInstancedRopeComponent::SetRopes(TArray<struct FInstancedRopeParams> InRopes)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaRigging.InstancedRopeComponent.SetRopes");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaRigging.InstancedRopeComponent.SetRopes");
 
 	UInstancedRopeComponent_SetRopes_Params params;
 	params.InRopes = InRopes;
@@ -64,7 +64,7 @@ void UInstancedRopeComponent::SetRopes(TArray<struct FInstancedRopeParams> InRop
 // class AActor*                  InSocketSource                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void URiggingSystemComponent::SetSocketLookupSource(class AActor* InSocketSource)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaRigging.RiggingSystemComponent.SetSocketLookupSource");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaRigging.RiggingSystemComponent.SetSocketLookupSource");
 
 	URiggingSystemComponent_SetSocketLookupSource_Params params;
 	params.InSocketSource = InSocketSource;
@@ -86,7 +86,7 @@ void URiggingSystemComponent::SetSocketLookupSource(class AActor* InSocketSource
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 int URiggingSystemComponent::ConvertLineToRopeIndex(const struct FName& InLineGroupName, int InLineOffset)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaRigging.RiggingSystemComponent.ConvertLineToRopeIndex");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaRigging.RiggingSystemComponent.ConvertLineToRopeIndex");
 
 	URiggingSystemComponent_ConvertLineToRopeIndex_Params params;
 	params.InLineGroupName = InLineGroupName;
@@ -109,7 +109,7 @@ int URiggingSystemComponent::ConvertLineToRopeIndex(const struct FName& InLineGr
 // float                          InUVOffset                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void URopeInterface::SetRopeUVOffset(float InUVOffset)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaRigging.RopeInterface.SetRopeUVOffset");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaRigging.RopeInterface.SetRopeUVOffset");
 
 	URopeInterface_SetRopeUVOffset_Params params;
 	params.InUVOffset = InUVOffset;
@@ -130,7 +130,7 @@ void URopeInterface::SetRopeUVOffset(float InUVOffset)
 // struct FVector                 InWorldSpaceEnd                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void URopeInterface::SetRopeEndpoints(const struct FVector& InWorldSpaceStart, const struct FVector& InWorldSpaceEnd)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaRigging.RopeInterface.SetRopeEndpoints");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaRigging.RopeInterface.SetRopeEndpoints");
 
 	URopeInterface_SetRopeEndpoints_Params params;
 	params.InWorldSpaceStart = InWorldSpaceStart;

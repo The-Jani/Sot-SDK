@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -24,12 +24,12 @@ namespace CG
 class UEndPlayHandler : public UObject
 {
 public:
-	unsigned char                                      UnknownData_9E2V[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_KJ0L[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaObjectLinkage.EndPlayHandler");
+		static UClass* ptr = UObject::FindClass("Class AthenaObjectLinkage.EndPlayHandler");
 		return ptr;
 	}
 
@@ -47,7 +47,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaObjectLinkage.LinkEndpointIdUtilities");
+		static UClass* ptr = UObject::FindClass("Class AthenaObjectLinkage.LinkEndpointIdUtilities");
 		return ptr;
 	}
 
@@ -69,7 +69,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaObjectLinkage.LinkEndpointInterface");
+		static UClass* ptr = UObject::FindClass("Class AthenaObjectLinkage.LinkEndpointInterface");
 		return ptr;
 	}
 
@@ -84,13 +84,13 @@ public:
 class ULinkerComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_YLMV[0xC8];                                    // 0x00C8(0x00C8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_N9HH[0xC8];                                    // 0x00C8(0x00C8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UEndPlayHandler*>                     EndPlayHandlers;                                           // 0x0190(0x0010) (ZeroConstructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaObjectLinkage.LinkerComponent");
+		static UClass* ptr = UObject::FindClass("Class AthenaObjectLinkage.LinkerComponent");
 		return ptr;
 	}
 
@@ -119,7 +119,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaObjectLinkage.LinkerInterface");
+		static UClass* ptr = UObject::FindClass("Class AthenaObjectLinkage.LinkerInterface");
 		return ptr;
 	}
 

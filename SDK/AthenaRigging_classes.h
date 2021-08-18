@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,19 +20,19 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // Class AthenaRigging.InstancedRopeComponent
-// 0x00D0 (FullSize[0x0620] - InheritedSize[0x0550])
+// 0x00C8 (FullSize[0x0650] - InheritedSize[0x0588])
 class UInstancedRopeComponent : public UPrimitiveComponent
 {
 public:
-	class UStaticMesh*                                 StaticMesh;                                                // 0x0550(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FInstancedRopeParams>                Ropes;                                                     // 0x0558(0x0010) (Edit, ZeroConstructor, EditConst)
-	int                                                ShadowLOD;                                                 // 0x0568(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FT69[0xB4];                                    // 0x056C(0x00B4) MISSED OFFSET (PADDING)
+	class UStaticMesh*                                 StaticMesh;                                                // 0x0588(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FInstancedRopeParams>                Ropes;                                                     // 0x0590(0x0010) (Edit, ZeroConstructor, EditConst)
+	int                                                ShadowLOD;                                                 // 0x05A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_AX1L[0xAC];                                    // 0x05A4(0x00AC) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaRigging.InstancedRopeComponent");
+		static UClass* ptr = UObject::FindClass("Class AthenaRigging.InstancedRopeComponent");
 		return ptr;
 	}
 
@@ -48,12 +48,12 @@ class UMaterialExpressionRopeParameter : public UMaterialExpression
 {
 public:
 	TEnumAsByte<AthenaRigging_EInstancedRopeParameterType> RopeParameterType;                                         // 0x0070(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CQW5[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_YQA1[0x7];                                     // 0x0071(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaRigging.MaterialExpressionRopeParameter");
+		static UClass* ptr = UObject::FindClass("Class AthenaRigging.MaterialExpressionRopeParameter");
 		return ptr;
 	}
 
@@ -62,25 +62,25 @@ public:
 };
 
 // Class AthenaRigging.RiggingSystem
-// 0x0150 (FullSize[0x0580] - InheritedSize[0x0430])
+// 0x0150 (FullSize[0x0520] - InheritedSize[0x03D0])
 class ARiggingSystem : public AActor
 {
 public:
-	unsigned char                                      UnknownData_GAUM[0x8];                                     // 0x0430(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class USceneComponent*                             Root;                                                      // 0x0438(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UInstancedRopeComponent*                     InstancedRopes;                                            // 0x0440(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FRiggingSystemLine>                  Lines;                                                     // 0x0448(0x0010) (ZeroConstructor)
-	TArray<struct FInstancedRopeParams>                Ropes;                                                     // 0x0458(0x0010) (ZeroConstructor)
-	TArray<class UMobileInstancedStaticMeshComponent*> PulleyInstances;                                           // 0x0468(0x0010) (ExportObject, ZeroConstructor, ContainsInstancedReference)
-	struct FRiggingSystemPulleyData                    Pulleys;                                                   // 0x0478(0x0060)
-	TArray<struct FSocketId>                           Sockets;                                                   // 0x04D8(0x0010) (ZeroConstructor)
-	TArray<float>                                      InitialMainRopeLengths;                                    // 0x04E8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_88XX[0x88];                                    // 0x04F8(0x0088) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_OYKG[0x8];                                     // 0x03D0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class USceneComponent*                             Root;                                                      // 0x03D8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UInstancedRopeComponent*                     InstancedRopes;                                            // 0x03E0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FRiggingSystemLine>                  Lines;                                                     // 0x03E8(0x0010) (ZeroConstructor)
+	TArray<struct FInstancedRopeParams>                Ropes;                                                     // 0x03F8(0x0010) (ZeroConstructor)
+	TArray<class UMobileInstancedStaticMeshComponent*> PulleyInstances;                                           // 0x0408(0x0010) (ExportObject, ZeroConstructor, ContainsInstancedReference)
+	struct FRiggingSystemPulleyData                    Pulleys;                                                   // 0x0418(0x0060)
+	TArray<struct FSocketId>                           Sockets;                                                   // 0x0478(0x0010) (ZeroConstructor)
+	TArray<float>                                      InitialMainRopeLengths;                                    // 0x0488(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData_HQBL[0x88];                                    // 0x0498(0x0088) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaRigging.RiggingSystem");
+		static UClass* ptr = UObject::FindClass("Class AthenaRigging.RiggingSystem");
 		return ptr;
 	}
 
@@ -96,12 +96,12 @@ public:
 	struct FRopeStyleParams                            RopeStyle;                                                 // 0x02B0(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly)
 	TArray<struct FRiggingSystemLineGroup>             LineGroups;                                                // 0x02D0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	class ARiggingSystem*                              Impl;                                                      // 0x02E0(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_F63Z[0x8];                                     // 0x02E8(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_XOQF[0x8];                                     // 0x02E8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaRigging.RiggingSystemComponent");
+		static UClass* ptr = UObject::FindClass("Class AthenaRigging.RiggingSystemComponent");
 		return ptr;
 	}
 
@@ -112,16 +112,16 @@ public:
 };
 
 // Class AthenaRigging.RopeCatenaryRenderComponent
-// 0x0008 (FullSize[0x05F8] - InheritedSize[0x05F0])
+// 0x0008 (FullSize[0x0630] - InheritedSize[0x0628])
 class URopeCatenaryRenderComponent : public UCordRenderComponent
 {
 public:
-	unsigned char                                      UnknownData_C98O[0x8];                                     // 0x05F0(0x0008) Fix Super Size
+	unsigned char                                      UnknownData_LGL8[0x8];                                     // 0x0628(0x0008) Fix Super Size
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaRigging.RopeCatenaryRenderComponent");
+		static UClass* ptr = UObject::FindClass("Class AthenaRigging.RopeCatenaryRenderComponent");
 		return ptr;
 	}
 
@@ -138,7 +138,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaRigging.RopeInterface");
+		static UClass* ptr = UObject::FindClass("Class AthenaRigging.RopeInterface");
 		return ptr;
 	}
 

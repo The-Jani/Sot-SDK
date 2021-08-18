@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -48,15 +48,13 @@ enum class Cooking_ECookingSmokeFeedbackLevel : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct Cooking.CookStartTelemetryEvent
-// 0x0030
-struct FCookStartTelemetryEvent
+// ScriptStruct Cooking.CookableComponentSmokeFeedbackTimingEntry
+// 0x0008
+struct FCookableComponentSmokeFeedbackTimingEntry
 {
-	struct FString                                     ItemName;                                                  // 0x0000(0x0010) (ZeroConstructor, HasGetValueTypeHash)
-	TEnumAsByte<Cooking_ECookingState>                 CookState;                                                 // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_T4UW[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FVector                                     Location;                                                  // 0x0014(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FGuid                                       CookId;                                                    // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              StateDuration;                                             // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<Cooking_ECookingSmokeFeedbackLevel>    StateFeedbackLevel;                                        // 0x0004(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_6I92[0x3];                                     // 0x0005(0x0003) MISSED OFFSET (PADDING)
 
 };
 
@@ -65,8 +63,36 @@ struct FCookStartTelemetryEvent
 struct FCookerSmokeFeedbackEntry
 {
 	TEnumAsByte<Cooking_ECookingSmokeFeedbackLevel>    FeedbackLevel;                                             // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_11N7[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ST7H[0x7];                                     // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UParticleSystem*                             SmokeVFX;                                                  // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct Cooking.CookingClientRepresentation
+// 0x0068
+struct FCookingClientRepresentation
+{
+	bool                                               Cooking;                                                   // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                               HasItem;                                                   // 0x0001(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_K507[0x6];                                     // 0x0002(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class AItemInfo*                                   CurrentlyCookingItem;                                      // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FText                                       CurrentCookingItemDisplayName;                             // 0x0010(0x0018) ELEMENT_SIZE_MISMATCH
+	unsigned char                                      UnknownData_YZJY[0x20];                                    // 0x0010(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	class UClass*                                      CurrentCookingItemCategory;                                // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	TEnumAsByte<Cooking_ECookingSmokeFeedbackLevel>    SmokeFeedbackLevel;                                        // 0x0050(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_CVBX[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              VisibleCookedExtent;                                       // 0x0054(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              CurrentItemPlacementAngle;                                 // 0x0058(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FName                                       CurrentCookableTypeName;                                   // 0x005C(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_2HLH[0x4];                                     // 0x0064(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Cooking.CookingInfo
+// 0x000C
+struct FCookingInfo
+{
+	unsigned char                                      UnknownData_4A8T[0xC];                                     // 0x0000(0x000C) MISSED OFFSET (PADDING)
 
 };
 
@@ -82,7 +108,7 @@ struct FOnPlacedItemInCookingPot
 // 0x0010
 struct FOnItemStartedCooking
 {
-	unsigned char                                      UnknownData_8TM4[0x10];                                    // 0x0000(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HB0I[0x10];                                    // 0x0000(0x0010) MISSED OFFSET (PADDING)
 
 };
 
@@ -90,7 +116,7 @@ struct FOnItemStartedCooking
 // 0x0001
 struct FOnItemStoppedCooking
 {
-	unsigned char                                      UnknownData_HSM7[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_6HES[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -100,47 +126,21 @@ struct FCookEndTelemetryEvent
 {
 	struct FString                                     ItemName;                                                  // 0x0000(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	TEnumAsByte<Cooking_ECookingState>                 CookState;                                                 // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_G5JO[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_QF39[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     Location;                                                  // 0x0014(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FGuid                                       CookId;                                                    // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 
 };
 
-// ScriptStruct Cooking.CookingClientRepresentation
-// 0x0068
-struct FCookingClientRepresentation
+// ScriptStruct Cooking.CookStartTelemetryEvent
+// 0x0030
+struct FCookStartTelemetryEvent
 {
-	bool                                               Cooking;                                                   // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                               HasItem;                                                   // 0x0001(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_DV6Q[0x6];                                     // 0x0002(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class AItemInfo*                                   CurrentlyCookingItem;                                      // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FText                                       CurrentCookingItemDisplayName;                             // 0x0010(0x0018) ELEMENT_SIZE_MISMATCH
-	unsigned char                                      UnknownData_2J3O[0x20];                                    // 0x0010(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	class UClass*                                      CurrentCookingItemCategory;                                // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	TEnumAsByte<Cooking_ECookingSmokeFeedbackLevel>    SmokeFeedbackLevel;                                        // 0x0050(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_F0FW[0x3];                                     // 0x0051(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              VisibleCookedExtent;                                       // 0x0054(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              CurrentItemPlacementAngle;                                 // 0x0058(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FName                                       CurrentCookableTypeName;                                   // 0x005C(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_ZN2H[0x4];                                     // 0x0064(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct Cooking.CookableComponentSmokeFeedbackTimingEntry
-// 0x0008
-struct FCookableComponentSmokeFeedbackTimingEntry
-{
-	float                                              StateDuration;                                             // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<Cooking_ECookingSmokeFeedbackLevel>    StateFeedbackLevel;                                        // 0x0004(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_5BYR[0x3];                                     // 0x0005(0x0003) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct Cooking.CookingInfo
-// 0x000C
-struct FCookingInfo
-{
-	unsigned char                                      UnknownData_6LRO[0xC];                                     // 0x0000(0x000C) MISSED OFFSET (PADDING)
+	struct FString                                     ItemName;                                                  // 0x0000(0x0010) (ZeroConstructor, HasGetValueTypeHash)
+	TEnumAsByte<Cooking_ECookingState>                 CookState;                                                 // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_TQKL[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FVector                                     Location;                                                  // 0x0014(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FGuid                                       CookId;                                                    // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData, NoDestructor)
 
 };
 

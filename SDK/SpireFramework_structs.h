@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -33,23 +33,14 @@ enum class SpireFramework_EDirectionOfMovement : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct SpireFramework.SpireStreamedLevelData
-// 0x0020
-struct FSpireStreamedLevelData
-{
-	class UAthenaStreamedLevelDataAsset*               DataAsset;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FVector>                             Locations;                                                 // 0x0008(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
-	struct FName                                       FeatureToggle;                                             // 0x0018(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
 // ScriptStruct SpireFramework.SpireInfo
 // 0x0008
 struct FSpireInfo
 {
 	int                                                LevelId;                                                   // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               IsLoaded;                                                  // 0x0004(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_XFNV[0x3];                                     // 0x0005(0x0003) MISSED OFFSET (PADDING)
+	bool                                               ShouldBeLoaded;                                            // 0x0004(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                               ShouldBeVisible;                                           // 0x0005(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_ZACN[0x2];                                     // 0x0006(0x0002) MISSED OFFSET (PADDING)
 
 };
 
@@ -61,6 +52,15 @@ struct FServerSpireInfo
 	struct FVector                                     Location;                                                  // 0x0004(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	class AActor*                                      SpireActor;                                                // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMap<struct FString, struct FName>                 InstancedLevelPaths;                                       // 0x0018(0x0050) (ZeroConstructor)
+
+};
+
+// ScriptStruct SpireFramework.SpireEntry
+// 0x0014
+struct FSpireEntry
+{
+	struct FVector                                     Location;                                                  // 0x0000(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FName                                       IslandName;                                                // 0x000C(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 

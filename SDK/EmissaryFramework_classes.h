@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -19,40 +19,6 @@ namespace CG
 // Classes
 //---------------------------------------------------------------------------
 
-// Class EmissaryFramework.EmissaryParticipantInterface
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UEmissaryParticipantInterface : public UInterface
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class EmissaryFramework.EmissaryParticipantInterface");
-		return ptr;
-	}
-
-
-
-};
-
-// Class EmissaryFramework.EmissaryVotingServiceInterface
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UEmissaryVotingServiceInterface : public UInterface
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class EmissaryFramework.EmissaryVotingServiceInterface");
-		return ptr;
-	}
-
-
-
-};
-
 // Class EmissaryFramework.EmissaryLevelServiceInterface
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 class UEmissaryLevelServiceInterface : public UInterface
@@ -62,7 +28,24 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EmissaryFramework.EmissaryLevelServiceInterface");
+		static UClass* ptr = UObject::FindClass("Class EmissaryFramework.EmissaryLevelServiceInterface");
+		return ptr;
+	}
+
+
+
+};
+
+// Class EmissaryFramework.EmissaryParticipantInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UEmissaryParticipantInterface : public UInterface
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class EmissaryFramework.EmissaryParticipantInterface");
 		return ptr;
 	}
 

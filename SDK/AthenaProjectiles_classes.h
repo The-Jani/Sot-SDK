@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -29,7 +29,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaProjectiles.AthenaProjectilesThrottledTickCollectionAsset");
+		static UClass* ptr = UObject::FindClass("Class AthenaProjectiles.AthenaProjectilesThrottledTickCollectionAsset");
 		return ptr;
 	}
 
@@ -47,7 +47,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaProjectiles.ProjectileLauncherSpecificSettings");
+		static UClass* ptr = UObject::FindClass("Class AthenaProjectiles.ProjectileLauncherSpecificSettings");
 		return ptr;
 	}
 

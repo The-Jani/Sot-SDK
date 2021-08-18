@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -23,8 +23,8 @@ namespace CG
 // 0x0002
 struct FADS_Sockets
 {
-	TEnumAsByte<Athena_EAthenaAnimationSocketGroup>    ControllableHandSocketGroup_4_E2B44462485C20DD896BBF943561D191; // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	TEnumAsByte<Athena_EAthenaAnimationSocketGroupCharacterSize> HipStashSocket_11_2893BE234613BF11CA9E87BDEC3F8FBC;        // 0x0001(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      ControllableHandSocketGroup_4_E2B44462485C20DD896BBF943561D191; // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      HipStashSocket_11_2893BE234613BF11CA9E87BDEC3F8FBC;        // 0x0001(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 };
 

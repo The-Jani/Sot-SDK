@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.AthenaEngineInterface");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.AthenaEngineInterface");
 		return ptr;
 	}
 
@@ -45,7 +45,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.BoxedRpcDispatcherInterface");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.BoxedRpcDispatcherInterface");
 		return ptr;
 	}
 
@@ -58,12 +58,12 @@ public:
 class UBoxedRpcDispatcherComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_W30P[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_IUG5[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.BoxedRpcDispatcherComponent");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.BoxedRpcDispatcherComponent");
 		return ptr;
 	}
 
@@ -81,12 +81,12 @@ class UDynamicColourPointLightComponent : public UPointLightComponent
 public:
 	struct FRuntimeFloatCurve                          ActivationCurve;                                           // 0x0478(0x0080) (Edit)
 	struct FRuntimeFloatCurve                          DeactivationCurve;                                         // 0x04F8(0x0080) (Edit)
-	unsigned char                                      UnknownData_B836[0x38];                                    // 0x0578(0x0038) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_OEVC[0x38];                                    // 0x0578(0x0038) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.DynamicColourPointLightComponent");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.DynamicColourPointLightComponent");
 		return ptr;
 	}
 
@@ -105,7 +105,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.EmptyObject");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.EmptyObject");
 		return ptr;
 	}
 
@@ -122,7 +122,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.ForceFeedbackCondition");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.ForceFeedbackCondition");
 		return ptr;
 	}
 
@@ -140,7 +140,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.GameInstanceSessionIdProviderInterface");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.GameInstanceSessionIdProviderInterface");
 		return ptr;
 	}
 
@@ -153,12 +153,12 @@ public:
 class UNestedWorldRootDataAsset : public UDataAsset
 {
 public:
-	unsigned char                                      UnknownData_3QJE[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_9GXD[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.NestedWorldRootDataAsset");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.NestedWorldRootDataAsset");
 		return ptr;
 	}
 
@@ -175,7 +175,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.OnlinePlayerPermissionsRetrieverInterface");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.OnlinePlayerPermissionsRetrieverInterface");
 		return ptr;
 	}
 
@@ -192,7 +192,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.PlayModeHelpers");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.PlayModeHelpers");
 		return ptr;
 	}
 
@@ -215,7 +215,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.PlayModeInterface");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.PlayModeInterface");
 		return ptr;
 	}
 
@@ -229,14 +229,14 @@ class UPrimitiveCollisionExtentAdjustOverTimeComponent : public UActorComponent
 {
 public:
 	float                                              DelayBeforeExtentAdjustment;                               // 0x00C8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TKB3[0x2C];                                    // 0x00CC(0x002C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_WOSY[0x2C];                                    // 0x00CC(0x002C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UWorld*                                      CachedWorld;                                               // 0x00F8(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_QPPV[0x8];                                     // 0x0100(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ZIPF[0x8];                                     // 0x0100(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.PrimitiveCollisionExtentAdjustOverTimeComponent");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.PrimitiveCollisionExtentAdjustOverTimeComponent");
 		return ptr;
 	}
 
@@ -250,22 +250,22 @@ class UBoxCollisionExtentAdjustOverTimeComponent : public UPrimitiveCollisionExt
 {
 public:
 	bool                                               ShouldAdjustBoxExtentX;                                    // 0x0108(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_WNV0[0x3];                                     // 0x0109(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LFCT[0x3];                                     // 0x0109(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              PostAdjustmentBoxExtentX;                                  // 0x010C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               ShouldAdjustBoxExtentY;                                    // 0x0110(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_76CH[0x3];                                     // 0x0111(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_NUJC[0x3];                                     // 0x0111(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              PostAdjustmentBoxExtentY;                                  // 0x0114(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               ShouldAdjustBoxExtentZ;                                    // 0x0118(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_N23A[0x3];                                     // 0x0119(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8P3W[0x3];                                     // 0x0119(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              PostAdjustmentBoxExtentZ;                                  // 0x011C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     ServerSizeScale;                                           // 0x0120(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_ARRU[0x4];                                     // 0x012C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_R9U7[0x4];                                     // 0x012C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UBoxComponent*                               BoxCollisionToAdjust;                                      // 0x0130(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.BoxCollisionExtentAdjustOverTimeComponent");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.BoxCollisionExtentAdjustOverTimeComponent");
 		return ptr;
 	}
 
@@ -279,16 +279,16 @@ class USphereCollisionExtentAdjustOverTimeComponent : public UPrimitiveCollision
 {
 public:
 	bool                                               ShouldAdjustSphereRadius;                                  // 0x0108(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_MF3V[0x3];                                     // 0x0109(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HUBT[0x3];                                     // 0x0109(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              PostAdjustmentSphereRadius;                                // 0x010C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ServerSizeScale;                                           // 0x0110(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_4GKE[0x4];                                     // 0x0114(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_N3DV[0x4];                                     // 0x0114(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class USphereComponent*                            SphereCollisionToAdjust;                                   // 0x0118(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.SphereCollisionExtentAdjustOverTimeComponent");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.SphereCollisionExtentAdjustOverTimeComponent");
 		return ptr;
 	}
 
@@ -305,7 +305,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.ResourceProviderInterface");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.ResourceProviderInterface");
 		return ptr;
 	}
 
@@ -314,21 +314,27 @@ public:
 };
 
 // Class AthenaEngine.RotateMeshToActorComponent
-// 0x0020 (FullSize[0x00E8] - InheritedSize[0x00C8])
+// 0x0030 (FullSize[0x00F8] - InheritedSize[0x00C8])
 class URotateMeshToActorComponent : public UActorComponent
 {
 public:
 	class UMeshComponent*                              MeshToRotate;                                              // 0x00C8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	class AActor*                                      ActorToRotateTo;                                           // 0x00D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	float                                              CloseProximityRadius;                                      // 0x00D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              RotationSpeed;                                             // 0x00DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MaxPitch;                                                  // 0x00E0(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              CloseProximityYawRotation;                                 // 0x00E4(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               Use2DDistanceForCloseProximityRadius;                      // 0x00DC(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                               WhenInCloseProximityKeepLastYaw;                           // 0x00DD(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_WYL4[0x2];                                     // 0x00DE(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              RotationSpeed;                                             // 0x00E0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               PreventPitchModification;                                  // 0x00E4(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_RTTX[0x3];                                     // 0x00E5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              MaxPitch;                                                  // 0x00E8(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              CloseProximityYawRotation;                                 // 0x00EC(0x0004) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_XR3J[0x8];                                     // 0x00F0(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.RotateMeshToActorComponent");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.RotateMeshToActorComponent");
 		return ptr;
 	}
 
@@ -339,7 +345,7 @@ public:
 };
 
 // Class AthenaEngine.RotateMeshToLocalPlayerComponent
-// 0x0000 (FullSize[0x00E8] - InheritedSize[0x00E8])
+// 0x0000 (FullSize[0x00F8] - InheritedSize[0x00F8])
 class URotateMeshToLocalPlayerComponent : public URotateMeshToActorComponent
 {
 public:
@@ -347,7 +353,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.RotateMeshToLocalPlayerComponent");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.RotateMeshToLocalPlayerComponent");
 		return ptr;
 	}
 
@@ -364,7 +370,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.ServicesStampIdInterface");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.ServicesStampIdInterface");
 		return ptr;
 	}
 
@@ -378,12 +384,12 @@ class USkeletalMeshAggregateTickComponent : public UActorComponent
 {
 public:
 	class USkeletalMeshComponent*                      Mesh;                                                      // 0x00C8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TY4E[0x28];                                    // 0x00D0(0x0028) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_K71H[0x28];                                    // 0x00D0(0x0028) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.SkeletalMeshAggregateTickComponent");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.SkeletalMeshAggregateTickComponent");
 		return ptr;
 	}
 
@@ -397,12 +403,12 @@ class UStringToAssetClassMap : public UDataAsset
 {
 public:
 	TArray<struct FStringAssetClassPair>               StringAssetClassPairs;                                     // 0x0028(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData_06WC[0x18];                                    // 0x0038(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4MMR[0x18];                                    // 0x0038(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.StringToAssetClassMap");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.StringToAssetClassMap");
 		return ptr;
 	}
 
@@ -419,7 +425,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaEngine.SyncedRandomRetrievalInterface");
+		static UClass* ptr = UObject::FindClass("Class AthenaEngine.SyncedRandomRetrievalInterface");
 		return ptr;
 	}
 

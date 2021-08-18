@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -68,7 +68,7 @@ struct FGameplayTag
 struct FGameplayTagQuery
 {
 	int                                                TokenStreamVersion;                                        // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_UOBM[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_AL2F[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FGameplayTag>                        TagDictionary;                                             // 0x0008(0x0010) (ZeroConstructor)
 	TArray<unsigned char>                              QueryTokenStream;                                          // 0x0018(0x0010) (ZeroConstructor)
 	struct FString                                     UserDescription;                                           // 0x0028(0x0010) (ZeroConstructor, HasGetValueTypeHash)
@@ -76,11 +76,21 @@ struct FGameplayTagQuery
 
 };
 
+// ScriptStruct GameplayTags.GameplayTagContainer
+// 0x0028
+struct FGameplayTagContainer
+{
+	unsigned char                                      UnknownData_WZMR[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<struct FGameplayTag>                        GameplayTags;                                              // 0x0008(0x0010) (BlueprintVisible, ZeroConstructor, Protected)
+	TArray<struct FName>                               Tags;                                                      // 0x0018(0x0010) (ZeroConstructor, Deprecated)
+
+};
+
 // ScriptStruct GameplayTags.GameplayTagNode
 // 0x0078
 struct FGameplayTagNode
 {
-	unsigned char                                      UnknownData_D7LY[0x78];                                    // 0x0000(0x0078) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AF0U[0x78];                                    // 0x0000(0x0078) MISSED OFFSET (PADDING)
 
 };
 
@@ -90,17 +100,7 @@ struct FGameplayTagTableRow : public FTableRowBase
 {
 	struct FString                                     Tag;                                                       // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	struct FText                                       CategoryText;                                              // 0x0010(0x0018) ELEMENT_SIZE_MISMATCH (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData_436S[0x20];                                    // 0x0010(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-
-};
-
-// ScriptStruct GameplayTags.GameplayTagContainer
-// 0x0028
-struct FGameplayTagContainer
-{
-	unsigned char                                      UnknownData_MA5U[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<struct FGameplayTag>                        GameplayTags;                                              // 0x0008(0x0010) (BlueprintVisible, ZeroConstructor, Protected)
-	TArray<struct FName>                               Tags;                                                      // 0x0018(0x0010) (ZeroConstructor, Deprecated)
+	unsigned char                                      UnknownData_I35Q[0x20];                                    // 0x0010(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 
 };
 

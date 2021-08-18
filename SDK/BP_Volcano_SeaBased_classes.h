@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Volcano_SeaBased.BP_Volcano_SeaBased_C
-// 0x0000 (FullSize[0x05F8] - InheritedSize[0x05F8])
+// 0x0000 (FullSize[0x0598] - InheritedSize[0x0598])
 class ABP_Volcano_SeaBased_C : public ABP_Volcano_C
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Volcano_SeaBased.BP_Volcano_SeaBased_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Volcano_SeaBased.BP_Volcano_SeaBased_C");
 		return ptr;
 	}
 

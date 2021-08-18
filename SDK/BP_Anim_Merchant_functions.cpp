@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (BlueprintCallable, BlueprintEvent)
 void UBP_Anim_Merchant_C::AnimNotify_NPCItemAnimation()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_Merchant.BP_Anim_Merchant_C.AnimNotify_NPCItemAnimation");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Anim_Merchant.BP_Anim_Merchant_C.AnimNotify_NPCItemAnimation");
 
 	UBP_Anim_Merchant_C_AnimNotify_NPCItemAnimation_Params params;
 
@@ -40,7 +40,7 @@ void UBP_Anim_Merchant_C::AnimNotify_NPCItemAnimation()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_Anim_Merchant_C::ExecuteUbergraph_BP_Anim_Merchant(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Anim_Merchant.BP_Anim_Merchant_C.ExecuteUbergraph_BP_Anim_Merchant");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Anim_Merchant.BP_Anim_Merchant_C.ExecuteUbergraph_BP_Anim_Merchant");
 
 	UBP_Anim_Merchant_C_ExecuteUbergraph_BP_Anim_Merchant_Params params;
 	params.EntryPoint = EntryPoint;

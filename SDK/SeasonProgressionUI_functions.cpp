@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Final, Native, Private)
 void USeasonProgressionUIComponent::OnHUDDestroyed()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SeasonProgressionUI.SeasonProgressionUIComponent.OnHUDDestroyed");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function SeasonProgressionUI.SeasonProgressionUIComponent.OnHUDDestroyed");
 
 	USeasonProgressionUIComponent_OnHUDDestroyed_Params params;
 
@@ -41,7 +41,7 @@ void USeasonProgressionUIComponent::OnHUDDestroyed()
 // TEnumAsByte<AthenaInput_EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 TEnumAsByte<AthenaInput_EInputHandlerResult> USeasonProgressionUICompositeInputHandler::OnMenuButtonPressed()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SeasonProgressionUI.SeasonProgressionUICompositeInputHandler.OnMenuButtonPressed");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function SeasonProgressionUI.SeasonProgressionUICompositeInputHandler.OnMenuButtonPressed");
 
 	USeasonProgressionUICompositeInputHandler_OnMenuButtonPressed_Params params;
 

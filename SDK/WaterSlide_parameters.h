@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -34,20 +34,6 @@ struct AWaterSlide_ComponentBeginOverlapCallBack_Params
 	int                                                InOtherBodyIndex;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               InFromSweep;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FHitResult                                  InSweepResult;                                             // (ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-};
-
-// Function WaterSlide.WaterSlideCompositeInputHandler.OnMoveRight
-struct UWaterSlideCompositeInputHandler_OnMoveRight_Params
-{
-	float                                              Value;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<AthenaInput_EInputHandlerResult>       ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function WaterSlide.WaterSlideCompositeInputHandler.OnMoveForward
-struct UWaterSlideCompositeInputHandler_OnMoveForward_Params
-{
-	float                                              Value;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<AthenaInput_EInputHandlerResult>       ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 }

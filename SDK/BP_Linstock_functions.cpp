@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_Linstock_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Linstock.BP_Linstock_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Linstock.BP_Linstock_C.UserConstructionScript");
 
 	ABP_Linstock_C_UserConstructionScript_Params params;
 
@@ -38,7 +38,7 @@ void ABP_Linstock_C::UserConstructionScript()
 // (Event, Public, BlueprintEvent)
 void ABP_Linstock_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Linstock.BP_Linstock_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Linstock.BP_Linstock_C.ReceiveBeginPlay");
 
 	ABP_Linstock_C_ReceiveBeginPlay_Params params;
 
@@ -56,7 +56,7 @@ void ABP_Linstock_C::ReceiveBeginPlay()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Linstock_C::ExecuteUbergraph_BP_Linstock(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Linstock.BP_Linstock_C.ExecuteUbergraph_BP_Linstock");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Linstock.BP_Linstock_C.ExecuteUbergraph_BP_Linstock");
 
 	ABP_Linstock_C_ExecuteUbergraph_BP_Linstock_Params params;
 	params.EntryPoint = EntryPoint;

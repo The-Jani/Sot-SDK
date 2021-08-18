@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,16 +20,16 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SailHoist.BP_SailHoist_C
-// 0x0008 (FullSize[0x0850] - InheritedSize[0x0848])
+// 0x0008 (FullSize[0x07F0] - InheritedSize[0x07E8])
 class ABP_SailHoist_C : public ASailHoist
 {
 public:
-	class UInteractableComponent*                      Interactable;                                              // 0x0848(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UInteractableComponent*                      Interactable;                                              // 0x07E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_SailHoist.BP_SailHoist_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_SailHoist.BP_SailHoist_C");
 		return ptr;
 	}
 

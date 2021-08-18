@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // unsigned char                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 unsigned char ABP_LargeShipTemplate_C::GetPxActorCapacityForPhysXAggregate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LargeShipTemplate.BP_LargeShipTemplate_C.GetPxActorCapacityForPhysXAggregate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LargeShipTemplate.BP_LargeShipTemplate_C.GetPxActorCapacityForPhysXAggregate");
 
 	ABP_LargeShipTemplate_C_GetPxActorCapacityForPhysXAggregate_Params params;
 
@@ -48,7 +48,7 @@ unsigned char ABP_LargeShipTemplate_C::GetPxActorCapacityForPhysXAggregate()
 // struct FName                   RiggingGroupName               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_LargeShipTemplate_C::SetupMastControls(class UChildActorComponent* LeftHoist, class UChildActorComponent* RightHoist, class UChildActorComponent* LeftAngle, class UChildActorComponent* RightAngle, const struct FName& RiggingGroupName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LargeShipTemplate.BP_LargeShipTemplate_C.SetupMastControls");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LargeShipTemplate.BP_LargeShipTemplate_C.SetupMastControls");
 
 	ABP_LargeShipTemplate_C_SetupMastControls_Params params;
 	params.LeftHoist = LeftHoist;
@@ -69,7 +69,7 @@ void ABP_LargeShipTemplate_C::SetupMastControls(class UChildActorComponent* Left
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_LargeShipTemplate_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LargeShipTemplate.BP_LargeShipTemplate_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LargeShipTemplate.BP_LargeShipTemplate_C.UserConstructionScript");
 
 	ABP_LargeShipTemplate_C_UserConstructionScript_Params params;
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -29,7 +29,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Slate.ButtonWidgetStyle");
+		static UClass* ptr = UObject::FindClass("Class Slate.ButtonWidgetStyle");
 		return ptr;
 	}
 
@@ -47,7 +47,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Slate.CheckBoxWidgetStyle");
+		static UClass* ptr = UObject::FindClass("Class Slate.CheckBoxWidgetStyle");
 		return ptr;
 	}
 
@@ -65,7 +65,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Slate.ComboBoxWidgetStyle");
+		static UClass* ptr = UObject::FindClass("Class Slate.ComboBoxWidgetStyle");
 		return ptr;
 	}
 
@@ -83,61 +83,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Slate.ComboButtonWidgetStyle");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Slate.ScrollBoxWidgetStyle
-// 0x0248 (FullSize[0x0278] - InheritedSize[0x0030])
-class UScrollBoxWidgetStyle : public USlateWidgetStyleContainerBase
-{
-public:
-	struct FScrollBoxStyle                             ScrollBoxStyle;                                            // 0x0030(0x0248) (Edit)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Slate.ScrollBoxWidgetStyle");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Slate.SpinBoxWidgetStyle
-// 0x0318 (FullSize[0x0348] - InheritedSize[0x0030])
-class USpinBoxWidgetStyle : public USlateWidgetStyleContainerBase
-{
-public:
-	struct FSpinBoxStyle                               SpinBoxStyle;                                              // 0x0030(0x0318) (Edit)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Slate.SpinBoxWidgetStyle");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Slate.TextBlockWidgetStyle
-// 0x0160 (FullSize[0x0190] - InheritedSize[0x0030])
-class UTextBlockWidgetStyle : public USlateWidgetStyleContainerBase
-{
-public:
-	struct FTextBlockStyle                             TextBlockStyle;                                            // 0x0030(0x0160) (Edit)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Slate.TextBlockWidgetStyle");
+		static UClass* ptr = UObject::FindClass("Class Slate.ComboButtonWidgetStyle");
 		return ptr;
 	}
 
@@ -155,7 +101,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Slate.EditableTextBoxWidgetStyle");
+		static UClass* ptr = UObject::FindClass("Class Slate.EditableTextBoxWidgetStyle");
 		return ptr;
 	}
 
@@ -173,7 +119,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Slate.EditableTextWidgetStyle");
+		static UClass* ptr = UObject::FindClass("Class Slate.EditableTextWidgetStyle");
 		return ptr;
 	}
 
@@ -191,7 +137,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Slate.ProgressWidgetStyle");
+		static UClass* ptr = UObject::FindClass("Class Slate.ProgressWidgetStyle");
 		return ptr;
 	}
 
@@ -209,7 +155,61 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Slate.ScrollBarWidgetStyle");
+		static UClass* ptr = UObject::FindClass("Class Slate.ScrollBarWidgetStyle");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Slate.ScrollBoxWidgetStyle
+// 0x0248 (FullSize[0x0278] - InheritedSize[0x0030])
+class UScrollBoxWidgetStyle : public USlateWidgetStyleContainerBase
+{
+public:
+	struct FScrollBoxStyle                             ScrollBoxStyle;                                            // 0x0030(0x0248) (Edit)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Slate.ScrollBoxWidgetStyle");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Slate.SpinBoxWidgetStyle
+// 0x0318 (FullSize[0x0348] - InheritedSize[0x0030])
+class USpinBoxWidgetStyle : public USlateWidgetStyleContainerBase
+{
+public:
+	struct FSpinBoxStyle                               SpinBoxStyle;                                              // 0x0030(0x0318) (Edit)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Slate.SpinBoxWidgetStyle");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Slate.TextBlockWidgetStyle
+// 0x0160 (FullSize[0x0190] - InheritedSize[0x0030])
+class UTextBlockWidgetStyle : public USlateWidgetStyleContainerBase
+{
+public:
+	struct FTextBlockStyle                             TextBlockStyle;                                            // 0x0030(0x0160) (Edit)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Slate.TextBlockWidgetStyle");
 		return ptr;
 	}
 

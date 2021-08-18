@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // struct FDockableInfo           ReturnValue                    (Parm, OutParm, ReturnParm)
 struct FDockableInfo ABP_SmallShipLadderMainMast_C::GetDockableInfo()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipLadderMainMast.BP_SmallShipLadderMainMast_C.GetDockableInfo");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallShipLadderMainMast.BP_SmallShipLadderMainMast_C.GetDockableInfo");
 
 	ABP_SmallShipLadderMainMast_C_GetDockableInfo_Params params;
 
@@ -45,7 +45,7 @@ struct FDockableInfo ABP_SmallShipLadderMainMast_C::GetDockableInfo()
 // TArray<struct FVector>         Positions                      (Parm, OutParm, ZeroConstructor, ReferenceParm)
 void ABP_SmallShipLadderMainMast_C::Setup_Spline(class USplineComponent* Spline, TArray<struct FVector>* Positions)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipLadderMainMast.BP_SmallShipLadderMainMast_C.Setup Spline");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallShipLadderMainMast.BP_SmallShipLadderMainMast_C.Setup Spline");
 
 	ABP_SmallShipLadderMainMast_C_Setup_Spline_Params params;
 	params.Spline = Spline;
@@ -68,7 +68,7 @@ void ABP_SmallShipLadderMainMast_C::Setup_Spline(class USplineComponent* Spline,
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool ABP_SmallShipLadderMainMast_C::CanInteract(class AActor* InInteractor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipLadderMainMast.BP_SmallShipLadderMainMast_C.CanInteract");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallShipLadderMainMast.BP_SmallShipLadderMainMast_C.CanInteract");
 
 	ABP_SmallShipLadderMainMast_C_CanInteract_Params params;
 	params.InInteractor = InInteractor;
@@ -87,7 +87,7 @@ bool ABP_SmallShipLadderMainMast_C::CanInteract(class AActor* InInteractor)
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_SmallShipLadderMainMast_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipLadderMainMast.BP_SmallShipLadderMainMast_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallShipLadderMainMast.BP_SmallShipLadderMainMast_C.UserConstructionScript");
 
 	ABP_SmallShipLadderMainMast_C_UserConstructionScript_Params params;
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,18 +20,18 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // Class LevelSequence.LevelSequence
-// 0x00A8 (FullSize[0x0350] - InheritedSize[0x02A8])
+// 0x00F8 (FullSize[0x03A0] - InheritedSize[0x02A8])
 class ULevelSequence : public UMovieSceneSequence
 {
 public:
 	class UMovieScene*                                 MovieScene;                                                // 0x02A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLevelSequenceObjectReferenceMap            ObjectReferences;                                          // 0x02B0(0x0050)
-	TMap<struct FString, struct FLevelSequenceObject>  PossessedObjects;                                          // 0x0300(0x0050) (ZeroConstructor, Deprecated)
+	struct FLevelSequenceObjectReferenceMap            ObjectReferences;                                          // 0x02B0(0x00A0)
+	TMap<struct FString, struct FLevelSequenceObject>  PossessedObjects;                                          // 0x0350(0x0050) (ZeroConstructor, Deprecated)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequence");
+		static UClass* ptr = UObject::FindClass("Class LevelSequence.LevelSequence");
 		return ptr;
 	}
 
@@ -48,7 +48,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceSubtitlesInterface");
+		static UClass* ptr = UObject::FindClass("Class LevelSequence.LevelSequenceSubtitlesInterface");
 		return ptr;
 	}
 
@@ -57,17 +57,17 @@ public:
 };
 
 // Class LevelSequence.LevelSequencePlayer
-// 0x0040 (FullSize[0x06A0] - InheritedSize[0x0660])
+// 0x0040 (FullSize[0x0640] - InheritedSize[0x0600])
 class ULevelSequencePlayer : public UMovieSceneSequencePlayer
 {
 public:
-	class AActor*                                      SpawnablesParent;                                          // 0x0660(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_T18C[0x38];                                    // 0x0668(0x0038) MISSED OFFSET (PADDING)
+	class AActor*                                      SpawnablesParent;                                          // 0x0600(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_X50O[0x38];                                    // 0x0608(0x0038) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequencePlayer");
+		static UClass* ptr = UObject::FindClass("Class LevelSequence.LevelSequencePlayer");
 		return ptr;
 	}
 
@@ -85,7 +85,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnInInitSettings");
+		static UClass* ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnInInitSettings");
 		return ptr;
 	}
 
@@ -99,14 +99,14 @@ class ULevelSequenceBurnInOptions : public UObject
 {
 public:
 	bool                                               bUseBurnIn;                                                // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_DZUT[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_RAHH[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FStringClassReference                       BurnInClass;                                               // 0x0030(0x0010) (Edit, ZeroConstructor)
 	class ULevelSequenceBurnInInitSettings*            Settings;                                                  // 0x0040(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnInOptions");
+		static UClass* ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnInOptions");
 		return ptr;
 	}
 
@@ -115,25 +115,25 @@ public:
 };
 
 // Class LevelSequence.LevelSequenceActor
-// 0x0070 (FullSize[0x04A0] - InheritedSize[0x0430])
+// 0x0070 (FullSize[0x0440] - InheritedSize[0x03D0])
 class ALevelSequenceActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData_EUKW[0x8];                                     // 0x0430(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	bool                                               bAutoPlay;                                                 // 0x0438(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_6QO1[0x7];                                     // 0x0439(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FMovieSceneSequencePlaybackSettings         PlaybackSettings;                                          // 0x0440(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
-	class ULevelSequencePlayer*                        SequencePlayer;                                            // 0x0468(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FStringAssetReference                       LevelSequence;                                             // 0x0470(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	class ULevelSequenceBurnInOptions*                 BurnInOptions;                                             // 0x0480(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, AdvancedDisplay, PersistentInstance, HasGetValueTypeHash)
-	class UMovieSceneBindingOverrides*                 BindingOverrides;                                          // 0x0488(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, AdvancedDisplay, PersistentInstance, HasGetValueTypeHash)
-	class AActor*                                      SpawnablesParent;                                          // 0x0490(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ULevelSequenceBurnIn*                        BurnInInstance;                                            // 0x0498(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_0BG5[0x8];                                     // 0x03D0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	bool                                               bAutoPlay;                                                 // 0x03D8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_Q032[0x7];                                     // 0x03D9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FMovieSceneSequencePlaybackSettings         PlaybackSettings;                                          // 0x03E0(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
+	class ULevelSequencePlayer*                        SequencePlayer;                                            // 0x0408(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FStringAssetReference                       LevelSequence;                                             // 0x0410(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	class ULevelSequenceBurnInOptions*                 BurnInOptions;                                             // 0x0420(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, AdvancedDisplay, PersistentInstance, HasGetValueTypeHash)
+	class UMovieSceneBindingOverrides*                 BindingOverrides;                                          // 0x0428(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, AdvancedDisplay, PersistentInstance, HasGetValueTypeHash)
+	class AActor*                                      SpawnablesParent;                                          // 0x0430(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ULevelSequenceBurnIn*                        BurnInInstance;                                            // 0x0438(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceActor");
+		static UClass* ptr = UObject::FindClass("Class LevelSequence.LevelSequenceActor");
 		return ptr;
 	}
 
@@ -159,7 +159,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnIn");
+		static UClass* ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnIn");
 		return ptr;
 	}
 

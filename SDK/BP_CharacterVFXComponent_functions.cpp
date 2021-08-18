@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // class UObject*                 WindInterface                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_CharacterVFXComponent_C::GetWindService(class UObject** WindInterface)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.GetWindService");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.GetWindService");
 
 	UBP_CharacterVFXComponent_C_GetWindService_Params params;
 
@@ -43,7 +43,7 @@ void UBP_CharacterVFXComponent_C::GetWindService(class UObject** WindInterface)
 // (Public, BlueprintCallable, BlueprintEvent)
 void UBP_CharacterVFXComponent_C::WindVFX_DebugTick()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_DebugTick");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_DebugTick");
 
 	UBP_CharacterVFXComponent_C_WindVFX_DebugTick_Params params;
 
@@ -59,7 +59,7 @@ void UBP_CharacterVFXComponent_C::WindVFX_DebugTick()
 // (Public, BlueprintCallable, BlueprintEvent)
 void UBP_CharacterVFXComponent_C::WindVFX_Destroy()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Destroy");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Destroy");
 
 	UBP_CharacterVFXComponent_C_WindVFX_Destroy_Params params;
 
@@ -75,7 +75,7 @@ void UBP_CharacterVFXComponent_C::WindVFX_Destroy()
 // (Public, BlueprintCallable, BlueprintEvent)
 void UBP_CharacterVFXComponent_C::WindVFX_Create()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Create");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Create");
 
 	UBP_CharacterVFXComponent_C_WindVFX_Create_Params params;
 
@@ -91,7 +91,7 @@ void UBP_CharacterVFXComponent_C::WindVFX_Create()
 // (Public, BlueprintCallable, BlueprintEvent)
 void UBP_CharacterVFXComponent_C::WindVFX_Deactivate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Deactivate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WindVFX_Deactivate");
 
 	UBP_CharacterVFXComponent_C_WindVFX_Deactivate_Params params;
 
@@ -109,7 +109,7 @@ void UBP_CharacterVFXComponent_C::WindVFX_Deactivate()
 // struct FEventPlayerViewUnderWaterStateChanged Event                          (Parm)
 void UBP_CharacterVFXComponent_C::Play_View_Under_Water_FX(const struct FEventPlayerViewUnderWaterStateChanged& Event)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.Play View Under Water FX");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.Play View Under Water FX");
 
 	UBP_CharacterVFXComponent_C_Play_View_Under_Water_FX_Params params;
 	params.Event = Event;
@@ -128,7 +128,7 @@ void UBP_CharacterVFXComponent_C::Play_View_Under_Water_FX(const struct FEventPl
 // float                          FallingSpeed                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_CharacterVFXComponent_C::Play_Falling_Splash(float FallingSpeed)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.Play Falling Splash");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.Play Falling Splash");
 
 	UBP_CharacterVFXComponent_C_Play_Falling_Splash_Params params;
 	params.FallingSpeed = FallingSpeed;
@@ -147,7 +147,7 @@ void UBP_CharacterVFXComponent_C::Play_Falling_Splash(float FallingSpeed)
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_CharacterVFXComponent_C::Play_Foot_Splash(const struct FVector& Location)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.Play Foot Splash");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.Play Foot Splash");
 
 	UBP_CharacterVFXComponent_C_Play_Foot_Splash_Params params;
 	params.Location = Location;
@@ -166,7 +166,7 @@ void UBP_CharacterVFXComponent_C::Play_Foot_Splash(const struct FVector& Locatio
 // TEnumAsByte<Engine_EEndPlayReason> EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_CharacterVFXComponent_C::ReceiveEndPlay(TEnumAsByte<Engine_EEndPlayReason> EndPlayReason)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ReceiveEndPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ReceiveEndPlay");
 
 	UBP_CharacterVFXComponent_C_ReceiveEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
@@ -183,7 +183,7 @@ void UBP_CharacterVFXComponent_C::ReceiveEndPlay(TEnumAsByte<Engine_EEndPlayReas
 // (Event, Public, BlueprintEvent)
 void UBP_CharacterVFXComponent_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ReceiveBeginPlay");
 
 	UBP_CharacterVFXComponent_C_ReceiveBeginPlay_Params params;
 
@@ -201,7 +201,7 @@ void UBP_CharacterVFXComponent_C::ReceiveBeginPlay()
 // struct FEventPlayerViewUnderWaterStateChanged Event                          (Parm)
 void UBP_CharacterVFXComponent_C::PlayerViewUnderWaterEvent(const struct FEventPlayerViewUnderWaterStateChanged& Event)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.PlayerViewUnderWaterEvent");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.PlayerViewUnderWaterEvent");
 
 	UBP_CharacterVFXComponent_C_PlayerViewUnderWaterEvent_Params params;
 	params.Event = Event;
@@ -220,7 +220,7 @@ void UBP_CharacterVFXComponent_C::PlayerViewUnderWaterEvent(const struct FEventP
 // struct FAthena_FFallingIntoWaterEvent Event                          (Parm)
 void UBP_CharacterVFXComponent_C::FallingIntoWaterEvent(const struct FAthena_FFallingIntoWaterEvent& Event)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.FallingIntoWaterEvent");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.FallingIntoWaterEvent");
 
 	UBP_CharacterVFXComponent_C_FallingIntoWaterEvent_Params params;
 	params.Event = Event;
@@ -239,7 +239,7 @@ void UBP_CharacterVFXComponent_C::FallingIntoWaterEvent(const struct FAthena_FFa
 // struct FEventPlayerViewUnderWaterStateChanged Under_water_state_changed      (Parm)
 void UBP_CharacterVFXComponent_C::WaterStateChanged(const struct FEventPlayerViewUnderWaterStateChanged& Under_water_state_changed)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WaterStateChanged");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.WaterStateChanged");
 
 	UBP_CharacterVFXComponent_C_WaterStateChanged_Params params;
 	params.Under_water_state_changed = Under_water_state_changed;
@@ -258,7 +258,7 @@ void UBP_CharacterVFXComponent_C::WaterStateChanged(const struct FEventPlayerVie
 // struct FEventCharacterFootEnterWater Enter_Water                    (Parm)
 void UBP_CharacterVFXComponent_C::On_Foot_Enter_Water(const struct FEventCharacterFootEnterWater& Enter_Water)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.On Foot Enter Water");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.On Foot Enter Water");
 
 	UBP_CharacterVFXComponent_C_On_Foot_Enter_Water_Params params;
 	params.Enter_Water = Enter_Water;
@@ -277,7 +277,7 @@ void UBP_CharacterVFXComponent_C::On_Foot_Enter_Water(const struct FEventCharact
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_CharacterVFXComponent_C::ExecuteUbergraph_BP_CharacterVFXComponent(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ExecuteUbergraph_BP_CharacterVFXComponent");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CharacterVFXComponent.BP_CharacterVFXComponent_C.ExecuteUbergraph_BP_CharacterVFXComponent");
 
 	UBP_CharacterVFXComponent_C_ExecuteUbergraph_BP_CharacterVFXComponent_Params params;
 	params.EntryPoint = EntryPoint;

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_PromptActor_EmissarySunk_RB_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PromptActor_EmissarySunk_RB.BP_PromptActor_EmissarySunk_RB_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_PromptActor_EmissarySunk_RB.BP_PromptActor_EmissarySunk_RB_C.UserConstructionScript");
 
 	ABP_PromptActor_EmissarySunk_RB_C_UserConstructionScript_Params params;
 
@@ -38,7 +38,7 @@ void ABP_PromptActor_EmissarySunk_RB_C::UserConstructionScript()
 // (Event, Public, BlueprintEvent)
 void ABP_PromptActor_EmissarySunk_RB_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PromptActor_EmissarySunk_RB.BP_PromptActor_EmissarySunk_RB_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_PromptActor_EmissarySunk_RB.BP_PromptActor_EmissarySunk_RB_C.ReceiveBeginPlay");
 
 	ABP_PromptActor_EmissarySunk_RB_C_ReceiveBeginPlay_Params params;
 
@@ -56,7 +56,7 @@ void ABP_PromptActor_EmissarySunk_RB_C::ReceiveBeginPlay()
 // TEnumAsByte<Engine_EEndPlayReason> EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_PromptActor_EmissarySunk_RB_C::ReceiveEndPlay(TEnumAsByte<Engine_EEndPlayReason> EndPlayReason)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PromptActor_EmissarySunk_RB.BP_PromptActor_EmissarySunk_RB_C.ReceiveEndPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_PromptActor_EmissarySunk_RB.BP_PromptActor_EmissarySunk_RB_C.ReceiveEndPlay");
 
 	ABP_PromptActor_EmissarySunk_RB_C_ReceiveEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
@@ -75,7 +75,7 @@ void ABP_PromptActor_EmissarySunk_RB_C::ReceiveEndPlay(TEnumAsByte<Engine_EEndPl
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_PromptActor_EmissarySunk_RB_C::ExecuteUbergraph_BP_PromptActor_EmissarySunk_RB(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PromptActor_EmissarySunk_RB.BP_PromptActor_EmissarySunk_RB_C.ExecuteUbergraph_BP_PromptActor_EmissarySunk_RB");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_PromptActor_EmissarySunk_RB.BP_PromptActor_EmissarySunk_RB_C.ExecuteUbergraph_BP_PromptActor_EmissarySunk_RB");
 
 	ABP_PromptActor_EmissarySunk_RB_C_ExecuteUbergraph_BP_PromptActor_EmissarySunk_RB_Params params;
 	params.EntryPoint = EntryPoint;

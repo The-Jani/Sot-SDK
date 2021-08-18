@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Final, Native, Public, BlueprintCallable)
 void USirenAnimationInstance::ClearActiveAttack()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SirensAnimation.SirenAnimationInstance.ClearActiveAttack");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function SirensAnimation.SirenAnimationInstance.ClearActiveAttack");
 
 	USirenAnimationInstance_ClearActiveAttack_Params params;
 
@@ -39,7 +39,7 @@ void USirenAnimationInstance::ClearActiveAttack()
 // (Final, Native, Public, BlueprintCallable)
 void USirenAnimationInstance::BeginNewAttack()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SirensAnimation.SirenAnimationInstance.BeginNewAttack");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function SirensAnimation.SirenAnimationInstance.BeginNewAttack");
 
 	USirenAnimationInstance_BeginNewAttack_Params params;
 

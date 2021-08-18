@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -19,23 +19,6 @@ namespace CG
 // Classes
 //---------------------------------------------------------------------------
 
-// Class ShipDamage.StrainDamagerType
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UStrainDamagerType : public UDamagerType
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ShipDamage.StrainDamagerType");
-		return ptr;
-	}
-
-
-
-};
-
 // Class ShipDamage.DamageablePartsInterface
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 class UDamageablePartsInterface : public UInterface
@@ -45,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ShipDamage.DamageablePartsInterface");
+		static UClass* ptr = UObject::FindClass("Class ShipDamage.DamageablePartsInterface");
 		return ptr;
 	}
 
@@ -65,7 +48,24 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ShipDamage.HullDamageInterface");
+		static UClass* ptr = UObject::FindClass("Class ShipDamage.HullDamageInterface");
+		return ptr;
+	}
+
+
+
+};
+
+// Class ShipDamage.HullDamageProviderInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UHullDamageProviderInterface : public UInterface
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class ShipDamage.HullDamageProviderInterface");
 		return ptr;
 	}
 
@@ -82,7 +82,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ShipDamage.LandscapeDamagerType");
+		static UClass* ptr = UObject::FindClass("Class ShipDamage.LandscapeDamagerType");
 		return ptr;
 	}
 
@@ -99,7 +99,24 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ShipDamage.ShipDamagerType");
+		static UClass* ptr = UObject::FindClass("Class ShipDamage.ShipDamagerType");
+		return ptr;
+	}
+
+
+
+};
+
+// Class ShipDamage.StrainDamagerType
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UStrainDamagerType : public UDamagerType
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class ShipDamage.StrainDamagerType");
 		return ptr;
 	}
 

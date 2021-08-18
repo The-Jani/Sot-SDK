@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -101,7 +101,6 @@ struct UObjectMessagingFunctions_GetObjectMessagingDispatcherFromActor_Params
 // Function ObjectMessaging.ObjectMessagingFunctions.GetObjectMessagingDispatcher
 struct UObjectMessagingFunctions_GetObjectMessagingDispatcher_Params
 {
-	TScriptInterface<class UObjectMessagingDispatcherInterface> ObjectMessagingDispatcher;                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 	struct FObjectMessagingDispatcherHandle            ReturnValue;                                               // (Parm, OutParm, ReturnParm)
 };
 

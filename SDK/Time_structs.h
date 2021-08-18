@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -40,15 +40,6 @@ struct FGameTime
 
 };
 
-// ScriptStruct Time.GameTimeRange
-// 0x0010
-struct FGameTimeRange
-{
-	struct FGameTime                                   Start;                                                     // 0x0000(0x0008) (Edit)
-	struct FGameTime                                   End;                                                       // 0x0008(0x0008) (Edit)
-
-};
-
 // ScriptStruct Time.ReplicatedDateTime
 // 0x0008
 struct FReplicatedDateTime
@@ -63,6 +54,15 @@ struct FReplicatedAuthoritativeTime
 {
 	struct FReplicatedDateTime                         WorldTime;                                                 // 0x0000(0x0008)
 	struct FReplicatedDateTime                         SyncTime;                                                  // 0x0008(0x0008)
+
+};
+
+// ScriptStruct Time.GameTimeRange
+// 0x0010
+struct FGameTimeRange
+{
+	struct FGameTime                                   Start;                                                     // 0x0000(0x0008) (Edit)
+	struct FGameTime                                   End;                                                       // 0x0008(0x0008) (Edit)
 
 };
 

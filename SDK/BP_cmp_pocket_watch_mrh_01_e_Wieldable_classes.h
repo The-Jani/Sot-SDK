@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmp_pocket_watch_mrh_01_e_Wieldable.BP_cmp_pocket_watch_mrh_01_e_Wieldable_C
-// 0x0000 (FullSize[0x0AC0] - InheritedSize[0x0AC0])
+// 0x0000 (FullSize[0x0A60] - InheritedSize[0x0A60])
 class ABP_cmp_pocket_watch_mrh_01_e_Wieldable_C : public ABP_PocketWatch_C
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_cmp_pocket_watch_mrh_01_e_Wieldable.BP_cmp_pocket_watch_mrh_01_e_Wieldable_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_cmp_pocket_watch_mrh_01_e_Wieldable.BP_cmp_pocket_watch_mrh_01_e_Wieldable_C");
 		return ptr;
 	}
 

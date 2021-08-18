@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Public, BlueprintCallable, BlueprintEvent)
 void ABP_SmallMapTable_C::UpdateBlurEffect()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.UpdateBlurEffect");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.UpdateBlurEffect");
 
 	ABP_SmallMapTable_C_UpdateBlurEffect_Params params;
 
@@ -42,7 +42,7 @@ void ABP_SmallMapTable_C::UpdateBlurEffect()
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 struct FVector ABP_SmallMapTable_C::GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.GetClosestInteractionPoint");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.GetClosestInteractionPoint");
 
 	ABP_SmallMapTable_C_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
@@ -64,7 +64,7 @@ struct FVector ABP_SmallMapTable_C::GetClosestInteractionPoint(const struct FVec
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_SmallMapTable_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.UserConstructionScript");
 
 	ABP_SmallMapTable_C_UserConstructionScript_Params params;
 
@@ -80,7 +80,7 @@ void ABP_SmallMapTable_C::UserConstructionScript()
 // (Event, Public, BlueprintEvent)
 void ABP_SmallMapTable_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.ReceiveBeginPlay");
 
 	ABP_SmallMapTable_C_ReceiveBeginPlay_Params params;
 
@@ -96,7 +96,7 @@ void ABP_SmallMapTable_C::ReceiveBeginPlay()
 // (BlueprintCallable, BlueprintEvent)
 void ABP_SmallMapTable_C::SetEffectActiveWhenClose()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.SetEffectActiveWhenClose");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.SetEffectActiveWhenClose");
 
 	ABP_SmallMapTable_C_SetEffectActiveWhenClose_Params params;
 
@@ -115,7 +115,7 @@ void ABP_SmallMapTable_C::SetEffectActiveWhenClose()
 // class UTextureRenderTarget2D*  Texture                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_SmallMapTable_C::OnMapActivate(bool IsMapActive, class UTextureRenderTarget2D* Texture)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.OnMapActivate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.OnMapActivate");
 
 	ABP_SmallMapTable_C_OnMapActivate_Params params;
 	params.IsMapActive = IsMapActive;
@@ -136,7 +136,7 @@ void ABP_SmallMapTable_C::OnMapActivate(bool IsMapActive, class UTextureRenderTa
 // struct FVector2D               ZoomLevel                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_SmallMapTable_C::OnMapMove(const struct FVector2D& CentreLocation, const struct FVector2D& ZoomLevel)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.OnMapMove");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.OnMapMove");
 
 	ABP_SmallMapTable_C_OnMapMove_Params params;
 	params.CentreLocation = CentreLocation;
@@ -156,7 +156,7 @@ void ABP_SmallMapTable_C::OnMapMove(const struct FVector2D& CentreLocation, cons
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_SmallMapTable_C::ExecuteUbergraph_BP_SmallMapTable(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.ExecuteUbergraph_BP_SmallMapTable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallMapTable.BP_SmallMapTable_C.ExecuteUbergraph_BP_SmallMapTable");
 
 	ABP_SmallMapTable_C_ExecuteUbergraph_BP_SmallMapTable_Params params;
 	params.EntryPoint = EntryPoint;

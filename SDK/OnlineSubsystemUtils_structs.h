@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -68,14 +68,6 @@ enum class OnlineSubsystemUtils_EClientRequestType : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct OnlineSubsystemUtils.BlueprintSessionResult
-// 0x00E0
-struct FBlueprintSessionResult
-{
-	unsigned char                                      UnknownData_HRGS[0xE0];                                    // 0x0000(0x00E0) MISSED OFFSET (PADDING)
-
-};
-
 // ScriptStruct OnlineSubsystemUtils.PlayerReservation
 // 0x0030
 struct FPlayerReservation
@@ -83,7 +75,7 @@ struct FPlayerReservation
 	struct FUniqueNetIdRepl                            UniqueId;                                                  // 0x0000(0x0018) (Transient)
 	struct FString                                     ValidationStr;                                             // 0x0018(0x0010) (ZeroConstructor, Transient, HasGetValueTypeHash)
 	float                                              ElapsedTime;                                               // 0x0028(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2DRI[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_KYX3[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -92,9 +84,17 @@ struct FPlayerReservation
 struct FPartyReservation
 {
 	int                                                TeamNum;                                                   // 0x0000(0x0004) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_O82L[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_0U3F[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FUniqueNetIdRepl                            PartyLeader;                                               // 0x0008(0x0018) (Transient)
 	TArray<struct FPlayerReservation>                  PartyMembers;                                              // 0x0020(0x0010) (ZeroConstructor, Transient)
+
+};
+
+// ScriptStruct OnlineSubsystemUtils.BlueprintSessionResult
+// 0x00E0
+struct FBlueprintSessionResult
+{
+	unsigned char                                      UnknownData_E2CW[0xE0];                                    // 0x0000(0x00E0) MISSED OFFSET (PADDING)
 
 };
 

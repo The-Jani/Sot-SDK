@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,16 +20,16 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // Class RareEngine.RareGameEngine
-// 0x0058 (FullSize[0x0B00] - InheritedSize[0x0AA8])
+// 0x0058 (FullSize[0x0A40] - InheritedSize[0x09E8])
 class URareGameEngine : public UGameEngine
 {
 public:
-	unsigned char                                      UnknownData_U66U[0x58];                                    // 0x0AA8(0x0058) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_RYXW[0x58];                                    // 0x09E8(0x0058) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareEngine.RareGameEngine");
+		static UClass* ptr = UObject::FindClass("Class RareEngine.RareGameEngine");
 		return ptr;
 	}
 
@@ -42,12 +42,12 @@ public:
 class UAssetReferencer : public UDataAsset
 {
 public:
-	TArray<TAssetPtr<class UClass>>                    AssetsToReference;                                         // 0x0028(0x0010) (Edit, ZeroConstructor, UObjectWrapper)
+	TArray<TAssetPtr<class UObject>>                   AssetsToReference;                                         // 0x0028(0x0010) (Edit, ZeroConstructor, UObjectWrapper)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareEngine.AssetReferencer");
+		static UClass* ptr = UObject::FindClass("Class RareEngine.AssetReferencer");
 		return ptr;
 	}
 
@@ -60,12 +60,12 @@ public:
 class UAudioHardwareDeviceService : public UObject
 {
 public:
-	unsigned char                                      UnknownData_87M3[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PCQP[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareEngine.AudioHardwareDeviceService");
+		static UClass* ptr = UObject::FindClass("Class RareEngine.AudioHardwareDeviceService");
 		return ptr;
 	}
 
@@ -82,7 +82,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareEngine.HitchDiagnosisBlueprintFunctionLibrary");
+		static UClass* ptr = UObject::FindClass("Class RareEngine.HitchDiagnosisBlueprintFunctionLibrary");
 		return ptr;
 	}
 
@@ -105,7 +105,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareEngine.MemoryUsageVisualiserSettings");
+		static UClass* ptr = UObject::FindClass("Class RareEngine.MemoryUsageVisualiserSettings");
 		return ptr;
 	}
 
@@ -114,7 +114,7 @@ public:
 };
 
 // Class RareEngine.RareHUD
-// 0x0000 (FullSize[0x0528] - InheritedSize[0x0528])
+// 0x0000 (FullSize[0x04C8] - InheritedSize[0x04C8])
 class ARareHUD : public AHUD
 {
 public:
@@ -122,7 +122,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareEngine.RareHUD");
+		static UClass* ptr = UObject::FindClass("Class RareEngine.RareHUD");
 		return ptr;
 	}
 
@@ -135,14 +135,14 @@ public:
 class UStallDetector : public UObject
 {
 public:
-	unsigned char                                      UnknownData_ZSC5[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LGMW[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FScriptMulticastDelegate                    Callback;                                                  // 0x0030(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_EST8[0x10];                                    // 0x0040(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_S6X4[0x10];                                    // 0x0040(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareEngine.StallDetector");
+		static UClass* ptr = UObject::FindClass("Class RareEngine.StallDetector");
 		return ptr;
 	}
 
@@ -162,7 +162,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RareEngine.StaticMeshActorBlueprintLibrary");
+		static UClass* ptr = UObject::FindClass("Class RareEngine.StaticMeshActorBlueprintLibrary");
 		return ptr;
 	}
 

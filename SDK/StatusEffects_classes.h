@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -24,12 +24,12 @@ namespace CG
 class UStatusBase : public UObject
 {
 public:
-	unsigned char                                      UnknownData_N0PZ[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_RYAO[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusBase");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.StatusBase");
 		return ptr;
 	}
 
@@ -42,12 +42,12 @@ public:
 class UStatusResponse : public UObject
 {
 public:
-	unsigned char                                      UnknownData_1FNU[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_FGJ2[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusResponse");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.StatusResponse");
 		return ptr;
 	}
 
@@ -64,7 +64,44 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.ActivateableSurfaceMaterialStatusZoneInterface");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.ActivateableSurfaceMaterialStatusZoneInterface");
+		return ptr;
+	}
+
+
+
+};
+
+// Class StatusEffects.BuffReceiverInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UBuffReceiverInterface : public UInterface
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.BuffReceiverInterface");
+		return ptr;
+	}
+
+
+
+};
+
+// Class StatusEffects.BuffReceiverComponent
+// 0x0010 (FullSize[0x00D8] - InheritedSize[0x00C8])
+class UBuffReceiverComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData_NED5[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	bool                                               CanReceiveBuff;                                            // 0x00D0(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_AA4R[0x7];                                     // 0x00D1(0x0007) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.BuffReceiverComponent");
 		return ptr;
 	}
 
@@ -83,7 +120,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.DebugMenuStatusDataAsset");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.DebugMenuStatusDataAsset");
 		return ptr;
 	}
 
@@ -92,20 +129,20 @@ public:
 };
 
 // Class StatusEffects.StatusEffectOverlapZone
-// 0x00C8 (FullSize[0x04F8] - InheritedSize[0x0430])
+// 0x00C8 (FullSize[0x0498] - InheritedSize[0x03D0])
 class AStatusEffectOverlapZone : public AActor
 {
 public:
-	unsigned char                                      UnknownData_Q8DM[0xA8];                                    // 0x0430(0x00A8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UBoxComponent*                               CollisionMesh;                                             // 0x04D8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FDelayedStatusEffect>                StatusesToApplyOnOverlap;                                  // 0x04E0(0x0010) (Edit, ZeroConstructor)
-	bool                                               StartActive;                                               // 0x04F0(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_9YFV[0x7];                                     // 0x04F1(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_K5GP[0xA8];                                    // 0x03D0(0x00A8) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UBoxComponent*                               CollisionMesh;                                             // 0x0478(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FDelayedStatusEffect>                StatusesToApplyOnOverlap;                                  // 0x0480(0x0010) (Edit, ZeroConstructor)
+	bool                                               StartActive;                                               // 0x0490(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_HT6M[0x7];                                     // 0x0491(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusEffectOverlapZone");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.StatusEffectOverlapZone");
 		return ptr;
 	}
 
@@ -119,16 +156,16 @@ public:
 class UDebugStatusEffectOverlapZoneVisualizerComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_WEX1[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_384X[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     BoxCollisionDimensions;                                    // 0x00D0(0x000C) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor)
 	struct FColor                                      DebugColour;                                               // 0x00DC(0x0004) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor)
 	bool                                               VisibleState;                                              // 0x00E0(0x0001) (Net, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_DEMK[0x7];                                     // 0x00E1(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ZLXS[0x7];                                     // 0x00E1(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.DebugStatusEffectOverlapZoneVisualizerComponent");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.DebugStatusEffectOverlapZoneVisualizerComponent");
 		return ptr;
 	}
 
@@ -139,16 +176,16 @@ public:
 };
 
 // Class StatusEffects.DebugStatusTicketHolder
-// 0x0008 (FullSize[0x0438] - InheritedSize[0x0430])
+// 0x0008 (FullSize[0x03D8] - InheritedSize[0x03D0])
 class ADebugStatusTicketHolder : public AActor
 {
 public:
-	class AActor*                                      StatusRecipient;                                           // 0x0430(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                      StatusRecipient;                                           // 0x03D0(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.DebugStatusTicketHolder");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.DebugStatusTicketHolder");
 		return ptr;
 	}
 
@@ -165,7 +202,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusEffectCancellationInterface");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.StatusEffectCancellationInterface");
 		return ptr;
 	}
 
@@ -182,7 +219,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusEffectRecipientInterface");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.StatusEffectRecipientInterface");
 		return ptr;
 	}
 
@@ -199,7 +236,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusEffectResponseConfigurationInterface");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.StatusEffectResponseConfigurationInterface");
 		return ptr;
 	}
 
@@ -216,7 +253,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusEffectSuspensionInterface");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.StatusEffectSuspensionInterface");
 		return ptr;
 	}
 
@@ -230,14 +267,14 @@ class UStatusResponseAsset : public UDataAsset
 {
 public:
 	struct FText                                       HighFrequencyTriggerStatusHelper;                          // 0x0028(0x0018) ELEMENT_SIZE_MISMATCH (Edit, EditConst)
-	unsigned char                                      UnknownData_3AZC[0x20];                                    // 0x0028(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_B10F[0x20];                                    // 0x0028(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	TArray<class UClass*>                              TriggerStatus;                                             // 0x0060(0x0010) (Edit, ZeroConstructor, UObjectWrapper)
 	TArray<class UStatusResponse*>                     Responses;                                                 // 0x0070(0x0010) (Edit, ExportObject, ZeroConstructor, ContainsInstancedReference)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusResponseAsset");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.StatusResponseAsset");
 		return ptr;
 	}
 
@@ -257,7 +294,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusRecipientResponseList");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.StatusRecipientResponseList");
 		return ptr;
 	}
 
@@ -270,14 +307,14 @@ public:
 class ULightWeightStatusEffectManagerComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_OJ2U[0x20];                                    // 0x00C8(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_8JCW[0x20];                                    // 0x00C8(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UStatusRecipientResponseList*                RecipientResponseList;                                     // 0x00E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FActiveStatusEffect>                 ActiveEffects;                                             // 0x00F0(0x0010) (Net, ZeroConstructor, RepNotify)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.LightWeightStatusEffectManagerComponent");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.LightWeightStatusEffectManagerComponent");
 		return ptr;
 	}
 
@@ -296,7 +333,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.MaterialStatusSusceptibilityInterface");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.MaterialStatusSusceptibilityInterface");
 		return ptr;
 	}
 
@@ -313,7 +350,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.SurfaceMaterialStatusZoneInterface");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.SurfaceMaterialStatusZoneInterface");
 		return ptr;
 	}
 
@@ -326,15 +363,15 @@ public:
 class UMaterialStatusSusceptibilityComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_WDVU[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_DGBM[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UPhysicalMaterial*                           CurrentSurfaceMaterial;                                    // 0x00D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class USurfaceMaterialStatusZoneInterface> CurrentMaterialStatusZone;                                 // 0x00D8(0x0010) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper)
-	unsigned char                                      UnknownData_MVUM[0x10];                                    // 0x00E8(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      CurrentMaterialStatusZone[0x10];                           // 0x00D8(0x0010) UNKNOWN PROPERTY: InterfaceProperty StatusEffects.MaterialStatusSusceptibilityComponent.CurrentMaterialStatusZone
+	unsigned char                                      UnknownData_E2KQ[0x10];                                    // 0x00E8(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.MaterialStatusSusceptibilityComponent");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.MaterialStatusSusceptibilityComponent");
 		return ptr;
 	}
 
@@ -343,19 +380,20 @@ public:
 };
 
 // Class StatusEffects.SphericalStatusEffectZone
-// 0x00B8 (FullSize[0x04E8] - InheritedSize[0x0430])
+// 0x00C0 (FullSize[0x0490] - InheritedSize[0x03D0])
 class ASphericalStatusEffectZone : public AActor
 {
 public:
-	unsigned char                                      UnknownData_3LUZ[0x8];                                     // 0x0430(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class USphereComponent*                            SphereComponent;                                           // 0x0438(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStatusEffectVolumeComponent*                StatusEffectVolumeComponent;                               // 0x0440(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_2FY0[0xA0];                                    // 0x0448(0x00A0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_PCA1[0x8];                                     // 0x03D0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UActorActivationComponent*                   ActorActivationComponent;                                  // 0x03D8(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                            SphereComponent;                                           // 0x03E0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStatusEffectVolumeComponent*                StatusEffectVolumeComponent;                               // 0x03E8(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_MUR2[0xA0];                                    // 0x03F0(0x00A0) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.SphericalStatusEffectZone");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.SphericalStatusEffectZone");
 		return ptr;
 	}
 
@@ -373,7 +411,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusApplicationDesc");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.StatusApplicationDesc");
 		return ptr;
 	}
 
@@ -391,7 +429,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusApplicationMonitorComponent");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.StatusApplicationMonitorComponent");
 		return ptr;
 	}
 
@@ -408,7 +446,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusEffectHelperFunctionLibrary");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.StatusEffectHelperFunctionLibrary");
 		return ptr;
 	}
 
@@ -426,7 +464,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusEffectTicketDispenserInterface");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.StatusEffectTicketDispenserInterface");
 		return ptr;
 	}
 
@@ -439,14 +477,14 @@ public:
 class UStatusEffectManagerComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_2Z8E[0x28];                                    // 0x00C8(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_3OJX[0x28];                                    // 0x00C8(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UStatusRecipientResponseList*                RecipientResponseList;                                     // 0x00F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FActiveStatusEffect>                 ActiveEffects;                                             // 0x00F8(0x0010) (Net, ZeroConstructor, RepNotify)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusEffectManagerComponent");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.StatusEffectManagerComponent");
 		return ptr;
 	}
 
@@ -465,7 +503,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusEffectPersistenceInterface");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.StatusEffectPersistenceInterface");
 		return ptr;
 	}
 
@@ -478,12 +516,12 @@ public:
 class UStatusEffectPersistenceComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_JB1B[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2VJW[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusEffectPersistenceComponent");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.StatusEffectPersistenceComponent");
 		return ptr;
 	}
 
@@ -501,7 +539,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusEffectsSettings");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.StatusEffectsSettings");
 		return ptr;
 	}
 
@@ -515,14 +553,14 @@ class UStatusEffectVolumeComponent : public USceneComponent
 {
 public:
 	bool                                               UseOverlapEventsFromParentComponent;                       // 0x02B0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_H0QA[0x7];                                     // 0x02B1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_037O[0x7];                                     // 0x02B1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FStatus>                             StatusEffectsToMaintain;                                   // 0x02B8(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData_1EOF[0x8];                                     // 0x02C8(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_3M81[0x8];                                     // 0x02C8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusEffectVolumeComponent");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.StatusEffectVolumeComponent");
 		return ptr;
 	}
 
@@ -534,6 +572,26 @@ public:
 	void AffectActor(class AActor* Actor);
 };
 
+// Class StatusEffects.SetCanReceiveBuffStatusResponse
+// 0x0008 (FullSize[0x0038] - InheritedSize[0x0030])
+class USetCanReceiveBuffStatusResponse : public UStatusResponse
+{
+public:
+	bool                                               LockBuffReceiver;                                          // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                               RevertOnDeactivate;                                        // 0x0031(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_4BX5[0x6];                                     // 0x0032(0x0006) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.SetCanReceiveBuffStatusResponse");
+		return ptr;
+	}
+
+
+
+};
+
 // Class StatusEffects.StatusResponseNull
 // 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
 class UStatusResponseNull : public UStatusResponse
@@ -543,7 +601,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class StatusEffects.StatusResponseNull");
+		static UClass* ptr = UObject::FindClass("Class StatusEffects.StatusResponseNull");
 		return ptr;
 	}
 

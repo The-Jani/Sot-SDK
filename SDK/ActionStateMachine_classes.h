@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.ActionStateId");
+		static UClass* ptr = UObject::FindClass("Class ActionStateMachine.ActionStateId");
 		return ptr;
 	}
 
@@ -37,7 +37,7 @@ public:
 };
 
 // Class ActionStateMachine.ActionStateCreatorDefinition
-// 0x0000 (FullSize[0x0430] - InheritedSize[0x0430])
+// 0x0000 (FullSize[0x03D0] - InheritedSize[0x03D0])
 class AActionStateCreatorDefinition : public AActor
 {
 public:
@@ -45,7 +45,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.ActionStateCreatorDefinition");
+		static UClass* ptr = UObject::FindClass("Class ActionStateMachine.ActionStateCreatorDefinition");
 		return ptr;
 	}
 
@@ -54,16 +54,16 @@ public:
 };
 
 // Class ActionStateMachine.TestActionStateCreatorDefinition
-// 0x0018 (FullSize[0x0448] - InheritedSize[0x0430])
+// 0x0018 (FullSize[0x03E8] - InheritedSize[0x03D0])
 class ATestActionStateCreatorDefinition : public AActionStateCreatorDefinition
 {
 public:
-	unsigned char                                      UnknownData_YI7E[0x18];                                    // 0x0430(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_NPNB[0x18];                                    // 0x03D0(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.TestActionStateCreatorDefinition");
+		static UClass* ptr = UObject::FindClass("Class ActionStateMachine.TestActionStateCreatorDefinition");
 		return ptr;
 	}
 
@@ -80,7 +80,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.CustomClientValidityActionState2Id");
+		static UClass* ptr = UObject::FindClass("Class ActionStateMachine.CustomClientValidityActionState2Id");
 		return ptr;
 	}
 
@@ -97,7 +97,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.CustomClientValidityActionStateId");
+		static UClass* ptr = UObject::FindClass("Class ActionStateMachine.CustomClientValidityActionStateId");
 		return ptr;
 	}
 
@@ -114,7 +114,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.NullActionStateId");
+		static UClass* ptr = UObject::FindClass("Class ActionStateMachine.NullActionStateId");
 		return ptr;
 	}
 
@@ -131,7 +131,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.TestActionStateId");
+		static UClass* ptr = UObject::FindClass("Class ActionStateMachine.TestActionStateId");
 		return ptr;
 	}
 
@@ -148,7 +148,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.TestActionStateId2");
+		static UClass* ptr = UObject::FindClass("Class ActionStateMachine.TestActionStateId2");
 		return ptr;
 	}
 
@@ -157,18 +157,18 @@ public:
 };
 
 // Class ActionStateMachine.ActionStateMachineComponent
-// 0x07C0 (FullSize[0x0888] - InheritedSize[0x00C8])
+// 0x0790 (FullSize[0x0858] - InheritedSize[0x00C8])
 class UActionStateMachineComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_QUFM[0x48];                                    // 0x00C8(0x0048) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FScriptMulticastDelegate                    OnActionChangedOnTrack;                                    // 0x0110(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_GGBL[0x768];                                   // 0x0120(0x0768) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_S5GC[0x18];                                    // 0x00C8(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FScriptMulticastDelegate                    OnActionChangedOnTrack;                                    // 0x00E0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData_DP7S[0x768];                                   // 0x00F0(0x0768) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.ActionStateMachineComponent");
+		static UClass* ptr = UObject::FindClass("Class ActionStateMachine.ActionStateMachineComponent");
 		return ptr;
 	}
 
@@ -187,16 +187,16 @@ public:
 };
 
 // Class ActionStateMachine.TestActionStateMachineComponent
-// 0x0018 (FullSize[0x08A0] - InheritedSize[0x0888])
+// 0x0018 (FullSize[0x0870] - InheritedSize[0x0858])
 class UTestActionStateMachineComponent : public UActionStateMachineComponent
 {
 public:
-	unsigned char                                      UnknownData_FQSQ[0x18];                                    // 0x0888(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_N7GZ[0x18];                                    // 0x0858(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.TestActionStateMachineComponent");
+		static UClass* ptr = UObject::FindClass("Class ActionStateMachine.TestActionStateMachineComponent");
 		return ptr;
 	}
 
@@ -210,12 +210,12 @@ class UCustomClientValidityCheckCallback : public UObject
 {
 public:
 	bool                                               ShouldPassClientValidation;                                // 0x0028(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_B80F[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_VYTU[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.CustomClientValidityCheckCallback");
+		static UClass* ptr = UObject::FindClass("Class ActionStateMachine.CustomClientValidityCheckCallback");
 		return ptr;
 	}
 
@@ -232,7 +232,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.ActionStateMachineComponentTestFunctions");
+		static UClass* ptr = UObject::FindClass("Class ActionStateMachine.ActionStateMachineComponentTestFunctions");
 		return ptr;
 	}
 
@@ -263,7 +263,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.ActionStateMachineInterface");
+		static UClass* ptr = UObject::FindClass("Class ActionStateMachine.ActionStateMachineInterface");
 		return ptr;
 	}
 
@@ -282,7 +282,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.ActionStatePriorityTableData");
+		static UClass* ptr = UObject::FindClass("Class ActionStateMachine.ActionStatePriorityTableData");
 		return ptr;
 	}
 
@@ -299,7 +299,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.ActionStatePriorityTableUtility");
+		static UClass* ptr = UObject::FindClass("Class ActionStateMachine.ActionStatePriorityTableUtility");
 		return ptr;
 	}
 
@@ -310,16 +310,16 @@ public:
 };
 
 // Class ActionStateMachine.RemoteValidationFailActionStateActor
-// 0x0008 (FullSize[0x0438] - InheritedSize[0x0430])
+// 0x0008 (FullSize[0x03D8] - InheritedSize[0x03D0])
 class ARemoteValidationFailActionStateActor : public AActor
 {
 public:
-	class UActionStateMachineComponent*                ActionStateMachineComponent;                               // 0x0430(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UActionStateMachineComponent*                ActionStateMachineComponent;                               // 0x03D0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.RemoteValidationFailActionStateActor");
+		static UClass* ptr = UObject::FindClass("Class ActionStateMachine.RemoteValidationFailActionStateActor");
 		return ptr;
 	}
 
@@ -336,7 +336,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions");
+		static UClass* ptr = UObject::FindClass("Class ActionStateMachine.SerialisedActionStateConstructionInfoTestFunctions");
 		return ptr;
 	}
 
@@ -353,17 +353,17 @@ public:
 };
 
 // Class ActionStateMachine.TestObjectWithActionStateMachine
-// 0x0018 (FullSize[0x0448] - InheritedSize[0x0430])
+// 0x0018 (FullSize[0x03E8] - InheritedSize[0x03D0])
 class ATestObjectWithActionStateMachine : public AActor
 {
 public:
-	class UTestActionStateMachineComponent*            ActionStateMachineComponent;                               // 0x0430(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_FPHA[0x10];                                    // 0x0438(0x0010) MISSED OFFSET (PADDING)
+	class UTestActionStateMachineComponent*            ActionStateMachineComponent;                               // 0x03D0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_KZNN[0x10];                                    // 0x03D8(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ActionStateMachine.TestObjectWithActionStateMachine");
+		static UClass* ptr = UObject::FindClass("Class ActionStateMachine.TestObjectWithActionStateMachine");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Bucket.BP_Bucket_C
-// 0x0000 (FullSize[0x0910] - InheritedSize[0x0910])
+// 0x0000 (FullSize[0x08D0] - InheritedSize[0x08D0])
 class ABP_Bucket_C : public ABucket
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Bucket.BP_Bucket_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Bucket.BP_Bucket_C");
 		return ptr;
 	}
 

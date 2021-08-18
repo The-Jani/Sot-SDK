@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CharacterAudioComponent.BP_CharacterAudioComponent_C
-// 0x0000 (FullSize[0x1168] - InheritedSize[0x1168])
+// 0x0000 (FullSize[0x11B0] - InheritedSize[0x11B0])
 class UBP_CharacterAudioComponent_C : public UCharacterAudioComponent
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_CharacterAudioComponent.BP_CharacterAudioComponent_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_CharacterAudioComponent.BP_CharacterAudioComponent_C");
 		return ptr;
 	}
 

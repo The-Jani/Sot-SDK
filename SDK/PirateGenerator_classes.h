@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -25,13 +25,13 @@ class UAnimationSwitchDataAsset : public UDataAsset
 {
 public:
 	float                                              Threshold;                                                 // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_SJJY[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_C124[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FAnimationSwitchEntry>               Entries;                                                   // 0x0030(0x0010) (Edit, ZeroConstructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.AnimationSwitchDataAsset");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.AnimationSwitchDataAsset");
 		return ptr;
 	}
 
@@ -49,7 +49,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.CharacterMeshBakeFunctionLibrary");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.CharacterMeshBakeFunctionLibrary");
 		return ptr;
 	}
 
@@ -66,12 +66,12 @@ public:
 class USkeletonsDataAsset : public UDataAsset
 {
 public:
-	unsigned char                                      UnknownData_SUN0[0x50];                                    // 0x0028(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_9RIT[0x50];                                    // 0x0028(0x0050) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.SkeletonsDataAsset");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.SkeletonsDataAsset");
 		return ptr;
 	}
 
@@ -85,7 +85,7 @@ class UCharacterMeshBakeSpecification : public UObject
 {
 public:
 	bool                                               StripTopLOD;                                               // 0x0028(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_KHPI[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_25DT[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class USkeletalMesh*                               CharacterMesh;                                             // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMesh*                               BaseMeshReferenceSkeleton;                                 // 0x0038(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USkeletonsDataAsset*                         SourceSkeletons;                                           // 0x0040(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -98,7 +98,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.CharacterMeshBakeSpecification");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.CharacterMeshBakeSpecification");
 		return ptr;
 	}
 
@@ -115,7 +115,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.CharacterMeshBakeTestFunctionLibrary");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.CharacterMeshBakeTestFunctionLibrary");
 		return ptr;
 	}
 
@@ -137,7 +137,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.ColorTexture");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.ColorTexture");
 		return ptr;
 	}
 
@@ -154,7 +154,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.FileAccessFunctionLibrary");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.FileAccessFunctionLibrary");
 		return ptr;
 	}
 
@@ -174,7 +174,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.MaterialReferencesDataAsset");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.MaterialReferencesDataAsset");
 		return ptr;
 	}
 
@@ -191,7 +191,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.PirateBodyShapeFunctionLibrary");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.PirateBodyShapeFunctionLibrary");
 		return ptr;
 	}
 
@@ -213,7 +213,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.PirateGeneratorMaterials");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.PirateGeneratorMaterials");
 		return ptr;
 	}
 
@@ -230,7 +230,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.PirateGeneratorFunctionLibrary");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.PirateGeneratorFunctionLibrary");
 		return ptr;
 	}
 
@@ -272,7 +272,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.PirateGeneratorSettings");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.PirateGeneratorSettings");
 		return ptr;
 	}
 
@@ -289,7 +289,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.PreparePirateMeshBakeTestFunctionLibrary");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.PreparePirateMeshBakeTestFunctionLibrary");
 		return ptr;
 	}
 
@@ -304,15 +304,15 @@ public:
 class UTextureSwitch : public UTextureProxy
 {
 public:
-	unsigned char                                      UnknownData_E6VW[0x80];                                    // 0x0140(0x0080) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZWDA[0x80];                                    // 0x0140(0x0080) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	bool                                               bDuplicated;                                               // 0x01C0(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected)
-	unsigned char                                      UnknownData_QFHB[0x7];                                     // 0x01C1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_K23S[0x7];                                     // 0x01C1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FTextureSwitchParameters                    DefaultParameters;                                         // 0x01C8(0x0058) (Edit, BlueprintVisible, BlueprintReadOnly)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.TextureSwitch");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.TextureSwitch");
 		return ptr;
 	}
 
@@ -328,14 +328,14 @@ public:
 	struct FName                                       HashSource;                                                // 0x0220(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              FallbackProbability;                                       // 0x0228(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       FallbackReferenceName;                                     // 0x022C(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_QJ0M[0x4];                                     // 0x0234(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_K1QL[0x4];                                     // 0x0234(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FStringAssetReference                       FallbackTexture;                                           // 0x0238(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	TArray<struct FTextureSwitchSeedEntry>             Entries;                                                   // 0x0248(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.TextureSwitchBySeed");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.TextureSwitchBySeed");
 		return ptr;
 	}
 
@@ -353,7 +353,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.TextureSwitchByGender");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.TextureSwitchByGender");
 		return ptr;
 	}
 
@@ -371,7 +371,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.TextureSwitchByEthnicity");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.TextureSwitchByEthnicity");
 		return ptr;
 	}
 
@@ -389,7 +389,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.TextureSwitchByBodyShape");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.TextureSwitchByBodyShape");
 		return ptr;
 	}
 
@@ -408,7 +408,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.TextureSwitchByItem");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.TextureSwitchByItem");
 		return ptr;
 	}
 
@@ -427,7 +427,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.ColorTextureSwitchBySeed");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.ColorTextureSwitchBySeed");
 		return ptr;
 	}
 
@@ -445,7 +445,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.WardrobeExcludeDataAsset");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.WardrobeExcludeDataAsset");
 		return ptr;
 	}
 
@@ -458,14 +458,14 @@ public:
 class UWardrobeDataAsset : public UDataAsset
 {
 public:
-	unsigned char                                      UnknownData_YM7B[0xA0];                                    // 0x0028(0x00A0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_UX9A[0xA0];                                    // 0x0028(0x00A0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<class UWardrobeExcludeDataAsset*>           ExcludeDataAssets;                                         // 0x00C8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	TArray<struct FMeshPatchEntry>                     AssetMap;                                                  // 0x00D8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.WardrobeDataAsset");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.WardrobeDataAsset");
 		return ptr;
 	}
 
@@ -485,7 +485,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.WardrobeOutfitDataAsset");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.WardrobeOutfitDataAsset");
 		return ptr;
 	}
 
@@ -503,7 +503,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class PirateGenerator.WardrobeFunctionLibrary");
+		static UClass* ptr = UObject::FindClass("Class PirateGenerator.WardrobeFunctionLibrary");
 		return ptr;
 	}
 

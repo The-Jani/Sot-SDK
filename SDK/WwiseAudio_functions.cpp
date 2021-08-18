@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -27,7 +27,7 @@ namespace CG
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool UWwiseEvent::IsAudible(const struct FVector& SoundPosition, const struct FVector& ListenerPos, float AttenuationScaler)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.IsAudible");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.IsAudible");
 
 	UWwiseEvent_IsAudible_Params params;
 	params.SoundPosition = SoundPosition;
@@ -51,7 +51,7 @@ bool UWwiseEvent::IsAudible(const struct FVector& SoundPosition, const struct FV
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 float UWwiseEvent::GetMaxAttenuation()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.GetMaxAttenuation");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.GetMaxAttenuation");
 
 	UWwiseEvent_GetMaxAttenuation_Params params;
 
@@ -72,7 +72,7 @@ float UWwiseEvent::GetMaxAttenuation()
 // TEnumAsByte<WwiseAudio_EWwiseEventDurationType> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 TEnumAsByte<WwiseAudio_EWwiseEventDurationType> UWwiseEvent::GetDurationType()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.GetDurationType");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.GetDurationType");
 
 	UWwiseEvent_GetDurationType_Params params;
 
@@ -93,7 +93,7 @@ TEnumAsByte<WwiseAudio_EWwiseEventDurationType> UWwiseEvent::GetDurationType()
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 float UWwiseEvent::GetDurationMin()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.GetDurationMin");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.GetDurationMin");
 
 	UWwiseEvent_GetDurationMin_Params params;
 
@@ -114,7 +114,7 @@ float UWwiseEvent::GetDurationMin()
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 float UWwiseEvent::GetDurationMax()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.GetDurationMax");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function WwiseAudio.WwiseEvent.GetDurationMax");
 
 	UWwiseEvent_GetDurationMax_Params params;
 

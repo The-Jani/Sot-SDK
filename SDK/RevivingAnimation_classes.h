@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -29,7 +29,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RevivingAnimation.ReviveGhostAnimationData");
+		static UClass* ptr = UObject::FindClass("Class RevivingAnimation.ReviveGhostAnimationData");
 		return ptr;
 	}
 
@@ -47,7 +47,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RevivingAnimation.ReviveGhostAnimationDataAsset");
+		static UClass* ptr = UObject::FindClass("Class RevivingAnimation.ReviveGhostAnimationDataAsset");
 		return ptr;
 	}
 
@@ -60,17 +60,17 @@ public:
 class UReviveGhostAnimationInstance : public UAnimInstance
 {
 public:
-	unsigned char                                      UnknownData_QKMS[0x8];                                     // 0x0440(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_N8BU[0x8];                                     // 0x0440(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FReviveGhostAnimations                      ReviveAnimations;                                          // 0x0448(0x0028) (BlueprintVisible, BlueprintReadOnly)
 	bool                                               FullyInitialised;                                          // 0x0470(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor)
 	bool                                               FullyRevived;                                              // 0x0471(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor)
 	bool                                               FromSwimming;                                              // 0x0472(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_824K[0x1D];                                    // 0x0473(0x001D) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_D3E5[0x1D];                                    // 0x0473(0x001D) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class RevivingAnimation.ReviveGhostAnimationInstance");
+		static UClass* ptr = UObject::FindClass("Class RevivingAnimation.ReviveGhostAnimationInstance");
 		return ptr;
 	}
 

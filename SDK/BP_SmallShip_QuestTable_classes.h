@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,21 +20,21 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SmallShip_QuestTable.BP_SmallShip_QuestTable_C
-// 0x0030 (FullSize[0x0778] - InheritedSize[0x0748])
+// 0x0030 (FullSize[0x0728] - InheritedSize[0x06F8])
 class ABP_SmallShip_QuestTable_C : public AVoyageProposalContainer
 {
 public:
-	class UChildActorComponent*                        CancelTale;                                                // 0x0748(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UChildActorComponent*                        CancelVoyage;                                              // 0x0750(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UChildActorComponent*                        VoyageSelectionSlot4;                                      // 0x0758(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UChildActorComponent*                        VoyageSelectionSlot3;                                      // 0x0760(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UChildActorComponent*                        VoyageSelectionSlot2;                                      // 0x0768(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class UChildActorComponent*                        VoyageSelectionSlot1;                                      // 0x0770(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UChildActorComponent*                        CancelTale;                                                // 0x06F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UChildActorComponent*                        CancelVoyage;                                              // 0x0700(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UChildActorComponent*                        VoyageSelectionSlot4;                                      // 0x0708(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UChildActorComponent*                        VoyageSelectionSlot3;                                      // 0x0710(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UChildActorComponent*                        VoyageSelectionSlot2;                                      // 0x0718(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UChildActorComponent*                        VoyageSelectionSlot1;                                      // 0x0720(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_SmallShip_QuestTable.BP_SmallShip_QuestTable_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_SmallShip_QuestTable.BP_SmallShip_QuestTable_C");
 		return ptr;
 	}
 

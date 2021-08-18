@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -15,6 +15,20 @@
 
 namespace CG
 {
+//---------------------------------------------------------------------------
+// Enums
+//---------------------------------------------------------------------------
+
+// Enum SafeZoneReservationFramework.ESafeZoneState
+enum class SafeZoneReservationFramework_ESafeZoneState : uint8_t
+{
+	ESafeZoneState__Initial        = 0,
+	ESafeZoneState__Activated      = 1,
+	ESafeZoneState__Deactivated    = 2,
+	ESafeZoneState__ESafeZoneState_MAX = 3,
+
+};
+
 }
 
 #ifdef _MSC_VER

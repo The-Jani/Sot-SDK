@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_LargeShip_StandardHull_Art_Doors_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LargeShip_StandardHull_Art_Doors.BP_LargeShip_StandardHull_Art_Doors_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LargeShip_StandardHull_Art_Doors.BP_LargeShip_StandardHull_Art_Doors_C.UserConstructionScript");
 
 	ABP_LargeShip_StandardHull_Art_Doors_C_UserConstructionScript_Params params;
 
@@ -38,7 +38,7 @@ void ABP_LargeShip_StandardHull_Art_Doors_C::UserConstructionScript()
 // (Event, Public, BlueprintEvent)
 void ABP_LargeShip_StandardHull_Art_Doors_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LargeShip_StandardHull_Art_Doors.BP_LargeShip_StandardHull_Art_Doors_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LargeShip_StandardHull_Art_Doors.BP_LargeShip_StandardHull_Art_Doors_C.ReceiveBeginPlay");
 
 	ABP_LargeShip_StandardHull_Art_Doors_C_ReceiveBeginPlay_Params params;
 
@@ -56,7 +56,7 @@ void ABP_LargeShip_StandardHull_Art_Doors_C::ReceiveBeginPlay()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_LargeShip_StandardHull_Art_Doors_C::ExecuteUbergraph_BP_LargeShip_StandardHull_Art_Doors(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LargeShip_StandardHull_Art_Doors.BP_LargeShip_StandardHull_Art_Doors_C.ExecuteUbergraph_BP_LargeShip_StandardHull_Art_Doors");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LargeShip_StandardHull_Art_Doors.BP_LargeShip_StandardHull_Art_Doors_C.ExecuteUbergraph_BP_LargeShip_StandardHull_Art_Doors");
 
 	ABP_LargeShip_StandardHull_Art_Doors_C_ExecuteUbergraph_BP_LargeShip_StandardHull_Art_Doors_Params params;
 	params.EntryPoint = EntryPoint;

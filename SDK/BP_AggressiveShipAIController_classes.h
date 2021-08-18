@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AggressiveShipAIController.BP_AggressiveShipAIController_C
-// 0x0000 (FullSize[0x0758] - InheritedSize[0x0758])
+// 0x0000 (FullSize[0x06F8] - InheritedSize[0x06F8])
 class ABP_AggressiveShipAIController_C : public AAthenaAIShipController
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_AggressiveShipAIController.BP_AggressiveShipAIController_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_AggressiveShipAIController.BP_AggressiveShipAIController_C");
 		return ptr;
 	}
 

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // struct FEmissaryStoleLootNetworkEvent NewParam                       (Parm)
 void UBP_Prompt_EmissaryStoleLoot_C::OnEmissaryStoleLoot(const struct FEmissaryStoleLootNetworkEvent& NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.OnEmissaryStoleLoot");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.OnEmissaryStoleLoot");
 
 	UBP_Prompt_EmissaryStoleLoot_C_OnEmissaryStoleLoot_Params params;
 	params.NewParam = NewParam;
@@ -43,7 +43,7 @@ void UBP_Prompt_EmissaryStoleLoot_C::OnEmissaryStoleLoot(const struct FEmissaryS
 // struct FEmissaryStoleLootNetworkEvent NewParam                       (Parm)
 void UBP_Prompt_EmissaryStoleLoot_C::EmissaryStoleLoot(const struct FEmissaryStoleLootNetworkEvent& NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.EmissaryStoleLoot");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.EmissaryStoleLoot");
 
 	UBP_Prompt_EmissaryStoleLoot_C_EmissaryStoleLoot_Params params;
 	params.NewParam = NewParam;
@@ -60,7 +60,7 @@ void UBP_Prompt_EmissaryStoleLoot_C::EmissaryStoleLoot(const struct FEmissarySto
 // (Public, BlueprintCallable, BlueprintEvent)
 void UBP_Prompt_EmissaryStoleLoot_C::Evaluate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.Evaluate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.Evaluate");
 
 	UBP_Prompt_EmissaryStoleLoot_C_Evaluate_Params params;
 
@@ -76,7 +76,7 @@ void UBP_Prompt_EmissaryStoleLoot_C::Evaluate()
 // (Event, Public, BlueprintEvent)
 void UBP_Prompt_EmissaryStoleLoot_C::RegisterOtherEvents_Implementable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.RegisterOtherEvents_Implementable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.RegisterOtherEvents_Implementable");
 
 	UBP_Prompt_EmissaryStoleLoot_C_RegisterOtherEvents_Implementable_Params params;
 
@@ -92,7 +92,7 @@ void UBP_Prompt_EmissaryStoleLoot_C::RegisterOtherEvents_Implementable()
 // (Event, Public, BlueprintEvent)
 void UBP_Prompt_EmissaryStoleLoot_C::UnregisterOtherEvents_Implementable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.UnregisterOtherEvents_Implementable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.UnregisterOtherEvents_Implementable");
 
 	UBP_Prompt_EmissaryStoleLoot_C_UnregisterOtherEvents_Implementable_Params params;
 
@@ -110,7 +110,7 @@ void UBP_Prompt_EmissaryStoleLoot_C::UnregisterOtherEvents_Implementable()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_Prompt_EmissaryStoleLoot_C::ExecuteUbergraph_BP_Prompt_EmissaryStoleLoot(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.ExecuteUbergraph_BP_Prompt_EmissaryStoleLoot");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.ExecuteUbergraph_BP_Prompt_EmissaryStoleLoot");
 
 	UBP_Prompt_EmissaryStoleLoot_C_ExecuteUbergraph_BP_Prompt_EmissaryStoleLoot_Params params;
 	params.EntryPoint = EntryPoint;

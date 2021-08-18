@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -25,12 +25,12 @@ class URepairTypeId : public UObject
 {
 public:
 	struct FText                                       DisplayName;                                               // 0x0028(0x0018) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData_CXFP[0x20];                                    // 0x0028(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_PN6P[0x20];                                    // 0x0028(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Repair.RepairTypeId");
+		static UClass* ptr = UObject::FindClass("Class Repair.RepairTypeId");
 		return ptr;
 	}
 
@@ -47,7 +47,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Repair.RepairableInterface");
+		static UClass* ptr = UObject::FindClass("Class Repair.RepairableInterface");
 		return ptr;
 	}
 
@@ -68,7 +68,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Repair.RepairingInterface");
+		static UClass* ptr = UObject::FindClass("Class Repair.RepairingInterface");
 		return ptr;
 	}
 
@@ -86,7 +86,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Repair.WoodRepairTypeId");
+		static UClass* ptr = UObject::FindClass("Class Repair.WoodRepairTypeId");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -32,12 +32,22 @@ enum class AthenaInput_EInputHandlerResult : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct AthenaInput.NotificationInputDisplayName
+// 0x0040
+struct FNotificationInputDisplayName
+{
+	class UClass*                                      InputID;                                                   // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	struct FText                                       Name;                                                      // 0x0008(0x0018) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData_K88L[0x20];                                    // 0x0008(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+
+};
+
 // ScriptStruct AthenaInput.IdleTimeTracker
 // 0x0038
 struct FIdleTimeTracker
 {
 	struct FTimespan                                   InactivityThreshold;                                       // 0x0000(0x0008) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData_V0P1[0x30];                                    // 0x0008(0x0030) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_AVA8[0x30];                                    // 0x0008(0x0030) MISSED OFFSET (PADDING)
 
 };
 
@@ -46,7 +56,7 @@ struct FIdleTimeTracker
 struct FPrioritizedCompositeInputHandler
 {
 	class UCompositeInputHandler*                      InputHandler;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_W0OM[0x8];                                     // 0x0008(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_XK26[0x8];                                     // 0x0008(0x0008) MISSED OFFSET (PADDING)
 
 };
 
@@ -55,17 +65,7 @@ struct FPrioritizedCompositeInputHandler
 struct FCompositeInputDelegator
 {
 	TArray<struct FPrioritizedCompositeInputHandler>   PrioritizedCompositeInputHandlers;                         // 0x0000(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_QXP7[0x50];                                    // 0x0010(0x0050) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct AthenaInput.NotificationInputDisplayName
-// 0x0040
-struct FNotificationInputDisplayName
-{
-	class UClass*                                      InputID;                                                   // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	struct FText                                       Name;                                                      // 0x0008(0x0018) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData_1BPY[0x20];                                    // 0x0008(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_D03V[0x50];                                    // 0x0010(0x0050) MISSED OFFSET (PADDING)
 
 };
 

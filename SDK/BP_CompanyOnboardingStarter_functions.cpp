@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool UBP_CompanyOnboardingStarter_C::HasPrerequisites()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CompanyOnboardingStarter.BP_CompanyOnboardingStarter_C.HasPrerequisites");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CompanyOnboardingStarter.BP_CompanyOnboardingStarter_C.HasPrerequisites");
 
 	UBP_CompanyOnboardingStarter_C_HasPrerequisites_Params params;
 

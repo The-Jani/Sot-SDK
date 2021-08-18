@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_PiratePreview_Lighting_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PiratePreview_Lighting.BP_PiratePreview_Lighting_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_PiratePreview_Lighting.BP_PiratePreview_Lighting_C.UserConstructionScript");
 
 	ABP_PiratePreview_Lighting_C_UserConstructionScript_Params params;
 
@@ -40,7 +40,7 @@ void ABP_PiratePreview_Lighting_C::UserConstructionScript()
 // struct FPiratePreviewReadyEvent Data                           (Parm)
 void ABP_PiratePreview_Lighting_C::PreviewReady__DelegateSignature(const struct FPiratePreviewReadyEvent& Data)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PiratePreview_Lighting.BP_PiratePreview_Lighting_C.PreviewReady__DelegateSignature");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_PiratePreview_Lighting.BP_PiratePreview_Lighting_C.PreviewReady__DelegateSignature");
 
 	ABP_PiratePreview_Lighting_C_PreviewReady__DelegateSignature_Params params;
 	params.Data = Data;
@@ -59,7 +59,7 @@ void ABP_PiratePreview_Lighting_C::PreviewReady__DelegateSignature(const struct 
 // struct FPiratePreviewBusyEvent Data                           (Parm)
 void ABP_PiratePreview_Lighting_C::PreviewBusy__DelegateSignature(const struct FPiratePreviewBusyEvent& Data)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PiratePreview_Lighting.BP_PiratePreview_Lighting_C.PreviewBusy__DelegateSignature");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_PiratePreview_Lighting.BP_PiratePreview_Lighting_C.PreviewBusy__DelegateSignature");
 
 	ABP_PiratePreview_Lighting_C_PreviewBusy__DelegateSignature_Params params;
 	params.Data = Data;

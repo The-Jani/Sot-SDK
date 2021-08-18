@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,16 +20,16 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // Class GameService.ServiceProviderGameState
-// 0x0120 (FullSize[0x05A8] - InheritedSize[0x0488])
+// 0x0120 (FullSize[0x0548] - InheritedSize[0x0428])
 class AServiceProviderGameState : public AGameState
 {
 public:
-	unsigned char                                      UnknownData_QD5X[0x120];                                   // 0x0488(0x0120) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_00C2[0x120];                                   // 0x0428(0x0120) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameService.ServiceProviderGameState");
+		static UClass* ptr = UObject::FindClass("Class GameService.ServiceProviderGameState");
 		return ptr;
 	}
 
@@ -46,7 +46,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameService.GameServiceLifecycleInterface");
+		static UClass* ptr = UObject::FindClass("Class GameService.GameServiceLifecycleInterface");
 		return ptr;
 	}
 
@@ -63,7 +63,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameService.GameServiceMapFunctions");
+		static UClass* ptr = UObject::FindClass("Class GameService.GameServiceMapFunctions");
 		return ptr;
 	}
 
@@ -84,7 +84,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameService.GameServiceProviderInterface");
+		static UClass* ptr = UObject::FindClass("Class GameService.GameServiceProviderInterface");
 		return ptr;
 	}
 
@@ -104,7 +104,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameService.GameServiceTickInterface");
+		static UClass* ptr = UObject::FindClass("Class GameService.GameServiceTickInterface");
 		return ptr;
 	}
 

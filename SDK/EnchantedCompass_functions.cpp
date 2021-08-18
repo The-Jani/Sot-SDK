@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // float                          ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 float APrototypeMultiTargetEnchantedCompass::GetFloatMax()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function EnchantedCompass.PrototypeMultiTargetEnchantedCompass.GetFloatMax");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function EnchantedCompass.PrototypeMultiTargetEnchantedCompass.GetFloatMax");
 
 	APrototypeMultiTargetEnchantedCompass_GetFloatMax_Params params;
 
@@ -46,7 +46,7 @@ float APrototypeMultiTargetEnchantedCompass::GetFloatMax()
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 float APrototypeMultiTargetEnchantedCompass::CalculateDesiredYaw(const struct FRotator& CompassRotation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function EnchantedCompass.PrototypeMultiTargetEnchantedCompass.CalculateDesiredYaw");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function EnchantedCompass.PrototypeMultiTargetEnchantedCompass.CalculateDesiredYaw");
 
 	APrototypeMultiTargetEnchantedCompass_CalculateDesiredYaw_Params params;
 	params.CompassRotation = CompassRotation;
@@ -67,7 +67,7 @@ float APrototypeMultiTargetEnchantedCompass::CalculateDesiredYaw(const struct FR
 // TArray<struct FVector>         ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm)
 TArray<struct FVector> APrototypeMultiTargetEnchantedCompass::BP_GetTargetLocations()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function EnchantedCompass.PrototypeMultiTargetEnchantedCompass.BP_GetTargetLocations");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function EnchantedCompass.PrototypeMultiTargetEnchantedCompass.BP_GetTargetLocations");
 
 	APrototypeMultiTargetEnchantedCompass_BP_GetTargetLocations_Params params;
 

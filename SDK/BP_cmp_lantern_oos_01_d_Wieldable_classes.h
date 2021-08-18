@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmp_lantern_oos_01_d_Wieldable.BP_cmp_lantern_oos_01_d_Wieldable_C
-// 0x0000 (FullSize[0x09E8] - InheritedSize[0x09E8])
+// 0x0000 (FullSize[0x0998] - InheritedSize[0x0998])
 class ABP_cmp_lantern_oos_01_d_Wieldable_C : public ABP_Lantern_C
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_cmp_lantern_oos_01_d_Wieldable.BP_cmp_lantern_oos_01_d_Wieldable_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_cmp_lantern_oos_01_d_Wieldable.BP_cmp_lantern_oos_01_d_Wieldable_C");
 		return ptr;
 	}
 

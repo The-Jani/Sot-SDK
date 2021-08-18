@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Concertina.BP_Concertina_C
-// 0x0000 (FullSize[0x08B0] - InheritedSize[0x08B0])
+// 0x0000 (FullSize[0x0850] - InheritedSize[0x0850])
 class ABP_Concertina_C : public AMusicalInstrumentSkeletalMesh
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Concertina.BP_Concertina_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Concertina.BP_Concertina_C");
 		return ptr;
 	}
 

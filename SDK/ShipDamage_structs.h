@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -32,12 +32,30 @@ enum class ShipDamage_EHullDamageDeck : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct ShipDamage.EventShipDamaged
-// 0x0060
-struct FEventShipDamaged
+// ScriptStruct ShipDamage.DistanceAndLevelOfDamage
+// 0x0008
+struct FDistanceAndLevelOfDamage
 {
-	class AActor*                                      Ship;                                                      // 0x0000(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FImpactDamageEvent                          ImpactDamageEvent;                                         // 0x0008(0x0058) (BlueprintVisible)
+	float                                              DistanceLimit;                                             // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                LevelOfDamage;                                             // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct ShipDamage.ShipPartLevelsOfDamage
+// 0x0030
+struct FShipPartLevelsOfDamage
+{
+	TAssetPtr<class UClass>                            ActorClass;                                                // 0x0000(0x001C) ELEMENT_SIZE_MISMATCH (Edit, UObjectWrapper, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_3COE[0x4];                                     // 0x0000(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	TArray<struct FDistanceAndLevelOfDamage>           DamagePerDistance;                                         // 0x0020(0x0010) (Edit, ZeroConstructor)
+
+};
+
+// ScriptStruct ShipDamage.ShipDamageParams
+// 0x0010
+struct FShipDamageParams
+{
+	TArray<struct FShipPartLevelsOfDamage>             DamageParams;                                              // 0x0000(0x0010) (Edit, ZeroConstructor)
 
 };
 
@@ -50,7 +68,7 @@ struct FHullDamageHit
 	float                                              HitStrength;                                               // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                HitLevel;                                                  // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               HasDecal;                                                  // 0x0020(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_62WW[0x3];                                     // 0x0021(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ED6H[0x3];                                     // 0x0021(0x0003) MISSED OFFSET (PADDING)
 
 };
 
@@ -61,26 +79,17 @@ struct FEventShipDamageApplied
 	class AActor*                                      Ship;                                                      // 0x0000(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       DamagedShipPartIdentifier;                                 // 0x0008(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                NewDamageLevel;                                            // 0x0010(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_JMFQ[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7T00[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FImpactDamageEvent                          ImpactDamageEvent;                                         // 0x0018(0x0058) (BlueprintVisible)
 
 };
 
-// ScriptStruct ShipDamage.DistanceAndLevelOfDamage
-// 0x0008
-struct FDistanceAndLevelOfDamage
+// ScriptStruct ShipDamage.EventShipDamaged
+// 0x0060
+struct FEventShipDamaged
 {
-	float                                              DistanceLimit;                                             // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                LevelOfDamage;                                             // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct ShipDamage.AppliedDamageToShipEvent
-// 0x0010
-struct FAppliedDamageToShipEvent
-{
-	class UClass*                                      ShipType;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class AActor*                                      Ship;                                                      // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                      Ship;                                                      // 0x0000(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FImpactDamageEvent                          ImpactDamageEvent;                                         // 0x0008(0x0058) (BlueprintVisible)
 
 };
 
@@ -90,25 +99,16 @@ struct FDamageZoneDamageLevelChanged
 {
 	class AActor*                                      DamageZone;                                                // 0x0000(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                DamageLevel;                                               // 0x0008(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_SSU7[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_NTG0[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
 
 };
 
-// ScriptStruct ShipDamage.ShipPartLevelsOfDamage
-// 0x0030
-struct FShipPartLevelsOfDamage
-{
-	TAssetPtr<class UClass>                            ActorClass;                                                // 0x0000(0x001C) ELEMENT_SIZE_MISMATCH (Edit, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_IGWE[0x4];                                     // 0x0000(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	TArray<struct FDistanceAndLevelOfDamage>           DamagePerDistance;                                         // 0x0020(0x0010) (Edit, ZeroConstructor)
-
-};
-
-// ScriptStruct ShipDamage.ShipDamageParams
+// ScriptStruct ShipDamage.AppliedDamageToShipEvent
 // 0x0010
-struct FShipDamageParams
+struct FAppliedDamageToShipEvent
 {
-	TArray<struct FShipPartLevelsOfDamage>             DamageParams;                                              // 0x0000(0x0010) (Edit, ZeroConstructor)
+	class UClass*                                      ShipType;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	class AActor*                                      Ship;                                                      // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 

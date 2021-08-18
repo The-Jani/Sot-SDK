@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // bool                           Is_Hidden                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_shop_oos_01_a_C::Set_Magic_Box_Hidden(bool Is_Hidden)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_shop_oos_01_a.BP_shop_oos_01_a_C.Set Magic Box Hidden");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_shop_oos_01_a.BP_shop_oos_01_a_C.Set Magic Box Hidden");
 
 	ABP_shop_oos_01_a_C_Set_Magic_Box_Hidden_Params params;
 	params.Is_Hidden = Is_Hidden;
@@ -41,7 +41,7 @@ void ABP_shop_oos_01_a_C::Set_Magic_Box_Hidden(bool Is_Hidden)
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_shop_oos_01_a_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_shop_oos_01_a.BP_shop_oos_01_a_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_shop_oos_01_a.BP_shop_oos_01_a_C.UserConstructionScript");
 
 	ABP_shop_oos_01_a_C_UserConstructionScript_Params params;
 

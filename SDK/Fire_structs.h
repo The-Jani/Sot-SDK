@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -48,80 +48,42 @@ enum class Fire_ELastIgnitionState : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct Fire.ShipFireLightParams
-// 0x0014
-struct FShipFireLightParams
+// ScriptStruct Fire.FireGridCellSelection
+// 0x0044
+struct FFireGridCellSelection
 {
-	float                                              FadeOutTime;                                               // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FName                                       FirePostprocessComponentName;                              // 0x0004(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              DistanceToFireToActivatePostProcessSq;                     // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              PostProcessSpringAcceleration;                             // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                NumberOfAffectedCells;                                     // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                AdjacencyRadius;                                           // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              ChanceToAffectCellsAbove;                                  // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              ChanceToAffectCellsBelow;                                  // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               TreatDiagonalsAsAdjacent;                                  // 0x0010(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                               OverrideFirePropagationTimesForAffectedCells;              // 0x0011(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_DX9T[0x2];                                     // 0x0012(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FFloatRange                                 SidewaysPropagationTimeOverride;                           // 0x0014(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FFloatRange                                 UpwardPropagationTimeOverride;                             // 0x0024(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FFloatRange                                 DownwardPropagationTimeOverride;                           // 0x0034(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 };
 
-// ScriptStruct Fire.ReplicatedFireCellCharringData
-// 0x0018
-struct FReplicatedFireCellCharringData
+// ScriptStruct Fire.FireGridCellSelectionParams
+// 0x0050
+struct FFireGridCellSelectionParams
 {
-	float                                              MaxCharringTime;                                           // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_QX96[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<float>                                      TimeSpentCharring;                                         // 0x0008(0x0010) (ZeroConstructor)
+	class UClass*                                      ActorClassFilter;                                          // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	float                                              ChanceToAffectTheActor;                                    // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFireGridCellSelection                      FireGridCellSelectionParams;                               // 0x000C(0x0044) (Edit)
 
 };
 
-// ScriptStruct Fire.ReplicatedFireCellData
-// 0x0001
-struct FReplicatedFireCellData
+// ScriptStruct Fire.CookerIgnitionParams
+// 0x0078
+struct FCookerIgnitionParams
 {
-	TEnumAsByte<Fire_EFireCellState>                   State;                                                     // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct Fire.FireGridCharringManager
-// 0x00C8
-struct FFireGridCharringManager
-{
-	TArray<class UMaterialInterface*>                  OwnerMaterials;                                            // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FVector                                     AdditionalGridOffsetForCharring;                           // 0x0010(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_AO2G[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UTexture2DDynamic*                           FireGridTexture;                                           // 0x0020(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_1CZ6[0xA0];                                    // 0x0028(0x00A0) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct Fire.FireGridRelativeSpawnDesc
-// 0x0030
-struct FFireGridRelativeSpawnDesc
-{
-	struct FVector                                     Location;                                                  // 0x0000(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FIntVector                                  GridLocation;                                              // 0x000C(0x000C) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor)
-	int                                                NumCellRowsToSpawnFor;                                     // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                MinNumCellsToActivate;                                     // 0x001C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<int>                                        CellIndicesToSpawnFor;                                     // 0x0020(0x0010) (Edit, ZeroConstructor, EditConst)
-
-};
-
-// ScriptStruct Fire.ShipFireLightRelativeSpawnDesc
-// 0x0028 (0x0058 - 0x0030)
-struct FShipFireLightRelativeSpawnDesc : public FFireGridRelativeSpawnDesc
-{
-	struct FVector                                     LightPositionOffset;                                       // 0x0030(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_FUG6[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<TEnumAsByte<Athena_EShipRegion>>            DormantShipRegions;                                        // 0x0040(0x0010) (Edit, ZeroConstructor)
-	float                                              DormantFadeDistance;                                       // 0x0050(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              AreaLightScaleWhenNotOnShip;                               // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct Fire.ShipFireLight
-// 0x0090
-struct FShipFireLight
-{
-	struct FShipFireLightRelativeSpawnDesc             Desc;                                                      // 0x0000(0x0058)
-	class UPointLightComponent*                        PointLight;                                                // 0x0058(0x0008) (Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                        AreaLight;                                                 // 0x0060(0x0008) (Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*                    AreaLightMaterial;                                         // 0x0068(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_PVA2[0x20];                                    // 0x0070(0x0020) MISSED OFFSET (PADDING)
+	struct FFloatRange                                 InitialIgnitionTime;                                       // 0x0000(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FFloatRange                                 SuccessIgnitionTime;                                       // 0x0010(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FFloatRange                                 FailureIgnitionTime;                                       // 0x0020(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              ChanceToIgnite;                                            // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFireGridCellSelection                      IgnitionSelection;                                         // 0x0034(0x0044) (Edit)
 
 };
 
@@ -163,18 +125,18 @@ struct FFireCellStateParticleTemplate
 {
 	class UParticleSystem*                             Template;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                TranslucencySortPriority;                                  // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_XK3B[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_G72V[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UStaticMesh*                                 Mesh;                                                      // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MeshSpawnTime;                                             // 0x0018(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MeshDespawnTime;                                           // 0x001C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     MeshScale;                                                 // 0x0020(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Fire_EFireCellState>                   State;                                                     // 0x002C(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               OverrideMaxLODToSpawnFor;                                  // 0x002D(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_8KZE[0x2];                                     // 0x002E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_2H05[0x2];                                     // 0x002E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                MaxLODToSpawnFor;                                          // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               SpawnWithLowFrequencySettings;                             // 0x0034(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                               VisibleInLowDetailMode;                                    // 0x0035(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_1ZJW[0x2];                                     // 0x0036(0x0002) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_XWZC[0x2];                                     // 0x0036(0x0002) MISSED OFFSET (PADDING)
 
 };
 
@@ -195,6 +157,27 @@ struct FFireGridVFXParams
 
 };
 
+// ScriptStruct Fire.FireMesh
+// 0x0010
+struct FFireMesh
+{
+	class UStaticMeshComponent*                        Mesh;                                                      // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_0BBU[0x8];                                     // 0x0008(0x0008) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Fire.FireGridRelativeSpawnDesc
+// 0x0030
+struct FFireGridRelativeSpawnDesc
+{
+	struct FVector                                     Location;                                                  // 0x0000(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FIntVector                                  GridLocation;                                              // 0x000C(0x000C) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor)
+	int                                                NumCellRowsToSpawnFor;                                     // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                MinNumCellsToActivate;                                     // 0x001C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<int>                                        CellIndicesToSpawnFor;                                     // 0x0020(0x0010) (Edit, ZeroConstructor, EditConst)
+
+};
+
 // ScriptStruct Fire.FireGridLowDetailRelativeSpawnDesc
 // 0x0008 (0x0038 - 0x0030)
 struct FFireGridLowDetailRelativeSpawnDesc : public FFireGridRelativeSpawnDesc
@@ -209,7 +192,7 @@ struct FFireParticleSpawnData
 {
 	float                                              MaximumLODDistance;                                        // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              SpawnInterval;                                             // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_WV7L[0x8];                                     // 0x0008(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_F530[0x8];                                     // 0x0008(0x0008) MISSED OFFSET (PADDING)
 
 };
 
@@ -218,65 +201,7 @@ struct FFireParticleSpawnData
 struct FFireParticleSpawnList
 {
 	TArray<struct FFireParticleSpawnData>              ParticleSpawnLODs;                                         // 0x0000(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData_ZPE5[0x10];                                    // 0x0010(0x0010) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct Fire.FireGridCellSelection
-// 0x0044
-struct FFireGridCellSelection
-{
-	int                                                NumberOfAffectedCells;                                     // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                AdjacencyRadius;                                           // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              ChanceToAffectCellsAbove;                                  // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              ChanceToAffectCellsBelow;                                  // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               TreatDiagonalsAsAdjacent;                                  // 0x0010(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                               OverrideFirePropagationTimesForAffectedCells;              // 0x0011(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_E9GZ[0x2];                                     // 0x0012(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FFloatRange                                 SidewaysPropagationTimeOverride;                           // 0x0014(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FFloatRange                                 UpwardPropagationTimeOverride;                             // 0x0024(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FFloatRange                                 DownwardPropagationTimeOverride;                           // 0x0034(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-};
-
-// ScriptStruct Fire.FireGridCellSelectionParams
-// 0x0050
-struct FFireGridCellSelectionParams
-{
-	class UClass*                                      ActorClassFilter;                                          // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	float                                              ChanceToAffectTheActor;                                    // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFireGridCellSelection                      FireGridCellSelectionParams;                               // 0x000C(0x0044) (Edit)
-
-};
-
-// ScriptStruct Fire.CookerIgnitionParams
-// 0x0078
-struct FCookerIgnitionParams
-{
-	struct FFloatRange                                 InitialIgnitionTime;                                       // 0x0000(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FFloatRange                                 SuccessIgnitionTime;                                       // 0x0010(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FFloatRange                                 FailureIgnitionTime;                                       // 0x0020(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                              ChanceToIgnite;                                            // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFireGridCellSelection                      IgnitionSelection;                                         // 0x0034(0x0044) (Edit)
-
-};
-
-// ScriptStruct Fire.FireParticleSystem
-// 0x0048
-struct FFireParticleSystem
-{
-	class UParticleSystemComponent*                    SpawnedParticleSystem;                                     // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CCUZ[0x8];                                     // 0x0008(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FFireCellStateParticleTemplate              ParticleTemplate;                                          // 0x0010(0x0038)
-
-};
-
-// ScriptStruct Fire.FireMesh
-// 0x0010
-struct FFireMesh
-{
-	class UStaticMeshComponent*                        Mesh;                                                      // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_60NK[0x8];                                     // 0x0008(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_SUQL[0x10];                                    // 0x0010(0x0010) MISSED OFFSET (PADDING)
 
 };
 
@@ -290,11 +215,11 @@ struct FFireCellDesc
 	bool                                               CanBurn;                                                   // 0x0034(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                               IsExposedToWeather;                                        // 0x0035(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
 	TEnumAsByte<Athena_EShipDeck>                      Deck;                                                      // 0x0036(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_UEM6[0x1];                                     // 0x0037(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_T3MN[0x1];                                     // 0x0037(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                CellIndex;                                                 // 0x0038(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                MasterCellFlatIndex;                                       // 0x003C(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               ShouldSpawnDefaultParticleEffect;                          // 0x0040(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_SW36[0xF];                                     // 0x0041(0x000F) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZKWG[0xF];                                     // 0x0041(0x000F) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FTransform                                  DefaultParticleEffectSpawnTransform;                       // 0x0050(0x0030) (Edit, IsPlainOldData, NoDestructor)
 	struct FPlane                                      DefaultParticleEffectPlane;                                // 0x0080(0x0010) (Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor)
 	TArray<struct FFireCellStateParticleTemplate>      CustomParticleEffectTemplates;                             // 0x0090(0x0010) (Edit, ZeroConstructor)
@@ -305,11 +230,151 @@ struct FFireCellDesc
 
 };
 
+// ScriptStruct Fire.FireDefaultVFXSpawnData
+// 0x0140
+struct FFireDefaultVFXSpawnData
+{
+	struct FFireCellStateParticleTemplate              Template;                                                  // 0x0000(0x0038)
+	unsigned char                                      UnknownData_2AG5[0x8];                                     // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FFireCellDesc                               CellDesc;                                                  // 0x0040(0x0100)
+
+};
+
+// ScriptStruct Fire.FireParticleSystem
+// 0x0048
+struct FFireParticleSystem
+{
+	class UParticleSystemComponent*                    SpawnedParticleSystem;                                     // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_BZ6T[0x8];                                     // 0x0008(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FFireCellStateParticleTemplate              ParticleTemplate;                                          // 0x0010(0x0038)
+
+};
+
+// ScriptStruct Fire.ActorFireDamageParams
+// 0x0038
+struct FActorFireDamageParams
+{
+	TAssetPtr<class UClass>                            ActorClass;                                                // 0x0000(0x001C) ELEMENT_SIZE_MISMATCH (Edit, UObjectWrapper, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_VNSQ[0x4];                                     // 0x0000(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FFloatRange                                 TimeInFireBeforeDamage;                                    // 0x0020(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	int                                                LevelsOfDamage;                                            // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_6FF7[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Fire.ShipFireDamageParams
+// 0x0018
+struct FShipFireDamageParams
+{
+	class UClass*                                      DamagerType;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	TArray<struct FActorFireDamageParams>              ShipFireDamageParams;                                      // 0x0008(0x0010) (Edit, ZeroConstructor)
+
+};
+
+// ScriptStruct Fire.ShipFireLightParams
+// 0x0014
+struct FShipFireLightParams
+{
+	float                                              FadeOutTime;                                               // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FName                                       FirePostprocessComponentName;                              // 0x0004(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              DistanceToFireToActivatePostProcessSq;                     // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              PostProcessSpringAcceleration;                             // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct Fire.ReplicatedFireCellData
+// 0x0001
+struct FReplicatedFireCellData
+{
+	TEnumAsByte<Fire_EFireCellState>                   State;                                                     // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct Fire.ReplicatedFireCellCharringData
+// 0x0018
+struct FReplicatedFireCellCharringData
+{
+	float                                              MaxCharringTime;                                           // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_M92N[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<float>                                      TimeSpentCharring;                                         // 0x0008(0x0010) (ZeroConstructor)
+
+};
+
+// ScriptStruct Fire.FireGridCharringManager
+// 0x00C8
+struct FFireGridCharringManager
+{
+	TArray<class UMaterialInterface*>                  OwnerMaterials;                                            // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FVector                                     AdditionalGridOffsetForCharring;                           // 0x0010(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_2EN0[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UTexture2DDynamic*                           FireGridTexture;                                           // 0x0020(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_H5A7[0xA0];                                    // 0x0028(0x00A0) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Fire.ShipFireLightRelativeSpawnDesc
+// 0x0028 (0x0058 - 0x0030)
+struct FShipFireLightRelativeSpawnDesc : public FFireGridRelativeSpawnDesc
+{
+	struct FVector                                     LightPositionOffset;                                       // 0x0030(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_Y7NL[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<TEnumAsByte<Athena_EShipRegion>>            DormantShipRegions;                                        // 0x0040(0x0010) (Edit, ZeroConstructor)
+	float                                              DormantFadeDistance;                                       // 0x0050(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              AreaLightScaleWhenNotOnShip;                               // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct Fire.ShipFireLight
+// 0x0090
+struct FShipFireLight
+{
+	struct FShipFireLightRelativeSpawnDesc             Desc;                                                      // 0x0000(0x0058)
+	class UPointLightComponent*                        PointLight;                                                // 0x0058(0x0008) (Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                        AreaLight;                                                 // 0x0060(0x0008) (Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*                    AreaLightMaterial;                                         // 0x0068(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_20E4[0x20];                                    // 0x0070(0x0020) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Fire.ShipFireLightManager
+// 0x0150
+struct FShipFireLightManager
+{
+	TArray<struct FShipFireLightRelativeSpawnDesc>     LightSpawnDescs;                                           // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FGenericLightTemplate                       LightTemplate;                                             // 0x0010(0x00D0) (Edit, DisableEditOnInstance)
+	TArray<struct FShipFireLight>                      Lights;                                                    // 0x00E0(0x0010) (ZeroConstructor, Transient, ContainsInstancedReference)
+	class UFirePropagator*                             Propagator;                                                // 0x00F0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMesh*                                 AreaLightMesh;                                             // 0x00F8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              AreaLightZScale;                                           // 0x0100(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MinLightRadius;                                            // 0x0104(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MaxLightRadius;                                            // 0x0108(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MinFlickerScale;                                           // 0x010C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              LightMovementSpeedCmPerSecond;                             // 0x0110(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_IJRZ[0x4];                                     // 0x0114(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UShipFireLightParamsDataAsset*               LightParams;                                               // 0x0118(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPostProcessComponent*                       ShipPostProcessComponent;                                  // 0x0120(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_SD9Z[0x28];                                    // 0x0128(0x0028) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Fire.FireGridVfxSpawnSettings
+// 0x0058
+struct FFireGridVfxSpawnSettings
+{
+	TArray<struct FFireGridRelativeSpawnDesc>          InteriorSmokeSpawnDescs;                                   // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FFireGridLowDetailRelativeSpawnDesc> LowDetailVFXSpawnDescs;                                    // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FFireParticleSpawnData>              ParticleSpawnLODSettings;                                  // 0x0020(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FFireParticleSpawnData                      LowFrequencyParticleSpawnSettings;                         // 0x0030(0x0010) (Edit, DisableEditOnInstance)
+	TArray<struct FFireGridLowDetailRelativeSpawnDesc> ExteriorSmokeVFXSpawnDescs;                                // 0x0040(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UFireGridVFXParamsDataAsset*                 VFXParams;                                                 // 0x0050(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
 // ScriptStruct Fire.PlayerNearBurningFireGridUpdatedEvent
 // 0x0008
 struct FPlayerNearBurningFireGridUpdatedEvent
 {
-	unsigned char                                      UnknownData_7KMS[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_6WEQ[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (PADDING)
 
 };
 
@@ -317,7 +382,7 @@ struct FPlayerNearBurningFireGridUpdatedEvent
 // 0x0001
 struct FShipOnFireEndEvent
 {
-	unsigned char                                      UnknownData_HTK0[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_EEQD[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -325,7 +390,7 @@ struct FShipOnFireEndEvent
 // 0x0001
 struct FShipOnFireBeginEvent
 {
-	unsigned char                                      UnknownData_TOAD[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_4I70[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -349,28 +414,7 @@ struct FOnFireChangedEvent
 // 0x0030
 struct FFireCellStateData
 {
-	unsigned char                                      UnknownData_4448[0x30];                                    // 0x0000(0x0030) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct Fire.ShipFireLightManager
-// 0x0140
-struct FShipFireLightManager
-{
-	TArray<struct FShipFireLightRelativeSpawnDesc>     LightSpawnDescs;                                           // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FGenericLightTemplate                       LightTemplate;                                             // 0x0010(0x00D0) (Edit, DisableEditOnInstance)
-	TArray<struct FShipFireLight>                      Lights;                                                    // 0x00E0(0x0010) (ZeroConstructor, Transient, ContainsInstancedReference)
-	class UFirePropagator*                             Propagator;                                                // 0x00F0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMesh*                                 AreaLightMesh;                                             // 0x00F8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              AreaLightZScale;                                           // 0x0100(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MinLightRadius;                                            // 0x0104(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MaxLightRadius;                                            // 0x0108(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MinFlickerScale;                                           // 0x010C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              LightMovementSpeedCmPerSecond;                             // 0x0110(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_5RY5[0x4];                                     // 0x0114(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UShipFireLightParamsDataAsset*               LightParams;                                               // 0x0118(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPostProcessComponent*                       ShipPostProcessComponent;                                  // 0x0120(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_GSPS[0x18];                                    // 0x0128(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_D5GO[0x30];                                    // 0x0000(0x0030) MISSED OFFSET (PADDING)
 
 };
 
@@ -378,54 +422,10 @@ struct FShipFireLightManager
 // 0x0048
 struct FPlayerFireGridTickParams
 {
-	unsigned char                                      UnknownData_VHKU[0x28];                                    // 0x0000(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7AR0[0x28];                                    // 0x0000(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class AActor*                                      FireGridActorPlayerIsInsideOf;                             // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                      PlayerShipSize;                                            // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_IRZ3[0x10];                                    // 0x0038(0x0010) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct Fire.FireDefaultVFXSpawnData
-// 0x0140
-struct FFireDefaultVFXSpawnData
-{
-	struct FFireCellStateParticleTemplate              Template;                                                  // 0x0000(0x0038)
-	unsigned char                                      UnknownData_2BNM[0x8];                                     // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FFireCellDesc                               CellDesc;                                                  // 0x0040(0x0100)
-
-};
-
-// ScriptStruct Fire.FireGridVfxSpawnSettings
-// 0x0058
-struct FFireGridVfxSpawnSettings
-{
-	TArray<struct FFireGridRelativeSpawnDesc>          InteriorSmokeSpawnDescs;                                   // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FFireGridLowDetailRelativeSpawnDesc> LowDetailVFXSpawnDescs;                                    // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FFireParticleSpawnData>              ParticleSpawnLODSettings;                                  // 0x0020(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FFireParticleSpawnData                      LowFrequencyParticleSpawnSettings;                         // 0x0030(0x0010) (Edit, DisableEditOnInstance)
-	TArray<struct FFireGridLowDetailRelativeSpawnDesc> ExteriorSmokeVFXSpawnDescs;                                // 0x0040(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class UFireGridVFXParamsDataAsset*                 VFXParams;                                                 // 0x0050(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct Fire.ActorFireDamageParams
-// 0x0038
-struct FActorFireDamageParams
-{
-	TAssetPtr<class UClass>                            ActorClass;                                                // 0x0000(0x001C) ELEMENT_SIZE_MISMATCH (Edit, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YG2P[0x4];                                     // 0x0000(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FFloatRange                                 TimeInFireBeforeDamage;                                    // 0x0020(0x0010) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	int                                                LevelsOfDamage;                                            // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_GM8L[0x4];                                     // 0x0034(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct Fire.ShipFireDamageParams
-// 0x0018
-struct FShipFireDamageParams
-{
-	class UClass*                                      DamagerType;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	TArray<struct FActorFireDamageParams>              ShipFireDamageParams;                                      // 0x0008(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      UnknownData_1IA8[0x10];                                    // 0x0038(0x0010) MISSED OFFSET (PADDING)
 
 };
 

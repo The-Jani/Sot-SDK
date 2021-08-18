@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_StepsTrigger_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_StepsTrigger.BP_StepsTrigger_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_StepsTrigger.BP_StepsTrigger_C.UserConstructionScript");
 
 	ABP_StepsTrigger_C_UserConstructionScript_Params params;
 
@@ -38,7 +38,7 @@ void ABP_StepsTrigger_C::UserConstructionScript()
 // (Event, Public, BlueprintEvent)
 void ABP_StepsTrigger_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_StepsTrigger.BP_StepsTrigger_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_StepsTrigger.BP_StepsTrigger_C.ReceiveBeginPlay");
 
 	ABP_StepsTrigger_C_ReceiveBeginPlay_Params params;
 
@@ -56,7 +56,7 @@ void ABP_StepsTrigger_C::ReceiveBeginPlay()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_StepsTrigger_C::ExecuteUbergraph_BP_StepsTrigger(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_StepsTrigger.BP_StepsTrigger_C.ExecuteUbergraph_BP_StepsTrigger");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_StepsTrigger.BP_StepsTrigger_C.ExecuteUbergraph_BP_StepsTrigger");
 
 	ABP_StepsTrigger_C_ExecuteUbergraph_BP_StepsTrigger_Params params;
 	params.EntryPoint = EntryPoint;

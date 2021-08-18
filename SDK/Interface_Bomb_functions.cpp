@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Public, BlueprintCallable, BlueprintEvent)
 void UInterface_Bomb_C::Interface_Trigger()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interface_Bomb.Interface_Bomb_C.Interface Trigger");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Interface_Bomb.Interface_Bomb_C.Interface Trigger");
 
 	UInterface_Bomb_C_Interface_Trigger_Params params;
 
@@ -41,7 +41,7 @@ void UInterface_Bomb_C::Interface_Trigger()
 // int                            Seed                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UInterface_Bomb_C::Set_Bomb_Parameters(float Radius, int Seed)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Interface_Bomb.Interface_Bomb_C.Set Bomb Parameters");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Interface_Bomb.Interface_Bomb_C.Set Bomb Parameters");
 
 	UInterface_Bomb_C_Set_Bomb_Parameters_Params params;
 	params.Radius = Radius;

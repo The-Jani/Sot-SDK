@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -18,6 +18,27 @@ namespace CG
 //---------------------------------------------------------------------------
 // Script Structs
 //---------------------------------------------------------------------------
+
+// ScriptStruct Wind.WindZoneParams
+// 0x0010
+struct FWindZoneParams
+{
+	float                                              OuterRadius;                                               // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              InnerRadius;                                               // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              TurbulenceScalar;                                          // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               WindOnlyAffectsTrees;                                      // 0x000C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_HSF1[0x3];                                     // 0x000D(0x0003) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct Wind.WindZoneTurbulence
+// 0x0008
+struct FWindZoneTurbulence
+{
+	float                                              Base;                                                      // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Current;                                                   // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
 
 // ScriptStruct Wind.WindServiceParams
 // 0x0024
@@ -49,7 +70,7 @@ struct FWindTurbulenceParameters
 // 0x0001
 struct FWindMagnitudeChanged
 {
-	unsigned char                                      UnknownData_M2MS[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_G37W[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -57,28 +78,7 @@ struct FWindMagnitudeChanged
 // 0x0001
 struct FWindDirectionChanged
 {
-	unsigned char                                      UnknownData_OIV7[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct Wind.WindZoneParams
-// 0x0010
-struct FWindZoneParams
-{
-	float                                              OuterRadius;                                               // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              InnerRadius;                                               // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              TurbulenceScalar;                                          // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               WindOnlyAffectsTrees;                                      // 0x000C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_RPGO[0x3];                                     // 0x000D(0x0003) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct Wind.WindZoneTurbulence
-// 0x0008
-struct FWindZoneTurbulence
-{
-	float                                              Base;                                                      // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              Current;                                                   // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_ATC8[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -18,28 +18,6 @@ namespace CG
 // Functions
 //---------------------------------------------------------------------------
 
-// Function ServiceMessaging.ServiceMessagingListenerTestObject.TestFunctionWithMessage
-// (Final, Native, Public, HasOutParms)
-// Parameters:
-// struct FServiceMessagingTestMessage InMessage                      (Parm, OutParm)
-void UServiceMessagingListenerTestObject::TestFunctionWithMessage(struct FServiceMessagingTestMessage* InMessage)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ServiceMessaging.ServiceMessagingListenerTestObject.TestFunctionWithMessage");
-
-	UServiceMessagingListenerTestObject_TestFunctionWithMessage_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-	if (InMessage != nullptr)
-		*InMessage = params.InMessage;
-
-}
-
-
 // Function ServiceMessaging.ServiceMessagingFunctions.GetServiceMessagingDispatcherFromActor
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -47,7 +25,7 @@ void UServiceMessagingListenerTestObject::TestFunctionWithMessage(struct FServic
 // struct FObjectMessagingDispatcherHandle ReturnValue                    (Parm, OutParm, ReturnParm)
 struct FObjectMessagingDispatcherHandle UServiceMessagingFunctions::STATIC_GetServiceMessagingDispatcherFromActor(class UObject* Object)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServiceMessaging.ServiceMessagingFunctions.GetServiceMessagingDispatcherFromActor");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function ServiceMessaging.ServiceMessagingFunctions.GetServiceMessagingDispatcherFromActor");
 
 	UServiceMessagingFunctions_GetServiceMessagingDispatcherFromActor_Params params;
 	params.Object = Object;
@@ -66,14 +44,12 @@ struct FObjectMessagingDispatcherHandle UServiceMessagingFunctions::STATIC_GetSe
 // Function ServiceMessaging.ServiceMessagingFunctions.GetServiceMessagingDispatcher
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TScriptInterface<class UServiceMessagingDispatcherInterface> ServiceMessagingDispatcher     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper)
 // struct FObjectMessagingDispatcherHandle ReturnValue                    (Parm, OutParm, ReturnParm)
-struct FObjectMessagingDispatcherHandle UServiceMessagingFunctions::STATIC_GetServiceMessagingDispatcher(const TScriptInterface<class UServiceMessagingDispatcherInterface>& ServiceMessagingDispatcher)
+struct FObjectMessagingDispatcherHandle UServiceMessagingFunctions::STATIC_GetServiceMessagingDispatcher()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ServiceMessaging.ServiceMessagingFunctions.GetServiceMessagingDispatcher");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function ServiceMessaging.ServiceMessagingFunctions.GetServiceMessagingDispatcher");
 
 	UServiceMessagingFunctions_GetServiceMessagingDispatcher_Params params;
-	params.ServiceMessagingDispatcher = ServiceMessagingDispatcher;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
@@ -83,6 +59,28 @@ struct FObjectMessagingDispatcherHandle UServiceMessagingFunctions::STATIC_GetSe
 
 
 	return params.ReturnValue;
+}
+
+
+// Function ServiceMessaging.ServiceMessagingListenerTestObject.TestFunctionWithMessage
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// struct FServiceMessagingTestMessage InMessage                      (Parm, OutParm)
+void UServiceMessagingListenerTestObject::TestFunctionWithMessage(struct FServiceMessagingTestMessage* InMessage)
+{
+	static UFunction* fn = UObject::FindObject<UFunction>("Function ServiceMessaging.ServiceMessagingListenerTestObject.TestFunctionWithMessage");
+
+	UServiceMessagingListenerTestObject_TestFunctionWithMessage_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+	if (InMessage != nullptr)
+		*InMessage = params.InMessage;
+
 }
 
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -40,7 +40,72 @@ struct FClueSite
 	class UClass*                                      SiteType;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	class UClueSiteData*                               SiteData;                                                  // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     Location;                                                  // 0x0010(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_ASZ8[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LQXN[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct LostShipmentsClueFramework.WeightedClueDestinationDescriptor
+// 0x0018
+struct FWeightedClueDestinationDescriptor
+{
+	class UClass*                                      DestinationType;                                           // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	TArray<float>                                      DifficultyWeightings;                                      // 0x0008(0x0010) (Edit, ZeroConstructor)
+
+};
+
+// ScriptStruct LostShipmentsClueFramework.WeightedClueDescriptor
+// 0x0018
+struct FWeightedClueDescriptor
+{
+	class UClass*                                      Descriptor;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	TArray<float>                                      DifficultyWeightings;                                      // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+};
+
+// ScriptStruct LostShipmentsClueFramework.ClueSiteTypeSupportedDescribedByEntry
+// 0x0018
+struct FClueSiteTypeSupportedDescribedByEntry
+{
+	class UClass*                                      SiteType;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	TArray<struct FWeightedClueDescriptor>             SupportedDescriptors;                                      // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+};
+
+// ScriptStruct LostShipmentsClueFramework.RestrictedClueType
+// 0x0010
+struct FRestrictedClueType
+{
+	class UClass*                                      Type;                                                      // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	int                                                Max;                                                       // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_ZDB3[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct LostShipmentsClueFramework.ClueSiteLootRestriction
+// 0x0010
+struct FClueSiteLootRestriction
+{
+	class UClass*                                      SiteType;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	int                                                LootMax;                                                   // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_HSHC[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct LostShipmentsClueFramework.DebrisToRangeDist
+// 0x0028
+struct FDebrisToRangeDist
+{
+	struct FWeightedProbabilityRange                   NumberOfDebrisItemsToSpawn;                                // 0x0000(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly)
+	class UWeightedDebrisDataAsset*                    WeightedDebrisTypeAsset;                                   // 0x0020(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct LostShipmentsClueFramework.LootToRangeDist
+// 0x0028
+struct FLootToRangeDist
+{
+	struct FWeightedProbabilityRange                   NumberOfLootItemsToSpawn;                                  // 0x0000(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly)
+	class UWeightedTreasureChestDescAsset*             WeightedLootDescAsset;                                     // 0x0020(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
@@ -62,51 +127,6 @@ struct FClueSiteLootHistory
 
 };
 
-// ScriptStruct LostShipmentsClueFramework.WeightedClueDescriptor
-// 0x0018
-struct FWeightedClueDescriptor
-{
-	class UClass*                                      Descriptor;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	TArray<float>                                      DifficultyWeightings;                                      // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-
-};
-
-// ScriptStruct LostShipmentsClueFramework.RestrictedClueType
-// 0x0010
-struct FRestrictedClueType
-{
-	class UClass*                                      Type;                                                      // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	int                                                Max;                                                       // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_PAFE[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct LostShipmentsClueFramework.ClueSiteLootRestriction
-// 0x0010
-struct FClueSiteLootRestriction
-{
-	class UClass*                                      SiteType;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	int                                                LootMax;                                                   // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_49QF[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct LostShipmentsClueFramework.LootToRangeDist
-// 0x0028
-struct FLootToRangeDist
-{
-	struct FWeightedProbabilityRange                   NumberOfLootItemsToSpawn;                                  // 0x0000(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly)
-	class UWeightedTreasureChestDescAsset*             WeightedLootDescAsset;                                     // 0x0020(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct LostShipmentsClueFramework.QuestVariableClueSiteArray
-// 0x0000 (0x0010 - 0x0010)
-struct FQuestVariableClueSiteArray : public FQuestVariable
-{
-
-};
-
 // ScriptStruct LostShipmentsClueFramework.QuestVariableClueSite
 // 0x0000 (0x0010 - 0x0010)
 struct FQuestVariableClueSite : public FQuestVariable
@@ -121,31 +141,14 @@ struct FQuestVariableClueDescriptor : public FQuestVariable
 
 };
 
-// ScriptStruct LostShipmentsClueFramework.EventClueObtained
-// 0x0020
-struct FEventClueObtained
+// ScriptStruct LostShipmentsClueFramework.WeightedDebris
+// 0x0028
+struct FWeightedDebris
 {
-	class UClueDescriptor*                             ObtainedClue;                                              // 0x0000(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                      ObtainedSiteType;                                          // 0x0008(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_M9XU[0x10];                                    // 0x0010(0x0010) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct LostShipmentsClueFramework.WeightedClueDestinationDescriptor
-// 0x0018
-struct FWeightedClueDestinationDescriptor
-{
-	class UClass*                                      DestinationType;                                           // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	TArray<float>                                      DifficultyWeightings;                                      // 0x0008(0x0010) (Edit, ZeroConstructor)
-
-};
-
-// ScriptStruct LostShipmentsClueFramework.ClueSiteTypeSupportedDescribedByEntry
-// 0x0018
-struct FClueSiteTypeSupportedDescribedByEntry
-{
-	class UClass*                                      SiteType;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	TArray<struct FWeightedClueDescriptor>             SupportedDescriptors;                                      // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TAssetPtr<class UClass>                            DebrisClass;                                               // 0x0000(0x001C) ELEMENT_SIZE_MISMATCH (Edit, UObjectWrapper, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_NNNN[0x4];                                     // 0x0000(0x0004) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	float                                              Weight;                                                    // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_A2E6[0x4];                                     // 0x0024(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -165,7 +168,24 @@ struct FSeaClueCreationChoice
 {
 	class UClass*                                      SiteType;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	class USeaClueCreator*                             ClueCreator;                                               // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_EO5V[0x10];                                    // 0x0010(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_SL6P[0x10];                                    // 0x0010(0x0010) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct LostShipmentsClueFramework.QuestVariableClueSiteArray
+// 0x0000 (0x0010 - 0x0010)
+struct FQuestVariableClueSiteArray : public FQuestVariable
+{
+
+};
+
+// ScriptStruct LostShipmentsClueFramework.EventClueObtained
+// 0x0020
+struct FEventClueObtained
+{
+	class UClueDescriptor*                             ObtainedClue;                                              // 0x0000(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                      ObtainedSiteType;                                          // 0x0008(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_VBCW[0x10];                                    // 0x0010(0x0010) MISSED OFFSET (PADDING)
 
 };
 

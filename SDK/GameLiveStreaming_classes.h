@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameLiveStreaming.GameLiveStreamingFunctionLibrary");
+		static UClass* ptr = UObject::FindClass("Class GameLiveStreaming.GameLiveStreamingFunctionLibrary");
 		return ptr;
 	}
 
@@ -45,12 +45,12 @@ class UQueryLiveStreamsCallbackProxy : public UOnlineBlueprintCallProxyBase
 {
 public:
 	struct FScriptMulticastDelegate                    OnQueriedLiveStreams;                                      // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData_B7HJ[0x10];                                    // 0x0038(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_W71L[0x10];                                    // 0x0038(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameLiveStreaming.QueryLiveStreamsCallbackProxy");
+		static UClass* ptr = UObject::FindClass("Class GameLiveStreaming.QueryLiveStreamsCallbackProxy");
 		return ptr;
 	}
 

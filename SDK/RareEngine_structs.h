@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -50,6 +50,51 @@ enum class RareEngine_ETestEnum : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct RareEngine.MemoryVisualiserStat
+// 0x0020
+struct FMemoryVisualiserStat
+{
+	struct FName                                       StatName;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FString                                     DisplayName;                                               // 0x0008(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash)
+	float                                              MemoryUsageMB;                                             // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_IYSE[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct RareEngine.MemoryVisualiserClass
+// 0x0028
+struct FMemoryVisualiserClass
+{
+	class UClass*                                      ClassType;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<RareEngine_EMemoryGatheringMode>       MemoryGatheringMode;                                       // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_56IT[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FString                                     DisplayName;                                               // 0x0010(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash)
+	float                                              MemoryUsageMB;                                             // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_ECL7[0x4];                                     // 0x0024(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct RareEngine.MemoryVisualiserCategory
+// 0x0058
+struct FMemoryVisualiserCategory
+{
+	struct FString                                     CategoryName;                                              // 0x0000(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FMemoryVisualiserStat>               CategoryStats;                                             // 0x0010(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FMemoryVisualiserClass>              CategoryClasses;                                           // 0x0020(0x0010) (Edit, ZeroConstructor)
+	bool                                               CollectOnServer;                                           // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_4QIL[0x3];                                     // 0x0031(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              XboxOneBudgetMB;                                           // 0x0034(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              XboxOneSBudgetMB;                                          // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              XboxOneXBudgetMB;                                          // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              PCLowSpecBudgetMB;                                         // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              PCMidSpecBudgetMB;                                         // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              PCHighSpecBudgetMB;                                        // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              PCUltraSpecBudgetMB;                                       // 0x004C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MemoryUsageMB;                                             // 0x0050(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_I4NB[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (PADDING)
+
+};
+
 // ScriptStruct RareEngine.StaticMeshComponentList
 // 0x0010
 struct FStaticMeshComponentList
@@ -63,17 +108,6 @@ struct FStaticMeshComponentList
 struct FStaticMeshActorList
 {
 	TArray<class AStaticMeshActor*>                    Actors;                                                    // 0x0000(0x0010) (BlueprintVisible, ZeroConstructor)
-
-};
-
-// ScriptStruct RareEngine.MemoryVisualiserStat
-// 0x0020
-struct FMemoryVisualiserStat
-{
-	struct FName                                       StatName;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FString                                     DisplayName;                                               // 0x0008(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash)
-	float                                              MemoryUsageMB;                                             // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YU3J[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -101,40 +135,6 @@ struct FMemoryCommonData
 	int                                                mNumClusters;                                              // 0x0044(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                mNumClusteredObjects;                                      // 0x0048(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int                                                mMaxClusterSize;                                           // 0x004C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct RareEngine.MemoryVisualiserClass
-// 0x0028
-struct FMemoryVisualiserClass
-{
-	class UClass*                                      ClassType;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<RareEngine_EMemoryGatheringMode>       MemoryGatheringMode;                                       // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_PKKR[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FString                                     DisplayName;                                               // 0x0010(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash)
-	float                                              MemoryUsageMB;                                             // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_M9GT[0x4];                                     // 0x0024(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct RareEngine.MemoryVisualiserCategory
-// 0x0058
-struct FMemoryVisualiserCategory
-{
-	struct FString                                     CategoryName;                                              // 0x0000(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FMemoryVisualiserStat>               CategoryStats;                                             // 0x0010(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FMemoryVisualiserClass>              CategoryClasses;                                           // 0x0020(0x0010) (Edit, ZeroConstructor)
-	bool                                               CollectOnServer;                                           // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_KOXP[0x3];                                     // 0x0031(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              XboxOneBudgetMB;                                           // 0x0034(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              XboxOneSBudgetMB;                                          // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              XboxOneXBudgetMB;                                          // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              PCLowSpecBudgetMB;                                         // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              PCMidSpecBudgetMB;                                         // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              PCHighSpecBudgetMB;                                        // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              PCUltraSpecBudgetMB;                                       // 0x004C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              MemoryUsageMB;                                             // 0x0050(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_B9IN[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (PADDING)
 
 };
 

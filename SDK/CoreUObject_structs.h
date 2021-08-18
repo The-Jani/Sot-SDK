@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -18,6 +18,84 @@ namespace CG
 //---------------------------------------------------------------------------
 // Enums
 //---------------------------------------------------------------------------
+
+// Enum CoreUObject.EInterpCurveMode
+enum class CoreUObject_EInterpCurveMode : uint8_t
+{
+	CIM_Linear                     = 0,
+	CIM_CurveAuto                  = 1,
+	CIM_Constant                   = 2,
+	CIM_CurveUser                  = 3,
+	CIM_CurveBreak                 = 4,
+	CIM_CurveAutoClamped           = 5,
+	CIM_MAX                        = 6,
+
+};
+
+// Enum CoreUObject.ERangeBoundTypes
+enum class CoreUObject_ERangeBoundTypes : uint8_t
+{
+	ERangeBoundTypes__Exclusive    = 0,
+	ERangeBoundTypes__Inclusive    = 1,
+	ERangeBoundTypes__Open         = 2,
+	ERangeBoundTypes__ERangeBoundTypes_MAX = 3,
+
+};
+
+// Enum CoreUObject.EUnit
+enum class CoreUObject_EUnit : uint8_t
+{
+	EUnit__Micrometers             = 0,
+	EUnit__Millimeters             = 1,
+	EUnit__Centimeters             = 2,
+	EUnit__Meters                  = 3,
+	EUnit__Kilometers              = 4,
+	EUnit__Inches                  = 5,
+	EUnit__Feet                    = 6,
+	EUnit__Yards                   = 7,
+	EUnit__Miles                   = 8,
+	EUnit__Lightyears              = 9,
+	EUnit__Degrees                 = 10,
+	EUnit__Radians                 = 11,
+	EUnit__MetersPerSecond         = 12,
+	EUnit__KilometersPerHour       = 13,
+	EUnit__MilesPerHour            = 14,
+	EUnit__Celsius                 = 15,
+	EUnit__Farenheit               = 16,
+	EUnit__Kelvin                  = 17,
+	EUnit__Micrograms              = 18,
+	EUnit__Milligrams              = 19,
+	EUnit__Grams                   = 20,
+	EUnit__Kilograms               = 21,
+	EUnit__MetricTons              = 22,
+	EUnit__Ounces                  = 23,
+	EUnit__Pounds                  = 24,
+	EUnit__Stones                  = 25,
+	EUnit__Newtons                 = 26,
+	EUnit__PoundsForce             = 27,
+	EUnit__KilogramsForce          = 28,
+	EUnit__Hertz                   = 29,
+	EUnit__Kilohertz               = 30,
+	EUnit__Megahertz               = 31,
+	EUnit__Gigahertz               = 32,
+	EUnit__RevolutionsPerMinute    = 33,
+	EUnit__Bytes                   = 34,
+	EUnit__Kilobytes               = 35,
+	EUnit__Megabytes               = 36,
+	EUnit__Gigabytes               = 37,
+	EUnit__Terabytes               = 38,
+	EUnit__Lumens                  = 39,
+	EUnit__Milliseconds            = 40,
+	EUnit__Seconds                 = 41,
+	EUnit__Minutes                 = 42,
+	EUnit__Hours                   = 43,
+	EUnit__Days                    = 44,
+	EUnit__Months                  = 45,
+	EUnit__Years                   = 46,
+	EUnit__Unspecified             = 47,
+	EUnit__EUnit_MAX               = 48,
+
+};
 
 // Enum CoreUObject.EMouseCursor
 enum class CoreUObject_EMouseCursor : uint8_t
@@ -149,130 +227,18 @@ enum class CoreUObject_ESearchCase : uint8_t
 
 };
 
-// Enum CoreUObject.EUnit
-enum class CoreUObject_EUnit : uint8_t
-{
-	EUnit__Micrometers             = 0,
-	EUnit__Millimeters             = 1,
-	EUnit__Centimeters             = 2,
-	EUnit__Meters                  = 3,
-	EUnit__Kilometers              = 4,
-	EUnit__Inches                  = 5,
-	EUnit__Feet                    = 6,
-	EUnit__Yards                   = 7,
-	EUnit__Miles                   = 8,
-	EUnit__Lightyears              = 9,
-	EUnit__Degrees                 = 10,
-	EUnit__Radians                 = 11,
-	EUnit__MetersPerSecond         = 12,
-	EUnit__KilometersPerHour       = 13,
-	EUnit__MilesPerHour            = 14,
-	EUnit__Celsius                 = 15,
-	EUnit__Farenheit               = 16,
-	EUnit__Kelvin                  = 17,
-	EUnit__Micrograms              = 18,
-	EUnit__Milligrams              = 19,
-	EUnit__Grams                   = 20,
-	EUnit__Kilograms               = 21,
-	EUnit__MetricTons              = 22,
-	EUnit__Ounces                  = 23,
-	EUnit__Pounds                  = 24,
-	EUnit__Stones                  = 25,
-	EUnit__Newtons                 = 26,
-	EUnit__PoundsForce             = 27,
-	EUnit__KilogramsForce          = 28,
-	EUnit__Hertz                   = 29,
-	EUnit__Kilohertz               = 30,
-	EUnit__Megahertz               = 31,
-	EUnit__Gigahertz               = 32,
-	EUnit__RevolutionsPerMinute    = 33,
-	EUnit__Bytes                   = 34,
-	EUnit__Kilobytes               = 35,
-	EUnit__Megabytes               = 36,
-	EUnit__Gigabytes               = 37,
-	EUnit__Terabytes               = 38,
-	EUnit__Lumens                  = 39,
-	EUnit__Milliseconds            = 40,
-	EUnit__Seconds                 = 41,
-	EUnit__Minutes                 = 42,
-	EUnit__Hours                   = 43,
-	EUnit__Days                    = 44,
-	EUnit__Months                  = 45,
-	EUnit__Years                   = 46,
-	EUnit__Unspecified             = 47,
-	EUnit__EUnit_MAX               = 48,
-
-};
-
-// Enum CoreUObject.EInterpCurveMode
-enum class CoreUObject_EInterpCurveMode : uint8_t
-{
-	CIM_Linear                     = 0,
-	CIM_CurveAuto                  = 1,
-	CIM_Constant                   = 2,
-	CIM_CurveUser                  = 3,
-	CIM_CurveBreak                 = 4,
-	CIM_CurveAutoClamped           = 5,
-	CIM_MAX                        = 6,
-
-};
-
-// Enum CoreUObject.ERangeBoundTypes
-enum class CoreUObject_ERangeBoundTypes : uint8_t
-{
-	ERangeBoundTypes__Exclusive    = 0,
-	ERangeBoundTypes__Inclusive    = 1,
-	ERangeBoundTypes__Open         = 2,
-	ERangeBoundTypes__ERangeBoundTypes_MAX = 3,
-
-};
-
 //---------------------------------------------------------------------------
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct CoreUObject.Vector4
+// ScriptStruct CoreUObject.Guid
 // 0x0010
-struct FVector4
+struct FGuid
 {
-	float                                              X;                                                         // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              Y;                                                         // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              Z;                                                         // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              W;                                                         // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct CoreUObject.Vector2D
-// 0x0008
-struct FVector2D
-{
-	float                                              X;                                                         // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              Y;                                                         // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-
-	inline FVector2D() : X(0), Y(0) {}
-
-	inline FVector2D(float x, float y) : X(x), Y(y) {}
-
-	inline FVector2D operator + (const FVector2D& other) const { return FVector2D(X + other.X, Y + other.Y); }
-
-	inline FVector2D operator - (const FVector2D& other) const { return FVector2D(X - other.X, Y - other.Y); }
-
-	inline FVector2D operator * (float scalar) const { return FVector2D(X * scalar, Y * scalar); }
-
-	inline FVector2D operator * (const FVector2D& other) const { return FVector2D(X * other.X, Y * other.Y); }
-
-	inline FVector2D operator / (float scalar) const { return FVector2D(X / scalar, Y / scalar); }
-
-	inline FVector2D operator / (const FVector2D& other) const { return FVector2D(X / other.X, Y / other.Y); }
-
-	inline FVector2D& operator=  (const FVector2D& other) { X = other.X; Y = other.Y; return *this; }
-
-	inline FVector2D& operator+= (const FVector2D& other) { X += other.X; Y += other.Y; return *this; }
-
-	inline FVector2D& operator-= (const FVector2D& other) { X -= other.X; Y -= other.Y; return *this; }
-
-	inline FVector2D& operator*= (const float other) { X *= other; Y *= other; return *this; }
+	int                                                A;                                                         // 0x0000(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                B;                                                         // 0x0004(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                C;                                                         // 0x0008(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                D;                                                         // 0x000C(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
@@ -324,6 +290,51 @@ struct FVector
 	friend bool operator==(const FVector& first, const FVector& second) { return first.X == second.X && first.Y == second.Y && first.Z == second.Z; }
 
 	friend bool operator!=(const FVector& first, const FVector& second) { return !(first == second); }
+
+};
+
+// ScriptStruct CoreUObject.Vector4
+// 0x0010
+struct FVector4
+{
+	float                                              X;                                                         // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Y;                                                         // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Z;                                                         // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              W;                                                         // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct CoreUObject.Vector2D
+// 0x0008
+struct FVector2D
+{
+	float                                              X;                                                         // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Y;                                                         // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+
+	inline FVector2D() : X(0), Y(0) {}
+
+	inline FVector2D(float x, float y) : X(x), Y(y) {}
+
+	inline FVector2D operator + (const FVector2D& other) const { return FVector2D(X + other.X, Y + other.Y); }
+
+	inline FVector2D operator - (const FVector2D& other) const { return FVector2D(X - other.X, Y - other.Y); }
+
+	inline FVector2D operator * (float scalar) const { return FVector2D(X * scalar, Y * scalar); }
+
+	inline FVector2D operator * (const FVector2D& other) const { return FVector2D(X * other.X, Y * other.Y); }
+
+	inline FVector2D operator / (float scalar) const { return FVector2D(X / scalar, Y / scalar); }
+
+	inline FVector2D operator / (const FVector2D& other) const { return FVector2D(X / other.X, Y / other.Y); }
+
+	inline FVector2D& operator=  (const FVector2D& other) { X = other.X; Y = other.Y; return *this; }
+
+	inline FVector2D& operator+= (const FVector2D& other) { X += other.X; Y += other.Y; return *this; }
+
+	inline FVector2D& operator-= (const FVector2D& other) { X -= other.X; Y -= other.Y; return *this; }
+
+	inline FVector2D& operator*= (const float other) { X *= other; Y *= other; return *this; }
 
 };
 
@@ -414,24 +425,6 @@ struct FQuat
 
 };
 
-// ScriptStruct CoreUObject.FloatInterval
-// 0x0008
-struct FFloatInterval
-{
-	float                                              Min;                                                       // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              Max;                                                       // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct CoreUObject.Int32Interval
-// 0x0008
-struct FInt32Interval
-{
-	int                                                Min;                                                       // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                Max;                                                       // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
 // ScriptStruct CoreUObject.PackedNormal
 // 0x0004
 struct FPackedNormal
@@ -503,7 +496,7 @@ struct FBox
 	struct FVector                                     Min;                                                       // 0x0000(0x000C) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor)
 	struct FVector                                     Max;                                                       // 0x000C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor)
 	unsigned char                                      IsValid;                                                   // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_TN55[0x3];                                     // 0x0019(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_BLHD[0x3];                                     // 0x0019(0x0003) MISSED OFFSET (PADDING)
 
 };
 
@@ -514,7 +507,7 @@ struct FBox2D
 	struct FVector2D                                   Min;                                                       // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor)
 	struct FVector2D                                   Max;                                                       // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor)
 	unsigned char                                      IsValid;                                                   // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_1YVI[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_BMBU[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (PADDING)
 
 };
 
@@ -553,14 +546,160 @@ struct FMatrix
 
 };
 
-// ScriptStruct CoreUObject.Guid
-// 0x0010
-struct FGuid
+// ScriptStruct CoreUObject.InterpCurvePointFloat
+// 0x0014
+struct FInterpCurvePointFloat
 {
-	int                                                A;                                                         // 0x0000(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                B;                                                         // 0x0004(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                C;                                                         // 0x0008(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                D;                                                         // 0x000C(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              InVal;                                                     // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              OutVal;                                                    // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              ArriveTangent;                                             // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	float                                              LeaveTangent;                                              // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	TEnumAsByte<CoreUObject_EInterpCurveMode>          InterpMode;                                                // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_C1R2[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct CoreUObject.InterpCurveFloat
+// 0x0018
+struct FInterpCurveFloat
+{
+	TArray<struct FInterpCurvePointFloat>              Points;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool                                               bIsLooped;                                                 // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
+	unsigned char                                      UnknownData_ZAHF[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              LoopKeyOffset;                                             // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct CoreUObject.InterpCurvePointVector2D
+// 0x0020
+struct FInterpCurvePointVector2D
+{
+	float                                              InVal;                                                     // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                                   OutVal;                                                    // 0x0004(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector2D                                   ArriveTangent;                                             // 0x000C(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
+	struct FVector2D                                   LeaveTangent;                                              // 0x0014(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
+	TEnumAsByte<CoreUObject_EInterpCurveMode>          InterpMode;                                                // 0x001C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_03DE[0x3];                                     // 0x001D(0x0003) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct CoreUObject.InterpCurveVector2D
+// 0x0018
+struct FInterpCurveVector2D
+{
+	TArray<struct FInterpCurvePointVector2D>           Points;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool                                               bIsLooped;                                                 // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_J4J8[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              LoopKeyOffset;                                             // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct CoreUObject.InterpCurvePointVector
+// 0x002C
+struct FInterpCurvePointVector
+{
+	float                                              InVal;                                                     // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                     OutVal;                                                    // 0x0004(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                     ArriveTangent;                                             // 0x0010(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                     LeaveTangent;                                              // 0x001C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	TEnumAsByte<CoreUObject_EInterpCurveMode>          InterpMode;                                                // 0x0028(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_TNOR[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct CoreUObject.InterpCurveVector
+// 0x0018
+struct FInterpCurveVector
+{
+	TArray<struct FInterpCurvePointVector>             Points;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool                                               bIsLooped;                                                 // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_F06F[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              LoopKeyOffset;                                             // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct CoreUObject.InterpCurvePointQuat
+// 0x0050
+struct FInterpCurvePointQuat
+{
+	float                                              InVal;                                                     // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_OH7L[0xC];                                     // 0x0004(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FQuat                                       OutVal;                                                    // 0x0010(0x0010) (Edit, BlueprintVisible, IsPlainOldData, NoDestructor)
+	struct FQuat                                       ArriveTangent;                                             // 0x0020(0x0010) (Edit, BlueprintVisible, IsPlainOldData, NoDestructor)
+	struct FQuat                                       LeaveTangent;                                              // 0x0030(0x0010) (Edit, BlueprintVisible, IsPlainOldData, NoDestructor)
+	TEnumAsByte<CoreUObject_EInterpCurveMode>          InterpMode;                                                // 0x0040(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_OHAN[0xF];                                     // 0x0041(0x000F) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct CoreUObject.InterpCurveQuat
+// 0x0018
+struct FInterpCurveQuat
+{
+	TArray<struct FInterpCurvePointQuat>               Points;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool                                               bIsLooped;                                                 // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_LADY[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              LoopKeyOffset;                                             // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct CoreUObject.InterpCurvePointTwoVectors
+// 0x0050
+struct FInterpCurvePointTwoVectors
+{
+	float                                              InVal;                                                     // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTwoVectors                                 OutVal;                                                    // 0x0004(0x0018) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FTwoVectors                                 ArriveTangent;                                             // 0x001C(0x0018) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FTwoVectors                                 LeaveTangent;                                              // 0x0034(0x0018) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	TEnumAsByte<CoreUObject_EInterpCurveMode>          InterpMode;                                                // 0x004C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_LC84[0x3];                                     // 0x004D(0x0003) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct CoreUObject.InterpCurveTwoVectors
+// 0x0018
+struct FInterpCurveTwoVectors
+{
+	TArray<struct FInterpCurvePointTwoVectors>         Points;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool                                               bIsLooped;                                                 // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_X63X[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              LoopKeyOffset;                                             // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct CoreUObject.InterpCurvePointLinearColor
+// 0x0038
+struct FInterpCurvePointLinearColor
+{
+	float                                              InVal;                                                     // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                                OutVal;                                                    // 0x0004(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FLinearColor                                ArriveTangent;                                             // 0x0014(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FLinearColor                                LeaveTangent;                                              // 0x0024(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	TEnumAsByte<CoreUObject_EInterpCurveMode>          InterpMode;                                                // 0x0034(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_5CNX[0x3];                                     // 0x0035(0x0003) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct CoreUObject.InterpCurveLinearColor
+// 0x0018
+struct FInterpCurveLinearColor
+{
+	TArray<struct FInterpCurvePointLinearColor>        Points;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool                                               bIsLooped;                                                 // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_UM9F[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              LoopKeyOffset;                                             // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct CoreUObject.Transform
+// 0x0030
+struct FTransform
+{
+	struct FQuat                                       Rotation;                                                  // 0x0000(0x0010) (Edit, BlueprintVisible, SaveGame, IsPlainOldData, NoDestructor)
+	struct FVector                                     Translation;                                               // 0x0010(0x000C) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_K9DJ[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FVector                                     Scale3D;                                                   // 0x0020(0x000C) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_IM84[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -577,7 +716,7 @@ struct FRandomStream
 // 0x0008
 struct FDateTime
 {
-	unsigned char                                      UnknownData_OUU2[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_97LH[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (PADDING)
 
 };
 
@@ -585,7 +724,7 @@ struct FDateTime
 // 0x0008
 struct FTimespan
 {
-	unsigned char                                      UnknownData_LRGN[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HLQX[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (PADDING)
 
 };
 
@@ -608,7 +747,7 @@ struct FStringClassReference : public FStringAssetReference
 // 0x0001
 struct FFallbackStruct
 {
-	unsigned char                                      UnknownData_DG0C[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_KPS8[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 
@@ -617,7 +756,7 @@ struct FFallbackStruct
 struct FFloatRangeBound
 {
 	TEnumAsByte<CoreUObject_ERangeBoundTypes>          Type;                                                      // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_5E81[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_RO17[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              Value;                                                     // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
@@ -636,7 +775,7 @@ struct FFloatRange
 struct FInt32RangeBound
 {
 	TEnumAsByte<CoreUObject_ERangeBoundTypes>          Type;                                                      // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_DE4H[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_LNLF[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	int                                                Value;                                                     // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
@@ -650,160 +789,21 @@ struct FInt32Range
 
 };
 
-// ScriptStruct CoreUObject.InterpCurvePointTwoVectors
-// 0x0050
-struct FInterpCurvePointTwoVectors
+// ScriptStruct CoreUObject.FloatInterval
+// 0x0008
+struct FFloatInterval
 {
-	float                                              InVal;                                                     // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTwoVectors                                 OutVal;                                                    // 0x0004(0x0018) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FTwoVectors                                 ArriveTangent;                                             // 0x001C(0x0018) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FTwoVectors                                 LeaveTangent;                                              // 0x0034(0x0018) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	TEnumAsByte<CoreUObject_EInterpCurveMode>          InterpMode;                                                // 0x004C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_MJL4[0x3];                                     // 0x004D(0x0003) MISSED OFFSET (PADDING)
+	float                                              Min;                                                       // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Max;                                                       // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
-// ScriptStruct CoreUObject.InterpCurveTwoVectors
-// 0x0018
-struct FInterpCurveTwoVectors
+// ScriptStruct CoreUObject.Int32Interval
+// 0x0008
+struct FInt32Interval
 {
-	TArray<struct FInterpCurvePointTwoVectors>         Points;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               bIsLooped;                                                 // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_YM5P[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              LoopKeyOffset;                                             // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct CoreUObject.InterpCurvePointLinearColor
-// 0x0038
-struct FInterpCurvePointLinearColor
-{
-	float                                              InVal;                                                     // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                                OutVal;                                                    // 0x0004(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FLinearColor                                ArriveTangent;                                             // 0x0014(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FLinearColor                                LeaveTangent;                                              // 0x0024(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	TEnumAsByte<CoreUObject_EInterpCurveMode>          InterpMode;                                                // 0x0034(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CPUY[0x3];                                     // 0x0035(0x0003) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct CoreUObject.InterpCurveLinearColor
-// 0x0018
-struct FInterpCurveLinearColor
-{
-	TArray<struct FInterpCurvePointLinearColor>        Points;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               bIsLooped;                                                 // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_Q2YE[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              LoopKeyOffset;                                             // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct CoreUObject.Transform
-// 0x0030
-struct FTransform
-{
-	struct FQuat                                       Rotation;                                                  // 0x0000(0x0010) (Edit, BlueprintVisible, SaveGame, IsPlainOldData, NoDestructor)
-	struct FVector                                     Translation;                                               // 0x0010(0x000C) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_V5CW[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FVector                                     Scale3D;                                                   // 0x0020(0x000C) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_NVRZ[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct CoreUObject.InterpCurvePointFloat
-// 0x0014
-struct FInterpCurvePointFloat
-{
-	float                                              InVal;                                                     // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              OutVal;                                                    // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              ArriveTangent;                                             // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	float                                              LeaveTangent;                                              // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	TEnumAsByte<CoreUObject_EInterpCurveMode>          InterpMode;                                                // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_UNCK[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct CoreUObject.InterpCurveFloat
-// 0x0018
-struct FInterpCurveFloat
-{
-	TArray<struct FInterpCurvePointFloat>              Points;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               bIsLooped;                                                 // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
-	unsigned char                                      UnknownData_ODJE[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              LoopKeyOffset;                                             // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct CoreUObject.InterpCurvePointVector2D
-// 0x0020
-struct FInterpCurvePointVector2D
-{
-	float                                              InVal;                                                     // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                                   OutVal;                                                    // 0x0004(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector2D                                   ArriveTangent;                                             // 0x000C(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
-	struct FVector2D                                   LeaveTangent;                                              // 0x0014(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
-	TEnumAsByte<CoreUObject_EInterpCurveMode>          InterpMode;                                                // 0x001C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_YNL2[0x3];                                     // 0x001D(0x0003) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct CoreUObject.InterpCurveVector2D
-// 0x0018
-struct FInterpCurveVector2D
-{
-	TArray<struct FInterpCurvePointVector2D>           Points;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               bIsLooped;                                                 // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_F1CC[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              LoopKeyOffset;                                             // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct CoreUObject.InterpCurvePointVector
-// 0x002C
-struct FInterpCurvePointVector
-{
-	float                                              InVal;                                                     // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                     OutVal;                                                    // 0x0004(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                     ArriveTangent;                                             // 0x0010(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                     LeaveTangent;                                              // 0x001C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	TEnumAsByte<CoreUObject_EInterpCurveMode>          InterpMode;                                                // 0x0028(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_IDAZ[0x3];                                     // 0x0029(0x0003) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct CoreUObject.InterpCurveVector
-// 0x0018
-struct FInterpCurveVector
-{
-	TArray<struct FInterpCurvePointVector>             Points;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               bIsLooped;                                                 // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_9B6G[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              LoopKeyOffset;                                             // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct CoreUObject.InterpCurvePointQuat
-// 0x0050
-struct FInterpCurvePointQuat
-{
-	float                                              InVal;                                                     // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_1VG7[0xC];                                     // 0x0004(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FQuat                                       OutVal;                                                    // 0x0010(0x0010) (Edit, BlueprintVisible, IsPlainOldData, NoDestructor)
-	struct FQuat                                       ArriveTangent;                                             // 0x0020(0x0010) (Edit, BlueprintVisible, IsPlainOldData, NoDestructor)
-	struct FQuat                                       LeaveTangent;                                              // 0x0030(0x0010) (Edit, BlueprintVisible, IsPlainOldData, NoDestructor)
-	TEnumAsByte<CoreUObject_EInterpCurveMode>          InterpMode;                                                // 0x0040(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_I9NR[0xF];                                     // 0x0041(0x000F) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct CoreUObject.InterpCurveQuat
-// 0x0018
-struct FInterpCurveQuat
-{
-	TArray<struct FInterpCurvePointQuat>               Points;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               bIsLooped;                                                 // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_UKOW[0x3];                                     // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              LoopKeyOffset;                                             // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                Min;                                                       // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                Max;                                                       // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 

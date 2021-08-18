@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,16 +20,16 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // Class Water.AthenaFFTWater
-// 0x0028 (FullSize[0x04A0] - InheritedSize[0x0478])
+// 0x0028 (FullSize[0x0440] - InheritedSize[0x0418])
 class AAthenaFFTWater : public AFFTWater
 {
 public:
-	unsigned char                                      UnknownData_72L7[0x28];                                    // 0x0478(0x0028) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ZAMG[0x28];                                    // 0x0418(0x0028) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.AthenaFFTWater");
+		static UClass* ptr = UObject::FindClass("Class Water.AthenaFFTWater");
 		return ptr;
 	}
 
@@ -46,7 +46,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterEmissionVolumeInterface");
+		static UClass* ptr = UObject::FindClass("Class Water.WaterEmissionVolumeInterface");
 		return ptr;
 	}
 
@@ -55,16 +55,16 @@ public:
 };
 
 // Class Water.AthenaWaterEmissionVolume
-// 0x0008 (FullSize[0x0440] - InheritedSize[0x0438])
+// 0x0008 (FullSize[0x03E0] - InheritedSize[0x03D8])
 class AAthenaWaterEmissionVolume : public AWaterEmissionVolume
 {
 public:
-	unsigned char                                      UnknownData_06DD[0x8];                                     // 0x0438(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_BBO3[0x8];                                     // 0x03D8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.AthenaWaterEmissionVolume");
+		static UClass* ptr = UObject::FindClass("Class Water.AthenaWaterEmissionVolume");
 		return ptr;
 	}
 
@@ -81,7 +81,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.FFTWaterInterface");
+		static UClass* ptr = UObject::FindClass("Class Water.FFTWaterInterface");
 		return ptr;
 	}
 
@@ -105,7 +105,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterProperties");
+		static UClass* ptr = UObject::FindClass("Class Water.WaterProperties");
 		return ptr;
 	}
 
@@ -122,7 +122,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterInterface");
+		static UClass* ptr = UObject::FindClass("Class Water.WaterInterface");
 		return ptr;
 	}
 
@@ -139,42 +139,42 @@ public:
 };
 
 // Class Water.FFTWaterService
-// 0x0080 (FullSize[0x04B0] - InheritedSize[0x0430])
+// 0x0080 (FullSize[0x0450] - InheritedSize[0x03D0])
 class AFFTWaterService : public AActor
 {
 public:
-	unsigned char                                      UnknownData_U2BK[0x10];                                    // 0x0430(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TWeakObjectPtr<class AAthenaFFTWater>              FFTWaterActor;                                             // 0x0440(0x0008) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, UObjectWrapper)
-	TWeakObjectPtr<class UFFTWaterComponent>           FFTWaterComponent;                                         // 0x0448(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData, RepNotify, NoDestructor, UObjectWrapper)
-	TWeakObjectPtr<class UFFTWaterExtendedPlaneComponent> ExtendedPlaneComponent;                                    // 0x0450(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData, RepNotify, NoDestructor, UObjectWrapper)
-	unsigned char                                      UnknownData_QY7E[0x50];                                    // 0x0458(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	double                                             ReplicatedServerCreationTime;                              // 0x04A8(0x0008) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_XL2E[0x10];                                    // 0x03D0(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TWeakObjectPtr<class AAthenaFFTWater>              FFTWaterActor;                                             // 0x03E0(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
+	TWeakObjectPtr<class UFFTWaterComponent>           FFTWaterComponent;                                         // 0x03E8(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData, RepNotify, NoDestructor, UObjectWrapper)
+	TWeakObjectPtr<class UFFTWaterExtendedPlaneComponent> ExtendedPlaneComponent;                                    // 0x03F0(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData, RepNotify, NoDestructor, UObjectWrapper)
+	unsigned char                                      UnknownData_MZ85[0x50];                                    // 0x03F8(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	double                                             ReplicatedServerCreationTime;                              // 0x0448(0x0008) (Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.FFTWaterService");
+		static UClass* ptr = UObject::FindClass("Class Water.FFTWaterService");
 		return ptr;
 	}
 
 
 
 	void OnRep_FFTWaterComponent();
-	void OnRep_FFTWaterActor();
 	void OnRep_ExtendedPlaneComponent();
 };
 
 // Class Water.FlatWaterPlaneComponent
-// 0x0010 (FullSize[0x0570] - InheritedSize[0x0560])
+// 0x0018 (FullSize[0x05B0] - InheritedSize[0x0598])
 class UFlatWaterPlaneComponent : public UBaseWaterComponent
 {
 public:
-	unsigned char                                      UnknownData_4YFG[0x10];                                    // 0x0560(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_Z8SD[0x8];                                     // 0x0598(0x0008) Fix Super Size
+	unsigned char                                      UnknownData_V5M6[0x10];                                    // 0x05A0(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.FlatWaterPlaneComponent");
+		static UClass* ptr = UObject::FindClass("Class Water.FlatWaterPlaneComponent");
 		return ptr;
 	}
 
@@ -190,12 +190,12 @@ public:
 class UMockWaterInterface : public UObject
 {
 public:
-	unsigned char                                      UnknownData_EPPE[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_SV5E[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.MockWaterInterface");
+		static UClass* ptr = UObject::FindClass("Class Water.MockWaterInterface");
 		return ptr;
 	}
 
@@ -213,7 +213,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.MockWaterServiceWithValidWaterPlane");
+		static UClass* ptr = UObject::FindClass("Class Water.MockWaterServiceWithValidWaterPlane");
 		return ptr;
 	}
 
@@ -230,7 +230,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.NoSwimWaterId");
+		static UClass* ptr = UObject::FindClass("Class Water.NoSwimWaterId");
 		return ptr;
 	}
 
@@ -247,7 +247,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.SeaWaterId");
+		static UClass* ptr = UObject::FindClass("Class Water.SeaWaterId");
 		return ptr;
 	}
 
@@ -264,7 +264,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.ShipWaterId");
+		static UClass* ptr = UObject::FindClass("Class Water.ShipWaterId");
 		return ptr;
 	}
 
@@ -282,7 +282,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.SplashProbeDataAsset");
+		static UClass* ptr = UObject::FindClass("Class Water.SplashProbeDataAsset");
 		return ptr;
 	}
 
@@ -291,19 +291,20 @@ public:
 };
 
 // Class Water.SplashProbeVFXComponent
-// 0x0048 (FullSize[0x0110] - InheritedSize[0x00C8])
+// 0x0050 (FullSize[0x0118] - InheritedSize[0x00C8])
 class USplashProbeVFXComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_LTEH[0x28];                                    // 0x00C8(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_07J5[0x28];                                    // 0x00C8(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class USplashProbeDataAsset*                       Probes;                                                    // 0x00F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FActorComponentSelector                     AttachProbesToOwner;                                       // 0x00F8(0x0010) (Edit, DisableEditOnInstance, ContainsInstancedReference)
-	class USceneComponent*                             AttachProbesToComponent;                                   // 0x0108(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USplashProbeDataAsset*                       ProbesInstance;                                            // 0x00F8(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FActorComponentSelector                     AttachProbesToOwner;                                       // 0x0100(0x0010) (Edit, DisableEditOnInstance, ContainsInstancedReference)
+	class USceneComponent*                             AttachProbesToComponent;                                   // 0x0110(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.SplashProbeVFXComponent");
+		static UClass* ptr = UObject::FindClass("Class Water.SplashProbeVFXComponent");
 		return ptr;
 	}
 
@@ -320,7 +321,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.UndergroundSeaWaterId");
+		static UClass* ptr = UObject::FindClass("Class Water.UndergroundSeaWaterId");
 		return ptr;
 	}
 
@@ -337,7 +338,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterBuoyancyFunctionLibrary");
+		static UClass* ptr = UObject::FindClass("Class Water.WaterBuoyancyFunctionLibrary");
 		return ptr;
 	}
 
@@ -358,7 +359,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterBuoyancySampleMovementFunctionLibrary");
+		static UClass* ptr = UObject::FindClass("Class Water.WaterBuoyancySampleMovementFunctionLibrary");
 		return ptr;
 	}
 
@@ -375,12 +376,12 @@ public:
 class UWaterEmissionVolumeService : public UObject
 {
 public:
-	unsigned char                                      UnknownData_WKZ6[0x20];                                    // 0x0028(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TM9V[0x20];                                    // 0x0028(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterEmissionVolumeService");
+		static UClass* ptr = UObject::FindClass("Class Water.WaterEmissionVolumeService");
 		return ptr;
 	}
 
@@ -397,7 +398,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterExclusionSurfaceInterface");
+		static UClass* ptr = UObject::FindClass("Class Water.WaterExclusionSurfaceInterface");
 		return ptr;
 	}
 
@@ -414,7 +415,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterPlaneInterface");
+		static UClass* ptr = UObject::FindClass("Class Water.WaterPlaneInterface");
 		return ptr;
 	}
 
@@ -423,16 +424,17 @@ public:
 };
 
 // Class Water.WaterInteractionComponent
-// 0x0020 (FullSize[0x05A0] - InheritedSize[0x0580])
+// 0x0028 (FullSize[0x05E0] - InheritedSize[0x05B8])
 class UWaterInteractionComponent : public UBoxComponent
 {
 public:
-	unsigned char                                      UnknownData_GSG9[0x20];                                    // 0x0580(0x0020) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_REK0[0x8];                                     // 0x05B8(0x0008) Fix Super Size
+	unsigned char                                      UnknownData_R9ZB[0x20];                                    // 0x05C0(0x0020) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterInteractionComponent");
+		static UClass* ptr = UObject::FindClass("Class Water.WaterInteractionComponent");
 		return ptr;
 	}
 
@@ -450,15 +452,16 @@ public:
 };
 
 // Class Water.WaterPlaneExclusionComponent
-// 0x0000 (FullSize[0x00C8] - InheritedSize[0x00C8])
+// 0x0010 (FullSize[0x00D8] - InheritedSize[0x00C8])
 class UWaterPlaneExclusionComponent : public UActorComponent
 {
 public:
+	struct FActorComponentSelector                     UseSpecificComponentForOverlaps;                           // 0x00C8(0x0010) (Edit, DisableEditOnInstance, ContainsInstancedReference)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterPlaneExclusionComponent");
+		static UClass* ptr = UObject::FindClass("Class Water.WaterPlaneExclusionComponent");
 		return ptr;
 	}
 
@@ -477,7 +480,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterPlaneRetrievalProviderInterface");
+		static UClass* ptr = UObject::FindClass("Class Water.WaterPlaneRetrievalProviderInterface");
 		return ptr;
 	}
 
@@ -494,7 +497,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterSplashProbeFunctionLibrary");
+		static UClass* ptr = UObject::FindClass("Class Water.WaterSplashProbeFunctionLibrary");
 		return ptr;
 	}
 
@@ -507,26 +510,32 @@ public:
 };
 
 // Class Water.WaterSpoutVFXComponent
-// 0x0068 (FullSize[0x0130] - InheritedSize[0x00C8])
+// 0x0090 (FullSize[0x0158] - InheritedSize[0x00C8])
 class UWaterSpoutVFXComponent : public UActorComponent
 {
 public:
 	TArray<struct FWaterSpout>                         WaterSpouts;                                               // 0x00C8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference)
-	struct FVector                                     SplashEffectPointBottomZ;                                  // 0x00D8(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_H1II[0x4];                                     // 0x00E4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FVector                                     SplashEffectPointBottomZ;                                  // 0x00D8(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_G0X4[0x4];                                     // 0x00E4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UObject*                                     SpoutParticleSystem;                                       // 0x00E8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                     SplashParticleSystem;                                      // 0x00F0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              WaterSplashDelayMin;                                       // 0x00F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              WaterSplashDelayMax;                                       // 0x00FC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              SplashEffectVFXOffset;                                     // 0x0100(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_7VD5[0x4];                                     // 0x0104(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<struct FWaterSpout>                         ActiveWaterSpouts;                                         // 0x0108(0x0010) (ZeroConstructor, ContainsInstancedReference)
-	unsigned char                                      UnknownData_ODJX[0x18];                                    // 0x0118(0x0018) MISSED OFFSET (PADDING)
+	float                                              SplashSweepRadius;                                         // 0x0104(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               ShouldSpawnKillPlaneAtSplash;                              // 0x0108(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_7ZJ2[0x7];                                     // 0x0109(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UStaticMesh*                                 SplashKillPlaneMesh;                                       // 0x0110(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                     SplashKillPlaneScale;                                      // 0x0118(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_U70H[0x4];                                     // 0x0124(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UStaticMeshComponent*                        SplashKillPlane;                                           // 0x0128(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FWaterSpout>                         ActiveWaterSpouts;                                         // 0x0130(0x0010) (ZeroConstructor, ContainsInstancedReference)
+	unsigned char                                      UnknownData_9TM7[0x18];                                    // 0x0140(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterSpoutVFXComponent");
+		static UClass* ptr = UObject::FindClass("Class Water.WaterSpoutVFXComponent");
 		return ptr;
 	}
 
@@ -545,7 +554,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Water.WaterVolumeInterface");
+		static UClass* ptr = UObject::FindClass("Class Water.WaterVolumeInterface");
 		return ptr;
 	}
 

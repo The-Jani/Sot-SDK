@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HideoutTeleportZone.BP_HideoutTeleportZone_C
-// 0x0000 (FullSize[0x0478] - InheritedSize[0x0478])
+// 0x0000 (FullSize[0x0418] - InheritedSize[0x0418])
 class ABP_HideoutTeleportZone_C : public AHideoutEntrance
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_HideoutTeleportZone.BP_HideoutTeleportZone_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_HideoutTeleportZone.BP_HideoutTeleportZone_C");
 		return ptr;
 	}
 

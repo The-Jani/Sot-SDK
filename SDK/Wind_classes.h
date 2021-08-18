@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -19,62 +19,6 @@ namespace CG
 // Classes
 //---------------------------------------------------------------------------
 
-// Class Wind.WindServiceParamsFunctionLibrary
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-class UWindServiceParamsFunctionLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Wind.WindServiceParamsFunctionLibrary");
-		return ptr;
-	}
-
-
-
-	bool STATIC_AreWindServiceParamsEqual(const struct FWindServiceParams& Params1, const struct FWindServiceParams& Params2);
-};
-
-// Class Wind.WindZoneComponent
-// 0x0090 (FullSize[0x0340] - InheritedSize[0x02B0])
-class UWindZoneComponent : public USceneComponent
-{
-public:
-	unsigned char                                      UnknownData_F35K[0x8];                                     // 0x02B0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FWindTurbulenceParameters                   TurbulenceParams;                                          // 0x02B8(0x0070) (Edit, BlueprintVisible)
-	struct FWindZoneParams                             WindZoneParams;                                            // 0x0328(0x0010) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData_L5LT[0x8];                                     // 0x0338(0x0008) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Wind.WindZoneComponent");
-		return ptr;
-	}
-
-
-
-};
-
-// Class Wind.TestWindZoneComponent
-// 0x0000 (FullSize[0x0340] - InheritedSize[0x0340])
-class UTestWindZoneComponent : public UWindZoneComponent
-{
-public:
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Wind.TestWindZoneComponent");
-		return ptr;
-	}
-
-
-
-};
-
 // Class Wind.WindZoneInterface
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 class UWindZoneInterface : public UInterface
@@ -84,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.WindZoneInterface");
+		static UClass* ptr = UObject::FindClass("Class Wind.WindZoneInterface");
 		return ptr;
 	}
 
@@ -104,21 +48,21 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.WindInterface");
+		static UClass* ptr = UObject::FindClass("Class Wind.WindInterface");
 		return ptr;
 	}
 
 
 
-	void UnregisterWindZone(const TScriptInterface<class UWindZoneInterface>& InWindZone);
+	void UnregisterWindZone();
 	void TriggerChange(bool ChangeInstantly);
 	void SetParams(const struct FWindServiceParams& Params);
 	void SetGlobalWindVector(const struct FVector& InWindVector);
 	void SetGlobalWindMagnitude(float InWindMagnitude);
 	void SetGlobalWindDirection(const struct FVector& InWindDirection);
 	void SetGlobalWindAngle(float InAngle);
-	void RegisterWindZone(const TScriptInterface<class UWindZoneInterface>& InWindZone);
-	TScriptInterface<class UWindZoneInterface> GetWindZoneAtLocation(const struct FVector& SamplePosition);
+	void RegisterWindZone();
+	void GetWindZoneAtLocation(const struct FVector& SamplePosition);
 	struct FVector GetWindVector(const struct FVector& SamplePosition);
 	float GetWindMagnitude(const struct FVector& SamplePosition);
 	struct FVector GetWindDirection(const struct FVector& SamplePosition);
@@ -137,7 +81,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.DebugWindInterface");
+		static UClass* ptr = UObject::FindClass("Class Wind.DebugWindInterface");
 		return ptr;
 	}
 
@@ -150,12 +94,12 @@ public:
 class UMockWindService : public UObject
 {
 public:
-	unsigned char                                      UnknownData_E3KX[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_WTC1[0x18];                                    // 0x0028(0x0018) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.MockWindService");
+		static UClass* ptr = UObject::FindClass("Class Wind.MockWindService");
 		return ptr;
 	}
 
@@ -168,13 +112,13 @@ public:
 class UTestWindInterface : public UObject
 {
 public:
-	unsigned char                                      UnknownData_558A[0x30];                                    // 0x0028(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<TScriptInterface<class UWindZoneInterface>> WindZones;                                                 // 0x0058(0x0010) (ZeroConstructor, UObjectWrapper)
+	unsigned char                                      UnknownData_5URL[0x30];                                    // 0x0028(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      WindZones[0x10];                                           // 0x0028(0x0010) UNKNOWN PROPERTY: ArrayProperty Wind.TestWindInterface.WindZones
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.TestWindInterface");
+		static UClass* ptr = UObject::FindClass("Class Wind.TestWindInterface");
 		return ptr;
 	}
 
@@ -187,12 +131,12 @@ public:
 class UTestWindZone : public UObject
 {
 public:
-	unsigned char                                      UnknownData_KNE3[0x28];                                    // 0x0028(0x0028) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_ZGP8[0x28];                                    // 0x0028(0x0028) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.TestWindZone");
+		static UClass* ptr = UObject::FindClass("Class Wind.TestWindZone");
 		return ptr;
 	}
 
@@ -209,7 +153,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.WindFunctions");
+		static UClass* ptr = UObject::FindClass("Class Wind.WindFunctions");
 		return ptr;
 	}
 
@@ -220,22 +164,22 @@ public:
 };
 
 // Class Wind.WindService
-// 0x0120 (FullSize[0x0550] - InheritedSize[0x0430])
+// 0x0120 (FullSize[0x04F0] - InheritedSize[0x03D0])
 class AWindService : public AActor
 {
 public:
-	unsigned char                                      UnknownData_B93F[0x10];                                    // 0x0430(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class AWindDirectionalSource*                      GlobalWindSource;                                          // 0x0440(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_VZW4[0x10];                                    // 0x0448(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              CurrentWindAngle;                                          // 0x0458(0x0004) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	float                                              CurrentWindMagnitude;                                      // 0x045C(0x0004) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_Z4YE[0xE0];                                    // 0x0460(0x00E0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	TArray<TScriptInterface<class UWindZoneInterface>> WindZones;                                                 // 0x0540(0x0010) (ZeroConstructor, Transient, UObjectWrapper)
+	unsigned char                                      UnknownData_9G3G[0x10];                                    // 0x03D0(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class AWindDirectionalSource*                      GlobalWindSource;                                          // 0x03E0(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_GIXL[0x10];                                    // 0x03E8(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              CurrentWindAngle;                                          // 0x03F8(0x0004) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	float                                              CurrentWindMagnitude;                                      // 0x03FC(0x0004) (Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_PG3G[0xE0];                                    // 0x0400(0x00E0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      WindZones[0x10];                                           // 0x0400(0x0010) UNKNOWN PROPERTY: ArrayProperty Wind.WindService.WindZones
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.WindService");
+		static UClass* ptr = UObject::FindClass("Class Wind.WindService");
 		return ptr;
 	}
 
@@ -247,16 +191,72 @@ public:
 };
 
 // Class Wind.DebugWindService
-// 0x0010 (FullSize[0x0560] - InheritedSize[0x0550])
+// 0x0010 (FullSize[0x0500] - InheritedSize[0x04F0])
 class ADebugWindService : public AWindService
 {
 public:
-	unsigned char                                      UnknownData_VCWO[0x10];                                    // 0x0550(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_LKYP[0x10];                                    // 0x04F0(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Wind.DebugWindService");
+		static UClass* ptr = UObject::FindClass("Class Wind.DebugWindService");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Wind.WindServiceParamsFunctionLibrary
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UWindServiceParamsFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Wind.WindServiceParamsFunctionLibrary");
+		return ptr;
+	}
+
+
+
+	bool STATIC_AreWindServiceParamsEqual(const struct FWindServiceParams& Params1, const struct FWindServiceParams& Params2);
+};
+
+// Class Wind.WindZoneComponent
+// 0x0090 (FullSize[0x0340] - InheritedSize[0x02B0])
+class UWindZoneComponent : public USceneComponent
+{
+public:
+	unsigned char                                      UnknownData_E7HL[0x8];                                     // 0x02B0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FWindTurbulenceParameters                   TurbulenceParams;                                          // 0x02B8(0x0070) (Edit, BlueprintVisible)
+	struct FWindZoneParams                             WindZoneParams;                                            // 0x0328(0x0010) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData_F910[0x8];                                     // 0x0338(0x0008) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Wind.WindZoneComponent");
+		return ptr;
+	}
+
+
+
+};
+
+// Class Wind.TestWindZoneComponent
+// 0x0000 (FullSize[0x0340] - InheritedSize[0x0340])
+class UTestWindZoneComponent : public UWindZoneComponent
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class Wind.TestWindZoneComponent");
 		return ptr;
 	}
 

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // class UBP_PromptCoordinator_Base_C* PromptCoordinator              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_PromptActorBase_C::UninitializePrompt(class UBP_PromptCoordinator_Base_C* PromptCoordinator)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.UninitializePrompt");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.UninitializePrompt");
 
 	ABP_PromptActorBase_C_UninitializePrompt_Params params;
 	params.PromptCoordinator = PromptCoordinator;
@@ -41,7 +41,7 @@ void ABP_PromptActorBase_C::UninitializePrompt(class UBP_PromptCoordinator_Base_
 // (Public, BlueprintCallable, BlueprintEvent)
 void ABP_PromptActorBase_C::UninitializeAllPrompts()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.UninitializeAllPrompts");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.UninitializeAllPrompts");
 
 	ABP_PromptActorBase_C_UninitializeAllPrompts_Params params;
 
@@ -59,7 +59,7 @@ void ABP_PromptActorBase_C::UninitializeAllPrompts()
 // bool                           AllCompleted                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_PromptActorBase_C::CheckAllPromptsComplete(bool* AllCompleted)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.CheckAllPromptsComplete");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.CheckAllPromptsComplete");
 
 	ABP_PromptActorBase_C_CheckAllPromptsComplete_Params params;
 
@@ -78,7 +78,7 @@ void ABP_PromptActorBase_C::CheckAllPromptsComplete(bool* AllCompleted)
 // (Public, BlueprintCallable, BlueprintEvent)
 void ABP_PromptActorBase_C::Complete()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.Complete");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.Complete");
 
 	ABP_PromptActorBase_C_Complete_Params params;
 
@@ -96,7 +96,7 @@ void ABP_PromptActorBase_C::Complete()
 // class UClass*                  Class                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_PromptActorBase_C::GetMyClass(class UClass** Class)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.GetMyClass");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.GetMyClass");
 
 	ABP_PromptActorBase_C_GetMyClass_Params params;
 
@@ -117,7 +117,7 @@ void ABP_PromptActorBase_C::GetMyClass(class UClass** Class)
 // class AAthenaPlayerController* AthenaPlayerController         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_PromptActorBase_C::GetAthenaPlayerController(class AAthenaPlayerController** AthenaPlayerController)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.GetAthenaPlayerController");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.GetAthenaPlayerController");
 
 	ABP_PromptActorBase_C_GetAthenaPlayerController_Params params;
 
@@ -136,7 +136,7 @@ void ABP_PromptActorBase_C::GetAthenaPlayerController(class AAthenaPlayerControl
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_PromptActorBase_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.UserConstructionScript");
 
 	ABP_PromptActorBase_C_UserConstructionScript_Params params;
 
@@ -154,7 +154,7 @@ void ABP_PromptActorBase_C::UserConstructionScript()
 // class UBP_PromptCoordinator_Base_C* Prompt_Coordinator             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_PromptActorBase_C::Add_Prompt_Coordinator(class UBP_PromptCoordinator_Base_C* Prompt_Coordinator)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.Add Prompt Coordinator");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.Add Prompt Coordinator");
 
 	ABP_PromptActorBase_C_Add_Prompt_Coordinator_Params params;
 	params.Prompt_Coordinator = Prompt_Coordinator;
@@ -171,7 +171,7 @@ void ABP_PromptActorBase_C::Add_Prompt_Coordinator(class UBP_PromptCoordinator_B
 // (BlueprintCallable, BlueprintEvent)
 void ABP_PromptActorBase_C::On_Prompt_Complete()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.On Prompt Complete");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.On Prompt Complete");
 
 	ABP_PromptActorBase_C_On_Prompt_Complete_Params params;
 
@@ -189,7 +189,7 @@ void ABP_PromptActorBase_C::On_Prompt_Complete()
 // TEnumAsByte<Engine_EEndPlayReason> EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_PromptActorBase_C::ReceiveEndPlay(TEnumAsByte<Engine_EEndPlayReason> EndPlayReason)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.ReceiveEndPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.ReceiveEndPlay");
 
 	ABP_PromptActorBase_C_ReceiveEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
@@ -208,7 +208,7 @@ void ABP_PromptActorBase_C::ReceiveEndPlay(TEnumAsByte<Engine_EEndPlayReason> En
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_PromptActorBase_C::ExecuteUbergraph_BP_PromptActorBase(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.ExecuteUbergraph_BP_PromptActorBase");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.ExecuteUbergraph_BP_PromptActorBase");
 
 	ABP_PromptActorBase_C_ExecuteUbergraph_BP_PromptActorBase_Params params;
 	params.EntryPoint = EntryPoint;
@@ -225,7 +225,7 @@ void ABP_PromptActorBase_C::ExecuteUbergraph_BP_PromptActorBase(int EntryPoint)
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 void ABP_PromptActorBase_C::OnComplete__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.OnComplete__DelegateSignature");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_PromptActorBase.BP_PromptActorBase_C.OnComplete__DelegateSignature");
 
 	ABP_PromptActorBase_C_OnComplete__DelegateSignature_Params params;
 

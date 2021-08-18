@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,17 +20,17 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Rudder.BP_Rudder_C
-// 0x0010 (FullSize[0x04B8] - InheritedSize[0x04A8])
+// 0x0010 (FullSize[0x0458] - InheritedSize[0x0448])
 class ABP_Rudder_C : public ARudder
 {
 public:
-	class UStaticMeshComponent*                        StaticMesh;                                                // 0x04A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
-	class USceneComponent*                             Root;                                                      // 0x04B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class UStaticMeshComponent*                        StaticMesh;                                                // 0x0448(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
+	class USceneComponent*                             Root;                                                      // 0x0450(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Rudder.BP_Rudder_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Rudder.BP_Rudder_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Earthquake_Feature.BP_Earthquake_Feature_C
-// 0x0000 (FullSize[0x05F8] - InheritedSize[0x05F8])
+// 0x0000 (FullSize[0x05A0] - InheritedSize[0x05A0])
 class ABP_Earthquake_Feature_C : public ABP_Earthquake_C
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Earthquake_Feature.BP_Earthquake_Feature_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Earthquake_Feature.BP_Earthquake_Feature_C");
 		return ptr;
 	}
 

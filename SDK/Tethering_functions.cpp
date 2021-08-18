@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // class USceneComponent*         EndPointB                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UDynamicCordRenderComponent::SetCordEndPointB(class USceneComponent* EndPointB)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tethering.DynamicCordRenderComponent.SetCordEndPointB");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Tethering.DynamicCordRenderComponent.SetCordEndPointB");
 
 	UDynamicCordRenderComponent_SetCordEndPointB_Params params;
 	params.EndPointB = EndPointB;
@@ -44,7 +44,7 @@ void UDynamicCordRenderComponent::SetCordEndPointB(class USceneComponent* EndPoi
 // class USceneComponent*         EndPointA                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UDynamicCordRenderComponent::SetCordEndPointA(class USceneComponent* EndPointA)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tethering.DynamicCordRenderComponent.SetCordEndPointA");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function Tethering.DynamicCordRenderComponent.SetCordEndPointA");
 
 	UDynamicCordRenderComponent_SetCordEndPointA_Params params;
 	params.EndPointA = EndPointA;

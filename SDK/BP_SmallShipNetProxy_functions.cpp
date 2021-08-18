@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -25,7 +25,7 @@ namespace CG
 // struct FLinearColor            Value                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_SmallShipNetProxy_C::Set_Colour_on_All_Materials(const struct FName& ParameterName, const struct FLinearColor& Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.Set Colour on All Materials");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.Set Colour on All Materials");
 
 	ABP_SmallShipNetProxy_C_Set_Colour_on_All_Materials_Params params;
 	params.ParameterName = ParameterName;
@@ -46,7 +46,7 @@ void ABP_SmallShipNetProxy_C::Set_Colour_on_All_Materials(const struct FName& Pa
 // float                          Value                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_SmallShipNetProxy_C::Set_Value_on_All_Materials(const struct FName& Variable_Name, float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.Set Value on All Materials");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.Set Value on All Materials");
 
 	ABP_SmallShipNetProxy_C_Set_Value_on_All_Materials_Params params;
 	params.Variable_Name = Variable_Name;
@@ -66,7 +66,7 @@ void ABP_SmallShipNetProxy_C::Set_Value_on_All_Materials(const struct FName& Var
 // int                            Bits                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_SmallShipNetProxy_C::Apply_Bits_to_Lanterns(int Bits)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.Apply Bits to Lanterns");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.Apply Bits to Lanterns");
 
 	ABP_SmallShipNetProxy_C_Apply_Bits_to_Lanterns_Params params;
 	params.Bits = Bits;
@@ -83,7 +83,7 @@ void ABP_SmallShipNetProxy_C::Apply_Bits_to_Lanterns(int Bits)
 // (Public, BlueprintCallable, BlueprintEvent)
 void ABP_SmallShipNetProxy_C::Create_Dynamic_Materials()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.Create Dynamic Materials");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.Create Dynamic Materials");
 
 	ABP_SmallShipNetProxy_C_Create_Dynamic_Materials_Params params;
 
@@ -99,7 +99,7 @@ void ABP_SmallShipNetProxy_C::Create_Dynamic_Materials()
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_SmallShipNetProxy_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.UserConstructionScript");
 
 	ABP_SmallShipNetProxy_C_UserConstructionScript_Params params;
 
@@ -115,7 +115,7 @@ void ABP_SmallShipNetProxy_C::UserConstructionScript()
 // (Event, Public, BlueprintEvent)
 void ABP_SmallShipNetProxy_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.ReceiveBeginPlay");
 
 	ABP_SmallShipNetProxy_C_ReceiveBeginPlay_Params params;
 
@@ -133,7 +133,7 @@ void ABP_SmallShipNetProxy_C::ReceiveBeginPlay()
 // int                            LanternStateBits               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_SmallShipNetProxy_C::OnLanternStateChanged(int LanternStateBits)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.OnLanternStateChanged");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.OnLanternStateChanged");
 
 	ABP_SmallShipNetProxy_C_OnLanternStateChanged_Params params;
 	params.LanternStateBits = LanternStateBits;
@@ -152,7 +152,7 @@ void ABP_SmallShipNetProxy_C::OnLanternStateChanged(int LanternStateBits)
 // bool                           InNewEmissaryActiveState       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_SmallShipNetProxy_C::OnEmissaryActiveStateChanged(bool InNewEmissaryActiveState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.OnEmissaryActiveStateChanged");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.OnEmissaryActiveStateChanged");
 
 	ABP_SmallShipNetProxy_C_OnEmissaryActiveStateChanged_Params params;
 	params.InNewEmissaryActiveState = InNewEmissaryActiveState;
@@ -171,7 +171,7 @@ void ABP_SmallShipNetProxy_C::OnEmissaryActiveStateChanged(bool InNewEmissaryAct
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_SmallShipNetProxy_C::ExecuteUbergraph_BP_SmallShipNetProxy(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.ExecuteUbergraph_BP_SmallShipNetProxy");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallShipNetProxy.BP_SmallShipNetProxy_C.ExecuteUbergraph_BP_SmallShipNetProxy");
 
 	ABP_SmallShipNetProxy_C_ExecuteUbergraph_BP_SmallShipNetProxy_Params params;
 	params.EntryPoint = EntryPoint;

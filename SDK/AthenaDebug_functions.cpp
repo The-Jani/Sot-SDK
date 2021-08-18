@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,9 +22,26 @@ namespace CG
 // (Final, Native, Private)
 void ADrawDebugService::OnRep_PersistentShapeChanged()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaDebug.DrawDebugService.OnRep_PersistentShapeChanged");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaDebug.DrawDebugService.OnRep_PersistentShapeChanged");
 
 	ADrawDebugService_OnRep_PersistentShapeChanged_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function AthenaDebug.DrawDebugService.OnRep_IsDrawDebugActiveChanged
+// (Final, Native, Private)
+void ADrawDebugService::OnRep_IsDrawDebugActiveChanged()
+{
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaDebug.DrawDebugService.OnRep_IsDrawDebugActiveChanged");
+
+	ADrawDebugService_OnRep_IsDrawDebugActiveChanged_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
@@ -41,7 +58,7 @@ void ADrawDebugService::OnRep_PersistentShapeChanged()
 // struct FName                   GroupName                      (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void ADrawDebugService::Multicast_ClearGroup(const struct FName& GroupName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaDebug.DrawDebugService.Multicast_ClearGroup");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaDebug.DrawDebugService.Multicast_ClearGroup");
 
 	ADrawDebugService_Multicast_ClearGroup_Params params;
 	params.GroupName = GroupName;
@@ -61,7 +78,7 @@ void ADrawDebugService::Multicast_ClearGroup(const struct FName& GroupName)
 // TArray<struct FDrawDebugItemString> Strings                        (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 void ADrawDebugService::Multicast_AddStrings(TArray<struct FDrawDebugItemString> Strings)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaDebug.DrawDebugService.Multicast_AddStrings");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaDebug.DrawDebugService.Multicast_AddStrings");
 
 	ADrawDebugService_Multicast_AddStrings_Params params;
 	params.Strings = Strings;
@@ -81,7 +98,7 @@ void ADrawDebugService::Multicast_AddStrings(TArray<struct FDrawDebugItemString>
 // TArray<struct FDrawDebugItemSphere> Spheres                        (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 void ADrawDebugService::Multicast_AddSpheres(TArray<struct FDrawDebugItemSphere> Spheres)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaDebug.DrawDebugService.Multicast_AddSpheres");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaDebug.DrawDebugService.Multicast_AddSpheres");
 
 	ADrawDebugService_Multicast_AddSpheres_Params params;
 	params.Spheres = Spheres;
@@ -101,7 +118,7 @@ void ADrawDebugService::Multicast_AddSpheres(TArray<struct FDrawDebugItemSphere>
 // TArray<struct FDrawDebugItemSector> Sectors                        (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 void ADrawDebugService::Multicast_AddSectors(TArray<struct FDrawDebugItemSector> Sectors)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaDebug.DrawDebugService.Multicast_AddSectors");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaDebug.DrawDebugService.Multicast_AddSectors");
 
 	ADrawDebugService_Multicast_AddSectors_Params params;
 	params.Sectors = Sectors;
@@ -121,7 +138,7 @@ void ADrawDebugService::Multicast_AddSectors(TArray<struct FDrawDebugItemSector>
 // TArray<struct FDrawDebugItemLine> Lines                          (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 void ADrawDebugService::Multicast_AddLines(TArray<struct FDrawDebugItemLine> Lines)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaDebug.DrawDebugService.Multicast_AddLines");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaDebug.DrawDebugService.Multicast_AddLines");
 
 	ADrawDebugService_Multicast_AddLines_Params params;
 	params.Lines = Lines;
@@ -141,7 +158,7 @@ void ADrawDebugService::Multicast_AddLines(TArray<struct FDrawDebugItemLine> Lin
 // TArray<struct FDrawDebugItemCapsule> Capsules                       (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 void ADrawDebugService::Multicast_AddCapsules(TArray<struct FDrawDebugItemCapsule> Capsules)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaDebug.DrawDebugService.Multicast_AddCapsules");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaDebug.DrawDebugService.Multicast_AddCapsules");
 
 	ADrawDebugService_Multicast_AddCapsules_Params params;
 	params.Capsules = Capsules;
@@ -161,7 +178,7 @@ void ADrawDebugService::Multicast_AddCapsules(TArray<struct FDrawDebugItemCapsul
 // TArray<struct FDrawDebugItemBox> Boxes                          (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 void ADrawDebugService::Multicast_AddBoxes(TArray<struct FDrawDebugItemBox> Boxes)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AthenaDebug.DrawDebugService.Multicast_AddBoxes");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function AthenaDebug.DrawDebugService.Multicast_AddBoxes");
 
 	ADrawDebugService_Multicast_AddBoxes_Params params;
 	params.Boxes = Boxes;

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_Merchant_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Merchant.BP_Merchant_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Merchant.BP_Merchant_C.UserConstructionScript");
 
 	ABP_Merchant_C_UserConstructionScript_Params params;
 
@@ -38,7 +38,7 @@ void ABP_Merchant_C::UserConstructionScript()
 // (Public, BlueprintCallable, BlueprintEvent)
 void ABP_Merchant_C::PlayItemAnimation()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Merchant.BP_Merchant_C.PlayItemAnimation");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Merchant.BP_Merchant_C.PlayItemAnimation");
 
 	ABP_Merchant_C_PlayItemAnimation_Params params;
 
@@ -56,7 +56,7 @@ void ABP_Merchant_C::PlayItemAnimation()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Merchant_C::ExecuteUbergraph_BP_Merchant(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Merchant.BP_Merchant_C.ExecuteUbergraph_BP_Merchant");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Merchant.BP_Merchant_C.ExecuteUbergraph_BP_Merchant");
 
 	ABP_Merchant_C_ExecuteUbergraph_BP_Merchant_Params params;
 	params.EntryPoint = EntryPoint;

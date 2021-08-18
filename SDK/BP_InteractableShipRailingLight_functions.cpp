@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_InteractableShipRailingLight_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.UserConstructionScript");
 
 	ABP_InteractableShipRailingLight_C_UserConstructionScript_Params params;
 
@@ -38,7 +38,7 @@ void ABP_InteractableShipRailingLight_C::UserConstructionScript()
 // (Event, Public, BlueprintEvent)
 void ABP_InteractableShipRailingLight_C::LightStateChanged()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.LightStateChanged");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.LightStateChanged");
 
 	ABP_InteractableShipRailingLight_C_LightStateChanged_Params params;
 
@@ -54,7 +54,7 @@ void ABP_InteractableShipRailingLight_C::LightStateChanged()
 // (Event, Public, BlueprintEvent)
 void ABP_InteractableShipRailingLight_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.ReceiveBeginPlay");
 
 	ABP_InteractableShipRailingLight_C_ReceiveBeginPlay_Params params;
 
@@ -72,7 +72,7 @@ void ABP_InteractableShipRailingLight_C::ReceiveBeginPlay()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_InteractableShipRailingLight_C::ExecuteUbergraph_BP_InteractableShipRailingLight(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.ExecuteUbergraph_BP_InteractableShipRailingLight");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_InteractableShipRailingLight.BP_InteractableShipRailingLight_C.ExecuteUbergraph_BP_InteractableShipRailingLight");
 
 	ABP_InteractableShipRailingLight_C_ExecuteUbergraph_BP_InteractableShipRailingLight_Params params;
 	params.EntryPoint = EntryPoint;

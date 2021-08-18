@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Final, Native, Static, Public, BlueprintCallable)
 void UGameLiveStreamingFunctionLibrary::STATIC_StopBroadcastingGame()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.StopBroadcastingGame");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.StopBroadcastingGame");
 
 	UGameLiveStreamingFunctionLibrary_StopBroadcastingGame_Params params;
 
@@ -49,7 +49,7 @@ void UGameLiveStreamingFunctionLibrary::STATIC_StopBroadcastingGame()
 // bool                           bDrawSimpleWebCamVideo         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UGameLiveStreamingFunctionLibrary::STATIC_StartBroadcastingGame(int FrameRate, float ScreenScaling, bool bEnableWebCam, int DesiredWebCamWidth, int DesiredWebCamHeight, bool bMirrorWebCamImage, bool bCaptureAudioFromComputer, bool bCaptureAudioFromMicrophone, bool bDrawSimpleWebCamVideo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.StartBroadcastingGame");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.StartBroadcastingGame");
 
 	UGameLiveStreamingFunctionLibrary_StartBroadcastingGame_Params params;
 	params.FrameRate = FrameRate;
@@ -77,7 +77,7 @@ void UGameLiveStreamingFunctionLibrary::STATIC_StartBroadcastingGame(int FrameRa
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool UGameLiveStreamingFunctionLibrary::STATIC_IsBroadcastingGame()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.IsBroadcastingGame");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.IsBroadcastingGame");
 
 	UGameLiveStreamingFunctionLibrary_IsBroadcastingGame_Params params;
 
@@ -99,7 +99,7 @@ bool UGameLiveStreamingFunctionLibrary::STATIC_IsBroadcastingGame()
 // class UQueryLiveStreamsCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 class UQueryLiveStreamsCallbackProxy* UQueryLiveStreamsCallbackProxy::STATIC_QueryLiveStreams(const struct FString& GameName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.QueryLiveStreamsCallbackProxy.QueryLiveStreams");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.QueryLiveStreamsCallbackProxy.QueryLiveStreams");
 
 	UQueryLiveStreamsCallbackProxy_QueryLiveStreams_Params params;
 	params.GameName = GameName;

@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // class AActor*                  DamageableActor                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UDamageablePartsInterface::UnregisterDamageablePart(class AActor* DamageableActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ShipDamage.DamageablePartsInterface.UnregisterDamageablePart");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function ShipDamage.DamageablePartsInterface.UnregisterDamageablePart");
 
 	UDamageablePartsInterface_UnregisterDamageablePart_Params params;
 	params.DamageableActor = DamageableActor;
@@ -44,7 +44,7 @@ void UDamageablePartsInterface::UnregisterDamageablePart(class AActor* Damageabl
 // class AActor*                  DamageableActor                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void UDamageablePartsInterface::RegisterDamageablePart(class AActor* DamageableActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ShipDamage.DamageablePartsInterface.RegisterDamageablePart");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function ShipDamage.DamageablePartsInterface.RegisterDamageablePart");
 
 	UDamageablePartsInterface_RegisterDamageablePart_Params params;
 	params.DamageableActor = DamageableActor;
@@ -64,7 +64,7 @@ void UDamageablePartsInterface::RegisterDamageablePart(class AActor* DamageableA
 // TArray<class AActor*>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 TArray<class AActor*> UDamageablePartsInterface::GetDamageableParts()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ShipDamage.DamageablePartsInterface.GetDamageableParts");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function ShipDamage.DamageablePartsInterface.GetDamageableParts");
 
 	UDamageablePartsInterface_GetDamageableParts_Params params;
 

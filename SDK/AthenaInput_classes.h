@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -24,12 +24,12 @@ namespace CG
 class UNotificationInputId : public UObject
 {
 public:
-	unsigned char                                      UnknownData_XW7O[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_TNVR[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.NotificationInputId");
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.NotificationInputId");
 		return ptr;
 	}
 
@@ -37,17 +37,37 @@ public:
 
 };
 
-// Class AthenaInput.AnalogInputId
-// 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
-class UAnalogInputId : public UObject
+// Class AthenaInput.CompositeInputHandler
+// 0x00B0 (FullSize[0x00D8] - InheritedSize[0x0028])
+class UCompositeInputHandler : public UObject
 {
 public:
-	unsigned char                                      UnknownData_67QJ[0x8];                                     // 0x0028(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_83ED[0xB0];                                    // 0x0028(0x00B0) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.AnalogInputId");
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.CompositeInputHandler");
+		return ptr;
+	}
+
+
+
+	void SetNotificationInputHandler(class UClass* Id, const struct FScriptDelegate& Handler);
+	void SetAnalogInputHandler(class UClass* Id, const struct FScriptDelegate& Handler);
+};
+
+// Class AthenaInput.AnalogInputId
+// 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+class UAnalogInputId : public UObject
+{
+public:
+	unsigned char                                      UnknownData_M57T[0x10];                                    // 0x0028(0x0010) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.AnalogInputId");
 		return ptr;
 	}
 
@@ -61,12 +81,12 @@ class UInputBinder : public UObject
 {
 public:
 	class UInputComponent*                             InputComponent;                                            // 0x0028(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_LN5Z[0x58];                                    // 0x0030(0x0058) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_9MPD[0x58];                                    // 0x0030(0x0058) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.InputBinder");
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.InputBinder");
 		return ptr;
 	}
 
@@ -87,7 +107,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.InputHandlerInterface");
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.InputHandlerInterface");
 		return ptr;
 	}
 
@@ -98,7 +118,7 @@ public:
 };
 
 // Class AthenaInput.TestAnalogInputId
-// 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
+// 0x0000 (FullSize[0x0038] - InheritedSize[0x0038])
 class UTestAnalogInputId : public UAnalogInputId
 {
 public:
@@ -106,7 +126,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.TestAnalogInputId");
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.TestAnalogInputId");
 		return ptr;
 	}
 
@@ -115,7 +135,7 @@ public:
 };
 
 // Class AthenaInput.TestAnalogInput2Id
-// 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
+// 0x0000 (FullSize[0x0038] - InheritedSize[0x0038])
 class UTestAnalogInput2Id : public UAnalogInputId
 {
 public:
@@ -123,7 +143,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.TestAnalogInput2Id");
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.TestAnalogInput2Id");
 		return ptr;
 	}
 
@@ -136,12 +156,12 @@ public:
 class UCompositeInputDelegatorTestsCallbackHelper : public UObject
 {
 public:
-	unsigned char                                      UnknownData_FYQX[0x50];                                    // 0x0028(0x0050) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_9W2R[0x50];                                    // 0x0028(0x0050) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.CompositeInputDelegatorTestsCallbackHelper");
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.CompositeInputDelegatorTestsCallbackHelper");
 		return ptr;
 	}
 
@@ -153,37 +173,17 @@ public:
 	TEnumAsByte<AthenaInput_EInputHandlerResult> OnFirstHandler(float Value);
 };
 
-// Class AthenaInput.CompositeInputHandler
-// 0x00B0 (FullSize[0x00D8] - InheritedSize[0x0028])
-class UCompositeInputHandler : public UObject
-{
-public:
-	unsigned char                                      UnknownData_QR23[0xB0];                                    // 0x0028(0x00B0) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.CompositeInputHandler");
-		return ptr;
-	}
-
-
-
-	void SetNotificationInputHandler(class UClass* Id, const struct FScriptDelegate& Handler);
-	void SetAnalogInputHandler(class UClass* Id, const struct FScriptDelegate& Handler);
-};
-
 // Class AthenaInput.MockDerivedCompositeInputHandler
 // 0x0008 (FullSize[0x00E0] - InheritedSize[0x00D8])
 class UMockDerivedCompositeInputHandler : public UCompositeInputHandler
 {
 public:
-	unsigned char                                      UnknownData_8VSD[0x8];                                     // 0x00D8(0x0008) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_RKJ0[0x8];                                     // 0x00D8(0x0008) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.MockDerivedCompositeInputHandler");
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.MockDerivedCompositeInputHandler");
 		return ptr;
 	}
 
@@ -200,7 +200,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.InputHandlerFunctionLibrary");
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.InputHandlerFunctionLibrary");
 		return ptr;
 	}
 
@@ -210,16 +210,16 @@ public:
 };
 
 // Class AthenaInput.MockInputHandlerCharacter
-// 0x0008 (FullSize[0x0630] - InheritedSize[0x0628])
+// 0x0008 (FullSize[0x05E0] - InheritedSize[0x05D8])
 class AMockInputHandlerCharacter : public ACharacter
 {
 public:
-	unsigned char                                      UnknownData_RAHL[0x8];                                     // 0x0628(0x0008) Fix Super Size
+	unsigned char                                      UnknownData_GOR8[0x8];                                     // 0x05D8(0x0008) Fix Super Size
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.MockInputHandlerCharacter");
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.MockInputHandlerCharacter");
 		return ptr;
 	}
 
@@ -236,7 +236,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.NamedNotificationInputInterface");
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.NamedNotificationInputInterface");
 		return ptr;
 	}
 
@@ -250,13 +250,30 @@ public:
 class UNamedNotificationInputComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_9ZFY[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_EXG8[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FNotificationInputDisplayName>       NotificationInputDisplayNames;                             // 0x00D0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, Protected)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.NamedNotificationInputComponent");
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.NamedNotificationInputComponent");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaInput.CrewNameplatesToggleInputId
+// 0x0000 (FullSize[0x0038] - InheritedSize[0x0038])
+class UCrewNameplatesToggleInputId : public UNotificationInputId
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.CrewNameplatesToggleInputId");
 		return ptr;
 	}
 
@@ -273,7 +290,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.OpenQuickMenuNotificationInputId");
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.OpenQuickMenuNotificationInputId");
 		return ptr;
 	}
 
@@ -290,7 +307,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.PressedNotificationInputId");
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.PressedNotificationInputId");
 		return ptr;
 	}
 
@@ -307,7 +324,24 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.ReleasedNotificationInputId");
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.ReleasedNotificationInputId");
+		return ptr;
+	}
+
+
+
+};
+
+// Class AthenaInput.ScrambleGamertagsToggleInputId
+// 0x0000 (FullSize[0x0038] - InheritedSize[0x0038])
+class UScrambleGamertagsToggleInputId : public UNotificationInputId
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.ScrambleGamertagsToggleInputId");
 		return ptr;
 	}
 
@@ -324,7 +358,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.TestNotificationInput2Id");
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.TestNotificationInput2Id");
 		return ptr;
 	}
 
@@ -341,7 +375,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.TestNotificationInputId");
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.TestNotificationInputId");
 		return ptr;
 	}
 
@@ -358,7 +392,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class AthenaInput.ReceivesInputInterface");
+		static UClass* ptr = UObject::FindClass("Class AthenaInput.ReceivesInputInterface");
 		return ptr;
 	}
 

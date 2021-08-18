@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -101,19 +101,29 @@ enum class NaturalDisasters_EVolcanoState : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct NaturalDisasters.VolcanoSetupDataEmbersEntry
+// 0x0010
+struct FVolcanoSetupDataEmbersEntry
+{
+	float                                              MaxDistanceInMetres;                                       // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_9MDM[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UObject*                                     Effect;                                                    // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
 // ScriptStruct NaturalDisasters.WeightedVolcanoProjectile
 // 0x00C0
 struct FWeightedVolcanoProjectile
 {
 	float                                              Weight;                                                    // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_LDK0[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_FWMP[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UClass*                                      ProjectileClass;                                           // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	float                                              ProjectileSpeedMinAtInnerRadius;                           // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ProjectileSpeedMaxAtInnerRadius;                           // 0x0014(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ProjectileSpeedMinAtOuterRadius;                           // 0x0018(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ProjectileSpeedMaxAtOuterRadius;                           // 0x001C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              ProjectileGravityScale;                                    // 0x0020(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_QHGO[0x4];                                     // 0x0024(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_MML8[0x4];                                     // 0x0024(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FWeightedProbabilityRangeOfRanges           RotationRatePitch;                                         // 0x0028(0x0030) (Edit, DisableEditOnInstance)
 	struct FWeightedProbabilityRangeOfRanges           RotationRateRoll;                                          // 0x0058(0x0030) (Edit, DisableEditOnInstance)
 	struct FWeightedProbabilityRangeOfRanges           RotationRateYaw;                                           // 0x0088(0x0030) (Edit, DisableEditOnInstance)
@@ -121,16 +131,18 @@ struct FWeightedVolcanoProjectile
 
 };
 
-// ScriptStruct NaturalDisasters.VolcanoTarget
-// 0x0018
-struct FVolcanoTarget
+// ScriptStruct NaturalDisasters.VolcanoTargetChances
+// 0x0058
+struct FVolcanoTargetChances
 {
-	TEnumAsByte<NaturalDisasters_EVolcanoTargetType>   Type;                                                      // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<NaturalDisasters_EVolcanoTargetHitType> HitType;                                                   // 0x0001(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_6VI2[0x6];                                     // 0x0002(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class AActor*                                      Target;                                                    // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                NumExtraShots;                                             // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_LG9A[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (PADDING)
+	float                                              OnTarget;                                                  // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              NearMiss;                                                  // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Random;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_GN4M[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FWeightedProbabilityRange                   OnTargetNumExtraShots;                                     // 0x0010(0x0020) (Edit, DisableEditOnInstance)
+	struct FWeightedProbabilityRange                   NearMissNumExtraShots;                                     // 0x0030(0x0020) (Edit, DisableEditOnInstance)
+	float                                              CoolDownDuration;                                          // 0x0050(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_DCK0[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (PADDING)
 
 };
 
@@ -194,12 +206,14 @@ struct FGeyserSpawnAngleOption
 
 };
 
-// ScriptStruct NaturalDisasters.VolcanoTargetCoolDown
-// 0x0010
-struct FVolcanoTargetCoolDown
+// ScriptStruct NaturalDisasters.VolcanoStateData
+// 0x000C
+struct FVolcanoStateData
 {
-	class AActor*                                      Target;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_GGW7[0x8];                                     // 0x0008(0x0008) MISSED OFFSET (PADDING)
+	TEnumAsByte<NaturalDisasters_EVolcanoState>        State;                                                     // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_654U[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              StateDuration;                                             // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              PercentageOfMaxTargetingRange;                             // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 };
 
@@ -213,39 +227,25 @@ struct FVolcanoProjectileData
 
 };
 
-// ScriptStruct NaturalDisasters.VolcanoStateData
-// 0x000C
-struct FVolcanoStateData
+// ScriptStruct NaturalDisasters.VolcanoTarget
+// 0x0018
+struct FVolcanoTarget
 {
-	TEnumAsByte<NaturalDisasters_EVolcanoState>        State;                                                     // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_XDGE[0x3];                                     // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	float                                              StateDuration;                                             // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              PercentageOfMaxTargetingRange;                             // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<NaturalDisasters_EVolcanoTargetType>   Type;                                                      // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<NaturalDisasters_EVolcanoTargetHitType> HitType;                                                   // 0x0001(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_ZH0S[0x6];                                     // 0x0002(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class AActor*                                      Target;                                                    // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                NumExtraShots;                                             // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_1KN5[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (PADDING)
 
 };
 
-// ScriptStruct NaturalDisasters.VolcanoTargetChances
-// 0x0058
-struct FVolcanoTargetChances
-{
-	float                                              OnTarget;                                                  // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              NearMiss;                                                  // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              Random;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_HHSH[0x4];                                     // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FWeightedProbabilityRange                   OnTargetNumExtraShots;                                     // 0x0010(0x0020) (Edit, DisableEditOnInstance)
-	struct FWeightedProbabilityRange                   NearMissNumExtraShots;                                     // 0x0030(0x0020) (Edit, DisableEditOnInstance)
-	float                                              CoolDownDuration;                                          // 0x0050(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_JJ5E[0x4];                                     // 0x0054(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct NaturalDisasters.VolcanoSetupDataEmbersEntry
+// ScriptStruct NaturalDisasters.VolcanoTargetCoolDown
 // 0x0010
-struct FVolcanoSetupDataEmbersEntry
+struct FVolcanoTargetCoolDown
 {
-	float                                              MaxDistanceInMetres;                                       // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_AJH6[0x4];                                     // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UObject*                                     Effect;                                                    // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                      Target;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_JD2I[0x8];                                     // 0x0008(0x0008) MISSED OFFSET (PADDING)
 
 };
 

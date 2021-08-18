@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -19,40 +19,16 @@ namespace CG
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct AthenaDebug.DrawDebugItemSphere
-// 0x0020
-struct FDrawDebugItemSphere
+// ScriptStruct AthenaDebug.DrawDebugItemString
+// 0x0030
+struct FDrawDebugItemString
 {
 	struct FName                                       GroupName;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               ReplaceInGroup;                                            // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_VTDG[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FVector                                     CentrePos;                                                 // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                              Radius;                                                    // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FColor                                      Colour;                                                    // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor)
-
-};
-
-// ScriptStruct AthenaDebug.SphereData
-// 0x0018
-struct FSphereData
-{
-	struct FVector                                     Location;                                                  // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                              Radius;                                                    // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int                                                Segments;                                                  // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FColor                                      Colour;                                                    // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor)
-
-};
-
-// ScriptStruct AthenaDebug.DrawDebugItemMessage
-// 0x0028
-struct FDrawDebugItemMessage
-{
-	struct FName                                       GroupName;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               ReplaceInGroup;                                            // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_2MKP[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FString                                     Message;                                                   // 0x0010(0x0010) (ZeroConstructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_VFOX[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FString                                     String;                                                    // 0x0010(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	struct FColor                                      Colour;                                                    // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_3OWK[0x4];                                     // 0x0024(0x0004) MISSED OFFSET (PADDING)
+	struct FVector                                     StringPos;                                                 // 0x0024(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 
 };
 
@@ -62,7 +38,7 @@ struct FDrawDebugItemSector
 {
 	struct FName                                       GroupName;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               ReplaceInGroup;                                            // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_S831[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_XZHK[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	float                                              RotationAngle;                                             // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     Centre;                                                    // 0x0010(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              SectorAngle;                                               // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -81,7 +57,7 @@ struct FDrawDebugItemLine
 {
 	struct FName                                       GroupName;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               ReplaceInGroup;                                            // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_64T2[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_2GRA[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     LineStart;                                                 // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                     LineEnd;                                                   // 0x0018(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FColor                                      Colour;                                                    // 0x0024(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -95,13 +71,13 @@ struct FDrawDebugItemCapsule
 {
 	struct FName                                       GroupName;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               ReplaceInGroup;                                            // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_QDHT[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_CSNF[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     CentrePos;                                                 // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                              HalfHeight;                                                // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              Radius;                                                    // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FQuat                                       Rotation;                                                  // 0x0020(0x0010) (IsPlainOldData, NoDestructor)
 	struct FColor                                      Colour;                                                    // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_FZVL[0xC];                                     // 0x0034(0x000C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_QSFH[0xC];                                     // 0x0034(0x000C) MISSED OFFSET (PADDING)
 
 };
 
@@ -111,26 +87,50 @@ struct FDrawDebugItemBox
 {
 	struct FName                                       GroupName;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               ReplaceInGroup;                                            // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_1O3E[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_YI68[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FVector                                     CentrePos;                                                 // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                     Box;                                                       // 0x0018(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_97UX[0xC];                                     // 0x0024(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_NQ5I[0xC];                                     // 0x0024(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FQuat                                       Rotation;                                                  // 0x0030(0x0010) (IsPlainOldData, NoDestructor)
 	struct FColor                                      Colour;                                                    // 0x0040(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_BY5R[0xC];                                     // 0x0044(0x000C) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_O91H[0xC];                                     // 0x0044(0x000C) MISSED OFFSET (PADDING)
 
 };
 
-// ScriptStruct AthenaDebug.DrawDebugItemString
-// 0x0030
-struct FDrawDebugItemString
+// ScriptStruct AthenaDebug.DrawDebugItemSphere
+// 0x0020
+struct FDrawDebugItemSphere
 {
 	struct FName                                       GroupName;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               ReplaceInGroup;                                            // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_QQ36[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FString                                     String;                                                    // 0x0010(0x0010) (ZeroConstructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_FSD4[0x3];                                     // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FVector                                     CentrePos;                                                 // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              Radius;                                                    // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FColor                                      Colour;                                                    // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor)
+
+};
+
+// ScriptStruct AthenaDebug.DrawDebugItemMessage
+// 0x0028
+struct FDrawDebugItemMessage
+{
+	struct FName                                       GroupName;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               ReplaceInGroup;                                            // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_3TPK[0x7];                                     // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FString                                     Message;                                                   // 0x0010(0x0010) (ZeroConstructor, HasGetValueTypeHash)
 	struct FColor                                      Colour;                                                    // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                     StringPos;                                                 // 0x0024(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_5CRN[0x4];                                     // 0x0024(0x0004) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct AthenaDebug.SphereData
+// 0x0018
+struct FSphereData
+{
+	struct FVector                                     Location;                                                  // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              Radius;                                                    // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                Segments;                                                  // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FColor                                      Colour;                                                    // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor)
 
 };
 

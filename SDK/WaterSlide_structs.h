@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -19,35 +19,8 @@ namespace CG
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct WaterSlide.WaterSlideActionStateParams
-// 0x0024
-struct FWaterSlideActionStateParams
-{
-	float                                              ForcedFieldOfView;                                         // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               ForceStash;                                                // 0x0004(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_PG0H[0x3];                                     // 0x0005(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FLookAtOffsetParams                         LookAtOffsetParams;                                        // 0x0008(0x001C) (Edit)
-
-};
-
-// ScriptStruct WaterSlide.OnPlayerSpeedOnWaterSlideChangedActionStateEvent
-// 0x0004
-struct FOnPlayerSpeedOnWaterSlideChangedActionStateEvent
-{
-	unsigned char                                      UnknownData_A5J1[0x4];                                     // 0x0000(0x0004) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct WaterSlide.OnPlayerChangedWaterSlideRouteActionStateEvent
-// 0x0001
-struct FOnPlayerChangedWaterSlideRouteActionStateEvent
-{
-	unsigned char                                      UnknownData_I9A7[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
 // ScriptStruct WaterSlide.WaterSlideParams
-// 0x001C
+// 0x0024
 struct FWaterSlideParams
 {
 	float                                              ForwardSpeed;                                              // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -56,31 +29,7 @@ struct FWaterSlideParams
 	float                                              VeeringSpeed;                                              // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              LeftVeeringDistance;                                       // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              RightVeeringDistance;                                      // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              DistanceAboveSlideOffset;                                  // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-};
-
-// ScriptStruct WaterSlide.OnEndWaterSlideActionStateEvent
-// 0x0001
-struct FOnEndWaterSlideActionStateEvent
-{
-	unsigned char                                      UnknownData_ZVJU[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct WaterSlide.OnStartWaterSlideActionStateEvent
-// 0x0001
-struct FOnStartWaterSlideActionStateEvent
-{
-	unsigned char                                      UnknownData_S9N4[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
-
-};
-
-// ScriptStruct WaterSlide.OnExitedWaterSlideEvent
-// 0x0001
-struct FOnExitedWaterSlideEvent
-{
-	unsigned char                                      UnknownData_62S4[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	struct FPlayerStat                                 StatToFireForRouteChange;                                  // 0x0018(0x000C) (Edit)
 
 };
 
@@ -89,6 +38,60 @@ struct FOnExitedWaterSlideEvent
 struct FWaterSlideActionStateConstructionInfo : public FActorActionStateConstructionInfo
 {
 	class USceneComponent*                             SceneComponent;                                            // 0x0030(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct WaterSlide.WaterSlideActionStateParams
+// 0x0024
+struct FWaterSlideActionStateParams
+{
+	float                                              ForcedFieldOfView;                                         // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               ForceStash;                                                // 0x0004(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_MPTH[0x3];                                     // 0x0005(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FLookAtOffsetParams                         LookAtOffsetParams;                                        // 0x0008(0x001C) (Edit)
+
+};
+
+// ScriptStruct WaterSlide.OnPlayerSpeedOnWaterSlideChangedActionStateEvent
+// 0x000C
+struct FOnPlayerSpeedOnWaterSlideChangedActionStateEvent
+{
+	unsigned char                                      UnknownData_QHF0[0xC];                                     // 0x0000(0x000C) MISSED OFFSET (PADDING)
+
+};
+
+// ScriptStruct WaterSlide.OnPlayerChangedWaterSlideRouteActionStateEvent
+// 0x0010
+struct FOnPlayerChangedWaterSlideRouteActionStateEvent
+{
+	unsigned char                                      UnknownData_DFPM[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UWwiseEvent*                                 WaterSlideChangeForkOneShot;                               // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct WaterSlide.OnEndWaterSlideActionStateEvent
+// 0x0018
+struct FOnEndWaterSlideActionStateEvent
+{
+	unsigned char                                      UnknownData_500X[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UWwiseEvent*                                 WaterSlideEnd;                                             // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWwiseEvent*                                 WaterSlideIsEndOneShot;                                    // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct WaterSlide.OnStartWaterSlideActionStateEvent
+// 0x0008
+struct FOnStartWaterSlideActionStateEvent
+{
+	class UWwiseEvent*                                 WaterSlideStart;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+};
+
+// ScriptStruct WaterSlide.OnExitedWaterSlideEvent
+// 0x0001
+struct FOnExitedWaterSlideEvent
+{
+	unsigned char                                      UnknownData_KDZF[0x1];                                     // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 };
 

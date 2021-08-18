@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -25,7 +25,7 @@ namespace CG
 // class UMaterialInstance*       Seagull_MT_LOD                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Seagull01_8POI_C::seagull_Fade(class UMaterialInstance* Seagull_Material, class UMaterialInstance* Seagull_MT_LOD)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.seagull_Fade");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.seagull_Fade");
 
 	ABP_Seagull01_8POI_C_seagull_Fade_Params params;
 	params.Seagull_Material = Seagull_Material;
@@ -43,7 +43,7 @@ void ABP_Seagull01_8POI_C::seagull_Fade(class UMaterialInstance* Seagull_Materia
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_Seagull01_8POI_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.UserConstructionScript");
 
 	ABP_Seagull01_8POI_C_UserConstructionScript_Params params;
 
@@ -59,7 +59,7 @@ void ABP_Seagull01_8POI_C::UserConstructionScript()
 // (Event, Public, BlueprintEvent)
 void ABP_Seagull01_8POI_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.ReceiveBeginPlay");
 
 	ABP_Seagull01_8POI_C_ReceiveBeginPlay_Params params;
 
@@ -75,7 +75,7 @@ void ABP_Seagull01_8POI_C::ReceiveBeginPlay()
 // (Event, Protected, BlueprintEvent)
 void ABP_Seagull01_8POI_C::FadeIn()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.FadeIn");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.FadeIn");
 
 	ABP_Seagull01_8POI_C_FadeIn_Params params;
 
@@ -91,7 +91,7 @@ void ABP_Seagull01_8POI_C::FadeIn()
 // (Event, Protected, BlueprintEvent)
 void ABP_Seagull01_8POI_C::FadeOut()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.FadeOut");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.FadeOut");
 
 	ABP_Seagull01_8POI_C_FadeOut_Params params;
 
@@ -109,7 +109,7 @@ void ABP_Seagull01_8POI_C::FadeOut()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_Seagull01_8POI_C::ExecuteUbergraph_BP_Seagull01_8POI(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.ExecuteUbergraph_BP_Seagull01_8POI");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Seagull01_8POI.BP_Seagull01_8POI_C.ExecuteUbergraph_BP_Seagull01_8POI");
 
 	ABP_Seagull01_8POI_C_ExecuteUbergraph_BP_Seagull01_8POI_Params params;
 	params.EntryPoint = EntryPoint;

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GeyserDynamic.BP_GeyserDynamic_C
-// 0x0000 (FullSize[0x0498] - InheritedSize[0x0498])
+// 0x0000 (FullSize[0x0438] - InheritedSize[0x0438])
 class ABP_GeyserDynamic_C : public ABP_Geyser_C
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_GeyserDynamic.BP_GeyserDynamic_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_GeyserDynamic.BP_GeyserDynamic_C");
 		return ptr;
 	}
 

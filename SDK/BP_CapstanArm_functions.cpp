@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 struct FVector ABP_CapstanArm_C::GetLookAtPosBasisSpace()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetLookAtPosBasisSpace");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetLookAtPosBasisSpace");
 
 	ABP_CapstanArm_C_GetLookAtPosBasisSpace_Params params;
 
@@ -44,7 +44,7 @@ struct FVector ABP_CapstanArm_C::GetLookAtPosBasisSpace()
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 struct FVector ABP_CapstanArm_C::GetFrontFacingVector()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetFrontFacingVector");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetFrontFacingVector");
 
 	ABP_CapstanArm_C_GetFrontFacingVector_Params params;
 
@@ -64,7 +64,7 @@ struct FVector ABP_CapstanArm_C::GetFrontFacingVector()
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 bool ABP_CapstanArm_C::DoesRequireFacingFront()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.DoesRequireFacingFront");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.DoesRequireFacingFront");
 
 	ABP_CapstanArm_C_DoesRequireFacingFront_Params params;
 
@@ -84,7 +84,7 @@ bool ABP_CapstanArm_C::DoesRequireFacingFront()
 // struct FDockableInfo           ReturnValue                    (Parm, OutParm, ReturnParm)
 struct FDockableInfo ABP_CapstanArm_C::GetDockableInfo()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetDockableInfo");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetDockableInfo");
 
 	ABP_CapstanArm_C_GetDockableInfo_Params params;
 
@@ -106,7 +106,7 @@ struct FDockableInfo ABP_CapstanArm_C::GetDockableInfo()
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 struct FVector ABP_CapstanArm_C::GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetClosestInteractionPoint");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetClosestInteractionPoint");
 
 	ABP_CapstanArm_C_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
@@ -130,7 +130,7 @@ struct FVector ABP_CapstanArm_C::GetClosestInteractionPoint(const struct FVector
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 struct FVector ABP_CapstanArm_C::GetLookAtPos()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetLookAtPos");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.GetLookAtPos");
 
 	ABP_CapstanArm_C_GetLookAtPos_Params params;
 
@@ -148,7 +148,7 @@ struct FVector ABP_CapstanArm_C::GetLookAtPos()
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_CapstanArm_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CapstanArm.BP_CapstanArm_C.UserConstructionScript");
 
 	ABP_CapstanArm_C_UserConstructionScript_Params params;
 

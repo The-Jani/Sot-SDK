@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Cooking.CookableInterface");
+		static UClass* ptr = UObject::FindClass("Class Cooking.CookableInterface");
 		return ptr;
 	}
 
@@ -45,7 +45,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Cooking.CookingDefaultsInterface");
+		static UClass* ptr = UObject::FindClass("Class Cooking.CookingDefaultsInterface");
 		return ptr;
 	}
 
@@ -62,7 +62,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Cooking.CookingStatusPublisherInterface");
+		static UClass* ptr = UObject::FindClass("Class Cooking.CookingStatusPublisherInterface");
 		return ptr;
 	}
 
@@ -79,7 +79,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Cooking.CookingStateInterface");
+		static UClass* ptr = UObject::FindClass("Class Cooking.CookingStateInterface");
 		return ptr;
 	}
 
@@ -92,21 +92,21 @@ public:
 class UCookableComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_6XRR[0x20];                                    // 0x00C8(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_Z2R8[0x20];                                    // 0x00C8(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UClass*                                      NextCookState;                                             // 0x00E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	float                                              TimeToNextCookState;                                       // 0x00F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_0XG7[0x4];                                     // 0x00F4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_BNNJ[0x4];                                     // 0x00F4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FCookableComponentSmokeFeedbackTimingEntry> SmokeFeedbackLevels;                                       // 0x00F8(0x0010) (Edit, ZeroConstructor)
 	class UCurveFloat*                                 VisibleCookedExtentOverTime;                               // 0x0108(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              DefaultVisibleCookedExtent;                                // 0x0110(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       CookableTypeName;                                          // 0x0114(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TEnumAsByte<Cooking_ECookingState>                 CookingState;                                              // 0x011C(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_SIW2[0x3];                                     // 0x011D(0x0003) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_K48N[0x3];                                     // 0x011D(0x0003) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Cooking.CookableComponent");
+		static UClass* ptr = UObject::FindClass("Class Cooking.CookableComponent");
 		return ptr;
 	}
 
@@ -123,7 +123,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Cooking.CookerInterface");
+		static UClass* ptr = UObject::FindClass("Class Cooking.CookerInterface");
 		return ptr;
 	}
 
@@ -136,7 +136,7 @@ public:
 class UCookerComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_Y762[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_ZUDX[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	TArray<struct FStatus>                             StatusToApplyToContents;                                   // 0x00D0(0x0010) (Edit, ZeroConstructor)
 	TArray<struct FCookerSmokeFeedbackEntry>           VFXFeedback;                                               // 0x00E0(0x0010) (Edit, ZeroConstructor)
 	class UStaticMeshMemoryConstraintComponent*        CookableStaticMeshComponent;                               // 0x00F0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -145,22 +145,22 @@ public:
 	struct FName                                       BurnDownDirectionParameterName;                            // 0x0108(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              PlacementVarianceAngleBound;                               // 0x0110(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               OnByDefault;                                               // 0x0114(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_D5KQ[0x3];                                     // 0x0115(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_7S6S[0x3];                                     // 0x0115(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UCookingComponentAudioParams*                AudioParams;                                               // 0x0118(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash)
 	TEnumAsByte<Athena_EVfxRegion>                     VfxLocation;                                               // 0x0120(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_T9WY[0x7];                                     // 0x0121(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_GYGD[0x7];                                     // 0x0121(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class AItemInfo*                                   CurrentlyCookingItem;                                      // 0x0128(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FCookingClientRepresentation                CookingState;                                              // 0x0130(0x0068) (Net, Transient, RepNotify)
 	class UParticleSystemComponent*                    SmokeParticleComponent;                                    // 0x0198(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*                    VisibleCookableMaterial;                                   // 0x01A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               TurnedOn;                                                  // 0x01A8(0x0001) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
 	bool                                               OnIsland;                                                  // 0x01A9(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_OZ4W[0x9E];                                    // 0x01AA(0x009E) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_KKD8[0x9E];                                    // 0x01AA(0x009E) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Cooking.CookerComponent");
+		static UClass* ptr = UObject::FindClass("Class Cooking.CookerComponent");
 		return ptr;
 	}
 
@@ -176,7 +176,7 @@ class UCookingComponentAudioParams : public UDataAsset
 public:
 	class UWwiseObjectPoolWrapper*                     CookingPool;                                               // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                     EmitterOffsetVector;                                       // 0x0030(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_8MTD[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_HD8H[0x4];                                     // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	class UWwiseEvent*                                 FoodPlaceInPot;                                            // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWwiseEvent*                                 CookingStart;                                              // 0x0048(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWwiseEvent*                                 CookingStop;                                               // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -189,12 +189,12 @@ public:
 	struct FName                                       FoodTypeRareMeat;                                          // 0x0088(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FName                                       FoodCookedAmount;                                          // 0x0090(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              MaxCookingRtpcAmount;                                      // 0x0098(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_CY0C[0x4];                                     // 0x009C(0x0004) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_DX30[0x4];                                     // 0x009C(0x0004) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Cooking.CookingComponentAudioParams");
+		static UClass* ptr = UObject::FindClass("Class Cooking.CookingComponentAudioParams");
 		return ptr;
 	}
 
@@ -203,32 +203,32 @@ public:
 };
 
 // Class Cooking.CookingPot
-// 0x01E0 (FullSize[0x0638] - InheritedSize[0x0458])
+// 0x01E0 (FullSize[0x05D8] - InheritedSize[0x03F8])
 class ACookingPot : public AInteractableBase
 {
 public:
-	unsigned char                                      UnknownData_QEOU[0x8];                                     // 0x0458(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	class UStaticMeshComponent*                        MeshComponent;                                             // 0x0460(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UActionRulesInteractableComponent*           InteractableComponent;                                     // 0x0468(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCookerComponent*                            CookerComponent;                                           // 0x0470(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                              HoldToInteractTime;                                        // 0x0478(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_PU8E[0x4];                                     // 0x047C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-	struct FText                                       NotWieldingCookableItemTooltip;                            // 0x0480(0x0018) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData_ISN9[0x20];                                    // 0x047C(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       WieldingCookableItemTooltip;                               // 0x04B8(0x0018) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData_1H77[0x20];                                    // 0x04B8(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       TakeItemTooltip;                                           // 0x04F0(0x0018) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData_A2CA[0x20];                                    // 0x04F0(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       CannotTakeItemTooltip;                                     // 0x0528(0x0018) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData_2T9G[0x20];                                    // 0x0528(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	struct FText                                       MixInItemTooltip;                                          // 0x0560(0x0018) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData_ZT0A[0x20];                                    // 0x0560(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	unsigned char                                      UnknownData_H362[0xA0];                                    // 0x0598(0x00A0) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_2NWW[0x8];                                     // 0x03F8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UStaticMeshComponent*                        MeshComponent;                                             // 0x0400(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UActionRulesInteractableComponent*           InteractableComponent;                                     // 0x0408(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCookerComponent*                            CookerComponent;                                           // 0x0410(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              HoldToInteractTime;                                        // 0x0418(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_W2ME[0x4];                                     // 0x041C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FText                                       NotWieldingCookableItemTooltip;                            // 0x0420(0x0018) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData_EPBD[0x20];                                    // 0x041C(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       WieldingCookableItemTooltip;                               // 0x0458(0x0018) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData_H5IF[0x20];                                    // 0x0458(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       TakeItemTooltip;                                           // 0x0490(0x0018) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData_HUQY[0x20];                                    // 0x0490(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       CannotTakeItemTooltip;                                     // 0x04C8(0x0018) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData_Q6RI[0x20];                                    // 0x04C8(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	struct FText                                       MixInItemTooltip;                                          // 0x0500(0x0018) ELEMENT_SIZE_MISMATCH (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData_60ST[0x20];                                    // 0x0500(0x0020) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char                                      UnknownData_HI5J[0xA0];                                    // 0x0538(0x00A0) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Cooking.CookingPot");
+		static UClass* ptr = UObject::FindClass("Class Cooking.CookingPot");
 		return ptr;
 	}
 
@@ -245,7 +245,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Cooking.CookItemConditionalStatTrigger");
+		static UClass* ptr = UObject::FindClass("Class Cooking.CookItemConditionalStatTrigger");
 		return ptr;
 	}
 
@@ -259,12 +259,12 @@ class UHasRequiredCookingStateStatCondition : public UTargetedStatCondition
 {
 public:
 	TEnumAsByte<Cooking_ECookingState>                 RequiredState;                                             // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	unsigned char                                      UnknownData_UT0G[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_8Z6N[0x7];                                     // 0x0031(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Cooking.HasRequiredCookingStateStatCondition");
+		static UClass* ptr = UObject::FindClass("Class Cooking.HasRequiredCookingStateStatCondition");
 		return ptr;
 	}
 
@@ -281,7 +281,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Cooking.MixableInterface");
+		static UClass* ptr = UObject::FindClass("Class Cooking.MixableInterface");
 		return ptr;
 	}
 
@@ -298,7 +298,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Cooking.PottableInterface");
+		static UClass* ptr = UObject::FindClass("Class Cooking.PottableInterface");
 		return ptr;
 	}
 
@@ -311,14 +311,14 @@ public:
 class UPottableComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData_NTSI[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      UnknownData_JA1L[0x8];                                     // 0x00C8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	bool                                               CanBePutInPot;                                             // 0x00D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor)
-	unsigned char                                      UnknownData_P2WB[0x7];                                     // 0x00D1(0x0007) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_429S[0x7];                                     // 0x00D1(0x0007) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Cooking.PottableComponent");
+		static UClass* ptr = UObject::FindClass("Class Cooking.PottableComponent");
 		return ptr;
 	}
 

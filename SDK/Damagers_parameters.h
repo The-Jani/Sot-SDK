@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -40,6 +40,16 @@ struct URadialDamagerComponent_BeginDamage_Params
 struct UShipDamagerComponent_SetShape_Params
 {
 	class UPrimitiveComponent*                         InShape;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function Damagers.ShipDamagerComponent.EndDamage
+struct UShipDamagerComponent_EndDamage_Params
+{
+};
+
+// Function Damagers.ShipDamagerComponent.BeginDamage
+struct UShipDamagerComponent_BeginDamage_Params
+{
 };
 
 // Function Damagers.ShockwaveDamagerInterface.StartShockwaveAtLocation

@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,16 +20,16 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Cutlass_Item.BP_Cutlass_Item_C
-// 0x0008 (FullSize[0x0AC8] - InheritedSize[0x0AC0])
+// 0x0008 (FullSize[0x0A68] - InheritedSize[0x0A60])
 class ABP_Cutlass_Item_C : public APlayerMeleeWeapon
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0AC0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0A60(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Cutlass_Item.BP_Cutlass_Item_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Cutlass_Item.BP_Cutlass_Item_C");
 		return ptr;
 	}
 

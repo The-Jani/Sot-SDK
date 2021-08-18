@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -24,7 +24,7 @@ namespace CG
 // struct FDockableInfo           ReturnValue                    (Parm, OutParm, ReturnParm)
 struct FDockableInfo ABP_CustomisableLadder_C::GetDockableInfo()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.GetDockableInfo");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.GetDockableInfo");
 
 	ABP_CustomisableLadder_C_GetDockableInfo_Params params;
 
@@ -42,7 +42,7 @@ struct FDockableInfo ABP_CustomisableLadder_C::GetDockableInfo()
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 void ABP_CustomisableLadder_C::Construct_Ladder()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.Construct Ladder");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.Construct Ladder");
 
 	ABP_CustomisableLadder_C_Construct_Ladder_Params params;
 
@@ -60,7 +60,7 @@ void ABP_CustomisableLadder_C::Construct_Ladder()
 // float                          Height                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_CustomisableLadder_C::Get_Total_Height_Before_Cap(float* Height)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.Get Total Height Before Cap");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.Get Total Height Before Cap");
 
 	ABP_CustomisableLadder_C_Get_Total_Height_Before_Cap_Params params;
 
@@ -81,7 +81,7 @@ void ABP_CustomisableLadder_C::Get_Total_Height_Before_Cap(float* Height)
 // int                            Num_Steps                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_CustomisableLadder_C::Get_Steps(int* Num_Steps)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.Get Steps");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.Get Steps");
 
 	ABP_CustomisableLadder_C_Get_Steps_Params params;
 
@@ -102,7 +102,7 @@ void ABP_CustomisableLadder_C::Get_Steps(int* Num_Steps)
 // struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor)
 struct FTransform ABP_CustomisableLadder_C::GetBottomLadderRungTransform()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.GetBottomLadderRungTransform");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.GetBottomLadderRungTransform");
 
 	ABP_CustomisableLadder_C_GetBottomLadderRungTransform_Params params;
 
@@ -122,7 +122,7 @@ struct FTransform ABP_CustomisableLadder_C::GetBottomLadderRungTransform()
 // struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor)
 struct FTransform ABP_CustomisableLadder_C::GetTopLadderRungTransform()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.GetTopLadderRungTransform");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.GetTopLadderRungTransform");
 
 	ABP_CustomisableLadder_C_GetTopLadderRungTransform_Params params;
 
@@ -143,7 +143,7 @@ struct FTransform ABP_CustomisableLadder_C::GetTopLadderRungTransform()
 // struct FVector                 Return_Value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_CustomisableLadder_C::Get_World_Loc_at_Height_Along_Z(float Relative_Z, struct FVector* Return_Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.Get World Loc at Height Along Z");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.Get World Loc at Height Along Z");
 
 	ABP_CustomisableLadder_C_Get_World_Loc_at_Height_Along_Z_Params params;
 	params.Relative_Z = Relative_Z;
@@ -166,7 +166,7 @@ void ABP_CustomisableLadder_C::Get_World_Loc_at_Height_Along_Z(float Relative_Z,
 // TArray<struct FVector>         Positions                      (Parm, OutParm, ZeroConstructor, ReferenceParm)
 void ABP_CustomisableLadder_C::SetupSpline(class USplineComponent* Spline_Component, TArray<struct FVector>* Positions)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.SetupSpline");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.SetupSpline");
 
 	ABP_CustomisableLadder_C_SetupSpline_Params params;
 	params.Spline_Component = Spline_Component;
@@ -186,7 +186,7 @@ void ABP_CustomisableLadder_C::SetupSpline(class USplineComponent* Spline_Compon
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_CustomisableLadder_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.UserConstructionScript");
 
 	ABP_CustomisableLadder_C_UserConstructionScript_Params params;
 
@@ -202,7 +202,7 @@ void ABP_CustomisableLadder_C::UserConstructionScript()
 // (Event, Public, BlueprintEvent)
 void ABP_CustomisableLadder_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.ReceiveBeginPlay");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.ReceiveBeginPlay");
 
 	ABP_CustomisableLadder_C_ReceiveBeginPlay_Params params;
 
@@ -220,7 +220,7 @@ void ABP_CustomisableLadder_C::ReceiveBeginPlay()
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_CustomisableLadder_C::ExecuteUbergraph_BP_CustomisableLadder(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.ExecuteUbergraph_BP_CustomisableLadder");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CustomisableLadder.BP_CustomisableLadder_C.ExecuteUbergraph_BP_CustomisableLadder");
 
 	ABP_CustomisableLadder_C_ExecuteUbergraph_BP_CustomisableLadder_Params params;
 	params.EntryPoint = EntryPoint;

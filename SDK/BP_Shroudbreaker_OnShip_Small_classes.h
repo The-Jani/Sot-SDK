@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Shroudbreaker_OnShip_Small.BP_Shroudbreaker_OnShip_Small_C
-// 0x0000 (FullSize[0x0788] - InheritedSize[0x0788])
+// 0x0000 (FullSize[0x0728] - InheritedSize[0x0728])
 class ABP_Shroudbreaker_OnShip_Small_C : public ABP_Shroudbreaker_OnShip_C
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Shroudbreaker_OnShip_Small.BP_Shroudbreaker_OnShip_Small_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Shroudbreaker_OnShip_Small.BP_Shroudbreaker_OnShip_Small_C");
 		return ptr;
 	}
 

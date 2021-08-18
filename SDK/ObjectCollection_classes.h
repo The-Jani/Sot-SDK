@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -28,25 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ObjectCollection.ObjectCollectorInterface");
-		return ptr;
-	}
-
-
-
-};
-
-// Class ObjectCollection.TestObjectForCollection
-// 0x0048 (FullSize[0x0070] - InheritedSize[0x0028])
-class UTestObjectForCollection : public UObject
-{
-public:
-	unsigned char                                      UnknownData_Q274[0x48];                                    // 0x0028(0x0048) MISSED OFFSET (PADDING)
-
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ObjectCollection.TestObjectForCollection");
+		static UClass* ptr = UObject::FindClass("Class ObjectCollection.ObjectCollectorInterface");
 		return ptr;
 	}
 
@@ -59,12 +41,30 @@ public:
 class UTestCollector : public UObject
 {
 public:
-	unsigned char                                      UnknownData_RAFY[0x60];                                    // 0x0028(0x0060) MISSED OFFSET (PADDING)
+	unsigned char                                      UnknownData_HNJ1[0x60];                                    // 0x0028(0x0060) MISSED OFFSET (PADDING)
 
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ObjectCollection.TestCollector");
+		static UClass* ptr = UObject::FindClass("Class ObjectCollection.TestCollector");
+		return ptr;
+	}
+
+
+
+};
+
+// Class ObjectCollection.TestObjectForCollection
+// 0x0048 (FullSize[0x0070] - InheritedSize[0x0028])
+class UTestObjectForCollection : public UObject
+{
+public:
+	unsigned char                                      UnknownData_3DM5[0x48];                                    // 0x0028(0x0048) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass("Class ObjectCollection.TestObjectForCollection");
 		return ptr;
 	}
 

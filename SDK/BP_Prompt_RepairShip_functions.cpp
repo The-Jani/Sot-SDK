@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -22,7 +22,7 @@ namespace CG
 // (Public, BlueprintCallable, BlueprintEvent)
 void UBP_Prompt_RepairShip_C::UnregisterDamageEventFromCurrentShip()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_RepairShip.BP_Prompt_RepairShip_C.UnregisterDamageEventFromCurrentShip");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_RepairShip.BP_Prompt_RepairShip_C.UnregisterDamageEventFromCurrentShip");
 
 	UBP_Prompt_RepairShip_C_UnregisterDamageEventFromCurrentShip_Params params;
 
@@ -38,7 +38,7 @@ void UBP_Prompt_RepairShip_C::UnregisterDamageEventFromCurrentShip()
 // (Public, BlueprintCallable, BlueprintEvent)
 void UBP_Prompt_RepairShip_C::RegisterDamageEventWithCurrentShip()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_RepairShip.BP_Prompt_RepairShip_C.RegisterDamageEventWithCurrentShip");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_RepairShip.BP_Prompt_RepairShip_C.RegisterDamageEventWithCurrentShip");
 
 	UBP_Prompt_RepairShip_C_RegisterDamageEventWithCurrentShip_Params params;
 
@@ -54,7 +54,7 @@ void UBP_Prompt_RepairShip_C::RegisterDamageEventWithCurrentShip()
 // (Public, BlueprintCallable, BlueprintEvent)
 void UBP_Prompt_RepairShip_C::Evaluate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_RepairShip.BP_Prompt_RepairShip_C.Evaluate");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_RepairShip.BP_Prompt_RepairShip_C.Evaluate");
 
 	UBP_Prompt_RepairShip_C_Evaluate_Params params;
 
@@ -72,7 +72,7 @@ void UBP_Prompt_RepairShip_C::Evaluate()
 // struct FObjectMessagingDispatcherHandle CharacterDispatcher            (ConstParm, Parm, OutParm, ReferenceParm)
 void UBP_Prompt_RepairShip_C::RegisterCharacterEvents_Implementable(const struct FObjectMessagingDispatcherHandle& CharacterDispatcher)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_RepairShip.BP_Prompt_RepairShip_C.RegisterCharacterEvents_Implementable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_RepairShip.BP_Prompt_RepairShip_C.RegisterCharacterEvents_Implementable");
 
 	UBP_Prompt_RepairShip_C_RegisterCharacterEvents_Implementable_Params params;
 	params.CharacterDispatcher = CharacterDispatcher;
@@ -91,7 +91,7 @@ void UBP_Prompt_RepairShip_C::RegisterCharacterEvents_Implementable(const struct
 // struct FEventCurrentShipChanged Event                          (Parm)
 void UBP_Prompt_RepairShip_C::OnCurrentShipChanged(const struct FEventCurrentShipChanged& Event)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_RepairShip.BP_Prompt_RepairShip_C.OnCurrentShipChanged");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_RepairShip.BP_Prompt_RepairShip_C.OnCurrentShipChanged");
 
 	UBP_Prompt_RepairShip_C_OnCurrentShipChanged_Params params;
 	params.Event = Event;
@@ -110,7 +110,7 @@ void UBP_Prompt_RepairShip_C::OnCurrentShipChanged(const struct FEventCurrentShi
 // struct FDamageZoneDamageLevelChanged Event                          (Parm)
 void UBP_Prompt_RepairShip_C::OnShipDamaged(const struct FDamageZoneDamageLevelChanged& Event)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_RepairShip.BP_Prompt_RepairShip_C.OnShipDamaged");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_RepairShip.BP_Prompt_RepairShip_C.OnShipDamaged");
 
 	UBP_Prompt_RepairShip_C_OnShipDamaged_Params params;
 	params.Event = Event;
@@ -129,7 +129,7 @@ void UBP_Prompt_RepairShip_C::OnShipDamaged(const struct FDamageZoneDamageLevelC
 // struct FObjectMessagingDispatcherHandle CharacterDispatcher            (ConstParm, Parm, OutParm, ReferenceParm)
 void UBP_Prompt_RepairShip_C::UnregisterCharacterEvents_Implementable(const struct FObjectMessagingDispatcherHandle& CharacterDispatcher)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_RepairShip.BP_Prompt_RepairShip_C.UnregisterCharacterEvents_Implementable");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_RepairShip.BP_Prompt_RepairShip_C.UnregisterCharacterEvents_Implementable");
 
 	UBP_Prompt_RepairShip_C_UnregisterCharacterEvents_Implementable_Params params;
 	params.CharacterDispatcher = CharacterDispatcher;
@@ -148,7 +148,7 @@ void UBP_Prompt_RepairShip_C::UnregisterCharacterEvents_Implementable(const stru
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void UBP_Prompt_RepairShip_C::ExecuteUbergraph_BP_Prompt_RepairShip(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prompt_RepairShip.BP_Prompt_RepairShip_C.ExecuteUbergraph_BP_Prompt_RepairShip");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Prompt_RepairShip.BP_Prompt_RepairShip_C.ExecuteUbergraph_BP_Prompt_RepairShip");
 
 	UBP_Prompt_RepairShip_C_ExecuteUbergraph_BP_Prompt_RepairShip_Params params;
 	params.EntryPoint = EntryPoint;

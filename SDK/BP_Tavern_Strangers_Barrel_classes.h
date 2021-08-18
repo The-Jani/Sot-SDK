@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Tavern_Strangers_Barrel.BP_Tavern_Strangers_Barrel_C
-// 0x0000 (FullSize[0x0438] - InheritedSize[0x0438])
+// 0x0000 (FullSize[0x03D8] - InheritedSize[0x03D8])
 class ABP_Tavern_Strangers_Barrel_C : public ATavernStrangersBarrel
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Tavern_Strangers_Barrel.BP_Tavern_Strangers_Barrel_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Tavern_Strangers_Barrel.BP_Tavern_Strangers_Barrel_C");
 		return ptr;
 	}
 

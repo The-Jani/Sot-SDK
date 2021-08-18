@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -19,6 +19,73 @@ namespace CG
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function Animation.AnimationDataFunctionLib.UnwrapAnimDataEntryStruct
+struct UAnimationDataFunctionLib_UnwrapAnimDataEntryStruct_Params
+{
+	struct FAnimDataEntryStructWrapper                 Wrapper;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
+	class UScriptStruct*                               DestinationStruct;                                         // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGenericStruct                              Value;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+
+// Function Animation.AnimationDataFunctionLib.MakeAnimationData
+struct UAnimationDataFunctionLib_MakeAnimationData_Params
+{
+	class UClass*                                      Class;                                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	class UAnimationData*                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function Animation.AnimationDataFunctionLib.GetAnimDataEntryStructAsStructWrapper
+struct UAnimationDataFunctionLib_GetAnimDataEntryStructAsStructWrapper_Params
+{
+	class UAnimationData*                              AnimationDataObject;                                       // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UScriptStruct*                               TheClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAnimDataEntryStructWrapper                 ReturnValue;                                               // (Parm, OutParm, ReturnParm)
+};
+
+// Function Animation.AnimationDataFunctionLib.CheckAnimDataClassTypeForDuplicateAnimDataEntryStructs
+struct UAnimationDataFunctionLib_CheckAnimDataClassTypeForDuplicateAnimDataEntryStructs_Params
+{
+	class UClass*                                      InClass;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+};
+
+// Function Animation.AnimationDataStoreAsset.LookupAnimationData
+struct UAnimationDataStoreAsset_LookupAnimationData_Params
+{
+	class UClass*                                      AnimDataId;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	class UAnimationData*                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function Animation.AnimationDataStoreAsset.GetAnimationDataClass
+struct UAnimationDataStoreAsset_GetAnimationDataClass_Params
+{
+	struct FAnimationDataStoreAssetEntry               Entry;                                                     // (Parm, OutParm, ReferenceParm)
+	class UClass*                                      ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+};
+
+// Function Animation.AnimationDataStoreInterface.GetAnimationDataForId
+struct UAnimationDataStoreInterface_GetAnimationDataForId_Params
+{
+	class UClass*                                      AnimDataId;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	class UAnimationData*                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function Animation.CosmeticItemAnimationComponent.SpawnCosmeticItem
+struct UCosmeticItemAnimationComponent_SpawnCosmeticItem_Params
+{
+	class USkeletalMeshComponent*                      MeshComponent;                                             // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                      ObjectToSpawn;                                             // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TEnumAsByte<Athena_EWieldAnimationLocation>        SpawnLocation;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCosmeticItemAnimationSetDataAsset*          CosmeticData;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               SpawnHidden;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+
+// Function Animation.CosmeticItemAnimationComponent.DestroyAllCosmeticItems
+struct UCosmeticItemAnimationComponent_DestroyAllCosmeticItems_Params
+{
+};
 
 // Function Animation.CustomAnimationMontageComponent.OnRep_ReplicatedData
 struct UCustomAnimationMontageComponent_OnRep_ReplicatedData_Params
@@ -241,6 +308,7 @@ struct ULocomotionFunctionLib_UpdateCharacterSpeed_Params
 	float                                              BaseMaxWalkSpeed;                                          // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                              SpeedBlendValue;                                           // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                               IsSwimming;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                              DeadZone;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FActorVelocityData                          ReturnValue;                                               // (Parm, OutParm, ReturnParm)
 };
 
@@ -315,71 +383,16 @@ struct UWaitForAnimationStateExitProxy_CreateProxy_Params
 	class UWaitForAnimationStateExitProxy*             ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
-// Function Animation.AnimationDataFunctionLib.UnwrapAnimDataEntryStruct
-struct UAnimationDataFunctionLib_UnwrapAnimDataEntryStruct_Params
+// Function Animation.WeightedAnimSequenceLoadOnDemand.Initialise
+struct UWeightedAnimSequenceLoadOnDemand_Initialise_Params
 {
-	struct FAnimDataEntryStructWrapper                 Wrapper;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
-	class UScriptStruct*                               DestinationStruct;                                         // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGenericStruct                              Value;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+	class UWeightedAnimationLoadOnDemandDataAsset*     InAnimationData;                                           // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
-// Function Animation.AnimationDataFunctionLib.MakeAnimationData
-struct UAnimationDataFunctionLib_MakeAnimationData_Params
+// Function Animation.WeightedAnimSequenceLoadOnDemand.CreateNewWeightedAnimSequenceLoadOnDemand
+struct UWeightedAnimSequenceLoadOnDemand_CreateNewWeightedAnimSequenceLoadOnDemand_Params
 {
-	class UClass*                                      Class;                                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class UAnimationData*                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function Animation.AnimationDataFunctionLib.GetAnimDataEntryStructAsStructWrapper
-struct UAnimationDataFunctionLib_GetAnimDataEntryStructAsStructWrapper_Params
-{
-	class UAnimationData*                              AnimationDataObject;                                       // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UScriptStruct*                               TheClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FAnimDataEntryStructWrapper                 ReturnValue;                                               // (Parm, OutParm, ReturnParm)
-};
-
-// Function Animation.AnimationDataFunctionLib.CheckAnimDataClassTypeForDuplicateAnimDataEntryStructs
-struct UAnimationDataFunctionLib_CheckAnimDataClassTypeForDuplicateAnimDataEntryStructs_Params
-{
-	class UClass*                                      InClass;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-};
-
-// Function Animation.AnimationDataStoreAsset.LookupAnimationData
-struct UAnimationDataStoreAsset_LookupAnimationData_Params
-{
-	class UClass*                                      AnimDataId;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class UAnimationData*                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function Animation.AnimationDataStoreAsset.GetAnimationDataClass
-struct UAnimationDataStoreAsset_GetAnimationDataClass_Params
-{
-	struct FAnimationDataStoreAssetEntry               Entry;                                                     // (Parm, OutParm, ReferenceParm)
-	class UClass*                                      ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-};
-
-// Function Animation.AnimationDataStoreInterface.GetAnimationDataForId
-struct UAnimationDataStoreInterface_GetAnimationDataForId_Params
-{
-	class UClass*                                      AnimDataId;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class UAnimationData*                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function Animation.CosmeticItemAnimationComponent.SpawnCosmeticItem
-struct UCosmeticItemAnimationComponent_SpawnCosmeticItem_Params
-{
-	class USkeletalMeshComponent*                      MeshComponent;                                             // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                      ObjectToSpawn;                                             // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TEnumAsByte<Athena_EWieldAnimationLocation>        SpawnLocation;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCosmeticItemAnimationSetDataAsset*          CosmeticData;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                               SpawnHidden;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-};
-
-// Function Animation.CosmeticItemAnimationComponent.DestroyAllCosmeticItems
-struct UCosmeticItemAnimationComponent_DestroyAllCosmeticItems_Params
-{
+	class UWeightedAnimSequenceLoadOnDemand*           ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 }

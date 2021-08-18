@@ -1,4 +1,4 @@
-﻿// Name: SoT, Version: 2.1.1
+﻿// Name: S, Version: 2.2.1
 
 #include "../SDK.h"
 
@@ -26,7 +26,7 @@ namespace CG
 // int                            Index                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_DistantLightProxy_C::FindExistingLight(const struct FString& Name, bool* Result, int* Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.FindExistingLight");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.FindExistingLight");
 
 	ABP_DistantLightProxy_C_FindExistingLight_Params params;
 	params.Name = Name;
@@ -48,7 +48,7 @@ void ABP_DistantLightProxy_C::FindExistingLight(const struct FString& Name, bool
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 void ABP_DistantLightProxy_C::Create_Lights()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.Create Lights");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.Create Lights");
 
 	ABP_DistantLightProxy_C_Create_Lights_Params params;
 
@@ -64,7 +64,7 @@ void ABP_DistantLightProxy_C::Create_Lights()
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 void ABP_DistantLightProxy_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.UserConstructionScript");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.UserConstructionScript");
 
 	ABP_DistantLightProxy_C_UserConstructionScript_Params params;
 
@@ -85,7 +85,7 @@ void ABP_DistantLightProxy_C::UserConstructionScript()
 // struct FString                 Name                           (Parm, ZeroConstructor)
 void ABP_DistantLightProxy_C::Add_Light(const struct FVector& Location, float Size, class UMaterialInterface* Material, const struct FString& Name)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.Add Light");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.Add Light");
 
 	ABP_DistantLightProxy_C_Add_Light_Params params;
 	params.Location = Location;
@@ -107,7 +107,7 @@ void ABP_DistantLightProxy_C::Add_Light(const struct FVector& Location, float Si
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 void ABP_DistantLightProxy_C::ExecuteUbergraph_BP_DistantLightProxy(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.ExecuteUbergraph_BP_DistantLightProxy");
+	static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DistantLightProxy.BP_DistantLightProxy_C.ExecuteUbergraph_BP_DistantLightProxy");
 
 	ABP_DistantLightProxy_C_ExecuteUbergraph_BP_DistantLightProxy_Params params;
 	params.EntryPoint = EntryPoint;

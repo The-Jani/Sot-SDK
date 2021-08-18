@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// Name: SoT, Version: 2.1.1
+// Name: S, Version: 2.2.1
 
 
 /*!!DEFINE!!*/
@@ -20,7 +20,7 @@ namespace CG
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_wpn_cutlass_smp_01_a_Wieldable.BP_wpn_cutlass_smp_01_a_Wieldable_C
-// 0x0000 (FullSize[0x0AC8] - InheritedSize[0x0AC8])
+// 0x0000 (FullSize[0x0A68] - InheritedSize[0x0A68])
 class ABP_wpn_cutlass_smp_01_a_Wieldable_C : public ABP_Cutlass_Item_C
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_wpn_cutlass_smp_01_a_Wieldable.BP_wpn_cutlass_smp_01_a_Wieldable_C");
+		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_wpn_cutlass_smp_01_a_Wieldable.BP_wpn_cutlass_smp_01_a_Wieldable_C");
 		return ptr;
 	}
 
